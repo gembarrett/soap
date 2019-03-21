@@ -51,11 +51,8 @@ var utils = (function(){
         document.getElementById(element_id).scrollIntoView();
     },
 
-    get_link: function(post){
-      var link = '#post?'+post.post;
-      if(post.external_link){
-          link = post.external_link;
-      }
+    get_link: function(question){
+      var link = '#q?'+question.id;
       return link;
     }
 

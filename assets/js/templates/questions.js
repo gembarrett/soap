@@ -1,9 +1,8 @@
-templates.introText = function(data){
+templates.questions = function(data){
   var content = `
-    <div id="intro">
+    <div id="questions">
       <h2>Security Policy Generator</h2>
       <p>If you need a security policy for your civil society organisation, then this is the tool for you!</p>
-      <button id="start">Get started!</button>
     </div>
     `;
     return content;
