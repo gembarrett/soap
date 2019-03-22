@@ -14,7 +14,7 @@ var utils = (function(){
         params[j] = url_params[0];
         j+= 1;
       } else {
-
+        console.log('Unreadable params ' + url_params);
       }
     }
     return params;
@@ -22,12 +22,19 @@ var utils = (function(){
 
   return {
     router: function(route, data){
-      // route = route || location.has.slice(1) || 'home';
-      route = route || 'home';
+      route = route || location.hash.slice(1) || 'home';
+      console.log('route is ' + route);
+      console.log('data is ' + data);
+      // route = route || 'home';
 
       var temp = route.split('?');
       var route_split = temp.length;
-      var function_to_invoke = temp[0] || false;
+      var function_to_invoke;
+      if (temp[0] === 'q') {
+        function_to_invoke = 'questionsView';
+      }else {
+        function_to_invoke = temp[0] || false;
+      }
       console.log(function_to_invoke);
 
       if(route_split > 1){
@@ -51,8 +58,9 @@ var utils = (function(){
         document.getElementById(element_id).scrollIntoView();
     },
 
-    get_link: function(question){
-      var link = '#q?'+question.id;
+    get_link: function(questionID){
+      var link = '#q?'+questionID;
+      console.log(link);
       return link;
     }
 
