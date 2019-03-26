@@ -1,0 +1,6 @@
+.questionContent {
+  display:none;
+}
+.questionContent#q0 {
+  display:block;
+}

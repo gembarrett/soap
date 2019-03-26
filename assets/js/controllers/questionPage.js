@@ -6,11 +6,11 @@ controllers.questionPage = function(data, params){
   var templateContext = [];
   for (var i = 0; i < questionsToShow; i++){
     var question = allQuestions[i];
-    console.log(question.id);
     var item = {
       'question': question.q,
       'answers': question.answers,
-      'link': utils.get_link(question.id)
+      'id': question.id,
+      // 'link': utils.get_link(question.id)
     };
     templateContext.push(item);
   }

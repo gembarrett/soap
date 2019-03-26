@@ -1,24 +1,24 @@
 var utils = (function(){
 
-  var extract_params = function(params_string){
-    var params = {};
-    var raw_params = params_string.split('&');
-
-    var j = 0;
-
-    for(var i = raw_params.length - 1; i >= 0; i --){
-      var url_params = raw_params[i].split('=');
-      if (url_params.length == 2){
-        params[url_params[0]] = url_params[1];
-      } else if (url_params.length == 1){
-        params[j] = url_params[0];
-        j+= 1;
-      } else {
-        console.log('Unreadable params ' + url_params);
-      }
-    }
-    return params;
-  };
+  // var extract_params = function(params_string){
+  //   var params = {};
+  //   var raw_params = params_string.split('&');
+  //
+  //   var j = 0;
+  //
+  //   for(var i = raw_params.length - 1; i >= 0; i --){
+  //     var url_params = raw_params[i].split('=');
+  //     if (url_params.length == 2){
+  //       params[url_params[0]] = url_params[1];
+  //     } else if (url_params.length == 1){
+  //       params[j] = url_params[0];
+  //       j+= 1;
+  //     } else {
+  //       console.log('Unreadable params ' + url_params);
+  //     }
+  //   }
+  //   return params;
+  // };
 
   return {
     router: function(route, data){
@@ -30,7 +30,7 @@ var utils = (function(){
       var temp = route.split('?');
       var route_split = temp.length;
       var function_to_invoke;
-      if (temp[0] === 'q') {
+      if (temp[0] === 'questions') {
         function_to_invoke = 'questionsView';
       }else {
         function_to_invoke = temp[0] || false;
@@ -46,23 +46,16 @@ var utils = (function(){
       }
     },
 
-    render: function(element_id, content, convert_markdown){
-      convert_markdown = convert_markdown || false;
-      if(!convert_markdown){
-          document.getElementById(element_id).innerHTML = content;
-      }
-      else{
-          var converter = new showdown.Converter();
-          document.getElementById(element_id).innerHTML = converter.makeHtml(content);
-      }
+    render: function(element_id, content){
+        document.getElementById(element_id).innerHTML = content;
         document.getElementById(element_id).scrollIntoView();
     },
 
-    get_link: function(questionID){
-      var link = '#q?'+questionID;
-      console.log(link);
-      return link;
-    }
+    // get_link: function(questionID){
+    //   var link = '#q?'+questionID;
+    //   console.log(link);
+    //   return link;
+    // }
 
 
   };
