@@ -1,6 +1,9 @@
+body {
+  font-family: "OpenSans", sans-serif;
+}
 .questionContent {
   display:none;
 }
-.questionContent#q0 {
+.questionContent.current {
   display:block;
 }

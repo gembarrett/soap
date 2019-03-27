@@ -5,7 +5,7 @@ var questions = [
     "id":"q0",
     "answers":[
       {
-        "type":"checkbox",
+        "type":"radio",
         "answerText":"Our staff regularly travel as part of their job.",
         "excludes":"",
         "includes":"",
@@ -19,7 +19,7 @@ var questions = [
         "appendixEntry":""
       },
       {
-        "type":"checkbox",
+        "type":"textbox",
         "answerText":"We are a remote organisation; we have at least one member of staff who works remotely.",
         "excludes":"",
         "includes":"",
