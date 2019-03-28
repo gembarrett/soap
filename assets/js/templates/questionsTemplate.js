@@ -21,15 +21,10 @@ templates.questionsTemplate = function(data){
         +question.id+ "-" + j+ '-el">'
         +question.answers[j].answerText+ '</label>';
       }
+
       content = content + '</div>';
   }
-  content = content + '<button id="submitAnswers" onclick="handleSubmit(' +currentQuestion+ ')" class="nextButton">Next</button></div>';
-
+  console.log(questionQueue[currentQuestion]);
+  content = content + '<button id="submitAnswers" onclick="handleSubmit(' +questionQueue[currentQuestion]+ ')" class="nextButton">Next</button></div>';
   return content;
 };
-
-// sometime after this is loaded, the following should be included:
-// var nextButton = document.getElementById('submitAnswers');
-// nextButton.onclick = function() {
-//   console.log('next button clicked!');
-// }

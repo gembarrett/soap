@@ -24,7 +24,6 @@ var utils = (function(){
     router: function(route, data){
       route = route || location.hash.slice(1) || 'home';
       console.log('route is ' + route);
-      console.log('data is ' + data);
       // route = route || 'home';
 
       var temp = route.split('?');

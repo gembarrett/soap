@@ -13,7 +13,7 @@ controllers.homePage = function(data, params){
   //   templateContext.push(item);
   // }
 
-  var introText = templates.introText();
+  var introText = templates.tempIntro();
 
   // button should call first question page when clicked
 
