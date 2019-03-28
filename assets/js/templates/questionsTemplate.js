@@ -24,7 +24,6 @@ templates.questionsTemplate = function(data){
 
       content = content + '</div>';
   }
-  console.log(questionQueue[currentQuestion]);
-  content = content + '<button id="submitAnswers" onclick="handleSubmit(' +questionQueue[currentQuestion]+ ')" class="nextButton">Next</button></div>';
+  content = content + '<button id="submitAnswers" onclick="handleSubmit()" class="nextButton">Next</button></div>';
   return content;
 };

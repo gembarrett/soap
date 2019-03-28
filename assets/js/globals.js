@@ -17,14 +17,15 @@ var appendixText;
 
 // loop through currentQuestion-[i]-answer
 // all of this should be split up
-function handleSubmit(id) {
+function handleSubmit() {
   // get question identifier
-  var identifier = "q" + id;
+  var identifier = questionQueue[currentQuestion];
+  console.log("clicked question with id "+identifier);
   // get question container
   var qRef = document.getElementById(identifier);
-  console.log(qRef);
   // if there is valid input - but how do I access the answer storage?
   var answers = getInput(qRef);
+  console.log(answers[0]);
   var removeQ = [];
   var includeQ = [];
 
@@ -90,12 +91,15 @@ function handleSubmit(id) {
     // remove class of current
     qRef.classList.remove("current");
 
+    console.log("current question is "+currentQuestion);
+
     // change currentQuestion
     currentQuestion++;
+
     // show new currentQuestion
     // apply new class of current
     var nextQ = document.getElementById(questionQueue[currentQuestion]);
-    console.log(questionQueue[currentQuestion]);
+    console.log("next question is "+questionQueue[currentQuestion]);
 
     nextQ.classList.add("current");
 

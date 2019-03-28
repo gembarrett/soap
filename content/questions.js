@@ -47,7 +47,7 @@ var questions = [
     "id":"q1",
     "answers":[
       {
-        "type":"textbox", // because of this the answer text may need to be imported differently
+        "type":"checkbox", // because of this the answer text may need to be imported differently
         "answerText":"Enter the organisation name",
         "excludes":"",
         "includes":"",
