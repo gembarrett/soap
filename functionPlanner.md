@@ -1,3 +1,11 @@
+// To do:
+// - validate input
+// - get entry from textbox
+// - show preview of policy
+// - provide policy at end
+// - add more questions
+// - add a progress visual
+
 ## when user hits skip button
 // var skipButton = document.getElementById('skip')
 // onclick skipButton

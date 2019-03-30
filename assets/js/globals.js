@@ -15,6 +15,8 @@ var policyText = [];
 // this one is compiled at the end of the process
 var appendixText;
 
+var orgName;
+
 // loop through currentQuestion-[i]-answer
 // all of this should be split up
 function handleSubmit() {
@@ -25,34 +27,41 @@ function handleSubmit() {
   var qRef = document.getElementById(identifier);
   // if there is valid input - but how do I access the answer storage?
   var answers = getInput(qRef);
-  console.log(answers[0]);
   var removeQ = [];
   var includeQ = [];
 
   if (answers.length > 0) {
-    // for each of the answers
-    for (var j = 0; j < answers.length; j++) {
-      // first get the question id
-      temp = answers[j].split("-");
-      temp[0] = temp[0].split("q");
-      qId = temp[0][1];
-      // then get the answer number
-      aId = temp[1];
-      // store answer in array
-      policyRefs.push({
-          "q": qId,
-          "a": aId,
-      });
-      // if there are exclusions
-      if (questions[qId].answers[aId].excludes[0]) {
-        // get the excluded question refs
-        removeQ.push(questions[qId].answers[aId].excludes);
+    // if there's only 1 element then it's probably a textbox
+    if (answers.length === 1) {
+      // currently just assume it's the org name but needs future fix
+      orgName = answers[0];
+      console.log(orgName);
+    } else {
+      // for each of the answers
+      for (var j = 0; j < answers.length; j++) {
+        // first get the question id
+        temp = answers[j].split("-");
+        temp[0] = temp[0].split("q");
+        qId = temp[0][1];
+        // then get the answer number
+        aId = temp[1];
+        // store answer in array
+        policyRefs.push({
+            "q": qId,
+            "a": aId,
+        });
+        // if there are exclusions
+        if (questions[qId].answers[aId].excludes[0]) {
+          // get the excluded question refs
+          removeQ.push(questions[qId].answers[aId].excludes);
+        }
+        // if there are inclusions
+        if (questions[qId].answers[aId].includes[0]) {
+          // get included questions based on answers
+          includeQ.push(questions[qId].answers[aId].includes);
+        }
       }
-      // if there are inclusions
-      if (questions[qId].answers[aId].includes[0]) {
-        // get included questions based on answers
-        includeQ.push(questions[qId].answers[aId].includes);
-      }
+      
     }
 
     // remove all the exclusions from the queue
@@ -119,11 +128,9 @@ function getInput(el) {
       if (el.childNodes[i].checked) {
         // make a note of which ones
         answerStore.push(el.childNodes[i].id);
-      // or if the textbox has contents
-      // FIX: currently this isn't working
-      } else if (el.childNodes[i].innerText != "") {
-        // check those contents for validity
-        answerStore.push(el.childNodes[i].id);
+      } else if (el.childNodes[i].type === "text") {
+        // or if it's a textbox then get the text
+        answerStore.push(el.childNodes[i].value);
       }
     } else {
       console.log(el.childNodes[i].tagName + " is not an input field");

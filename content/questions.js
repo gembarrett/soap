@@ -47,7 +47,7 @@ var questions = [
     "id":"q1",
     "answers":[
       {
-        "type":"checkbox", // because of this the answer text may need to be imported differently
+        "type":"textbox", // because of this the answer text may need to be imported differently
         "answerText":"Enter the organisation name",
         "excludes":"",
         "includes":"",
@@ -98,7 +98,7 @@ var questions = [
     "policySection":"", // hide Preview button if empty
   },
   {
-    "q":"Choose the 3 technologies most important to your organisation:",
+    "q":"Choose up to 3 technologies that are most important to your organisation:",
     "required":true, // hide the Skip button if true
     "id":"q3",
     "answers":[
