@@ -1,10 +1,10 @@
 // To do:
 // - validate input
-// - get entry from textbox
 // - show preview of policy
 // - provide policy at end
 // - add more questions
 // - add a progress visual
+// - what happens at the end of question queue?
 
 ## when user hits skip button
 // var skipButton = document.getElementById('skip')

@@ -20,7 +20,7 @@ var questions = [
       },
       {
         "type":"checkbox",
-        "answerText":"We are a remote organisation; we have at least one member of staff who works remotely.",
+        "answerText":"We are a remote organisation; we have 1 or more members of staff who work remotely.",
         "excludes":[],
         "includes":["q6"],
         "appendixEntry":""

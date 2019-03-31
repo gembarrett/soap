@@ -7,3 +7,21 @@ body {
 .questionContent.current {
   display:block;
 }
+
+#head h2 {
+  font-size: 2rem;
+}
+
+#head {
+  border-bottom: 1px solid #1EAEDB;
+  margin-bottom: 10px;
+}
+
+#secretLink {
+  color:#fff;
+}
+
+.form-el label {
+  display:inline;
+  padding-left: 5px;
+}

@@ -61,7 +61,7 @@ function handleSubmit() {
           includeQ.push(questions[qId].answers[aId].includes);
         }
       }
-      
+
     }
 
     // remove all the exclusions from the queue
@@ -123,14 +123,15 @@ function getInput(el) {
   // for each of the elements in that question group
   for (var i = 0; i < el.childNodes.length; i++) {
     // if the element is an input
-    if (el.childNodes[i].tagName === "INPUT") {
+    if (el.childNodes[i].childNodes[0].tagName === "INPUT") {
+      var thisInput = el.childNodes[i].childNodes[0];
       // and if the checkboxes or radio buttons are checked
-      if (el.childNodes[i].checked) {
+      if (thisInput.checked) {
         // make a note of which ones
-        answerStore.push(el.childNodes[i].id);
-      } else if (el.childNodes[i].type === "text") {
+        answerStore.push(thisInput.id);
+      } else if (thisInput.type === "text") {
         // or if it's a textbox then get the text
-        answerStore.push(el.childNodes[i].value);
+        answerStore.push(thisInput.value);
       }
     } else {
       console.log(el.childNodes[i].tagName + " is not an input field");
@@ -138,6 +139,7 @@ function getInput(el) {
   }
   // if there are answers in storage then return them
   if (answerStore.length > 0) {
+    console.log(answerStore);
     return answerStore;
   } else {
     // if none of that is true then return false
