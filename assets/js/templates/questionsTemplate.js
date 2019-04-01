@@ -24,6 +24,6 @@ templates.questionsTemplate = function(data){
 
       content = content + '</form>';
   }
-  content = content + '<button id="submitAnswers" onclick="handleSubmit()" class="nextButton">Next</button></div>';
+  content = content + '<button id="submitAnswers" onclick="handleSubmit()" class="nextButton">Next</button><button id="previewPolicy" onclick="showPreview()" class="previewButton">Preview</button></div>';
   return content;
 };

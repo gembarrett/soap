@@ -123,6 +123,7 @@ function getInput(el) {
   // for each of the elements in that question group
   for (var i = 0; i < el.childNodes.length; i++) {
     // if the element is an input
+    // maybe replace with getElementBySelector here
     if (el.childNodes[i].childNodes[0].tagName === "INPUT") {
       var thisInput = el.childNodes[i].childNodes[0];
       // and if the checkboxes or radio buttons are checked

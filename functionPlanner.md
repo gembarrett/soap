@@ -1,5 +1,6 @@
 // To do:
-// - validate input
+// - validate input, inc. radio button selection
+// - arrangement of textboxes alongside text
 // - show preview of policy
 // - provide policy at end
 // - add more questions
