@@ -22,7 +22,6 @@ var orgName;
 function handleSubmit() {
   // get question identifier
   var identifier = questionQueue[currentQuestion];
-  console.log("clicked question with id "+identifier);
   // get question container
   var qRef = document.getElementById(identifier);
   // if there is valid input - but how do I access the answer storage?
@@ -31,26 +30,26 @@ function handleSubmit() {
   var includeQ = [];
 
   if (answers.length > 0) {
+
     // if there's only 1 element then it's probably a textbox
     if (answers.length === 1) {
       // currently just assume it's the org name but needs future fix
       orgName = answers[0];
-      console.log(orgName);
+      // consider using getIDs here because otherwise q2 is excluded in the queue
     } else {
       // for each of the answers
       for (var j = 0; j < answers.length; j++) {
         getIDs(answers[j]);
-
-        // if there are exclusions
-        if (questions[qId].answers[aId].excludes[0]) {
-          // get the excluded question refs
-          removeQ.push(questions[qId].answers[aId].excludes);
-        }
-        // if there are inclusions
-        if (questions[qId].answers[aId].includes[0]) {
-          // get included questions based on answers
-          includeQ.push(questions[qId].answers[aId].includes);
-        }
+          // if there are exclusions
+          if (questions[qId].answers[aId].excludes[0]) {
+            // get the excluded question refs
+            removeQ.push(questions[qId].answers[aId].excludes);
+          }
+          // if there are inclusions
+          if (questions[qId].answers[aId].includes[0]) {
+            // get included questions based on answers
+            includeQ.push(questions[qId].answers[aId].includes);
+          }
       }
 
     }
@@ -61,6 +60,7 @@ function handleSubmit() {
 
   } else {
     // display error to user
+    console.log("there are no answers stored!");
   }
 }
 
@@ -108,6 +108,7 @@ function updateTheQ(exc, inc) {
       }
     }
   }
+  console.log("questions Q:" + questionQueue);
 
   // sort queue to ensure continuity
   return questionQueue.sort();
@@ -118,17 +119,19 @@ function toggleQuestions(ref) {
   // remove class of current
   ref.classList.remove("current");
 
-  console.log("current question is "+currentQuestion);
-
   // change currentQuestion
   currentQuestion++;
 
-  // show new currentQuestion
-  // apply new class of current
-  var nextQ = document.getElementById(questionQueue[currentQuestion]);
-  console.log("next question is "+questionQueue[currentQuestion]);
+  // if there is a next question
+  if (questionQueue[currentQuestion]) {
+    // show new currentQuestion
+    // apply new class of current
+    var nextQ = document.getElementById(questionQueue[currentQuestion]);
 
-  nextQ.classList.add("current");
+    nextQ.classList.add("current");
+  } else {
+    window.alert("no more questions!");
+  }
 
 }
 
@@ -155,7 +158,6 @@ function getInput(el) {
   }
   // if there are answers in storage then return them
   if (answerStore.length > 0) {
-    console.log(answerStore);
     return answerStore;
   } else {
     // if none of that is true then return false
