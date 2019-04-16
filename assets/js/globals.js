@@ -57,23 +57,7 @@ function handleSubmit() {
 
     updateTheQ(removeQ, includeQ);
 
-
-
-    // hide current question
-    // remove class of current
-    qRef.classList.remove("current");
-
-    console.log("current question is "+currentQuestion);
-
-    // change currentQuestion
-    currentQuestion++;
-
-    // show new currentQuestion
-    // apply new class of current
-    var nextQ = document.getElementById(questionQueue[currentQuestion]);
-    console.log("next question is "+questionQueue[currentQuestion]);
-
-    nextQ.classList.add("current");
+    toggleQuestions(qRef);
 
   } else {
     // display error to user
@@ -127,6 +111,25 @@ function updateTheQ(exc, inc) {
 
   // sort queue to ensure continuity
   return questionQueue.sort();
+}
+
+function toggleQuestions(ref) {
+  // hide current question
+  // remove class of current
+  ref.classList.remove("current");
+
+  console.log("current question is "+currentQuestion);
+
+  // change currentQuestion
+  currentQuestion++;
+
+  // show new currentQuestion
+  // apply new class of current
+  var nextQ = document.getElementById(questionQueue[currentQuestion]);
+  console.log("next question is "+questionQueue[currentQuestion]);
+
+  nextQ.classList.add("current");
+
 }
 
 function getInput(el) {
