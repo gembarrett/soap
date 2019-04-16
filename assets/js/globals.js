@@ -39,17 +39,8 @@ function handleSubmit() {
     } else {
       // for each of the answers
       for (var j = 0; j < answers.length; j++) {
-        // first get the question id
-        temp = answers[j].split("-");
-        temp[0] = temp[0].split("q");
-        qId = temp[0][1];
-        // then get the answer number
-        aId = temp[1];
-        // store answer in array
-        policyRefs.push({
-            "q": qId,
-            "a": aId,
-        });
+        getIDs(answers[j]);
+
         // if there are exclusions
         if (questions[qId].answers[aId].excludes[0]) {
           // get the excluded question refs
@@ -64,37 +55,9 @@ function handleSubmit() {
 
     }
 
-    // remove all the exclusions from the queue
-    if (removeQ != "") {
-      // for each question to be removed
-      for (var k = 0; k < removeQ.length; k++) {
-        // is the number in the queue?
-        // update questionQueue
-        var index = questionQueue.indexOf("q"+removeQ[k]);
-        // if it's in the queue, remove it
-        if(index != -1) {
-        	questionQueue.splice(index, 1);
-        }
-      }
-    }
-    // add all the inclusions to the queue, if they aren't already there
-    if (includeQ != "") {
-      // for each question to be removed
-      for (var m = 0; m < includeQ.length; m++) {
-        // is the number in the queue?
-        // update questionQueue
-        var index = questionQueue.indexOf(includeQ[m][0]);
-        // if it's not in the queue, add it
-        if(index === -1) {
-        	questionQueue.splice(includeQ[m][0], 0, includeQ[m][0]);
-        } else {
-          console.log('element already in queue');
-        }
-      }
-    }
+    updateTheQ(removeQ, includeQ);
 
-    // sort queue to ensure continuity
-    questionQueue.sort();
+
 
     // hide current question
     // remove class of current
@@ -115,6 +78,55 @@ function handleSubmit() {
   } else {
     // display error to user
   }
+}
+
+function getIDs(thisAnswer) {
+  // first get the question id
+  temp = thisAnswer.split("-");
+  temp[0] = temp[0].split("q");
+  qId = temp[0][1];
+  // then get the answer number
+  aId = temp[1];
+  // store answer in array
+  policyRefs.push({
+      "q": qId,
+      "a": aId,
+  });
+  return policyRefs;
+}
+
+function updateTheQ(exc, inc) {
+  // remove all the exclusions from the queue
+  if (exc != "") {
+    // for each question to be removed
+    for (var k = 0; k < exc.length; k++) {
+      // is the number in the queue?
+      // update questionQueue
+      var index = questionQueue.indexOf("q"+exc[k]);
+      // if it's in the queue, remove it
+      if(index != -1) {
+        questionQueue.splice(index, 1);
+      }
+    }
+  }
+  // add all the inclusions to the queue, if they aren't already there
+  if (inc != "") {
+    // for each question to be removed
+    for (var m = 0; m < inc.length; m++) {
+      // is the number in the queue?
+      // update questionQueue
+      var index = questionQueue.indexOf(inc[m][0]);
+      // if it's not in the queue, add it
+      if(index === -1) {
+        questionQueue.splice(inc[m][0], 0, inc[m][0]);
+      } else {
+        console.log('element already in queue');
+      }
+    }
+  }
+
+  // sort queue to ensure continuity
+  return questionQueue.sort();
 }
 
 function getInput(el) {
