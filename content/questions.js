@@ -9,28 +9,32 @@ var questions = [
         "answerText":"Our staff regularly travel as part of their job.",
         "excludes":[],
         "includes":["q4"],
-        "appendixEntry":""
+        "policyEntry":"When travelling, be particularly aware of your surroundings.",
+        "appendixEntry":"When you ask your staff to travel, ensure that they are prepared for the risks and trained to mitigate them."
       },
       {
         "type":"checkbox",
         "answerText":"We govern the security of the devices our staff use.",
         "excludes":[],
         "includes":["q5"],
-        "appendixEntry":""
+        "policyEntry":"Work-provided devices should be secured against unauthorised access at all times.",
+        "appendixEntry":"Device security is an important thing"
       },
       {
         "type":"checkbox",
         "answerText":"We are a remote organisation; we have 1 or more members of staff who work remotely.",
         "excludes":[],
         "includes":["q6"],
-        "appendixEntry":""
+        "policyEntry":"Remote staff require careful assessment of risk due to their work environment.",
+        "appendixEntry":"Remote staff have a different work environment to office staff and therefore should be risk assessed differently"
       },
       {
         "type":"checkbox",
         "answerText":"We have a member of staff that is responsible for this policy",
         "excludes": [],
         "includes": ["q1"],
-        "appendixEntry":""
+        "policyEntry":"The person responsible for this policy can be approached with clarifying queries, training requests and for troubleshooting.",
+        "appendixEntry":"This person should be senior and familiar enough to be able to answer questions about the security without being intimidating."
       }
     ],
     "tips":[ // hide the ? info button if these are all empty
@@ -38,8 +42,7 @@ var questions = [
       {"meaning":""},
       {"implementation":""},
       {"more":""}
-    ],
-    "policy-section":"", // hide Preview button if empty
+    ]
   },
   {
     "q":"What is the name of your organisation?",
@@ -51,6 +54,7 @@ var questions = [
         "answerText":"Enter the organisation name",
         "excludes":"",
         "includes":"",
+        "policyEntry":"",
         "appendixEntry":""
       }
     ],
@@ -59,8 +63,7 @@ var questions = [
       {"meaning":""},
       {"implementation":""},
       {"more":""}
-    ],
-    "policySection":"", // hide Preview button if empty
+    ]
   },
   {
     "q":"Who is responsible for this policy?",
@@ -72,6 +75,7 @@ var questions = [
         "answerText":"Name",
         "excludes":[],
         "includes":[],
+        "policyEntry":"",
         "appendixEntry":""
       },
       {
@@ -79,6 +83,7 @@ var questions = [
         "answerText":"Email",
         "excludes":[],
         "includes":[],
+        "policyEntry":"",
         "appendixEntry":""
       },
       {
@@ -86,6 +91,7 @@ var questions = [
         "answerText":"Phone",
         "excludes":[],
         "includes":[],
+        "policyEntry":"",
         "appendixEntry":""
       }
     ],
@@ -94,8 +100,7 @@ var questions = [
       {"meaning":""},
       {"implementation":""},
       {"more":""}
-    ],
-    "policySection":"", // hide Preview button if empty
+    ]
   },
   {
     "q":"Choose up to 3 technologies that are most important to your organisation:",
@@ -107,6 +112,7 @@ var questions = [
         "answerText":"Desktop computers and laptops",
         "excludes":[],
         "includes":[],
+        "policyEntry":"",
         "appendixEntry":""
       },
       {
@@ -114,6 +120,7 @@ var questions = [
         "answerText":"Mobile phones, satellite phones and 'landline' phones",
         "excludes":[],
         "includes":[],
+        "policyEntry":"",
         "appendixEntry":""
       },
       {
@@ -121,6 +128,7 @@ var questions = [
         "answerText":"Email, chat services, social media",
         "excludes":[],
         "includes":[],
+        "policyEntry":"",
         "appendixEntry":""
       },
       {
@@ -128,6 +136,7 @@ var questions = [
         "answerText":"Office software, financial software",
         "excludes":[],
         "includes":[],
+        "policyEntry":"",
         "appendixEntry":""
       },
       {
@@ -135,6 +144,7 @@ var questions = [
         "answerText":"Wireless networks, Virtual Private Networks(VPNs)",
         "excludes":[],
         "includes":[],
+        "policyEntry":"",
         "appendixEntry":""
       },
       {
@@ -142,6 +152,7 @@ var questions = [
         "answerText":"Content Management System (CMS), organisation websites, hosting providers",
         "excludes":[],
         "includes":[],
+        "policyEntry":"",
         "appendixEntry":""
       }
     ],
@@ -150,8 +161,7 @@ var questions = [
       {"meaning":""},
       {"implementation":""},
       {"more":""}
-    ],
-    "policySection":"", // hide Preview button if empty
+    ]
   },
   {
     "q":"When your staff travel, do they carry work devices and/or data physically with them?",
@@ -163,6 +173,7 @@ var questions = [
         "answerText":"Yes",
         "excludes":[],
         "includes":[],
+        "policyEntry":"",
         "appendixEntry":""
       },
       {
@@ -170,6 +181,7 @@ var questions = [
         "answerText":"No",
         "excludes":[],
         "includes":[],
+        "policyEntry":"",
         "appendixEntry":""
       },
       {
@@ -177,6 +189,7 @@ var questions = [
         "answerText":"Only under specific circumstances:",
         "excludes":[],
         "includes":[],
+        "policyEntry":"",
         "appendixEntry":""
       }
     ],
@@ -185,8 +198,7 @@ var questions = [
       {"meaning":""},
       {"implementation":""},
       {"more":""}
-    ],
-    "policySection":"", // hide Preview button if empty
+    ]
   },
   {
     "q":"Question about device security",
@@ -198,6 +210,7 @@ var questions = [
         "answerText":"Yes",
         "excludes":[],
         "includes":[],
+        "policyEntry":"",
         "appendixEntry":""
       },
       {
@@ -205,6 +218,7 @@ var questions = [
         "answerText":"No",
         "excludes":[],
         "includes":[],
+        "policyEntry":"",
         "appendixEntry":""
       },
       {
@@ -212,6 +226,7 @@ var questions = [
         "answerText":"Other:",
         "excludes":[],
         "includes":[],
+        "policyEntry":"",
         "appendixEntry":""
       }
     ],
@@ -220,8 +235,7 @@ var questions = [
       {"meaning":""},
       {"implementation":""},
       {"more":""}
-    ],
-    "policySection":"", // hide Preview button if empty
+    ]
   },
   {
     "q":"Are you concerned about the security of your remote staff working location(s)?",
@@ -233,6 +247,7 @@ var questions = [
         "answerText":"Yes",
         "excludes":[],
         "includes":[],
+        "policyEntry":"",
         "appendixEntry":""
       },
       {
@@ -240,6 +255,7 @@ var questions = [
         "answerText":"No",
         "excludes":[],
         "includes":[],
+        "policyEntry":"",
         "appendixEntry":""
       },
       {
@@ -247,6 +263,7 @@ var questions = [
         "answerText":"Only under specific circumstances:",
         "excludes":[],
         "includes":[],
+        "policyEntry":"",
         "appendixEntry":""
       }
     ],
@@ -255,7 +272,6 @@ var questions = [
       {"meaning":""},
       {"implementation":""},
       {"more":""}
-    ],
-    "policySection":"", // hide Preview button if empty
+    ]
   }
 ]
