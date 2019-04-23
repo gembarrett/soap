@@ -17,10 +17,10 @@ function handleSubmit() {
   var identifier = questionQueue[currentQuestion];
   // get question container
   var qRef = document.getElementById(identifier);
-  // if there is valid input - but how do I access the answer storage?
   var answers = getInput(qRef);
   var removeQ = [];
   var includeQ = [];
+
 
   if (answers.length > 0) {
 
@@ -33,18 +33,27 @@ function handleSubmit() {
       // for each of the answers
       for (var j = 0; j < answers.length; j++) {
         getIDs(answers[j]);
-          // if there are exclusions
-          if (questions[qId].answers[aId].excludes[0]) {
-            // get the excluded question refs
-            removeQ.push(questions[qId].answers[aId].excludes);
-          }
-          // if there are inclusions
-          if (questions[qId].answers[aId].includes[0]) {
-            // get included questions based on answers
-            includeQ.push(questions[qId].answers[aId].includes);
-          }
+        // if there are exclusions
+        if (questions[qId].answers[aId].excludes[0]) {
+          // get the excluded question refs
+          removeQ.push(questions[qId].answers[aId].excludes);
+        }
+        // if there are inclusions
+        if (questions[qId].answers[aId].includes[0]) {
+          // get included questions based on answers
+          includeQ.push(questions[qId].answers[aId].includes);
+        }
+        if (questions[qId].answers[aId].policyEntry !== "" ) {
+          updatePolicy(questions[qId].answers[aId].policyEntry);
+        }
       }
 
+    }
+
+    // if it's the first question, add the overlay
+    if (currentQuestion === 0) {
+      // use this function to add the overlay to the questions page
+      injectOverlay();
     }
 
     updateTheQ(removeQ, includeQ);
@@ -107,6 +116,7 @@ function updateTheQ(exc, inc) {
   return questionQueue.sort();
 }
 
+// TODO: change these classList references to toggle
 function toggleQuestions(ref) {
   // hide current question
   // remove class of current
@@ -123,7 +133,7 @@ function toggleQuestions(ref) {
 
     nextQ.classList.add("current");
   } else {
-    window.alert("no more questions!");
+    alert(policyText);
   }
 
 }
