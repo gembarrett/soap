@@ -24,14 +24,14 @@ function handleSubmit() {
 
   if (answers.length > 0) {
 
-    // if there's only 1 element then it's probably a textbox
-    if (answers.length === 1) {
-      // currently just assume it's the org name but needs future fix
+    // if it's the question where we get the org name
+    if (currentQuestion === 1) {
       orgName = answers[0];
       // consider using getIDs here because otherwise q2 is excluded in the queue
     } else {
       // for each of the answers
       for (var j = 0; j < answers.length; j++) {
+        console.log(answers);
         getIDs(answers[j]);
         // if there are exclusions
         if (questions[qId].answers[aId].excludes[0]) {
