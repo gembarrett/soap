@@ -21,7 +21,7 @@ function handleSubmit() {
   var removeQ = [];
   var includeQ = [];
 
-
+  // if there are answers
   if (answers.length > 0) {
 
     // if it's the question where we get the org name
@@ -31,20 +31,31 @@ function handleSubmit() {
     } else {
       // for each of the answers
       for (var j = 0; j < answers.length; j++) {
-        console.log(answers);
-        getIDs(answers[j]);
-        // if there are exclusions
-        if (questions[qId].answers[aId].excludes[0]) {
-          // get the excluded question refs
-          removeQ.push(questions[qId].answers[aId].excludes);
-        }
-        // if there are inclusions
-        if (questions[qId].answers[aId].includes[0]) {
-          // get included questions based on answers
-          includeQ.push(questions[qId].answers[aId].includes);
-        }
-        if (questions[qId].answers[aId].policyEntry !== "" ) {
-          updatePolicy(questions[qId].answers[aId].policyEntry);
+        // all of these ifs need to be refactored
+        if (answers[j]) {
+          getIDs(answers[j]);
+          // if there are exclusions
+          if (questions[qId].answers[aId].excludes[0]) {
+            // get the excluded question refs
+            removeQ.push(questions[qId].answers[aId].excludes);
+          }
+          // if there are inclusions
+          if (questions[qId].answers[aId].includes[0]) {
+            // get included questions based on answers
+            includeQ.push(questions[qId].answers[aId].includes);
+          }
+          if (questions[qId].answers[aId].policyEntry !== "" ) {
+            updatePolicy(questions[qId].answers[aId].policyEntry);
+          }
+        } else {
+          // currently show the policy but this needs to show the final page
+          if (policyText !== []) {
+            var policyContainer = templates.policyTemplate();
+            // this is where we should redirect to #policy
+            utils.render('page', policyContainer);
+          } else {
+            alert('no policy available!');
+          }
         }
       }
 
@@ -133,7 +144,7 @@ function toggleQuestions(ref) {
 
     nextQ.classList.add("current");
   } else {
-    alert(policyText);
+    console.log('out of questions!');
   }
 
 }

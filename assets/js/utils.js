@@ -31,7 +31,9 @@ var utils = (function(){
       var function_to_invoke;
       if (temp[0] === 'questions') {
         function_to_invoke = 'questionsView';
-      }else {
+      } else if (temp[0] === 'policy') {
+        function_to_invoke = 'policyView';
+      } else {
         function_to_invoke = temp[0] || false;
       }
       console.log(function_to_invoke);
