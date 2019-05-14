@@ -34,6 +34,40 @@ function injectOverlay() {
 
 }
 
-function getAnswerType() {
+function parseAnswer (thisQ, thisA) {
+  // if it's a checkbox answer
+  if (thisA.includes("-answer")) {
+    temp = thisA.split("-");
+    // get the answer number
+    aId = temp[1];
+    console.log(aId);
+    // store answer in array
+    policyRefs.push({
+        "q": thisQ,
+        "a": aId,
+    });
+  } else {
+    // handle it like a textbox
+    // TODO still need to get the ID of the answer though
+    policyRefs.push({
+      "q": thisQ,
+      "a": thisA
+    });
+  }
+  console.log(policyRefs);
+  return policyRefs;
+}
+
+function handleImpact(thisQ, thisA, exc, inc) {
+  // if there are exclusions
+  if (questions[thisQ].answers[thisA].excludes[0]) {
+    // get the excluded question refs
+    exc.push(questions[thisQ].answers[thisA].excludes);
+  }
+  // if there are inclusions
+  if (questions[thisQ].answers[thisA].includes[0]) {
+    // get included questions based on answers
+    inc.push(questions[thisQ].answers[thisA].includes);
+  }
 
 }

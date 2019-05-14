@@ -20,39 +20,25 @@ function handleSubmit() {
   var answers = getInput(qRef);
   var removeQ = [];
   var includeQ = [];
+  var qId = identifier.split("q")[1];
+  // TODO work out how to get the aId from element here
 
-  // if there are answers
-  if (answers.length > 0) {
+  // if there are answers - is this check necessary?
+  // if (answers.length > 0) {
     // if it's the question where we get the org name
-    // change to if qId is undefined bc then it's accessing a single input
     if (currentQuestion === 0) {
       orgName = answers[0];
-      console.log("this is the org name question");
-      // consider using getIDs here because otherwise q2 is excluded in the queue
+      console.log("this is the org name:" + answers[0]);
     } else {
 
       // for each of the answers
       for (var j = 0; j < answers.length; j++) {
-        // get the question ID from the first one
-        if (j === 0) {
-          getIDs(answers[j], true);
-          console.log(qId, aId);
-        }
-
         // all of these ifs need to be refactored
         if (answers[j]) {
-          getIDs(answers[j], false);
-          console.log(qId, aId);
-          // if there are exclusions
-          if (questions[qId].answers[aId].excludes[0]) {
-            // get the excluded question refs
-            removeQ.push(questions[qId].answers[aId].excludes);
-          }
-          // if there are inclusions
-          if (questions[qId].answers[aId].includes[0]) {
-            // get included questions based on answers
-            includeQ.push(questions[qId].answers[aId].includes);
-          }
+          parseAnswer(qId, answers[j]);
+
+          handleImpact(qId, j, removeQ, includeQ);
+
           if (questions[qId].answers[aId].policyEntry !== "" ) {
             updatePolicy(questions[qId].answers[aId].policyEntry);
           }
@@ -63,6 +49,8 @@ function handleSubmit() {
             // show policy content
             // TODO change the url as well as page contents
             console.log('show the policy!');
+            console.log(policyRefs);
+
             utils.render('page', policyContainer);
           } else {
             alert('no policy available!');
@@ -82,29 +70,12 @@ function handleSubmit() {
 
     toggleQuestions(qRef);
 
-  } else {
-    // display error to user
-    console.log("there are no answers stored!");
-  }
+  // } else {
+  //   // display error to user
+  //   console.log("there are no answers stored!");
+  // }
 }
 
-// no need to get the question id for every answer?
-function getIDs(thisAnswer, needQ) {
-  // first get the question id
-  temp = thisAnswer.split("-");
-  temp[0] = temp[0].split("q");
-  if (needQ === true) {
-    qId = temp[0][1];
-  }
-  // then get the answer number
-  aId = temp[1];
-  // store answer in array
-  policyRefs.push({
-      "q": qId,
-      "a": aId,
-  });
-  return policyRefs;
-}
 
 function updateTheQ(exc, inc) {
   // remove all the exclusions from the queue
