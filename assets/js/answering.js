@@ -23,17 +23,26 @@ function handleSubmit() {
 
   // if there are answers
   if (answers.length > 0) {
-
     // if it's the question where we get the org name
-    if (currentQuestion === 1) {
+    // change to if qId is undefined bc then it's accessing a single input
+    if (currentQuestion === 0) {
       orgName = answers[0];
+      console.log("this is the org name question");
       // consider using getIDs here because otherwise q2 is excluded in the queue
     } else {
+
       // for each of the answers
       for (var j = 0; j < answers.length; j++) {
+        // get the question ID from the first one
+        if (j === 0) {
+          getIDs(answers[j], true);
+          console.log(qId, aId);
+        }
+
         // all of these ifs need to be refactored
         if (answers[j]) {
-          getIDs(answers[j]);
+          getIDs(answers[j], false);
+          console.log(qId, aId);
           // if there are exclusions
           if (questions[qId].answers[aId].excludes[0]) {
             // get the excluded question refs
@@ -51,7 +60,9 @@ function handleSubmit() {
           // currently show the policy but this needs to show the final page
           if (policyText !== []) {
             var policyContainer = templates.policyTemplate();
-            // this is where we should redirect to #policy
+            // show policy content
+            // TODO change the url as well as page contents
+            console.log('show the policy!');
             utils.render('page', policyContainer);
           } else {
             alert('no policy available!');
@@ -77,11 +88,14 @@ function handleSubmit() {
   }
 }
 
-function getIDs(thisAnswer) {
+// no need to get the question id for every answer?
+function getIDs(thisAnswer, needQ) {
   // first get the question id
   temp = thisAnswer.split("-");
   temp[0] = temp[0].split("q");
-  qId = temp[0][1];
+  if (needQ === true) {
+    qId = temp[0][1];
+  }
   // then get the answer number
   aId = temp[1];
   // store answer in array
@@ -138,6 +152,7 @@ function toggleQuestions(ref) {
 
   // if there is a next question
   if (questionQueue[currentQuestion]) {
+    console.log(questionQueue[currentQuestion]);
     // show new currentQuestion
     // apply new class of current
     var nextQ = document.getElementById(questionQueue[currentQuestion]);

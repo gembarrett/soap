@@ -33,3 +33,7 @@ function injectOverlay() {
   });
 
 }
+
+function getAnswerType() {
+
+}

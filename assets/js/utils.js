@@ -1,29 +1,8 @@
 var utils = (function(){
 
-  // var extract_params = function(params_string){
-  //   var params = {};
-  //   var raw_params = params_string.split('&');
-  //
-  //   var j = 0;
-  //
-  //   for(var i = raw_params.length - 1; i >= 0; i --){
-  //     var url_params = raw_params[i].split('=');
-  //     if (url_params.length == 2){
-  //       params[url_params[0]] = url_params[1];
-  //     } else if (url_params.length == 1){
-  //       params[j] = url_params[0];
-  //       j+= 1;
-  //     } else {
-  //       console.log('Unreadable params ' + url_params);
-  //     }
-  //   }
-  //   return params;
-  // };
-
   return {
     router: function(route, data){
       route = route || location.hash.slice(1) || 'home';
-      console.log('route is ' + route);
       // route = route || 'home';
 
       var temp = route.split('?');
@@ -36,7 +15,6 @@ var utils = (function(){
       } else {
         function_to_invoke = temp[0] || false;
       }
-      console.log(function_to_invoke);
 
       if(route_split > 1){
         var params = extract_params(temp[1]);
@@ -51,13 +29,6 @@ var utils = (function(){
         document.getElementById(element_id).innerHTML = content;
         document.getElementById(element_id).scrollIntoView();
     },
-
-    // get_link: function(questionID){
-    //   var link = '#q?'+questionID;
-    //   console.log(link);
-    //   return link;
-    // }
-
 
   };
 

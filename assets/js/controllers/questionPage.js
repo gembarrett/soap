@@ -1,5 +1,4 @@
 controllers.questionPage = function(data, params){
-  console.log('Controller - question page');
   var allQuestions = questions;
 
   var questionsToShow = questions.length;
@@ -15,11 +14,12 @@ controllers.questionPage = function(data, params){
         // 'link': utils.get_link(question.id)
       };
 
-      if (question.required){
+      // rexamine this, difference between no answer required and no question required
+      // if (question.required){
       // not sure if there should be full id or just number here
       // questionQueue.push(question.id.split('q')[1]);
         questionQueue.push(question.id);
-      }
+      // }
 
       templateContext.push(item);
     // }

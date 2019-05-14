@@ -1,66 +1,21 @@
 var questions = [
   {
-    "q":"Which of the following statements applies to your organisation?",
-    "required":true, // hide the Skip button if true
-    "id":"q0",
-    "answers":[
-      {
-        "type":"checkbox",
-        "answerText":"Our staff regularly travel as part of their job.",
-        "excludes":[],
-        "includes":["q4"],
-        "policyEntry":"When travelling, be particularly aware of your surroundings.",
-        "appendixEntry":"When you ask your staff to travel, ensure that they are prepared for the risks and trained to mitigate them."
-      },
-      {
-        "type":"checkbox",
-        "answerText":"We govern the security of the devices our staff use.",
-        "excludes":[],
-        "includes":["q5"],
-        "policyEntry":"Work-provided devices should be secured against unauthorised access at all times.",
-        "appendixEntry":"Device security is an important thing"
-      },
-      {
-        "type":"checkbox",
-        "answerText":"We are a remote organisation; we have 1 or more members of staff who work remotely.",
-        "excludes":[],
-        "includes":["q6"],
-        "policyEntry":"Remote staff require careful assessment of risk due to their work environment.",
-        "appendixEntry":"Remote staff have a different work environment to office staff and therefore should be risk assessed differently"
-      },
-      {
-        "type":"checkbox",
-        "answerText":"We have a member of staff that is responsible for this policy",
-        "excludes": [],
-        "includes": ["q1"],
-        "policyEntry":"The person responsible for this policy can be approached with clarifying queries, training requests and for troubleshooting.",
-        "appendixEntry":"This person should be senior and familiar enough to be able to answer questions about the security without being intimidating."
-      }
-    ],
-    "tips":[ // hide the ? info button if these are all empty
-      {"relevance":""},
-      {"meaning":""},
-      {"implementation":""},
-      {"more":""}
-    ]
-  },
-  {
     "q":"What is the name of your organisation?",
     "required":true, // hide the Skip button if true
-    "id":"q1",
+    "id":"q0",
     "answers":[
       {
         "type":"textbox", // because of this the answer text may need to be imported differently
         "answerText":"Enter the organisation name",
         "excludes":"",
         "includes":"",
-        "policyEntry":"",
+        "policyEntry":"This is the security policy for ",
         "appendixEntry":""
       }
     ],
     "tips":[ // hide the ? info button if these are all empty
       {"relevance":""},
-      {"meaning":""},
+      {"meaning":"Whatever you enter here will be used throughout the policy wherever an organisation name is appropriate for the text. If you don't feel comfortable sharing your organisation's name at this stage you can instead use a placeholder, such as 'Example Org', which you can then find and replace in the policy at the end of the process."},
       {"implementation":""},
       {"more":""}
     ]
@@ -68,18 +23,18 @@ var questions = [
   {
     "q":"Who is responsible for this policy?",
     "required":false, // hide the Skip button if true
-    "id":"q2",
+    "id":"q1",
     "answers":[
       {
-        "type":"textbox",
+        "type":"checkbox",
         "answerText":"Name",
         "excludes":[],
         "includes":[],
-        "policyEntry":"This following person is responsible for this policy:",
+        "policyEntry":"This following person is responsible for this policy: ",
         "appendixEntry":""
       },
       {
-        "type":"textbox",
+        "type":"checkbox",
         "answerText":"Email",
         "excludes":[],
         "includes":[],
@@ -87,7 +42,7 @@ var questions = [
         "appendixEntry":""
       },
       {
-        "type":"textbox",
+        "type":"checkbox",
         "answerText":"Phone",
         "excludes":[],
         "includes":[],
@@ -96,20 +51,73 @@ var questions = [
       }
     ],
     "tips":[ // hide the ? info button if these are all empty
+      {"relevance":"If your organisation has a member of staff that is willing and able to answer questions about this policy. Ideally this would be the person writing the policy (i.e. you) or a member of the security team."},
+      {"meaning":"Having a point of contact for staff with queries about this policy provides support that is important for the implementation across your organisation."},
+      {"implementation":"This person should be approachable and known in the organisation to make it easier for staff to ask them questions. Support should also be provided to the responsible person to ensure they aren't overwhelmed with queries or struggle to answer them."},
+      {"more":""}
+    ]
+  },
+  {
+    "q":"Who will this policy apply to?",
+    "required":true, // hide the Skip button if true
+    "id":"q2",
+    "answers":[
+      {
+        "type":"checkbox",
+        "answerText":"Contractors",
+        "excludes":[],
+        "includes":[],
+        "policyEntry":"",
+        "appendixEntry":""
+      },
+      {
+        "type":"checkbox",
+        "answerText":"Full or part-time staff",
+        "excludes":[],
+        "includes":[],
+        "policyEntry":"",
+        "appendixEntry":""
+      },
+      {
+        "type":"checkbox",
+        "answerText":"Volunteers",
+        "excludes":[],
+        "includes":[],
+        "policyEntry":"",
+        "appendixEntry":""
+      },
+      {
+        "type":"checkbox",
+        "answerText":"Remote staff",
+        "excludes":[],
+        "includes":[],
+        "policyEntry":"",
+        "appendixEntry":""
+      },
+      {
+        "type":"textbox",
+        "answerText":"Other",
+        "excludes": [],
+        "includes": [],
+        "policyEntry":"",
+        "appendixEntry":""
+      }
+    ],
+    "tips":[ // hide the ? info button if these are all empty
       {"relevance":""},
-      {"meaning":""},
+      {"meaning":"It should be clear exactly who is responsible for adhering to the policy and liable for violations. Use this moment to decide whether to create a separate policy for staff with different access levels, for instance volunteers or contractors."},
       {"implementation":""},
       {"more":""}
     ]
   },
   {
-    "q":"Choose up to 3 technologies that are most important to your organisation:",
+    "q":"Which operating systems are used in your organisation?",
     "required":true, // hide the Skip button if true
     "id":"q3",
     "answers":[
       {
         "type":"checkbox",
-        "answerText":"Desktop computers and laptops",
+        "answerText":"Windows",
         "excludes":[],
         "includes":[],
         "policyEntry":"",
@@ -117,7 +125,7 @@ var questions = [
       },
       {
         "type":"checkbox",
-        "answerText":"Mobile phones, satellite phones and 'landline' phones",
+        "answerText":"Mac",
         "excludes":[],
         "includes":[],
         "policyEntry":"",
@@ -125,7 +133,7 @@ var questions = [
       },
       {
         "type":"checkbox",
-        "answerText":"Email, chat services, social media",
+        "answerText":"Linux",
         "excludes":[],
         "includes":[],
         "policyEntry":"",
@@ -133,7 +141,7 @@ var questions = [
       },
       {
         "type":"checkbox",
-        "answerText":"Office software, financial software",
+        "answerText":"Android",
         "excludes":[],
         "includes":[],
         "policyEntry":"",
@@ -141,7 +149,7 @@ var questions = [
       },
       {
         "type":"checkbox",
-        "answerText":"Wireless networks, Virtual Private Networks(VPNs)",
+        "answerText":"iOS",
         "excludes":[],
         "includes":[],
         "policyEntry":"",
@@ -149,7 +157,15 @@ var questions = [
       },
       {
         "type":"checkbox",
-        "answerText":"Content Management System (CMS), organisation websites, hosting providers",
+        "answerText":"Blackberry",
+        "excludes":[],
+        "includes":[],
+        "policyEntry":"",
+        "appendixEntry":""
+      },
+      {
+        "type":"textbox",
+        "answerText":"Other",
         "excludes":[],
         "includes":[],
         "policyEntry":"",
@@ -158,13 +174,13 @@ var questions = [
     ],
     "tips":[ // hide the ? info button if these are all empty
       {"relevance":""},
-      {"meaning":""},
+      {"meaning":"Different systems have different security measures available. Selecting which operating systems apply to your organisation will exclude irrelevant questions from this process."},
       {"implementation":""},
       {"more":""}
     ]
   },
   {
-    "q":"When your staff travel, do they carry work devices and/or data physically with them?",
+    "q":"Do all your staff work in the same physical office",
     "required":false, // hide the Skip button if true
     "id":"q4",
     "answers":[
