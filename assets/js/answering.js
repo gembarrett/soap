@@ -23,14 +23,6 @@ function handleSubmit() {
   var qId = identifier.split("q")[1];
   // TODO work out how to get the aId from element here
 
-  // if there are answers - is this check necessary?
-  // if (answers.length > 0) {
-    // if it's the question where we get the org name
-    if (currentQuestion === 0) {
-      orgName = answers[0];
-      console.log("this is the org name:" + answers[0]);
-    } else {
-
       // for each of the answers
       for (var j = 0; j < answers.length; j++) {
         // all of these ifs need to be refactored
@@ -58,7 +50,6 @@ function handleSubmit() {
         }
       }
 
-    }
 
     // if it's the first question, add the overlay
     if (currentQuestion === 0) {
@@ -123,11 +114,12 @@ function toggleQuestions(ref) {
 
   // if there is a next question
   if (questionQueue[currentQuestion]) {
-    console.log(questionQueue[currentQuestion]);
+    console.log('the next question is '+ questionQueue[currentQuestion]);
     // show new currentQuestion
     // apply new class of current
+    console.log(document.getElementById(questionQueue[currentQuestion]));
     var nextQ = document.getElementById(questionQueue[currentQuestion]);
-
+    console.log(nextQ);
     nextQ.classList.add("current");
   } else {
     console.log('out of questions!');
@@ -144,14 +136,7 @@ function getInput(el) {
     // maybe replace with getElementBySelector here
     if (el.childNodes[i].childNodes[0].tagName === "INPUT") {
       var thisInput = el.childNodes[i].childNodes[0];
-      // and if the checkboxes or radio buttons are checked
-      if (thisInput.checked) {
-        // make a note of which ones
-        answerStore.push(thisInput.id);
-      } else if (thisInput.type === "text") {
-        // or if it's a textbox then get the text
-        answerStore.push(thisInput.value);
-      }
+      answerStore.push(thisInput.id);
     } else {
       console.log(el.childNodes[i].tagName + " is not an input field");
     }
