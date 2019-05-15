@@ -59,10 +59,8 @@ function injectOverlay() {
 // }
 
 function handleImpact(thisQ, thisA, exc, inc) {
-  console.log(questions[thisQ].answers[thisA]);
-  console.log("thisA " + thisA);
-  console.log("exc " + exc);
-  console.log("inc " + inc);
+  console.log("examining question " + thisQ);
+  console.log("examining answer " + thisA);
 
   // if there are exclusions
   if (questions[thisQ].answers[thisA].excludes[0]) {

@@ -15,12 +15,15 @@ var orgName;
 function handleSubmit() {
   // get question identifier
   var identifier = questionQueue[currentQuestion];
+  console.log('the identifier is '+identifier);
   // get question container
   var qRef = document.getElementById(identifier);
+  console.log(qRef);
   var removeQ = [];
   var includeQ = [];
   var qId = identifier.split("q")[1];
   var answers = getInput(qRef, qId);
+  console.log(answers);
   // TODO work out how to get the aId from element here
 
   // for each of the answers
@@ -81,7 +84,6 @@ function updateTheQ(exc, inc) {
       }
     }
   }
-  console.log("questions Q:" + questionQueue);
 
   // sort queue to ensure continuity
   return questionQueue.sort();
@@ -100,7 +102,6 @@ function toggleQuestions(ref) {
   if (questionQueue[currentQuestion]) {
     // show new currentQuestion
     // apply new class of current
-    console.log('next up: '+ questionQueue[currentQuestion]);
     var nextQ = document.getElementById(questionQueue[currentQuestion]);
     nextQ.classList.add("current");
   } else {
@@ -115,6 +116,9 @@ function toggleQuestions(ref) {
 
 // this function returns an array of the selected or typed answers
 function getInput(el, qId) {
+  console.log(el);
+  console.log('the qId is' + qId);
+  var tempRefs =[];
   // get input fields from the element
   // for each of the elements in that question group
   for (var i = 0; i < el.childNodes.length; i++) {
@@ -138,9 +142,13 @@ function getInput(el, qId) {
           "t": input.value
         });
       }
+      tempRefs.push({
+        "q": qId,
+        "a": input.id,
+      });
     } else {
       console.log(el.childNodes[i].tagName + " is not an input field");
     }
   }
-  return policyRefs;
+  return tempRefs;
 }
