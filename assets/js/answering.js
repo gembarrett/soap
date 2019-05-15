@@ -17,16 +17,17 @@ function handleSubmit() {
   var identifier = questionQueue[currentQuestion];
   // get question container
   var qRef = document.getElementById(identifier);
-  var answers = getInput(qRef);
   var removeQ = [];
   var includeQ = [];
   var qId = identifier.split("q")[1];
+  var answers = getInput(qRef, qId);
   // TODO work out how to get the aId from element here
 
   // for each of the answers
   for (var j = 0; j < answers.length; j++) {
     // if (answers[j]) {
-    parseAnswer(qId, answers[j]);
+    // parseAnswer(qId, answers[j]);
+    console.log(answers[j]);
     handleImpact(qId, j, removeQ, includeQ);
   }
 
@@ -113,8 +114,7 @@ function toggleQuestions(ref) {
 }
 
 // this function returns an array of the selected or typed answers
-function getInput(el) {
-  var answerStore = [];
+function getInput(el, qId) {
   // get input fields from the element
   // for each of the elements in that question group
   for (var i = 0; i < el.childNodes.length; i++) {
@@ -125,24 +125,22 @@ function getInput(el) {
     if (input.tagName === "INPUT") {
       // if it's a checkbox
       if (input.checked) {
-        answerStore.push(input.id);
+        policyRefs.push({
+          "q": qId,
+          "a": input.id
+        });
       }
       // if it's a textbox
-      else if (input.type === "text") {
-        console.log(input.textContent);
-        answerStore.push(input.value);
+      else if (input.type === "text" && input.value !== "") {
+        policyRefs.push({
+          "q": qId,
+          "a": input.id,
+          "t": input.value
+        });
       }
     } else {
       console.log(el.childNodes[i].tagName + " is not an input field");
     }
   }
-  // if there are answers in storage then return them
-  if (answerStore.length > 0) {
-    console.log(answerStore);
-    return answerStore;
-  } else {
-    // if none of that is true then return false
-    return true; // for testing purposes
-    //return false;
-  }
+  return policyRefs;
 }

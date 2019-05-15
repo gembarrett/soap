@@ -34,31 +34,36 @@ function injectOverlay() {
 
 }
 
-function parseAnswer (thisQ, thisA) {
-  // if it's a checkbox answer
-  if (thisA.includes("-answer")) {
-    temp = thisA.split("-");
-    // get the answer number
-    aId = temp[1];
-    // store answer in array
-    policyRefs.push({
-        "q": thisQ,
-        "a": aId,
-    });
-  } else {
-    // handle it like a textbox
-    // TODO still need to get the ID of the answer though
-    // can this make better use of answerStore?
-    policyRefs.push({
-      "q": thisQ,
-      "a": thisA
-    });
-  }
-  console.log(policyRefs);
-  return policyRefs;
-}
+// function parseAnswer (thisQ, thisA) {
+//   // if it's a checkbox answer
+//   if (thisA.includes("-answer")) {
+//     temp = thisA.split("-");
+//     // get the answer number
+//     aId = temp[1];
+//     // store answer in array
+//     policyRefs.push({
+//         "q": thisQ,
+//         "a": aId,
+//     });
+//   } else {
+//     // handle it like a textbox
+//     // TODO still need to get the ID of the answer though
+//     // can this make better use of answerStore?
+//     policyRefs.push({
+//       "q": thisQ,
+//       "a": thisA
+//     });
+//   }
+//   console.log(policyRefs);
+//   return policyRefs;
+// }
 
 function handleImpact(thisQ, thisA, exc, inc) {
+  console.log(questions[thisQ].answers[thisA]);
+  console.log("thisA " + thisA);
+  console.log("exc " + exc);
+  console.log("inc " + inc);
+
   // if there are exclusions
   if (questions[thisQ].answers[thisA].excludes[0]) {
     // get the excluded question refs
