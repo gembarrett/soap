@@ -23,48 +23,31 @@ function handleSubmit() {
   var qId = identifier.split("q")[1];
   // TODO work out how to get the aId from element here
 
-      // for each of the answers
-      for (var j = 0; j < answers.length; j++) {
-        // all of these ifs need to be refactored
-        if (answers[j]) {
-          parseAnswer(qId, answers[j]);
+  // for each of the answers
+  for (var j = 0; j < answers.length; j++) {
+    // if (answers[j]) {
+    parseAnswer(qId, answers[j]);
+    handleImpact(qId, j, removeQ, includeQ);
+  }
 
-          handleImpact(qId, j, removeQ, includeQ);
+  // if (policyText !== []) {
+  //   // currently show the policy but this needs to show the final page
+  //     var policyContainer = templates.policyTemplate();
+  //     console.log('end of process!');
+  //     // show policy content
+  //     // TODO change the url as well as page contents
+  //     utils.render('page', policyContainer);
+  //   }
 
-          if (questions[qId].answers[aId].policyEntry !== "" ) {
-            updatePolicy(questions[qId].answers[aId].policyEntry);
-          }
-        } else {
-          // currently show the policy but this needs to show the final page
-          if (policyText !== []) {
-            var policyContainer = templates.policyTemplate();
-            // show policy content
-            // TODO change the url as well as page contents
-            console.log('show the policy!');
-            console.log(policyRefs);
+  // if it's the first question, add the overlay
+  if (currentQuestion === 0) {
+    // use this function to add the overlay to the questions page
+    injectOverlay();
+  }
 
-            utils.render('page', policyContainer);
-          } else {
-            alert('no policy available!');
-          }
-        }
-      }
+  updateTheQ(removeQ, includeQ);
+  toggleQuestions(qRef);
 
-
-    // if it's the first question, add the overlay
-    if (currentQuestion === 0) {
-      // use this function to add the overlay to the questions page
-      injectOverlay();
-    }
-
-    updateTheQ(removeQ, includeQ);
-
-    toggleQuestions(qRef);
-
-  // } else {
-  //   // display error to user
-  //   console.log("there are no answers stored!");
-  // }
 }
 
 
@@ -114,35 +97,48 @@ function toggleQuestions(ref) {
 
   // if there is a next question
   if (questionQueue[currentQuestion]) {
-    console.log('the next question is '+ questionQueue[currentQuestion]);
     // show new currentQuestion
     // apply new class of current
-    console.log(document.getElementById(questionQueue[currentQuestion]));
+    console.log('next up: '+ questionQueue[currentQuestion]);
     var nextQ = document.getElementById(questionQueue[currentQuestion]);
-    console.log(nextQ);
     nextQ.classList.add("current");
   } else {
-    console.log('out of questions!');
+    // currently show the policy but this needs to show the final page
+    var policyContainer = templates.policyTemplate();
+    console.log('end of process!');
+    // TODO change the url as well as page contents
+    utils.render('page', policyContainer);
   }
 
 }
 
+// this function returns an array of the selected or typed answers
 function getInput(el) {
   var answerStore = [];
   // get input fields from the element
   // for each of the elements in that question group
   for (var i = 0; i < el.childNodes.length; i++) {
+    var input = el.childNodes[i].childNodes[0];
     // if the element is an input
     // maybe replace with getElementBySelector here
-    if (el.childNodes[i].childNodes[0].tagName === "INPUT") {
-      var thisInput = el.childNodes[i].childNodes[0];
-      answerStore.push(thisInput.id);
+    // if the element is an input field and is checked or a used textbox
+    if (input.tagName === "INPUT") {
+      // if it's a checkbox
+      if (input.checked) {
+        answerStore.push(input.id);
+      }
+      // if it's a textbox
+      else if (input.type === "text") {
+        console.log(input.textContent);
+        answerStore.push(input.value);
+      }
     } else {
       console.log(el.childNodes[i].tagName + " is not an input field");
     }
   }
   // if there are answers in storage then return them
   if (answerStore.length > 0) {
+    console.log(answerStore);
     return answerStore;
   } else {
     // if none of that is true then return false

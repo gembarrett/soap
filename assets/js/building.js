@@ -40,7 +40,6 @@ function parseAnswer (thisQ, thisA) {
     temp = thisA.split("-");
     // get the answer number
     aId = temp[1];
-    console.log(aId);
     // store answer in array
     policyRefs.push({
         "q": thisQ,
@@ -49,6 +48,7 @@ function parseAnswer (thisQ, thisA) {
   } else {
     // handle it like a textbox
     // TODO still need to get the ID of the answer though
+    // can this make better use of answerStore?
     policyRefs.push({
       "q": thisQ,
       "a": thisA
@@ -68,6 +68,10 @@ function handleImpact(thisQ, thisA, exc, inc) {
   if (questions[thisQ].answers[thisA].includes[0]) {
     // get included questions based on answers
     inc.push(questions[thisQ].answers[thisA].includes);
+  }
+  // if there is policy text
+  if (questions[thisQ].answers[thisA].policyEntry !== "" ) {
+    updatePolicy(questions[thisQ].answers[thisA].policyEntry);
   }
 
 }
