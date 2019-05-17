@@ -26,15 +26,23 @@ var questions = [
     "id":"q1",
     "answers":[
       {
-        "type":"checkbox",
+        "type":"textbox",
         "answerText":"Name",
         "excludes":[],
         "includes":[],
-        "policyEntry":"This following person is responsible for this policy: ",
+        "policyEntry":"The following person is responsible for this policy: ",
         "appendixEntry":""
       },
       {
-        "type":"checkbox",
+        "type":"textbox",
+        "answerText":"Job title",
+        "excludes":[],
+        "includes":[],
+        "policyEntry":"",
+        "appendixEntry":""
+      },
+      {
+        "type":"textbox",
         "answerText":"Email",
         "excludes":[],
         "includes":[],
@@ -42,7 +50,7 @@ var questions = [
         "appendixEntry":""
       },
       {
-        "type":"checkbox",
+        "type":"textbox",
         "answerText":"Phone",
         "excludes":[],
         "includes":[],

@@ -8,6 +8,7 @@ var appendixText;
 function updatePolicy(entry) {
   entry = '<p>' + entry + '</p>';
   policyText.push(entry);
+  console.log(policyText);
 }
 
 function injectOverlay() {
@@ -72,9 +73,30 @@ function handleImpact(thisQ, thisA, exc, inc) {
     // get included questions based on answers
     inc.push(questions[thisQ].answers[thisA].includes);
   }
+  // move this next statement into a full function for building the policy
   // if there is policy text
   if (questions[thisQ].answers[thisA].policyEntry !== "" ) {
     updatePolicy(questions[thisQ].answers[thisA].policyEntry);
   }
 
+}
+
+// this function checks whether a value is needed for later and updates the global variable
+function checkValue(question, answer, val) {
+    var temp = answer.split("-")[1];
+    switch (question) {
+      case "0":
+        orgName = val;
+        // TODO change this to keep a backup of the original text in case user goes back to change
+        questions[question].answers[temp].policyEntry += orgName;
+        break;
+      case "1":
+        contact.push({
+          "answer":answer,
+          "value":val
+        });
+        questions[question].answers[temp].policyEntry += val;
+        break;
+      default:
+    }
 }

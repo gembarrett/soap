@@ -9,6 +9,7 @@ var currentQuestion = 0;
 var questionQueue = [];
 
 var orgName;
+var contact = [];
 
 // loop through currentQuestion-[i]-answer
 // all of this should be split up
@@ -23,14 +24,11 @@ function handleSubmit() {
   var includeQ = [];
   var qId = identifier.split("q")[1];
   var answers = getInput(qRef, qId);
-  console.log(answers);
-  // TODO work out how to get the aId from element here
 
   // for each of the answers
   for (var j = 0; j < answers.length; j++) {
     // if (answers[j]) {
     // parseAnswer(qId, answers[j]);
-    console.log(answers[j]);
     handleImpact(qId, j, removeQ, includeQ);
   }
 
@@ -129,6 +127,7 @@ function getInput(el, qId) {
     if (input.tagName === "INPUT") {
       // if it's a checkbox
       if (input.checked) {
+        console.log("you checked answer " + input.id);
         policyRefs.push({
           "q": qId,
           "a": input.id
@@ -136,6 +135,8 @@ function getInput(el, qId) {
       }
       // if it's a textbox
       else if (input.type === "text" && input.value !== "") {
+        console.log("you gave the answer "+ input.value);
+        checkValue(qId, input.id, input.value);
         policyRefs.push({
           "q": qId,
           "a": input.id,
