@@ -12,7 +12,6 @@ var orgName;
 var contact = [];
 
 // loop through currentQuestion-[i]-answer
-// all of this should be split up
 function handleSubmit() {
   // get question identifier
   var identifier = questionQueue[currentQuestion];
@@ -27,19 +26,9 @@ function handleSubmit() {
 
   // for each of the answers
   for (var j = 0; j < answers.length; j++) {
-    // if (answers[j]) {
-    // parseAnswer(qId, answers[j]);
     handleImpact(qId, j, removeQ, includeQ);
   }
 
-  // if (policyText !== []) {
-  //   // currently show the policy but this needs to show the final page
-  //     var policyContainer = templates.policyTemplate();
-  //     console.log('end of process!');
-  //     // show policy content
-  //     // TODO change the url as well as page contents
-  //     utils.render('page', policyContainer);
-  //   }
 
   // if it's the first question, add the overlay
   if (currentQuestion === 0) {
@@ -111,7 +100,6 @@ function toggleQuestions(ref) {
   }
 
 }
-// // FIXME: this current returns an empty array
 // this function returns an array of the selected or typed answers
 function getInput(el, qId) {
   var tempRefs =[];
@@ -123,37 +111,48 @@ function getInput(el, qId) {
     // maybe replace with getElementBySelector here
     // if the element is an input field and is checked or a used textbox
     if (input.tagName === "INPUT") {
+      // this breaks if there's no tips content to fill the info panel div
       var answerID = input.id.split("-")[1];
-      console.log('the checked answer is '+answerID);
+
+
+      // if the input is checked or it's a textbox with input
+      // push to temp refs
+      // update policy
+
       // if it's a checkbox
       if (input.checked) {
-        console.log(input);
-
         policyRefs.push({
           "q": qId,
           "a": input.id
         });
-
-        if (questions[qId].answers[input.id.split("-")[1]].policyEntry !== "" ) {
-          console.log(questions[qId].answers[input.id.split("-")[1]].policyEntry);
+        // TODO find a better way to do this
+        tempRefs.push({
+          "q": qId,
+          "a": input.id,
+        });
+        if (questions[qId].answers[answerID].policyEntry !== "" ) {
           updatePolicy(questions[thisQ].answers[thisA].policyEntry);
         }
-
       }
       // if it's a textbox
       else if (input.type === "text" && input.value !== "") {
-        console.log('the answer is '+answerID);
+        var answerID = input.id.split("-")[1];
+
         checkValue(qId, input.id, input.value);
         policyRefs.push({
           "q": qId,
           "a": input.id,
           "t": input.value
         });
+        // TODO find a better way to do this
+        tempRefs.push({
+          "q": qId,
+          "a": input.id,
+        });
+        if (questions[qId].answers[answerID].policyEntry !== "" ) {
+          updatePolicy(questions[qId].answers[answerID].policyEntry);
+        }
       }
-      tempRefs.push({
-        "q": qId,
-        "a": input.id,
-      });
     }
   }
   return tempRefs;

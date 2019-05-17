@@ -218,7 +218,7 @@ var questions = [
       }
     ],
     "tips":[ // hide the ? info button if these are all empty
-      {"relevance":""},
+      {"relevance":"Testing content"},
       {"meaning":""},
       {"implementation":""},
       {"more":""}
