@@ -11,6 +11,7 @@ controllers.questionPage = function(data, params){
         'question': question.q,
         'answers': question.answers,
         'id': question.id,
+        'tips': question.tips
         // 'link': utils.get_link(question.id)
       };
 

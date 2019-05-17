@@ -60,8 +60,6 @@ function injectOverlay() {
 // }
 
 function handleImpact(thisQ, thisA, exc, inc) {
-  console.log("examining question " + thisQ);
-  console.log("examining answer " + thisA);
 
   // if there are exclusions
   if (questions[thisQ].answers[thisA].excludes[0]) {
@@ -72,11 +70,6 @@ function handleImpact(thisQ, thisA, exc, inc) {
   if (questions[thisQ].answers[thisA].includes[0]) {
     // get included questions based on answers
     inc.push(questions[thisQ].answers[thisA].includes);
-  }
-  // move this next statement into a full function for building the policy
-  // if there is policy text
-  if (questions[thisQ].answers[thisA].policyEntry !== "" ) {
-    updatePolicy(questions[thisQ].answers[thisA].policyEntry);
   }
 
 }
@@ -95,6 +88,7 @@ function checkValue(question, answer, val) {
           "answer":answer,
           "value":val
         });
+        console.log("answer is"+val)
         questions[question].answers[temp].policyEntry += val;
         break;
       default:

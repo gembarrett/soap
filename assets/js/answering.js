@@ -16,14 +16,14 @@ var contact = [];
 function handleSubmit() {
   // get question identifier
   var identifier = questionQueue[currentQuestion];
-  console.log('the identifier is '+identifier);
+  console.log('looking at question '+identifier);
   // get question container
   var qRef = document.getElementById(identifier);
-  console.log(qRef);
   var removeQ = [];
   var includeQ = [];
   var qId = identifier.split("q")[1];
   var answers = getInput(qRef, qId);
+  console.log(answers);
 
   // for each of the answers
   for (var j = 0; j < answers.length; j++) {
@@ -111,11 +111,9 @@ function toggleQuestions(ref) {
   }
 
 }
-
+// // FIXME: this current returns an empty array
 // this function returns an array of the selected or typed answers
 function getInput(el, qId) {
-  console.log(el);
-  console.log('the qId is' + qId);
   var tempRefs =[];
   // get input fields from the element
   // for each of the elements in that question group
@@ -125,17 +123,26 @@ function getInput(el, qId) {
     // maybe replace with getElementBySelector here
     // if the element is an input field and is checked or a used textbox
     if (input.tagName === "INPUT") {
+      var answerID = input.id.split("-")[1];
+      console.log('the checked answer is '+answerID);
       // if it's a checkbox
       if (input.checked) {
-        console.log("you checked answer " + input.id);
+        console.log(input);
+
         policyRefs.push({
           "q": qId,
           "a": input.id
         });
+
+        if (questions[qId].answers[input.id.split("-")[1]].policyEntry !== "" ) {
+          console.log(questions[qId].answers[input.id.split("-")[1]].policyEntry);
+          updatePolicy(questions[thisQ].answers[thisA].policyEntry);
+        }
+
       }
       // if it's a textbox
       else if (input.type === "text" && input.value !== "") {
-        console.log("you gave the answer "+ input.value);
+        console.log('the answer is '+answerID);
         checkValue(qId, input.id, input.value);
         policyRefs.push({
           "q": qId,
@@ -147,8 +154,6 @@ function getInput(el, qId) {
         "q": qId,
         "a": input.id,
       });
-    } else {
-      console.log(el.childNodes[i].tagName + " is not an input field");
     }
   }
   return tempRefs;
