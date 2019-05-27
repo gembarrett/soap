@@ -27,7 +27,6 @@ var utils = (function(){
 
     render: function(element_id, content){
         document.getElementById(element_id).innerHTML = content;
-        document.getElementById(element_id).scrollIntoView();
     },
 
   };
