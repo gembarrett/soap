@@ -1,0 +1,23 @@
+@media (max-width:599px) {
+
+}
+
+@media (min-width:600px) {
+  #head {
+    padding: 0 40px;
+  }
+  #head img {
+    max-width: 20%;
+  }
+  #head ul, #foot ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  #head li, #foot li {
+    display:inline;
+    padding: 0 20px;
+  }
+  #head a, #foot a {
+    color:#fff;
+  }
+}

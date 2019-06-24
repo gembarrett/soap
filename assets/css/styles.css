@@ -1,11 +1,24 @@
+/* Structural styles */
+
 body {
   font-family: "OpenSans", sans-serif;
+  margin: 0;
 }
-.questionContent {
-  display:none;
+
+#head, #page, #foot {
+  padding: 10px;
 }
-.questionContent.current {
-  display:block;
+
+#head {
+  background-color: #96CAEE;
+  margin-bottom: 10px;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#head h1 {
+  display:inline-block;
 }
 
 #head h2 {
@@ -14,13 +27,26 @@ body {
   padding-left: 10px;
 }
 
-#head h1 {
-  display:inline-block;
+#head img {
+  padding: 10px;
 }
 
-#head {
-  border-bottom: 1px solid #1EAEDB;
-  margin: 10px 0 10px;
+#foot {
+  background-color: #96CAEE;
+}
+
+/* ================== */
+/* Content styles */
+
+a {
+  text-decoration: none;
+}
+
+.questionContent {
+  display:none;
+}
+.questionContent.current {
+  display:block;
 }
 
 #secretLink {
@@ -32,9 +58,8 @@ body {
   padding-left: 5px;
 }
 
-a {
-  text-decoration: none;
-}
+/* ================== */
+/* Preview styles */
 
 .modal {
   position: fixed;
@@ -51,9 +76,11 @@ a {
 .closed {
   display: none;
 }
+
 #closePreview {
   z-index: 9;
 }
+
 .modalScrollbox {
   position: absolute;
   top: 0;
