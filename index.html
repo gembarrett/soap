@@ -7,6 +7,7 @@
     <script src="content/questions.js"></script>
     <link rel="stylesheet" href="assets/css/styles.css" />
     <link rel="stylesheet" href="assets/css/media.css" />
+    <link href="/assets/css/all.css" rel="stylesheet">
     <script src="assets/js/utils.js"></script>
     <script src="assets/js/init.js"></script>
     <!-- these may need to be moved further down or refactored -->
@@ -14,23 +15,35 @@
     <script src="assets/js/answering.js"></script>
   </head>
   <body>
-
     <div class="container">
       <div id="head" class="header">
-        <img src="assets/images/soapLogoW.png" />
-        <ul id="linksPanel">
-          <li><a href="">Link 1</a></li>
-          <li><a href="">Link 2</a></li>
-          <li><a href="">Link 3</a></li>
-        </ul>
+        <div class="wrapper">
+          <a href="/">
+            <img src="assets/images/soapLogoW.png" />
+          </a>
+
+          <!-- hamburger icon -->
+          <input type="checkbox" id="menu-check" />
+          <label for="menu-check" id="expand"><i class="fas fa-ellipsis-v"></i></label>
+          <input type="checkbox" id="menu-collapse" />
+          <label for="menu-check" id="collapse"><i class="fas fa-ellipsis-h"></i></label>
+
+          <ul id="menu">
+            <li><a href="/#about">Background</a></li>
+            <li><a href="/#build">Build</a></li>
+            <li><a href="/#contribute">Contribute</a></li>
+          </ul>
+        </div>
       </div>
-      <div id="page" class="main-content"></div>
+      <div id="page" class="main-content wrapper"></div>
       <div id="foot" class="footer">
-        <ul>
-          <li><a href="">Link 1</a></li>
-          <li><a href="">Link 2</a></li>
-          <li><a href="">Link 3</a></li>
-        </ul>
+        <div class="wrapper">
+          <ul>
+            <li><a href="/#about">Background</a></li>
+            <li><a href="/#build">Build</a></li>
+            <li><a href="/#contribute">Contribute</a></li>
+          </ul>
+        </div>
       </div>
     </div>
     <script src="assets/js/templates/tempIntro.js"></script>
@@ -42,6 +55,5 @@
     <script src="assets/js/views/home.js"></script>
     <script src="assets/js/views/questionsView.js"></script>
     <script src="assets/js/views/policyView.js"></script>
-
   </body>
 </html>

@@ -3,18 +3,23 @@
 body {
   font-family: "OpenSans", sans-serif;
   margin: 0;
+  font-size: 14px;
 }
+
 
 #head, #page, #foot {
   padding: 10px;
 }
 
+.wrapper {
+  max-width:1200px;
+  margin: 0 auto;
+}
+
 #head {
   background-color: #96CAEE;
   margin-bottom: 10px;
-  display:flex;
-  align-items: center;
-  justify-content: space-between;
+  color:#fff;
 }
 
 #head h1 {
@@ -31,8 +36,71 @@ body {
   padding: 10px;
 }
 
+#head ul, #foot ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+#head a, #foot a {
+  color:#fff;
+}
+
 #foot {
   background-color: #96CAEE;
+}
+
+#foot li {
+  display:inline;
+  padding-right: 20px;
+}
+#foot a {
+  font-size: 0.8rem;
+}
+
+/* Button styles */
+
+/* Actual checkboxes set to display:none. We'll be styling the labels and then simply checking if the checkboxes are checked to show and hide the nav. */
+#menu-check {
+  display: none;
+}
+
+#menu-collapse {
+  display: none;
+}
+
+/* Style the checkbox labels.*/
+#expand {
+  cursor: pointer;
+}
+
+#collapse {
+  cursor: pointer;
+  display: none;
+}
+
+/* If menu-check is checked, set the collapse icon to display... */
+#menu-check:checked ~ #collapse {
+  display: block;
+}
+
+/* ...and if menu-check is checked, then set this icon to disappear */
+#menu-check:checked ~ #expand {
+  display: none;
+}
+
+/* ...and if collapse is checked, set expand to display again */
+#menu-collapse:checked ~ #expand {
+  display: block;
+}
+
+/* Show and hide the nav */
+#menu-check:checked ~ ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+#menu-collapse:checked ~ ul {
+  display: none;
 }
 
 /* ================== */

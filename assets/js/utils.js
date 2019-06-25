@@ -8,7 +8,7 @@ var utils = (function(){
       var temp = route.split('?');
       var route_split = temp.length;
       var function_to_invoke;
-      if (temp[0] === 'questions') {
+      if (temp[0] === 'build') {
         function_to_invoke = 'questionsView';
       } else if (temp[0] === 'policy') {
         function_to_invoke = 'policyView';
