@@ -13,16 +13,16 @@ var contact = [];
 
 // loop through currentQuestion-[i]-answer
 function handleSubmit() {
+  console.log('answering - handleSubmit');
   // get question identifier
-  var identifier = questionQueue[currentQuestion];
-  console.log('looking at question '+identifier);
+  var identifier = questionQueue[currentQuestion]; // this is the number in the queue, NOT the question id
   // get question container
   var qRef = document.getElementById(identifier);
   var removeQ = [];
   var includeQ = [];
-  var qId = identifier.split("q")[1];
+  var qId = parseInt(identifier.split("q")[1]) + 1; // plus 1 to avoid the scenario text at 0
   var answers = getInput(qRef, qId);
-  console.log(answers);
+  console.log(qId);
 
   // for each of the answers
   for (var j = 0; j < answers.length; j++) {
@@ -43,6 +43,8 @@ function handleSubmit() {
 
 
 function updateTheQ(exc, inc) {
+  console.log('answering - updateTheQ');
+
   // remove all the exclusions from the queue
   if (exc != "") {
     // for each question to be removed
@@ -78,6 +80,8 @@ function updateTheQ(exc, inc) {
 
 // TODO: change these classList references to toggle
 function toggleQuestions(ref) {
+  console.log('answering - toggleQuestions');
+
   // hide current question
   // remove class of current
   ref.classList.remove("current");
@@ -102,6 +106,8 @@ function toggleQuestions(ref) {
 }
 // this function returns an array of the selected or typed answers
 function getInput(el, qId) {
+  console.log('answering - getInput');
+
   var tempRefs =[];
   // get input fields from the element
   // for each of the elements in that question group
@@ -140,7 +146,7 @@ function getInput(el, qId) {
 
         checkValue(qId, input.id, input.value);
         policyRefs.push({
-          "q": qId,
+          "q": qId, // qId should start from 1 not 0?
           "a": input.id,
           "t": input.value
         });
@@ -149,8 +155,9 @@ function getInput(el, qId) {
           "q": qId,
           "a": input.id,
         });
-        if (questions[qId].answers[answerID].policyEntry !== "" ) {
-          updatePolicy(questions[qId].answers[answerID].policyEntry);
+        console.log(thisSection, qId);
+        if (thisSection[qId].answers[answerID].policyEntry !== "" ) {
+          updatePolicy(thisSection[qId].answers[answerID].policyEntry);
         }
       }
     }

@@ -12,7 +12,6 @@ templates.questionsTemplate = function(data){
       } else {
         content = content + `<form id="`+question.id+ `" class="questionContent"><h3>`+ question.question +`</h3>`;
       }
-      console.log(question);
       content = content + '<div class="info-panel">'
       + question.tips[0].relevance
       + question.tips[1].meaning

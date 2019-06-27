@@ -1,17 +1,24 @@
+// initialise with the first section, update at the end of each section
+var thisSection = section0;
+console.log('building - initialising thisSection');
+
 // these are arrays of text pieces
 // this one is compiled on the fly when Preview button is clicked and at end
 var policyText = [];
 
 // this one is compiled at the end of the process
-var appendixText;
+var appendixText = [];
 
 function updatePolicy(entry) {
+  console.log('building - updatePolicy');
+
   entry = '<p>' + entry + '</p>';
   policyText.push(entry);
-  console.log(policyText);
 }
 
 function injectOverlay() {
+  console.log('building - injectOverlay');
+
   var parent = document.querySelector(".container");
   parent.insertAdjacentHTML('afterend', '<div id="preview" class="modal closed"><button id="closePreview">X</button><div id="inner" class="modalScrollbox"><h3>Policy Preview</h3></div></div><div id="overlay" class="modalOverlay closed"></div>');
 
@@ -60,36 +67,39 @@ function injectOverlay() {
 // }
 
 function handleImpact(thisQ, thisA, exc, inc) {
+  console.log('building - handleImpact');
 
   // if there are exclusions
-  if (questions[thisQ].answers[thisA].excludes[0]) {
+  if (thisSection[thisQ].answers[thisA].excludes[0]) {
     // get the excluded question refs
-    exc.push(questions[thisQ].answers[thisA].excludes);
+    exc.push(thisSection[thisQ].answers[thisA].excludes);
   }
   // if there are inclusions
-  if (questions[thisQ].answers[thisA].includes[0]) {
+  if (thisSection[thisQ].answers[thisA].includes[0]) {
     // get included questions based on answers
-    inc.push(questions[thisQ].answers[thisA].includes);
+    inc.push(thisSection[thisQ].answers[thisA].includes);
   }
 
 }
 
 // this function checks whether a value is needed for later and updates the global variable
 function checkValue(question, answer, val) {
+    console.log('building - checkValue');
+    console.log(thisSection, question);
     var temp = answer.split("-")[1];
     switch (question) {
-      case "0":
+      case "1":
         orgName = val;
         // TODO change this to keep a backup of the original text in case user goes back to change
-        questions[question].answers[temp].policyEntry += orgName;
+        thisSection[question].answers[temp].policyEntry += orgName;
         break;
-      case "1":
+      case "2":
         contact.push({
           "answer":answer,
           "value":val
         });
         console.log("answer is"+val)
-        questions[question].answers[temp].policyEntry += val;
+        thisSection[question].answers[temp].policyEntry += val;
         break;
       default:
     }

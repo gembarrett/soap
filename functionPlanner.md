@@ -39,3 +39,10 @@
 // push the relevant policy text to the policyText array
 // compare the list of excluded questions with the question queue
 // remove any excluded questions from the queue
+
+
+// each section has a startung scenario and several related questions
+// the answers to each question will hide/show questions in other sections
+// the questions should all be shown by default, then removed from the queue as necessary
+// so if scenario 1, question 2 is answered negatively then scenario 3, question 4 should not be shown
+// having the content in sections means the logic for each could also be split into separate files

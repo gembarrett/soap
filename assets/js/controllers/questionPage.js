@@ -1,12 +1,13 @@
 controllers.questionPage = function(data, params){
   // load section1 questions
-  var thisSection = section1;
   var totalQuestions = thisSection.length;
   var thisScenario = thisSection[0];
   var templateContext = [];
   // queue up all the questions in this section
+  console.log('questionPage - get the questions, answers, id, tips');
   for (var i = 1; i < totalQuestions; i++){
     var question = thisSection[i];
+    // is it worth making these objects or just passing through the references?
     var item = {
       'question': question.q,
       'answers': question.answers,
