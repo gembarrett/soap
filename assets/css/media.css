@@ -51,4 +51,7 @@
     align-items: center;
     justify-content: space-between;
   }
+  #expand {
+    display: none;
+  }
 }
