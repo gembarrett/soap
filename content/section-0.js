@@ -278,7 +278,7 @@ var section0 = [
         ]
       },
       {
-        "type":"textbox",
+        "type":"checkbox",
         "answerText":"Windows Phone",
         "storeAs": "windowsP",
         "excludes":[],
