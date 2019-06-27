@@ -5,7 +5,7 @@ var section1 = [
       {"intro":"There are 7 parts to the policy-building process, covering aspects of organisational security such as password management and office WiFi access. At the start of each section you'll be asked to consider a hypothetical, but common, security incident. What follows after that is a series of questions about relevant mitigation tactics, with each selected answer contributing the appropriate content to the security policy. Each section ends with an opportunity to specify steps for staff to take if and when they find themselves involved in such an incident."},
       {"desc":"Unsure about the relevance or meaning of a particular question? Just hit the Info button to the right of the question to reveal a panel with implementation tips, definitions, search terms and other additional information. The progress bar at the top of each page will show you how far through the process you are, and you can skip questions or go back to previous questions using the buttons either side of it. As you progress through the process, you can see how your policy is looking at any time by hitting Preview. Finally, when you've completed all 7 sections, you will be shown your full policy, including appendix, and the available download options so you can share the policy in the best way for your organisation."},
       {"end":"This first section is all about understanding your organisation's context for this policy. Your answers here will provide the supporting information needed to start identifying the relevant and irrelevant questions."}
-    ],
+    ]
   },
   {
     "isQuestion": true,
@@ -15,14 +15,13 @@ var section1 = [
     "policyContent":"",
     "answers":[
       {
-        "type":"textbox", // because of this the answer text may need to be imported differently
+        "type":"textbox",
         "answerText":"Enter the organisation name",
         "storeAs":"orgName",
         "excludes":"",
         "includes":"",
         "policyEntry":"This is the security policy of [orgName], which has been created in order to support staff in carrying out our sensitive work securely. It is important to understand and comply with the rules described as they aim to protect everyone involved in our work, including partner organisations and frontline activists.",
-        "appendixEntry":"",
-        "storeAs":"orgName"
+        "appendixEntry":""
       }
     ],
     "tips":[ // hide the ? info button if these are all empty
@@ -51,12 +50,12 @@ var section1 = [
             "reviewList":"Is [contactName] succeeding in supporting staff implementation of the policy? Are they happy to continue as security champion?",
             "tipList": ""
           }
-        ],
+        ]
       },
       {
         "type":"textbox",
         "answerText":"Job title",
-        "storeAs":"contactPos"
+        "storeAs":"contactPos",
         "excludes":[],
         "includes":[],
         "policyEntry":", [contactPos]",
@@ -65,12 +64,12 @@ var section1 = [
             "reviewList":"Is [contactName]'s job title still [contactPos]?",
             "tipList": ""
           }
-        ],
+        ]
       },
       {
         "type":"textbox",
         "answerText":"Email",
-        "storeAs":"contactEmail"
+        "storeAs":"contactEmail",
         "excludes":[],
         "includes":[],
         "policyEntry":"They can be contacted by email at [contactEmail].",
@@ -108,7 +107,7 @@ var section1 = [
     "q":"Who will this policy apply to?",
     "required":true,
     "id":"q2",
-    "policyContent":"This security policy applies to [selected answers]"
+    "policyContent":"This security policy applies to [selected answers]",
     "answers":[
       {
         "type":"checkbox",
@@ -167,7 +166,7 @@ var section1 = [
         ]
       }
     ],
-    "tips":[ // hide the ? info button if these are all empty
+    "tips":[
       {"relevance":""},
       {"meaning":"It should be clear exactly who is responsible for adhering to the policy and liable for violations. Use this moment to decide whether to create a separate policy for staff with different access levels, for instance volunteers or contractors."},
       {"implementation":"No one wants to read a policy that doesn’t apply to them. Presenting staff with only the most relevant of rules for their working environment will help with implementation and buy-in."},
@@ -178,7 +177,7 @@ var section1 = [
     "q":"Which operating systems are used in your organisation?",
     "required":true,
     "id":"q3",
-    "policyContent":""
+    "policyContent":"",
     "answers":[
       {
         "type":"checkbox",
@@ -211,7 +210,7 @@ var section1 = [
       {
         "type":"checkbox",
         "answerText":"Linux (any flavour)",
-        "storeAs": "linux"
+        "storeAs": "linux",
         "excludes":[],
         "includes":[],
         "policyEntry":"",
@@ -281,7 +280,7 @@ var section1 = [
       {
         "type":"textbox",
         "answerText":"Windows Phone",
-        "storeAs": "windowsP"
+        "storeAs": "windowsP",
         "excludes":[],
         "includes":[],
         "policyEntry":"",
@@ -337,7 +336,7 @@ var section1 = [
       {
         "type":"checkbox",
         "answerText":"We provide work-only devices.",
-        "storeAs": "separate"
+        "storeAs": "separate",
         "excludes":[],
         "includes":[],
         "policyEntry":"We will provide you with devices, such as a computer, to use solely for work purposes.",
@@ -351,7 +350,7 @@ var section1 = [
     ],
     "tips":[
       {"relevance":""},
-      {"meaning":"SProviding devices to staff can be expensive but it makes it easier to achieve complete separation of personal and work activities. Work profiles can be installed on most ‘smart’ devices and computers as an alternative that maintains the convenience of remote control for wiping (the profile), installation and updates. Although the personal and work profiles are kept isolated from each other, reducing leakage of sensitive information between the two, it can blur the boundaries between work and personal lives and feel intrusive to staff. BYOD policies allow staff to use their own computers and phones, and paired with work profiles can provide convenience for staff member and organisation."},
+      {"meaning":"Providing devices to staff can be expensive but it makes it easier to achieve complete separation of personal and work activities. Work profiles can be installed on most ‘smart’ devices and computers as an alternative that maintains the convenience of remote control for wiping (the profile), installation and updates. Although the personal and work profiles are kept isolated from each other, reducing leakage of sensitive information between the two, it can blur the boundaries between work and personal lives and feel intrusive to staff. BYOD policies allow staff to use their own computers and phones, and paired with work profiles can provide convenience for staff member and organisation."},
       {"implementation":"Commonly the choice of work device vs work profile is given to individual staff members to decide the best option for their own situation. For the staff member, convenience and work-life balance are major factors in this decision. For the organisation, security and cost are top priority. Be aware though, that not all staff members will be in a position to provide a suitable device for use at work."},
       {"more":["comparing security of operating systems", "desktop/mobile os security features"]}
     ]
@@ -374,7 +373,7 @@ var section1 = [
             "reviewList":"",
             "tipList": "A quick temporary alternative to webcam covers can be made from a post-it note or sticky-taped paper over the camera."
           }
-        ],
+        ]
       },
       {
         "type":"radio",
@@ -393,7 +392,7 @@ var section1 = [
       {
         "type":"radio",
         "answerText":"Both",
-        "storeAs": "both"
+        "storeAs": "both",
         "excludes":[],
         "includes":[],
         "policyEntry":"Protecting the devices we use is crucial in preventing unauthorised access to sensitive [orgName] data. To mitigate this, [orgName] will provide you with webcam cover(s) and privacy screen(s) to use on your devices.",
@@ -407,7 +406,7 @@ var section1 = [
       {
         "type":"radio",
         "answerText":"Neither",
-        "storeAs": "neither"
+        "storeAs": "neither",
         "excludes":[],
         "includes":[],
         "policyEntry":"",
@@ -469,7 +468,7 @@ var section1 = [
     ]
   },
   {
-    "q":"DHow regularly do you intend to review and update this policy?",
+    "q":"How regularly do you intend to review and update this policy?",
     "required":true,
     "id":"q7",
     "policyContent":"This policy will be reviewed by [contactName, contactPos] on a [reviewFreq] basis. Any suggestions or feedback on the policy’s contents should be directed to them.",
@@ -486,7 +485,7 @@ var section1 = [
             "reviewList":"",
             "tipList": "mark your calendar for review dates on [date+1yr, date+2yr, date+3yr]"
           }
-        ],
+        ]
       },
       {
         "type":"radio",
