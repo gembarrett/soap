@@ -2,8 +2,9 @@ templates.questionsTemplate = function(data){
   var content = `
       <div id="questionContainer" class="">
   `;
-  for(var i = 0; i < totalQ-1; i++) {
+  for(var i = 0; i < totalQ; i++) {
       var question = data[i];
+      console.log(question.id);
       if (question.id === "q0") { // maybe check by thisQ instead?
         // FIX: this is an ugly way of adding the "current" class to q0, instead apply the class after element added to page
         content = content + `<form id="`+question.id+ `" class="questionContent current">` + '<h2>' + question.title + '</h2>';
@@ -11,7 +12,6 @@ templates.questionsTemplate = function(data){
           content = content + '<p>' + question.contentArray[k] + '</p>';
         }
       } else {
-        console.log(question.q);
         content = content + `<form id="`+question.id+ `" class="questionContent">` + '<h2>' + question.q + '</h2>';
       };
       // if it's not a question, print the text
@@ -27,7 +27,7 @@ templates.questionsTemplate = function(data){
           content = content + '<div class="form-el"><input type="'
           +question.answers[j].type+ '" id="'
           +question.id+ "-"+ j+ '-answer" name="'
-          +question.id+ "-"+ j+ '-el">'
+          +question.id+  '-el">'
           + '<label for="'
           +question.id+ "-" + j+ '-el">'
           +question.answers[j].answerText+ '</label></div>';
