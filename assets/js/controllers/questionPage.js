@@ -9,7 +9,8 @@ controllers.questionPage = function(data, params){
         'q': el.q,
         'answers': el.answers,
         'id': el.id,
-        'tips': el.tips
+        'tips': el.tips,
+        'isQ':true
         // 'required': el.required
       };
     } else {
