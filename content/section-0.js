@@ -1,17 +1,15 @@
 var section0 = [
   {
     "isQuestion": false,
-    "paragraph":[
-      {"intro":"There are 7 parts to the policy-building process, covering aspects of organisational security such as password management and office WiFi access. At the start of each section you'll be asked to consider a hypothetical, but common, security incident. What follows after that is a series of questions about relevant mitigation tactics, with each selected answer contributing the appropriate content to the security policy. Each section ends with an opportunity to specify steps for staff to take if and when they find themselves involved in such an incident."},
-      {"desc":"Unsure about the relevance or meaning of a particular question? Just hit the Info button to the right of the question to reveal a panel with implementation tips, definitions, search terms and other additional information. The progress bar at the top of each page will show you how far through the process you are, and you can skip questions or go back to previous questions using the buttons either side of it. As you progress through the process, you can see how your policy is looking at any time by hitting Preview. Finally, when you've completed all 7 sections, you will be shown your full policy, including appendix, and the available download options so you can share the policy in the best way for your organisation."},
-      {"end":"This first section is all about understanding your organisation's context for this policy. Your answers here will provide the supporting information needed to start identifying the relevant and irrelevant questions."}
-    ]
+    "id":"q0",
+    "title": "Getting started",
+    "paragraph":["There are 7 parts to the policy-building process, covering aspects of organisational security such as password management and office WiFi access. At the start of each section you'll be asked to consider a hypothetical, but common, security incident. What follows after that is a series of questions about relevant mitigation tactics, with each selected answer contributing the appropriate content to the security policy. Each section ends with an opportunity to specify steps for staff to take if and when they find themselves involved in such an incident.","Unsure about the relevance or meaning of a particular question? Just hit the Info button to the right of the question to reveal a panel with implementation tips, definitions, search terms and other additional information. The progress bar at the top of each page will show you how far through the process you are, and you can skip questions or go back to previous questions using the buttons either side of it. As you progress through the process, you can see how your policy is looking at any time by hitting Preview. Finally, when you've completed all 7 sections, you will be shown your full policy, including appendix, and the available download options so you can share the policy in the best way for your organisation.","This first section is all about understanding your organisation's context for this policy. Your answers here will provide the supporting information needed to start identifying the relevant and irrelevant questions."]
   },
   {
     "isQuestion": true,
     "q":"What is the name of your organisation?",
     "required":true,
-    "id":"q0",
+    "id":"q1",
     "policyContent":"",
     "answers":[
       {
@@ -35,7 +33,7 @@ var section0 = [
     "isQuestion": true,
     "q":"Who is responsible for this policy?",
     "required":false,
-    "id":"q1",
+    "id":"q2",
     "policyContent":"",
     "answers":[
       {
@@ -106,7 +104,7 @@ var section0 = [
     "isQuestion": true,
     "q":"Who will this policy apply to?",
     "required":true,
-    "id":"q2",
+    "id":"q3",
     "policyContent":"This security policy applies to [selected answers]",
     "answers":[
       {
@@ -174,9 +172,10 @@ var section0 = [
     ]
   },
   {
+    "isQuestion": true,
     "q":"Which operating systems are used in your organisation?",
     "required":true,
-    "id":"q3",
+    "id":"q4",
     "policyContent":"",
     "answers":[
       {
@@ -300,9 +299,10 @@ var section0 = [
     ]
   },
   {
+    "isQuestion": true,
     "q":"How does your organisation manage staff work devices?",
     "required":false,
-    "id":"q4",
+    "id":"q5",
     "policyContent":"",
     "answers":[
       {
@@ -356,9 +356,10 @@ var section0 = [
     ]
   },
   {
+    "isQuestion": true,
     "q":"Does your organisation provide staff with webcam covers or privacy screens for their devices?",
     "required":false,
-    "id":"q5",
+    "id":"q6",
     "policyContent":"",
     "answers":[
       {
@@ -426,9 +427,10 @@ var section0 = [
     ]
   },
   {
+    "isQuestion": true,
     "q":"Do all your staff work in the same physical office?",
     "required":false,
-    "id":"q6",
+    "id":"q7",
     "policyContent":"",
     "answers":[
       {
@@ -468,9 +470,10 @@ var section0 = [
     ]
   },
   {
+    "isQuestion": true,
     "q":"How regularly do you intend to review and update this policy?",
     "required":true,
-    "id":"q7",
+    "id":"q8",
     "policyContent":"This policy will be reviewed by [contactName, contactPos] on a [reviewFreq] basis. Any suggestions or feedback on the policy’s contents should be directed to them.",
     "answers":[
       {

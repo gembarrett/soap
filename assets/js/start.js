@@ -1,7 +1,14 @@
-// // initialise with the first section, update at the end of each section
-// var currentS, currentQ = 0;
-// console.log('start - initialising');
-//
+// initialise counters with the first section and question, this is updated at the end of questions and sections
+var currentS, currentQ = 0;
+console.log('start - initialising');
+
+// name of section to start with
+var thisS = section0;
+// how many questions in this section?
+var totalQ = thisS.length;
+
+
+
 // // this will be a multidimentional array holding section, question and answer IDs and user input
 // var answerRefs = [];
 // /////////////////////////////////////////////////
@@ -20,11 +27,10 @@
 // // for each item, check if it's a question
 // // if it isn't then push all the paragraphs to the first slot of temporary array
 // // if it is then push section id, question id, question text, answer refs, answer text and tips
-//
-//
 
-var thisSection = section0;
-console.log('building - initialising thisSection');
+
+var thisScenario = thisS[0];
+
 var policyText = [];
 var appendixText = [];
 var policyRefs = [];
@@ -58,6 +64,7 @@ function getInput(el, qId) {
     if (input.tagName === "INPUT") {
       var answerID = input.id.split("-")[1];
       if (input.checked) {
+        console.log("this is checked input");
         policyRefs.push({
           "q": qId,
           "a": input.id
@@ -66,11 +73,14 @@ function getInput(el, qId) {
           "q": qId,
           "a": input.id,
         });
-        if (thisSection[qId].answers[answerID].policyEntry !== "" ) {
-          updatePolicy(thisSection[qId].answers[answerID].policyEntry);
-        }
+        // if the answer has a storage name, initialise that variable
+        console.log(qId, answerID);
+        // if (thisS[qId].answers[answerID].policyEntry !== "" ) {
+        //   updatePolicy(thisS[qId].answers[answerID].policyEntry);
+        // }
       }
       else if (input.type === "text" && input.value !== "") {
+        console.log("this is text");
         var answerID = input.id.split("-")[1];
         checkValue(qId, input.id, input.value);
         policyRefs.push({
@@ -82,8 +92,9 @@ function getInput(el, qId) {
           "q": qId,
           "a": input.id,
         });
-        if (thisSection[qId].answers[answerID].policyEntry !== "" ) {
-          updatePolicy(thisSection[qId].answers[answerID].policyEntry);
+        console.log(qId, answerID);
+        if (thisS[qId].answers[answerID].policyEntry !== "" ) {
+          updatePolicy(thisS[qId].answers[answerID].policyEntry);
         }
       }
     }
@@ -97,14 +108,14 @@ function checkValue(question, answer, val) {
     switch (question) {
       case "1":
         orgName = val;
-        thisSection[question].answers[temp].policyEntry += orgName;
+        thisS[question].answers[temp].policyEntry += orgName;
         break;
       case "2":
         contact.push({
           "answer":answer,
           "value":val
         });
-        thisSection[question].answers[temp].policyEntry += val;
+        thisS[question].answers[temp].policyEntry += val;
         break;
       default:
     }
@@ -116,11 +127,11 @@ function updatePolicy(entry) {
 }
 
 function handleImpact(thisQ, thisA, exc, inc) {
-  if (thisSection[thisQ].answers[thisA].excludes[0]) {
-    exc.push(thisSection[thisQ].answers[thisA].excludes);
+  if (thisS[thisQ].answers[thisA].excludes[0]) {
+    exc.push(thisS[thisQ].answers[thisA].excludes);
   }
-  if (thisSection[thisQ].answers[thisA].includes[0]) {
-    inc.push(thisSection[thisQ].answers[thisA].includes);
+  if (thisS[thisQ].answers[thisA].includes[0]) {
+    inc.push(thisS[thisQ].answers[thisA].includes);
   }
 }
 
