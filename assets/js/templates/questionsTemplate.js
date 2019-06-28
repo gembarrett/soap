@@ -9,8 +9,16 @@ templates.questionsTemplate = function(data){
 
       // if it's a question
       if (question.isQ) {
-        // add the question and answers
+        // add the question
          content += '<h2>' + question.q + '</h2>';
+         // add the tips panel
+         content += '<div class="info-panel">'
+         + question.tips[0].relevance
+         + question.tips[1].meaning
+         + question.tips[2].implementation
+         + question.tips[3].more
+         + '</div>';
+         // add the answers 
          for (var j = 0; j < question.answers.length; j++){
            content += '<div class="form-el"><input type="'
            +question.answers[j].type+ '" id="'
@@ -22,7 +30,6 @@ templates.questionsTemplate = function(data){
          }
       } else {
         // add the title and paragraphs
-
         content += '<h2>' + question.title + '</h2>';
         for (var k = 0; k < question.contentArray.length; k++){
           content += '<p>' + question.contentArray[k] + '</p>';
