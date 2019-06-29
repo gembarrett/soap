@@ -2,7 +2,7 @@ templates.questionsTemplate = function(data){
   var content = `
       <div id="questionContainer" class="">
   `;
-  for(var i = 0; i < totalQ; i++) {
+  for(var i = 0; i < currentState.sectionQ.length; i++) {
       var question = data[i];
       // create the start of the form
       content += `<form id="`+question.id+ `" class="questionContent`+ (question.isQ ? '">' : ' current">');
@@ -18,7 +18,7 @@ templates.questionsTemplate = function(data){
          + question.tips[2].implementation
          + question.tips[3].more
          + '</div>';
-         // add the answers 
+         // add the answers
          for (var j = 0; j < question.answers.length; j++){
            content += '<div class="form-el"><input type="'
            +question.answers[j].type+ '" id="'
