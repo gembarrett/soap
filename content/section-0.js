@@ -16,8 +16,7 @@ var section0 = [
         "type":"textbox",
         "answerText":"Enter the organisation name",
         "storeAs":"orgName",
-        "excludes":"",
-        "includes":"",
+        "excludes":[],
         "policyEntry":"This is the security policy of [orgName], which has been created in order to support staff in carrying out our sensitive work securely. It is important to understand and comply with the rules described as they aim to protect everyone involved in our work, including partner organisations and frontline activists.",
         "appendixEntry":""
       }
@@ -41,7 +40,6 @@ var section0 = [
         "answerText":"Name",
         "storeAs":"contactName",
         "excludes":[],
-        "includes":[],
         "policyEntry":"If you have questions about this policy, please contact [contactName]",
         "appendixEntry":[
           {
@@ -55,7 +53,6 @@ var section0 = [
         "answerText":"Job title",
         "storeAs":"contactPos",
         "excludes":[],
-        "includes":[],
         "policyEntry":", [contactPos]",
         "appendixEntry":[
           {
@@ -69,7 +66,6 @@ var section0 = [
         "answerText":"Email",
         "storeAs":"contactEmail",
         "excludes":[],
-        "includes":[],
         "policyEntry":"They can be contacted by email at [contactEmail].",
         "appendixEntry":[
           {
@@ -83,7 +79,6 @@ var section0 = [
         "answerText":"Phone",
         "storeAs":"contactPhone",
         "excludes":[],
-        "includes":[],
         "policyEntry":"They can be contacted by telephone on [contactPhone.]",
         "appendixEntry":[
           {
@@ -112,7 +107,6 @@ var section0 = [
         "answerText":"Contractors",
         "storeAs":"contractors",
         "excludes":[],
-        "includes":[],
         "policyEntry":"",
         "appendixEntry":[
           {
@@ -126,7 +120,6 @@ var section0 = [
         "answerText":"Full or part-time staff",
         "storeAs":"staff",
         "excludes":[],
-        "includes":[],
         "policyEntry":"",
         "appendixEntry":[
           {
@@ -140,7 +133,6 @@ var section0 = [
         "answerText":"Volunteers",
         "storeAs": "volunteers",
         "excludes":[],
-        "includes":[],
         "policyEntry":"",
         "appendixEntry":[
           {
@@ -154,7 +146,6 @@ var section0 = [
         "answerText":"Other",
         "storeAs": "other",
         "excludes": [],
-        "includes": [],
         "policyEntry":"",
         "appendixEntry":[
           {
@@ -183,7 +174,6 @@ var section0 = [
         "answerText":"Windows",
         "storeAs": "windows",
         "excludes":[],
-        "includes":[],
         "policyEntry":"",
         "appendixEntry":[
           {
@@ -197,7 +187,6 @@ var section0 = [
         "answerText":"macOS",
         "storeAs": "mac",
         "excludes":[],
-        "includes":[],
         "policyEntry":"",
         "appendixEntry":[
           {
@@ -211,7 +200,6 @@ var section0 = [
         "answerText":"Linux (any flavour)",
         "storeAs": "linux",
         "excludes":[],
-        "includes":[],
         "policyEntry":"",
         "appendixEntry":[
           {
@@ -225,7 +213,6 @@ var section0 = [
         "answerText":"Chrome OS",
         "storeAs": "chrome",
         "excludes":[],
-        "includes":[],
         "policyEntry":"",
         "appendixEntry":[
           {
@@ -239,7 +226,6 @@ var section0 = [
         "answerText":"Android",
         "storeAs": "android",
         "excludes":[],
-        "includes":[],
         "policyEntry":"",
         "appendixEntry":[
           {
@@ -253,7 +239,6 @@ var section0 = [
         "answerText":"iOS",
         "storeAs": "ios",
         "excludes":[],
-        "includes":[],
         "policyEntry":"",
         "appendixEntry":[
           {
@@ -267,7 +252,6 @@ var section0 = [
         "answerText":"Blackberry",
         "storeAs": "blackberry",
         "excludes":[],
-        "includes":[],
         "policyEntry":"",
         "appendixEntry":[
           {
@@ -281,7 +265,6 @@ var section0 = [
         "answerText":"Windows Phone",
         "storeAs": "windowsP",
         "excludes":[],
-        "includes":[],
         "policyEntry":"",
         "appendixEntry":[
           {
@@ -310,7 +293,6 @@ var section0 = [
         "answerText":"We install work profiles on staff-owned devices (Bring Your Own Device policy)",
         "storeAs": "byod",
         "excludes":[],
-        "includes":[],
         "policyEntry":"With your consent, we will install a work profile on your personal devices in order for you to use them in the course of your work. This work profile will keep your work and personal use of the device separated.",
         "appendixEntry":[
           {
@@ -324,7 +306,6 @@ var section0 = [
         "answerText":"We install work and personal profiles on organisation-owned devices.",
         "storeAs": "profiles",
         "excludes":[],
-        "includes":[],
         "policyEntry":"[orgName] staff are given some freedom to decide their work environment and equipment, and we acknowledge that there may be times when after hours access to work email and data is needed. We will provide you with devices and install both a work and personal profile for you to use.",
         "appendixEntry":[
           {
@@ -338,7 +319,6 @@ var section0 = [
         "answerText":"We provide work-only devices.",
         "storeAs": "separate",
         "excludes":[],
-        "includes":[],
         "policyEntry":"We will provide you with devices, such as a computer, to use solely for work purposes.",
         "appendixEntry":[
           {
@@ -367,7 +347,6 @@ var section0 = [
         "answerText":"Webcam cover",
         "storeAs": "webcam",
         "excludes":[],
-        "includes":[],
         "policyEntry":"Protecting the devices we use is crucial in preventing unauthorised access to sensitive [orgName] data. To mitigate this, [orgName] will provide you with webcam cover(s) to use on your devices.",
         "appendixEntry":[
           {
@@ -381,7 +360,6 @@ var section0 = [
         "answerText":"Privacy screen",
         "storeAs": "screen",
         "excludes":[],
-        "includes":[],
         "policyEntry":"Protecting the devices we use is crucial in preventing unauthorised access to sensitive [orgName] data. To mitigate this, [orgName] will provide you with privacy screen(s) to use on your devices.",
         "appendixEntry":[
           {
@@ -395,8 +373,7 @@ var section0 = [
         "answerText":"Both",
         "storeAs": "both",
         "excludes":[],
-        "includes":[],
-        "policyEntry":"Protecting the devices we use is crucial in preventing unauthorised access to sensitive [orgName] data. To mitigate this, [orgName] will provide you with webcam cover(s) and privacy screen(s) to use on your devices.",
+                "policyEntry":"Protecting the devices we use is crucial in preventing unauthorised access to sensitive [orgName] data. To mitigate this, [orgName] will provide you with webcam cover(s) and privacy screen(s) to use on your devices.",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -409,8 +386,7 @@ var section0 = [
         "answerText":"Neither",
         "storeAs": "neither",
         "excludes":[],
-        "includes":[],
-        "policyEntry":"",
+                "policyEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -438,8 +414,7 @@ var section0 = [
         "answerText":"Yes",
         "storeAs": "onsite",
         "excludes":[], // review this
-        "includes":[],
-        "policyEntry":"Protecting the devices we use is crucial in preventing unauthorised access to sensitive [orgName] data. To mitigate this, [orgName] will provide you with webcam cover(s) to use on your devices.",
+                "policyEntry":"Protecting the devices we use is crucial in preventing unauthorised access to sensitive [orgName] data. To mitigate this, [orgName] will provide you with webcam cover(s) to use on your devices.",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -452,8 +427,7 @@ var section0 = [
         "answerText":"No - some or all of our staff work remotely.",
         "storeAs": "remote",
         "excludes":[],
-        "includes":[],
-        "policyEntry":"Protecting the devices we use is crucial in preventing unauthorised access to sensitive [orgName] data. To mitigate this, [orgName] will provide you with privacy screen(s) to use on your devices.",
+                "policyEntry":"Protecting the devices we use is crucial in preventing unauthorised access to sensitive [orgName] data. To mitigate this, [orgName] will provide you with privacy screen(s) to use on your devices.",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -481,8 +455,7 @@ var section0 = [
         "answerText":"Annually",
         "storeAs": "annual",
         "excludes":[], // review this
-        "includes":[],
-        "policyEntry":"",
+                "policyEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -495,8 +468,7 @@ var section0 = [
         "answerText":"6-monthly",
         "storeAs": "6mths",
         "excludes":[], // review this
-        "includes":[],
-        "policyEntry":"",
+                "policyEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -509,8 +481,7 @@ var section0 = [
         "answerText":"Quarterly",
         "storeAs": "quarter",
         "excludes":[], // review this
-        "includes":[],
-        "policyEntry":"",
+                "policyEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -523,8 +494,7 @@ var section0 = [
         "answerText":"As threats arise",
         "storeAs": "irregular",
         "excludes":[],
-        "includes":[],
-        "policyEntry":"",
+                "policyEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",

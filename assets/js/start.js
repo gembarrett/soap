@@ -27,7 +27,9 @@ var currentState = {
   // which question's data is in use?
   questionQ: questionsList[0],
   // which answers have been given for which questions?
-  answers: []
+  answers: [],
+  // list of exclusions, updated on every submission and checked on every question load
+  exclusions: []
 }
 
 
@@ -51,28 +53,77 @@ function checkForStorage() {
   // store the value *somewhere*
 }
 
+
 // this is the function that's called when a user submits an answer - could the question ID be passed through?
 function handleSubmit() {
   console.log('answering - handleSubmit');
-  // this gets the current question id e.g. q0
-  var identifier = questionsList[currentState.questionC];
-  // uses the identifier to get the current form element
-  var qRef = document.getElementById(identifier);
-  // not sure about these here
-  var removeQ = [];
-  var includeQ = [];
-  // remove the q from the question id
-  var qId = parseInt(identifier.split("q")[1]) + 1;
-  // use the form element and the question ID to get the inputs
-  var answers = getInput(qRef, qId);
-  for (var j = 0; j < answers.length; j++) {
-    handleImpact(qId, j, removeQ, includeQ);
-  }
-  if (currentState.questionC === 0) {
+  // search for the currently shown element
+  var match = document.querySelector('.current');
+  // this gets the current question id number e.g. q0
+  var id = currentState.questionQ.split('q')[1];
+  // use the form element and the question id to get the inputs
+  var answers = getInput(match, id);
+
+  // there must be a better way/place to do this - maybe move to start?
+  if (id === 0) {
     injectOverlay();
   }
-  updateTheQ(removeQ, includeQ);
-  toggleQuestions(qRef);
+
+  // if this question has answers
+  if (currentState.sectionQ[id].answers) {
+    // checks each answer for exclusions - could be done better
+    for (var j = 0; j < currentState.sectionQ[id].answers.length; j++) {
+        // if this answer excludes other questions
+      if (currentState.sectionQ[id].answers[j].excludes[0]) {
+        // push those exclusions to a list
+        currentState.exclusions.push(currentState.sectionQ[id].answers[j].excludes);
+      }
+    }
+  }
+
+  console.log('answering - toggleQuestions');
+
+  // this hides the current question,
+  match.classList.remove("current");
+
+  // this increases the counters
+  currentState.questionC++;
+
+  // increase the question id number
+  id++;
+  currentState.questionQ = 'q' + id;
+
+  // looks the next question in the queue up,
+  // checks it's not on the exclusions list
+  // if it is then skip to the next question and check again
+  // if it isn't excluded then show it
+
+  // if the id is not beyond the total number of questions for that section
+  if (id < currentState.sectionQ.length-1) {
+    console.log('moving to next question!');
+    // grab the next question's element and add class of current
+    var nextQ = document.getElementById(currentState.questionQ);
+    nextQ.classList.add("current");
+  }
+  // if the sections have not run out (using the counter because it isn't changed)
+  // consider whether I want this to happen here, before the last q, or after it
+  else if (currentState.sectionC < sections.length) {
+    console.log('moving to next section!');
+    // increase the section counter
+    currentState.sectionC++;
+    // get the next section
+    currentState.sectionQ = sections[currentState.sectionC];
+    // as before, grab the next question's element and add class of current
+    var nextQ = document.getElementById(currentState.questionQ);
+    nextQ.classList.add("current");
+  }
+  // if we're out of sections then show the policy
+  else {
+    var policyContainer = templates.policyTemplate();
+    console.log('end of process!');
+    utils.render('page', policyContainer);
+  }
+
 }
 
 // // this will be a multidimentional array holding section, question and answer IDs and user input
@@ -166,14 +217,6 @@ function getInput(el, qId) {
 //   policyText.push(entry);
 // }
 
-function handleImpact(thisQ, thisA, exc, inc) {
-  if (currentState.sectionQ[thisQ].answers[thisA].excludes[0]) {
-    exc.push(currentState.sectionQ[thisQ].answers[thisA].excludes);
-  }
-  if (currentState.sectionQ[thisQ].answers[thisA].includes[0]) {
-    inc.push(currentState.sectionQ[thisQ].answers[thisA].includes);
-  }
-}
 
 function injectOverlay() {
   console.log('building - injectOverlay');
@@ -194,49 +237,4 @@ function injectOverlay() {
     modal.classList.toggle("closed");
     overlay.classList.toggle("closed");
   });
-}
-
-
-function updateTheQ(exc, inc) {
-  console.log('answering - updateTheQ');
-  if (exc != "") {
-    for (var k = 0; k < exc.length; k++) {
-      var index = questionsList.indexOf("q"+exc[k]);
-      if(index != -1) {
-        questionsList.splice(index, 1);
-      }
-    }
-  }
-  if (inc != "") {
-    for (var m = 0; m < inc.length; m++) {
-      var index = questionsList.indexOf(inc[m][0]);
-      if(index === -1) {
-        questionsList.splice(inc[m][0], 0, inc[m][0]);
-      } else {
-        console.log('element already in queue');
-      }
-    }
-  }
-  return questionsList.sort();
-}
-
-function toggleQuestions(ref) {
-  console.log('answering - toggleQuestions');
-  ref.classList.remove("current");
-
-  // this updating part could go in its own function
-  currentState.questionC++;
-  tmp = currentState.questionQ.split("q")[1];
-  tmp = parseInt(tmp) + 1;
-  currentState.questionQ = 'q' + tmp;
-  // at this point it's worth checking whether the question is on the exclusions list
-
-  if (questionsList[currentState.questionC]) {
-    var nextQ = document.getElementById(questionsList[currentState.questionC]);
-    nextQ.classList.add("current");
-  } else {
-    var policyContainer = templates.policyTemplate();
-    console.log('end of process!');
-    utils.render('page', policyContainer);
-  }
 }
