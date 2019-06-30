@@ -373,7 +373,7 @@ var section0 = [
         "answerText":"Both",
         "storeAs": "both",
         "excludes":[],
-                "policyEntry":"Protecting the devices we use is crucial in preventing unauthorised access to sensitive [orgName] data. To mitigate this, [orgName] will provide you with webcam cover(s) and privacy screen(s) to use on your devices.",
+        "policyEntry":"Protecting the devices we use is crucial in preventing unauthorised access to sensitive [orgName] data. To mitigate this, [orgName] will provide you with webcam cover(s) and privacy screen(s) to use on your devices.",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -386,7 +386,7 @@ var section0 = [
         "answerText":"Neither",
         "storeAs": "neither",
         "excludes":[],
-                "policyEntry":"",
+        "policyEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -414,7 +414,7 @@ var section0 = [
         "answerText":"Yes",
         "storeAs": "onsite",
         "excludes":[], // review this
-                "policyEntry":"Protecting the devices we use is crucial in preventing unauthorised access to sensitive [orgName] data. To mitigate this, [orgName] will provide you with webcam cover(s) to use on your devices.",
+        "policyEntry":"Protecting the devices we use is crucial in preventing unauthorised access to sensitive [orgName] data. To mitigate this, [orgName] will provide you with webcam cover(s) to use on your devices.",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -427,7 +427,7 @@ var section0 = [
         "answerText":"No - some or all of our staff work remotely.",
         "storeAs": "remote",
         "excludes":[],
-                "policyEntry":"Protecting the devices we use is crucial in preventing unauthorised access to sensitive [orgName] data. To mitigate this, [orgName] will provide you with privacy screen(s) to use on your devices.",
+        "policyEntry":"Protecting the devices we use is crucial in preventing unauthorised access to sensitive [orgName] data. To mitigate this, [orgName] will provide you with privacy screen(s) to use on your devices.",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -455,7 +455,7 @@ var section0 = [
         "answerText":"Annually",
         "storeAs": "annual",
         "excludes":[], // review this
-                "policyEntry":"",
+        "policyEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -468,7 +468,7 @@ var section0 = [
         "answerText":"6-monthly",
         "storeAs": "6mths",
         "excludes":[], // review this
-                "policyEntry":"",
+        "policyEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -481,7 +481,7 @@ var section0 = [
         "answerText":"Quarterly",
         "storeAs": "quarter",
         "excludes":[], // review this
-                "policyEntry":"",
+        "policyEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -494,7 +494,7 @@ var section0 = [
         "answerText":"As threats arise",
         "storeAs": "irregular",
         "excludes":[],
-                "policyEntry":"",
+        "policyEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",

@@ -69,6 +69,7 @@ function handleSubmit() {
     injectOverlay();
   }
 
+  console.log(currentState.sectionQ[id]);
   // if this question has answers
   if (currentState.sectionQ[id].answers) {
     // checks each answer for exclusions - could be done better
