@@ -2,7 +2,7 @@
 console.log('start - initialising');
 
 //  list of sections
-var sections = [section0];
+var sections = [section0, section1];
 // loop through and create list of questions
 var questionsList = [];
 // for each of the sections
@@ -15,6 +15,7 @@ for (var i = 0; i < sections.length; i++) {
     questionsList.push(tmpContent[j].id);
   }
 }
+console.log(questionsList.length);
 
 // set up progress tracking
 var currentState = {
@@ -31,7 +32,6 @@ var currentState = {
   // list of exclusions, updated on every submission and checked on every question load
   exclusions: []
 }
-
 
 // delete and replace
 var policyText = [];
@@ -57,6 +57,7 @@ function checkForStorage() {
 // this is the function that's called when a user submits an answer - could the question ID be passed through?
 function handleSubmit() {
   console.log('answering - handleSubmit');
+
   // search for the currently shown element
   var match = document.querySelector('.current');
   // this gets the current question id number e.g. q0
@@ -69,7 +70,6 @@ function handleSubmit() {
     injectOverlay();
   }
 
-  console.log(currentState.sectionQ[id]);
   // if this question has answers
   if (currentState.sectionQ[id].answers) {
     // checks each answer for exclusions - could be done better
@@ -100,7 +100,7 @@ function handleSubmit() {
   // if it isn't excluded then show it
 
   // if the id is not beyond the total number of questions for that section
-  if (id < currentState.sectionQ.length-1) {
+  if (id < currentState.sectionQ.length) {
     console.log('moving to next question!');
     // grab the next question's element and add class of current
     var nextQ = document.getElementById(currentState.questionQ);
@@ -109,6 +109,7 @@ function handleSubmit() {
   // if the sections have not run out (using the counter because it isn't changed)
   // consider whether I want this to happen here, before the last q, or after it
   else if (currentState.sectionC < sections.length) {
+    console.log(currentState);
     console.log('moving to next section!');
     // increase the section counter
     currentState.sectionC++;
@@ -117,6 +118,7 @@ function handleSubmit() {
     // as before, grab the next question's element and add class of current
     var nextQ = document.getElementById(currentState.questionQ);
     nextQ.classList.add("current");
+    console.log(currentState);
   }
   // if we're out of sections then show the policy
   else {

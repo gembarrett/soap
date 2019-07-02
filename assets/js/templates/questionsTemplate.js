@@ -2,10 +2,11 @@ templates.questionsTemplate = function(data){
   var content = `
       <div id="questionContainer" class="">
   `;
-  for(var i = 0; i < currentState.sectionQ.length; i++) {
+  console.log(data);
+  for(var i = 0; i < questionsList.length; i++) {
       var question = data[i];
       // create the start of the form
-      content += `<form id="`+question.id+ `" class="questionContent`+ (question.isQ ? '">' : ' current">');
+      content += `<form id="`+question.id+ `" class="questionContent`+ (question.id !== 'q0' ? '">' : ' current">');
 
       // if it's a question
       if (question.isQ) {
