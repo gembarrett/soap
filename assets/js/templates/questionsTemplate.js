@@ -2,7 +2,6 @@ templates.questionsTemplate = function(data){
   var content = `
       <div id="questionContainer" class="">
   `;
-  console.log(data);
   for(var i = 0; i < questionsList.length; i++) {
       var question = data[i];
       // create the start of the form
