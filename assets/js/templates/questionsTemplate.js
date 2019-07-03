@@ -20,43 +20,34 @@ templates.questionsTemplate = function(data){
          + '</div>';
          // add the answers
          for (var j = 0; j < question.answers.length; j++){
+           // premake the id and name
            thisID = 'id="' +question.id+ "-"+ j+ '-answer"';
-           console.log(thisID);
            thisName = 'name="' +question.id+  '-el"';
-           console.log(thisName);
+           // if there's a placeholder then grab it
            if (question.answers[j].placeholder) {
              thisPlaceholder = 'placeholder="' + question.answers[j].placeholder + '"';
-             console.log(thisPlaceholder);
            }
+           // if this is an input field then create the label
            if (question.answers[j].type !== 'textarea') {
              thisLabel = '<label for="' +question.id+ '-' +j+ '-el">' +question.answers[j].answerText+ '</label>';
-             console.log(thisLabel);
            }
-
+           // start the form
            content += '<div class="form-el">';
            // if there's a textarea
            if (question.answers[j].type === 'textarea') {
+             // should the area size be specified?
              content += '<textarea ' +thisID+thisName+thisPlaceholder+ '></textarea>'
            }
-           // create a textarea element
-           // add the id, name and placeholder
-           // should the area size be specified?
 
+           // if there's a textbox
            else if (question.answers[j].type === 'text') {
              content += '<input type="' +question.answers[j].type+ '"' +thisID+thisName+thisPlaceholder+ '>' +thisLabel;
            }
 
-           // if there's a textbox
-           // create the input element
-           // add the answerText, id, name, label and placeholder
-
+           // if there's another input type
            else {
              content += '<input type="' +question.answers[j].type+ '"' +thisID+thisName+ '>' +thisLabel;
            }
-           // if there's another input type
-           // create the input element
-           // add the answerText, id, label and name
-
 
            content += '</div>';
          }
