@@ -7,14 +7,16 @@ var section0 = [
   },
   {
     "isQuestion": true,
+    "id":"q1",
     "q":"What is the name of your organisation?",
     "required":true,
-    "id":"q1",
     "policyContent":"",
+    "appendixContent":"",
     "answers":[
       {
-        "type":"textbox",
+        "type":"text",
         "answerText":"Enter the organisation name",
+        "placeholder":"Example Organisation",
         "storeAs":"orgName",
         "excludes":[],
         "policyEntry":"This is the security policy of [orgName], which has been created in order to support staff in carrying out our sensitive work securely. It is important to understand and comply with the rules described as they aim to protect everyone involved in our work, including partner organisations and frontline activists.",
@@ -30,14 +32,15 @@ var section0 = [
   },
   {
     "isQuestion": true,
+    "id":"q2",
     "q":"Who is responsible for this policy?",
     "required":false,
-    "id":"q2",
     "policyContent":"",
     "answers":[
       {
-        "type":"textbox",
+        "type":"text",
         "answerText":"Name",
+        "placeholder":"e.g. Alice Smith",
         "storeAs":"contactName",
         "excludes":[],
         "policyEntry":"If you have questions about this policy, please contact [contactName]",
@@ -49,8 +52,9 @@ var section0 = [
         ]
       },
       {
-        "type":"textbox",
+        "type":"text",
         "answerText":"Job title",
+        "placeholder":"e.g. Security Officer",
         "storeAs":"contactPos",
         "excludes":[],
         "policyEntry":", [contactPos]",
@@ -62,8 +66,9 @@ var section0 = [
         ]
       },
       {
-        "type":"textbox",
+        "type":"text",
         "answerText":"Email",
+        "placeholder": "e.g. example@organisation.com",
         "storeAs":"contactEmail",
         "excludes":[],
         "policyEntry":"They can be contacted by email at [contactEmail].",
@@ -75,8 +80,9 @@ var section0 = [
         ]
       },
       {
-        "type":"textbox",
+        "type":"text",
         "answerText":"Phone",
+        "placeholder": "e.g. +1 (234) 567-890",
         "storeAs":"contactPhone",
         "excludes":[],
         "policyEntry":"They can be contacted by telephone on [contactPhone.]",
@@ -97,10 +103,11 @@ var section0 = [
   },
   {
     "isQuestion": true,
+    "id":"q3",
     "q":"Who will this policy apply to?",
     "required":true,
-    "id":"q3",
     "policyContent":"This security policy applies to [selected answers]",
+    "appendixContent":"",
     "answers":[
       {
         "type":"checkbox",
@@ -140,19 +147,6 @@ var section0 = [
             "tipList": ""
           }
         ]
-      },
-      {
-        "type":"textbox",
-        "answerText":"Other",
-        "storeAs": "other",
-        "excludes": [],
-        "policyEntry":"",
-        "appendixEntry":[
-          {
-            "reviewList":"",
-            "tipList": ""
-          }
-        ]
       }
     ],
     "tips":[
@@ -164,10 +158,11 @@ var section0 = [
   },
   {
     "isQuestion": true,
+    "id":"q4",
     "q":"Which operating systems are used in your organisation?",
     "required":true,
-    "id":"q4",
     "policyContent":"",
+    "appendixContent":"",
     "answers":[
       {
         "type":"checkbox",
@@ -283,10 +278,11 @@ var section0 = [
   },
   {
     "isQuestion": true,
+    "id":"q5",
     "q":"How does your organisation manage staff work devices?",
     "required":false,
-    "id":"q5",
     "policyContent":"",
+    "appendixContent":"",
     "answers":[
       {
         "type":"checkbox",
@@ -337,10 +333,11 @@ var section0 = [
   },
   {
     "isQuestion": true,
+    "id":"q6",
     "q":"Does your organisation provide staff with webcam covers or privacy screens for their devices?",
     "required":false,
-    "id":"q6",
     "policyContent":"",
+    "appendixContent":"",
     "answers":[
       {
         "type":"radio",
@@ -404,10 +401,11 @@ var section0 = [
   },
   {
     "isQuestion": true,
+    "id":"q7",
     "q":"Do all your staff work in the same physical office?",
     "required":false,
-    "id":"q7",
     "policyContent":"",
+    "appendixContent":"",
     "answers":[
       {
         "type":"radio",
@@ -445,10 +443,11 @@ var section0 = [
   },
   {
     "isQuestion": true,
+    "id":"q8",
     "q":"How regularly do you intend to review and update this policy?",
     "required":true,
-    "id":"q8",
     "policyContent":"This policy will be reviewed by [contactName, contactPos] on a [reviewFreq] basis. Any suggestions or feedback on the policy’s contents should be directed to them.",
+    "appendixContent":"",
     "answers":[
       {
         "type":"radio",
