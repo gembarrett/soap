@@ -15,7 +15,6 @@ for (var i = 0; i < sections.length; i++) {
     questionsList.push(tmpContent[j].id);
   }
 }
-console.log(questionsList.length);
 
 // set up progress tracking
 var currentState = {
@@ -42,11 +41,50 @@ var appendixText = [];
 // replace updatePolicy and policyText with this function that compiles the policy based on what's in the answer storage at that time
 function compilePolicy() {
     // create local policy variable
+    var tempPolicy = [];
     // for each of the answers in currentState
-    // use the question id to grab the policyContent
-    // use the answer reference to grab the policyEntry
-    // add the two to the policy text
+    for (var i = 0; i < currentState.answers.length; i++) {
+      // use the question id to grab the policyContent
+      qRef = currentState.answers[i].q;
+      aRef = currentState.answers[i].a;
+      var thisQ = 'q'+qRef;
+      // check each section for the question with the right id
+      for (var j = 0; j < sections.length; j++) {
+        // search for question with correct id
+        var found = sections[j].find(ans => ans.id === thisQ);
+        // when it's found, check for policyContent
+        if (found) {
+          // ring the bell, we got ourselves a winner!
+          j === 10;
+          // TODO: group answers by question so that general is only added once, rather than every time
+          var general, specific, answer;
+          // check if there's a general policyContent to grab
+          if (found.policyContent) {
+            general = found.policyContent + '<br />';
+          }
+          // use the answer reference to grab the policyEntry, if it exists
+          if (found.answers[currentState.answers[i].a].policyEntry) {
+            console.log(found.answers[currentState.answers[i].a].policyEntry);
+            specific = found.answers[currentState.answers[i].a].policyEntry + '<br />';
+          }
+          // if there's a text entry then get the inputted text
+          if (currentState.answers[i].t) {
+            answer = currentState.answers[i].t + '<br />';
+          } else {
+            // else get the answer's answerText
+            answer = found.answers[currentState.answers[i].a].answerText + '<br />';
+          }
+        }
+      }
+
+      // if an answer has been found, push it to the array
+      if (answer) {
+        tempPolicy.push(general, specific, answer);
+      }
+    }
     // return the compiled policy to injectOverlay or the end of the process
+    return tempPolicy;
+    // is injectOverlay the best place to return it if that's for a onetime injection of html?
 }
 
 // replace checkValue with this function that takes each answer and, if there's a storeAs value, stores it
@@ -65,12 +103,14 @@ function handleSubmit() {
   // this gets the current question id number e.g. q0
   var id = currentState.questionQ.split('q')[1];
   // use the form element and the question id to get the inputs
+  // maybe also grab the section id here
   var answers = getInput(match, id);
 
   console.log('this question has the id of ' +id);
 
   // add the preview overlay after everything else has loaded
-  if (id === 0) {
+  // // TODO: hide the Preview button until after the overlay is in place
+  if (parseInt(id) === 0) {
     injectOverlay();
   }
 
@@ -149,8 +189,6 @@ function handleSubmit() {
 
 function getInput(el, qId) {
   console.log('answering - getInput');
-  // not sure this is necessary
-  var tempRefs =[];
   // for every element in the form
   for (var i = 0; i < el.childNodes.length; i++) {
     var input = el.childNodes[i].childNodes[0];
@@ -163,13 +201,9 @@ function getInput(el, qId) {
       if (input.checked) {
         // push the question and answer object to the currentState
         currentState.answers.push({
-          "q": qId,
-          "a": answerID
-        });
-        // not sure we need to push to this other array as well
-        tempRefs.push({
-          "q": qId,
-          "a": input.id,
+          s: currentState.sectionC,
+          q: qId,
+          a: answerID
         });
       }
       // if the input is a textbox containing value
@@ -181,14 +215,10 @@ function getInput(el, qId) {
         // checkValue(qId, input.id, input.value);
         // push the question and answer and text value object to the currentState
         currentState.answers.push({
-          "q": qId,
-          "a": answerID,
-          "t": input.value
-        });
-        // again, not sure why we need to push to this other array too
-        tempRefs.push({
-          "q": qId,
-          "a": input.id,
+          s: currentState.sectionC,
+          q: qId,
+          a: answerID,
+          t: input.value
         });
         // replace with compilePolicy
         // if (currentState.sectionQ[qId].answers[answerID].policyEntry !== "" ) {
@@ -243,8 +273,9 @@ function injectOverlay() {
     overlay.classList.toggle("closed");
   });
   open.addEventListener("click", function() {
-    scrollbox.innerHTML = policyText;
+    policyText = compilePolicy();
     console.log(policyText);
+    scrollbox.innerHTML = policyText;
     modal.classList.toggle("closed");
     overlay.classList.toggle("closed");
   });
