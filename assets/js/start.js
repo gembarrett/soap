@@ -44,10 +44,21 @@ function compilePolicy() {
     var tempPolicy = [];
     // for each of the answers in currentState
     for (var i = 0; i < currentState.answers.length; i++) {
+
       // use the question id to grab the policyContent
       qRef = currentState.answers[i].q;
       aRef = currentState.answers[i].a;
       var thisQ = 'q'+qRef;
+      var specific = "";
+      var general = "";
+      var answer = "";
+      prev = i > 0 ? i - 1 : "";
+      // if there's a previous question and it's the same as the current question
+      if ((prev !== "") && (qRef === currentState.answers[prev].q)) {
+        // make a note to skip the policyContent
+        var sameQ = true;
+      }
+
       // check each section for the question with the right id
       for (var j = 0; j < sections.length; j++) {
         // search for question with correct id
@@ -55,16 +66,14 @@ function compilePolicy() {
         // when it's found, check for policyContent
         if (found) {
           // ring the bell, we got ourselves a winner!
+          // this doesn't seem to be stopping the loop
           j === 10;
-          // TODO: group answers by question so that general is only added once, rather than every time
-          var general, specific, answer;
           // check if there's a general policyContent to grab
-          if (found.policyContent) {
+          if ((!sameQ) && (found.policyContent !== 'undefined')) {
             general = found.policyContent + '<br />';
           }
           // use the answer reference to grab the policyEntry, if it exists
           if (found.answers[currentState.answers[i].a].policyEntry) {
-            console.log(found.answers[currentState.answers[i].a].policyEntry);
             specific = found.answers[currentState.answers[i].a].policyEntry + '<br />';
           }
           // if there's a text entry then get the inputted text
@@ -76,7 +85,6 @@ function compilePolicy() {
           }
         }
       }
-
       // if an answer has been found, push it to the array
       if (answer) {
         tempPolicy.push(general, specific, answer);
