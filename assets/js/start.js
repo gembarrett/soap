@@ -185,16 +185,6 @@ function handleSubmit() {
 
 }
 
-// // this will be a multidimentional array holding section, question and answer IDs and user input
-// var answerRefs = [];
-// /////////////////////////////////////////////////
-// ////SECTION:0///////SECTION:0///////SECTION:1////
-// ///////Q:1/////////////Q:2////////////Q:1////////
-// /////ANSWER:1////////ANSWER:0//////ANSWER:"OTF"//
-// /////ANSWER:3/////ANSWER:"Trello"////////////////
-// /////////////////////////////////////////////////
-
-
 function getInput(el, qId) {
   console.log('answering - getInput');
   // for every element in the form
@@ -287,4 +277,11 @@ function injectOverlay() {
     modal.classList.toggle("closed");
     overlay.classList.toggle("closed");
   });
+}
+
+function toggleInfo(id) {
+  el = ".panel-"+id;
+  console.log(el);
+  panel = document.querySelector(el);
+  panel.classList.toggle("closed");
 }

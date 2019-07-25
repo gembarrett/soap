@@ -6,20 +6,30 @@ templates.questionsTemplate = function(data){
       var question = data[i];
       // create the start of the form
       content += `<form id="`+question.id+ `" class="questionContent`+ (question.id !== 'q0' ? '">' : ' current">');
-
       // if it's a question
       if (question.isQ) {
+        var panel = "";
+        if (question.tips[0].relevance) {
+          panel += '<p>Relevance: ' + question.tips[0].relevance + '</p>';
+        }
+        if (question.tips[1].meaning) {
+          panel += '<p>Meaning: ' + question.tips[1].meaning + '</p>';
+        }
+        if (question.tips[2].implementation) {
+          panel += '<p>Implementation: ' + question.tips[2].implementation + '</p>';
+        }
+        if (question.tips[3].more) {
+          panel += '<p>Search terms: ' + question.tips[3].more + '</p>';
+        }
+        var button = '<button type="button" onclick="toggleInfo(\''+question.id+'\')">!</button>';
+        console.log(button);
         // add the question
-         content += '<h2>' + question.q + '</h2>';
-         // add the tips panel
-         content += '<div class="info-panel">'
-         + question.tips[0].relevance
-         + question.tips[1].meaning
-         + question.tips[2].implementation
-         + question.tips[3].more
-         + '</div>';
-         // add the answers
-         for (var j = 0; j < question.answers.length; j++){
+        content += '<h2>' + question.q + '</h2>';
+        // if the panel content exists add it
+        content += panel !== "" ? button+'<div class="panel-'+question.id+' closed">'+panel+'</div>' : '<br />';
+
+        // add the answers
+        for (var j = 0; j < question.answers.length; j++){
            // premake the id and name
            thisID = 'id="' +question.id+ "-"+ j+ '-answer"';
            thisName = 'name="' +question.id+  '-el"';
