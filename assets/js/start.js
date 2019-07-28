@@ -2,7 +2,7 @@
 console.log('start - initialising');
 
 //  list of sections
-var sections = [section0, section1];
+var sections = [section0, section1, section2];
 // loop through and create list of questions
 var questionsList = [];
 // for each of the sections

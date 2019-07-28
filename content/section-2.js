@@ -10,15 +10,15 @@ var section2 = [
     "id":"q16",
     "q":"Which multi-factor authentication method does your organisation prefer staff to use when securing work accounts?",
     "required":true,
-    "policyContent":"",
+    "policyContent":"Two-factor authentication is a good method of securing our accounts beyond passwords as it requires an additional one-time code to be provided. Two-factor authentication should be enabled on every account which supports it.",
     "appendixContent":"",
     "answers":[
       {
         "type":"radio",
-        "answerText":"Yes",
+        "answerText":"None - staff preference",
         "storeAs":"",
         "excludes":[],
-        "policyEntry":"",
+        "policyEntry":"The options for getting this code include authentication apps, hardware keys, SMS or automated phone call and [orgName] asks staff to use their best judgment when choosing a method for securing each work-related account.",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -28,10 +28,10 @@ var section2 = [
       },
       {
         "type":"radio",
-        "answerText":"Some staff need a key",
+        "answerText":"Two-factor apps or hardware authentication keys",
         "storeAs":"",
         "excludes":[],
-        "policyEntry":"",
+        "policyEntry":"[orgName] requires staff to use two-factor apps or hardware authentication methods. Please do not use SMS or phone call authentication as they are insecure methods that can be intercepted.",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -41,10 +41,10 @@ var section2 = [
       },
       {
         "type":"radio",
-        "answerText":"None of our staff use PGP",
+        "answerText":"SMS or phone call",
         "storeAs":"",
         "excludes":[],
-        "policyEntry":"",
+        "policyEntry":"[orgName] requires staff to use SMS or phone call authentication methods. However, be aware of the risks of interception that come with using these methods.",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -54,10 +54,78 @@ var section2 = [
       }
     ],
     "tips":[
-      {"relevance":"If you think there’s a chance that your organisation’s emails could be intercepted, or someone could impersonate a member of your staff via email."},
-      {"meaning":"PGP (Pretty Good Privacy) is a reliable way to encrypt the contents of your emails and verify that it was you who sent them. Putting your public key on the keyserver helps ensure people can contact you securely, or you can include the public key in your email signature."},
-      {"implementation":"The process to set up PGP can be intimidating, so it’s best to read up on it before starting. An introduction to it during an all-staff meeting will help with getting buy-in, and additional 1-1 training should be given to staff with little to no experience of encrypting email. Implementation will depend on the email clients your staff use, but Enigmail with Thunderbird is a popular option. Note: PGP uses encryption and therefore may be illegal in the countries in which your staff live and work."},
-      {"more": ["how to set up PGP", "using PGP with Enigmail"]}
+      {"relevance":""},
+      {"meaning":"Multi-factor authentication adds an extra layer of security to accounts by requiring the account holder to enter an additional one-time code to verify their identity. Receiving this code via SMS or phone call risks interception but this method may be more feasible than the alternative authentication app in cases where staff do not use smartphones. Generating the code through an authentication app (e.g. Authy) or a hardware security key (e.g. Yubikey) has the advantage of not requiring a data or cell service. While authentication apps are free, widely available and well-supported by online platforms, U2F keys require purchasing and are supported on fewer services."},
+      {"implementation":"Allowing staff to choose their own authentication method enables them to choose the most convenient option for their workflow, however it is more common to set a baseline level of account security by requiring all staff use authentication apps and hardware security keys where possible."},
+      {"more": ["two factor auth list", "sms phone 2 factor authentication", "hardware security keys"]}
+    ]
+  },
+  {
+    "isQuestion": true,
+    "id":"q17",
+    "q":"Does your organisation prefer staff to use a specific authentication app?",
+    "required":true,
+    "policyContent":"",
+    "appendixContent":"",
+    "answers":[
+      {
+        "type":"radio",
+        "answerText":"Google Authenticator",
+        "storeAs":"",
+        "excludes":[],
+        "policyEntry":"To ensure consistency and help with training and troubleshooting, [orgName] uses Google Authenticator for two-factor authentication where platforms allow it. This app may be installed automatically as part of your mobile work device set up, otherwise you should install it from your platform’s app store, requesting assistance from [contactName, contactPos] when needed",
+        "appendixEntry":[
+          {
+            "reviewList":"",
+            "tipList": ""
+          }
+        ]
+      },
+      {
+        "type":"radio",
+        "answerText":"Duo Mobile",
+        "storeAs":"",
+        "excludes":[],
+        "policyEntry":"To ensure consistency and help with training and troubleshooting, [orgName] uses Duo Mobile for two-factor authentication where platforms allow it. This app may be installed automatically as part of your mobile work device set up, otherwise you should install it from your platform’s app store, requesting assistance from [contactName, contactPos] when needed",
+        "appendixEntry":[
+          {
+            "reviewList":"",
+            "tipList": ""
+          }
+        ]
+      },
+      {
+        "type":"radio",
+        "answerText":"Authy",
+        "storeAs":"",
+        "excludes":[],
+        "policyEntry":"To ensure consistency and help with training and troubleshooting, [orgName] uses Authy for two-factor authentication where platforms allow it. This app may be installed automatically as part of your mobile work device set up, otherwise you should install it from your platform’s app store, requesting assistance from [contactName, contactPos] when needed",
+        "appendixEntry":[
+          {
+            "reviewList":"",
+            "tipList": ""
+          }
+        ]
+      },
+      {
+        "type":"radio",
+        "answerText":"No preference",
+        "storeAs":"",
+        "excludes":[],
+        "policyEntry":"While [orgName] requires the use of an authenticator app, we leave it to staff to make their own choice of which one to use. If you are unsure of which is best for your device and workflow, [contactName, contactPos] is available for advice.",
+        "appendixEntry":[
+          {
+            "reviewList":"",
+            "tipList": ""
+          }
+        ]
+      }
+    ],
+    "tips":[
+      {"relevance":""},
+      {"meaning":"Most authentication apps work the same way, but it may be more convenient for troubleshooting if all staff use the same app. Some additional features might be more useful to your organisation than others, for example multi-device access."},
+      {"implementation":"Using work profiles and similar device management processes can be helpful for installing the same app across the organisation. Whichever service is chosen, staff may need assistance with setting up and using the app for the first time."},
+      {"more": ["authentication app comparison"]}
     ]
   }
 ]
