@@ -266,22 +266,28 @@ function injectOverlay() {
   var overlay = document.querySelector("#overlay");
   var close = document.querySelector("#closePreview");
   var open = document.querySelector("#previewPolicy");
+  // TODO: make the repeated lines a function
   close.addEventListener("click", function() {
-    modal.classList.toggle("closed");
-    overlay.classList.toggle("closed");
+    togglePreview(modal, overlay);
   });
+  overlay.addEventListener("click", function() {
+    togglePreview(modal, overlay);
+  });
+
   open.addEventListener("click", function() {
     policyText = compilePolicy();
-    console.log(policyText);
     scrollbox.innerHTML = policyText;
-    modal.classList.toggle("closed");
-    overlay.classList.toggle("closed");
+    togglePreview(modal, overlay);
   });
 }
 
 function toggleInfo(id) {
   el = ".panel-"+id;
-  console.log(el);
   panel = document.querySelector(el);
   panel.classList.toggle("closed");
+}
+
+function togglePreview(m, o) {
+  m.classList.toggle("closed");
+  o.classList.toggle("closed");
 }

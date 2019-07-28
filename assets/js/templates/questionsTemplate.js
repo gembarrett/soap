@@ -22,7 +22,6 @@ templates.questionsTemplate = function(data){
           panel += '<p>Search terms: ' + question.tips[3].more + '</p>';
         }
         var button = '<button type="button" onclick="toggleInfo(\''+question.id+'\')">!</button>';
-        console.log(button);
         // add the question
         content += '<h2>' + question.q + '</h2>';
         // if the panel content exists add it
