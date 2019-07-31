@@ -1,9 +1,13 @@
+/* #9E7841
+#EBC58F */
+
 /* Structural styles */
 
 body {
-  font-family: "OpenSans", sans-serif;
+  font-family: "Helvetica", "OpenSans", sans-serif;
   margin: 0;
   font-size: 14px;
+  color: #668EAA
 }
 
 
@@ -12,12 +16,14 @@ body {
 }
 
 .wrapper {
-  max-width:1200px;
+  width: 75%;
+  max-width:1000px;
   margin: 0 auto;
 }
 
 #head {
-  background-color: #96CAEE;
+  background-color: #8FC5EA;
+  /* background-color: #96CAEE; */
   margin-bottom: 10px;
   color:#fff;
 }
@@ -174,4 +180,62 @@ a {
   width: 100%;
   height: 100%;
   background-color: rgba(0,0,0,0.5);
+}
+
+#intro h1, #intro h2 {
+  text-align: center;
+}
+
+#intro h2 {
+  font-weight: lighter;
+  font-size: 1.1rem;
+}
+
+#features {
+  display: flex;
+}
+.feature {
+  margin: 20px;
+}
+.feature:first-child {
+  margin-left: 0;
+}
+.feature:last-child {
+  margin-right:0;
+}
+/* .feature:first-child h3::before {
+  content: "1";
+}
+.feature:nth-child(2) h3::before {
+  content: "2";
+}
+.feature:last-child h3::before {
+  content: "3";
+}
+.feature h3::before {
+  font-size: 4rem;
+} */
+
+/* solid colour for positive action */
+/* raised with drop shadow, emphasise functions */
+.btn {
+  border-radius: 5%;
+  border:2px solid;
+  padding: 10px;
+}
+
+.btn-prim {
+  background-color: #EBC58F;
+  border-color: #EBC58F;
+  color:#fff;
+  font-weight: bold;
+}
+/* ghost for secondary content - thin border */
+.btn-seco {
+  color: #668EAA;
+  border-color: #668EAA;
+}
+/* flat minimises distraction - no border */
+.btn-tert {
+
 }

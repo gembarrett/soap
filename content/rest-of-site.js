@@ -1,6 +1,6 @@
 var ros = [
   {
-    "head":"Clean up your organisational security plan with SOAP",
+    "head":"Clean up your organisational security plan with SOAP!",
     "subhead":"SOAP is an easy to use tool for building clear and thorough security policies for civil society organisations.",
     "features":[
       {
