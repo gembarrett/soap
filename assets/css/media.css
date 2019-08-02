@@ -21,9 +21,6 @@
     padding-top: 5px;
     margin-bottom: 0;
   }
-  #head li {
-    display:inline;
-  }
   #head label {
     font-size: 1.5rem;
     position: absolute;
@@ -41,10 +38,6 @@
   }
   #head img {
     max-width: 50%;
-  }
-  #head li {
-    display:inline;
-    padding: 0 20px;
   }
   #head .wrapper {
     display:flex;

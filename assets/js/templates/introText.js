@@ -12,15 +12,15 @@ templates.introText = function(data){
         <p>`+text.security[0].desc+`</p>
 `;
   for (var i = 0; i<text.features.length; i++){
-    features += `<div class="feature"><h3>`+text.features[i].feat+`</h3><p>`+text.features[i].desc+`</p></div>`;
+    features += `<div class="feature"><i class="fas ` +text.features[i].icon+ `"></i><div class="feat-wrap"><h3>`+text.features[i].feat+`</h3><p>`+text.features[i].desc+`</p></div></div>`;
   }
   var content = `
     <div id="intro">
       <section>
         <h1>`+text.head+`</h1>
         <h2>`+text.subhead+`</h2>
-        <a class="btn btn-prim" href="/#build">Start building!</a>
-        <a class="btn btn-seco" href="#features">Find out more</a>
+        <div class="btn-wrap"><a class="btn btn-prim" href="/#build">Start building!</a>
+        <a class="btn btn-seco" href="#features">Find out more</a></div>
       </section>
       <div id='features'>`+features+`</div>
 

@@ -5,15 +5,18 @@ var ros = [
     "features":[
       {
         "feat":"Design custom security policies; simple, easy and free.",
-        "desc":"SOAP is built for creating useful, relevant policies that fit your organisation’s working context like a glove. Save time and money with this free, easy-to-use tool."
+        "desc":"SOAP is built for creating useful, relevant policies that fit your organisation’s working context like a glove. Save time and money with this free, easy-to-use tool.",
+        "icon": "fa-drafting-compass"
       },
       {
         "feat":"Support security policies with additional resources",
-        "desc":"Security policies need support to be effective. SOAP can be used to help staff buy-in and encourages additional research by providing key words and phrases related to each question."
+        "desc":"Security policies need support to be effective. SOAP can be used to help staff buy-in and encourages additional research by providing key words and phrases related to each question.",
+        "icon": "fa-layer-group"
       },
       {
         "feat":"Plan for successful implementation",
-        "desc":"Your security plan should be worth more than a dusty piece of paper. Get implementation and maintenance tips and prepare basic incident response steps."
+        "desc":"Your security plan should be worth more than a dusty piece of paper. Get implementation and maintenance tips and prepare basic incident response steps.",
+        "icon": "fa-clipboard-list"
       }
     ],
     "who":[

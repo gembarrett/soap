@@ -98,7 +98,9 @@ function compilePolicy() {
 // replace checkValue with this function that takes each answer and, if there's a storeAs value, stores it
 function checkForStorage() {
   // use the passed answer ref to check for a storeAs value
-  // store the value *somewhere*
+  // given this answer reference, find the answer in the content
+  // if the answer has a storeAs value,
+  // store the value in a global variable
 }
 
 
@@ -250,11 +252,6 @@ function getInput(el, qId) {
 //       default:
 //     }
 // }
-// replace with compilePolicy function
-// function updatePolicy(entry) {
-//   entry = '<p>' + entry + '</p>';
-//   policyText.push(entry);
-// }
 
 
 function injectOverlay() {
@@ -290,4 +287,10 @@ function toggleInfo(id) {
 function togglePreview(m, o) {
   m.classList.toggle("closed");
   o.classList.toggle("closed");
+}
+
+function activePage(pg) {
+  document.getElementById('co').classList.add('active');
+  document.getElementById('bu').classList.remove('active');
+  document.getElementById('bg').classList.remove('active');
 }

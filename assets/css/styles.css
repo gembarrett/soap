@@ -7,7 +7,8 @@ body {
   font-family: "Helvetica", "OpenSans", sans-serif;
   margin: 0;
   font-size: 14px;
-  color: #668EAA
+  color: #668EAA;
+  line-height: 1.5em;
 }
 
 
@@ -42,23 +43,39 @@ body {
   padding: 10px;
 }
 
-#head ul, #foot ul {
+.links {
   list-style: none;
   padding-left: 0;
 }
 
-#head a, #foot a {
+.links a {
   color:#fff;
+  padding: 5px;
+  border:2px solid;
+  border-radius: 5%;
+  border-color: transparent;
+}
+
+.links a:hover, .links a.active {
+  border-color: #fff;
+}
+
+.links li {
+  display:inline;
+  padding: 0 20px;
+}
+
+.links li:first-child {
+  padding-left: 0;
+}
+.links li:last-child {
+  padding-right: 0;
 }
 
 #foot {
   background-color: #96CAEE;
 }
 
-#foot li {
-  display:inline;
-  padding-right: 20px;
-}
 #foot a {
   font-size: 0.8rem;
 }
@@ -182,6 +199,10 @@ a {
   background-color: rgba(0,0,0,0.5);
 }
 
+section {
+  margin:5em 0;
+}
+
 #intro h1, #intro h2 {
   text-align: center;
 }
@@ -191,17 +212,24 @@ a {
   font-size: 1.1rem;
 }
 
-#features {
-  display: flex;
-}
 .feature {
-  margin: 20px;
+  display:flex;
+  padding: 2em 0;
+  align-items: center;
+  border: 2px solid #8FC5EA;
+  border-left:0;
+  border-right:0;
 }
-.feature:first-child {
-  margin-left: 0;
+.feature:nth-child(2) {
+  flex-direction: row-reverse;
+  border:0;
 }
-.feature:last-child {
-  margin-right:0;
+.feature:nth-child(2) .feat-wrap {
+  text-align: right;
+}
+.feature i {
+  font-size: 6em;
+  margin:0.25em;
 }
 /* .feature:first-child h3::before {
   content: "1";
@@ -222,20 +250,34 @@ a {
   border-radius: 5%;
   border:2px solid;
   padding: 10px;
+  margin: 0 10px;
 }
 
 .btn-prim {
-  background-color: #EBC58F;
-  border-color: #EBC58F;
+  background-color: #668EAA;
+  border-color: #668EAA;
+  /* border-color: #EBC58F; */
   color:#fff;
   font-weight: bold;
+}
+.btn-prim:hover, .btn-seco:hover {
+  background-color: #8FC5EA;
+  border-color: #8FC5EA;
+  color:#fff;
 }
 /* ghost for secondary content - thin border */
 .btn-seco {
   color: #668EAA;
-  border-color: #668EAA;
+  border-color: #8FC5EA;
 }
+
 /* flat minimises distraction - no border */
 .btn-tert {
+  border: 0;
+}
 
+.btn-wrap {
+  display:flex;
+  justify-content: center;
+  margin: 3em 0;
 }
