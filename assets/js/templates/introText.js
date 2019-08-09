@@ -1,14 +1,17 @@
 templates.introText = function(data){
   var text = ros[0];
   var features = "";
+  var who;
+  if (Array.isArray([text.who[0].desc])) {
+    for (var i=0; i<text.who[0].desc.length; i++) {
+      who += '<p>'+text.who[0].desc[i] + '</p>';
+    }
+  }
   // TODO: refactor this
   var faqs = `<h3>`+text.how[0].head+`</h3>
         <p>`+text.how[0].desc+`</p>
-        <h3>`+text.who[0].head+`</h3>
-        <p>`+text.who[0].desc+`</p>
-        <h3>`+text.why[0].head+`</h3>
-        <p>`+text.why[0].desc+`</p>
-        <h3>`+text.security[0].head+`</h3>
+        <h3>`+text.who[0].head+`</h3>`+who+
+        `<h3>`+text.security[0].head+`</h3>
         <p>`+text.security[0].desc+`</p>
 `;
   for (var i = 0; i<text.features.length; i++){

@@ -212,17 +212,21 @@ section {
   font-size: 1.1rem;
 }
 
+#features {
+  background:#8FC5EA;
+  color:#fff;
+}
 .feature {
   display:flex;
   padding: 2em 0;
   align-items: center;
-  border: 2px solid #8FC5EA;
-  border-left:0;
-  border-right:0;
+}
+.feature:first-child {
+  background-color: rgba(255,255,255,0.3);
 }
 .feature:nth-child(2) {
   flex-direction: row-reverse;
-  border:0;
+  background-color: rgba(255,255,255,0.15);
 }
 .feature:nth-child(2) .feat-wrap {
   text-align: right;
