@@ -279,6 +279,7 @@ function injectOverlay() {
 }
 
 function toggleInfo(id) {
+  document.querySelector("#info-trigger").classList.toggle("highlight");
   el = ".panel-"+id;
   panel = document.querySelector(el);
   panel.classList.toggle("closed");
@@ -293,4 +294,14 @@ function activePage(pg) {
   document.getElementById('co').classList.add('active');
   document.getElementById('bu').classList.remove('active');
   document.getElementById('bg').classList.remove('active');
+}
+
+function formatArray(arr, storage) {
+  if (Array.isArray([arr])) {
+    for (var i=0; i<arr.length; i++) {
+      storage += '<p>'+arr[i] + '</p>';
+    }
+    return storage;
+  }
+
 }

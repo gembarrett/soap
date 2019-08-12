@@ -140,6 +140,14 @@ a {
   display:block;
 }
 
+.questionContent h2 {
+  display:inline-block;
+}
+
+.questionContent > .btn-tert {
+  min-width:3em;
+}
+
 #secretLink {
   color:#fff;
 }
@@ -255,6 +263,9 @@ section {
   border:2px solid;
   padding: 10px;
   margin: 0 10px;
+  min-width:10em;
+  text-align: center;
+  cursor: pointer;
 }
 
 .btn-prim {
@@ -278,10 +289,25 @@ section {
 /* flat minimises distraction - no border */
 .btn-tert {
   border: 0;
+  color: #fff;
+  background-color: #ccc;
+  border-radius: 10%;
+  padding: 5px 10px;
+}
+
+.btn-tert.highlight {
+  background-color: #8FC5EA;
 }
 
 .btn-wrap {
   display:flex;
-  justify-content: center;
   margin: 3em 0;
+}
+
+.wrap-c {
+  justify-content: center;
+}
+
+.wrap-r {
+  justify-content: right;
 }

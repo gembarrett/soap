@@ -21,7 +21,7 @@ templates.questionsTemplate = function(data){
         if (question.tips[3].more) {
           panel += '<p>Search terms: ' + question.tips[3].more + '</p>';
         }
-        var button = '<button type="button" onclick="toggleInfo(\''+question.id+'\')">!</button>';
+        var button = '<button id="info-trigger" class="btn btn-tert" type="button" onclick="toggleInfo(\''+question.id+'\')">INFO</button>';
         // add the question
         content += '<h2>' + question.q + '</h2>';
         // if the panel content exists add it
@@ -63,12 +63,10 @@ templates.questionsTemplate = function(data){
       } else {
         // add the title and paragraphs
         content += '<h2>' + question.title + '</h2>';
-        for (var k = 0; k < question.contentArray.length; k++){
-          content += '<p>' + question.contentArray[k] + '</p>';
-        }
+        content = formatArray(question.contentArray, content);
       }
       content += '</form>';
   }
-  content += '<button id="submitAnswers" onclick="handleSubmit()" class="nextButton">Next</button><button id="previewPolicy" class="previewButton">Preview</button></div>';
+  content += '<div class="btn-wrap wrap-r"><button id="previewPolicy" class="previewButton btn btn-seco">Preview</button><button id="submitAnswers" onclick="handleSubmit()" class="nextButton btn btn-prim">Next</button></div>';
   return content;
 };
