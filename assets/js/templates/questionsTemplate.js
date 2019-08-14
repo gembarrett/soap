@@ -1,6 +1,6 @@
 templates.questionsTemplate = function(data){
   var content = `
-      <div id="questionContainer" class="">
+      <progress max="`+questionsList.length+`" value="0"></progress><div id="questionContainer" class="">
   `;
   for(var i = 0; i < questionsList.length; i++) {
       var question = data[i];
@@ -50,12 +50,12 @@ templates.questionsTemplate = function(data){
 
            // if there's a textbox
            else if (question.answers[j].type === 'text') {
-             content += '<input type="' +question.answers[j].type+ '"' +thisID+thisName+thisPlaceholder+ '>' +thisLabel;
+             content += thisLabel + '<input type="' +question.answers[j].type+ '"' +thisID+thisName+thisPlaceholder+ '>';
            }
 
            // if there's another input type
            else {
-             content += '<input type="' +question.answers[j].type+ '"' +thisID+thisName+ '>' +thisLabel;
+             content += thisLabel + '<input type="' +question.answers[j].type+ '"' +thisID+thisName+ '>';
            }
 
            content += '</div>';
