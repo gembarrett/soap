@@ -279,10 +279,10 @@ function injectOverlay() {
 }
 
 function toggleInfo(id) {
-  document.querySelector("#info-trigger").classList.toggle("highlight");
   el = ".panel-"+id;
   panel = document.querySelector(el);
   panel.classList.toggle("closed");
+  document.querySelector("#info-trigger").classList.toggle("highlight");
 }
 
 function togglePreview(m, o) {
