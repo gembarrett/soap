@@ -322,3 +322,14 @@ section {
 .wrap-r {
   justify-content: right;
 }
+progress {
+  width:100%;
+  border: 0;
+  height: 18px;
+  border-radius: 9px;
+  opacity: 0.3;
+  border:1px solid #668EAA;
+}
+progress[value="0"] {
+  display:none;
+}
