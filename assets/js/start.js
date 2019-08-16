@@ -199,19 +199,17 @@ function getInput(el, qId) {
   console.log('answering - getInput');
 
   // search el for inputs
-  // var inputs = el.getElementsByTagName('input');
-
-  // for every element in the form
-  for (var i = 0; i < el.childNodes.length; i++) {
-
-    var input = el.childNodes[i].childNodes[0];
-    // get the inputs
-    if (input.tagName === "INPUT") {
+  if (el.getElementsByTagName('input')) {
+    var inputs = el.getElementsByTagName('input');
+  }
+  console.log(inputs);
+  // for every input in the form
+  for (var i = 0; i < inputs.length; i++) {
+    // if it's a checked checkbox
+    if ((inputs[i].type === "checkbox") && (inputs[i].checked)) {
       // split up the input's id to get the number
-      var answerID = input.id.split("-")[1];
+      var answerID = inputs[i].id.split("-")[1];
       // this could be a good point at which to check for storeAs values
-      // if the input is checked
-      if (input.checked) {
         // push the question and answer object to the currentState
         currentState.answers.push({
           s: currentState.sectionC,
@@ -220,9 +218,9 @@ function getInput(el, qId) {
         });
       }
       // if the input is a textbox containing value
-      else if (input.type === "text" && input.value !== "") {
+      else if (inputs[i].type === "text" && inputs[i].value !== "") {
         // again get the input's id number - fix this repetition
-        var answerID = input.id.split("-")[1];
+        var answerID = inputs[i].id.split("-")[1];
         // check the value for stored things - do this check better
         // var storage = currentState.sectionQ[qId].answers[answerID].storeAs;
         // checkValue(qId, input.id, input.value);
@@ -231,7 +229,7 @@ function getInput(el, qId) {
           s: currentState.sectionC,
           q: qId,
           a: answerID,
-          t: input.value
+          t: inputs[i].value
         });
         // replace with compilePolicy
         // if (currentState.sectionQ[qId].answers[answerID].policyEntry !== "" ) {
@@ -239,7 +237,6 @@ function getInput(el, qId) {
         // }
       }
     }
-  }
   return currentState.answers;
 }
 
