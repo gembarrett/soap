@@ -115,8 +115,14 @@ function handleSubmit() {
   // use the form element and the question id to get the inputs
   // maybe also grab the section id here
   var answers = getInput(match, id);
+  console.log(answers);
 
-  console.log('this question has the id of ' +id);
+  // get the preview button
+  prev = document.querySelector('#previewPolicy');
+  // if there's at least one answer returned and the button is disabled
+  if ((answers.length > 0) && prev.disabled){
+    prev.removeAttribute('disabled');
+  }
 
   // add the preview overlay after everything else has loaded
   // // TODO: hide the Preview button until after the overlay is in place
@@ -191,8 +197,13 @@ function handleSubmit() {
 
 function getInput(el, qId) {
   console.log('answering - getInput');
+
+  // search el for inputs
+  // var inputs = el.getElementsByTagName('input');
+
   // for every element in the form
   for (var i = 0; i < el.childNodes.length; i++) {
+
     var input = el.childNodes[i].childNodes[0];
     // get the inputs
     if (input.tagName === "INPUT") {
@@ -305,5 +316,6 @@ function formatArray(arr, storage) {
     }
     return storage;
   }
-
 }
+
+// when the first answer is pushed to the currentState.aswers array, then do previewButton.removeAttr("disabled")

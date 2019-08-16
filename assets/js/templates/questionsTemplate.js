@@ -67,6 +67,6 @@ templates.questionsTemplate = function(data){
       }
       content += '</form>';
   }
-  content += '<div class="btn-wrap wrap-r"><button id="previewPolicy" class="previewButton btn btn-seco">Preview</button><button id="submitAnswers" onclick="handleSubmit()" class="nextButton btn btn-prim">Next</button></div>';
+  content += '<div class="btn-wrap wrap-r"><button disabled id="previewPolicy" class="previewButton btn btn-seco">Preview</button><button id="submitAnswers" onclick="handleSubmit()" class="nextButton btn btn-prim">Next</button></div>';
   return content;
 };
