@@ -10,22 +10,22 @@ templates.questionsTemplate = function(data){
       if (question.isQ) {
         var panel = "";
         if (question.tips[0].relevance) {
-          panel += '<p>Relevance: ' + question.tips[0].relevance + '</p>';
+          panel += '<h3>Relevance</h3><p>' + question.tips[0].relevance + '</p>';
         }
         if (question.tips[1].meaning) {
-          panel += '<p>Meaning: ' + question.tips[1].meaning + '</p>';
+          panel += '<h3>Meaning</h3><p>' + question.tips[1].meaning + '</p>';
         }
         if (question.tips[2].implementation) {
-          panel += '<p>Implementation: ' + question.tips[2].implementation + '</p>';
+          panel += '<h3>Implementation</h3><p>' + question.tips[2].implementation + '</p>';
         }
         if (question.tips[3].more) {
-          panel += '<p>Search terms: ' + question.tips[3].more + '</p>';
+          panel += '<h3>Search terms</h3><p>' + question.tips[3].more + '</p>';
         }
-        var button = '<button id="info-trigger" class="btn btn-tert" type="button" onclick="toggleInfo(\''+question.id+'\')">INFO</button>';
+        var button = '<i id="info-trigger-'+question.id+'" class="fas fa-plus-circle"></i>';
         // add the question
-        content += '<h2>' + question.q + '</h2>';
+        content += '<div class="question-panel" onclick="toggleInfo(\''+question.id+'\')"><h2>' + question.q + '</h2>';
         // if the panel content exists add it
-        content += panel !== "" ? button+'<div class="panel-'+question.id+' closed">'+panel+'</div>' : '<br />';
+        content += panel !== "" ? button+'<div class="info-display panel-'+question.id+' closed">'+panel+'</div></div>' : '<br />';
 
         // add the answers
         for (var j = 0; j < question.answers.length; j++){

@@ -292,7 +292,8 @@ function toggleInfo(id) {
   el = ".panel-"+id;
   panel = document.querySelector(el);
   panel.classList.toggle("closed");
-  document.querySelector("#info-trigger").classList.toggle("highlight");
+  query = '#info-trigger-'+id;
+  document.querySelector(query).classList.toggle("highlight");
 }
 
 function togglePreview(m, o) {
@@ -314,5 +315,3 @@ function formatArray(arr, storage) {
     return storage;
   }
 }
-
-// when the first answer is pushed to the currentState.aswers array, then do previewButton.removeAttr("disabled")
