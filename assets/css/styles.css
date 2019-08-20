@@ -193,6 +193,10 @@ a {
   opacity: 1;
 }
 
+.question-panel i.highlight{
+  transform: rotate(45deg);
+}
+
 /* ================== */
 /* Preview styles */
 
