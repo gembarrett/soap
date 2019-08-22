@@ -33,9 +33,14 @@ var currentState = {
   // list of exclusions, updated on every submission and checked on every question load
   exclusions: []
 }
+// for storing the storeAs names and values
+var dict = {};
+
 
 // delete and replace
 var policyText = [];
+// detect square brackets in the policy text, grab the text that's between them and use it to search the dict, then grab the value held for that key
+
 // delete and replace
 var appendixText = [];
 // replace updatePolicy and policyText with this function that compiles the policy based on what's in the answer storage at that time
@@ -44,13 +49,12 @@ function compilePolicy() {
     var tempPolicy = [];
     // for each of the answers in currentState
     for (var i = 0; i < currentState.answers.length; i++) {
-
       // use the question id to grab the policyContent
       qRef = currentState.answers[i].q;
       aRef = currentState.answers[i].a;
       var thisQ = 'q'+qRef;
-      var specific = "";
       var general = "";
+      var specific = "";
       var answer = "";
       prev = i > 0 ? i - 1 : "";
       // if there's a previous question and it's the same as the current question
@@ -67,6 +71,7 @@ function compilePolicy() {
         if (found) {
           // ring the bell, we got ourselves a winner!
           // this doesn't seem to be stopping the loop
+
           j === 10;
           // check if there's a general policyContent to grab
           if ((!sameQ) && (found.policyContent !== 'undefined')) {
@@ -90,11 +95,39 @@ function compilePolicy() {
         tempPolicy.push(general, specific, answer);
       }
     }
+
+    // replace all temporary words with values from dict
     // return the compiled policy to injectOverlay or the end of the process
-    return tempPolicy;
+    return replaceTemp(tempPolicy);
     // is injectOverlay the best place to return it if that's for a onetime injection of html?
 }
 
+function replaceTemp(policyArr) {
+  var editedArray = [];
+  console.log(policyArr);
+  // for each of the items in the array
+  for (var i=0; i<policyArr.length; i++) {
+    // find the words inside brackets
+    // var toBeReplaced = found.answers[currentState.answers[i].a].policyEntry.match(/[^[\]]+(?=])/g);
+    var toBeReplaced = policyArr[i].match(/[^[\]]+(?=])/g);
+    // if there are words to be replaced
+    if (toBeReplaced) {
+      // for each of the words found
+      for (var j=0; j<toBeReplaced.length; j++) {
+        // search for a matching key
+        var matchesKey = toBeReplaced[j] in dict;
+        // if there is a match, replace the word (and brackets) with the matching key's value
+        if (matchesKey) {
+          // var result = found.answers[currentState.answers[i].a].policyEntry.replace(/[^[\]]+(?=])/g, dict[toBeReplaced[0]]);
+          var result = policyArr[i].replace(/[^[\]]+(?=])/g, dict[toBeReplaced[j]]);
+          editedArray.push(result);
+        }
+      }
+    }
+  }
+  console.log(editedArray);
+  return editedArray;
+}
 // replace checkValue with this function that takes each answer and, if there's a storeAs value, stores it
 function checkForStorage() {
   // use the passed answer ref to check for a storeAs value
@@ -197,12 +230,10 @@ function handleSubmit() {
 
 function getInput(el, qId) {
   console.log('answering - getInput');
-
   // search el for inputs
   if (el.getElementsByTagName('input')) {
     var inputs = el.getElementsByTagName('input');
   }
-  console.log(inputs);
   // for every input in the form
   for (var i = 0; i < inputs.length; i++) {
     // if it's a checked checkbox
@@ -210,6 +241,12 @@ function getInput(el, qId) {
       // split up the input's id to get the number
       var answerID = inputs[i].id.split("-")[1];
       // this could be a good point at which to check for storeAs values
+      console.log(currentState.sectionQ[qId].answers[answerID].storeAs);
+
+      // if there's a storeAs value
+      // add to the dict
+      dict[currentState.sectionQ[qId].answers[answerID].storeAs] = currentState.sectionQ[qId].answers[answerID].answerText;
+      console.log(dict);
         // push the question and answer object to the currentState
         currentState.answers.push({
           s: currentState.sectionC,
@@ -222,6 +259,8 @@ function getInput(el, qId) {
         // again get the input's id number - fix this repetition
         var answerID = inputs[i].id.split("-")[1];
         // check the value for stored things - do this check better
+        dict[currentState.sectionQ[qId].answers[answerID].storeAs] = inputs[i].value;
+        console.log(dict);
         // var storage = currentState.sectionQ[qId].answers[answerID].storeAs;
         // checkValue(qId, input.id, input.value);
         // push the question and answer and text value object to the currentState
