@@ -43,7 +43,7 @@ var section0 = [
         "placeholder":"e.g. Alice Smith",
         "storeAs":"contactName",
         "excludes":[],
-        "policyEntry":"If you have questions about this policy, please contact [contactName]",
+        "policyEntry":"<br />If you have questions about this policy, please contact [contactName]",
         "appendixEntry":[
           {
             "reviewList":"Is [contactName] succeeding in supporting staff implementation of the policy? Are they happy to continue as security champion?",
@@ -57,7 +57,7 @@ var section0 = [
         "placeholder":"e.g. Security Officer",
         "storeAs":"contactPos",
         "excludes":[],
-        "policyEntry":", [contactPos]",
+        "policyEntry":"([contactPos]).",
         "appendixEntry":[
           {
             "reviewList":"Is [contactName]'s job title still [contactPos]?",
@@ -85,7 +85,7 @@ var section0 = [
         "placeholder": "e.g. +1 (234) 567-890",
         "storeAs":"contactPhone",
         "excludes":[],
-        "policyEntry":"They can be contacted by telephone on [contactPhone.]",
+        "policyEntry":"They can be contacted by telephone on [contactPhone].",
         "appendixEntry":[
           {
             "reviewList":"Is [contactName]'s phone number still [contactPhone]?",

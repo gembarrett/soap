@@ -75,18 +75,18 @@ function compilePolicy() {
           j === 10;
           // check if there's a general policyContent to grab
           if ((!sameQ) && (found.policyContent !== 'undefined')) {
-            general = found.policyContent + '<br />';
+            general = found.policyContent;
           }
           // use the answer reference to grab the policyEntry, if it exists
           if (found.answers[currentState.answers[i].a].policyEntry) {
-            specific = found.answers[currentState.answers[i].a].policyEntry + '<br />';
+            specific = found.answers[currentState.answers[i].a].policyEntry;
           }
           // if there's a text entry then get the inputted text
           if (currentState.answers[i].t) {
-            answer = currentState.answers[i].t + '<br />';
+            answer = currentState.answers[i].t;
           } else {
             // else get the answer's answerText
-            answer = found.answers[currentState.answers[i].a].answerText + '<br />';
+            answer = found.answers[currentState.answers[i].a].answerText;
           }
         }
       }
@@ -104,13 +104,11 @@ function compilePolicy() {
 
 function replaceTemp(policyArr) {
   var editedArray = [];
-  console.log(policyArr);
   // for each of the items in the array
   for (var i=0; i<policyArr.length; i++) {
-    // find the words inside brackets
-    // var toBeReplaced = found.answers[currentState.answers[i].a].policyEntry.match(/[^[\]]+(?=])/g);
+    // find the words inside brackets and stick them in an array
     var toBeReplaced = policyArr[i].match(/[^[\]]+(?=])/g);
-    // if there are words to be replaced
+    // if the array has contents, i.e. there are words to be replaced
     if (toBeReplaced) {
       // for each of the words found
       for (var j=0; j<toBeReplaced.length; j++) {
@@ -118,13 +116,16 @@ function replaceTemp(policyArr) {
         var matchesKey = toBeReplaced[j] in dict;
         // if there is a match, replace the word (and brackets) with the matching key's value
         if (matchesKey) {
-          // var result = found.answers[currentState.answers[i].a].policyEntry.replace(/[^[\]]+(?=])/g, dict[toBeReplaced[0]]);
-          var result = policyArr[i].replace(/[^[\]]+(?=])/g, dict[toBeReplaced[j]]);
+          var newString = "["+toBeReplaced[j]+"]";
+          var result = policyArr[i].replace(newString, dict[toBeReplaced[j]]);
+          // var result = policyArr[i].replace(/[^[\]]+(?=])/g, dict[toBeReplaced[j]]);
           editedArray.push(result);
         }
       }
     }
   }
+  console.log(editedArray);
+  editedArray = editedArray.join(" ");
   console.log(editedArray);
   return editedArray;
 }
@@ -241,12 +242,10 @@ function getInput(el, qId) {
       // split up the input's id to get the number
       var answerID = inputs[i].id.split("-")[1];
       // this could be a good point at which to check for storeAs values
-      console.log(currentState.sectionQ[qId].answers[answerID].storeAs);
 
       // if there's a storeAs value
       // add to the dict
       dict[currentState.sectionQ[qId].answers[answerID].storeAs] = currentState.sectionQ[qId].answers[answerID].answerText;
-      console.log(dict);
         // push the question and answer object to the currentState
         currentState.answers.push({
           s: currentState.sectionC,
@@ -260,7 +259,6 @@ function getInput(el, qId) {
         var answerID = inputs[i].id.split("-")[1];
         // check the value for stored things - do this check better
         dict[currentState.sectionQ[qId].answers[answerID].storeAs] = inputs[i].value;
-        console.log(dict);
         // var storage = currentState.sectionQ[qId].answers[answerID].storeAs;
         // checkValue(qId, input.id, input.value);
         // push the question and answer and text value object to the currentState
@@ -279,7 +277,6 @@ function getInput(el, qId) {
   return currentState.answers;
 }
 
-// instead of this, use the storeAs value
 // var orgName;
 // var contact = [];
 // // e.g. if this answer has a storeAs value, then add that to the answer storage
