@@ -124,9 +124,7 @@ function replaceTemp(policyArr) {
       }
     }
   }
-  console.log(editedArray);
   editedArray = editedArray.join(" ");
-  console.log(editedArray);
   return editedArray;
 }
 // replace checkValue with this function that takes each answer and, if there's a storeAs value, stores it
@@ -149,7 +147,6 @@ function handleSubmit() {
   // use the form element and the question id to get the inputs
   // maybe also grab the section id here
   var answers = getInput(match, id);
-  console.log(answers);
 
   // get the preview button
   prev = document.querySelector('#previewPolicy');
@@ -238,14 +235,20 @@ function getInput(el, qId) {
   // for every input in the form
   for (var i = 0; i < inputs.length; i++) {
     // if it's a checked checkbox
-    if ((inputs[i].type === "checkbox") && (inputs[i].checked)) {
+    // what about radio buttons?
+    if (((inputs[i].type === "checkbox") || (inputs[i].type === "radio")) && (inputs[i].checked)) {
+      console.log('found a checked checkbox or radio button');
       // split up the input's id to get the number
       var answerID = inputs[i].id.split("-")[1];
       // this could be a good point at which to check for storeAs values
-
-      // if there's a storeAs value
-      // add to the dict
-      dict[currentState.sectionQ[qId].answers[answerID].storeAs] = currentState.sectionQ[qId].answers[answerID].answerText;
+      // unsplit the question ID
+      var tempQId = 'q'+qId;
+      const result = currentState.sectionQ.find(question => question.id === tempQId);
+      console.log(result);
+      // if there's a storeAs value add it to the dict
+      // this is throwing an error in section 2 because the qId doesn't match up with the number of questions in section 2
+      dict[result.answers[answerID].storeAs] = result.answers[answerID].answerText;
+      console.log(dict);
         // push the question and answer object to the currentState
         currentState.answers.push({
           s: currentState.sectionC,
@@ -255,10 +258,16 @@ function getInput(el, qId) {
       }
       // if the input is a textbox containing value
       else if (inputs[i].type === "text" && inputs[i].value !== "") {
+        console.log('found a textbox');
         // again get the input's id number - fix this repetition
         var answerID = inputs[i].id.split("-")[1];
+
+        var tempQId = 'q'+qId;
+        const result = currentState.sectionQ.find(question => question.id === tempQId);
+        console.log(result);
+
         // check the value for stored things - do this check better
-        dict[currentState.sectionQ[qId].answers[answerID].storeAs] = inputs[i].value;
+        dict[result.answers[answerID].storeAs] = inputs[i].value;
         // var storage = currentState.sectionQ[qId].answers[answerID].storeAs;
         // checkValue(qId, input.id, input.value);
         // push the question and answer and text value object to the currentState
