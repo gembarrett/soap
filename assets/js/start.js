@@ -195,17 +195,17 @@ function handleSubmit() {
   // if it is then skip to the next question and check again
   // if it isn't excluded then show it
 
-  // if the id is not beyond the total number of questions for the current section
-  // should this be questionp instead of id?
+  // if the position is not beyond the total number of questions for the current section
   if (currentState.questionP < currentState.sectionQ.length) {
     console.log('moving to next question!');
+    console.log(currentState);
     // grab the next question's element and add class of current
     var nextQ = document.getElementById(currentState.questionQ);
     nextQ.classList.add("current");
   }
   // if the sections have not run out (using the counter because it isn't changed)
   // consider whether I want this to happen here, before the last q, or after it
-  else if (currentState.sectionC < sections.length) {
+  else if (currentState.sectionC < sections.length-1) {
     console.log('moving to next section!');
     // increase the section counter
     currentState.sectionC++;
@@ -213,6 +213,7 @@ function handleSubmit() {
     currentState.questionP = 0;
     // get the next section
     currentState.sectionQ = sections[currentState.sectionC];
+    console.log(currentState);
     // as before, grab the next question's element and add class of current
     var nextQ = document.getElementById(currentState.questionQ);
     nextQ.classList.add("current");
@@ -223,7 +224,6 @@ function handleSubmit() {
     console.log('end of process!');
     utils.render('page', policyContainer);
   }
-
 }
 
 function getInput(el, qId) {
@@ -244,11 +244,9 @@ function getInput(el, qId) {
       // unsplit the question ID
       var tempQId = 'q'+qId;
       const result = currentState.sectionQ.find(question => question.id === tempQId);
-      console.log(result);
       // if there's a storeAs value add it to the dict
       // this is throwing an error in section 2 because the qId doesn't match up with the number of questions in section 2
       dict[result.answers[answerID].storeAs] = result.answers[answerID].answerText;
-      console.log(dict);
         // push the question and answer object to the currentState
         currentState.answers.push({
           s: currentState.sectionC,

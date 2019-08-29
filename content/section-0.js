@@ -15,7 +15,7 @@ var section0 = [
     "answers":[
       {
         "type":"text",
-        "answerText":"Enter the organisation name",
+        "answerText":"",
         "placeholder":"Example Organisation",
         "storeAs":"orgName",
         "excludes":[],
