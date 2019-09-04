@@ -17,7 +17,7 @@ var section0 = [
         "type":"text",
         "answerText":"",
         "placeholder":"Example Organisation",
-        "storeAs":"orgName",
+        "storeAs":"[orgName]",
         "excludes":[],
         "policyEntry":"This is the security policy of [orgName], which has been created in order to support staff in carrying out our sensitive work securely. It is important to understand and comply with the rules described as they aim to protect everyone involved in our work, including partner organisations and frontline activists.",
         "appendixEntry":""
@@ -41,7 +41,7 @@ var section0 = [
         "type":"text",
         "answerText":"Name",
         "placeholder":"e.g. Alice Smith",
-        "storeAs":"contactName",
+        "storeAs":"[contactName]",
         "excludes":[],
         "policyEntry":"<br />If you have questions about this policy, please contact [contactName]",
         "appendixEntry":[
@@ -55,7 +55,7 @@ var section0 = [
         "type":"text",
         "answerText":"Job title",
         "placeholder":"e.g. Security Officer",
-        "storeAs":"contactPos",
+        "storeAs":"[contactPos]",
         "excludes":[],
         "policyEntry":"([contactPos]).",
         "appendixEntry":[
@@ -69,7 +69,7 @@ var section0 = [
         "type":"text",
         "answerText":"Email",
         "placeholder": "e.g. example@organisation.com",
-        "storeAs":"contactEmail",
+        "storeAs":"[contactEmail]",
         "excludes":[],
         "policyEntry":"They can be contacted by email at [contactEmail].",
         "appendixEntry":[
@@ -83,7 +83,7 @@ var section0 = [
         "type":"text",
         "answerText":"Phone",
         "placeholder": "e.g. +1 (234) 567-890",
-        "storeAs":"contactPhone",
+        "storeAs":"[contactPhone]",
         "excludes":[],
         "policyEntry":"They can be contacted by telephone on [contactPhone].",
         "appendixEntry":[
@@ -112,7 +112,7 @@ var section0 = [
       {
         "type":"checkbox",
         "answerText":"Contractors",
-        "storeAs":"contractors",
+        "storeAs":"[contractors]",
         "excludes":[],
         "policyEntry":"",
         "appendixEntry":[
@@ -125,7 +125,7 @@ var section0 = [
       {
         "type":"checkbox",
         "answerText":"Full or part-time staff",
-        "storeAs":"staff",
+        "storeAs":"[staff]",
         "excludes":[],
         "policyEntry":"",
         "appendixEntry":[
@@ -138,7 +138,7 @@ var section0 = [
       {
         "type":"checkbox",
         "answerText":"Volunteers",
-        "storeAs": "volunteers",
+        "storeAs": "[volunteers]",
         "excludes":[],
         "policyEntry":"",
         "appendixEntry":[
@@ -167,7 +167,7 @@ var section0 = [
       {
         "type":"checkbox",
         "answerText":"Windows",
-        "storeAs": "windows",
+        "storeAs": "[windows]",
         "excludes":[],
         "policyEntry":"",
         "appendixEntry":[
@@ -180,7 +180,7 @@ var section0 = [
       {
         "type":"checkbox",
         "answerText":"macOS",
-        "storeAs": "mac",
+        "storeAs": "[mac]",
         "excludes":[],
         "policyEntry":"",
         "appendixEntry":[
@@ -193,7 +193,7 @@ var section0 = [
       {
         "type":"checkbox",
         "answerText":"Linux (any flavour)",
-        "storeAs": "linux",
+        "storeAs": "[linux]",
         "excludes":[],
         "policyEntry":"",
         "appendixEntry":[
@@ -206,7 +206,7 @@ var section0 = [
       {
         "type":"checkbox",
         "answerText":"Chrome OS",
-        "storeAs": "chrome",
+        "storeAs": "[chrome]",
         "excludes":[],
         "policyEntry":"",
         "appendixEntry":[
@@ -219,7 +219,7 @@ var section0 = [
       {
         "type":"checkbox",
         "answerText":"Android",
-        "storeAs": "android",
+        "storeAs": "[android]",
         "excludes":[],
         "policyEntry":"",
         "appendixEntry":[
@@ -232,7 +232,7 @@ var section0 = [
       {
         "type":"checkbox",
         "answerText":"iOS",
-        "storeAs": "ios",
+        "storeAs": "[ios]",
         "excludes":[],
         "policyEntry":"",
         "appendixEntry":[
@@ -245,7 +245,7 @@ var section0 = [
       {
         "type":"checkbox",
         "answerText":"Blackberry",
-        "storeAs": "blackberry",
+        "storeAs": "[blackberry]",
         "excludes":[],
         "policyEntry":"",
         "appendixEntry":[
@@ -258,7 +258,7 @@ var section0 = [
       {
         "type":"checkbox",
         "answerText":"Windows Phone",
-        "storeAs": "windowsP",
+        "storeAs": "[windowsP]",
         "excludes":[],
         "policyEntry":"",
         "appendixEntry":[
@@ -287,7 +287,7 @@ var section0 = [
       {
         "type":"checkbox",
         "answerText":"We install work profiles on staff-owned devices (Bring Your Own Device policy)",
-        "storeAs": "byod",
+        "storeAs": "[byod]",
         "excludes":[],
         "policyEntry":"With your consent, we will install a work profile on your personal devices in order for you to use them in the course of your work. This work profile will keep your work and personal use of the device separated.",
         "appendixEntry":[
@@ -300,7 +300,7 @@ var section0 = [
       {
         "type":"checkbox",
         "answerText":"We install work and personal profiles on organisation-owned devices.",
-        "storeAs": "profiles",
+        "storeAs": "[profiles]",
         "excludes":[],
         "policyEntry":"[orgName] staff are given some freedom to decide their work environment and equipment, and we acknowledge that there may be times when after hours access to work email and data is needed. We will provide you with devices and install both a work and personal profile for you to use.",
         "appendixEntry":[
@@ -313,7 +313,7 @@ var section0 = [
       {
         "type":"checkbox",
         "answerText":"We provide work-only devices.",
-        "storeAs": "separate",
+        "storeAs": "[separate]",
         "excludes":[],
         "policyEntry":"We will provide you with devices, such as a computer, to use solely for work purposes.",
         "appendixEntry":[
@@ -342,7 +342,7 @@ var section0 = [
       {
         "type":"radio",
         "answerText":"Webcam cover",
-        "storeAs": "webcam",
+        "storeAs": "[webcam]",
         "excludes":[],
         "policyEntry":"Protecting the devices we use is crucial in preventing unauthorised access to sensitive [orgName] data. To mitigate this, [orgName] will provide you with webcam cover(s) to use on your devices.",
         "appendixEntry":[
@@ -355,7 +355,7 @@ var section0 = [
       {
         "type":"radio",
         "answerText":"Privacy screen",
-        "storeAs": "screen",
+        "storeAs": "[screen]",
         "excludes":[],
         "policyEntry":"Protecting the devices we use is crucial in preventing unauthorised access to sensitive [orgName] data. To mitigate this, [orgName] will provide you with privacy screen(s) to use on your devices.",
         "appendixEntry":[
@@ -368,7 +368,7 @@ var section0 = [
       {
         "type":"radio",
         "answerText":"Both",
-        "storeAs": "both",
+        "storeAs": "[both]",
         "excludes":[],
         "policyEntry":"Protecting the devices we use is crucial in preventing unauthorised access to sensitive [orgName] data. To mitigate this, [orgName] will provide you with webcam cover(s) and privacy screen(s) to use on your devices.",
         "appendixEntry":[
@@ -381,7 +381,7 @@ var section0 = [
       {
         "type":"radio",
         "answerText":"Neither",
-        "storeAs": "neither",
+        "storeAs": "[neither]",
         "excludes":[],
         "policyEntry":"",
         "appendixEntry":[
@@ -410,7 +410,7 @@ var section0 = [
       {
         "type":"radio",
         "answerText":"Yes",
-        "storeAs": "onsite",
+        "storeAs": "[onsite]",
         "excludes":[], // review this
         "policyEntry":"Protecting the devices we use is crucial in preventing unauthorised access to sensitive [orgName] data. To mitigate this, [orgName] will provide you with webcam cover(s) to use on your devices.",
         "appendixEntry":[
@@ -423,7 +423,7 @@ var section0 = [
       {
         "type":"radio",
         "answerText":"No - some or all of our staff work remotely.",
-        "storeAs": "remote",
+        "storeAs": "[remote]",
         "excludes":[],
         "policyEntry":"Protecting the devices we use is crucial in preventing unauthorised access to sensitive [orgName] data. To mitigate this, [orgName] will provide you with privacy screen(s) to use on your devices.",
         "appendixEntry":[
@@ -452,7 +452,7 @@ var section0 = [
       {
         "type":"radio",
         "answerText":"Annually",
-        "storeAs": "annual",
+        "storeAs": "[annual]",
         "excludes":[], // review this
         "policyEntry":"",
         "appendixEntry":[
@@ -465,7 +465,7 @@ var section0 = [
       {
         "type":"radio",
         "answerText":"6-monthly",
-        "storeAs": "6mths",
+        "storeAs": "[6mths]",
         "excludes":[], // review this
         "policyEntry":"",
         "appendixEntry":[
@@ -478,7 +478,7 @@ var section0 = [
       {
         "type":"radio",
         "answerText":"Quarterly",
-        "storeAs": "quarter",
+        "storeAs": "[quarter]",
         "excludes":[], // review this
         "policyEntry":"",
         "appendixEntry":[
@@ -491,7 +491,7 @@ var section0 = [
       {
         "type":"radio",
         "answerText":"As threats arise",
-        "storeAs": "irregular",
+        "storeAs": "[irregular]",
         "excludes":[],
         "policyEntry":"",
         "appendixEntry":[

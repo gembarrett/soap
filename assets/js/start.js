@@ -74,28 +74,26 @@ function compilePolicy() {
 
           j === 10;
           // check if there's a general policyContent to grab
-          if ((!sameQ) && (found.policyContent !== 'undefined')) {
+          if ((!sameQ) && (found.policyContent !== "")) {
             general = found.policyContent;
+            tempPolicy.push(general);
           }
           // use the answer reference to grab the policyEntry, if it exists
           if (found.answers[currentState.answers[i].a].policyEntry) {
             specific = found.answers[currentState.answers[i].a].policyEntry;
+            tempPolicy.push(specific);
           }
-          // if there's a text entry then get the inputted text
-          if (currentState.answers[i].t) {
-            answer = currentState.answers[i].t;
-          } else {
-            // else get the answer's answerText
-            answer = found.answers[currentState.answers[i].a].answerText;
-          }
+          // // if there's a text entry then get the inputted text
+          // if (currentState.answers[i].t) {
+          //   answer = currentState.answers[i].t;
+          // } else {
+          //   // else get the answer's answerText
+          //   answer = found.answers[currentState.answers[i].a].answerText;
+          // }
         }
       }
-      // if an answer has been found, push it to the array
-      if (answer) {
-        tempPolicy.push(general, specific, answer);
-      }
     }
-
+    console.log(tempPolicy);
     // replace all temporary words with values from dict
     // return the compiled policy to injectOverlay or the end of the process
     return replaceTemp(tempPolicy);
@@ -104,26 +102,40 @@ function compilePolicy() {
 
 function replaceTemp(policyArr) {
   var editedArray = [];
-  // for each of the items in the array
+  // for each entry in the array
   for (var i=0; i<policyArr.length; i++) {
-    // find the words inside brackets and stick them in an array
-    var toBeReplaced = policyArr[i].match(/[^[\]]+(?=])/g);
-    // if the array has contents, i.e. there are words to be replaced
-    if (toBeReplaced) {
-      // for each of the words found
-      for (var j=0; j<toBeReplaced.length; j++) {
-        // search for a matching key
-        var matchesKey = toBeReplaced[j] in dict;
-        // if there is a match, replace the word (and brackets) with the matching key's value
-        if (matchesKey) {
-          var newString = "["+toBeReplaced[j]+"]";
-          var result = policyArr[i].replace(newString, dict[toBeReplaced[j]]);
-          // var result = policyArr[i].replace(/[^[\]]+(?=])/g, dict[toBeReplaced[j]]);
-          editedArray.push(result);
-        }
-      }
+    var newString = policyArr[i];
+    // for each of the stored keys
+    for (var key in dict) {
+      var regexKey = key.replace('[', '\\[').replace(']', '\\]');
+      var regex = new RegExp(regexKey, 'gi');
+      // replace any matches and put them in a new string
+      newString = newString.replace(regex, dict[key]);
+      // add this new string to the array
+      console.log(newString);
     }
+    editedArray.push(newString);
   }
+
+  // // for each of the stored keys
+  // for (var key in dict) {
+  //   // create the regex search
+  //   // new RegExp(\[(orgName\w?)\])
+  //   var regexKey = key.replace('[', '\\[').replace(']', '\\]');
+  //   var regex = new RegExp(regexKey, 'gi');
+  //   console.log(regexKey);
+  //   // for each entry in the array
+  //   for (var i=0; i<policyArr.length; i++) {
+  //     // replace any matches and put them in a new string
+  //     newString = policyArr[i].replace(regex, dict[key]);
+  //     // add this new string to the array - this will cause some duplication!
+  //     editedArray.push(newString);
+  //     console.log(newString);
+  //   }
+  //
+  //   console.log(editedArray);
+  // }
+  // join all the edited array entries together into a single string
   editedArray = editedArray.join(" ");
   return editedArray;
 }
@@ -198,7 +210,6 @@ function handleSubmit() {
   // if the position is not beyond the total number of questions for the current section
   if (currentState.questionP < currentState.sectionQ.length) {
     console.log('moving to next question!');
-    console.log(currentState);
     // grab the next question's element and add class of current
     var nextQ = document.getElementById(currentState.questionQ);
     nextQ.classList.add("current");
@@ -213,7 +224,6 @@ function handleSubmit() {
     currentState.questionP = 0;
     // get the next section
     currentState.sectionQ = sections[currentState.sectionC];
-    console.log(currentState);
     // as before, grab the next question's element and add class of current
     var nextQ = document.getElementById(currentState.questionQ);
     nextQ.classList.add("current");
@@ -245,7 +255,7 @@ function getInput(el, qId) {
       var tempQId = 'q'+qId;
       const result = currentState.sectionQ.find(question => question.id === tempQId);
       // if there's a storeAs value add it to the dict
-      // this is throwing an error in section 2 because the qId doesn't match up with the number of questions in section 2
+      // currently this doesn't deal with multiple selections
       dict[result.answers[answerID].storeAs] = result.answers[answerID].answerText;
         // push the question and answer object to the currentState
         currentState.answers.push({
@@ -262,12 +272,9 @@ function getInput(el, qId) {
 
         var tempQId = 'q'+qId;
         const result = currentState.sectionQ.find(question => question.id === tempQId);
-        console.log(result);
 
         // check the value for stored things - do this check better
         dict[result.answers[answerID].storeAs] = inputs[i].value;
-        // var storage = currentState.sectionQ[qId].answers[answerID].storeAs;
-        // checkValue(qId, input.id, input.value);
         // push the question and answer and text value object to the currentState
         currentState.answers.push({
           s: currentState.sectionC,
@@ -275,37 +282,10 @@ function getInput(el, qId) {
           a: answerID,
           t: inputs[i].value
         });
-        // replace with compilePolicy
-        // if (currentState.sectionQ[qId].answers[answerID].policyEntry !== "" ) {
-        //   updatePolicy(currentState.sectionQ[qId].answers[answerID].policyEntry);
-        // }
       }
     }
   return currentState.answers;
 }
-
-// var orgName;
-// var contact = [];
-// // e.g. if this answer has a storeAs value, then add that to the answer storage
-// function checkValue(question, answer, val) {
-//     console.log('building - checkValue');
-//     var temp = answer.split("-")[1];
-//     switch (question) {
-//       case "1":
-//         orgName = val;
-//         currentState.sectionQ[question].answers[temp].policyEntry += orgName;
-//         break;
-//       case "2":
-//         contact.push({
-//           "answer":answer,
-//           "value":val
-//         });
-//         currentState.sectionQ[question].answers[temp].policyEntry += val;
-//         break;
-//       default:
-//     }
-// }
-
 
 function injectOverlay() {
   console.log('building - injectOverlay');

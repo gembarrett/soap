@@ -71,7 +71,7 @@ var section1 = [
       {
         "type":"checkbox",
         "answerText":"G Suite",
-        "storeAs":"googleArray",
+        "storeAs":"[googleArray]",
         "excludes":[],
         "policyEntry":"G Suite",
         "appendixEntry":[
@@ -84,7 +84,7 @@ var section1 = [
       {
         "type":"checkbox",
         "answerText":"Hangouts",
-        "storeAs":"googleArray",
+        "storeAs":"[googleArray]",
         "excludes":[],
         "policyEntry":"Hangouts",
         "appendixEntry":[
@@ -97,7 +97,7 @@ var section1 = [
       {
         "type":"checkbox",
         "answerText":"Sheets",
-        "storeAs":"googleArray",
+        "storeAs":"[googleArray]",
         "excludes":[],
         "policyEntry":"Sheets",
         "appendixEntry":[
@@ -110,7 +110,7 @@ var section1 = [
       {
         "type":"checkbox",
         "answerText":"Drive",
-        "storeAs":"googleArray",
+        "storeAs":"[googleArray]",
         "excludes":[],
         "policyEntry":"Drive",
         "appendixEntry":[
@@ -123,7 +123,7 @@ var section1 = [
       {
         "type":"checkbox",
         "answerText":"Gmail",
-        "storeAs":"googleArray",
+        "storeAs":"[googleArray]",
         "excludes":[],
         "policyEntry":"Gmail",
         "appendixEntry":[
@@ -136,7 +136,7 @@ var section1 = [
       {
         "type":"checkbox",
         "answerText":"Form",
-        "storeAs":"googleArray",
+        "storeAs":"[googleArray]",
         "excludes":[],
         "policyEntry":"Form",
         "appendixEntry":[
@@ -149,7 +149,7 @@ var section1 = [
       {
         "type":"checkbox",
         "answerText":"Slides",
-        "storeAs":"googleArray",
+        "storeAs":"[googleArray]",
         "excludes":[],
         "policyEntry":"Slides",
         "appendixEntry":[
@@ -162,7 +162,7 @@ var section1 = [
       {
         "type":"checkbox",
         "answerText":"We don't use Google at all",
-        "storeAs":"noGoogle",
+        "storeAs":"[noGoogle]",
         "excludes":[], // review this
         "policyEntry":"",
         "appendixEntry":[
@@ -191,7 +191,7 @@ var section1 = [
       {
         "type":"checkbox",
         "answerText":"Privacy Badger",
-        "storeAs":"textArray",
+        "storeAs":"[textArray]",
         "excludes":[],
         "policyEntry":"Privacy Badger",
         "appendixEntry":[
@@ -204,7 +204,7 @@ var section1 = [
       {
         "type":"checkbox",
         "answerText":"Privacy Possum",
-        "storeAs":"textArray",
+        "storeAs":"[textArray]",
         "excludes":[],
         "policyEntry":"Privacy Possum",
         "appendixEntry":[
@@ -217,7 +217,7 @@ var section1 = [
       {
         "type":"checkbox",
         "answerText":"uBlock Origin",
-        "storeAs":"textArray",
+        "storeAs":"[textArray]",
         "excludes":[],
         "policyEntry":"uBlock Origin",
         "appendixEntry":[
@@ -230,7 +230,7 @@ var section1 = [
       {
         "type":"checkbox",
         "answerText":"HTTPSEverywhere",
-        "storeAs":"textArray",
+        "storeAs":"[textArray]",
         "excludes":[],
         "policyEntry":"HTTPSEverywhere",
         "appendixEntry":[
@@ -243,7 +243,7 @@ var section1 = [
       {
         "type":"checkbox",
         "answerText":"DuckDuckGo",
-        "storeAs":"textArray",
+        "storeAs":"[textArray]",
         "excludes":[],
         "policyEntry":"DuckDuckGo",
         "appendixEntry":[
@@ -256,7 +256,7 @@ var section1 = [
       {
         "type":"checkbox",
         "answerText":"Password Alert",
-        "storeAs":"textArray",
+        "storeAs":"[textArray]",
         "excludes":[],
         "policyEntry":"Password Alert",
         "appendixEntry":[
@@ -286,7 +286,7 @@ var section1 = [
         "type":"text",
         "answerText":"1-1 messaging",
         "placeholder":"e.g. Signal, WhatsApp, Wire, Telegram, Encrypted email, Unencrypted email, SMS, Mattermost, Slack, Matrix",
-        "storeAs":"commsArray",
+        "storeAs":"[commsArray]",
         "excludes":[],
         "policyEntry":"",
         "appendixEntry":[
@@ -300,7 +300,7 @@ var section1 = [
         "type":"text",
         "answerText":"Group chat",
         "placeholder":"e.g. Signal, WhatsApp, Wire, Telegram, SMS, Phone Call, Mattermost, Slack, Matrix",
-        "storeAs":"commsArray",
+        "storeAs":"[commsArray]",
         "excludes":[],
         "policyEntry":"",
         "appendixEntry":[
@@ -314,7 +314,7 @@ var section1 = [
         "type":"text",
         "answerText":"Internal video/audio calls",
         "placeholder":"e.g. Jitsi, Zoom, Signal, WhatsApp, Wire, Telegram, Google Hangouts, Skype, Phone Call, Mattermost, Slack, Matrix",
-        "storeAs":"commsArray",
+        "storeAs":"[commsArray]",
         "excludes":[],
         "policyEntry":"",
         "appendixEntry":[
@@ -328,7 +328,7 @@ var section1 = [
         "type":"text",
         "answerText":"External video/audio calls",
         "placeholder":"e.g. Jitsi, Zoom, Signal, WhatsApp, Wire, Telegram, Google Hangouts, Skype, Phone Call, Mattermost, Slack, Matrix",
-        "storeAs":"commsArray",
+        "storeAs":"[commsArray]",
         "excludes":[],
         "policyEntry":"",
         "appendixEntry":[
@@ -358,7 +358,7 @@ var section1 = [
         "type":"textarea", // check for this before making an input field
         "answerText":"",
         "placeholder":"e.g. - If the email gives you a login link: open a new browser window and sign into the site there without using the link. Emailed links can have subtle changes made to them which redirect users to malicious sites for collecting login details.- If the email asks you to click on a button: check where the button will take you to by hovering over it (on desktop) or using a long press (on mobile) to get a preview of the link at the bottom of the screen. Expand shortened links using a tool like Unshorten.it and watch out for spelling mistakes and other subtle errors in the link’s address, which can be indicative of a potentially harmful link.",
-        "storeAs":"commsAttackTactics",
+        "storeAs":"[commsAttackTactics]",
         "excludes":[],
         "policyEntry":"",
         "appendixEntry":[
@@ -372,7 +372,7 @@ var section1 = [
         "type":"textarea",
         "answerText":"",
         "placeholder":"e.g. - If the sender’s email looks correct: remember that email addresses can be spoofed and using a familiar email address enables a spear phishing attack to be more convincing. - If the email isn’t addressed to you, but to a multiple people: attackers often send messages to large groups in order to ‘catch out’ as many people as possible",
-        "storeAs":"commsAttackTactics",
+        "storeAs":"[commsAttackTactics]",
         "excludes":[],
         "policyEntry":"",
         "appendixEntry":[
@@ -386,7 +386,7 @@ var section1 = [
         "type":"textarea",
         "answerText":"",
         "placeholder":"e.g. - If the email has an unexpected attachment: don’t open the file unless you have contacted the sender through another channel to verify it. If you clicked on a link or opened an unexpected attachment, even from a trusted contact: disconnect from the internet and cease using the device – use a different device to change any passwords you used on that device. Report the attack to [contactName, contactPos, contactEmail, contactPhone] to arrange for your device to be examined.",
-        "storeAs":"commsAttackTactics",
+        "storeAs":"[commsAttackTactics]",
         "excludes":[],
         "policyEntry":"",
         "appendixEntry":[
