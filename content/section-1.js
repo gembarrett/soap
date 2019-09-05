@@ -403,5 +403,5 @@ var section1 = [
       {"implementation":"Changing tools can be tricky as it’s hard to break a habit, but the previously-selected security champion and management can all set an example to rest of the organisation. For instance,they might only accept internal video call invites which use the approved platform and gently redirect staff to update their invite with the new, more appropriate method."},
       {"more": ["how to avoid a phishing attack", "what is spear phishing", "report google phishing email"]}
     ]
-  },
+  }
 ];

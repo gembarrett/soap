@@ -127,5 +127,186 @@ var section2 = [
       {"implementation":"Using work profiles and similar device management processes can be helpful for installing the same app across the organisation. Whichever service is chosen, staff may need assistance with setting up and using the app for the first time."},
       {"more": ["authentication app comparison"]}
     ]
+  },
+  {
+    "isQuestion": true,
+    "id":"q18",
+    "q":"Does your organisation provide a hardware security keys to staff?",
+    "required":true,
+    "policyContent":"",
+    "appendixContent":"",
+    "answers":[
+      {
+        "type":"radio",
+        "answerText":"Yes",
+        "storeAs":"",
+        "excludes":[],
+        "policyEntry":"For hardware authentication, we will provide you with a security key. Should you require any help with using the key, contact [contactName, contactPos].",
+        "appendixEntry":[
+          {
+            "reviewList":"",
+            "tipList": ""
+          }
+        ]
+      },
+      {
+        "type":"radio",
+        "answerText":"No",
+        "storeAs":"",
+        "excludes":[],
+        "policyEntry":"Hardware authentication has a few options for keys and it is up to staff to select and purchase their preferred key if they wish to use one. If you are uncertain of the choices available and their suitability for your work, please contact [contactName, contactPos] to discuss.",
+        "appendixEntry":[
+          {
+            "reviewList":"",
+            "tipList": ""
+          }
+        ]
+      }
+    ],
+    "tips":[
+      {"relevance":""},
+      {"meaning":"Hardware security keys are an alternative to using authentication apps. Rather than generating codes for a user to type in, they are simply plugged into the computer to authenticate with the browser directly. If your organisation is enrolled in the Google Protection Program then Google recommends using Titan keys in its set up process."},
+      {"implementation":"Providing staff with hardware keys helps to ensure consistency across the organisation and makes troubleshooting easier. Alternatively, your organisation can empower staff to choose their own key which will help with buy-in. Either way, watch out for staff leaving the key plugged into their devices when not in use as this poses a risk of damage or loss."},
+      {"more": ["hardware security key comparison"]}
+    ]
+  },
+  {
+    "isQuestion": true,
+    "id":"q19",
+    "q":"Should staff use a specific password manager for work accounts?",
+    "required":true,
+    "policyContent":"Passwords are hard to remember, so [orgName] prefers staff to use a password manager.",
+    "appendixContent":"",
+    "answers":[
+      {
+        "type":"radio",
+        "answerText":"Staff preference",
+        "storeAs":"[passwordPref]",
+        "excludes":[],
+        "policyEntry":"As there are several options available, it is up to you to choose which suits your workflow best. If you’re unsure of the best password manager for your situation, please contact [contactName, contactPos] to discuss.",
+        "appendixEntry":[
+          {
+            "reviewList":"",
+            "tipList": ""
+          }
+        ]
+      },
+      {
+        "type":"radio",
+        "answerText":"LastPass",
+        "storeAs":"[passwordPref]",
+        "excludes":[],
+        "policyEntry":"In particular, we ask you to use [passwordPref] and if you require any help with set up or using this tool then you should discuss it with [contactName, contactPos].",
+        "appendixEntry":[
+          {
+            "reviewList":"",
+            "tipList": ""
+          }
+        ]
+      },
+      {
+        "type":"radio",
+        "answerText":"1Password",
+        "storeAs":"[passwordPref]",
+        "excludes":[],
+        "policyEntry":"In particular, we ask you to use [passwordPref] and if you require any help with set up or using this tool then you should discuss it with [contactName, contactPos].",
+        "appendixEntry":[
+          {
+            "reviewList":"",
+            "tipList": ""
+          }
+        ]
+      },
+      {
+        "type":"radio",
+        "answerText":"KeePass",
+        "storeAs":"[passwordPref]",
+        "excludes":[],
+        "policyEntry":"In particular, we ask you to use [passwordPref] and if you require any help with set up or using this tool then you should discuss it with [contactName, contactPos].",
+        "appendixEntry":[
+          {
+            "reviewList":"",
+            "tipList": ""
+          }
+        ]
+      },
+      {
+        "type":"radio",
+        "answerText":"PasswordSafe",
+        "storeAs":"[passwordPref]",
+        "excludes":[],
+        "policyEntry":"In particular, we ask you to use [passwordPref] and if you require any help with set up or using this tool then you should discuss it with [contactName, contactPos].",
+        "appendixEntry":[
+          {
+            "reviewList":"",
+            "tipList": ""
+          }
+        ]
+      }
+    ],
+    "tips":[
+      {"relevance":""},
+      {"meaning":"Password managers can help staff to keep track of their passwords, with many providing features such as password generation, 2-factor authentication codes, browser extensions and mobile apps alongside the password storage facility. A risk to consider here is the security of these companies you are trusting with important passwords – what would happen if they were hacked? With services that store your passwords locally this may be less of a concern, however those which provide cross-device access to passwords can be more vulnerable to attack."},
+      {"implementation":"Browser extensions and mobile apps being available for many password managers enables staff to always have their passwords to hand, making it easier to integrate with their workflow."},
+      {"more": ["password manager comparison", "risks of password managers"]}
+    ]
+  },
+  {
+    "isQuestion": true,
+    "id":"q20",
+    "q":"Bearing the previous questions in mind, what steps should staff take when faced with a possibly hacked account?Bearing the previous questions in mind, what steps should staff take when faced with a possibly hacked account?",
+    "required":true,
+    "policyContent":"“If you notice suspicious activity in any of your work-related accounts, follow these steps: [hackAttackTactics]",
+    "appendixContent": "Sometimes data breaches are to blame for a hacked account, and so it can be worth checking if the email associated with the account was recently involved in such an incident by visiting Have I Been Pwned or a similar site",
+    "answers":[
+      {
+        "type":"textarea", // check for this before making an input field
+        "answerText":"",
+        "placeholder":"e.g. - if the account is still accessible: change all passwords and review the recent activity, such as posts and log in times.",
+        "storeAs":"[hackAttackTactics]",
+        "excludes":[],
+        "policyEntry":"",
+        "appendixEntry":[
+          {
+            "reviewList":"",
+            "tipList": ""
+          }
+        ]
+      },
+      {
+        "type":"textarea",
+        "answerText":"",
+        "placeholder":"e.g. - if it’s an email account: review the inbox rules and  mail forwarding addresses, removing any that look suspicious.",
+        "storeAs":"[hackAttackTactics]",
+        "excludes":[],
+        "policyEntry":"",
+        "appendixEntry":[
+          {
+            "reviewList":"",
+            "tipList": ""
+          }
+        ]
+      },
+      {
+        "type":"textarea",
+        "answerText":"",
+        "placeholder":"e.g. - if it’s an inaccessible social media account: major social media platforms have dedicated areas in their Help sections which explain how they can help you regain control of a compromised account",
+        "storeAs":"[hackAttackTactics]",
+        "excludes":[],
+        "policyEntry":"",
+        "appendixEntry":[
+          {
+            "reviewList":"",
+            "tipList": ""
+          }
+        ]
+      }
+    ],
+    "tips":[
+      {"relevance":""},
+      {"meaning":"There are various ways an account can be accessed by unauthorised persons, but secure passwords and two-factor authentication can help mitigate this threat. Of course, once a person is in an account they can “lock” the door behind them, at which point it is usually advisable to appeal to the account provider for help to regain control."},
+      {"implementation":""},
+      {"more": ["help compromised account", "incident response hacked account"]}
+    ]
   }
 ]
