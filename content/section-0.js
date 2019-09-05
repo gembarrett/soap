@@ -106,13 +106,13 @@ var section0 = [
     "id":"q3",
     "q":"Who will this policy apply to?",
     "required":true,
-    "policyContent":"This security policy applies to [selected answers]",
+    "policyContent":"This security policy applies to",
     "appendixContent":"",
     "answers":[
       {
         "type":"checkbox",
-        "answerText":"Contractors",
-        "storeAs":"[contractors]",
+        "answerText":"contractors",
+        "storeAs":"[appliesTo]",
         "excludes":[],
         "policyEntry":"",
         "appendixEntry":[
@@ -124,8 +124,8 @@ var section0 = [
       },
       {
         "type":"checkbox",
-        "answerText":"Full or part-time staff",
-        "storeAs":"[staff]",
+        "answerText":"full or part-time staff",
+        "storeAs":"[appliesTo]",
         "excludes":[],
         "policyEntry":"",
         "appendixEntry":[
@@ -137,8 +137,8 @@ var section0 = [
       },
       {
         "type":"checkbox",
-        "answerText":"Volunteers",
-        "storeAs": "[volunteers]",
+        "answerText":"volunteers",
+        "storeAs": "[appliesTo]",
         "excludes":[],
         "policyEntry":"",
         "appendixEntry":[
@@ -446,7 +446,7 @@ var section0 = [
     "id":"q8",
     "q":"How regularly do you intend to review and update this policy?",
     "required":true,
-    "policyContent":"This policy will be reviewed by [contactName, contactPos] on a [reviewFreq] basis. Any suggestions or feedback on the policy’s contents should be directed to them.",
+    "policyContent":"This policy will be reviewed by [contactName] ([contactPos]) on a [reviewFreq] basis. Any suggestions or feedback on the policy’s contents should be directed to them.",
     "appendixContent":"",
     "answers":[
       {

@@ -104,13 +104,10 @@ function replaceTemp(policyArr) {
   // for each entry in the array
   for (var i=0; i<policyArr.length; i++) {
     var newString = policyArr[i];
-    console.log(policyArr[i]);
     // for each of the stored keys
     for (var key in dict) {
       var regexKey = key.replace('[', '\\[').replace(']', '\\]');
       var regex = new RegExp(regexKey, 'gi');
-      console.log(key);
-      console.log(regex);
       // replace any matches and put them in a new string
       newString = newString.replace(regex, dict[key]);
       // add this new string to the array
@@ -247,6 +244,7 @@ function getInput(el, qId) {
     // what about radio buttons?
     if (((inputs[i].type === "checkbox") || (inputs[i].type === "radio")) && (inputs[i].checked)) {
       console.log('found a checked checkbox or radio button');
+
       // split up the input's id to get the number
       var answerID = inputs[i].id.split("-")[1];
       // this could be a good point at which to check for storeAs values
@@ -255,8 +253,16 @@ function getInput(el, qId) {
       const result = currentState.sectionQ.find(question => question.id === tempQId);
       // if there's a storeAs value add it to the dict
       if (result.answers[answerID].storeAs !== "") {
-        // currently this doesn't deal with multiple selections
-        dict[result.answers[answerID].storeAs] = result.answers[answerID].answerText;
+        // if the storeAs value already exists in the dict then
+        if (result.answers[answerID].storeAs in dict) {
+          // copy its current value into a temp array with the new value
+          temp = [dict[result.answers[answerID].storeAs], result.answers[answerID].answerText];
+          // then assign this temp array back to the key, overwriting the old value
+          dict[result.answers[answerID].storeAs] = temp;
+        } else {
+          // add the new key and value
+          dict[result.answers[answerID].storeAs] = result.answers[answerID].answerText;
+        }
       }
         // push the question and answer object to the currentState
         currentState.answers.push({
@@ -274,8 +280,10 @@ function getInput(el, qId) {
         var tempQId = 'q'+qId;
         const result = currentState.sectionQ.find(question => question.id === tempQId);
 
-        // check the value for stored things - do this check better
-        dict[result.answers[answerID].storeAs] = inputs[i].value;
+        if (result.answers[answerID].storeAs !== "") {
+          // check the value for stored things - do this check better
+          dict[result.answers[answerID].storeAs] = inputs[i].value;
+        }
         // push the question and answer and text value object to the currentState
         currentState.answers.push({
           s: currentState.sectionC,

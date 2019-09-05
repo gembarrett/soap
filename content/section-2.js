@@ -73,7 +73,7 @@ var section2 = [
         "answerText":"Google Authenticator",
         "storeAs":"",
         "excludes":[],
-        "policyEntry":"To ensure consistency and help with training and troubleshooting, [orgName] uses Google Authenticator for two-factor authentication where platforms allow it. This app may be installed automatically as part of your mobile work device set up, otherwise you should install it from your platform’s app store, requesting assistance from [contactName, contactPos] when needed",
+        "policyEntry":"To ensure consistency and help with training and troubleshooting, [orgName] uses Google Authenticator for two-factor authentication where platforms allow it. This app may be installed automatically as part of your mobile work device set up, otherwise you should install it from your platform’s app store, requesting assistance from [contactName] ([contactPos]) when needed",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -86,7 +86,7 @@ var section2 = [
         "answerText":"Duo Mobile",
         "storeAs":"",
         "excludes":[],
-        "policyEntry":"To ensure consistency and help with training and troubleshooting, [orgName] uses Duo Mobile for two-factor authentication where platforms allow it. This app may be installed automatically as part of your mobile work device set up, otherwise you should install it from your platform’s app store, requesting assistance from [contactName, contactPos] when needed",
+        "policyEntry":"To ensure consistency and help with training and troubleshooting, [orgName] uses Duo Mobile for two-factor authentication where platforms allow it. This app may be installed automatically as part of your mobile work device set up, otherwise you should install it from your platform’s app store, requesting assistance from [contactName] ([contactPos]) when needed",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -99,7 +99,7 @@ var section2 = [
         "answerText":"Authy",
         "storeAs":"",
         "excludes":[],
-        "policyEntry":"To ensure consistency and help with training and troubleshooting, [orgName] uses Authy for two-factor authentication where platforms allow it. This app may be installed automatically as part of your mobile work device set up, otherwise you should install it from your platform’s app store, requesting assistance from [contactName, contactPos] when needed",
+        "policyEntry":"To ensure consistency and help with training and troubleshooting, [orgName] uses Authy for two-factor authentication where platforms allow it. This app may be installed automatically as part of your mobile work device set up, otherwise you should install it from your platform’s app store, requesting assistance from [contactName] ([contactPos]) when needed",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -112,7 +112,7 @@ var section2 = [
         "answerText":"No preference",
         "storeAs":"",
         "excludes":[],
-        "policyEntry":"While [orgName] requires the use of an authenticator app, we leave it to staff to make their own choice of which one to use. If you are unsure of which is best for your device and workflow, [contactName, contactPos] is available for advice.",
+        "policyEntry":"While [orgName] requires the use of an authenticator app, we leave it to staff to make their own choice of which one to use. If you are unsure of which is best for your device and workflow, [contactName] ([contactPos]) is available for advice.",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -141,7 +141,7 @@ var section2 = [
         "answerText":"Yes",
         "storeAs":"",
         "excludes":[],
-        "policyEntry":"For hardware authentication, we will provide you with a security key. Should you require any help with using the key, contact [contactName, contactPos].",
+        "policyEntry":"For hardware authentication, we will provide you with a security key. Should you require any help with using the key, contact [contactName] ([contactPos]).",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -154,7 +154,7 @@ var section2 = [
         "answerText":"No",
         "storeAs":"",
         "excludes":[],
-        "policyEntry":"Hardware authentication has a few options for keys and it is up to staff to select and purchase their preferred key if they wish to use one. If you are uncertain of the choices available and their suitability for your work, please contact [contactName, contactPos] to discuss.",
+        "policyEntry":"Hardware authentication has a few options for keys and it is up to staff to select and purchase their preferred key if they wish to use one. If you are uncertain of the choices available and their suitability for your work, please contact [contactName] ([contactPos]) to discuss.",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -183,7 +183,7 @@ var section2 = [
         "answerText":"Staff preference",
         "storeAs":"[passwordPref]",
         "excludes":[],
-        "policyEntry":"As there are several options available, it is up to you to choose which suits your workflow best. If you’re unsure of the best password manager for your situation, please contact [contactName, contactPos] to discuss.",
+        "policyEntry":"As there are several options available, it is up to you to choose which suits your workflow best. If you’re unsure of the best password manager for your situation, please contact [contactName] ([contactPos]) to discuss.",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -196,7 +196,7 @@ var section2 = [
         "answerText":"LastPass",
         "storeAs":"[passwordPref]",
         "excludes":[],
-        "policyEntry":"In particular, we ask you to use [passwordPref] and if you require any help with set up or using this tool then you should discuss it with [contactName, contactPos].",
+        "policyEntry":"In particular, we ask you to use [passwordPref] and if you require any help with set up or using this tool then you should discuss it with [contactName] ([contactPos]).",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -209,7 +209,7 @@ var section2 = [
         "answerText":"1Password",
         "storeAs":"[passwordPref]",
         "excludes":[],
-        "policyEntry":"In particular, we ask you to use [passwordPref] and if you require any help with set up or using this tool then you should discuss it with [contactName, contactPos].",
+        "policyEntry":"In particular, we ask you to use [passwordPref] and if you require any help with set up or using this tool then you should discuss it with [contactName] ([contactPos]).",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -222,7 +222,7 @@ var section2 = [
         "answerText":"KeePass",
         "storeAs":"[passwordPref]",
         "excludes":[],
-        "policyEntry":"In particular, we ask you to use [passwordPref] and if you require any help with set up or using this tool then you should discuss it with [contactName, contactPos].",
+        "policyEntry":"In particular, we ask you to use [passwordPref] and if you require any help with set up or using this tool then you should discuss it with [contactName] ([contactPos]).",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -235,7 +235,7 @@ var section2 = [
         "answerText":"PasswordSafe",
         "storeAs":"[passwordPref]",
         "excludes":[],
-        "policyEntry":"In particular, we ask you to use [passwordPref] and if you require any help with set up or using this tool then you should discuss it with [contactName, contactPos].",
+        "policyEntry":"In particular, we ask you to use [passwordPref] and if you require any help with set up or using this tool then you should discuss it with [contactName] ([contactPos]).",
         "appendixEntry":[
           {
             "reviewList":"",
