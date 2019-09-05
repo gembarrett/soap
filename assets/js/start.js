@@ -93,7 +93,6 @@ function compilePolicy() {
         }
       }
     }
-    console.log(tempPolicy);
     // replace all temporary words with values from dict
     // return the compiled policy to injectOverlay or the end of the process
     return replaceTemp(tempPolicy);
@@ -105,14 +104,16 @@ function replaceTemp(policyArr) {
   // for each entry in the array
   for (var i=0; i<policyArr.length; i++) {
     var newString = policyArr[i];
+    console.log(policyArr[i]);
     // for each of the stored keys
     for (var key in dict) {
       var regexKey = key.replace('[', '\\[').replace(']', '\\]');
       var regex = new RegExp(regexKey, 'gi');
+      console.log(key);
+      console.log(regex);
       // replace any matches and put them in a new string
       newString = newString.replace(regex, dict[key]);
       // add this new string to the array
-      console.log(newString);
     }
     editedArray.push(newString);
   }
@@ -150,7 +151,7 @@ function checkForStorage() {
 
 // this is the function that's called when a user submits an answer - could the question ID be passed through?
 function handleSubmit() {
-  console.log('answering - handleSubmit');
+  console.log(currentState.questionQ + ' answering - handleSubmit');
 
   // search for the currently shown element
   var match = document.querySelector('.current');
@@ -184,8 +185,6 @@ function handleSubmit() {
       }
     }
   }
-
-  console.log('answering - toggleQuestions');
 
   // this hides the current question,
   match.classList.remove("current");
@@ -255,8 +254,10 @@ function getInput(el, qId) {
       var tempQId = 'q'+qId;
       const result = currentState.sectionQ.find(question => question.id === tempQId);
       // if there's a storeAs value add it to the dict
-      // currently this doesn't deal with multiple selections
-      dict[result.answers[answerID].storeAs] = result.answers[answerID].answerText;
+      if (result.answers[answerID].storeAs !== "") {
+        // currently this doesn't deal with multiple selections
+        dict[result.answers[answerID].storeAs] = result.answers[answerID].answerText;
+      }
         // push the question and answer object to the currentState
         currentState.answers.push({
           s: currentState.sectionC,
