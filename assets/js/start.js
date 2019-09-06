@@ -83,13 +83,6 @@ function compilePolicy() {
             specific = found.answers[currentState.answers[i].a].policyEntry;
             tempPolicy.push(specific);
           }
-          // // if there's a text entry then get the inputted text
-          // if (currentState.answers[i].t) {
-          //   answer = currentState.answers[i].t;
-          // } else {
-          //   // else get the answer's answerText
-          //   answer = found.answers[currentState.answers[i].a].answerText;
-          // }
         }
       }
     }
@@ -115,34 +108,9 @@ function replaceTemp(policyArr) {
     editedArray.push(newString);
   }
 
-  // // for each of the stored keys
-  // for (var key in dict) {
-  //   // create the regex search
-  //   // new RegExp(\[(orgName\w?)\])
-  //   var regexKey = key.replace('[', '\\[').replace(']', '\\]');
-  //   var regex = new RegExp(regexKey, 'gi');
-  //   console.log(regexKey);
-  //   // for each entry in the array
-  //   for (var i=0; i<policyArr.length; i++) {
-  //     // replace any matches and put them in a new string
-  //     newString = policyArr[i].replace(regex, dict[key]);
-  //     // add this new string to the array - this will cause some duplication!
-  //     editedArray.push(newString);
-  //     console.log(newString);
-  //   }
-  //
-  //   console.log(editedArray);
-  // }
   // join all the edited array entries together into a single string
   editedArray = editedArray.join(" ");
   return editedArray;
-}
-// replace checkValue with this function that takes each answer and, if there's a storeAs value, stores it
-function checkForStorage() {
-  // use the passed answer ref to check for a storeAs value
-  // given this answer reference, find the answer in the content
-  // if the answer has a storeAs value,
-  // store the value in a global variable
 }
 
 
@@ -240,20 +208,34 @@ function getInput(el, qId) {
   }
   // for every input in the form
   for (var i = 0; i < inputs.length; i++) {
-    // if it's a checked checkbox
-    // what about radio buttons?
-    if (((inputs[i].type === "checkbox") || (inputs[i].type === "radio")) && (inputs[i].checked)) {
-      console.log('found a checked checkbox or radio button');
+    // split up the input's id to get the number
+    var answerID = inputs[i].id.split("-")[1];
 
-      // split up the input's id to get the number
-      var answerID = inputs[i].id.split("-")[1];
-      // this could be a good point at which to check for storeAs values
-      // unsplit the question ID
-      var tempQId = 'q'+qId;
-      const result = currentState.sectionQ.find(question => question.id === tempQId);
-      // if there's a storeAs value add it to the dict
+    // unsplit the question ID
+    var tempQId = 'q'+qId;
+    const result = currentState.sectionQ.find(question => question.id === tempQId);
+
+    // if the input is a textbox containing value
+    // does this work with textareas?
+    if (inputs[i].type === "text" && inputs[i].value !== "") {
+      // push the text value object to the currentState
+      currentState.answers.push({
+        s: currentState.sectionC,
+        q: qId,
+        a: answerID,
+        t: inputs[i].value
+      });
+      // store the inputted value in the dictionary
+      dict[result.answers[answerID].storeAs] = inputs[i].value;
+    }
+
+    // if the input is a checked checkbox or selected radio button
+    if (inputs[i].checked) {
+      // if there's a storeAs value
       if (result.answers[answerID].storeAs !== "") {
-        // if the storeAs value already exists in the dict then
+
+        // should this check only be done with non-inputs?
+        // if the storeAs key already exists in the dictionary
         if (result.answers[answerID].storeAs in dict) {
           // copy its current value into a temp array with the new value
           temp = [dict[result.answers[answerID].storeAs], result.answers[answerID].answerText];
@@ -264,37 +246,17 @@ function getInput(el, qId) {
           dict[result.answers[answerID].storeAs] = result.answers[answerID].answerText;
         }
       }
-        // push the question and answer object to the currentState
-        currentState.answers.push({
-          s: currentState.sectionC,
-          q: qId,
-          a: answerID
-        });
-      }
-      // if the input is a textbox containing value
-      else if (inputs[i].type === "text" && inputs[i].value !== "") {
-        console.log('found a textbox');
-        // again get the input's id number - fix this repetition
-        var answerID = inputs[i].id.split("-")[1];
-
-        var tempQId = 'q'+qId;
-        const result = currentState.sectionQ.find(question => question.id === tempQId);
-
-        if (result.answers[answerID].storeAs !== "") {
-          // check the value for stored things - do this check better
-          dict[result.answers[answerID].storeAs] = inputs[i].value;
-        }
-        // push the question and answer and text value object to the currentState
-        currentState.answers.push({
-          s: currentState.sectionC,
-          q: qId,
-          a: answerID,
-          t: inputs[i].value
-        });
-      }
+      // push the question and answer object to the currentState
+      currentState.answers.push({
+        s: currentState.sectionC,
+        q: qId,
+        a: answerID
+      });
     }
+  }
   return currentState.answers;
 }
+
 
 function injectOverlay() {
   console.log('building - injectOverlay');

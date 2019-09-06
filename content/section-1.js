@@ -18,7 +18,7 @@ var section1 = [
         "answerText":"Yes",
         "storeAs":"",
         "excludes":[],
-        "policyEntry":"",
+        "policyEntry":"[orgName] requires staff to use PGP to encrypt sensitive emails. If you need help with setting up, please contact [contactName] ([contactPos])",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -31,7 +31,7 @@ var section1 = [
         "answerText":"Some staff need a key",
         "storeAs":"",
         "excludes":[],
-        "policyEntry":"",
+        "policyEntry":"[orgName] prefers some staff to use PGP to encrypt sensitive emails. You will be informed if this applies to you and offered help with setting up, should you require it.",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -162,7 +162,7 @@ var section1 = [
       {
         "type":"checkbox",
         "answerText":"We don't use Google at all",
-        "storeAs":"[noGoogle]",
+        "storeAs":"",
         "excludes":[], // review this
         "policyEntry":"",
         "appendixEntry":[
@@ -191,7 +191,7 @@ var section1 = [
       {
         "type":"checkbox",
         "answerText":"Privacy Badger",
-        "storeAs":"[textArray]",
+        "storeAs":"[extArray]",
         "excludes":[],
         "policyEntry":"Privacy Badger",
         "appendixEntry":[
@@ -204,7 +204,7 @@ var section1 = [
       {
         "type":"checkbox",
         "answerText":"Privacy Possum",
-        "storeAs":"[textArray]",
+        "storeAs":"[extArray]",
         "excludes":[],
         "policyEntry":"Privacy Possum",
         "appendixEntry":[
@@ -217,7 +217,7 @@ var section1 = [
       {
         "type":"checkbox",
         "answerText":"uBlock Origin",
-        "storeAs":"[textArray]",
+        "storeAs":"[extArray]",
         "excludes":[],
         "policyEntry":"uBlock Origin",
         "appendixEntry":[
@@ -230,7 +230,7 @@ var section1 = [
       {
         "type":"checkbox",
         "answerText":"HTTPSEverywhere",
-        "storeAs":"[textArray]",
+        "storeAs":"[extArray]",
         "excludes":[],
         "policyEntry":"HTTPSEverywhere",
         "appendixEntry":[
@@ -243,7 +243,7 @@ var section1 = [
       {
         "type":"checkbox",
         "answerText":"DuckDuckGo",
-        "storeAs":"[textArray]",
+        "storeAs":"[extArray]",
         "excludes":[],
         "policyEntry":"DuckDuckGo",
         "appendixEntry":[
@@ -256,7 +256,7 @@ var section1 = [
       {
         "type":"checkbox",
         "answerText":"Password Alert",
-        "storeAs":"[textArray]",
+        "storeAs":"[extArray]",
         "excludes":[],
         "policyEntry":"Password Alert",
         "appendixEntry":[
@@ -279,7 +279,7 @@ var section1 = [
     "id":"q13",
     "q":"For each of the following communication types, which tools should staff use when discussing sensitive work topics?",
     "required":true,
-    "policyContent":"",
+    "policyContent":"When ",
     "appendixContent":"",
     "answers":[
       {

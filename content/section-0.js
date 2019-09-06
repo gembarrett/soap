@@ -106,7 +106,7 @@ var section0 = [
     "id":"q3",
     "q":"Who will this policy apply to?",
     "required":true,
-    "policyContent":"This security policy applies to",
+    "policyContent":"This security policy applies to [appliesTo]",
     "appendixContent":"",
     "answers":[
       {
@@ -167,7 +167,7 @@ var section0 = [
       {
         "type":"checkbox",
         "answerText":"Windows",
-        "storeAs": "[windows]",
+        "storeAs": "",
         "excludes":[],
         "policyEntry":"",
         "appendixEntry":[
@@ -180,7 +180,7 @@ var section0 = [
       {
         "type":"checkbox",
         "answerText":"macOS",
-        "storeAs": "[mac]",
+        "storeAs": "",
         "excludes":[],
         "policyEntry":"",
         "appendixEntry":[
@@ -193,7 +193,7 @@ var section0 = [
       {
         "type":"checkbox",
         "answerText":"Linux (any flavour)",
-        "storeAs": "[linux]",
+        "storeAs": "",
         "excludes":[],
         "policyEntry":"",
         "appendixEntry":[
@@ -206,7 +206,7 @@ var section0 = [
       {
         "type":"checkbox",
         "answerText":"Chrome OS",
-        "storeAs": "[chrome]",
+        "storeAs": "",
         "excludes":[],
         "policyEntry":"",
         "appendixEntry":[
@@ -219,7 +219,7 @@ var section0 = [
       {
         "type":"checkbox",
         "answerText":"Android",
-        "storeAs": "[android]",
+        "storeAs": "",
         "excludes":[],
         "policyEntry":"",
         "appendixEntry":[
@@ -232,7 +232,7 @@ var section0 = [
       {
         "type":"checkbox",
         "answerText":"iOS",
-        "storeAs": "[ios]",
+        "storeAs": "",
         "excludes":[],
         "policyEntry":"",
         "appendixEntry":[
@@ -245,7 +245,7 @@ var section0 = [
       {
         "type":"checkbox",
         "answerText":"Blackberry",
-        "storeAs": "[blackberry]",
+        "storeAs": "",
         "excludes":[],
         "policyEntry":"",
         "appendixEntry":[
@@ -258,7 +258,7 @@ var section0 = [
       {
         "type":"checkbox",
         "answerText":"Windows Phone",
-        "storeAs": "[windowsP]",
+        "storeAs": "",
         "excludes":[],
         "policyEntry":"",
         "appendixEntry":[
@@ -287,7 +287,7 @@ var section0 = [
       {
         "type":"checkbox",
         "answerText":"We install work profiles on staff-owned devices (Bring Your Own Device policy)",
-        "storeAs": "[byod]",
+        "storeAs": "",
         "excludes":[],
         "policyEntry":"With your consent, we will install a work profile on your personal devices in order for you to use them in the course of your work. This work profile will keep your work and personal use of the device separated.",
         "appendixEntry":[
@@ -300,7 +300,7 @@ var section0 = [
       {
         "type":"checkbox",
         "answerText":"We install work and personal profiles on organisation-owned devices.",
-        "storeAs": "[profiles]",
+        "storeAs": "",
         "excludes":[],
         "policyEntry":"[orgName] staff are given some freedom to decide their work environment and equipment, and we acknowledge that there may be times when after hours access to work email and data is needed. We will provide you with devices and install both a work and personal profile for you to use.",
         "appendixEntry":[
@@ -313,7 +313,7 @@ var section0 = [
       {
         "type":"checkbox",
         "answerText":"We provide work-only devices.",
-        "storeAs": "[separate]",
+        "storeAs": "",
         "excludes":[],
         "policyEntry":"We will provide you with devices, such as a computer, to use solely for work purposes.",
         "appendixEntry":[
@@ -336,15 +336,15 @@ var section0 = [
     "id":"q6",
     "q":"Does your organisation provide staff with webcam covers or privacy screens for their devices?",
     "required":false,
-    "policyContent":"",
+    "policyContent":"Protecting the devices we use is crucial in preventing unauthorised access to sensitive [orgName] data. To mitigate this, [orgName] will provide you with [providePrivacy] to use on your devices.",
     "appendixContent":"",
     "answers":[
       {
-        "type":"radio",
-        "answerText":"Webcam cover",
-        "storeAs": "[webcam]",
+        "type":"checkbox",
+        "answerText":"webcam cover",
+        "storeAs": "[providePrivacy]",
         "excludes":[],
-        "policyEntry":"Protecting the devices we use is crucial in preventing unauthorised access to sensitive [orgName] data. To mitigate this, [orgName] will provide you with webcam cover(s) to use on your devices.",
+        "policyEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -353,35 +353,9 @@ var section0 = [
         ]
       },
       {
-        "type":"radio",
-        "answerText":"Privacy screen",
-        "storeAs": "[screen]",
-        "excludes":[],
-        "policyEntry":"Protecting the devices we use is crucial in preventing unauthorised access to sensitive [orgName] data. To mitigate this, [orgName] will provide you with privacy screen(s) to use on your devices.",
-        "appendixEntry":[
-          {
-            "reviewList":"",
-            "tipList": ""
-          }
-        ]
-      },
-      {
-        "type":"radio",
-        "answerText":"Both",
-        "storeAs": "[both]",
-        "excludes":[],
-        "policyEntry":"Protecting the devices we use is crucial in preventing unauthorised access to sensitive [orgName] data. To mitigate this, [orgName] will provide you with webcam cover(s) and privacy screen(s) to use on your devices.",
-        "appendixEntry":[
-          {
-            "reviewList":"",
-            "tipList": "A quick temporary alternative to webcam covers can be made from a post-it note or sticky-taped paper over the camera."
-          }
-        ]
-      },
-      {
-        "type":"radio",
-        "answerText":"Neither",
-        "storeAs": "[neither]",
+        "type":"checkbox",
+        "answerText":"privacy screen",
+        "storeAs": "[providePrivacy]",
         "excludes":[],
         "policyEntry":"",
         "appendixEntry":[
@@ -410,22 +384,22 @@ var section0 = [
       {
         "type":"radio",
         "answerText":"Yes",
-        "storeAs": "[onsite]",
-        "excludes":[], // review this
-        "policyEntry":"Protecting the devices we use is crucial in preventing unauthorised access to sensitive [orgName] data. To mitigate this, [orgName] will provide you with webcam cover(s) to use on your devices.",
+        "storeAs": "",
+        "excludes":[],
+        "policyEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": "A quick temporary alternative to webcam covers can be made from a post-it note or sticky-taped paper over the camera."
+            "tipList": ""
           }
         ],
       },
       {
         "type":"radio",
         "answerText":"No - some or all of our staff work remotely.",
-        "storeAs": "[remote]",
+        "storeAs": "",
         "excludes":[],
-        "policyEntry":"Protecting the devices we use is crucial in preventing unauthorised access to sensitive [orgName] data. To mitigate this, [orgName] will provide you with privacy screen(s) to use on your devices.",
+        "policyEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -451,9 +425,9 @@ var section0 = [
     "answers":[
       {
         "type":"radio",
-        "answerText":"Annually",
-        "storeAs": "[annual]",
-        "excludes":[], // review this
+        "answerText":"annually",
+        "storeAs": "[reviewFreq]",
+        "excludes":[],
         "policyEntry":"",
         "appendixEntry":[
           {
@@ -465,7 +439,7 @@ var section0 = [
       {
         "type":"radio",
         "answerText":"6-monthly",
-        "storeAs": "[6mths]",
+        "storeAs": "[reviewFreq]",
         "excludes":[], // review this
         "policyEntry":"",
         "appendixEntry":[
@@ -477,9 +451,9 @@ var section0 = [
       },
       {
         "type":"radio",
-        "answerText":"Quarterly",
-        "storeAs": "[quarter]",
-        "excludes":[], // review this
+        "answerText":"quarterly",
+        "storeAs": "[reviewFreq]",
+        "excludes":[],
         "policyEntry":"",
         "appendixEntry":[
           {
@@ -490,8 +464,8 @@ var section0 = [
       },
       {
         "type":"radio",
-        "answerText":"As threats arise",
-        "storeAs": "[irregular]",
+        "answerText":'"as threats arise"',
+        "storeAs": "[reviewFreq]",
         "excludes":[],
         "policyEntry":"",
         "appendixEntry":[

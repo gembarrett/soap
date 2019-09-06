@@ -374,3 +374,7 @@ progress {
 progress[value="0"] {
   display:none;
 }
+.policyHolder {
+  width:100%;
+  height: 100%;
+}
