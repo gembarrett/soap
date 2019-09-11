@@ -39,7 +39,6 @@ var dict = {};
 
 // delete and replace
 var policyText = [];
-// detect square brackets in the policy text, grab the text that's between them and use it to search the dict, then grab the value held for that key
 
 // delete and replace
 var appendixText = [];
@@ -70,7 +69,6 @@ function compilePolicy() {
         // when it's found, check for policyContent
         if (found) {
           // ring the bell, we got ourselves a winner!
-          // this doesn't seem to be stopping the loop
 
           j === 10;
           // check if there's a general policyContent to grab
@@ -308,4 +306,23 @@ function formatArray(arr, storage) {
     }
     return storage;
   }
+}
+
+// Function to download data to a file
+function download(data, filename, type) {
+    var file = new Blob([data], {type: type});
+    if (window.navigator.msSaveOrOpenBlob) // IE10+
+        window.navigator.msSaveOrOpenBlob(file, filename);
+    else { // Others
+        var a = document.createElement("a"),
+                url = URL.createObjectURL(file);
+        a.href = url;
+        a.download = filename;
+        document.body.appendChild(a);
+        a.click();
+        setTimeout(function() {
+            document.body.removeChild(a);
+            window.URL.revokeObjectURL(url);
+        }, 0);
+    }
 }
