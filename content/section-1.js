@@ -351,14 +351,14 @@ var section1 = [
     "id":"q14",
     "q":"Bearing the previous questions in mind, what steps should staff take if they are faced with a suspicious email?",
     "required":true,
-    "policyContent":"Phishing involves being duped into providing information to parties that you otherwise wouldn’t share, usually through fake account notifications or impersonating a known contact. Unfortunately this kind of attack in common and so it is important to understand the steps we recommend taking to both mitigate and recover from such an attack: [commsAttackTactics]",
+    "policyContent":"Phishing involves being duped into providing information to parties that you otherwise wouldn’t share, usually through fake account notifications or impersonating a known contact. Unfortunately this kind of attack in common and so it is important to understand the steps we recommend taking to both mitigate and recover from such an attack: [inc1Tactics]",
     "appendixContent": "To check whether a link or attachment contains known malware, upload it to VirusTotal; a service owned by Google which reads the file and detects familiar malicious code. It won’t find every attack, only the known ones it’s seen before, but it’s a valuable tool nonetheless.",
     "answers":[
       {
         "type":"textarea", // check for this before making an input field
         "answerText":"",
         "placeholder":"e.g. - If the email gives you a login link: open a new browser window and sign into the site there without using the link. Emailed links can have subtle changes made to them which redirect users to malicious sites for collecting login details.- If the email asks you to click on a button: check where the button will take you to by hovering over it (on desktop) or using a long press (on mobile) to get a preview of the link at the bottom of the screen. Expand shortened links using a tool like Unshorten.it and watch out for spelling mistakes and other subtle errors in the link’s address, which can be indicative of a potentially harmful link.",
-        "storeAs":"[commsAttackTactics]",
+        "storeAs":"[inc1Tactics]",
         "excludes":[],
         "policyEntry":"",
         "appendixEntry":[
@@ -372,7 +372,7 @@ var section1 = [
         "type":"textarea",
         "answerText":"",
         "placeholder":"e.g. - If the sender’s email looks correct: remember that email addresses can be spoofed and using a familiar email address enables a spear phishing attack to be more convincing. - If the email isn’t addressed to you, but to a multiple people: attackers often send messages to large groups in order to ‘catch out’ as many people as possible",
-        "storeAs":"[commsAttackTactics]",
+        "storeAs":"[inc1Tactics]",
         "excludes":[],
         "policyEntry":"",
         "appendixEntry":[
@@ -386,7 +386,7 @@ var section1 = [
         "type":"textarea",
         "answerText":"",
         "placeholder":"e.g. - If the email has an unexpected attachment: don’t open the file unless you have contacted the sender through another channel to verify it. If you clicked on a link or opened an unexpected attachment, even from a trusted contact: disconnect from the internet and cease using the device – use a different device to change any passwords you used on that device. Report the attack to [contactName, contactPos, contactEmail, contactPhone] to arrange for your device to be examined.",
-        "storeAs":"[commsAttackTactics]",
+        "storeAs":"[inc1Tactics]",
         "excludes":[],
         "policyEntry":"",
         "appendixEntry":[

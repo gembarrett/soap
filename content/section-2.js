@@ -30,7 +30,7 @@ var section2 = [
         "type":"radio",
         "answerText":"Two-factor apps or hardware authentication keys",
         "storeAs":"",
-        "excludes":[],
+        "excludes":[], //exclude q17
         "policyEntry":"[orgName] requires staff to use two-factor apps or hardware authentication methods. Please do not use SMS or phone call authentication as they are insecure methods that can be intercepted.",
         "appendixEntry":[
           {
@@ -131,7 +131,7 @@ var section2 = [
   {
     "isQuestion": true,
     "id":"q18",
-    "q":"Does your organisation provide a hardware security keys to staff?",
+    "q":"Does your organisation provide hardware security keys to staff?",
     "required":true,
     "policyContent":"",
     "appendixContent":"",
