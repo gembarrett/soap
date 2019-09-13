@@ -77,7 +77,7 @@ var section0 = [
             "reviewList":"Is [contactName]'s email still [contactEmail]?",
             "tipList": ""
           }
-        ]"")
+        ]
       },
       {
         "type":"text",
@@ -89,7 +89,7 @@ var section0 = [
         "appendixEntry":[
           {
             "reviewList":"Is [contactName]'s phone number still [contactPhone]?",
-            "tipList": """")
+            "tipList": ""
           }
         ]
       }
@@ -140,7 +140,7 @@ var section0 = [
         "answerText":"volunteers",
         "storeAs": "[appliesTo]",
         "excludes":[],
-        "policyEntry":"","")
+        "policyEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -209,7 +209,7 @@ var section0 = [
         "storeAs": "",
         "excludes":[],
         "policyEntry":"",
-        "appendixEntry":["")
+        "appendixEntry":[
           {
             "reviewList":"",
             "tipList": ""
