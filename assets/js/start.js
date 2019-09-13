@@ -42,25 +42,20 @@ var policyText = [];
 
 // delete and replace
 var appendixText = [];
-// replace updatePolicy and policyText with this function that compiles the policy based on what's in the answer storage at that time
+// function that compiles the policy based on what's in the answer storage at that time
 function compilePolicy() {
     // create local policy variable
     var tempPolicy = [];
-    // for each of the answers in currentState
+    // for each of the stored answers
     for (var i = 0; i < currentState.answers.length; i++) {
-      // use the question id to grab the policyContent
+      // grab the question and answer
       qRef = currentState.answers[i].q;
       aRef = currentState.answers[i].a;
+      // set up current question, general content, specific content and answer text storage
       var thisQ = 'q'+qRef;
       var general = "";
       var specific = "";
       var answer = "";
-      prev = i > 0 ? i - 1 : "";
-      // if there's a previous question and it's the same as the current question
-      if ((prev !== "") && (qRef === currentState.answers[prev].q)) {
-        // make a note to skip the policyContent
-        var sameQ = true;
-      }
 
       // check each section for the question with the right id
       for (var j = 0; j < sections.length; j++) {
@@ -72,8 +67,9 @@ function compilePolicy() {
 
           j === 10;
           // check if there's a general policyContent to grab
-          if ((!sameQ) && (found.policyContent !== "")) {
+          if (found.policyContent !== "") {
             general = found.policyContent;
+            console.log(general);
             tempPolicy.push(general);
           }
           // use the answer reference to grab the policyEntry, if it exists
@@ -107,7 +103,7 @@ function replaceTemp(policyArr) {
   }
 
   // join all the edited array entries together into a single string
-  editedArray = editedArray.join(" ");
+  editedArray = editedArray.join("\n");
   return editedArray;
 }
 
@@ -309,7 +305,9 @@ function formatArray(arr, storage) {
 }
 
 // Function to download data to a file
-function download(data, filename, type) {
+function downloadPolicy(type) {
+    var data = policyText;
+    var filename = "policyDoc";
     var file = new Blob([data], {type: type});
     if (window.navigator.msSaveOrOpenBlob) // IE10+
         window.navigator.msSaveOrOpenBlob(file, filename);

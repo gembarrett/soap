@@ -43,7 +43,7 @@ var section0 = [
         "placeholder":"e.g. Alice Smith",
         "storeAs":"[contactName]",
         "excludes":[],
-        "policyEntry":"<br />If you have questions about this policy, please contact [contactName]",
+        "policyEntry":"If you have questions about this policy, please contact [contactName]",
         "appendixEntry":[
           {
             "reviewList":"Is [contactName] succeeding in supporting staff implementation of the policy? Are they happy to continue as security champion?",
@@ -53,7 +53,7 @@ var section0 = [
       },
       {
         "type":"text",
-        "answerText":"Job title",
+        "answerText":"Job title or department",
         "placeholder":"e.g. Security Officer",
         "storeAs":"[contactPos]",
         "excludes":[],
@@ -77,7 +77,7 @@ var section0 = [
             "reviewList":"Is [contactName]'s email still [contactEmail]?",
             "tipList": ""
           }
-        ]
+        ]"")
       },
       {
         "type":"text",
@@ -89,7 +89,7 @@ var section0 = [
         "appendixEntry":[
           {
             "reviewList":"Is [contactName]'s phone number still [contactPhone]?",
-            "tipList": ""
+            "tipList": """")
           }
         ]
       }
@@ -140,7 +140,7 @@ var section0 = [
         "answerText":"volunteers",
         "storeAs": "[appliesTo]",
         "excludes":[],
-        "policyEntry":"",
+        "policyEntry":"","")
         "appendixEntry":[
           {
             "reviewList":"",
@@ -209,7 +209,7 @@ var section0 = [
         "storeAs": "",
         "excludes":[],
         "policyEntry":"",
-        "appendixEntry":[
+        "appendixEntry":["")
           {
             "reviewList":"",
             "tipList": ""

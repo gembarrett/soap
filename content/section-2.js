@@ -254,7 +254,7 @@ var section2 = [
   {
     "isQuestion": true,
     "id":"q20",
-    "q":"Bearing the previous questions in mind, what steps should staff take when faced with a possibly hacked account?Bearing the previous questions in mind, what steps should staff take when faced with a possibly hacked account?",
+    "q":"Bearing the previous questions in mind, what steps should staff take when faced with a possibly hacked account?",
     "required":true,
     "policyContent":"If you notice suspicious activity in any of your work-related accounts, follow these steps: [hackAttackTactics]",
     "appendixContent": "Sometimes data breaches are to blame for a hacked account, and so it can be worth checking if the email associated with the account was recently involved in such an incident by visiting Have I Been Pwned or a similar site",
