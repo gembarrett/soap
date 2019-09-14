@@ -185,13 +185,6 @@ function getInput(el, qId) {
   return currentState.answers;
 }
 
-// I don't think this function is in use
-// function activePage(pg) {
-//   document.getElementById('co').classList.add('active');
-//   document.getElementById('bu').classList.remove('active');
-//   document.getElementById('bg').classList.remove('active');
-// }
-
 // function to add formatting to array
 function formatArray(arr, storage) {
   if (Array.isArray([arr])) {
