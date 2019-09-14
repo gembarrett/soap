@@ -36,76 +36,10 @@ var currentState = {
 // for storing the storeAs names and values
 var dict = {};
 
-
 // delete and replace
 var policyText = [];
-
 // delete and replace
 var appendixText = [];
-// function that compiles the policy based on what's in the answer storage at that time
-function compilePolicy() {
-    // create local policy variable
-    var tempPolicy = [];
-    // for each of the stored answers
-    for (var i = 0; i < currentState.answers.length; i++) {
-      // grab the question and answer
-      qRef = currentState.answers[i].q;
-      aRef = currentState.answers[i].a;
-      // set up current question, general content, specific content and answer text storage
-      var thisQ = 'q'+qRef;
-      var general = "";
-      var specific = "";
-      var answer = "";
-
-      // check each section for the question with the right id
-      for (var j = 0; j < sections.length; j++) {
-        // search for question with correct id
-        var found = sections[j].find(ans => ans.id === thisQ);
-        // when it's found, check for policyContent
-        if (found) {
-          // ring the bell, we got ourselves a winner!
-
-          j === 10;
-          // check if there's a general policyContent to grab
-          if (found.policyContent !== "") {
-            general = found.policyContent;
-            console.log(general);
-            tempPolicy.push(general);
-          }
-          // use the answer reference to grab the policyEntry, if it exists
-          if (found.answers[currentState.answers[i].a].policyEntry) {
-            specific = found.answers[currentState.answers[i].a].policyEntry;
-            tempPolicy.push(specific);
-          }
-        }
-      }
-    }
-    // replace all temporary words with values from dict
-    // return the compiled policy to injectOverlay or the end of the process
-    return replaceTemp(tempPolicy);
-    // is injectOverlay the best place to return it if that's for a onetime injection of html?
-}
-
-function replaceTemp(policyArr) {
-  var editedArray = [];
-  // for each entry in the array
-  for (var i=0; i<policyArr.length; i++) {
-    var newString = policyArr[i];
-    // for each of the stored keys
-    for (var key in dict) {
-      var regexKey = key.replace('[', '\\[').replace(']', '\\]');
-      var regex = new RegExp(regexKey, 'gi');
-      // replace any matches and put them in a new string
-      newString = newString.replace(regex, dict[key]);
-      // add this new string to the array
-    }
-    editedArray.push(newString);
-  }
-
-  // join all the edited array entries together into a single string
-  editedArray = editedArray.join("\n");
-  return editedArray;
-}
 
 
 // this is the function that's called when a user submits an answer - could the question ID be passed through?
@@ -251,50 +185,14 @@ function getInput(el, qId) {
   return currentState.answers;
 }
 
+// I don't think this function is in use
+// function activePage(pg) {
+//   document.getElementById('co').classList.add('active');
+//   document.getElementById('bu').classList.remove('active');
+//   document.getElementById('bg').classList.remove('active');
+// }
 
-function injectOverlay() {
-  console.log('building - injectOverlay');
-  var parent = document.querySelector("#page");
-  parent.insertAdjacentHTML('afterend', '<div id="preview" class="modal closed"><button id="closePreview">X</button><div id="inner" class="modalScrollbox"><h3>Policy Preview</h3></div></div><div id="overlay" class="modalOverlay closed"></div>');
-  var modal = document.querySelector("#preview");
-  var scrollbox = document.querySelector("#inner");
-  var overlay = document.querySelector("#overlay");
-  var close = document.querySelector("#closePreview");
-  var open = document.querySelector("#previewPolicy");
-  // TODO: make the repeated lines a function
-  close.addEventListener("click", function() {
-    togglePreview(modal, overlay);
-  });
-  overlay.addEventListener("click", function() {
-    togglePreview(modal, overlay);
-  });
-
-  open.addEventListener("click", function() {
-    policyText = compilePolicy();
-    scrollbox.innerHTML = policyText;
-    togglePreview(modal, overlay);
-  });
-}
-
-function toggleInfo(id) {
-  el = ".panel-"+id;
-  panel = document.querySelector(el);
-  panel.classList.toggle("closed");
-  query = '#info-trigger-'+id;
-  document.querySelector(query).classList.toggle("highlight");
-}
-
-function togglePreview(m, o) {
-  m.classList.toggle("closed");
-  o.classList.toggle("closed");
-}
-
-function activePage(pg) {
-  document.getElementById('co').classList.add('active');
-  document.getElementById('bu').classList.remove('active');
-  document.getElementById('bg').classList.remove('active');
-}
-
+// function to add formatting to array
 function formatArray(arr, storage) {
   if (Array.isArray([arr])) {
     for (var i=0; i<arr.length; i++) {
@@ -302,25 +200,4 @@ function formatArray(arr, storage) {
     }
     return storage;
   }
-}
-
-// Function to download data to a file
-function downloadPolicy(type) {
-    var data = policyText;
-    var filename = "policyDoc";
-    var file = new Blob([data], {type: type});
-    if (window.navigator.msSaveOrOpenBlob) // IE10+
-        window.navigator.msSaveOrOpenBlob(file, filename);
-    else { // Others
-        var a = document.createElement("a"),
-                url = URL.createObjectURL(file);
-        a.href = url;
-        a.download = filename;
-        document.body.appendChild(a);
-        a.click();
-        setTimeout(function() {
-            document.body.removeChild(a);
-            window.URL.revokeObjectURL(url);
-        }, 0);
-    }
 }
