@@ -4,6 +4,8 @@
 function compilePolicy() {
     // create local policy variable
     var tempPolicy = [];
+    // initialise prevQ
+    var prevQ = currentState.answers[0].q;
     // for each of the stored answers
     for (var i = 0; i < currentState.answers.length; i++) {
       // grab the question and answer
@@ -11,37 +13,37 @@ function compilePolicy() {
       aRef = currentState.answers[i].a;
       // set up current question, general content, specific content and answer text storage
       var thisQ = 'q'+qRef;
-      var general = "";
+      var general = ""; // does this have to be created here?
       var specific = "";
       var answer = "";
-
+      console.log(prevQ, qRef, aRef);
       // check each section for the question with the right id
       for (var j = 0; j < sections.length; j++) {
+
         // search for question with correct id
         var found = sections[j].find(ans => ans.id === thisQ);
         // when it's found, check for policyContent
         if (found) {
           // ring the bell, we got ourselves a winner!
 
-          j === 10;
-          // check if there's a general policyContent to grab
-          if (found.policyContent !== "") {
+          // if this question number is not the same as the prevQ
+          if (qRef != prevQ) {
+            // if general hasn't already been created then create and grab general policy content
             general = found.policyContent;
-            console.log(general);
             tempPolicy.push(general);
           }
-          // use the answer referencpolicyTexte to grab the policyEntry, if it exists
+          // use the answer to grab the policyEntry, if it exists
           if (found.answers[currentState.answers[i].a].policyEntry) {
             specific = found.answers[currentState.answers[i].a].policyEntry;
             tempPolicy.push(specific);
           }
         }
       }
+      // store this question's ID for comparison in the next loop
+      prevQ = qRef;
     }
     // replace all temporary words with values from dict
-    // return the compiled policy to injectOverlay or the end of the process
     return replaceTemp(tempPolicy);
-    // is injectOverlay the best place to return it if that's for a onetime injection of html?
 }
 
 // function to replace placeholder text in policy
