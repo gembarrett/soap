@@ -23,7 +23,7 @@ var section0 = [
         "appendixEntry":""
       }
     ],
-    "tips":[ // hide the ? info button if these are all empty
+    "tips":[
       {"relevance":""},
       {"meaning":"Your organisation’s name will be used in the policy to make the ownership of it clear. If you would prefer not to give a name, you can instead use an alias name to find and replace later if you wish."},
       {"implementation":""},
@@ -71,7 +71,7 @@ var section0 = [
         "placeholder": "e.g. example@organisation.com",
         "storeAs":"[contactEmail]",
         "excludes":[],
-        "policyEntry":"They can be contacted by email at [contactEmail].",
+        "policyEntry":"Email: [contactEmail]",
         "appendixEntry":[
           {
             "reviewList":"Is [contactName]'s email still [contactEmail]?",
@@ -85,7 +85,7 @@ var section0 = [
         "placeholder": "e.g. +1 (234) 567-890",
         "storeAs":"[contactPhone]",
         "excludes":[],
-        "policyEntry":"They can be contacted by telephone on [contactPhone].",
+        "policyEntry":"Phone: [contactPhone]",
         "appendixEntry":[
           {
             "reviewList":"Is [contactName]'s phone number still [contactPhone]?",

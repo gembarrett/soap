@@ -378,3 +378,7 @@ progress[value="0"] {
   width:100%%;
   height: 75%;
 }
+small a {
+  color:inherit;
+  text-decoration: underline;
+}
