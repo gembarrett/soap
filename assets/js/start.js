@@ -170,7 +170,7 @@ function getInput(el, qId) {
 
     // unsplit the question ID
     var tempQId = 'q'+qId;
-    const result = currentState.sectionQ.find(question => question.id === tempQId);
+    var result = currentState.sectionQ.find(question => question.id === tempQId);
 
     // if the input is a textbox containing value
     if (inputs[i].type === "text" && inputs[i].value !== "") {
@@ -189,9 +189,8 @@ function getInput(el, qId) {
     if (inputs[i].checked) {
       // if there's a storeAs value
       if (result.answers[answerID].storeAs !== "") {
-
         // should this check only be done with non-inputs?
-        // if the storeAs key already exists in the dictionary
+        // if the storeAs key already exists in the dictionary because it's a continuation of a list
         if (result.answers[answerID].storeAs in dict) {
           // copy its current value into a temp array with the new value
           temp = [dict[result.answers[answerID].storeAs], result.answers[answerID].answerText];
@@ -210,6 +209,8 @@ function getInput(el, qId) {
       });
     }
   }
+  // TODO: fix the nesting that's occurring in dict and duplicating the content
+  console.log(dict);
   return currentState.answers;
 }
 
