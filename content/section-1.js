@@ -357,35 +357,7 @@ var section1 = [
       {
         "type":"textarea", // check for this before making an input field
         "answerText":"",
-        "placeholder":"e.g. - If the email gives you a login link: open a new browser window and sign into the site there without using the link. Emailed links can have subtle changes made to them which redirect users to malicious sites for collecting login details.- If the email asks you to click on a button: check where the button will take you to by hovering over it (on desktop) or using a long press (on mobile) to get a preview of the link at the bottom of the screen. Expand shortened links using a tool like Unshorten.it and watch out for spelling mistakes and other subtle errors in the link’s address, which can be indicative of a potentially harmful link.",
-        "storeAs":"[inc1Tactics]",
-        "excludes":[],
-        "policyEntry":"",
-        "appendixEntry":[
-          {
-            "reviewList":"",
-            "tipList": ""
-          }
-        ]
-      },
-      {
-        "type":"textarea",
-        "answerText":"",
-        "placeholder":"e.g. - If the sender’s email looks correct: remember that email addresses can be spoofed and using a familiar email address enables a spear phishing attack to be more convincing. - If the email isn’t addressed to you, but to a multiple people: attackers often send messages to large groups in order to ‘catch out’ as many people as possible",
-        "storeAs":"[inc1Tactics]",
-        "excludes":[],
-        "policyEntry":"",
-        "appendixEntry":[
-          {
-            "reviewList":"",
-            "tipList": ""
-          }
-        ]
-      },
-      {
-        "type":"textarea",
-        "answerText":"",
-        "placeholder":"e.g. - If the email has an unexpected attachment: don’t open the file unless you have contacted the sender through another channel to verify it. If you clicked on a link or opened an unexpected attachment, even from a trusted contact: disconnect from the internet and cease using the device – use a different device to change any passwords you used on that device. Report the attack to [contactName, contactPos, contactEmail, contactPhone] to arrange for your device to be examined.",
+        "placeholder":"Here's a few examples: \n\nIf the email gives you a login link: open a new browser window and sign into the site there without using the link. Emailed links can have subtle changes made to them which redirect users to malicious sites for collecting login details. \n\nIf the email isn’t addressed to you, but to multiple people: attackers often send messages to large groups in order to ‘catch out’ as many people as possible \n\nIf the email has an unexpected attachment: don’t open the file unless you have contacted the sender through another channel to verify it. If you clicked on a link or opened an unexpected attachment, even from a trusted contact: disconnect from the internet and cease using the device – use a different device to change any passwords you used on that device.",
         "storeAs":"[inc1Tactics]",
         "excludes":[],
         "policyEntry":"",

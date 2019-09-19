@@ -256,42 +256,14 @@ var section2 = [
     "id":"q20",
     "q":"Bearing the previous questions in mind, what steps should staff take when faced with a possibly hacked account?",
     "required":true,
-    "policyContent":"If you notice suspicious activity in any of your work-related accounts, follow these steps: [hackAttackTactics]",
+    "policyContent":"If you notice suspicious activity in any of your work-related accounts, follow these steps: [inc2Tactics]",
     "appendixContent": "Sometimes data breaches are to blame for a hacked account, and so it can be worth checking if the email associated with the account was recently involved in such an incident by visiting Have I Been Pwned or a similar site",
     "answers":[
       {
         "type":"textarea", // check for this before making an input field
         "answerText":"",
-        "placeholder":"e.g. - if the account is still accessible: change all passwords and review the recent activity, such as posts and log in times.",
-        "storeAs":"[hackAttackTactics]",
-        "excludes":[],
-        "policyEntry":"",
-        "appendixEntry":[
-          {
-            "reviewList":"",
-            "tipList": ""
-          }
-        ]
-      },
-      {
-        "type":"textarea",
-        "answerText":"",
-        "placeholder":"e.g. - if it’s an email account: review the inbox rules and  mail forwarding addresses, removing any that look suspicious.",
-        "storeAs":"[hackAttackTactics]",
-        "excludes":[],
-        "policyEntry":"",
-        "appendixEntry":[
-          {
-            "reviewList":"",
-            "tipList": ""
-          }
-        ]
-      },
-      {
-        "type":"textarea",
-        "answerText":"",
-        "placeholder":"e.g. - if it’s an inaccessible social media account: major social media platforms have dedicated areas in their Help sections which explain how they can help you regain control of a compromised account",
-        "storeAs":"[hackAttackTactics]",
+        "placeholder":"Here's a few examples: \n\nIf the account is still accessible: change all passwords and review the recent activity, such as posts and log in times. \n\nIf it’s an email account: review the inbox rules and mail forwarding addresses, removing any that look suspicious. \n\nIf it’s an inaccessible social media account: major social media platforms have dedicated areas in their Help sections which explain how they can help you regain control of a compromised account",
+        "storeAs":"[inc2Tactics]",
         "excludes":[],
         "policyEntry":"",
         "appendixEntry":[

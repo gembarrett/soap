@@ -130,32 +130,29 @@ function handleSubmit() {
 
 function getInput(el, qId) {
   console.log('answering - getInput');
-  // search el for inputs or textboxes
-  if (el.getElementsByTagName('input') || el.getElementsByTagName('textarea')) {
-    var inputs = el.getElementsByTagName('input');
-    var textareas = el.getElementsByTagName('textarea');
-  }
+  // search el for inputs or textboxes.
+  var inputs = el.getElementsByTagName('input');
+  var textareas = el.getElementsByTagName('textarea');
 
-  // if there is a textbox containing values
-  for (var j = 0; j < textareas.length; j++) {
+  // TODO: fix this duplication
+  // if there's a textarea containing text
+  if ((textareas.length > 0) && (textareas[0] !== "")) {
     // split up the input's id to get the number
-    var answerID = textareas[j].id.split("-")[1];
+    var answerID = textareas[0].id.split("-")[1];
 
     // unsplit the question ID
     var tempQId = 'q'+qId;
     const result = currentState.sectionQ.find(question => question.id === tempQId);
 
-    if (textareas[j].value !== "") {
-      // push the text value object to the currentState
-      currentState.answers.push({
-        s: currentState.sectionC,
-        q: qId,
-        a: answerID,
-        t: textareas[j].value
-      });
-      // store the inputted value in the dictionary
-      dict[result.answers[answerID].storeAs] = textareas[j].value;
-    }
+    // push the text value object to the currentState
+    currentState.answers.push({
+      s: currentState.sectionC,
+      q: qId,
+      a: answerID,
+      t: textareas[0].value
+    });
+    // store the inputted value in the dictionary
+    dict[result.answers[answerID].storeAs] = textareas[0].value;
   }
 
   // for every input in the form
