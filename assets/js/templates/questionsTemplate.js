@@ -44,8 +44,7 @@ templates.questionsTemplate = function(data){
            content += '<div class="form-el">';
            // if there's a textarea
            if (question.answers[j].type === 'textarea') {
-             // should the area size be specified?
-             content += '<textarea ' +thisID+thisName+thisPlaceholder+ '></textarea>'
+             content += '<textarea ' +thisID+thisName+thisPlaceholder+ ' class="incidentBox"></textarea>';
            }
 
            // if there's a textbox

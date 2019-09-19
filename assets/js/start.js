@@ -130,10 +130,34 @@ function handleSubmit() {
 
 function getInput(el, qId) {
   console.log('answering - getInput');
-  // search el for inputs
-  if (el.getElementsByTagName('input')) {
+  // search el for inputs or textboxes
+  if (el.getElementsByTagName('input') || el.getElementsByTagName('textarea')) {
     var inputs = el.getElementsByTagName('input');
+    var textareas = el.getElementsByTagName('textarea');
   }
+
+  // if there is a textbox containing values
+  for (var j = 0; j < textareas.length; j++) {
+    // split up the input's id to get the number
+    var answerID = textareas[j].id.split("-")[1];
+
+    // unsplit the question ID
+    var tempQId = 'q'+qId;
+    const result = currentState.sectionQ.find(question => question.id === tempQId);
+
+    if (textareas[j].value !== "") {
+      // push the text value object to the currentState
+      currentState.answers.push({
+        s: currentState.sectionC,
+        q: qId,
+        a: answerID,
+        t: textareas[j].value
+      });
+      // store the inputted value in the dictionary
+      dict[result.answers[answerID].storeAs] = textareas[j].value;
+    }
+  }
+
   // for every input in the form
   for (var i = 0; i < inputs.length; i++) {
     // split up the input's id to get the number
@@ -144,7 +168,6 @@ function getInput(el, qId) {
     const result = currentState.sectionQ.find(question => question.id === tempQId);
 
     // if the input is a textbox containing value
-    // does this work with textareas?
     if (inputs[i].type === "text" && inputs[i].value !== "") {
       // push the text value object to the currentState
       currentState.answers.push({
@@ -182,6 +205,7 @@ function getInput(el, qId) {
       });
     }
   }
+  console.log(currentState.answers);
   return currentState.answers;
 }
 

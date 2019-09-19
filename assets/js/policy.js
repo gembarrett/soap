@@ -16,7 +16,6 @@ function compilePolicy() {
       var general = ""; // does this have to be created here?
       var specific = "";
       var answer = "";
-      console.log(prevQ, qRef, aRef);
       // check each section for the question with the right id
       for (var j = 0; j < sections.length; j++) {
 

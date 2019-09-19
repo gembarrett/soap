@@ -1,6 +1,5 @@
 templates.policyTemplate = function(data){
   policyText = compilePolicy();
-  console.log('your policy is' + policyText);
   // TODO: refactor this
   txt = '<button onclick="downloadPolicy(\'text/plain\')">Text file</button>';
   md = '<button onclick="downloadPolicy(\'text/markdown\')">Markdown file</button>';
