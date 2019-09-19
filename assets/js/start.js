@@ -122,9 +122,17 @@ function handleSubmit() {
   }
   // if we're out of sections then show the policy
   else {
-    var policyContainer = templates.policyTemplate();
-    console.log('end of process!');
-    utils.render('page', policyContainer);
+    // if there are answers
+    if (currentState.answers.length > 0) {
+      var policyContainer = templates.policyTemplate();
+      utils.render('page', policyContainer);
+    } else {
+      if (window.confirm("Oh no! It seems you haven't answered enough questions to build a policy. Start again?")) {
+        location.reload(false);
+      } else {
+        window.location.href = "/";
+      }
+    }
   }
 }
 
@@ -136,7 +144,7 @@ function getInput(el, qId) {
 
   // TODO: fix this duplication
   // if there's a textarea containing text
-  if ((textareas.length > 0) && (textareas[0] !== "")) {
+  if ((textareas.length > 0) && (textareas[0].value.length > 0)) {
     // split up the input's id to get the number
     var answerID = textareas[0].id.split("-")[1];
 
@@ -202,7 +210,6 @@ function getInput(el, qId) {
       });
     }
   }
-  console.log(currentState.answers);
   return currentState.answers;
 }
 
