@@ -174,6 +174,11 @@ function getInput(el, qId) {
 
     // if the input is a textbox containing value
     if (inputs[i].type === "text" && inputs[i].value !== "") {
+      // if there's a storeAs value
+      if (result.answers[answerID].storeAs !== "") {
+        addToDictionary(result.answers[answerID].storeAs, inputs[i].value);
+      }
+
       // push the text value object to the currentState
       currentState.answers.push({
         s: currentState.sectionC,
@@ -181,37 +186,13 @@ function getInput(el, qId) {
         a: answerID,
         t: inputs[i].value
       });
-      // store the inputted value in the dictionary
-      dict[result.answers[answerID].storeAs] = inputs[i].value;
     }
 
     // if the input is a checked checkbox or selected radio button
     if (inputs[i].checked) {
       // if there's a storeAs value
       if (result.answers[answerID].storeAs !== "") {
-        // should this check only be done with non-inputs?
-        // if the storeAs key already exists in the dictionary because it's a continuation of a list
-        console.log(result.answers[answerID].storeAs in dict);
-        if (result.answers[answerID].storeAs in dict) {
-          // copy its current value into a temp array with the new value
-          // this is where the nesting occurs
-          // if it's already an array, just push
-          if (Array.isArray(dict[result.answers[answerID].storeAs])){
-            console.log("is array!");
-            dict[result.answers[answerID].storeAs].push(result.answers[answerID].answerText);
-            console.log(dict);
-          } else {
-            console.log("not array!");
-            // if not then add values to create an array
-            temp = [dict[result.answers[answerID].storeAs],result.answers[answerID].answerText];
-            // then assign this temp array back to the key, overwriting the old value
-            dict[result.answers[answerID].storeAs] = temp;
-          }
-          console.log(dict);
-        } else {
-          // add the new key and value
-          dict[result.answers[answerID].storeAs] = result.answers[answerID].answerText;
-        }
+        addToDictionary(result.answers[answerID].storeAs, result.answers[answerID].answerText);
       }
       // push the question and answer object to the currentState
       currentState.answers.push({
@@ -221,9 +202,26 @@ function getInput(el, qId) {
       });
     }
   }
-  // TODO: fix the nesting that's occurring in dict and duplicating the content
-  console.log(dict);
   return currentState.answers;
+}
+
+function addToDictionary(storeAs, answerText) {
+  // if the storeAs key already exists in the dictionary because it's a continuation of a list
+  if (storeAs in dict) {
+    // copy its current value into a temp array with the new value
+    // if it's already an array, just push
+    if (Array.isArray(dict[storeAs])){ // checks if array - broken?
+      dict[storeAs].push(answerText);
+    } else {
+      // if not then add values to create an array
+      temp = [dict[storeAs], answerText];
+      // then assign this temp array back to the key, overwriting the old value
+      dict[storeAs] = temp;
+    }
+  } else {
+    // add the new key and value
+    dict[storeAs] = answerText;
+  }
 }
 
 // function to add formatting to array
