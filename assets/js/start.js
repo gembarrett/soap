@@ -191,11 +191,23 @@ function getInput(el, qId) {
       if (result.answers[answerID].storeAs !== "") {
         // should this check only be done with non-inputs?
         // if the storeAs key already exists in the dictionary because it's a continuation of a list
+        console.log(result.answers[answerID].storeAs in dict);
         if (result.answers[answerID].storeAs in dict) {
           // copy its current value into a temp array with the new value
-          temp = [dict[result.answers[answerID].storeAs], result.answers[answerID].answerText];
-          // then assign this temp array back to the key, overwriting the old value
-          dict[result.answers[answerID].storeAs] = temp;
+          // this is where the nesting occurs
+          // if it's already an array, just push
+          if (Array.isArray(dict[result.answers[answerID].storeAs])){
+            console.log("is array!");
+            dict[result.answers[answerID].storeAs].push(result.answers[answerID].answerText);
+            console.log(dict);
+          } else {
+            console.log("not array!");
+            // if not then add values to create an array
+            temp = [dict[result.answers[answerID].storeAs],result.answers[answerID].answerText];
+            // then assign this temp array back to the key, overwriting the old value
+            dict[result.answers[answerID].storeAs] = temp;
+          }
+          console.log(dict);
         } else {
           // add the new key and value
           dict[result.answers[answerID].storeAs] = result.answers[answerID].answerText;
