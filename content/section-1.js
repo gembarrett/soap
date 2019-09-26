@@ -73,7 +73,7 @@ var section1 = [
         "answerText":"G Suite",
         "storeAs":"[googleArray]",
         "excludes":[],
-        "policyEntry":"G Suite",
+        "policyEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -86,7 +86,7 @@ var section1 = [
         "answerText":"Hangouts",
         "storeAs":"[googleArray]",
         "excludes":[],
-        "policyEntry":"Hangouts",
+        "policyEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -99,7 +99,7 @@ var section1 = [
         "answerText":"Sheets",
         "storeAs":"[googleArray]",
         "excludes":[],
-        "policyEntry":"Sheets",
+        "policyEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -112,7 +112,7 @@ var section1 = [
         "answerText":"Drive",
         "storeAs":"[googleArray]",
         "excludes":[],
-        "policyEntry":"Drive",
+        "policyEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -125,7 +125,7 @@ var section1 = [
         "answerText":"Gmail",
         "storeAs":"[googleArray]",
         "excludes":[],
-        "policyEntry":"Gmail",
+        "policyEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -138,7 +138,7 @@ var section1 = [
         "answerText":"Form",
         "storeAs":"[googleArray]",
         "excludes":[],
-        "policyEntry":"Form",
+        "policyEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -151,7 +151,7 @@ var section1 = [
         "answerText":"Slides",
         "storeAs":"[googleArray]",
         "excludes":[],
-        "policyEntry":"Slides",
+        "policyEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -193,7 +193,7 @@ var section1 = [
         "answerText":"Privacy Badger",
         "storeAs":"[extArray]",
         "excludes":[],
-        "policyEntry":"Privacy Badger",
+        "policyEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -206,7 +206,7 @@ var section1 = [
         "answerText":"Privacy Possum",
         "storeAs":"[extArray]",
         "excludes":[],
-        "policyEntry":"Privacy Possum",
+        "policyEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -219,7 +219,7 @@ var section1 = [
         "answerText":"uBlock Origin",
         "storeAs":"[extArray]",
         "excludes":[],
-        "policyEntry":"uBlock Origin",
+        "policyEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -232,7 +232,7 @@ var section1 = [
         "answerText":"HTTPSEverywhere",
         "storeAs":"[extArray]",
         "excludes":[],
-        "policyEntry":"HTTPSEverywhere",
+        "policyEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -245,7 +245,7 @@ var section1 = [
         "answerText":"DuckDuckGo",
         "storeAs":"[extArray]",
         "excludes":[],
-        "policyEntry":"DuckDuckGo",
+        "policyEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -258,7 +258,7 @@ var section1 = [
         "answerText":"Password Alert",
         "storeAs":"[extArray]",
         "excludes":[],
-        "policyEntry":"Password Alert",
+        "policyEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
