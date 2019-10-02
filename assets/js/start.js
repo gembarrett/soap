@@ -41,6 +41,30 @@ var policyText = [];
 // delete and replace
 var appendixText = [];
 
+function moveForward(id) {
+  // increase the question id number
+  id++;
+  currentState.questionQ = 'q' + id;
+
+  // increase position in the array
+  currentState.questionP++;
+
+  var el = document.querySelector('progress');
+  el.value++;
+
+}
+
+// make this a loop to check for consecutive exclusions
+function checkForExclusions(id) {
+  console.log(currentState.exclusions);
+  // if there are exclusions and the next question is one of them
+  if (currentState.exclusions.length > 0 && currentState.exclusions.indexOf(parseInt(id)) > -1) {
+    console.log("Skipping question " + id);
+    moveForward();
+    console.log(id);
+  }
+}
+
 
 // this is the function that's called when a user submits an answer - could the question ID be passed through?
 function handleSubmit() {
@@ -86,33 +110,10 @@ function handleSubmit() {
   // this increases the counters
   currentState.questionC++;
 
-  // increase the question id number
-  id++;
-  currentState.questionQ = 'q' + id;
+  moveForward(id);
 
-  // increase position in the array
-  currentState.questionP++;
+  checkForExclusions(id);
 
-  var el = document.querySelector('progress');
-  el.value++;
-
-  console.log(id);
-  if (currentState.exclusions.length > 0) {
-    console.log(currentState.exclusions.indexOf(parseInt(id)) > -1);
-  }
-
-  // if there are exclusions and the next question is one of them
-  if (currentState.exclusions.length > 0 && currentState.exclusions.indexOf(parseInt(id)) > -1) {
-    console.log("Skipping question " + id);
-    // skip to the next question
-    id++;
-    currentState.questionQ = 'q' + id;
-
-    // move forward in the section's question queue
-    currentState.questionP++;
-    el.value++;
-
-  }
 
   // if the position is not beyond the total number of questions for the current section
   if (currentState.questionP < currentState.sectionQ.length) {

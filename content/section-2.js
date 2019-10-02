@@ -43,7 +43,7 @@ var section2 = [
         "type":"radio",
         "answerText":"SMS or phone call",
         "storeAs":"",
-        "excludes":[17],
+        "excludes":[17, 18],
         "policyEntry":"[orgName] requires staff to use SMS or phone call authentication methods. However, be aware of the risks of interception that come with using these methods.",
         "appendixEntry":[
           {
