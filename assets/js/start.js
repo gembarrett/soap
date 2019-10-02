@@ -72,6 +72,7 @@ function handleSubmit() {
     // checks each answer for exclusions - could be done better
     for (var j = 0; j < currentState.sectionQ[currentState.questionP].answers.length; j++) {
         // if this answer excludes other questions
+        console.log(currentState.sectionQ[currentState.questionP].answers[j]);
       if (currentState.sectionQ[currentState.questionP].answers[j].excludes[0]) {
         // push those exclusions to a list
         currentState.exclusions.push(currentState.sectionQ[currentState.questionP].answers[j].excludes);
@@ -94,10 +95,18 @@ function handleSubmit() {
 
   var el = document.querySelector('progress');
   el.value++;
-  // looks the next question in the queue up,
-  // checks it's not on the exclusions list
-  // if it is then skip to the next question and check again
-  // if it isn't excluded then show it
+
+  // if there are exclusions and the next question is one of them
+  if (currentState.exclusions.length > 0 && currentState.exclusions[0].indexOf(currentState.questionP) !== -1) {
+    console.log(currentState);
+    // skip to the next question
+    // increase the question id number
+    id++;
+    currentState.questionQ = 'q' + id;
+
+    // increase position in the array
+    currentState.questionP++;
+  }
 
   // if the position is not beyond the total number of questions for the current section
   if (currentState.questionP < currentState.sectionQ.length) {

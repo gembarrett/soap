@@ -327,7 +327,7 @@ var section0 = [
         "type":"checkbox",
         "answerText":"Staff use their own devices without separate profiles",
         "storeAs": "",
-        "excludes":['q6'],
+        "excludes":[6],
         "policyEntry":"You may use your own devices as work equipment, we do not require the use of a work profile but please strive to maintain a separation between your work and personal data.",
         "appendixEntry":[
           {
