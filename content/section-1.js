@@ -9,7 +9,7 @@ var section1 = [
     "isQuestion": true,
     "id":"q10",
     "q":"Do all members of staff need a PGP key for their work email?",
-    "required":true,
+    "required":false,
     "policyContent":"",
     "appendixContent":"",
     "answers":[
@@ -64,7 +64,7 @@ var section1 = [
     "isQuestion": true,
     "id":"q11",
     "q":"Which Google products and services are used in your organisation?",
-    "required":true,
+    "required":false,
     "policyContent":"We use the following Google products and services: [googleArray]",
     "appendixContent":"",
     "answers":[
@@ -183,8 +183,8 @@ var section1 = [
   {
     "isQuestion": true,
     "id":"q12",
-    "q":"Which browser extensions should staff use?",
-    "required":true,
+    "q":"How should staff protect their in-browser interactions?",
+    "required":false,
     "policyContent":"In order to protect your online activities from common tracking and interference, we recommend all staff install the following privacy-enhancing extensions: [extArray]",
     "appendixContent":"",
     "answers":[
@@ -278,7 +278,7 @@ var section1 = [
     "isQuestion": true,
     "id":"q13",
     "q":"For each of the following communication types, which tools should staff use when discussing sensitive work topics?",
-    "required":true,
+    "required":false,
     "policyContent":"When communicating sensitive work data, [orgName] prefers staff use the following: [commsArray]",
     "appendixContent":"",
     "answers":[

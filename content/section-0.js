@@ -34,7 +34,7 @@ var section0 = [
     "isQuestion": true,
     "id":"q2",
     "q":"Who is responsible for this policy?",
-    "required":false,
+    "required":true,
     "policyContent":"",
     "answers":[
       {
@@ -105,7 +105,7 @@ var section0 = [
     "isQuestion": true,
     "id":"q3",
     "q":"Who will this policy apply to?",
-    "required":true,
+    "required":false,
     "policyContent":"This security policy applies to [appliesTo]",
     "appendixContent":"",
     "answers":[
@@ -160,7 +160,7 @@ var section0 = [
     "isQuestion": true,
     "id":"q4",
     "q":"Which operating systems are used in your organisation?",
-    "required":true,
+    "required":false,
     "policyContent":"",
     "appendixContent":"",
     "answers":[
@@ -280,7 +280,7 @@ var section0 = [
     "isQuestion": true,
     "id":"q5",
     "q":"How does your organisation manage staff work devices?",
-    "required":false,
+    "required":true,
     "policyContent":"",
     "appendixContent":"",
     "answers":[
@@ -322,7 +322,21 @@ var section0 = [
             "tipList": ""
           }
         ]
+      },
+      {
+        "type":"checkbox",
+        "answerText":"Staff use their own devices without separate profiles",
+        "storeAs": "",
+        "excludes":['q6'],
+        "policyEntry":"You may use your own devices as work equipment, we do not require the use of a work profile but please strive to maintain a separation between your work and personal data.",
+        "appendixEntry":[
+          {
+            "reviewList":"",
+            "tipList": ""
+          }
+        ]
       }
+
     ],
     "tips":[
       {"relevance":""},
@@ -377,7 +391,7 @@ var section0 = [
     "isQuestion": true,
     "id":"q7",
     "q":"Do all your staff work in the same physical office?",
-    "required":false,
+    "required":true,
     "policyContent":"",
     "appendixContent":"",
     "answers":[
@@ -398,7 +412,7 @@ var section0 = [
         "type":"radio",
         "answerText":"No - some or all of our staff work remotely.",
         "storeAs": "",
-        "excludes":[],
+        "excludes":[], // exc. environmental Qs when added
         "policyEntry":"",
         "appendixEntry":[
           {

@@ -17,7 +17,7 @@ var section2 = [
         "type":"radio",
         "answerText":"None - staff preference",
         "storeAs":"",
-        "excludes":[],
+        "excludes":[], // excl. 17/18?
         "policyEntry":"The options for getting this code include authentication apps, hardware keys, SMS or automated phone call and [orgName] asks staff to use their best judgment when choosing a method for securing each work-related account.",
         "appendixEntry":[
           {
@@ -30,7 +30,7 @@ var section2 = [
         "type":"radio",
         "answerText":"Two-factor apps or hardware authentication keys",
         "storeAs":"",
-        "excludes":[], //exclude q17
+        "excludes":[],
         "policyEntry":"[orgName] requires staff to use two-factor apps or hardware authentication methods. Please do not use SMS or phone call authentication as they are insecure methods that can be intercepted.",
         "appendixEntry":[
           {
@@ -43,7 +43,7 @@ var section2 = [
         "type":"radio",
         "answerText":"SMS or phone call",
         "storeAs":"",
-        "excludes":[],
+        "excludes":['q17', 'q18'],
         "policyEntry":"[orgName] requires staff to use SMS or phone call authentication methods. However, be aware of the risks of interception that come with using these methods.",
         "appendixEntry":[
           {
@@ -64,7 +64,7 @@ var section2 = [
     "isQuestion": true,
     "id":"q17",
     "q":"Does your organisation prefer staff to use a specific authentication app?",
-    "required":true,
+    "required":false,
     "policyContent":"",
     "appendixContent":"",
     "answers":[
@@ -132,7 +132,7 @@ var section2 = [
     "isQuestion": true,
     "id":"q18",
     "q":"Does your organisation provide hardware security keys to staff?",
-    "required":true,
+    "required":false,
     "policyContent":"",
     "appendixContent":"",
     "answers":[
@@ -174,7 +174,7 @@ var section2 = [
     "isQuestion": true,
     "id":"q19",
     "q":"Should staff use a specific password manager for work accounts?",
-    "required":true,
+    "required":false,
     "policyContent":"Passwords are hard to remember, so [orgName] prefers staff to use a password manager.",
     "appendixContent":"",
     "answers":[
