@@ -51,13 +51,10 @@ function moveForward(id) {
 
   var el = document.querySelector('progress');
   el.value++;
-
-  console.log(currentState);
 }
 
 // make this a loop to check for consecutive exclusions
 function isExcludedQ(id) {
-  console.log(currentState.exclusions);
   // if there are exclusions and the next question is one of them
   if (currentState.exclusions.length > 0 && currentState.exclusions.indexOf(parseInt(id)) > -1) {
     return true;
@@ -114,10 +111,27 @@ function handleSubmit() {
   currentState.questionC++;
 
   // start looking at the next question
-  moveForward(id);
+  // increase the question id number
+  id++;
+  currentState.questionQ = 'q' + id;
 
+  // increase position in the array
+  currentState.questionP++;
+
+  var el = document.querySelector('progress');
+  el.value++;
+
+  // if this question is excluded, go to the next question
   if (isExcludedQ(id)) {
-    moveForward(id);
+    // increase the question id number
+    id++;
+    currentState.questionQ = 'q' + id;
+
+    // increase position in the array
+    currentState.questionP++;
+
+    var el = document.querySelector('progress');
+    el.value++;
   }
 
 
@@ -126,7 +140,6 @@ function handleSubmit() {
     console.log('moving to next question!');
     // grab the next question's element and add class of current
     var nextQ = document.getElementById(currentState.questionQ);
-    console.log(nextQ);
     nextQ.classList.add("current");
   }
   // if the sections have not run out (using the counter because it isn't changed)
@@ -193,6 +206,8 @@ function getInput(el, qId) {
 
     // unsplit the question ID
     var tempQId = 'q'+qId;
+    console.log('tempQId is '+tempQId);
+    console.log(currentState.sectionQ);
     var result = currentState.sectionQ.find(question => question.id === tempQId);
 
     // if the input is a textbox containing value
