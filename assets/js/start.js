@@ -52,16 +52,17 @@ function moveForward(id) {
   var el = document.querySelector('progress');
   el.value++;
 
+  console.log(currentState);
 }
 
 // make this a loop to check for consecutive exclusions
-function checkForExclusions(id) {
+function isExcludedQ(id) {
   console.log(currentState.exclusions);
   // if there are exclusions and the next question is one of them
   if (currentState.exclusions.length > 0 && currentState.exclusions.indexOf(parseInt(id)) > -1) {
-    console.log("Skipping question " + id);
-    moveForward();
-    console.log(id);
+    return true;
+  } else {
+    return false;
   }
 }
 
@@ -91,6 +92,8 @@ function handleSubmit() {
     injectOverlay();
   }
 
+  // grab the exclusions for this group of answers
+  // currently grabs all answers exclusions, even when not selected!
   // if this question has answers
   if (currentState.sectionQ[currentState.questionP].answers) {
     // checks each answer for exclusions - could be done better
@@ -110,9 +113,12 @@ function handleSubmit() {
   // this increases the counters
   currentState.questionC++;
 
+  // start looking at the next question
   moveForward(id);
 
-  checkForExclusions(id);
+  if (isExcludedQ(id)) {
+    moveForward(id);
+  }
 
 
   // if the position is not beyond the total number of questions for the current section
@@ -120,6 +126,7 @@ function handleSubmit() {
     console.log('moving to next question!');
     // grab the next question's element and add class of current
     var nextQ = document.getElementById(currentState.questionQ);
+    console.log(nextQ);
     nextQ.classList.add("current");
   }
   // if the sections have not run out (using the counter because it isn't changed)
