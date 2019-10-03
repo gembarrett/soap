@@ -63,6 +63,11 @@ function isExcludedQ(id) {
   }
 }
 
+// this updates the progress bar
+function updateProgressBar(){
+  var el = document.querySelector('progress');
+  el.value++;
+}
 
 // this is the function that's called when a user submits an answer - could the question ID be passed through?
 function handleSubmit() {
@@ -89,49 +94,30 @@ function handleSubmit() {
     injectOverlay();
   }
 
-  // grab the exclusions for this group of answers
-  // currently grabs all answers exclusions, even when not selected!
-  // if this question has answers
-  if (currentState.sectionQ[currentState.questionP].answers) {
-    // checks each answer for exclusions - could be done better
-    for (var j = 0; j < currentState.sectionQ[currentState.questionP].answers.length; j++) {
-      // if this answer excludes other questions
-      if (currentState.sectionQ[currentState.questionP].answers[j].excludes.length > 0) {
-        console.log(currentState.sectionQ[currentState.questionP].answers[j].excludes);
-        // push those exclusions to a list
-        currentState.exclusions = currentState.exclusions.concat(currentState.sectionQ[currentState.questionP].answers[j].excludes);
-      }
-    }
-  }
-
   // this hides the current question,
   match.classList.remove("current");
 
-  // this increases the counters
+  // this increases the counter
   currentState.questionC++;
 
   // start looking at the next question
   // increase the question id number
   id++;
   currentState.questionQ = 'q' + id;
-
   // increase position in the array
   currentState.questionP++;
 
-  var el = document.querySelector('progress');
-  el.value++;
+  updateProgressBar();
 
   // if this question is excluded, go to the next question
   if (isExcludedQ(id)) {
     // increase the question id number
     id++;
     currentState.questionQ = 'q' + id;
-
     // increase position in the array
     currentState.questionP++;
 
-    var el = document.querySelector('progress');
-    el.value++;
+    updateProgressBar();
   }
 
 
@@ -206,8 +192,6 @@ function getInput(el, qId) {
 
     // unsplit the question ID
     var tempQId = 'q'+qId;
-    console.log('tempQId is '+tempQId);
-    console.log(currentState.sectionQ);
     var result = currentState.sectionQ.find(question => question.id === tempQId);
 
     // if the input is a textbox containing value
@@ -228,7 +212,13 @@ function getInput(el, qId) {
 
     // if the input is a checked checkbox or selected radio button
     if (inputs[i].checked) {
-      // if there's a storeAs value
+
+      // if this answer excludes another question, add to the list
+      if (result.answers[answerID].excludes.length > 0) {
+        currentState.exclusions = currentState.exclusions.concat(result.answers[answerID].excludes);
+      }
+
+      // if there's a storeAs value, store it
       if (result.answers[answerID].storeAs !== "") {
         addToDictionary(result.answers[answerID].storeAs, result.answers[answerID].answerText);
       }
