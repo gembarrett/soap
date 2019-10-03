@@ -42,15 +42,13 @@ var policyText = [];
 var appendixText = [];
 
 function moveForward(id) {
+  // this increases the counter
+  currentState.questionC++;
+  // start looking at the next question
   // increase the question id number
   id++;
   currentState.questionQ = 'q' + id;
-
-  // increase position in the array
-  currentState.questionP++;
-
-  var el = document.querySelector('progress');
-  el.value++;
+  console.log(currentState.questionQ);
 }
 
 // make this a loop to check for consecutive exclusions
@@ -93,17 +91,12 @@ function handleSubmit() {
   if (parseInt(id) === 0) {
     injectOverlay();
   }
-
   // this hides the current question,
   match.classList.remove("current");
 
-  // this increases the counter
-  currentState.questionC++;
+  moveForward(id);
+  console.log(currentState.questionQ);
 
-  // start looking at the next question
-  // increase the question id number
-  id++;
-  currentState.questionQ = 'q' + id;
   // increase position in the array
   currentState.questionP++;
 
@@ -118,6 +111,9 @@ function handleSubmit() {
     currentState.questionP++;
 
     updateProgressBar();
+
+    // check again in case of consecutive exclusions
+
   }
 
 
