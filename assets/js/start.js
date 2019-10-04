@@ -49,14 +49,22 @@ function moveForward(id) {
   id++;
   currentState.questionQ = 'q' + id;
   console.log(currentState.questionQ);
+  console.log(id);
+  // increase position in the array
+  currentState.questionP++;
+  return id;
 }
 
 // make this a loop to check for consecutive exclusions
 function isExcludedQ(id) {
+  console.log(id + ' checking for exclusion!');
+  console.log(currentState.exclusions.indexOf(parseInt(id)));
   // if there are exclusions and the next question is one of them
   if (currentState.exclusions.length > 0 && currentState.exclusions.indexOf(parseInt(id)) > -1) {
+    console.log('found!');
     return true;
   } else {
+    console.log(id + ' is not excluded');
     return false;
   }
 }
@@ -70,7 +78,7 @@ function updateProgressBar(){
 // this is the function that's called when a user submits an answer - could the question ID be passed through?
 function handleSubmit() {
   console.log(currentState.questionQ + ' answering - handleSubmit');
-
+q5
   // search for the currently shown element
   var match = document.querySelector('.current');
   // this gets the current question id number e.g. q0
@@ -94,11 +102,9 @@ function handleSubmit() {
   // this hides the current question,
   match.classList.remove("current");
 
-  moveForward(id);
+  id = moveForward(id);
   console.log(currentState.questionQ);
-
-  // increase position in the array
-  currentState.questionP++;
+  console.log(id);
 
   updateProgressBar();
 
@@ -113,9 +119,7 @@ function handleSubmit() {
     updateProgressBar();
 
     // check again in case of consecutive exclusions
-
   }
-
 
   // if the position is not beyond the total number of questions for the current section
   if (currentState.questionP < currentState.sectionQ.length) {
