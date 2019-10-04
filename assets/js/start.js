@@ -48,24 +48,27 @@ function moveForward(id) {
   // increase the question id number
   id++;
   currentState.questionQ = 'q' + id;
-  console.log(currentState.questionQ);
-  console.log(id);
   // increase position in the array
   currentState.questionP++;
+  var el = document.querySelector('progress');
+  el.value++;
   return id;
 }
 
-// make this a loop to check for consecutive exclusions
 function isExcludedQ(id) {
-  console.log(id + ' checking for exclusion!');
-  console.log(currentState.exclusions.indexOf(parseInt(id)));
-  // if there are exclusions and the next question is one of them
-  if (currentState.exclusions.length > 0 && currentState.exclusions.indexOf(parseInt(id)) > -1) {
-    console.log('found!');
-    return true;
-  } else {
-    console.log(id + ' is not excluded');
-    return false;
+  // start looking at the next question
+  id = moveForward(id);
+  // for each of the questions remaining
+  for (var q = id; q < questionsList.length; q++) {
+    // if the question isn't on the list
+    if (currentState.exclusions.indexOf(parseInt(id)) === -1) {
+      // if the question is not excluded
+      // break the loop
+      return false;
+    } else {
+      // update everything to the next question
+      id = moveForward(id);
+    }
   }
 }
 
@@ -78,7 +81,6 @@ function updateProgressBar(){
 // this is the function that's called when a user submits an answer - could the question ID be passed through?
 function handleSubmit() {
   console.log(currentState.questionQ + ' answering - handleSubmit');
-q5
   // search for the currently shown element
   var match = document.querySelector('.current');
   // this gets the current question id number e.g. q0
@@ -102,24 +104,8 @@ q5
   // this hides the current question,
   match.classList.remove("current");
 
-  id = moveForward(id);
-  console.log(currentState.questionQ);
-  console.log(id);
-
-  updateProgressBar();
-
-  // if this question is excluded, go to the next question
-  if (isExcludedQ(id)) {
-    // increase the question id number
-    id++;
-    currentState.questionQ = 'q' + id;
-    // increase position in the array
-    currentState.questionP++;
-
-    updateProgressBar();
-
-    // check again in case of consecutive exclusions
-  }
+  // go to next question
+  id = isExcludedQ(id);
 
   // if the position is not beyond the total number of questions for the current section
   if (currentState.questionP < currentState.sectionQ.length) {
