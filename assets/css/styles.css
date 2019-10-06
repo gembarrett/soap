@@ -385,3 +385,34 @@ small a {
 .incidentBox {
   width:100%;
 }
+
+
+form > div > input[type='radio'],
+form > div > input[type='checkbox'] {
+
+    /* Hide the input, but have it still be clickable */
+    opacity: 0;
+    float: left;
+    width: 18px;
+}
+
+
+form > div > input[type='radio'] + label,
+form > div > input[type='checkbox'] + label {
+    margin: 0;
+    clear: none;
+
+    /* Left padding makes room for image */
+    padding: 5px 0 4px 24px;
+
+    /* Make look clickable because they are */
+    cursor: pointer;
+    background-color: red;
+}
+
+/*
+    Change from unchecked to checked graphic
+*/
+form > div > input:checked + label {
+  background-color: green;
+}

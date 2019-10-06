@@ -31,30 +31,30 @@ templates.questionsTemplate = function(data){
         for (var j = 0; j < question.answers.length; j++){
            // premake the id and name
            thisID = 'id="' +question.id+ "-"+ j+ '-answer"';
-           thisName = 'name="' +question.id+  '-el"';
            // if there's a placeholder then grab it
            if (question.answers[j].placeholder) {
              thisPlaceholder = 'placeholder="' + question.answers[j].placeholder + '"';
            }
            // if this is an input field then create the label
            if (question.answers[j].type !== 'textarea') {
-             thisLabel = '<label for="' +question.id+ '-' +j+ '-el">' +question.answers[j].answerText+ '</label>';
+             thisLabel = '<label for="' +question.id+ "-"+ j+ '-answer">' +question.answers[j].answerText+ '</label>';
            }
            // start the form
            content += '<div class="form-el">';
+
            // if there's a textarea
            if (question.answers[j].type === 'textarea') {
-             content += '<textarea ' +thisID+thisName+thisPlaceholder+ ' class="incidentBox"></textarea>';
+             content += '<textarea ' +thisID+thisPlaceholder+ ' class="incidentBox"></textarea>';
            }
 
            // if there's a textbox
            else if (question.answers[j].type === 'text') {
-             content += thisLabel + '<input type="' +question.answers[j].type+ '"' +thisID+thisName+thisPlaceholder+ '>';
+             content += thisLabel + '<input type="' +question.answers[j].type+ '"' +thisID+thisPlaceholder+ '>';
            }
 
            // if there's another input type
            else {
-             content += thisLabel + '<input type="' +question.answers[j].type+ '"' +thisID+thisName+ '>';
+             content += '<input type="' +question.answers[j].type+ '"' +thisID+ '>' + thisLabel;
            }
 
            content += '</div>';
