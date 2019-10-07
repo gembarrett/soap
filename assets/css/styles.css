@@ -386,14 +386,15 @@ small a {
   width:100%;
 }
 
+.form-el {
+  display:block;
+}
 
 form > div > input[type='radio'],
 form > div > input[type='checkbox'] {
 
     /* Hide the input, but have it still be clickable */
     opacity: 0;
-    float: left;
-    width: 18px;
 }
 
 
@@ -407,7 +408,6 @@ form > div > input[type='checkbox'] + label {
 
     /* Make look clickable because they are */
     cursor: pointer;
-    background-color: red;
 }
 
 /*
@@ -415,4 +415,7 @@ form > div > input[type='checkbox'] + label {
 */
 form > div > input:checked + label {
   background-color: green;
+  width:30%;
+  border-radius: 30%;
+  color:#fff;
 }
