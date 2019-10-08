@@ -390,22 +390,17 @@ small a {
   display:block;
 }
 
-form > div > input[type='radio'],
-form > div > input[type='checkbox'] {
-
+form > div > div > input[type='radio'],
+form > div > div > input[type='checkbox'] {
     /* Hide the input, but have it still be clickable */
     opacity: 0;
+    margin:-22px;
 }
 
 
-form > div > input[type='radio'] + label,
-form > div > input[type='checkbox'] + label {
-    margin: 0;
-    clear: none;
-
-    /* Left padding makes room for image */
-    padding: 5px 0 4px 24px;
-
+form > div > div > input[type='radio'] + label,
+form > div > div > input[type='checkbox'] + label {
+    padding:30px;
     /* Make look clickable because they are */
     cursor: pointer;
 }
@@ -413,9 +408,13 @@ form > div > input[type='checkbox'] + label {
 /*
     Change from unchecked to checked graphic
 */
-form > div > input:checked + label {
+form > div > div > input:checked + label {
   background-color: green;
-  width:30%;
-  border-radius: 30%;
   color:#fff;
+}
+
+.answers-container {
+  display:flex;
+  justify-content: space-evenly;
+  height:100px;
 }
