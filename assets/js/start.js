@@ -101,7 +101,7 @@ function handleSubmit() {
   if (parseInt(id) === 0) {
     injectOverlay();
     // sneaking this in here so it's done when textboxes exist
-    // resizingBoxes();
+    resizingBoxes();
   }
   // this hides the current question,
   match.classList.remove("current");

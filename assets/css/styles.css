@@ -373,7 +373,10 @@ small a {
   text-decoration: underline;
 }
 .incidentBox {
-  width:100%;
+  text-align: left;
+  min-width: 400px;
+  min-height: 100px;
+  padding:2em;
 }
 
 .answers-container {
@@ -394,7 +397,7 @@ small a {
   font-size: 1.3em;
 }
 
-input[type=text]{
+input[type=text], textarea{
   display:block;
   padding: 3em;
   border-radius: 1em;
