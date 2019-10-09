@@ -387,34 +387,38 @@ small a {
 }
 
 .form-el {
-  display:block;
+  line-height: 3em;
 }
 
 form > div > div > input[type='radio'],
 form > div > div > input[type='checkbox'] {
     /* Hide the input, but have it still be clickable */
     opacity: 0;
-    margin:-22px;
+    position: absolute;
+    z-index: 10;
 }
 
 
 form > div > div > input[type='radio'] + label,
 form > div > div > input[type='checkbox'] + label {
-    padding:30px;
     /* Make look clickable because they are */
     cursor: pointer;
+    padding:1em;
+    display:block;
+    border:2px solid #96CAEE;
+    border-radius: 1em;
 }
 
 /*
     Change from unchecked to checked graphic
 */
 form > div > div > input:checked + label {
-  background-color: green;
+  background-color: #96CAEE;
   color:#fff;
 }
 
 .answers-container {
   display:flex;
   justify-content: space-evenly;
-  height:100px;
+  flex-wrap: wrap;
 }
