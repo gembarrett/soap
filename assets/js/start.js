@@ -100,6 +100,8 @@ function handleSubmit() {
   // // TODO: hide the Preview button until after the overlay is in place
   if (parseInt(id) === 0) {
     injectOverlay();
+    // sneaking this in here so it's done when textboxes exist
+    // resizingBoxes();
   }
   // this hides the current question,
   match.classList.remove("current");

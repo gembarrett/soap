@@ -1,13 +1,13 @@
 var section2 = [
   {
     "isQuestion": false,
-    "id":"q15",
+    "id":"q14",
     "title": "Incident 2",
     "paragraph":["Now consider the situation if the same staff member clicks the link in that suspicious email and the attacker steals their work account login details. We rely on many online services in the course of our work, and as a result the accounts we inhabit get filled with sensitive information that can be accessed, deleted, manipulated and shared by an attacker.", "In this case, red flags of a hacked account can include unrecognised activity, strange login times and being 'locked out' of the account. Once inside, an attacker may steal login details for other accounts, leak sensitive information or impersonate the staff member to damage the organisation.", "In most cases, changing passwords and implementing two-factor authentication is enough to stop the attacker. But if the situation esclates, it can take time to persuade the platform to hand you back control of the account so acting quickly to protect accounts is key. Setting rules for where and how to share, store and discuss information can also help to reduce the impact of an intrusion by limiting what each account can provide access to."]
   },
   {
     "isQuestion": true,
-    "id":"q16",
+    "id":"q15",
     "q":"Which multi-factor authentication method does your organisation prefer staff to use when securing work accounts?",
     "required":true,
     "policyContent":"Two-factor authentication is a good method of securing our accounts beyond passwords as it requires an additional one-time code to be provided. Two-factor authentication should be enabled on every account which supports it.",
@@ -62,7 +62,7 @@ var section2 = [
   },
   {
     "isQuestion": true,
-    "id":"q17",
+    "id":"q16",
     "q":"Does your organisation prefer staff to use a specific authentication app?",
     "required":false,
     "policyContent":"",
@@ -130,7 +130,7 @@ var section2 = [
   },
   {
     "isQuestion": true,
-    "id":"q18",
+    "id":"q17",
     "q":"Does your organisation provide hardware security keys to staff?",
     "required":false,
     "policyContent":"",
@@ -172,7 +172,7 @@ var section2 = [
   },
   {
     "isQuestion": true,
-    "id":"q19",
+    "id":"q18",
     "q":"Should staff use a specific password manager for work accounts?",
     "required":false,
     "policyContent":"Passwords are hard to remember, so [orgName] prefers staff to use a password manager.",
@@ -253,7 +253,7 @@ var section2 = [
   },
   {
     "isQuestion": true,
-    "id":"q20",
+    "id":"q19",
     "q":"Bearing the previous questions in mind, what steps should staff take when faced with a possibly hacked account?",
     "required":true,
     "policyContent":"If you notice suspicious activity in any of your work-related accounts, follow these steps: [inc2Tactics]",

@@ -60,129 +60,129 @@ var section1 = [
       {"more": ["how to set up PGP", "using PGP with Enigmail"]}
     ]
   },
+  // {
+  //   "isQuestion": true,
+  //   "id":"q11",
+  //   "q":"Which Google products and services are used in your organisation?",
+  //   "required":false,
+  //   "policyContent":"We use the following Google products and services: [googleArray]",
+  //   "appendixContent":"",
+  //   "answers":[
+  //     {
+  //       "type":"checkbox",
+  //       "answerText":"G Suite",
+  //       "storeAs":"[googleArray]",
+  //       "excludes":[],
+  //       "policyEntry":"",
+  //       "appendixEntry":[
+  //         {
+  //           "reviewList":"",
+  //           "tipList": ""
+  //         }
+  //       ]
+  //     },
+  //     {
+  //       "type":"checkbox",
+  //       "answerText":"Hangouts",
+  //       "storeAs":"[googleArray]",
+  //       "excludes":[],
+  //       "policyEntry":"",
+  //       "appendixEntry":[
+  //         {
+  //           "reviewList":"",
+  //           "tipList": ""
+  //         }
+  //       ]
+  //     },
+  //     {
+  //       "type":"checkbox",
+  //       "answerText":"Sheets",
+  //       "storeAs":"[googleArray]",
+  //       "excludes":[],
+  //       "policyEntry":"",
+  //       "appendixEntry":[
+  //         {
+  //           "reviewList":"",
+  //           "tipList": ""
+  //         }
+  //       ]
+  //     },
+  //     {
+  //       "type":"checkbox",
+  //       "answerText":"Drive",
+  //       "storeAs":"[googleArray]",
+  //       "excludes":[],
+  //       "policyEntry":"",
+  //       "appendixEntry":[
+  //         {
+  //           "reviewList":"",
+  //           "tipList": ""
+  //         }
+  //       ]
+  //     },
+  //     {
+  //       "type":"checkbox",
+  //       "answerText":"Gmail",
+  //       "storeAs":"[googleArray]",
+  //       "excludes":[],
+  //       "policyEntry":"",
+  //       "appendixEntry":[
+  //         {
+  //           "reviewList":"",
+  //           "tipList": ""
+  //         }
+  //       ]
+  //     },
+  //     {
+  //       "type":"checkbox",
+  //       "answerText":"Form",
+  //       "storeAs":"[googleArray]",
+  //       "excludes":[],
+  //       "policyEntry":"",
+  //       "appendixEntry":[
+  //         {
+  //           "reviewList":"",
+  //           "tipList": ""
+  //         }
+  //       ]
+  //     },
+  //     {
+  //       "type":"checkbox",
+  //       "answerText":"Slides",
+  //       "storeAs":"[googleArray]",
+  //       "excludes":[],
+  //       "policyEntry":"",
+  //       "appendixEntry":[
+  //         {
+  //           "reviewList":"",
+  //           "tipList": ""
+  //         }
+  //       ]
+  //     },
+  //     {
+  //       "type":"checkbox",
+  //       "answerText":"We don't use Google at all",
+  //       "storeAs":"",
+  //       "excludes":[], // review this
+  //       "policyEntry":"",
+  //       "appendixEntry":[
+  //         {
+  //           "reviewList":"",
+  //           "tipList": ""
+  //         }
+  //       ]
+  //     }
+  //   ],
+  //   "tips":[
+  //     {"relevance":""},
+  //     {"meaning":"Using G Suite enables organisations to easily consolidate and manage staff’s online working environment. However, Google’s popularity and the access that stolen logins can grant means that CSOs are frequently targeted with very convincing ‘spear phishing’ attacks, in the form of fake emails impersonating Google notifications. As this includes emails and documents, it is a level of access that some organisations find unacceptable. Your organisation should decide whether these are acceptable risks of involving Google in your day-to-day business."},
+  //     {"implementation":""},
+  //     {"more": ["google g suite tutorial", "google privacy check up", "google privacy policy"]}
+  //   ]
+  // },
   {
     "isQuestion": true,
     "id":"q11",
-    "q":"Which Google products and services are used in your organisation?",
-    "required":false,
-    "policyContent":"We use the following Google products and services: [googleArray]",
-    "appendixContent":"",
-    "answers":[
-      {
-        "type":"checkbox",
-        "answerText":"G Suite",
-        "storeAs":"[googleArray]",
-        "excludes":[],
-        "policyEntry":"",
-        "appendixEntry":[
-          {
-            "reviewList":"",
-            "tipList": ""
-          }
-        ]
-      },
-      {
-        "type":"checkbox",
-        "answerText":"Hangouts",
-        "storeAs":"[googleArray]",
-        "excludes":[],
-        "policyEntry":"",
-        "appendixEntry":[
-          {
-            "reviewList":"",
-            "tipList": ""
-          }
-        ]
-      },
-      {
-        "type":"checkbox",
-        "answerText":"Sheets",
-        "storeAs":"[googleArray]",
-        "excludes":[],
-        "policyEntry":"",
-        "appendixEntry":[
-          {
-            "reviewList":"",
-            "tipList": ""
-          }
-        ]
-      },
-      {
-        "type":"checkbox",
-        "answerText":"Drive",
-        "storeAs":"[googleArray]",
-        "excludes":[],
-        "policyEntry":"",
-        "appendixEntry":[
-          {
-            "reviewList":"",
-            "tipList": ""
-          }
-        ]
-      },
-      {
-        "type":"checkbox",
-        "answerText":"Gmail",
-        "storeAs":"[googleArray]",
-        "excludes":[],
-        "policyEntry":"",
-        "appendixEntry":[
-          {
-            "reviewList":"",
-            "tipList": ""
-          }
-        ]
-      },
-      {
-        "type":"checkbox",
-        "answerText":"Form",
-        "storeAs":"[googleArray]",
-        "excludes":[],
-        "policyEntry":"",
-        "appendixEntry":[
-          {
-            "reviewList":"",
-            "tipList": ""
-          }
-        ]
-      },
-      {
-        "type":"checkbox",
-        "answerText":"Slides",
-        "storeAs":"[googleArray]",
-        "excludes":[],
-        "policyEntry":"",
-        "appendixEntry":[
-          {
-            "reviewList":"",
-            "tipList": ""
-          }
-        ]
-      },
-      {
-        "type":"checkbox",
-        "answerText":"We don't use Google at all",
-        "storeAs":"",
-        "excludes":[], // review this
-        "policyEntry":"",
-        "appendixEntry":[
-          {
-            "reviewList":"",
-            "tipList": ""
-          }
-        ]
-      }
-    ],
-    "tips":[
-      {"relevance":""},
-      {"meaning":"Using G Suite enables organisations to easily consolidate and manage staff’s online working environment. However, Google’s popularity and the access that stolen logins can grant means that CSOs are frequently targeted with very convincing ‘spear phishing’ attacks, in the form of fake emails impersonating Google notifications. As this includes emails and documents, it is a level of access that some organisations find unacceptable. Your organisation should decide whether these are acceptable risks of involving Google in your day-to-day business."},
-      {"implementation":""},
-      {"more": ["google g suite tutorial", "google privacy check up", "google privacy policy"]}
-    ]
-  },
-  {
-    "isQuestion": true,
-    "id":"q12",
     "q":"How should staff protect their in-browser interactions?",
     "required":false,
     "policyContent":"In order to protect your online activities from common tracking and interference, we recommend all staff install the following privacy-enhancing extensions: [extArray]",
@@ -276,7 +276,7 @@ var section1 = [
   },
   {
     "isQuestion": true,
-    "id":"q13",
+    "id":"q12",
     "q":"For each of the following communication types, which tools should staff use when discussing sensitive work topics?",
     "required":false,
     "policyContent":"When communicating sensitive work data, [orgName] prefers staff use the following: [commsArray]",
@@ -348,7 +348,7 @@ var section1 = [
   },
   {
     "isQuestion": true,
-    "id":"q14",
+    "id":"q13",
     "q":"Bearing the previous questions in mind, what steps should staff take if they are faced with a suspicious email?",
     "required":true,
     "policyContent":"Phishing involves being duped into providing information to parties that you otherwise wouldn’t share, usually through fake account notifications or impersonating a known contact. Unfortunately this kind of attack in common and so it is important to understand the steps we recommend taking to both mitigate and recover from such an attack: [inc1Tactics]",

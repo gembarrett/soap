@@ -162,16 +162,6 @@ a {
   color:#fff;
 }
 
-.form-el label {
-  display:inline;
-  font-size: 1.3em;
-}
-
-input[type=text]{
-  display:block;
-  width: 50%;
-  margin: 2em 0;
-}
 
 /* ================== */
 /* Info panel styles */
@@ -386,8 +376,31 @@ small a {
   width:100%;
 }
 
+.answers-container {
+  display:flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
 .form-el {
   line-height: 3em;
+  min-width: 200px;
+  text-align: center;
+}
+
+.form-el label {
+  display:inline;
+  font-size: 1.3em;
+}
+
+input[type=text]{
+  display:block;
+  width: 100%;
+  padding: 3em;
+  border-radius: 1em;
+  border:2px solid #96CAEE;
+  text-align: center;
+  color:inherit;
 }
 
 form > div > div > input[type='radio'],
@@ -398,7 +411,6 @@ form > div > div > input[type='checkbox'] {
     z-index: 10;
 }
 
-
 form > div > div > input[type='radio'] + label,
 form > div > div > input[type='checkbox'] + label {
     /* Make look clickable because they are */
@@ -406,19 +418,16 @@ form > div > div > input[type='checkbox'] + label {
     padding:1em;
     display:block;
     border:2px solid #96CAEE;
-    border-radius: 1em;
 }
 
-/*
-    Change from unchecked to checked graphic
-*/
+form > div > div > input[type='radio'] + label{
+  border-radius: 2em;
+}
+form > div > div > input[type='checkbox'] + label {
+  border-radius: 0.5em;
+}
+
 form > div > div > input:checked + label {
   background-color: #96CAEE;
   color:#fff;
-}
-
-.answers-container {
-  display:flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
 }
