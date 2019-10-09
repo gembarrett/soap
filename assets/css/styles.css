@@ -386,6 +386,7 @@ small a {
   line-height: 3em;
   min-width: 200px;
   text-align: center;
+  margin:2em;
 }
 
 .form-el label {
@@ -395,7 +396,6 @@ small a {
 
 input[type=text]{
   display:block;
-  width: 100%;
   padding: 3em;
   border-radius: 1em;
   border:2px solid #96CAEE;
