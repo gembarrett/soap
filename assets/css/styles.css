@@ -385,6 +385,10 @@ small a {
   flex-wrap: wrap;
 }
 
+.answers-container > * {
+  flex: 1 28%;
+}
+
 .form-el {
   line-height: 3em;
   min-width: 200px;
