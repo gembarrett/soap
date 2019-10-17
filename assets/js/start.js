@@ -41,6 +41,29 @@ var policyText = [];
 // delete and replace
 var appendixText = [];
 
+function addChangeListeners() {
+  // grab all the form inputs
+  var elements = document.querySelectorAll('.form-el > input');
+  for (var e = 0; e < elements.length; e++) {
+    // if it's a textbox
+    elements[e].oninput = toggleSkip;
+
+  }
+  // TODO: add support for textareas
+}
+
+function toggleSkip(e){
+  var button =  document.getElementById('submitAnswers');
+  // if the box contains text and the button is currently "Skip"
+  if ((e.data !== null) && (button.innerText === "Skip")){
+    console.log(e.data);
+    // change button text
+    button.innerText = "Next";
+  } else if ((e.data === null) && (button.innerText === "Next")){
+    button.innerText = "Skip";
+  }
+}
+
 function moveForward(id) {
   // this increases the counter
   currentState.questionC++;
@@ -96,18 +119,22 @@ function handleSubmit() {
     prev.removeAttribute('disabled');
   }
 
-  // add the preview overlay after everything else has loaded
+  // add the additional stuff after everything else has loaded
   // // TODO: hide the Preview button until after the overlay is in place
   if (parseInt(id) === 0) {
     injectOverlay();
     // sneaking this in here so it's done when textboxes exist
     resizingBoxes();
+    addChangeListeners();
   }
   // this hides the current question,
   match.classList.remove("current");
 
   // go to next question
   id = isExcludedQ(id);
+
+  // TODO reset the skip/next button here
+  document.getElementById('submitAnswers').innerText = "Skip";
 
   // if the position is not beyond the total number of questions for the current section
   if (currentState.questionP < currentState.sectionQ.length) {
