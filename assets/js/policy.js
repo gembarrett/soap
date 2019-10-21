@@ -77,17 +77,29 @@ function compileAppendix() {
           general = found.appendixContent;
           tempAppendix.push(general);
         }
-        // use the answer to grab the policyEntry, if it exists
-        if (found.answers[currentState.answers[i].a].appendixEntry) {
-          review = found.answers[currentState.answers[i].a].appendixEntry.reviewList;
-          tip = found.answers[currentState.answers[i].a].appendixEntry.tipList;
-          tempAppendix.push(review, tip);
+
+        var reviewContent = found.answers[currentState.answers[i].a].appendixEntry[0].reviewList;
+        var tipContent = found.answers[currentState.answers[i].a].appendixEntry[0].tipList;
+
+        // if there's review content
+        if (reviewContent === ""){
+          console.log("Empty!");
+        } else {
+          console.log("Found: "+reviewContent);
+          tempAppendix.push(reviewContent);
+        }
+        if (tipContent === "") {
+          console.log("Empty!");
+        } else {
+          console.log("Found: "+tipContent);
+          tempAppendix.push(tipContent);
         }
       }
     }
     // store this question's ID for comparison in the next loop
     prevQ = qRef;
   }
+  console.log(tempAppendix);
   // replace all temporary words with values from dict
   return replaceTemp(tempAppendix);
 }
@@ -103,8 +115,12 @@ function replaceTemp(policyArr) {
       var regexKey = key.replace('[', '\\[').replace(']', '\\]');
       var regex = new RegExp(regexKey, 'gi');
       // replace any matches and put them in a new string
-      newString = newString.replace(regex, dict[key]);
-      // add this new string to the array
+      if (newString){
+        // add this new string to the array
+        newString = newString.replace(regex, dict[key]);
+      } else {
+        console.log(policyArr[i]);
+      }
     }
     editedArray.push(newString);
   }

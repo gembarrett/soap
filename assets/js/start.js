@@ -55,7 +55,6 @@ function toggleSkip(e){
   var button =  document.getElementById('submitAnswers');
   // if the box contains text and the button is currently "Skip"
   if ((e.data !== null) && (button.innerText === "Skip")){
-    console.log(e.data);
     // change button text
     button.innerText = "Next";
   } else if ((e.data === null) && (button.innerText === "Next")){
