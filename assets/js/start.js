@@ -38,7 +38,6 @@ var dict = {};
 
 // delete and replace
 var policyText = [];
-// delete and replace
 var appendixText = [];
 
 function addChangeListeners() {

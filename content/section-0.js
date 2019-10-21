@@ -20,7 +20,12 @@ var section0 = [
         "storeAs":"[orgName]",
         "excludes":[],
         "policyEntry":"This is the security policy of [orgName], which has been created in order to support staff in carrying out our sensitive work securely. It is important to understand and comply with the rules described as they aim to protect everyone involved in our work, including partner organisations and frontline activists.",
-        "appendixEntry":""
+        "appendixEntry": [
+          {
+            "reviewList":"",
+            "tipList": ""
+          }
+        ]
       }
     ],
     "tips":[
@@ -36,6 +41,7 @@ var section0 = [
     "q":"Who is responsible for this policy?",
     "required":true,
     "policyContent":"",
+    "appendixContent":"",
     "answers":[
       {
         "type":"text",
@@ -46,7 +52,7 @@ var section0 = [
         "policyEntry":"If you have questions about this policy, please contact [contactName]",
         "appendixEntry":[
           {
-            "reviewList":"Is [contactName] succeeding in supporting staff implementation of the policy? Are they happy to continue as security champion?",
+            "reviewList":"Is [contactName] still responsible for this policy?",
             "tipList": ""
           }
         ]
@@ -60,7 +66,21 @@ var section0 = [
         "policyEntry":"([contactPos]).",
         "appendixEntry":[
           {
-            "reviewList":"Is [contactName]'s job title still [contactPos]?",
+            "reviewList":"",
+            "tipList": ""
+          }
+        ]
+      },
+      {
+        "type":"text",
+        "answerText":"Pronouns",
+        "placeholder": "e.g. they/them",
+        "storeAs":"[contactProns]",
+        "excludes":[],
+        "policyEntry":"Pronouns: [contactProns]",
+        "appendixEntry":[
+          {
+            "reviewList":"",
             "tipList": ""
           }
         ]
@@ -74,7 +94,7 @@ var section0 = [
         "policyEntry":"Email: [contactEmail]",
         "appendixEntry":[
           {
-            "reviewList":"Is [contactName]'s email still [contactEmail]?",
+            "reviewList":"Is their email address up-to-date?",
             "tipList": ""
           }
         ]
@@ -88,7 +108,7 @@ var section0 = [
         "policyEntry":"Phone: [contactPhone]",
         "appendixEntry":[
           {
-            "reviewList":"Is [contactName]'s phone number still [contactPhone]?",
+            "reviewList":"Is their phone number correct?",
             "tipList": ""
           }
         ]
@@ -173,33 +193,33 @@ var section0 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": ""
+            "tipList": "Privacy tips for Windows 10: https://spreadprivacy.com/windows-10-privacy-tips/"
           }
         ]
       },
       {
         "type":"checkbox",
-        "answerText":"macOS",
+        "answerText":"macOS or OS X",
         "storeAs": "",
         "excludes":[],
         "policyEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": ""
+            "tipList": "Privacy tips for macOS and OS X: https://spreadprivacy.com/mac-privacy-tips/"
           }
         ]
       },
       {
         "type":"checkbox",
-        "answerText":"Linux (any flavour)",
+        "answerText":"Linux (any)",
         "storeAs": "",
         "excludes":[],
         "policyEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": ""
+            "tipList": "Privacy tips for Linux: https://spreadprivacy.com/linux-privacy-tips/"
           }
         ]
       },
@@ -212,7 +232,7 @@ var section0 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": ""
+            "tipList": "This article explains privacy settings on Chrome OS: https://www.makeuseof.com/tag/privacy-settings-chrome-os-google-chrome/"
           }
         ]
       },
@@ -225,7 +245,7 @@ var section0 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": ""
+            "tipList": "Privacy tips for Android: https://spreadprivacy.com/android-privacy-tips/"
           }
         ]
       },
@@ -238,7 +258,7 @@ var section0 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": ""
+            "tipList": "Privacy tips for iOS: https://spreadprivacy.com/iphone-privacy-tips/"
           }
         ]
       },
@@ -251,20 +271,7 @@ var section0 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": ""
-          }
-        ]
-      },
-      {
-        "type":"checkbox",
-        "answerText":"Windows Phone",
-        "storeAs": "",
-        "excludes":[],
-        "policyEntry":"",
-        "appendixEntry":[
-          {
-            "reviewList":"",
-            "tipList": ""
+            "tipList": "This article reviews some of the privacy and security features of the Blackberry K2: https://www.digitaltrends.com/mobile/blackberry-key2-tips-and-tricks/"
           }
         ]
       }
@@ -375,13 +382,13 @@ var section0 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": ""
+            "tipList": "In addition to shoulder surfers, privacy screens can also help to protect against dust, scratches and sunlight glare."
           }
         ]
       }
     ],
     "tips":[
-      {"relevance":"If a device has been hacked, there is a risk that the hacker can access the camera (and/or microphone) remotely. If a malicious actor has “shoulder surfed” there is a risk they may have seen sensitive information onscreen."},
+      {"relevance":"If a device has been hacked, there is a risk that the hacker can access the camera (and/or microphone) remotely. If a malicious actor has “shoulder surfed” (i.e. viewed your screen over your shoulder or in the reflection of glasses) there is a risk they may have seen sensitive information onscreen."},
       {"meaning":"Webcam covers are easy to buy online and you can sometimes find branded ones being given away free at conferences. They’re a small, simple plastic device with a cover that slides back and forth to expose or hide the camera. When the camera is hidden, any remote camera view will see only darkness. Note that this only mitigates camera access, and not microphone access. Privacy screens are tinted in such a way that someone looking at the screen from the side, rather than directly in front, will see only a black screen."},
       {"implementation":"Covers are easy to stick over the camera and usually stick pretty well. It will take time for staff to keep the cover closed by default and only opening it when needed. Privacy screens are usually stuck over the device screen, however some laptop versions can be slid on/off easily when needed."},
       {"more":["webcam covers", "computer mobile privacy screens"]}
@@ -446,7 +453,7 @@ var section0 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": "mark your calendar for review dates on [date+1yr, date+2yr, date+3yr]"
+            "tipList": "Mark your calendar for review dates on [date+1, date+2, date+3]"
           }
         ]
       },
@@ -459,7 +466,7 @@ var section0 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": "mark your calendar for review dates on [date+6mths, date+12mths, date+18mths]"
+            "tipList": "Mark your calendar for review dates on [date+0.5, date+1, date+1.5]"
           }
         ],
       },
@@ -472,7 +479,7 @@ var section0 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": "mark your calendar for review dates on [date+3mths, date+3mths, date+3mths]"
+            "tipList": "Mark your calendar for review dates on [date+0.25, date+0.5, date+0.75]"
           }
         ],
       },

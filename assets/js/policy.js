@@ -45,6 +45,53 @@ function compilePolicy() {
     return replaceTemp(tempPolicy);
 }
 
+// function that compiles the appendix based on what's in the answer storage at that time
+function compileAppendix() {
+  // create local policy variable
+  var tempAppendix = [];
+  // initialise prevQ
+  var prevQ = currentState.answers[0].q;
+  // for each of the stored answers
+  for (var i = 0; i < currentState.answers.length; i++) {
+    // grab the question and answer
+    qRef = currentState.answers[i].q;
+    aRef = currentState.answers[i].a;
+    // set up current question, general content, specific content and answer text storage
+    var thisQ = 'q'+qRef;
+    var general = ""; // does this have to be created here?
+    var review = "";
+    var tip = "";
+    var answer = "";
+    // check each section for the question with the right id
+    for (var j = 0; j < sections.length; j++) {
+
+      // search for question with correct id
+      var found = sections[j].find(ans => ans.id === thisQ);
+      // when it's found, check for policyContent
+      if (found) {
+        // ring the bell, we got ourselves a winner!
+
+        // if this question number is not the same as the prevQ
+        if (qRef != prevQ) {
+          // if general hasn't already been created then create and grab general policy content
+          general = found.appendixContent;
+          tempAppendix.push(general);
+        }
+        // use the answer to grab the policyEntry, if it exists
+        if (found.answers[currentState.answers[i].a].appendixEntry) {
+          review = found.answers[currentState.answers[i].a].appendixEntry.reviewList;
+          tip = found.answers[currentState.answers[i].a].appendixEntry.tipList;
+          tempAppendix.push(review, tip);
+        }
+      }
+    }
+    // store this question's ID for comparison in the next loop
+    prevQ = qRef;
+  }
+  // replace all temporary words with values from dict
+  return replaceTemp(tempAppendix);
+}
+
 // function to replace placeholder text in policy
 function replaceTemp(policyArr) {
   var editedArray = [];
@@ -69,7 +116,9 @@ function replaceTemp(policyArr) {
 
 // function to download data to a file
 function downloadPolicy(type) {
-    var data = policyText;
+    var today = new Date();
+    today.setHours(0,0,0,0);
+    var data = policyText+appendixText+'Created '+today;
     var filename = "policyDoc";
     var file = new Blob([data], {type: type});
     if (window.navigator.msSaveOrOpenBlob) // IE10+
