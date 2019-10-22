@@ -58,9 +58,6 @@ function compileAppendix() {
     aRef = currentState.answers[i].a;
     // set up current question, general content, specific content and answer text storage
     var thisQ = 'q'+qRef;
-    var general = ""; // does this have to be created here?
-    var review = "";
-    var tip = "";
     var answer = "";
     // check each section for the question with the right id
     for (var j = 0; j < sections.length; j++) {
@@ -74,25 +71,20 @@ function compileAppendix() {
         // if this question number is not the same as the prevQ
         if (qRef != prevQ) {
           // if general hasn't already been created then create and grab general policy content
-          general = found.appendixContent;
-          tempAppendix.push(general);
+          // check the general content isn't empty!
+          if (found.appendixContent !== "") {
+            tempAppendix.push(found.appendixContent);
+          }
         }
 
-        var reviewContent = found.answers[currentState.answers[i].a].appendixEntry[0].reviewList;
-        var tipContent = found.answers[currentState.answers[i].a].appendixEntry[0].tipList;
+        var appendix = found.answers[currentState.answers[i].a].appendixEntry[0];
 
-        // if there's review content
-        if (reviewContent === ""){
-          console.log("Empty!");
-        } else {
-          console.log("Found: "+reviewContent);
-          tempAppendix.push(reviewContent);
+        // if there's review or tip content
+        if (appendix.reviewList.length > 0){
+          tempAppendix.push(appendix.reviewList);
         }
-        if (tipContent === "") {
-          console.log("Empty!");
-        } else {
-          console.log("Found: "+tipContent);
-          tempAppendix.push(tipContent);
+        if (appendix.tipList.length > 0){
+          tempAppendix.push(appendix.tipList);
         }
       }
     }
@@ -119,7 +111,7 @@ function replaceTemp(policyArr) {
         // add this new string to the array
         newString = newString.replace(regex, dict[key]);
       } else {
-        console.log(policyArr[i]);
+        console.log(policyArr[i].length);
       }
     }
     editedArray.push(newString);
