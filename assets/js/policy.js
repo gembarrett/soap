@@ -30,6 +30,7 @@ function compileDoc(p,a){
         if (p){
           // if there is general content and we don't already have it
           if ((qRef != prevQ) && (found.policyContent !== "")){
+            console.log(found.policyContent);
             // store it
             tempPolicy.push(found.policyContent);
           }
@@ -65,18 +66,19 @@ function compileDoc(p,a){
   }
   // replace placeholder words then sort and format
   if (p){
-    doc += replaceTemp(tempPolicy);
+    console.log(tempPolicy[0]);
+    doc = replaceTemp(tempPolicy);
   }
   if (a){
     doc += '-----Appendix-----'+'\n';
     if (tempGeneralA.length > 0) {
-      doc += tempGeneralA+'\n';
+      doc += replaceTemp(tempGeneralA)+'\n';
     }
     if (tempReviewA.length > 0){
-      doc += '-----Review checklist-----'+'\n'+tempReviewA+'\n';
+      doc += '-----Review checklist-----'+'\n'+replaceTemp(tempReviewA)+'\n';
     }
     if (tempTipsA.length > 0){
-      doc += '-----Implementation tips-----'+'\n'+tempTipsA;
+      doc += '-----Implementation tips-----'+'\n'+replaceTemp(tempTipsA);
     }
   }
   return doc;
