@@ -1,119 +1,88 @@
 // File for all the policy-related functions
 
-// function that compiles the policy based on what's in the answer storage at that time
-function compilePolicy() {
-    // create local policy variable
-    var tempPolicy = [];
-    // initialise prevQ
-    var prevQ = currentState.answers[0].q;
-    // for each of the stored answers
-    for (var i = 0; i < currentState.answers.length; i++) {
-      // grab the question and answer
-      qRef = currentState.answers[i].q;
-      aRef = currentState.answers[i].a;
-      // set up current question, general content, specific content and answer text storage
-      var thisQ = 'q'+qRef;
-      var general = ""; // does this have to be created here?
-      var specific = "";
-      var answer = "";
-      // check each section for the question with the right id
-      for (var j = 0; j < sections.length; j++) {
+// function which takes two boolean values which determine which document is needed
+function compileDoc(p,a){
+  var doc;
+  // create the temporary values
+  var tempPolicy = [];
+  var tempGeneralA = [];
+  var tempReviewA = [];
+  var tempTipsA = [];
 
-        // search for question with correct id
-        var found = sections[j].find(ans => ans.id === thisQ);
-        // when it's found, check for policyContent
-        if (found) {
-          // ring the bell, we got ourselves a winner!
-
-          // if this question number is not the same as the prevQ
-          if (qRef != prevQ) {
-            // if general hasn't already been created then create and grab general policy content
-            general = found.policyContent;
-            tempPolicy.push(general);
-          }
-          // use the answer to grab the policyEntry, if it exists
-          if (found.answers[currentState.answers[i].a].policyEntry) {
-            specific = found.answers[currentState.answers[i].a].policyEntry;
-            tempPolicy.push(specific);
-          }
-        }
-      }
-      // store this question's ID for comparison in the next loop
-      prevQ = qRef;
-    }
-    // replace all temporary words with values from dict
-    return replaceTemp(tempPolicy);
-}
-
-// function that compiles the appendix based on what's in the answer storage at that time
-function compileAppendix() {
-  // create local policy variable
-  var tempGeneral = [];
-  var tempReview = [];
-  var tempTips = [];
-
-  // initialise prevQ
+  // set up prevQ currentState.answers[0].q
   var prevQ = currentState.answers[0].q;
-  // for each of the stored answers
-  for (var i = 0; i < currentState.answers.length; i++) {
-    // grab the question and answer
+
+  // for each of the answers
+  for (var i = 0; i < currentState.answers.length; i++){
+    // get the qRef currentState.answers[i].q
     qRef = currentState.answers[i].q;
-    aRef = currentState.answers[i].a; // TODO: either use this or delete
 
     // set up question name
     var thisQ = 'q'+qRef;
-    // var answer = "";
 
-    // find the section that has this question
-    for (var j = 0; j < sections.length; j++) {
-
-      // search for question with correct id
+    // search all the sections for this answer's question
+    for (var j = 0; j < sections.length; j++){
+      // when it's found, check if it's a different question from previous
       var found = sections[j].find(ans => ans.id === thisQ);
-      // when it's found, check for appendix content
-      if (found) {
-        // if we haven't already got the general content from this question
-        if (qRef != prevQ) {
-          // check the general content isn't empty!
-          if (found.appendixContent !== "") {
-            // grab the general appendix content for this question
-            tempGeneral.push(found.appendixContent);
+      // if there's data
+      if (found){
+        // if we're building a policy
+        if (p){
+          // if there is general content and we don't already have it
+          if ((qRef != prevQ) && (found.policyContent !== "")){
+            // store it
+            tempPolicy.push(found.policyContent);
+          }
+          // if there is specific content
+          if (found.answers[currentState.answers[i].a].policyEntry){
+            // store it
+            tempPolicy.push(found.answers[currentState.answers[i].a].policyEntry);
           }
         }
-        console.log(found);
-        // create an easy reference for the specific appendix content
-        var appendix = found.answers[currentState.answers[i].a].appendixEntry[0];
-        console.log(appendix);
-        // if there's review or tip content
-        if (appendix.reviewList.length > 0){
-          tempReview.push(appendix.reviewList);
-        }
-        if (appendix.tipList.length > 0){
-          tempTips.push(appendix.tipList);
+        // if we're building an appendix
+        if (a){
+          // if there is general content and we don't already have it
+          if ((qRef != prevQ) && (found.appendixContent !== "")){
+            // store it
+            tempGeneralA.push(found.appendixContent);
+          }
+          // create an easy reference for the specific appendix content
+          var appendix = found.answers[currentState.answers[i].a].appendixEntry[0];
+          // if there's review or tip content
+          if (appendix.reviewList.length > 0){
+            // store it
+            tempReviewA.push(appendix.reviewList);
+          }
+          if (appendix.tipList.length > 0){
+            // store it
+            tempTipsA.push(appendix.tipList);
+          }
         }
       }
     }
     // store this question's ID for comparison in the next loop
     prevQ = qRef;
   }
-  console.log(tempGeneral.length, tempReview.length, tempTips.length);
-  // replace all temporary words with values from dict
-  tempGeneral = replaceTemp(tempGeneral);
-  tempReview = replaceTemp(tempReview);
-  tempTips = replaceTemp(tempTips);
-
-  tempAppendix = '-----Appendix-----'+'\n'
-  if (tempGeneral.length > 0) {
-    tempAppendix += tempGeneral+'\n';
+  // replace placeholder words then sort and format
+  if (p){
+    doc += replaceTemp(tempPolicy);
   }
-  if (tempReview.length > 0){
-    tempAppendix += '-----Review checklist-----'+'\n'+tempReview+'\n';
+  if (a){
+    doc += '-----Appendix-----'+'\n';
+    if (tempGeneralA.length > 0) {
+      doc += tempGeneralA+'\n';
+    }
+    if (tempReviewA.length > 0){
+      doc += '-----Review checklist-----'+'\n'+tempReviewA+'\n';
+    }
+    if (tempTipsA.length > 0){
+      doc += '-----Implementation tips-----'+'\n'+tempTipsA;
+    }
   }
-  if (tempTips.length > 0){
-    tempAppendix += '-----Implementation tips-----'+'\n'+tempTips;
-  }
-  console.log(tempAppendix)
-  return tempAppendix;
+  return doc;
 }
+
+
 
 // function to replace placeholder text in policy
 function replaceTemp(policyArr) {
