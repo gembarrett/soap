@@ -122,11 +122,20 @@ function formatAppendix(app){
 
 }
 
+function dateStamp(){
+  // get the current date
+  var today = new Date();
+  // start creating the date stamp
+  var fullDate = today.getDate();
+  var options = {month:'long'};
+  fullDate += ' ' + new Intl.DateTimeFormat('en-UK', options).format(today);
+  fullDate += ' ' + today.getFullYear();
+  return fullDate;
+}
+
 // function to download data to a file
 function downloadPolicy(type) {
-    var today = new Date();
-    today.setHours(0,0,0,0);
-    var data = policyText+appendixText+'Created '+today;
+    var data = policyText+appendixText+'Created '+dateStamp();
     var filename = "policyDoc";
     var file = new Blob([data], {type: type});
     if (window.navigator.msSaveOrOpenBlob) // IE10+
