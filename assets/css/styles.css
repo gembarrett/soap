@@ -364,7 +364,9 @@ progress[value="0"] {
   display:none;
 }
 .policyHolder {
-  width:50%;
+  width:100%;
+  height: 50%;
+  padding: 2em 0;
   display:inline-block;
 }
 small a {

@@ -38,6 +38,129 @@ var section0 = [
   {
     "isQuestion": true,
     "id":"q2",
+    "q":"Who will this policy apply to?",
+    "required":false,
+    "policyContent":"This security policy applies to [appliesTo]",
+    "appendixContent":"",
+    "answers":[
+      {
+        "type":"checkbox",
+        "answerText":"contractors",
+        "storeAs":"[appliesTo]",
+        "excludes":[],
+        "policyEntry":"",
+        "appendixEntry":[
+          {
+            "reviewList":"",
+            "tipList": ""
+          }
+        ]
+      },
+      {
+        "type":"checkbox",
+        "answerText":"full or part-time staff",
+        "storeAs":"[appliesTo]",
+        "excludes":[],
+        "policyEntry":"",
+        "appendixEntry":[
+          {
+            "reviewList":"",
+            "tipList": ""
+          }
+        ]
+      },
+      {
+        "type":"checkbox",
+        "answerText":"volunteers",
+        "storeAs": "[appliesTo]",
+        "excludes":[],
+        "policyEntry":"",
+        "appendixEntry":[
+          {
+            "reviewList":"",
+            "tipList": ""
+          }
+        ]
+      }
+    ],
+    "tips":[
+      {"relevance":""},
+      {"meaning":"It should be clear exactly who is responsible for adhering to the policy and liable for violations. Use this moment to decide whether to create a separate policy for staff with different access levels, for instance volunteers or contractors."},
+      {"implementation":"No one wants to read a policy that doesn’t apply to them. Presenting staff with only the most relevant of rules for their working environment will help with implementation and buy-in."},
+      {"more":""}
+    ]
+  },
+  {
+    "isQuestion": true,
+    "id":"q3",
+    "q":"How regularly do you intend to review and update this policy?",
+    "required":true,
+    "policyContent":"This policy will be reviewed by [contactName] ([contactPos]) on a [reviewFreq] basis. Any suggestions or feedback on the policy’s contents should be directed to them.",
+    "appendixContent":"",
+    "answers":[
+      {
+        "type":"radio",
+        "answerText":"annually",
+        "storeAs": "[reviewFreq]",
+        "excludes":[],
+        "policyEntry":"",
+        "appendixEntry":[
+          {
+            "reviewList":"",
+            "tipList": "Mark your calendar for review dates on [date+1, date+2, date+3]"
+          }
+        ]
+      },
+      {
+        "type":"radio",
+        "answerText":"6-monthly",
+        "storeAs": "[reviewFreq]",
+        "excludes":[], // review this
+        "policyEntry":"",
+        "appendixEntry":[
+          {
+            "reviewList":"",
+            "tipList": "Mark your calendar for review dates on [date+0.5, date+1, date+1.5]"
+          }
+        ],
+      },
+      {
+        "type":"radio",
+        "answerText":"quarterly",
+        "storeAs": "[reviewFreq]",
+        "excludes":[],
+        "policyEntry":"",
+        "appendixEntry":[
+          {
+            "reviewList":"",
+            "tipList": "Mark your calendar for review dates on [date+0.25, date+0.5, date+0.75]"
+          }
+        ],
+      },
+      {
+        "type":"radio",
+        "answerText":'"as threats arise"',
+        "storeAs": "[reviewFreq]",
+        "excludes":[],
+        "policyEntry":"",
+        "appendixEntry":[
+          {
+            "reviewList":"",
+            "tipList": ""
+          }
+        ]
+      },
+    ],
+    "tips":[
+      {"relevance":""},
+      {"meaning":"It is recommended to review at least once a year to improve and update to meet new threats. Check your policy’s appendix at the end to find a checklist that will help when it comes time to review the policy."},
+      {"implementation":"Create calendar events for the next 2 policy reviews and invite stakeholders  involved in reviewing the policy (e.g. management, Human Resources, IT)."},
+      {"more":["review security policy"]}
+    ]
+  },
+  {
+    "isQuestion": true,
+    "id":"q4",
     "q":"Who is responsible for this policy?",
     "required":true,
     "policyContent":"",
@@ -123,62 +246,7 @@ var section0 = [
   },
   {
     "isQuestion": true,
-    "id":"q3",
-    "q":"Who will this policy apply to?",
-    "required":false,
-    "policyContent":"This security policy applies to [appliesTo]",
-    "appendixContent":"",
-    "answers":[
-      {
-        "type":"checkbox",
-        "answerText":"contractors",
-        "storeAs":"[appliesTo]",
-        "excludes":[],
-        "policyEntry":"",
-        "appendixEntry":[
-          {
-            "reviewList":"",
-            "tipList": ""
-          }
-        ]
-      },
-      {
-        "type":"checkbox",
-        "answerText":"full or part-time staff",
-        "storeAs":"[appliesTo]",
-        "excludes":[],
-        "policyEntry":"",
-        "appendixEntry":[
-          {
-            "reviewList":"",
-            "tipList": ""
-          }
-        ]
-      },
-      {
-        "type":"checkbox",
-        "answerText":"volunteers",
-        "storeAs": "[appliesTo]",
-        "excludes":[],
-        "policyEntry":"",
-        "appendixEntry":[
-          {
-            "reviewList":"",
-            "tipList": ""
-          }
-        ]
-      }
-    ],
-    "tips":[
-      {"relevance":""},
-      {"meaning":"It should be clear exactly who is responsible for adhering to the policy and liable for violations. Use this moment to decide whether to create a separate policy for staff with different access levels, for instance volunteers or contractors."},
-      {"implementation":"No one wants to read a policy that doesn’t apply to them. Presenting staff with only the most relevant of rules for their working environment will help with implementation and buy-in."},
-      {"more":""}
-    ]
-  },
-  {
-    "isQuestion": true,
-    "id":"q4",
+    "id":"q5",
     "q":"Which operating systems are used in your organisation?",
     "required":false,
     "policyContent":"",
@@ -285,7 +353,7 @@ var section0 = [
   },
   {
     "isQuestion": true,
-    "id":"q5",
+    "id":"q6",
     "q":"How does your organisation manage staff work devices?",
     "required":true,
     "policyContent":"",
@@ -354,7 +422,7 @@ var section0 = [
   },
   {
     "isQuestion": true,
-    "id":"q6",
+    "id":"q7",
     "q":"Does your organisation provide staff with webcam covers or privacy screens for their devices?",
     "required":false,
     "policyContent":"Protecting the devices we use is crucial in preventing unauthorised access to sensitive [orgName] data. To mitigate this, [orgName] will provide you with [providePrivacy] to use on your devices.",
@@ -396,7 +464,7 @@ var section0 = [
   },
   {
     "isQuestion": true,
-    "id":"q7",
+    "id":"q8",
     "q":"Do all your staff work in the same physical office?",
     "required":true,
     "policyContent":"",
@@ -434,74 +502,6 @@ var section0 = [
       {"meaning":"For the majority of their time, remote staff work outside of a traditional office, such as from home or a cafe. The risks in different working environments vary and there are factors to be considered which apply to remote staff but not so much those who work in a regular office – and vice versa."},
       {"implementation":"Your organisation is remote if it has any members of staff working from outside [orgName]-controlled premises, and taking this remote-first perspective helps with supporting those staff as part of the team."},
       {"more":["managing remote staff"]}
-    ]
-  },
-  {
-    "isQuestion": true,
-    "id":"q8",
-    "q":"How regularly do you intend to review and update this policy?",
-    "required":true,
-    "policyContent":"This policy will be reviewed by [contactName] ([contactPos]) on a [reviewFreq] basis. Any suggestions or feedback on the policy’s contents should be directed to them.",
-    "appendixContent":"",
-    "answers":[
-      {
-        "type":"radio",
-        "answerText":"annually",
-        "storeAs": "[reviewFreq]",
-        "excludes":[],
-        "policyEntry":"",
-        "appendixEntry":[
-          {
-            "reviewList":"",
-            "tipList": "Mark your calendar for review dates on [date+1, date+2, date+3]"
-          }
-        ]
-      },
-      {
-        "type":"radio",
-        "answerText":"6-monthly",
-        "storeAs": "[reviewFreq]",
-        "excludes":[], // review this
-        "policyEntry":"",
-        "appendixEntry":[
-          {
-            "reviewList":"",
-            "tipList": "Mark your calendar for review dates on [date+0.5, date+1, date+1.5]"
-          }
-        ],
-      },
-      {
-        "type":"radio",
-        "answerText":"quarterly",
-        "storeAs": "[reviewFreq]",
-        "excludes":[],
-        "policyEntry":"",
-        "appendixEntry":[
-          {
-            "reviewList":"",
-            "tipList": "Mark your calendar for review dates on [date+0.25, date+0.5, date+0.75]"
-          }
-        ],
-      },
-      {
-        "type":"radio",
-        "answerText":'"as threats arise"',
-        "storeAs": "[reviewFreq]",
-        "excludes":[],
-        "policyEntry":"",
-        "appendixEntry":[
-          {
-            "reviewList":"",
-            "tipList": ""
-          }
-        ]
-      },
-    ],
-    "tips":[
-      {"relevance":""},
-      {"meaning":"It is recommended to review at least once a year to improve and update to meet new threats. Check your policy’s appendix at the end to find a checklist that will help when it comes time to review the policy."},
-      {"implementation":"Create calendar events for the next 2 policy reviews and invite stakeholders  involved in reviewing the policy (e.g. management, Human Resources, IT)."},
-      {"more":["review security policy"]}
     ]
   }
 ]
