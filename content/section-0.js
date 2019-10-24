@@ -3,14 +3,14 @@ var section0 = [
     "isQuestion": false,
     "id":"q0",
     "title": "Getting started!",
-    "paragraph":["The three stages of SOAP’s policy-building process cover the key aspects of organizational security. At the start of each section you'll be asked to consider a hypothetical, but common, security incident. What follows next is a series of questions about relevant mitigation tactics, with each selected answer contributing to the appropriate content for your security policy. Each section ends with an opportunity for you to specify the steps you want staff to take if, and when, they find themselves involved in a given incident.", "If you don’t understand the relevance or meaning of a particular question along the way, simply hit the “Info” button to its right. This will reveal a panel with implementation tips, definitions, search terms, and other information to help clarify the question and its content. As you progress through the process, you can preview your policy at any time by hitting “Preview.” The progress bar at the top of each page shows how far you’ve come in the process. At any time you can skip questions or go back to prior questions. When you've completed all three sections, you will be shown your full policy, including the appendix. Download options are available so you can share the policy in the best way for your organization.", "This first section is all about understanding your organization's unique context. Your answers here will provide the information we need to start identifying the right questions to help shape your new, totally customized security policy. Ready? Let’s go!"]
+    "paragraph":["The three stages of SOAP’s policy-building process cover key aspects of organizational security. At the start of each section you'll be asked to consider a hypothetical, but common, security incident. What follows next is a series of questions about relevant mitigation tactics, with each selected answer contributing to the appropriate content for your security policy. Each section ends with an opportunity for you to specify the steps you want staff to take if, and when, they find themselves involved in a given incident.", "If you don’t understand the relevance or meaning of a particular question along the way, simply hit the + button beside it. This will reveal a panel with implementation tips, definitions, search terms, and other information to help clarify the question and its content. As you progress through the process, you can preview your policy at any time by hitting “Preview.” The progress bar at the top of each page shows how far you’ve come in the process. When you've completed all three sections, you will be shown your full policy, including the appendix. Download options are available so you can share the policy in the best way for your organization.", "This first section is all about understanding your organization's unique context. Your answers here will provide the information we need to start identifying the right questions to help shape your new, totally customized security policy. Ready? Let’s go!"]
   },
   {
     "isQuestion": true,
     "id":"q1",
     "q":"What is the name of your organisation?",
     "required":true,
-    "policyContent":"",
+    "policyContent":"Organisational Security Policy \n",
     "appendixContent":"",
     "answers":[
       {
@@ -40,7 +40,7 @@ var section0 = [
     "id":"q2",
     "q":"Who will this policy apply to?",
     "required":false,
-    "policyContent":"This security policy applies to [appliesTo]",
+    "policyContent":"This policy applies to [appliesTo]",
     "appendixContent":"",
     "answers":[
       {
@@ -172,7 +172,7 @@ var section0 = [
         "placeholder":"e.g. Alice Smith",
         "storeAs":"[contactName]",
         "excludes":[],
-        "policyEntry":"If you have questions about this policy, please contact [contactName]",
+        "policyEntry":"If you have questions about this policy or its recommendations, please contact [contactName]",
         "appendixEntry":[
           {
             "reviewList":"Is [contactName] still responsible for this policy?",
@@ -200,7 +200,7 @@ var section0 = [
         "placeholder": "e.g. they/them",
         "storeAs":"[contactProns]",
         "excludes":[],
-        "policyEntry":"Pronouns: [contactProns]",
+        "policyEntry":"Their pronouns are [contactProns].",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -356,7 +356,7 @@ var section0 = [
     "id":"q6",
     "q":"How does your organisation manage staff work devices?",
     "required":true,
-    "policyContent":"",
+    "policyContent":"[orgName] manages device security in the following way, depending on the situation.",
     "appendixContent":"",
     "answers":[
       {
@@ -364,7 +364,7 @@ var section0 = [
         "answerText":"We install work profiles on staff-owned devices (Bring Your Own Device policy)",
         "storeAs": "",
         "excludes":[],
-        "policyEntry":"With your consent, we will install a work profile on your personal devices in order for you to use them in the course of your work. This work profile will keep your work and personal use of the device separated.",
+        "policyEntry":"Profiles on your devices: With your consent, we will install a work profile on your personal devices in order for you to use them in the course of your work. This work profile will keep your work and personal use of the device separated.",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -377,7 +377,7 @@ var section0 = [
         "answerText":"We install work and personal profiles on organisation-owned devices.",
         "storeAs": "",
         "excludes":[],
-        "policyEntry":"[orgName] staff are given some freedom to decide their work environment and equipment, and we acknowledge that there may be times when after hours access to work email and data is needed. We will provide you with devices and install both a work and personal profile for you to use.",
+        "policyEntry":"Profiles on [orgName] devices: [orgName] staff are given some freedom to decide their work environment and equipment, and we acknowledge that there may be times when after hours access to work email and data is needed. We will provide you with devices and install both a work and personal profile for you to use.",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -390,7 +390,7 @@ var section0 = [
         "answerText":"We provide work-only devices.",
         "storeAs": "",
         "excludes":[],
-        "policyEntry":"We will provide you with devices, such as a computer, to use solely for work purposes.",
+        "policyEntry":"[orgName] devices for work-only use: We will provide you with devices, such as a computer, to use solely for work purposes.",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -402,8 +402,8 @@ var section0 = [
         "type":"checkbox",
         "answerText":"Staff use their own devices without separate profiles",
         "storeAs": "",
-        "excludes":[6],
-        "policyEntry":"You may use your own devices as work equipment, we do not require the use of a work profile but please strive to maintain a separation between your work and personal data.",
+        "excludes":[7],
+        "policyEntry":"Your device, your choice: You may use your own devices as work equipment, we do not require the use of a work profile but please strive to maintain a separation between your work and personal data.",
         "appendixEntry":[
           {
             "reviewList":"",

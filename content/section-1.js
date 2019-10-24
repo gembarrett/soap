@@ -279,7 +279,7 @@ var section1 = [
     "id":"q12",
     "q":"For each of the following communication types, which tools should staff use when discussing sensitive work topics?",
     "required":false,
-    "policyContent":"When communicating sensitive work data, [orgName] prefers staff use the following: [commsArray]",
+    "policyContent":"When communicating sensitive work data, [orgName] prefers staff use the following tools: ",
     "appendixContent":"",
     "answers":[
       {
