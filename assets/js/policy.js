@@ -64,6 +64,7 @@ function compileDoc(p,a){
     // store this question's ID for comparison in the next loop
     prevQ = qRef;
   }
+  // sort and format then replace placeholder words
   // replace placeholder words then sort and format
   if (p){
     console.log(tempPolicy[0]);
@@ -112,14 +113,21 @@ function replaceTemp(policyArr) {
   return editedArray;
 }
 
-// takes all the array items and puts them in the right order and groupings
-function formatPolicy(pol){
-
+// takes all the array items (policy and incident response) and puts them in the right order and groupings
+function formatPolicy(pol, inc){
+// at the start, title Organisational Security Policy
+// at q6, subheading Device Security
+// at q10, subheading Communications Security
+// at q15, subheading Account Security
+// place q13 and q19 with heading "What to do if"
 }
 
-// takes all the review and tip items and organises them
-function formatAppendix(app){
-
+// takes all the general, review and tip items and organises them
+function formatAppendix(gen, rev, tip){
+// at the start, title Appendix
+// at gen, subheading General advice
+// at rev, subheading Review checklist
+// at tip, subheading Implementation tips
 }
 
 function dateStamp(){
@@ -130,7 +138,7 @@ function dateStamp(){
   var options = {month:'long'};
   fullDate += ' ' + new Intl.DateTimeFormat('en-UK', options).format(today);
   fullDate += ' ' + today.getFullYear();
-  return fullDate;
+  return fullDate; // is there a way to return date + 3 months (no day)?
 }
 
 // function to download data to a file

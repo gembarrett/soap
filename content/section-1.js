@@ -279,19 +279,19 @@ var section1 = [
     "id":"q12",
     "q":"For each of the following communication types, which tools should staff use when discussing sensitive work topics?",
     "required":false,
-    "policyContent":"When communicating sensitive work data, [orgName] prefers staff use the following tools: ",
-    "appendixContent":"",
+    "policyContent":"When communicating sensitive work data, [orgName] prefers staff use the following tools.",
+    "appendixContent":"Pay attention to any changes in encryption standards, data breaches or security vulnerabilities that are in the news and relevant to your communication platforms.",
     "answers":[
       {
         "type":"text",
         "answerText":"1-1 messaging",
         "placeholder":"e.g. Signal, WhatsApp, Wire, Telegram, Encrypted email, Unencrypted email, SMS, Mattermost, Slack, Matrix",
-        "storeAs":"[commsArray]",
+        "storeAs":"[commsDirect]"
         "excludes":[],
-        "policyEntry":"",
+        "policyEntry":"For 1-1 communications (e.g. direct message to a colleague), please use [commsDirect].",
         "appendixEntry":[
           {
-            "reviewList":"",
+            "reviewList":"Is [commsDirect] still the most appropriate method for your direct communications?",
             "tipList": ""
           }
         ]
@@ -300,12 +300,12 @@ var section1 = [
         "type":"text",
         "answerText":"Group chat",
         "placeholder":"e.g. Signal, WhatsApp, Wire, Telegram, SMS, Phone Call, Mattermost, Slack, Matrix",
-        "storeAs":"[commsArray]",
+        "storeAs":"[commsGroup]",
         "excludes":[],
-        "policyEntry":"",
+        "policyEntry":"When communicating with a group (e.g. your project team), please use [commsGroup].",
         "appendixEntry":[
           {
-            "reviewList":"",
+            "reviewList":"Should you continue recommending [commsGroup] for group communications?",
             "tipList": ""
           }
         ]
@@ -314,12 +314,12 @@ var section1 = [
         "type":"text",
         "answerText":"Internal video/audio calls",
         "placeholder":"e.g. Jitsi, Zoom, Signal, WhatsApp, Wire, Telegram, Google Hangouts, Skype, Phone Call, Mattermost, Slack, Matrix",
-        "storeAs":"[commsArray]",
+        "storeAs":"[commsInt]",
         "excludes":[],
-        "policyEntry":"",
+        "policyEntry":"We use [commsInt] for internal video or audio calls, e.g. for remote staff meetings.",
         "appendixEntry":[
           {
-            "reviewList":"",
+            "reviewList":"How well has [commsInt] been working as an internal video calls platform?",
             "tipList": ""
           }
         ]
@@ -328,12 +328,12 @@ var section1 = [
         "type":"text",
         "answerText":"External video/audio calls",
         "placeholder":"e.g. Jitsi, Zoom, Signal, WhatsApp, Wire, Telegram, Google Hangouts, Skype, Phone Call, Mattermost, Slack, Matrix",
-        "storeAs":"[commsArray]",
+        "storeAs":"[commsExt]",
         "excludes":[],
-        "policyEntry":"",
+        "policyEntry":"External video and audio calls take place through [commsExt].",
         "appendixEntry":[
           {
-            "reviewList":"",
+            "reviewList":"Is [commsExt] still a good option for external video and audio calls?",
             "tipList": ""
           }
         ]
@@ -351,7 +351,7 @@ var section1 = [
     "id":"q13",
     "q":"Bearing the previous questions in mind, what steps should staff take if they are faced with a suspicious email?",
     "required":true,
-    "policyContent":"Phishing involves being duped into providing information to parties that you otherwise wouldn’t share, usually through fake account notifications or impersonating a known contact. Unfortunately this kind of attack in common and so it is important to understand the steps we recommend taking to both mitigate and recover from such an attack: [inc1Tactics]",
+    "policyContent":"... you receive a suspicious email: Phishing involves being duped into providing information to parties that you otherwise wouldn’t share, usually through fake account notifications or impersonating a known contact. Unfortunately this kind of attack in common and so it is important to understand the steps we recommend taking to both mitigate and recover from such an attack: [inc1Tactics]",
     "appendixContent": "To check whether a link or attachment contains known malware, upload it to VirusTotal; a service owned by Google which reads the file and detects familiar malicious code. It won’t find every attack, only the known ones it’s seen before, but it’s a valuable tool nonetheless.",
     "answers":[
       {
