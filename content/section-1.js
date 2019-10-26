@@ -286,7 +286,7 @@ var section1 = [
         "type":"text",
         "answerText":"1-1 messaging",
         "placeholder":"e.g. Signal, WhatsApp, Wire, Telegram, Encrypted email, Unencrypted email, SMS, Mattermost, Slack, Matrix",
-        "storeAs":"[commsDirect]"
+        "storeAs":"[commsDirect]",
         "excludes":[],
         "policyEntry":"For 1-1 communications (e.g. direct message to a colleague), please use [commsDirect].",
         "appendixEntry":[
