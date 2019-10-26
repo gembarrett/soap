@@ -168,7 +168,7 @@ function replaceTemp(policyArr) {
 
 // takes all the array items (policy and incident response) and puts them in the right order and groupings
 // takes tempPolicy, tempGeneralA, tempReviewA and tempTipsA arrays
-function formatArray(array){
+function editArray(array){
 // at the start, title Organisational Security Policy
 // for each item in the array
 // at q6, subheading Device Security
