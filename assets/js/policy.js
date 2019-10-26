@@ -9,6 +9,9 @@ function compileDoc(p,a){
   var tempReviewA = [];
   var tempTipsA = [];
 
+  var contextP, deviceP, commsP, acctsP, incResP;
+  var genA, revA, tipA;
+
   // set up prevQ currentState.answers[0].q
   var prevQ = currentState.answers[0].q;
 
@@ -27,18 +30,30 @@ function compileDoc(p,a){
       // if there's data
       if (found){
 
-        // if the qRef is between 0 and 4,
-        // put in context array
-        // if 5-9,
-        // put in device array
-        // if 10-12,
-        // put in comms array
-        // if 13
-        // put in incident response array
-        // if 14-18
-        // put in account array
-        // if 19
-        // put in incident response array
+        switch (qRef) {
+          case (qRef < 5):
+            contextP.push(found);
+            break;
+          case (qRef < 10):
+            deviceP.push(found);
+            break;
+          case (qRef < 13):
+            commsP.push(found);
+            break;
+          case (qRef === 13):
+            incResP.push(found);
+            break;
+          case (qRef < 19):
+            acctsP.push(found);
+            break;
+          case (qRef === 19):
+            incResP.push(found);
+            break;
+          default:
+            console.log(qRef + ' not found');
+        }
+        console.log(contextP, deviceP, commsP, acctsP, incResP);
+        console.log(genA, revA, tipA);
 
         // for each of the items in each of the arrays
         // get the general and specific policy content,
