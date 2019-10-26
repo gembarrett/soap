@@ -12,7 +12,7 @@ function compileDoc(p,a){
   // set up prevQ currentState.answers[0].q
   var prevQ = currentState.answers[0].q;
 
-  // for each of the answers
+  // for each of the answer references
   for (var i = 0; i < currentState.answers.length; i++){
     // get the qRef currentState.answers[i].q
     qRef = currentState.answers[i].q;
@@ -20,12 +20,48 @@ function compileDoc(p,a){
     // set up question name
     var thisQ = 'q'+qRef;
 
-    // search all the sections for this answer's question
+    // search for the relevant data using the answer reference
     for (var j = 0; j < sections.length; j++){
-      // when it's found, check if it's a different question from previous
+      // store if the data is found
       var found = sections[j].find(ans => ans.id === thisQ);
       // if there's data
       if (found){
+
+        // if the qRef is between 0 and 4,
+        // put in context array
+        // if 5-9,
+        // put in device array
+        // if 10-12,
+        // put in comms array
+        // if 13
+        // put in incident response array
+        // if 14-18
+        // put in account array
+        // if 19
+        // put in incident response array
+
+        // for each of the items in each of the arrays
+        // get the general and specific policy content,
+        // replace the placeholder words
+        // assign back to this array
+        // if appendix is requested
+        // get the general and specific appendix contents
+        // replace the placeholder words
+        // assign to separate arrays
+
+        // at this point there should be 6 policy arrays and 3 appendix arrays, sorted and placeholders removed
+
+        // for each array
+        // add a headline at the start of the array, with appropriate markdown (\n for txt, ## for md, <h2></h2>for html)
+        // for each of the items in the array
+        // if it's a policy array, join with appropriate markdown (\n for text, <br> for md, <p></p> for html)
+        // if appendix is requested
+        // if it's a general or tips appendix array, join with appropriate markdown (\n - for txt, * for md, <ul></li></li></ul> for html)
+        // if it's a review checklist, join with appropriate markdown (\n - for txt, - [] for md, <ul><li></li></ul> for html)
+
+        // if appendix is requested, join the policy and appendix arrays together
+        // if policy only, join the policy arrays together
+
         // if we're building a policy
         if (p){
           // if there is general content and we don't already have it
@@ -87,7 +123,8 @@ function compileDoc(p,a){
 
 
 
-// function to replace placeholder text in policy
+// function to replace temporary placeholder text in policy
+// modify this to just handle one replacement at a time
 function replaceTemp(policyArr) {
   var editedArray = [];
   // for each entry in the array
@@ -109,13 +146,16 @@ function replaceTemp(policyArr) {
   }
 
   // join all the edited array entries together into a single string
+  // just return array?
   editedArray = editedArray.join("\n");
   return editedArray;
 }
 
 // takes all the array items (policy and incident response) and puts them in the right order and groupings
-function formatPolicy(pol, inc){
+// takes tempPolicy, tempGeneralA, tempReviewA and tempTipsA arrays
+function formatArray(array){
 // at the start, title Organisational Security Policy
+// for each item in the array
 // at q6, subheading Device Security
 // at q10, subheading Communications Security
 // at q15, subheading Account Security
@@ -123,7 +163,7 @@ function formatPolicy(pol, inc){
 }
 
 // takes all the general, review and tip items and organises them
-function formatAppendix(gen, rev, tip){
+function sortAppendix(gen, rev, tip){
 // at the start, title Appendix
 // at gen, subheading General advice
 // at rev, subheading Review checklist
