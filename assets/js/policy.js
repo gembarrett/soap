@@ -23,9 +23,10 @@ function compileDoc(p,a){
 
   // for each of the answer references
   for (var i = 0; i < currentState.answers.length; i++){
-    // get the qRef currentState.answers[i].q
+    // get quick ref for answers
+    aRef = currentState.answers[i].a;
+    // get quick ref for question number
     qRef = currentState.answers[i].q;
-
     // set up question name
     var thisQ = 'q'+qRef;
 
@@ -37,7 +38,47 @@ function compileDoc(p,a){
       if (found){
         switch (true) {
           case qRef < 5:
-            contextP.push(found);
+            // create the policy elements
+            // if this is a new question and there's general content
+            if ((qRef !== prevQ) && (found.policyContent !== "")) {
+              // remove placeholder words
+              thisContent = replaceStr(found.policyContent);
+              // push it to this section's array
+              contextP.push(thisContent);
+            }
+            // if there's answer-specific policy content
+            if (found.answers[aRef].policyEntry !== "") {
+              // remove placeholder words
+              thisContent = replaceStr(found.answers[aRef].policyEntry);
+              // push it to this section's array
+              contextP.push(thisContent);
+            }
+            // if we need the appendix too
+            if (a) {
+              // again check if we're on a new question
+              if ((qRef !== prevQ) && (found.appendixContent !== "")) {
+                // remove placeholder words
+                thisContent = replaceStr(found.appendixContent);
+                // push it to the appropriate appendix array
+                genA.push(thisContent);
+              }
+              // if there's review checklist content
+              if (found.answers[aRef].appendixEntry[0].reviewList !== ""){
+                // remove placeholder words
+                thisContent = replaceStr(found.answers[aRef].appendixEntry[0].reviewList);
+                // push it to the appropriate appendix array
+                revA.push(thisContent);
+              }
+              // if there's  tips list content
+              if (found.answers[aRef].appendixEntry[0].tipList !== ""){
+                // remove placeholder words
+                thisContent = replaceStr(found.answers[aRef].appendixEntry[0].tipList);
+                // push it to the appropriate appendix array
+                tipA.push(thisContent);
+              }
+            }
+            // set the prevQ for next comparison
+            // prevQ = qRef;
             break;
           case qRef < 10:
             deviceP.push(found);
@@ -58,6 +99,8 @@ function compileDoc(p,a){
             console.log(qRef + ' not found');
         }
 
+
+
         // for each of the items in each of the arrays
         // get the general and specific policy content,
         // replace the placeholder words
@@ -67,8 +110,9 @@ function compileDoc(p,a){
         // replace the placeholder words
         // assign to separate arrays
 
-        console.log(contextP, deviceP, commsP, acctsP, incResP);
-        console.log(genA, revA, tipA);
+        console.log(contextP);
+        // console.log(contextP, deviceP, commsP, acctsP, incResP);
+        // console.log(genA, revA, tipA);
 
         // at this point there should be 6 policy arrays and 3 appendix arrays, sorted and placeholders removed
 
@@ -142,6 +186,18 @@ function compileDoc(p,a){
   return doc;
 }
 
+// function to replace temporary placeholder text in policy
+function replaceStr(string) {
+  var editedStr = string;
+  // for each of the stored keys
+  for (var key in dict){
+    var regexKey = key.replace('[', '\\[').replace(']', '\\]');
+    var regex = new RegExp(regexKey, 'gi');
+    // check if that key exists in the string and replace it with value from dict
+    editedStr = editedStr.replace(regex, dict[key]);
+  }
+  return editedStr;
+}
 
 
 // function to replace temporary placeholder text in policy
