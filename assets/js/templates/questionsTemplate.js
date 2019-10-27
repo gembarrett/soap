@@ -2,8 +2,10 @@ templates.questionsTemplate = function(data){
   var content = `
       <progress max="`+questionsList.length+`" value="0"></progress><div id="questionContainer" class="">
   `;
+
   for(var i = 0; i < questionsList.length; i++) {
       var question = data[i];
+
       // create the start of the form
       content += `<form id="`+question.id+ `" class="questionContent`+ (question.id !== 'q0' ? '">' : ' current">');
       // if it's a question
@@ -71,5 +73,6 @@ templates.questionsTemplate = function(data){
   }
   content += '<div class="btn-wrap wrap-r"><button disabled id="previewPolicy" class="previewButton btn btn-seco">Preview</button><button id="submitAnswers" onclick="handleSubmit()" class="nextButton btn btn-prim">Skip</button></div>';
   content += '<small><a href="mailto:feedback@usesoap.app?subject=Suggested%20change&amp;body=The%20problem%20with%20this%20page%20is%3A%0AThis%20is%20what%20I%20expected%3A%0AAny%20other%20info%3A%0A%0AI%20%5Bam%20%2F%20am%20not%5D%20ok%20with%20being%20contacted%20about%20this%20suggested%20change%20(delete%20as%20appropriate)">Suggest changes</a></small>';
+
   return content;
 };

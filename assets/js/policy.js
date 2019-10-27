@@ -9,8 +9,14 @@ function compileDoc(p,a){
   var tempReviewA = [];
   var tempTipsA = [];
 
-  var contextP, deviceP, commsP, acctsP, incResP;
-  var genA, revA, tipA;
+  var contextP = [];
+  var deviceP = [];
+  var commsP = [];
+  var acctsP = [];
+  var incResP = [];
+  var genA = [];
+  var revA = [];
+  var tipA = [];
 
   // set up prevQ currentState.answers[0].q
   var prevQ = currentState.answers[0].q;
@@ -29,31 +35,28 @@ function compileDoc(p,a){
       var found = sections[j].find(ans => ans.id === thisQ);
       // if there's data
       if (found){
-
-        switch (qRef) {
-          case (qRef < 5):
+        switch (true) {
+          case qRef < 5:
             contextP.push(found);
             break;
-          case (qRef < 10):
+          case qRef < 10:
             deviceP.push(found);
             break;
-          case (qRef < 13):
+          case qRef < 13:
             commsP.push(found);
             break;
-          case (qRef === 13):
+          case qRef === 13:
             incResP.push(found);
             break;
-          case (qRef < 19):
+          case qRef < 19:
             acctsP.push(found);
             break;
-          case (qRef === 19):
+          case qRef === 19:
             incResP.push(found);
             break;
           default:
             console.log(qRef + ' not found');
         }
-        console.log(contextP, deviceP, commsP, acctsP, incResP);
-        console.log(genA, revA, tipA);
 
         // for each of the items in each of the arrays
         // get the general and specific policy content,
@@ -63,6 +66,9 @@ function compileDoc(p,a){
         // get the general and specific appendix contents
         // replace the placeholder words
         // assign to separate arrays
+
+        console.log(contextP, deviceP, commsP, acctsP, incResP);
+        console.log(genA, revA, tipA);
 
         // at this point there should be 6 policy arrays and 3 appendix arrays, sorted and placeholders removed
 
