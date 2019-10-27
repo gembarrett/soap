@@ -38,21 +38,24 @@ function compileDoc(p,a){
       if (found){
         switch (true) {
           case qRef < 5:
-            // create the policy elements
-            // if this is a new question and there's general content
-            if ((qRef !== prevQ) && (found.policyContent !== "")) {
-              // remove placeholder words
-              thisContent = replaceStr(found.policyContent);
-              // push it to this section's array
-              contextP.push(thisContent);
-            }
-            // if there's answer-specific policy content
-            if (found.answers[aRef].policyEntry !== "") {
-              // remove placeholder words
-              thisContent = replaceStr(found.answers[aRef].policyEntry);
-              // push it to this section's array
-              contextP.push(thisContent);
-            }
+
+            contextP = getPolicyContent(qRef, prevQ, aRef, contextP, found);
+
+            // // create the policy elements
+            // // if this is a new question and there's general content
+            // if ((qRef !== prevQ) && (found.policyContent !== "")) {
+            //   // remove placeholder words
+            //   thisContent = replaceStr(found.policyContent);
+            //   // push it to this section's array
+            //   contextP.push(thisContent);
+            // }
+            // // if there's answer-specific policy content
+            // if (found.answers[aRef].policyEntry !== "") {
+            //   // remove placeholder words
+            //   thisContent = replaceStr(found.answers[aRef].policyEntry);
+            //   // push it to this section's array
+            //   contextP.push(thisContent);
+            // }
             // if we need the appendix too
             if (a) {
               // again check if we're on a new question
@@ -168,7 +171,6 @@ function compileDoc(p,a){
   // sort and format then replace placeholder words
   // replace placeholder words then sort and format
   if (p){
-    console.log(tempPolicy[0]);
     doc = replaceTemp(tempPolicy);
   }
   if (a){
@@ -277,4 +279,17 @@ function downloadPolicy(type) {
             window.URL.revokeObjectURL(url);
         }, 0);
     }
+}
+
+
+function getPolicyContent(question, previous, answer, array, content){
+  if ((question !== previous) && (content.policyContent !== "")) {
+    thisContent = replaceStr(content.policyContent);
+    array.push(thisContent);
+  }
+  if (content.answers[answer].policyEntry !== ""){
+    thisContent = replaceStr(content.answers[answer].policyEntry);
+    array.push(thisContent);
+  }
+  return array;
 }
