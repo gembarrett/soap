@@ -38,6 +38,7 @@ function compileDoc(p,a){
       var found = sections[j].find(ans => ans.id === thisQ);
       // if there's data
       if (found){
+        console.log('matching question '+qRef);
         switch (true) {
           case qRef < 5:
             contextP = getPolicyContent(qRef, prevQ, aRef, contextP, found);
@@ -66,7 +67,7 @@ function compileDoc(p,a){
             // set the prevQ for next comparison
             // prevQ = qRef;
             break;
-          case qRef === 13:
+          case qRef < 14:
             incResP = getPolicyContent(qRef, prevQ, aRef, incResP, found);
             // set the prevQ for next comparison
             // prevQ = qRef;
@@ -80,7 +81,7 @@ function compileDoc(p,a){
             // set the prevQ for next comparison
             // prevQ = qRef;
             break;
-          case qRef === 19:
+          case qRef < 20:
             incResP = getPolicyContent(qRef, prevQ, aRef, incResP, found);
             break;
           default:
@@ -92,12 +93,6 @@ function compileDoc(p,a){
     prevQ = qRef;
   }
 
-  console.log(contextP, deviceP, commsP, acctsP, incResP);
-  console.log(appContent);
-
-  // at this point there should be 6 policy arrays and 3 appendix arrays, sorted and placeholders removed
-
-  // for each array
   // add a headline at the start of the array, with appropriate markdown (\n for txt, ## for md, <h2></h2>for html)
   // for each of the items in the array
   // if it's a policy array, join with appropriate markdown (\n for text, <br> for md, <p></p> for html)
@@ -106,29 +101,29 @@ function compileDoc(p,a){
   // if it's a review checklist, join with appropriate markdown (\n - for txt, - [] for md, <ul><li></li></ul> for html)
 
 
-  doc = contextP.join('\n');
+  doc = 'Organisational Security Policy\n\nCreated '+dateStamp()+'\n\n'+contextP.join('\n');
   switch (true) {
     case deviceP.length > 0:
-      doc += '\n*Device Security*\n' + deviceP.join('\n');
+      doc += '\n\n*Device Security*\n' + deviceP.join('\n');
     case commsP.length > 0:
-      doc += '\n*Communications Security*\n' + commsP.join('\n');
+      doc += '\n\n*Communications Security*\n' + commsP.join('\n');
     case acctsP.length > 0:
-      doc += '\n*Accounts Security*\n' + acctsP.join('\n');
+      doc += '\n\n*Accounts Security*\n' + acctsP.join('\n');
     case incResP.length > 0:
-      doc += '\n*What to do if...*\n' + incResP.join('\n');
+      doc += '\n\n*What to do if...*\n' + incResP.join('\n');
     default:
       console.log('empty section');
   }
   // if appendix is requested, join the policy and appendix arrays together
   if (a) {
-    doc += '\n*Appendix*\n';
+    doc += '\n\n*Appendix*\n';
     switch (true) {
       case appContent.general.length > 0:
-        doc += '\n*General Advice*\n' + appContent.general.join('\n');
+        doc += '\n\n*General Advice*\n' + appContent.general.join('\n');
       case appContent.review.length > 0:
-        doc += '\n*Review Checklist*\n' + appContent.review.join('\n');
+        doc += '\n\n*Review Checklist*\n' + appContent.review.join('\n');
       case appContent.tips.length > 0:
-        doc += '\n*Implementation Tips*\n' + appContent.tips.join('\n');
+        doc += '\n\n*Implementation Tips*\n' + appContent.tips.join('\n');
       default:
         console.log('empty section');
     }
@@ -147,26 +142,6 @@ function replaceStr(string) {
     editedStr = editedStr.replace(regex, dict[key]);
   }
   return editedStr;
-}
-
-
-// takes all the array items (policy and incident response) and puts them in the right order and groupings
-// takes tempPolicy, tempGeneralA, tempReviewA and tempTipsA arrays
-function editArray(array){
-// at the start, title Organisational Security Policy
-// for each item in the array
-// at q6, subheading Device Security
-// at q10, subheading Communications Security
-// at q15, subheading Account Security
-// place q13 and q19 with heading "What to do if"
-}
-
-// takes all the general, review and tip items and organises them
-function sortAppendix(gen, rev, tip){
-// at the start, title Appendix
-// at gen, subheading General advice
-// at rev, subheading Review checklist
-// at tip, subheading Implementation tips
 }
 
 function dateStamp(){
