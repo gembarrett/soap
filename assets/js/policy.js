@@ -72,7 +72,7 @@ function compileDoc(p,a){
             // prevQ = qRef;
             break;
           case qRef < 19:
-            commsP = getPolicyContent(qRef, prevQ, aRef, commsP, found);
+            acctsP = getPolicyContent(qRef, prevQ, aRef, acctsP, found);
             // if we need the appendix too
             if (a) {
               appContent = getAppendixContent(qRef, prevQ, aRef, appContent, found);
@@ -86,87 +86,52 @@ function compileDoc(p,a){
           default:
             console.log(qRef + ' not found');
         }
-
-        console.log(contextP, deviceP, commsP, acctsP, incResP);
-        console.log(appContent);
-
-        // at this point there should be 6 policy arrays and 3 appendix arrays, sorted and placeholders removed
-
-        // for each array
-        // add a headline at the start of the array, with appropriate markdown (\n for txt, ## for md, <h2></h2>for html)
-        // for each of the items in the array
-        // if it's a policy array, join with appropriate markdown (\n for text, <br> for md, <p></p> for html)
-        // if appendix is requested
-        // if it's a general or tips appendix array, join with appropriate markdown (\n - for txt, * for md, <ul></li></li></ul> for html)
-        // if it's a review checklist, join with appropriate markdown (\n - for txt, - [] for md, <ul><li></li></ul> for html)
-
-        // if appendix is requested, join the policy and appendix arrays together
-        // if policy only, join the policy arrays together
-
-        // if we're building a policy
-        // if (p){
-        //   // if there is general content and we don't already have it
-        //   if ((qRef != prevQ) && (found.policyContent !== "")){
-        //     console.log(found.policyContent);
-        //     // store it
-        //     tempPolicy.push(found.policyContent);
-        //   }
-        //   // if there is specific content
-        //   if (found.answers[currentState.answers[i].a].policyEntry){
-        //     // store it
-        //     tempPolicy.push(found.answers[currentState.answers[i].a].policyEntry);
-        //   }
-        // }
-        // if we're building an appendix
-        // if (a){
-        //   // if there is general content and we don't already have it
-        //   if ((qRef != prevQ) && (found.appendixContent !== "")){
-        //     // store it
-        //     tempGeneralA.push(found.appendixContent);
-        //   }
-        //   // create an easy reference for the specific appendix content
-        //   var appendix = found.answers[currentState.answers[i].a].appendixEntry[0];
-        //   // if there's review or tip content
-        //   if (appendix.reviewList.length > 0){
-        //     // store it
-        //     tempReviewA.push(appendix.reviewList);
-        //   }
-        //   if (appendix.tipList.length > 0){
-        //     // store it
-        //     tempTipsA.push(appendix.tipList);
-        //   }
-        // }
       }
     }
     // store this question's ID for comparison in the next loop
     prevQ = qRef;
   }
-  // sort and format then replace placeholder words
-  // replace placeholder words then sort and format
-  // if (p){
-  //   doc = replaceTemp(tempPolicy);
-  // }
-  // if (a){
-  //   doc += '-----Appendix-----'+'\n';
-  //   if (tempGeneralA.length > 0) {
-  //     doc += replaceTemp(tempGeneralA)+'\n';
-  //   }
-  //   if (tempReviewA.length > 0){
-  //     doc += '-----Review checklist-----'+'\n'+replaceTemp(tempReviewA)+'\n';
-  //   }
-  //   if (tempTipsA.length > 0){
-  //     doc += '-----Implementation tips-----'+'\n'+replaceTemp(tempTipsA);
-  //   }
-  // }
+
+  console.log(contextP, deviceP, commsP, acctsP, incResP);
+  console.log(appContent);
+
+  // at this point there should be 6 policy arrays and 3 appendix arrays, sorted and placeholders removed
+
+  // for each array
+  // add a headline at the start of the array, with appropriate markdown (\n for txt, ## for md, <h2></h2>for html)
+  // for each of the items in the array
+  // if it's a policy array, join with appropriate markdown (\n for text, <br> for md, <p></p> for html)
+  // if appendix is requested
+  // if it's a general or tips appendix array, join with appropriate markdown (\n - for txt, * for md, <ul></li></li></ul> for html)
+  // if it's a review checklist, join with appropriate markdown (\n - for txt, - [] for md, <ul><li></li></ul> for html)
+
+
   doc = contextP.join('\n');
-  doc += '*Device security*\n' + deviceP.join('\n');
-  doc += '*Communications security*\n' + commsP.join('\n');
-  doc += '*Accounts security*\n' + acctsP.join('\n');
-  doc += '*Incident response*\n' + incResP.join('\n');
+  switch (true) {
+    case deviceP.length > 0:
+      doc += '\n*Device Security*\n' + deviceP.join('\n');
+    case commsP.length > 0:
+      doc += '\n*Communications Security*\n' + commsP.join('\n');
+    case acctsP.length > 0:
+      doc += '\n*Accounts Security*\n' + acctsP.join('\n');
+    case incResP.length > 0:
+      doc += '\n*What to do if...*\n' + incResP.join('\n');
+    default:
+      console.log('empty section');
+  }
+  // if appendix is requested, join the policy and appendix arrays together
   if (a) {
-    doc += '*Appendix*\n' + appContent.general.join('\n');
-    doc += '*Review checklist*\n' + appContent.review.join('\n');
-    doc += '*Tips list*\n' + appContent.tips.join('\n');
+    doc += '\n*Appendix*\n';
+    switch (true) {
+      case appContent.general.length > 0:
+        doc += '\n*General Advice*\n' + appContent.general.join('\n');
+      case appContent.review.length > 0:
+        doc += '\n*Review Checklist*\n' + appContent.review.join('\n');
+      case appContent.tips.length > 0:
+        doc += '\n*Implementation Tips*\n' + appContent.tips.join('\n');
+      default:
+        console.log('empty section');
+    }
   }
   return doc;
 }
@@ -184,34 +149,6 @@ function replaceStr(string) {
   return editedStr;
 }
 
-
-// function to replace temporary placeholder text in policy
-// modify this to just handle one replacement at a time
-function replaceTemp(policyArr) {
-  var editedArray = [];
-  // for each entry in the array
-  for (var i=0; i<policyArr.length; i++) {
-    var newString = policyArr[i];
-    // for each of the stored keys
-    for (var key in dict) {
-      var regexKey = key.replace('[', '\\[').replace(']', '\\]');
-      var regex = new RegExp(regexKey, 'gi');
-      // replace any matches and put them in a new string
-      if (newString){
-        // add this new string to the array
-        newString = newString.replace(regex, dict[key]);
-      } else {
-        console.log(policyArr[i].length);
-      }
-    }
-    editedArray.push(newString);
-  }
-
-  // join all the edited array entries together into a single string
-  // just return array?
-  editedArray = editedArray.join("\n");
-  return editedArray;
-}
 
 // takes all the array items (policy and incident response) and puts them in the right order and groupings
 // takes tempPolicy, tempGeneralA, tempReviewA and tempTipsA arrays
