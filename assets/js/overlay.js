@@ -20,7 +20,7 @@ function injectOverlay() {
 
   open.addEventListener("click", function() {
     policyText = compileDoc(true, false);
-    scrollbox.innerHTML = policyText;
+    scrollbox.innerHTML = policyText.html;
     togglePreview(modal, overlay);
   });
 }

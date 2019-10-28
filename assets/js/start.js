@@ -1,5 +1,4 @@
 // initialise counters with the first section and question, this is updated at the end of questions and sections
-console.log('start - initialising');
 
 //  list of sections
 var sections = [section0, section1, section2];
@@ -39,6 +38,10 @@ var dict = {};
 // delete and replace
 var policyText = [];
 var appendixText = [];
+
+
+var output;
+
 
 function addChangeListeners() {
   // grab all the form inputs
@@ -101,7 +104,6 @@ function updateProgressBar(){
 
 // this is the function that's called when a user submits an answer - could the question ID be passed through?
 function handleSubmit() {
-  console.log(currentState.questionQ + ' answering - handleSubmit');
   // search for the currently shown element
   var match = document.querySelector('.current');
   // this gets the current question id number e.g. q0
@@ -136,7 +138,6 @@ function handleSubmit() {
 
   // if the position is not beyond the total number of questions for the current section
   if (currentState.questionP < currentState.sectionQ.length) {
-    console.log('moving to next question!');
     // grab the next question's element and add class of current
     var nextQ = document.getElementById(currentState.questionQ);
     nextQ.classList.add("current");
@@ -144,7 +145,6 @@ function handleSubmit() {
   // if the sections have not run out (using the counter because it isn't changed)
   // consider whether I want this to happen here, before the last q, or after it
   else if (currentState.sectionC < sections.length-1) {
-    console.log('moving to next section!');
     // increase the section counter
     currentState.sectionC++;
     // reset the position counter
@@ -172,7 +172,6 @@ function handleSubmit() {
 }
 
 function getInput(el, qId) {
-  console.log('answering - getInput');
   // search el for inputs or textboxes.
   var inputs = el.getElementsByTagName('input');
   var textareas = el.getElementsByTagName('textarea');
