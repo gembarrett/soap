@@ -28,7 +28,7 @@ var ros = [
     "how":[
       {
         "head":"How does SOAP work?",
-        "desc":"It’s simple! SOAP asks questions about your organizational security practices. Your answers help SOAP build a policy which is presented to you at the end the process. You can preview your policy at any point, and each question is accompanied by information to help you fully understand, research, and implement the associated practices. SOAP’s unique process focuses on seven key areas commonly included in policies, like devices or travel security. Each section is preceded by a hypothetical—but common—security incident to help orient the questions within the context of a realistic threat."
+        "desc":"It’s simple! SOAP asks questions about your organizational security practices. Your answers help SOAP build a policy which is presented to you at the end of the process. You can preview your policy at any point, and each question is accompanied by information to help you fully understand, research, and implement the associated practices. SOAP’s unique process focuses on seven key areas commonly included in policies, like devices or travel security. Each section is preceded by a hypothetical—but common—security incident to help orient the questions within the context of a realistic threat."
       }
     ],
     "security":[

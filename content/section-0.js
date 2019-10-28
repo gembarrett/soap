@@ -3,14 +3,14 @@ var section0 = [
     "isQuestion": false,
     "id":"q0",
     "title": "Getting started!",
-    "paragraph":["The three stages of SOAP’s policy-building process cover key aspects of organizational security. At the start of each section you'll be asked to consider a hypothetical, but common, security incident. What follows next is a series of questions about relevant mitigation tactics, with each selected answer contributing to the appropriate content for your security policy. Each section ends with an opportunity for you to specify the steps you want staff to take if, and when, they find themselves involved in a given incident.", "If you don’t understand the relevance or meaning of a particular question along the way, simply hit the + button beside it. This will reveal a panel with implementation tips, definitions, search terms, and other information to help clarify the question and its content. As you progress through the process, you can preview your policy at any time by hitting “Preview.” The progress bar at the top of each page shows how far you’ve come in the process. When you've completed all three sections, you will be shown your full policy, including the appendix. Download options are available so you can share the policy in the best way for your organization.", "This first section is all about understanding your organization's unique context. Your answers here will provide the information we need to start identifying the right questions to help shape your new, totally customized security policy. Ready? Let’s go!"]
+    "paragraph":["The three stages of SOAP’s policy-building process cover key aspects of organizational security. At the start of each section you'll be asked to consider a hypothetical, but common, security incident. What follows next is a series of questions about relevant mitigation tactics, with each selected answer contributing to the appropriate content for your security policy. Each section ends with an opportunity for you to specify the steps you want staff to take if, and when, they find themselves involved in a given incident.", "If you don’t understand the relevance or meaning of a particular question along the way, simply hit the '+' button beside it. This will reveal a panel with implementation tips, definitions, search terms, and other information to help clarify the question and its content. As you progress through the process, you can preview your policy at any time by hitting “Preview.” The progress bar at the top of each page shows how far you’ve come in the process. When you've completed all three sections, you will be shown your full policy, including the appendix. Download options are available so you can share the policy in the best way for your organization.", "This first section is all about understanding your organization's unique context. Your answers here will provide the information we need to start identifying the right questions to help shape your new, totally customized security policy. Ready? Let’s go!"]
   },
   {
     "isQuestion": true,
     "id":"q1",
     "q":"What is the name of your organisation?",
     "required":true,
-    "policyContent":"Organisational Security Policy \n",
+    "policyContent":"",
     "appendixContent":"",
     "answers":[
       {

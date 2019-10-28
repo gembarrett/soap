@@ -350,7 +350,7 @@ section {
 }
 
 .wrap-r {
-  justify-content: right;
+  justify-content: flex-end;
 }
 progress {
   width:100%;
@@ -409,6 +409,10 @@ input[type=text], textarea{
   color:inherit;
   border:none;
   border-bottom-style: dotted;
+}
+
+input[type=text]{
+  margin: 0 auto;
 }
 
 form > div > div > input[type='radio'],
