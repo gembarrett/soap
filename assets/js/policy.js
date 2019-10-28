@@ -14,9 +14,11 @@ function compileDoc(p,a){
   var commsP = [];
   var acctsP = [];
   var incResP = [];
-  var genA = [];
-  var revA = [];
-  var tipA = [];
+  var appContent = {
+    general: [],
+    review: [],
+    tips: []
+  }
 
   // set up prevQ currentState.answers[0].q
   var prevQ = currentState.answers[0].q;
@@ -38,84 +40,55 @@ function compileDoc(p,a){
       if (found){
         switch (true) {
           case qRef < 5:
-
             contextP = getPolicyContent(qRef, prevQ, aRef, contextP, found);
-
-            // // create the policy elements
-            // // if this is a new question and there's general content
-            // if ((qRef !== prevQ) && (found.policyContent !== "")) {
-            //   // remove placeholder words
-            //   thisContent = replaceStr(found.policyContent);
-            //   // push it to this section's array
-            //   contextP.push(thisContent);
-            // }
-            // // if there's answer-specific policy content
-            // if (found.answers[aRef].policyEntry !== "") {
-            //   // remove placeholder words
-            //   thisContent = replaceStr(found.answers[aRef].policyEntry);
-            //   // push it to this section's array
-            //   contextP.push(thisContent);
-            // }
             // if we need the appendix too
             if (a) {
-              // again check if we're on a new question
-              if ((qRef !== prevQ) && (found.appendixContent !== "")) {
-                // remove placeholder words
-                thisContent = replaceStr(found.appendixContent);
-                // push it to the appropriate appendix array
-                genA.push(thisContent);
-              }
-              // if there's review checklist content
-              if (found.answers[aRef].appendixEntry[0].reviewList !== ""){
-                // remove placeholder words
-                thisContent = replaceStr(found.answers[aRef].appendixEntry[0].reviewList);
-                // push it to the appropriate appendix array
-                revA.push(thisContent);
-              }
-              // if there's  tips list content
-              if (found.answers[aRef].appendixEntry[0].tipList !== ""){
-                // remove placeholder words
-                thisContent = replaceStr(found.answers[aRef].appendixEntry[0].tipList);
-                // push it to the appropriate appendix array
-                tipA.push(thisContent);
-              }
+              appContent = getAppendixContent(qRef, prevQ, aRef, appContent, found);
             }
             // set the prevQ for next comparison
             // prevQ = qRef;
             break;
           case qRef < 10:
-            deviceP.push(found);
+            deviceP = getPolicyContent(qRef, prevQ, aRef, deviceP, found);
+            // if we need the appendix too
+            if (a) {
+              appContent = getAppendixContent(qRef, prevQ, aRef, appContent, found);
+            }
+            // set the prevQ for next comparison
+            // prevQ = qRef;
             break;
           case qRef < 13:
-            commsP.push(found);
+            commsP = getPolicyContent(qRef, prevQ, aRef, commsP, found);
+            // if we need the appendix too
+            if (a) {
+              appContent = getAppendixContent(qRef, prevQ, aRef, appContent, found);
+            }
+            // set the prevQ for next comparison
+            // prevQ = qRef;
             break;
           case qRef === 13:
-            incResP.push(found);
+            incResP = getPolicyContent(qRef, prevQ, aRef, incResP, found);
+            // set the prevQ for next comparison
+            // prevQ = qRef;
             break;
           case qRef < 19:
-            acctsP.push(found);
+            commsP = getPolicyContent(qRef, prevQ, aRef, commsP, found);
+            // if we need the appendix too
+            if (a) {
+              appContent = getAppendixContent(qRef, prevQ, aRef, appContent, found);
+            }
+            // set the prevQ for next comparison
+            // prevQ = qRef;
             break;
           case qRef === 19:
-            incResP.push(found);
+            incResP = getPolicyContent(qRef, prevQ, aRef, incResP, found);
             break;
           default:
             console.log(qRef + ' not found');
         }
 
-
-
-        // for each of the items in each of the arrays
-        // get the general and specific policy content,
-        // replace the placeholder words
-        // assign back to this array
-        // if appendix is requested
-        // get the general and specific appendix contents
-        // replace the placeholder words
-        // assign to separate arrays
-
-        console.log(contextP);
-        // console.log(contextP, deviceP, commsP, acctsP, incResP);
-        // console.log(genA, revA, tipA);
+        console.log(contextP, deviceP, commsP, acctsP, incResP);
+        console.log(appContent);
 
         // at this point there should be 6 policy arrays and 3 appendix arrays, sorted and placeholders removed
 
@@ -131,38 +104,38 @@ function compileDoc(p,a){
         // if policy only, join the policy arrays together
 
         // if we're building a policy
-        if (p){
-          // if there is general content and we don't already have it
-          if ((qRef != prevQ) && (found.policyContent !== "")){
-            console.log(found.policyContent);
-            // store it
-            tempPolicy.push(found.policyContent);
-          }
-          // if there is specific content
-          if (found.answers[currentState.answers[i].a].policyEntry){
-            // store it
-            tempPolicy.push(found.answers[currentState.answers[i].a].policyEntry);
-          }
-        }
+        // if (p){
+        //   // if there is general content and we don't already have it
+        //   if ((qRef != prevQ) && (found.policyContent !== "")){
+        //     console.log(found.policyContent);
+        //     // store it
+        //     tempPolicy.push(found.policyContent);
+        //   }
+        //   // if there is specific content
+        //   if (found.answers[currentState.answers[i].a].policyEntry){
+        //     // store it
+        //     tempPolicy.push(found.answers[currentState.answers[i].a].policyEntry);
+        //   }
+        // }
         // if we're building an appendix
-        if (a){
-          // if there is general content and we don't already have it
-          if ((qRef != prevQ) && (found.appendixContent !== "")){
-            // store it
-            tempGeneralA.push(found.appendixContent);
-          }
-          // create an easy reference for the specific appendix content
-          var appendix = found.answers[currentState.answers[i].a].appendixEntry[0];
-          // if there's review or tip content
-          if (appendix.reviewList.length > 0){
-            // store it
-            tempReviewA.push(appendix.reviewList);
-          }
-          if (appendix.tipList.length > 0){
-            // store it
-            tempTipsA.push(appendix.tipList);
-          }
-        }
+        // if (a){
+        //   // if there is general content and we don't already have it
+        //   if ((qRef != prevQ) && (found.appendixContent !== "")){
+        //     // store it
+        //     tempGeneralA.push(found.appendixContent);
+        //   }
+        //   // create an easy reference for the specific appendix content
+        //   var appendix = found.answers[currentState.answers[i].a].appendixEntry[0];
+        //   // if there's review or tip content
+        //   if (appendix.reviewList.length > 0){
+        //     // store it
+        //     tempReviewA.push(appendix.reviewList);
+        //   }
+        //   if (appendix.tipList.length > 0){
+        //     // store it
+        //     tempTipsA.push(appendix.tipList);
+        //   }
+        // }
       }
     }
     // store this question's ID for comparison in the next loop
@@ -170,20 +143,30 @@ function compileDoc(p,a){
   }
   // sort and format then replace placeholder words
   // replace placeholder words then sort and format
-  if (p){
-    doc = replaceTemp(tempPolicy);
-  }
-  if (a){
-    doc += '-----Appendix-----'+'\n';
-    if (tempGeneralA.length > 0) {
-      doc += replaceTemp(tempGeneralA)+'\n';
-    }
-    if (tempReviewA.length > 0){
-      doc += '-----Review checklist-----'+'\n'+replaceTemp(tempReviewA)+'\n';
-    }
-    if (tempTipsA.length > 0){
-      doc += '-----Implementation tips-----'+'\n'+replaceTemp(tempTipsA);
-    }
+  // if (p){
+  //   doc = replaceTemp(tempPolicy);
+  // }
+  // if (a){
+  //   doc += '-----Appendix-----'+'\n';
+  //   if (tempGeneralA.length > 0) {
+  //     doc += replaceTemp(tempGeneralA)+'\n';
+  //   }
+  //   if (tempReviewA.length > 0){
+  //     doc += '-----Review checklist-----'+'\n'+replaceTemp(tempReviewA)+'\n';
+  //   }
+  //   if (tempTipsA.length > 0){
+  //     doc += '-----Implementation tips-----'+'\n'+replaceTemp(tempTipsA);
+  //   }
+  // }
+  doc = contextP.join('\n');
+  doc += '*Device security*\n' + deviceP.join('\n');
+  doc += '*Communications security*\n' + commsP.join('\n');
+  doc += '*Accounts security*\n' + acctsP.join('\n');
+  doc += '*Incident response*\n' + incResP.join('\n');
+  if (a) {
+    doc += '*Appendix*\n' + appContent.general.join('\n');
+    doc += '*Review checklist*\n' + appContent.review.join('\n');
+    doc += '*Tips list*\n' + appContent.tips.join('\n');
   }
   return doc;
 }
@@ -282,14 +265,30 @@ function downloadPolicy(type) {
 }
 
 
-function getPolicyContent(question, previous, answer, array, content){
+function getPolicyContent(question, previous, answer, policy, content){
   if ((question !== previous) && (content.policyContent !== "")) {
     thisContent = replaceStr(content.policyContent);
-    array.push(thisContent);
+    policy.push(thisContent);
   }
   if (content.answers[answer].policyEntry !== ""){
     thisContent = replaceStr(content.answers[answer].policyEntry);
-    array.push(thisContent);
+    policy.push(thisContent);
   }
-  return array;
+  return policy;
+}
+function getAppendixContent(question, previous, answer, appDoc, content){
+  if ((question !== previous) && (content.appendixContent !== "")) {
+    thisContent = replaceStr(content.appendixContent);
+    appDoc.general.push(thisContent);
+  }
+  appEntry = content.answers[answer].appendixEntry[0];
+  if (appEntry.reviewList.length > 0){
+    thisContent = replaceStr(appEntry.reviewList);
+    appDoc.review.push(thisContent);
+  }
+  if (appEntry.tipList.length > 0){
+    thisContent = replaceStr(appEntry.tipList);
+    appDoc.tips.push(thisContent);
+  }
+  return appDoc;
 }
