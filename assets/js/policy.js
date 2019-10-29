@@ -97,31 +97,26 @@ function compileDoc(p,a){
     prevQ = qRef;
   }
 
-  // if it's a policy array, join with appropriate markdown (\n for text, <br> for markdown, <p></p> for html)
-  // if appendix is requested
-  // if it's a general or tips appendix array, join with appropriate markdown (\n - for plain, * for markdown, <ul></li></li></ul> for html)
-  // if it's a review checklist, join with appropriate markdown (\n - for plain, - [] for markdown, <ul><li></li></ul> for html)
-
   doc.plain = 'Organisational Security Policy\n\nCreated '+dateStamp()+'\n\n'+contextP.join('\n');
-  doc.markdown = '#Organisational Security Policy ####Created '+dateStamp()+contextP.join('<br>');
+  doc.markdown = '# Organisational Security Policy \n#### Created '+dateStamp()+'\n\n'+contextP.join('\n');
   doc.html = '<h1>Organisational Security Policy</h1><h4>Created '+dateStamp()+'</h4><p>'+contextP.join('</p><p>')+'</p>';
 
   switch (true) {
     case deviceP.length > 0:
       doc.plain += '\n\nDevice Security\n' + deviceP.join('\n');
-      doc.markdown += '###Device Security <br>' + deviceP.join('<br>');
+      doc.markdown += '\n\n### Device Security \n' + deviceP.join('\n');
       doc.html += '<h3>Device Security</h3><p>' + deviceP.join('</p><p>')+'</p>';
     case commsP.length > 0:
       doc.plain += '\n\nCommunications Security\n' + commsP.join('\n');
-      doc.markdown += '###Communications Security <br>' + commsP.join('<br>');
+      doc.markdown += '\n\n### Communications Security \n' + commsP.join('\n');
       doc.html += '<h3>Communications Security</h3><p>' + commsP.join('</p><p>')+'</p>';
     case acctsP.length > 0:
       doc.plain += '\n\nAccounts Security\n' + acctsP.join('\n');
-      doc.markdown += '###Accounts Security <br>' + acctsP.join('<br>');
+      doc.markdown += '\n\n### Accounts Security \n' + acctsP.join('\n');
       doc.html += '<h3>Accounts Security</h3><p>' + acctsP.join('</p><p>')+'</p>';
     case incResP.length > 0:
-      doc.plain += '\n\nWhat to do if...\n' + incResP.join('\n');
-      doc.markdown += '###What to do if...<br>' + incResP.join('<br>');
+      doc.plain += '\n\nWhat to do if...\n' + incResP.join('\n\n');
+      doc.markdown += '\n\n### What to do if...\n' + incResP.join('\n\n');
       doc.html += '<h3>What to do if...</h3><p>' + incResP.join('</p><p>')+'</p>';
     default:
       console.log('empty section');
@@ -129,20 +124,20 @@ function compileDoc(p,a){
   // if appendix is requested, join the policy and appendix arrays together
   if (a) {
     doc.plain += '\n\nAppendix\n';
-    doc.markdown += '##Appendix <br>';
+    doc.markdown += '\n\n## Appendix <br>';
     doc.html += '<h2>Appendix</h2>';
     switch (true) {
       case appContent.general.length > 0:
         doc.plain += '\n\nGeneral Advice\n' + appContent.general.join('\n');
-        doc.markdown += '###General Advice <br>* ' + appContent.general.join('<br>* ');
+        doc.markdown += '\n\n### General Advice \n\n* ' + appContent.general.join('\n* ');
         doc.html += '<h3>General Advice</h3><ul><li>' + appContent.general.join('</li><li>')+'</li></ul>';
       case appContent.review.length > 0:
         doc.plain += '\n\nReview Checklist\n' + appContent.review.join('\n');
-        doc.markdown += '###Review Checklist <br>- [ ] ' + appContent.review.join('<br>- [ ] ');
-        doc.html += '<h3>Review Checklist</h3><ol></li>' + appContent.review.join('</li><li>')+'</li></ol>';
+        doc.markdown += '\n\n### Review Checklist \n\n- [ ] ' + appContent.review.join('\n- [ ] ');
+        doc.html += '<h3>Review Checklist</h3><ol><li>' + appContent.review.join('</li><li>')+'</li></ol>';
       case appContent.tips.length > 0:
         doc.plain += '\n\nImplementation Tips\n' + appContent.tips.join('\n');
-        doc.markdown += '###Implementation Tips <br>*' + appContent.tips.join('<br>* ');
+        doc.markdown += '\n\n### Implementation Tips \n\n* ' + appContent.tips.join('\n* ');
         doc.html += '<h3>Implementation Tips</h3><ul><li>' + appContent.tips.join('</li><li>')+'</li></ul>';
       default:
         console.log('empty section');
@@ -179,13 +174,21 @@ function dateStamp(){
 
 // function to download data to a file
 function downloadPolicy(type) {
-    // do this differently
     var data = output[type];
-    console.log(data);
-    var filename = "policyDoc";
     var format = 'text/'+type;
-    console.log(format);
-    var file = new Blob([data], {type: type});
+    var filename = "SOAP-policy";
+    if (type === 'markdown'){
+      filename += '.md';
+    } else if (type === 'plain'){
+      filename += '.txt';
+    } else {
+      filename += '.'+type;
+    }
+
+    var file = new File([data], filename, {
+      type: format,
+    });
+
     if (window.navigator.msSaveOrOpenBlob) // IE10+
         window.navigator.msSaveOrOpenBlob(file, filename);
     else { // Others
