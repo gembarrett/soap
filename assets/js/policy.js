@@ -157,6 +157,27 @@ function replaceStr(string) {
     // check if that key exists in the string and replace it with value from dict
     editedStr = editedStr.replace(regex, dict[key]);
   }
+  // if string contains items that start [date+
+  if (editedStr.match(/\[date\+[\.\d]+\]/g)){
+    // grab all instances in this string
+    dates = editedStr.match(/\[date\+[\.\d]+\]/g);
+    // for each instance
+    for (var d = 0; d < dates.length; d++){
+      // take the number after the +
+      num = dates[d].split('+');
+      num = num[1].split(']');
+      num = num[0];
+
+      // get the current date
+      start = new Date();
+      // add the appropriate number of months/years to it
+      start.setMonth(start.getMonth()+parseInt(num, 10));
+
+      // update the edited string
+      editedStr = editedStr.replace(dates[d], start);
+      console.log(editedStr);
+    }
+  }
   return editedStr;
 }
 

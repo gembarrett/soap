@@ -107,7 +107,7 @@ var section0 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": "Mark your calendar for review dates on [date+1, date+2, date+3]"
+            "tipList": "Mark your calendar for review dates on [date+12], [date+24], [date+36]"
           }
         ]
       },
@@ -120,7 +120,7 @@ var section0 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": "Mark your calendar for review dates on [date+0.5, date+1, date+1.5]"
+            "tipList": "Mark your calendar for review dates on [date+6], [date+12], [date+18]"
           }
         ],
       },
@@ -133,7 +133,7 @@ var section0 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": "Mark your calendar for review dates on [date+0.25, date+0.5, date+0.75]"
+            "tipList": "Mark your calendar for review dates on [date+3], [date+6], [date+9]"
           }
         ],
       },
@@ -154,7 +154,7 @@ var section0 = [
     "tips":[
       {"relevance":""},
       {"meaning":"It is recommended to review at least once a year to improve and update to meet new threats. Check your policy’s appendix at the end to find a checklist that will help when it comes time to review the policy."},
-      {"implementation":"Create calendar events for the next 2 policy reviews and invite stakeholders  involved in reviewing the policy (e.g. management, Human Resources, IT)."},
+      {"implementation":"Create calendar events for the next 2 policy reviews and invite stakeholders involved in reviewing the policy (e.g. management, Human Resources, IT)."},
       {"more":["review security policy"]}
     ]
   },

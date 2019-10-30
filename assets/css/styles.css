@@ -152,6 +152,7 @@ a {
 }
 
 .questionContent h2 {
+  width:90%;
 }
 
 .questionContent > .btn-tert {
