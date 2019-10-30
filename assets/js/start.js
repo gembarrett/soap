@@ -60,8 +60,10 @@ function toggleSkip(e){
   if ((e.data !== null) && (button.innerText === "Skip")){
     // change button text
     button.innerText = "Next";
+    button.disabled = false;
   } else if ((e.data === null) && (button.innerText === "Next")){
     button.innerText = "Skip";
+    button.disabled = true;
   }
 }
 
@@ -149,8 +151,9 @@ function handleSubmit() {
       // TODO reset the skip/next button here
       document.getElementById('submitAnswers').innerText = "Skip";
 
+
       nextQuestion();
-    
+
   }
 }
 
@@ -197,6 +200,12 @@ function nextQuestion(){
         window.location.href = "/";
       }
     }
+  }
+  // if there's a next question and it's required
+  if (nextQ[0] && nextQ[0].required){
+    // get and set the submit button to disabled
+    submit = document.querySelector('#submitAnswers');
+    submit.setAttribute("disabled", "");
   }
 }
 

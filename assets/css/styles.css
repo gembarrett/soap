@@ -203,6 +203,14 @@ a {
   cursor: initial;
   border-width: 1px;
   border-radius: 5%;
+  opacity:75%;
+}
+
+#submitAnswers:disabled {
+  cursor: not-allowed;
+  opacity:75%;
+  background-color: #888685;
+  border:#ccc;
 }
 
 .modal {
