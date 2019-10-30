@@ -48,7 +48,6 @@ function addChangeListeners() {
   var elements = Array.from(document.querySelectorAll('.form-el > input'));
   var boxes = Array.from(document.querySelectorAll('.form-el > textarea'));
   elements = elements.concat(boxes);
-  console.log(elements);
   for (var e = 0; e < elements.length; e++) {
     // if it's a textbox
     elements[e].oninput = toggleSkip;

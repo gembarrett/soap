@@ -42,7 +42,6 @@ function compileDoc(p,a){
       var found = sections[j].find(ans => ans.id === thisQ);
       // if there's data
       if (found){
-        console.log('matching question '+qRef);
         switch (true) {
           case qRef < 5:
             contextP = getPolicyContent(qRef, prevQ, aRef, contextP, found);
@@ -173,9 +172,13 @@ function replaceStr(string) {
       // add the appropriate number of months/years to it
       start.setMonth(start.getMonth()+parseInt(num, 10));
 
+      future = start.getDate();
+      var options = {month:'long'};
+      future += ' ' + new Intl.DateTimeFormat('en-UK', options).format(start);
+      future += ' ' + start.getFullYear();
+
       // update the edited string
-      editedStr = editedStr.replace(dates[d], start);
-      console.log(editedStr);
+      editedStr = editedStr.replace(dates[d], future);
     }
   }
   return editedStr;
