@@ -45,13 +45,14 @@ var output;
 
 function addChangeListeners() {
   // grab all the form inputs
-  var elements = document.querySelectorAll('.form-el > input');
+  var elements = Array.from(document.querySelectorAll('.form-el > input'));
+  var boxes = Array.from(document.querySelectorAll('.form-el > textarea'));
+  elements = elements.concat(boxes);
+  console.log(elements);
   for (var e = 0; e < elements.length; e++) {
     // if it's a textbox
     elements[e].oninput = toggleSkip;
-
   }
-  // TODO: add support for textareas
 }
 
 function toggleSkip(e){
@@ -201,11 +202,13 @@ function nextQuestion(){
       }
     }
   }
-  // if there's a next question and it's required
-  if (nextQ[0] && nextQ[0].required){
-    // get and set the submit button to disabled
-    submit = document.querySelector('#submitAnswers');
-    submit.setAttribute("disabled", "");
+  if (nextQ){
+    // if there's a next question and it's required
+    if (nextQ[0] && nextQ[0].required){
+      // get and set the submit button to disabled
+      submit = document.querySelector('#submitAnswers');
+      submit.setAttribute("disabled", "");
+    }     
   }
 }
 
