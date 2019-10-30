@@ -127,7 +127,6 @@ function handleSubmit() {
 
     // if it's required and there are no answers provided
     if (isRequired && noAnswers){
-      alert('You need to answer this question!');
       canProceed = false;
     }
     // if there's at least one answer returned and the button is disabled
@@ -208,7 +207,7 @@ function nextQuestion(){
       // get and set the submit button to disabled
       submit = document.querySelector('#submitAnswers');
       submit.setAttribute("disabled", "");
-    }     
+    }
   }
 }
 
