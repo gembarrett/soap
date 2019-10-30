@@ -113,6 +113,8 @@ function handleSubmit() {
   // use the form element and the question id to get the inputs
   var answers = getInput(match, id);
 
+  canProceed = true;
+
   // before doing anything else, check if this is a required question
   isRequired = match[0] ? match[0].required : false;
   // compare the size of answers array to find out if answers have been provided for this question
@@ -123,6 +125,7 @@ function handleSubmit() {
     // if it's required and there are no answers provided
     if (isRequired && noAnswers){
       alert('You need to answer this question!');
+      canProceed = false;
     }
     // if there's at least one answer returned and the button is disabled
     // get the preview button
@@ -133,24 +136,32 @@ function handleSubmit() {
 
   }
 
+  if (canProceed){
+
+      setUpPage(id);
+
+      // this hides the current question,
+      match.classList.remove("current");
+
+      // go to next question
+      id = isExcludedQ(id);
+
+      // TODO reset the skip/next button here
+      document.getElementById('submitAnswers').innerText = "Skip";
+
+      nextQuestion();
+    
+  }
+}
+
+function setUpPage(id){
   // add the additional stuff after everything else has loaded
-  // // TODO: hide the Preview button until after the overlay is in place
   if (parseInt(id) === 0) {
     injectOverlay();
     // sneaking this in here so it's done when textboxes exist
     resizingBoxes();
     addChangeListeners();
   }
-  // this hides the current question,
-  match.classList.remove("current");
-
-  // go to next question
-  id = isExcludedQ(id);
-
-  // TODO reset the skip/next button here
-  document.getElementById('submitAnswers').innerText = "Skip";
-
-  nextQuestion();
 }
 
 function nextQuestion(){
