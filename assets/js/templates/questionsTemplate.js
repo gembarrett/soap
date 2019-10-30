@@ -36,6 +36,7 @@ templates.questionsTemplate = function(data){
            // premake the id and name
            thisID = 'id="' +question.id+ "-"+ j+ '-answer"';
            thisName = 'name="' +question.id+  '-el"';
+           required = question.required ? "required" : "";
            // if there's a placeholder then grab it
            if (question.answers[j].placeholder) {
              thisPlaceholder = 'placeholder="' + question.answers[j].placeholder + '"';
@@ -49,17 +50,17 @@ templates.questionsTemplate = function(data){
 
            // if there's a textarea
            if (question.answers[j].type === 'textarea') {
-             content += '<textarea ' +thisID+thisName+thisPlaceholder+ ' class="incidentBox"></textarea>';
+             content += '<textarea ' +thisID+thisName+thisPlaceholder+ ' class="incidentBox" '+required+'></textarea>';
            }
 
            // if there's a textbox
            else if (question.answers[j].type === 'text') {
-             content += thisLabel + '<input type="' +question.answers[j].type+ '"' +thisID+thisName+thisPlaceholder+ '>';
+             content += thisLabel + '<input type="' +question.answers[j].type+ '"' +thisID+thisName+thisPlaceholder+required+ '>';
            }
 
            // if there's another input type
            else {
-             content += '<input type="' +question.answers[j].type+ '"' +thisID+thisName+ '>' + thisLabel;
+             content += '<input type="' +question.answers[j].type+ '"' +thisID+thisName+required+ '>' + thisLabel;
            }
 
            content += '</div>';

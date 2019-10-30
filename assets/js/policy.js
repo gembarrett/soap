@@ -144,7 +144,6 @@ function compileDoc(p,a){
     }
   }
   output = doc;
-  console.log(output);
   return doc;
 }
 

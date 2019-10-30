@@ -102,21 +102,35 @@ function updateProgressBar(){
   el.value++;
 }
 
-// this is the function that's called when a user submits an answer - could the question ID be passed through?
+// this is the function that's called when a user submits an answer
 function handleSubmit() {
-  // search for the currently shown element
+  // search for the currently shown element - question and answer
   var match = document.querySelector('.current');
   // this gets the current question id number e.g. q0
   var id = currentState.questionQ.split('q')[1];
+
+  beforeSize = currentState.answers.length;
   // use the form element and the question id to get the inputs
-  // maybe also grab the section id here
   var answers = getInput(match, id);
 
-  // get the preview button
-  prev = document.querySelector('#previewPolicy');
-  // if there's at least one answer returned and the button is disabled
-  if ((answers.length > 0) && prev.disabled){
-    prev.removeAttribute('disabled');
+  // before doing anything else, check if this is a required question
+  isRequired = match[0] ? match[0].required : false;
+  // compare the size of answers array to find out if answers have been provided for this question
+  if (id > 0){
+    // have answers been provided for this question?
+    noAnswers = beforeSize === answers.length ? true : false;
+
+    // if it's required and there are no answers provided
+    if (isRequired && noAnswers){
+      alert('You need to answer this question!');
+    }
+    // if there's at least one answer returned and the button is disabled
+    // get the preview button
+    prev = document.querySelector('#previewPolicy');
+    if (!noAnswers && prev.disabled){
+      prev.removeAttribute('disabled');
+    }
+
   }
 
   // add the additional stuff after everything else has loaded
@@ -136,6 +150,10 @@ function handleSubmit() {
   // TODO reset the skip/next button here
   document.getElementById('submitAnswers').innerText = "Skip";
 
+  nextQuestion();
+}
+
+function nextQuestion(){
   // if the position is not beyond the total number of questions for the current section
   if (currentState.questionP < currentState.sectionQ.length) {
     // grab the next question's element and add class of current
@@ -191,7 +209,7 @@ function getInput(el, qId) {
       s: currentState.sectionC,
       q: qId,
       a: answerID,
-      t: textareas[0].value
+      t: textareas[0].value,
     });
     // store the inputted value in the dictionary
     dict[result.answers[answerID].storeAs] = textareas[0].value;
@@ -218,7 +236,7 @@ function getInput(el, qId) {
         s: currentState.sectionC,
         q: qId,
         a: answerID,
-        t: inputs[i].value
+        t: inputs[i].value,
       });
     }
 
@@ -238,7 +256,7 @@ function getInput(el, qId) {
       currentState.answers.push({
         s: currentState.sectionC,
         q: qId,
-        a: answerID
+        a: answerID,
       });
     }
   }
