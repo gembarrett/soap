@@ -452,3 +452,14 @@ form > div > div > input:checked + label {
   background-color: #96CAEE;
   color:#fff;
 }
+
+.notice {
+  font-size: 0.8em;
+  color: #fff;
+  background-color: #668eaa;
+  padding: 1em;
+  text-align: center;
+}
+.notice h4, .notice p{
+  margin:0;
+}

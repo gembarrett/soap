@@ -44,6 +44,10 @@ var output;
 
 
 function addChangeListeners() {
+  var notice = document.querySelector('.notice');
+  // TODO: investigate why this is triggered on q1, rather than onclick
+  notice.onclick = notice.remove();
+
   // grab all the form inputs
   var elements = Array.from(document.querySelectorAll('.form-el > input'));
   var boxes = Array.from(document.querySelectorAll('.form-el > textarea'));
