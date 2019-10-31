@@ -49,13 +49,24 @@ function addChangeListeners() {
   notice.onclick = notice.remove();
 
   // grab all the form inputs
+  var radios = Array.from(document.querySelectorAll('.form-el > input[type="radio"]'))
+  var checks = Array.from(document.querySelectorAll('.form-el > input[type="checkbox"]'));
+
   var elements = Array.from(document.querySelectorAll('.form-el > input'));
   var boxes = Array.from(document.querySelectorAll('.form-el > textarea'));
   elements = elements.concat(boxes);
   for (var e = 0; e < elements.length; e++) {
-    // if it's a textbox
-    elements[e].oninput = toggleSkip;
+    // if it's a radio or checkbox
+    if ((elements[e].type === "radio") || (elements[e].type === "checkbox")){
+      elements[e].addEventListener('change', toggleSkip);
+    } else {
+      elements[e].oninput = toggleSkip;
+    }
   }
+}
+
+function updateValue(e) {
+  log.textContent = e.target.value;
 }
 
 function toggleSkip(e){
@@ -128,10 +139,15 @@ function handleSubmit() {
     // have answers been provided for this question?
     noAnswers = beforeSize === answers.length ? true : false;
 
+    console.log(beforeSize);
+    console.log(answers.length);
+
     // if it's required and there are no answers provided
     if (isRequired && noAnswers){
       canProceed = false;
     }
+    console.log(canProceed);
+
     // if there's at least one answer returned and the button is disabled
     // get the preview button
     prev = document.querySelector('#previewPolicy');
