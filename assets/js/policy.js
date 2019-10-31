@@ -142,6 +142,9 @@ function compileDoc(p,a){
         console.log('empty section');
     }
   }
+  doc.plain += '\n\nPlease note: it is recommended that this policy undergoes a legal review prior to being implemented in your organisation.';
+  doc.markdown += '\n\n#### *Please note: it is recommended that this policy undergoes a legal review prior to being implemented in your organisation.*';
+  doc.html += '<h4>Please note: it is recommended that this policy undergoes a legal review prior to being implemented in your organisation.</h4>';
   output = doc;
   return doc;
 }
