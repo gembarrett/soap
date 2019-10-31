@@ -29,6 +29,18 @@
     text-align: center;
     margin: 10px;
   }
+  .incidentBox {
+    width:100%;
+    min-width:unset;
+    padding:2em 0;
+  }
+  .links a {
+    padding:0;
+  }
+  .questionContent h2 {
+    width:80%;
+    font-size: 1.3em;
+  }
 }
 
 @media (min-width:600px) {

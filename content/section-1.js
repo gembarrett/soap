@@ -2,7 +2,7 @@ var section1 = [
   {
     "isQuestion": false,
     "id":"q9",
-    "title": "Incident 1",
+    "title": "Scenario one",
     "paragraph":["In this first scenario, we'll look at security threats which occur through organisational communications channels. A very common example of this that you've no doubt already experienced, is that of the suspicious email. Staff may already be aware of some 'red flags' from their personal experience of spam emails, but scammers are becoming more sophsticated all the time and attacks can be especially persuasive in instances where they have been directly targeting civil society organisations.", "An example of this is fake Google notifications sent with a request to 'review' some account detail by logging in using the provided link - at which point the login details are stolen by the attackers. Other risks can come from unexpected attachments containing malware or urgent requests for sensitive information from attackers impersonating one of the recipients trusted contacts.","Although we're talking about email here, this section will also look at other methods as really any communications channel can be vulnerable and should be considered when building your security policy."]
   },
   {
@@ -229,6 +229,19 @@ var section1 = [
       },
       {
         "type":"checkbox",
+        "answerText":"Better",
+        "storeAs":"[extArray]",
+        "excludes":[],
+        "policyEntry":"",
+        "appendixEntry":[
+          {
+            "reviewList":"",
+            "tipList": ""
+          }
+        ]
+      },
+      {
+        "type":"checkbox",
         "answerText":"HTTPSEverywhere",
         "storeAs":"[extArray]",
         "excludes":[],
@@ -271,7 +284,7 @@ var section1 = [
       {"relevance":"If your organisation’s staff use internet browsers that are capable of having extensions or plug-ins extend their functionality."},
       {"meaning":"Using an internet browser is such an everyday part of most people’s work that we often forget it is also a prime target for privacy invasions and attacks. Thankfully, browser extensions – add-ons that extend a browser’s features beyond the default – are available for defending against tracking by Google, Facebook and other advertising companies. They can also be used to detect fake Google login pages (used in spear phishing attacks) and encrypt communication with a website."},
       {"implementation":"Many of these extensions do their job silently in the background, only disturbing the user’s workflow on the occasions when doing their job causes disruption to the page’s functionality. Mobile browsing can also be protected through tracker-blocking apps and privacy-conscious browsers, and this can help with building a consistent defence for staff whenever they are using the internet for work purposes."},
-      {"more": ["privacy browser extensions firefox/chrome/safari", "privacy browser add-ons internet explorer"]}
+      {"more": ["privacy browser extensions firefox/chrome/safari", "privacy browser add-ons internet explorer", "privacy badger possum", "ublock origin", "https everywhere", "better privacy tool", "duckduckgo search engine", "google password alert"]}
     ]
   },
   {

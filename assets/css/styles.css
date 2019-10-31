@@ -293,21 +293,6 @@ section {
   font-size: 6em;
   margin:0.25em;
 }
-/* .feature:first-child h3::before {
-  content: "1";
-}
-.feature:nth-child(2) h3::before {
-  content: "2";
-}
-.feature:last-child h3::before {
-  content: "3";
-}
-.feature h3::before {
-  font-size: 4rem;
-} */
-
-/* solid colour for positive action */
-/* raised with drop shadow, emphasise functions */
 .btn {
   border-radius: 5%;
   border:2px solid;
@@ -377,6 +362,7 @@ progress[value="0"] {
   height: 50%;
   padding: 2em 0;
   display:inline-block;
+  min-height:200px;
 }
 small a {
   color:inherit;

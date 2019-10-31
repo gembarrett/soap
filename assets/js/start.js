@@ -154,9 +154,8 @@ function handleSubmit() {
       // TODO reset the skip/next button here
       document.getElementById('submitAnswers').innerText = "Skip";
 
-
       nextQuestion();
-
+      window.scrollTo(0,0);
   }
 }
 
