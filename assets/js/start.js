@@ -248,6 +248,7 @@ function getInput(el, qId) {
       t: textareas[0].value,
     });
     // store the inputted value in the dictionary
+    // should this be addToDictionary?
     dict[result.answers[answerID].storeAs] = textareas[0].value;
   }
 
