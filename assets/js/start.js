@@ -139,14 +139,10 @@ function handleSubmit() {
     // have answers been provided for this question?
     noAnswers = beforeSize === answers.length ? true : false;
 
-    console.log(beforeSize);
-    console.log(answers.length);
-
     // if it's required and there are no answers provided
     if (isRequired && noAnswers){
       canProceed = false;
     }
-    console.log(canProceed);
 
     // if there's at least one answer returned and the button is disabled
     // get the preview button
