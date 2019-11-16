@@ -99,8 +99,8 @@ var section0 = [
     "appendixContent":"",
     "answers":[
       {
-        "type":"radio",
-        "answerText":"annually",
+        "type":"checkbox",
+        "answerText":"annual",
         "storeAs": "[reviewFreq]",
         "excludes":[],
         "policyEntry":"",
@@ -112,7 +112,7 @@ var section0 = [
         ]
       },
       {
-        "type":"radio",
+        "type":"checkbox",
         "answerText":"6-monthly",
         "storeAs": "[reviewFreq]",
         "excludes":[], // review this
@@ -125,7 +125,7 @@ var section0 = [
         ],
       },
       {
-        "type":"radio",
+        "type":"checkbox",
         "answerText":"quarterly",
         "storeAs": "[reviewFreq]",
         "excludes":[],
@@ -138,7 +138,7 @@ var section0 = [
         ],
       },
       {
-        "type":"radio",
+        "type":"checkbox",
         "answerText":'"as threats arise"',
         "storeAs": "[reviewFreq]",
         "excludes":[],
