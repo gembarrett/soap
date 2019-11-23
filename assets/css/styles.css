@@ -406,6 +406,10 @@ small a {
   font-size: 1.3em;
 }
 
+.btn-edit {
+  cursor: text;
+}
+
 input[type=text], textarea{
   display:block;
   padding: 2em;

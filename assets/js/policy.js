@@ -49,8 +49,6 @@ function compileDoc(p,a){
             if (a) {
               appContent = getAppendixContent(qRef, prevQ, aRef, appContent, found);
             }
-            // set the prevQ for next comparison
-            // prevQ = qRef;
             break;
           case qRef < 10:
             deviceP = getPolicyContent(qRef, prevQ, aRef, deviceP, found);
@@ -58,8 +56,6 @@ function compileDoc(p,a){
             if (a) {
               appContent = getAppendixContent(qRef, prevQ, aRef, appContent, found);
             }
-            // set the prevQ for next comparison
-            // prevQ = qRef;
             break;
           case qRef < 13:
             commsP = getPolicyContent(qRef, prevQ, aRef, commsP, found);
@@ -67,13 +63,9 @@ function compileDoc(p,a){
             if (a) {
               appContent = getAppendixContent(qRef, prevQ, aRef, appContent, found);
             }
-            // set the prevQ for next comparison
-            // prevQ = qRef;
             break;
           case qRef < 14:
             incResP = getPolicyContent(qRef, prevQ, aRef, incResP, found);
-            // set the prevQ for next comparison
-            // prevQ = qRef;
             break;
           case qRef < 19:
             acctsP = getPolicyContent(qRef, prevQ, aRef, acctsP, found);
@@ -81,8 +73,6 @@ function compileDoc(p,a){
             if (a) {
               appContent = getAppendixContent(qRef, prevQ, aRef, appContent, found);
             }
-            // set the prevQ for next comparison
-            // prevQ = qRef;
             break;
           case qRef < 20:
             incResP = getPolicyContent(qRef, prevQ, aRef, incResP, found);
@@ -243,11 +233,15 @@ function downloadPolicy(type) {
 
 
 function getPolicyContent(question, previous, answer, policy, content){
+  // if it's a new question and there's policyContent
   if ((question !== previous) && (content.policyContent !== "")) {
+    // edit the policyContent and push it to the policy
     thisContent = replaceStr(content.policyContent);
     policy.push(thisContent);
   }
+  // if the answer has a policyEntry
   if (content.answers[answer].policyEntry !== ""){
+    // edit the policyEntry and push it to the policy
     thisContent = replaceStr(content.answers[answer].policyEntry);
     policy.push(thisContent);
   }

@@ -273,7 +273,7 @@ function getInput(el, qId) {
         s: currentState.sectionC,
         q: qId,
         a: answerID,
-        t: inputs[i].value,
+        t: inputs[i].value, // is this necessary if storeAs is working?
       });
     }
 
@@ -287,7 +287,8 @@ function getInput(el, qId) {
 
       // if there's a storeAs value, store it
       if (result.answers[answerID].storeAs !== "") {
-        addToDictionary(result.answers[answerID].storeAs, result.answers[answerID].answerText);
+        storedText = inputs[i].nextSibling.contentEditable === "true" ? inputs[i].nextSibling.innerText : result.answers[answerID].answerText;
+        addToDictionary(result.answers[answerID].storeAs, storedText);
       }
       // push the question and answer object to the currentState
       currentState.answers.push({
@@ -295,6 +296,7 @@ function getInput(el, qId) {
         q: qId,
         a: answerID,
       });
+
     }
   }
   return currentState.answers;

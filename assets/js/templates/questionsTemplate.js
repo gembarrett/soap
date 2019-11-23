@@ -49,7 +49,7 @@ templates.questionsTemplate = function(data){
            // if this is an input field then create the label
            if (question.answers[j].type !== 'textarea') {
              thisLabel = '<label for="' +question.id+ "-"+ j+ '-answer"';
-             thisLabel += question.answers[j].editable ? ' contenteditable="true">' : '>';
+             thisLabel += question.answers[j].editable ? ' class="btn-edit" contenteditable="true">' : '>';
              thisLabel += question.answers[j].answerText+ '</label>';
            }
            // start the form
