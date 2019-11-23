@@ -401,11 +401,6 @@ small a {
   margin:2em;
 }
 
-.button-style {
-  border: 2px solid #96CAEE;
-  border-radius: 0.5em;
-}
-
 .form-el label {
   display:inline;
   font-size: 1.3em;
@@ -438,6 +433,7 @@ form > div > div > input[type='checkbox'] + label {
     cursor: pointer;
     padding:1em;
     display:block;
+    border:2px solid #96CAEE;
 }
 
 form > div > div > input[type='radio'] + label{

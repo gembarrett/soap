@@ -81,6 +81,20 @@ var section0 = [
             "tipList": ""
           }
         ]
+      },
+      {
+        "type":"checkbox",
+        "editable": true,
+        "answerText":"other group",
+        "storeAs": "",
+        "excludes":[],
+        "policyEntry":"",
+        "appendixEntry":[
+          {
+            "reviewList":"",
+            "tipList": ""
+          }
+        ]
       }
     ],
     "tips":[
@@ -332,14 +346,15 @@ var section0 = [
       },
       {
         "type":"checkbox",
-        "answerText":"Blackberry",
+        "editable": true,
+        "answerText":"another system",
         "storeAs": "",
         "excludes":[],
         "policyEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": "This article reviews some of the privacy and security features of the Blackberry K2: https://www.digitaltrends.com/mobile/blackberry-key2-tips-and-tricks/"
+            "tipList": ""
           }
         ]
       }
