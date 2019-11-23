@@ -86,7 +86,7 @@ var section0 = [
         "type":"checkbox",
         "editable": true,
         "answerText":"other group",
-        "storeAs": "",
+        "storeAs": "[appliesTo]",
         "excludes":[],
         "policyEntry":"",
         "appendixEntry":[
@@ -426,7 +426,6 @@ var section0 = [
           }
         ]
       }
-
     ],
     "tips":[
       {"relevance":""},

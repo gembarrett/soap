@@ -278,6 +278,20 @@ var section1 = [
             "tipList": ""
           }
         ]
+      },
+      {
+        "type":"checkbox",
+        "editable": true,
+        "answerText":"other add-on",
+        "storeAs": "[extArray]",
+        "excludes":[],
+        "policyEntry":"",
+        "appendixEntry":[
+          {
+            "reviewList":"",
+            "tipList": ""
+          }
+        ]
       }
     ],
     "tips":[

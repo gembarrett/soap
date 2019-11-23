@@ -77,6 +77,20 @@ var section2 = [
             "tipList": ""
           }
         ]
+      },
+      {
+        "type":"radio",
+        "editable": true,
+        "answerText":"other service",
+        "storeAs": "[passwordPref]",
+        "excludes":[],
+        "policyEntry":"",
+        "appendixEntry":[
+          {
+            "reviewList":"",
+            "tipList": ""
+          }
+        ]
       }
     ],
     "tips":[
@@ -194,6 +208,20 @@ var section2 = [
         "storeAs":"",
         "excludes":[],
         "policyEntry":"While [orgName] requires the use of an authenticator app, we leave it to staff to make their own choice of which one to use. If you are unsure of which is best for your device and workflow, [contactName] ([contactPos]) is available for advice.",
+        "appendixEntry":[
+          {
+            "reviewList":"",
+            "tipList": ""
+          }
+        ]
+      },
+      {
+        "type":"radio",
+        "editable": true,
+        "answerText":"another app",
+        "storeAs": "",
+        "excludes":[],
+        "policyEntry":"", // add content here
         "appendixEntry":[
           {
             "reviewList":"",
