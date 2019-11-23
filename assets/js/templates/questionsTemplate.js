@@ -46,12 +46,16 @@ templates.questionsTemplate = function(data){
            if (question.answers[j].placeholder) {
              thisPlaceholder = 'placeholder="' + question.answers[j].placeholder + '"';
            }
-           // if this is an input field then create the label
-           if (question.answers[j].type !== 'textarea') {
+           // if this is an input field that isn't a textarea or editable then create a label
+           if ((question.answers[j].type !== 'textarea') && (!question.answers[j].editable)) {
              thisLabel = '<label for="' +question.id+ "-"+ j+ '-answer">' +question.answers[j].answerText+ '</label>';
            }
            // start the form
-           content += '<div class="form-el">';
+           if ((question.answers[j].type === 'radio') || (question.answers[j].type === 'checkbox')){
+             content += '<div class="form-el button-style">';
+           } else {
+             content += '<div class="form-el">';
+           }
 
            // if there's a textarea
            if (question.answers[j].type === 'textarea') {
@@ -65,7 +69,8 @@ templates.questionsTemplate = function(data){
 
            // if there's another input type
            else {
-             content += '<input type="' +question.answers[j].type+ '"' +thisID+thisName+required+ '>' + thisLabel;
+             content += '<input type="' +question.answers[j].type+ '"' +thisID+thisName+required+ '>';
+             content += question.answers[j].editable ? '<input type="text" placeholder="'+question.answers[j].answerText+'">' : thisLabel;
            }
            // end the form
            content += '</div>';
