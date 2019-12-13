@@ -44,10 +44,6 @@
 }
 
 @media (min-width:600px) {
-  #head, #foot, #page {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
   #head img {
     max-width: 50%;
   }
