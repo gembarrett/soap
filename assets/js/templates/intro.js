@@ -7,11 +7,11 @@ templates.intro = function(data){
         <div class="text-buttons-wrap">
           <h2>`+text.subhead+`</h2>
           <div class="btn-wrap wrap-c">
+          <a class="btn btn-prim" href="/#build">Start building!</a>
             <a class="btn btn-seco" href="#features">Find out more</a>
-            <a class="btn btn-prim" href="/#build">Start building!</a>
           </div>
         </div>
-        <img src="" height="600" width="1000" />
+        <img id="img-intro" src="assets/images/pic-build-q2.png" />
       </div>
     </div>
     `;

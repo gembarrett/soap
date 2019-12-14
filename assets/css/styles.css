@@ -15,6 +15,7 @@ body {
   display: flex;
   flex-direction: column;
   overflow: scroll;
+  overflow-x:hidden;
 }
 
 #head {
@@ -26,8 +27,17 @@ body {
   display: flex;
   padding: 1em;
   box-sizing: border-box;
+  max-height: 9em;
+  align-items: center;
+  z-index: 1;
 }
 
+#img-intro {
+  width: 75%;
+  border: 1px solid white;
+  margin: 2em 4em 0;
+  filter: drop-shadow(0px 0px 3px #eee);
+}
 .nav-scroll {
   background-color: #fff;
   color:#376281;
@@ -37,8 +47,13 @@ body {
   color: #fff;
 }
 
+.nav-scroll #logo{
+  filter:brightness(0.9);
+}
+
 #page {
   flex: 1 0 auto;
+  padding-top:8.5em;
 }
 
 #foot {
@@ -69,6 +84,8 @@ body {
   flex-direction: row;
 }
 .text-buttons-wrap {
+  margin: 2em 4em 2em 0;
+  max-width: 25%;
 }
 .links {
   list-style: none;
@@ -278,39 +295,56 @@ a {
   background-color: rgba(0,0,0,0.5);
 }
 
+.main-content > div {
+  padding: 2em 6em 1em 6em;
+}
+
+#overview {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#overview section {
+  width: 20%;
+}
+
+#cta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1em;
+}
+
 #intro {
   background-color: #376281;
-  padding-top: 8em;
+  padding-top:2em;
 }
 
 #intro h1, #intro h2 {
-  text-align: center;
+  text-align: left;
+}
+
+#intro h1 {
+  font-size: 2.5em;
 }
 
 #intro h2 {
   font-weight: lighter;
-  font-size: 1.1rem;
+  font-size: 1em;
 }
 
 #features {
-  background:#8FC5EA;
-  color:#fff;
+  display: flex;
+  justify-content: space-evenly;
 }
+
 .feature {
-  display:flex;
   padding: 2em 0;
-  align-items: center;
+  width: 25%;
+  border: 1px solid #8FC5EA;
+  color:#376281;
 }
-.feature:first-child {
-  background-color: rgba(255,255,255,0.3);
-}
-.feature:nth-child(2) {
-  flex-direction: row-reverse;
-  background-color: rgba(255,255,255,0.15);
-}
-.feature:nth-child(2) .feat-wrap {
-  text-align: right;
-}
+
 .feature i {
   font-size: 6em;
   margin:0.25em;
@@ -319,7 +353,7 @@ a {
   border-radius: 5%;
   border:2px solid;
   padding: 10px;
-  margin: 0 10px;
+  margin: 10px 0;
   min-width:10em;
   text-align: center;
   cursor: pointer;
@@ -338,7 +372,7 @@ a {
 }
 /* ghost for secondary content - thin border */
 .btn-seco {
-  color: #668EAA;
+  color: #fff;
   border-color: #8FC5EA;
 }
 
@@ -358,11 +392,11 @@ a {
 
 .btn-wrap {
   display:flex;
-  margin: 3em 0;
 }
 
 .wrap-c {
-  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .wrap-r {
