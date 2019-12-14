@@ -344,6 +344,42 @@ a {
   font-size: 1em;
 }
 
+#policy .text-img-wrap {
+  justify-content: space-between;
+  margin-top:2.5em;
+}
+
+#policy textarea {
+  border: none;
+  padding: 1em 2em;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+#policy-dl {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  align-items: center;
+  border: 4px solid currentColor;
+  border-radius: 4%;
+  padding: 1em;
+}
+
+#policy-edit {
+  width: 70%;
+  background-color: currentColor;
+  padding: 1em;
+}
+
+#policy-edit h3 {
+  color:#fff;
+}
+
+#policy i {
+  padding-left: 5px;
+}
+
 #features {
   display: flex;
   justify-content: space-evenly;
