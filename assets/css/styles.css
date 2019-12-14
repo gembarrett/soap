@@ -103,6 +103,9 @@ body {
 .links a:hover, .links a.active {
   border-color: #fff;
 }
+.nav-scroll .links a:hover, .nav-scroll .links a.active {
+  border-color: #066493;
+}
 
 .links li {
   display:inline;
