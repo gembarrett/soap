@@ -4,7 +4,7 @@ templates.cta = function(data){
   var content = `
     <div id="cta" class="nav-scroll">
       <h1>`+text+`</h1>
-      <a class="btn btn-seco" href="#build">Build a policy</a>
+      <a class="btn btn-prim" href="#build">Build a policy</a>
     </div>
     `;
     return content;

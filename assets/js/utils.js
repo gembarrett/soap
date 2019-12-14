@@ -1,10 +1,30 @@
 var utils = (function(){
+  var extract_params = function(params_string){
+      var params = {};
+      var raw_params = params_string.split('&');
+
+      var j = 0;
+      for(var i = raw_params.length - 1; i >= 0; i--){
+          var url_params = raw_params[i].split('=');
+          if(url_params.length == 2){
+              params[url_params[0]] = url_params[1];
+          }
+          else if(url_params.length == 1){
+              params[j] = url_params[0];
+              j += 1;
+          }
+          else{
+              //param not readable. pass.
+          }
+      }
+
+      return params;
+  };
 
   return {
     router: function(route, data){
       route = route || location.hash.slice(1) || 'home';
       // route = route || 'home';
-
       var temp = route.split('?');
       var route_split = temp.length;
       var function_to_invoke;
@@ -12,6 +32,8 @@ var utils = (function(){
         function_to_invoke = 'questionsView';
       } else if (temp[0] === 'policy') {
         function_to_invoke = 'policyView';
+      } else if (temp[0] === 'contribute') {
+        function_to_invoke = 'supportView';
       } else if (temp[0] === 'background') {
         function_to_invoke = 'bgView';
       } else if (temp[0] === 'contribute') {
