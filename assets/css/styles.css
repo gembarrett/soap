@@ -309,6 +309,9 @@ a {
 
 #overview section {
   width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 #overview img {
@@ -317,10 +320,11 @@ a {
 
 #cta {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
-  padding-top: 1em;
+  padding: 1em 0;
 }
+
 
 #intro {
   background-color: #066493;
@@ -370,7 +374,7 @@ a {
   border-radius: 5%;
   border:2px solid;
   padding: 10px;
-  margin: 10px 0;
+  margin: 10px;
   min-width:10em;
   text-align: center;
   cursor: pointer;
@@ -389,10 +393,12 @@ a {
 }
 /* ghost for secondary content - thin border */
 .btn-seco {
-  color: #fff;
+  color: #066392;
   border-color: #8FC5EA;
 }
-
+#intro .btn-seco {
+  color:#fff;
+}
 /* flat minimises distraction - no border */
 .btn-tert {
   border: 0;
@@ -425,7 +431,8 @@ progress {
   height: 18px;
   border-radius: 9px;
   opacity: 0.3;
-  border:1px solid #668EAA;
+  border:1px solid #066493;
+  color:#066493;
 }
 progress[value="0"] {
   display:none;

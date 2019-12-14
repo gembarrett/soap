@@ -22,7 +22,7 @@ var ros = [
         "icon": "fa-clipboard-list"
       }
     ],
-    "cta": "Start building your policy now",
+    "cta": "Ready to start creating your organizational security policy?",
     "what":[
       {
         "head":"What is SOAP?",
@@ -35,7 +35,7 @@ var ros = [
     "who":[
       {
         "head":"Who should use SOAP?",
-        "img":"pic-bc",
+        "img":"pic-policy",
         "overview":"SOAP can be a useful tool for any organization that needs a set of formalised security rules or a preparatory resource for staff.",
         "desc":["Almost any organization that needs or uses a security policy! In particular, SOAP is geared towards helping civil society organizations (“CSOs”) and other mission-driven groups increase their digital resilience by building an organizational security policy that works for their specific situation.","So whether your organization needs to update an existing policy, create an entirely new one, or is just preparing to work with a security consultant, SOAP can help!", "Research indicates nearly half of all CSOs don’t have a security policy. These organizations instead rely on informal guidelines and “trust” to manage their security. In today’s world, that’s not enough. Although such flexibility allows organizations to adapt quickly to new threats, it makes it much harder to ensure workers are operating under the same security standard. And new members are often left unprepared for even the most basic security incidents. SOAP provides a set of security rules that everyone can work with—all totally customizable to your organization’s specific needs."]
       }
@@ -43,7 +43,7 @@ var ros = [
     "how":[
       {
         "head":"How does SOAP work?",
-        "img":"pic-bc",
+        "img":"pic-options",
         "overview":"SOAP asks questions about your organization's security practices and uses your answers to compile a custom policy, review checklist and appendix of tips.",
         "desc":["It’s simple! SOAP asks questions about your organizational security practices. Your answers help SOAP build a policy which is presented to you at the end of the process. You can preview your policy at any point, and each question is accompanied by information to help you fully understand, research, and implement the associated practices. SOAP’s unique process focuses on key areas commonly included in policies, like devices or travel security. Each section is preceded by a hypothetical—but common—security incident to help orient the questions within the context of a realistic threat."]
       }
@@ -51,7 +51,7 @@ var ros = [
     "security":[
       {
         "head":"How secure and private is it?",
-        "img":"pic-bc",
+        "img":"pic-security",
         "overview":"Your data is not sent anywhere; it exists only in your browser. It relies on Javascript to work, which may be relevant to your threat model.",
         "desc":["SOAP is a web app that works solely in your browser: no cookies or server-side processing is involved in building your policy. No IP addresses, web logs, or any text entered into the answer boxes is stored or sent back to the SOAP servers. Like many websites, SOAP relies on Javascript to achieve its functionality, so it must be enabled in your browser for SOAP to work (hint: if you’re reading this, it’s already enabled). If your threat model means you can’t turn on Javascript, you can download the code (<a href='https://github.com/gembarrett/soap'>github.com/gembarrett/soap</a>) to run the tool in your own secure environment. Questions? Concerns? Email <a href='mailto:feedback@usesoap.app'>feedback@usesoap.app</a>"]
       }

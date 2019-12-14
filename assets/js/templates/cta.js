@@ -3,8 +3,8 @@ templates.cta = function(data){
   var text = ros[0].cta;
   var content = `
     <div id="cta" class="nav-scroll">
-      <h1>`+text+`</h1>
-      <a class="btn btn-prim" href="#build">Build a policy</a>
+      <h2>`+text+`</h2>
+      <a class="btn btn-prim" href="#build">Build policy</a>
     </div>
     `;
     return content;
