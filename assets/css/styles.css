@@ -598,3 +598,17 @@ form > div > div > input:checked + label {
 .notice h4, .notice p{
   margin:0;
 }
+
+#bgContainer {
+  padding:0;
+}
+#bgContainer section {
+  padding:2em 6em;
+  display:flex;
+}
+#maintenanceGroup {
+  display:flex;
+}
+#bgContainer .text-img-wrap {
+  flex-direction: column;
+}
