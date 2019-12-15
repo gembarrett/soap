@@ -75,13 +75,22 @@ templates.questionsTemplate = function(data){
       } else {
         // add the title and paragraphs
         content += '<h2>' + question.title + '</h2>';
-        content = formatArray(question.contentArray, content);
+        // if it's the first question, lay out the content a bit differently
+        if (question.id === "q0") {
+          content += `<p>`+question.contentArray[0]+`</p><div class="text-img-wrap">`;
+          for (var k = 1; k < question.contentArray.length; k++){
+            content += `<section><img src="assets/images/pic-q0-`+k+`.gif"><p>`+question.contentArray[k]+`</p></section>`;
+          }
+          content += `</div>`;
+        } else {
+          content = formatArray(question.contentArray, content);
+        }
       }
       // if its the first question
       // no closing div, just closing form
       content += question.isQ ? '</div></form>' : '</form>';
   }
-  content += '<div class="btn-wrap wrap-r"><button disabled id="previewPolicy" class="previewButton btn btn-seco">Preview</button><button id="submitAnswers" onclick="handleSubmit()" class="nextButton btn btn-prim">Skip</button></div>';
+  content += '<div class="btn-wrap wrap-r"><button disabled id="previewPolicy" class="previewButton btn btn-seco">Preview</button><button id="submitAnswers" onclick="handleSubmit()" class="nextButton btn btn-prim">Ready? Let\'s go!</button></div>';
   content += '<small><a href="mailto:feedback@usesoap.app?subject=Suggested%20change&amp;body=The%20problem%20with%20this%20page%20is%3A%0AThis%20is%20what%20I%20expected%3A%0AAny%20other%20info%3A%0A%0AI%20%5Bam%20%2F%20am%20not%5D%20ok%20with%20being%20contacted%20about%20this%20suggested%20change%20(delete%20as%20appropriate)">Suggest changes by email</a> or <a href="https://github.com/gembarrett/soap/issues">on GitHub</a></small></div>';
   return content;
 };
