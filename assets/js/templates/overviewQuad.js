@@ -9,7 +9,7 @@ templates.overviewQuad = function(data){
         <h1>`+text.what[0].head+`</h1>
         <p>`+text.what[0].overview+`</p>
       </div>
-      <a class="btn btn-prim" href="#background?what-is-soap">More</a>
+      <a class="btn btn-prim" href="#info?what-is-soap">More</a>
     </section>
 
     <section>
@@ -18,7 +18,7 @@ templates.overviewQuad = function(data){
         <h1>`+text.who[0].head+`</h1>
         <p>`+text.who[0].overview+`</p>
       </div>
-      <a class="btn btn-prim" href="#background?who-should-use-soap">More</a>
+      <a class="btn btn-prim" href="#info?who-should-use-soap">More</a>
     </section>
 
     <section>
@@ -27,7 +27,7 @@ templates.overviewQuad = function(data){
         <h1>`+text.how[0].head+`</h1>
         <p>`+text.how[0].overview+`</p>
       </div>
-      <a class="btn btn-prim" href="#background?how-does-soap-work">More</a>
+      <a class="btn btn-prim" href="#info?how-does-soap-work">More</a>
     </section>
 
     <section>
@@ -36,7 +36,7 @@ templates.overviewQuad = function(data){
         <h1>`+text.security[0].head+`</h1>
         <p>`+text.security[0].overview+`</p>
       </div>
-      <a class="btn btn-prim" href="#background?how-secure-private-is-soap">More</a>
+      <a class="btn btn-prim" href="#info?how-secure-private-is-soap">More</a>
     </section>
     </div>
     `;

@@ -32,12 +32,8 @@ var utils = (function(){
         function_to_invoke = 'questionsView';
       } else if (temp[0] === 'policy') {
         function_to_invoke = 'policyView';
-      } else if (temp[0] === 'contribute') {
-        function_to_invoke = 'supportView';
-      } else if (temp[0] === 'background') {
+      } else if (temp[0] === 'info') {
         function_to_invoke = 'bgView';
-      } else if (temp[0] === 'contribute') {
-        function_to_invoke = 'supportView';
       } else {
         function_to_invoke = temp[0] || false;
       }
