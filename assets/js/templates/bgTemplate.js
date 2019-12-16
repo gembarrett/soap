@@ -16,7 +16,12 @@ templates.bgTemplate = function(data, params){
   var securityGroup = `<img src="assets/images/pic-security.jpg" /><div class="text-img-wrap"><h1>`+text.security[0].head+`</h1>`;
   securityGroup = formatArray(text.security[0].desc, securityGroup);
   securityGroup += '</div>';
-  var backgroundGroup = `<div class="grid"><h4>Other resources</h4><a href="https://securityplanner.org" target="_blank"><button class="btn btn-tert">Security Planner by Citizen Lab</button></a><a href="https://secfirst.org/umbrella/" target="_blank"><button class="btn btn-tert">Umbrella by Security First</button></a><a href="https://safetag.org/" target="_blank"><button class="btn btn-tert">SAFETAG by Internews</button></a><a href="https://www.level-up.cc" target="_blank"><button class="btn btn-tert">LevelUp by Engine Room</button></a></div><div class="text-img-wrap"><h1>`+text.background[0].head+`</h1>`;
+  var bgLinks = "";
+  for (var u = 0; u<text.background[0].links.length; u++){
+    bgLinks += `<a href="`+text.background[0].links[u].url+`" target="_blank">`;
+    bgLinks += `<button class="btn btn-tert">`+text.background[0].links[u].name+`</button></a>`;
+  }
+  var backgroundGroup = `<div class="grid"><h4>Other resources</h4>`+bgLinks+`</div><div class="text-img-wrap"><h1>`+text.background[0].head+`</h1>`;
   backgroundGroup = formatArray(text.background[0].desc, backgroundGroup);
   backgroundGroup += `<a href="/assets/SecuringCivilSociety-report.pdf"><button class="btn btn-seco">Securing Civil Society report</button></a></p>`
   var futureGroup = `<h1>`+text.future[0].head+`</h1>`;

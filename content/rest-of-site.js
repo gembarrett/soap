@@ -61,7 +61,25 @@ var ros = [
         "head":"What's behind the SOAP project?",
         "img":"pic-bc",
         "overview":"SOAP background",
-        "desc":["SOAP was researched, designed, and built by Gem Barrett, with funding from the Open Technology Fund. The need for a program like SOAP became apparent through their work in online rapid response coordination. Many organizations need to meet a baseline level of security but for various reasons are prevented from having a policy that works for them. SOAP seeks to change that.","In developing SOAP, research was conducted to understand the frustrations faced and obstacles encountered by organizations when creating, implementing, and maintaining security policies. The findings of this research and accompanying interviews are shared in the report <a href='/assets/SecuringCivilSociety-report.pdf'>“Securing Civil Society”</a> (PDF currently available in English, other versions coming soon). These findings, coupled with research into organizational security best practices, helped create the methodology that forms the basis of SOAP’s innovative process."]
+        "desc":["SOAP was researched, designed, and built by Gem Barrett, with funding from the Open Technology Fund. The need for a program like SOAP became apparent through their work in online rapid response coordination. Many organizations need to meet a baseline level of security but for various reasons are prevented from having a policy that works for them. SOAP seeks to change that.","In developing SOAP, research was conducted to understand the frustrations faced and obstacles encountered by organizations when creating, implementing, and maintaining security policies. The findings of this research and accompanying interviews are shared in the report <a href='/assets/SecuringCivilSociety-report.pdf'>“Securing Civil Society”</a> (PDF currently available in English, other versions coming soon). These findings, coupled with research into organizational security best practices, helped create the methodology that forms the basis of SOAP’s innovative process."],
+        "links":[
+          {
+            "name":"SAFETAG by Internews",
+            "url":"https://safetag.org"
+          },
+          {
+            "name": "Umbrella by Security First",
+            "url": "https://secfirst.org/umbrella"
+          },
+          {
+            "name": "LevelUp by Engine Room",
+            "url":"https://www.level-up.cc"
+          },
+          {
+            "name":"Security Planner by Citizen Lab",
+            "url":"https://securityplanner.org"
+          }
+        ]
       }
     ],
     "future":[
