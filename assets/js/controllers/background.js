@@ -6,5 +6,6 @@ controllers.bgPage = function(data, params){
   document.getElementById('bu').classList.remove('active');
   window.scrollTo(0,0);
   var bgContent = templates.bgTemplate(data, params);
+  bgContent += templates.cta();
   utils.render('page', bgContent);
 };

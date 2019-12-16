@@ -74,10 +74,10 @@ templates.questionsTemplate = function(data){
          }
       } else {
         // add the title and paragraphs
-        content += '<h2>' + question.title + '</h2>';
+        content += '<h1>' + question.title + '</h1>';
         // if it's the first question, lay out the content a bit differently
         if (question.id === "q0") {
-          content += `<p>`+question.contentArray[0]+`</p><div class="text-img-wrap">`;
+          content += `<h2>`+question.contentArray[0]+`</h2><div class="text-img-wrap">`;
           for (var k = 1; k < question.contentArray.length; k++){
             content += `<section><img src="assets/images/pic-q0-`+k+`.gif"><p>`+question.contentArray[k]+`</p></section>`;
           }

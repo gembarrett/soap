@@ -9,7 +9,7 @@ html, body {
 body {
   font-family: "Helvetica", "OpenSans", sans-serif;
   margin: 0;
-  font-size: 14px;
+  font-size: 16px;
   color: #066493;
   line-height: 1.75em;
   display: flex;
@@ -211,14 +211,14 @@ a {
 }
 
 #q0 section {
-  flex: 2 2 40%;
-  margin: 1em 2em;
+  flex: 2 2 25%;
+  margin: 3em 5em;
   border: 5px solid currentColor;
   border-radius:4%;
 }
 
 #q0 section p {
-  padding: 5px 10px;
+  padding: 0.5em 2em;
 }
 
 /* ================== */
@@ -345,6 +345,7 @@ a {
 
 #overview img {
   width:100%;
+  filter:drop-shadow(0px 0px 3px #eee);
 }
 
 #cta {
@@ -352,6 +353,7 @@ a {
   justify-content: space-evenly;
   align-items: center;
   padding: 1em 0;
+  filter:drop-shadow(1px 1px 3px currentColor);
 }
 
 
@@ -605,10 +607,63 @@ form > div > div > input:checked + label {
 #bgContainer section {
   padding:2em 6em;
   display:flex;
+  align-items: center;
 }
 #maintenanceGroup {
   display:flex;
 }
 #bgContainer .text-img-wrap {
   flex-direction: column;
+  flex: 1 1 90%;
+}
+#bgContainer section > div > p {
+  flex: 1 2 52%;
+}
+#bgContainer img {
+  border-radius: 5px;
+  height:100%;
+  max-width:500px;
+}
+#bgContainer .nav-start img {
+  filter:drop-shadow(0px 0px 3px #eee);
+}
+#bgContainer .nav-scroll img {
+  filter:drop-shadow(0px 0px 3px currentColor);
+}
+#bgContainer .trio img {
+  margin:1em;
+}
+.border-white-round {
+  border: 2px solid #fff;
+  padding: 1em 2em;
+  border-radius: 1.5em;
+}
+.trio-wrap {
+  display:flex;
+  justify-content: space-evenly;
+}
+.dbl {
+  flex-direction: row;
+}
+.dbl.reverse {
+  flex-direction: row-reverse;
+}
+
+.trio {
+}
+
+.trio p {
+  flex: 2 0 60%;
+}
+.trio h1 {
+  flex: 1 0 15%;
+}
+.dbl img {
+  margin-right: 2em;
+  margin-left: 0;
+  flex: 1 1 40%;
+}
+.dbl.reverse img {
+  margin-left: 2em;
+  margin-right: 0;
 }
