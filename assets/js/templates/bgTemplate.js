@@ -8,14 +8,18 @@ templates.bgTemplate = function(data, params){
   var whatGroup = `<img src="assets/images/pic-bc.jpg" /><div class="text-img-wrap"><h1>`+text.what[0].head+`</h1>`;
   whatGroup = formatArray(text.what[0].desc, whatGroup);
   whatGroup += '</div>';
+
   var whoGroup = `<img src="assets/images/pic-policy.jpg" /><div class="text-img-wrap"><h1>`+text.who[0].head+`</h1>`;
   whoGroup = formatArray(text.who[0].desc, whoGroup);
   whoGroup += '</div>';
+
   var howGroup = `<img src="assets/images/pic-how-1.jpg" /><img src="assets/images/pic-how-2.jpg" /><img src="assets/images/pic-how-3.jpg" /><h1>`+text.how[0].head+`</h1>`;
   howGroup = formatArray(text.how[0].desc, howGroup);
+
   var securityGroup = `<img src="assets/images/pic-security.jpg" /><div class="text-img-wrap"><h1>`+text.security[0].head+`</h1>`;
   securityGroup = formatArray(text.security[0].desc, securityGroup);
   securityGroup += '</div>';
+
   var bgLinks = "";
   for (var u = 0; u<text.background[0].links.length; u++){
     bgLinks += `<a href="`+text.background[0].links[u].url+`" target="_blank">`;
@@ -23,12 +27,18 @@ templates.bgTemplate = function(data, params){
   }
   var backgroundGroup = `<div class="grid"><h4>Other resources</h4>`+bgLinks+`</div><div class="text-img-wrap"><h1>`+text.background[0].head+`</h1>`;
   backgroundGroup = formatArray(text.background[0].desc, backgroundGroup);
-  backgroundGroup += `<a href="/assets/SecuringCivilSociety-report.pdf"><button class="btn btn-seco">Securing Civil Society report</button></a></p>`
+  backgroundGroup += `<a href="/assets/SecuringCivilSociety-report.pdf"><button class="btn btn-seco">Securing Civil Society report</button></a></p>`;
+
   var futureGroup = `<h1>`+text.future[0].head+`</h1>`;
-  futureGroup = formatArray(text.future[0].desc, futureGroup);
+  for (var v = 0; v < text.future[0].desc.length; v++){
+    futureGroup += text.future[0].desc[v].url !== "" ? `<button class="btn btn-tert"><a href="`+text.future[0].desc[v].url+`" target="_blank"><i class="fab fa-github"></i>Help with this</a></button><p>` : `<p>`;
+    futureGroup += text.future[0].desc[v].text+`</p>`;
+  }
+
   var supportGroup = `<h1>`+text.support[0].head+`</h1><div class="border-white-round">`;
   supportGroup = formatArray(text.support[0].desc, supportGroup);
   supportGroup += `</div>`;
+
   // if there are parameters, change the order
   if (params) {
     switch (params[0]) {

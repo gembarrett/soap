@@ -59,7 +59,6 @@ var ros = [
     "background":[
       {
         "head":"What's behind the SOAP project?",
-        "img":"pic-bc",
         "overview":"SOAP background",
         "desc":["SOAP was researched, designed, and built by Gem Barrett, with funding from the Open Technology Fund. The need for a program like SOAP became apparent through their work in online rapid response coordination. Many organizations need to meet a baseline level of security but for various reasons are prevented from having a policy that works for them. SOAP seeks to change that.","In developing SOAP, research was conducted to understand the frustrations faced and obstacles encountered by organizations when creating, implementing, and maintaining security policies. The findings of this research and accompanying interviews are shared in the report <a href='/assets/SecuringCivilSociety-report.pdf'>“Securing Civil Society”</a> (PDF currently available in English, other versions coming soon). These findings, coupled with research into organizational security best practices, helped create the methodology that forms the basis of SOAP’s innovative process."],
         "links":[
@@ -85,16 +84,33 @@ var ros = [
     "future":[
       {
         "head":"What's planned for the SOAP project?",
-        "img":"pic-bc",
-        "overview":"",
-        "desc":["SOAP plans","Here's a few things"]
+        "desc":[
+          {
+            "text":"SOAP is currently in beta and the full launch is scheduled for March 2020. Here's a few of the new features currently being worked on:",
+            "url":""
+          },
+          {
+            "text":"Policy tone options - giving you the choice between the standard formal policy and a more informal list format.",
+            "url":"https://github.com/gembarrett/soap/issues/22"
+          },
+          {
+            "text":"Keyboard navigation - the aim with SOAP is to make security policy creation accessible to as many people as possible, including those who rely on keyboard navigation.",
+            "url": "https://github.com/gembarrett/soap/issues/14"
+          },
+          {
+            "text":"Additional language support - because folks who speak Spanish, Portuguese, Arabic, French and a host of other languages should be able to create a security policy in their own language.",
+            "url":"https://github.com/gembarrett/soap/issues/45"
+          },
+          {
+            "text":"More content areas - including questions covering travel and environmental security",
+            "url":"https://github.com/gembarrett/soap/issues/48"
+          }
+        ]
       }
     ],
     "support":[
       {
         "head":"Can I help support this project?",
-        "img":"pic-bc",
-        "overview":"SOAP contribute",
         "desc":["Thanks for asking! It’s true: SOAP takes a lot of time (and coffee!) to maintain. So if you’re interested in giving back and supporting the project, here are a few options:","Donations to fund SOAP’s upkeep can be made <a href='https://www.ko-fi.com/supportsoap'>here</a>", "Fluent in a language other than English? Email <a href='mailto:feedback@usesoap.app'>feedback(at)usesoap.app</a> with the languages you can translate to and we'll let you know how you can help translate SOAP and make it more accessible to non-English speakers","SOAP is an open-source project. Contributions to the code (Javascript, HTML or CSS) or documentation are always welcomed <a href='https://www.github.com/gembarrett/soap'>here</a>.", "Just want to say hi or ask a question? Have an idea for how SOAP could be improved? Email us at: <a href='mailto:feedback@usesoap.app'>feedback(at)usesoap.app</a>."]
       }
     ]
