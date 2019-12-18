@@ -101,7 +101,7 @@ body {
 }
 
 .links a:hover, .links a.active {
-  border-color: #fff;
+  border-color: #066493;
 }
 .nav-scroll .links a:hover, .nav-scroll .links a.active {
   border-color: #066493;
@@ -116,7 +116,10 @@ body {
   padding-left: 0;
 }
 .links li:last-child {
-  padding-right: 0;
+  background-color: #fff;
+  color:#066493;
+  font-weight: bold;
+  padding:1em;
 }
 
 #foot a {
