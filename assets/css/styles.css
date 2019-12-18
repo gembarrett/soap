@@ -618,6 +618,11 @@ form > div > div > input:checked + label {
 #maintenanceGroup {
   display:flex;
 }
+#maintenanceGroup .dbl {
+  display:flex;
+  align-items: center;
+}
+
 #bgContainer .text-img-wrap {
   flex-direction: column;
   flex: 1 1 90%;

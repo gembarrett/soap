@@ -31,8 +31,8 @@ templates.bgTemplate = function(data, params){
 
   var futureGroup = `<h1>`+text.future[0].head+`</h1>`;
   for (var v = 0; v < text.future[0].desc.length; v++){
-    futureGroup += text.future[0].desc[v].url !== "" ? `<button class="btn btn-tert"><a href="`+text.future[0].desc[v].url+`" target="_blank"><i class="fab fa-github"></i>Help with this</a></button><p>` : `<p>`;
-    futureGroup += text.future[0].desc[v].text+`</p>`;
+    futureGroup += text.future[0].desc[v].url !== "" ? `<div class="dbl"><button class="btn btn-seco"><a href="`+text.future[0].desc[v].url+`" target="_blank"><i class="fab fa-github"></i>  Help with this</a></button><p>` : `<div><p>`;
+    futureGroup += text.future[0].desc[v].text+`</p></div>`;
   }
 
   var supportGroup = `<h1>`+text.support[0].head+`</h1><div class="border-white-round">`;
