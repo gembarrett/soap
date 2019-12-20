@@ -122,6 +122,11 @@ body {
   padding:1em;
 }
 
+.nav-scroll .links li:last-child {
+  background-color: #066493;
+  color: #fff;
+}
+
 #foot a {
   font-size: 0.8rem;
 }
