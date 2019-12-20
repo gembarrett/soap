@@ -96,6 +96,20 @@ function moveForward(id) {
   return id;
 }
 
+function moveBackward(id) {
+  // this increases the counter
+  currentState.questionC--;
+  // start looking at the next question
+  // increase the question id number
+  id--;
+  currentState.questionQ = 'q' + id;
+  // increase position in the array
+  currentState.questionP--;
+  var el = document.querySelector('progress');
+  el.value--;
+  return id;
+}
+
 function isExcludedQ(id) {
   // start looking at the next question
   id = moveForward(id);
@@ -120,12 +134,15 @@ function updateProgressBar(){
 }
 
 // this is the function that's called when a user submits an answer
+// TODO: add a special flag to this if it should be looking for edited, rather than new answers
 function handleSubmit() {
+  console.log('submit button clicked');
   // search for the currently shown element - question and answer
   var match = document.querySelector('.current');
+  console.log('get the current element');
   // this gets the current question id number e.g. q0
   var id = currentState.questionQ.split('q')[1];
-
+  console.log('get the current question\'s id');
   beforeSize = currentState.answers.length;
   // use the form element and the question id to get the inputs
   var answers = getInput(match, id);
@@ -136,6 +153,9 @@ function handleSubmit() {
   isRequired = match[0] ? match[0].required : false;
   // compare the size of answers array to find out if answers have been provided for this question
   if (id > 0){
+    // add the back button
+    document.querySelector('#prevQuestion').removeAttribute('disabled');
+
     // have answers been provided for this question?
     noAnswers = beforeSize === answers.length ? true : false;
 
@@ -159,10 +179,10 @@ function handleSubmit() {
 
       // this hides the current question,
       match.classList.remove("current");
-
+      console.log('hide current question');
       // go to next question
       id = isExcludedQ(id);
-
+      console.log('get next id that isn\'t excluded');
       // TODO reset the skip/next button here
       document.getElementById('submitAnswers').innerText = "Skip";
 
@@ -179,6 +199,10 @@ function setUpPage(id){
     resizingBoxes();
     addChangeListeners();
   }
+}
+
+function prevQuestion(){
+  // like nextQuestion but in reverse
 }
 
 function nextQuestion(){

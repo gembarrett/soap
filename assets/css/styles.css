@@ -272,6 +272,10 @@ a {
   opacity:75%; */
 }
 
+#backBtn:disabled {
+  display:none;
+}
+
 #submitAnswers:disabled {
   cursor: not-allowed;
   opacity:75%;
