@@ -1,6 +1,6 @@
 templates.questionsTemplate = function(data){
   var content = `
-      <progress max="`+questionsList.length+`" value="0"></progress><button disabled id="backBtn" class="backButton btn btn-seco">< Back</button><div id="questionContainer" class=""><div class="notice"><h4>This is the beta version of SOAP, updated 31/12/19</h4><p>New content and features coming March 2020</p></div>`;
+      <progress max="`+questionsList.length+`" value="0"></progress><div id="questionContainer" class=""><div class="notice"><h4>This is the beta version of SOAP, updated January 3rd 2020</h4><p>New content and features coming March 2020</p></div><button disabled id="backBtn" class="backButton btn btn-tert">< Back</button>`;
 
 
   for(var i = 0; i < questionsList.length; i++) {

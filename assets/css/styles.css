@@ -261,20 +261,10 @@ a {
 /* ================== */
 /* Preview styles */
 
-#previewPolicy:disabled {
+#previewPolicy:disabled, #backBtn:disabled {
   display:none;
-  /* background-color: #f6f6f6;
-  color: #888685;
-  border-color: #ccc;
-  cursor: initial;
-  border-width: 1px;
-  border-radius: 5%;
-  opacity:75%; */
 }
 
-#backBtn:disabled {
-  display:none;
-}
 
 #submitAnswers:disabled {
   cursor: not-allowed;
@@ -507,6 +497,17 @@ a {
   align-items: flex-start;
 }
 
+#backBtn {
+  margin-left: 0;
+  color:#006493;
+  background-color: transparent;
+  border-color: currentColor;
+}
+
+#backBtn:hover {
+
+}
+
 .wrap-r {
   justify-content: flex-end;
 }
@@ -699,4 +700,8 @@ form > div > div > input:checked + label {
 .dbl.reverse img {
   margin-left: 2em;
   margin-right: 0;
+}
+
+.spacer {
+  flex-grow:100;
 }
