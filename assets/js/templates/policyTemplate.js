@@ -13,6 +13,6 @@ templates.policyTemplate = function(data){
     <div id="policy-edit">
     <h3>Edit, copy and paste into your own file:</h3>
     <textarea class="policyHolder">`+docContent.plain+`</textarea></div>
-    </div></div>`;
+    </div><h2>All done? Clear your data from SOAP by refreshing the page or <button id="reset" onclick="clearData()">clicking here</button></h2></div>`;
   return content;
 };

@@ -198,6 +198,18 @@ function dateStamp(){
   return fullDate; // is there a way to return date + 3 months (no day)?
 }
 
+function clearData(){
+  console.log('reset all the things!');
+  currentState = null;
+  dates  = null;
+  dict = null;
+  output = null;
+  qRef = null;
+  tmpContent = null;
+  window.location.reload(true);
+}
+
+
 // function to download data to a file
 function downloadPolicy(type) {
     var data = output[type];
