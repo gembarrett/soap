@@ -41,6 +41,62 @@
     width:80%;
     font-size: 1.3em;
   }
+  #intro {
+    padding: 1.5em;
+  }
+  #intro h1 {
+    line-height: 1.2em;
+    font-size: 2em;
+  }
+  .text-img-wrap {
+    flex-direction: column-reverse;
+  }
+  .text-buttons-wrap {
+    margin:0;
+    max-width: inherit;
+  }
+  #img-intro {
+    width:100%;
+    margin:0;
+  }
+  #head img {
+    max-width: 40%;
+  }
+  #head label {
+    position: unset;
+    width: unset;
+    text-align: right;
+    margin: 0.5em 1em;
+    float: right;
+  }
+  #head {
+    display:flex;
+  }
+  #menu-check:checked ~ ul {
+    flex-direction: column;
+    text-align: right;
+    margin:0;
+    padding:0;
+    align-items: end;
+    width:45%;
+    float:right;
+    border-top: 0;
+  }
+  #page {
+    padding-top: 6em;
+  }
+  .links li:last-child {
+    padding: 0.1em 1em;
+  }
+  .links li:first-child {
+    border: 1px solid;
+    padding: 0.1em 1em;
+  }
+
+  .links li {
+    min-width: 90px;
+  }
+
 }
 
 @media (min-width:600px) {
