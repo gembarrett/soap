@@ -113,6 +113,14 @@
     flex-direction: column;
     padding: 1em;
   }
+  .links {
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+    /* fallback */
+    justify-content: center; 
+    justify-content: space-evenly;
+  }
 }
 
 @media (min-width:600px) {
