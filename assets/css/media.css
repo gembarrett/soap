@@ -100,8 +100,7 @@
   }
   #overview section {
     width:100%;
-    margin-bottom: 1em;
-    border-bottom: 2px solid #fff;
+    padding-bottom: 4em;
   }
   #cta {
     flex-direction: column;
@@ -126,9 +125,38 @@
     flex-direction: column;
     padding: 1em;
   }
+  #maintenanceGroup {
+    flex-direction: column;
+  }
+  #maintenanceGroup .dbl {
+    flex-direction: column-reverse;
+    border-top: 1px solid currentColor;
+    align-items: stretch;
+    margin-bottom: 3em;
+    margin-top: 1em;
+  }
+  .grid {
+    margin-left: 0;
+    margin-bottom: 2em;
+  }
+  #bgContainer .trio img {
+    margin: 0;
+  }
+  #bgContainer section {
+    padding: 2em;
+    flex-direction: column;
+  }
+  .nav-start.trio {
+    padding: 1em;
+  }
+
 }
 
 @media (min-width:600px) {
+  .btn {
+    width:auto;
+    margin: 0 auto;
+  }
   #head a {
     max-width: 25%;
   }
@@ -139,5 +167,9 @@
   }
   #expand {
     display: none;
+  }
+  .wrap-c {
+    flex-direction: row;
+    justify-content: space-around;
   }
 }
