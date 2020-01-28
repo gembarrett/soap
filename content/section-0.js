@@ -107,74 +107,6 @@ var section0 = [
   {
     "isQuestion": true,
     "id":"q3",
-    "q":"How regularly do you intend to review and update this policy?",
-    "required":true,
-    "policyContent":"This policy will be reviewed by [contactName] ([contactPos]) on a [reviewFreq] basis. Any suggestions or feedback on the policy’s contents should be directed to them.",
-    "appendixContent":"",
-    "answers":[
-      {
-        "type":"checkbox",
-        "answerText":"annual",
-        "storeAs": "[reviewFreq]",
-        "excludes":[],
-        "policyEntry":"",
-        "appendixEntry":[
-          {
-            "reviewList":"",
-            "tipList": "Mark your calendar for review dates on [date+12], [date+24], [date+36]"
-          }
-        ]
-      },
-      {
-        "type":"checkbox",
-        "answerText":"6-monthly",
-        "storeAs": "[reviewFreq]",
-        "excludes":[], // review this
-        "policyEntry":"",
-        "appendixEntry":[
-          {
-            "reviewList":"",
-            "tipList": "Mark your calendar for review dates on [date+6], [date+12], [date+18]"
-          }
-        ],
-      },
-      {
-        "type":"checkbox",
-        "answerText":"quarterly",
-        "storeAs": "[reviewFreq]",
-        "excludes":[],
-        "policyEntry":"",
-        "appendixEntry":[
-          {
-            "reviewList":"",
-            "tipList": "Mark your calendar for review dates on [date+3], [date+6], [date+9]"
-          }
-        ],
-      },
-      {
-        "type":"checkbox",
-        "answerText":'"as threats arise"',
-        "storeAs": "[reviewFreq]",
-        "excludes":[],
-        "policyEntry":"",
-        "appendixEntry":[
-          {
-            "reviewList":"",
-            "tipList": ""
-          }
-        ]
-      },
-    ],
-    "tips":[
-      {"relevance":""},
-      {"meaning":"It is recommended to review at least once a year to improve and update to meet new threats. Check your policy’s appendix at the end to find a checklist that will help when it comes time to review the policy."},
-      {"implementation":"Create calendar events for the next 2 policy reviews and invite stakeholders involved in reviewing the policy (e.g. management, Human Resources, IT)."},
-      {"more":["review security policy"]}
-    ]
-  },
-  {
-    "isQuestion": true,
-    "id":"q4",
     "q":"Who is responsible for this policy?",
     "required":true,
     "policyContent":"",
@@ -256,6 +188,74 @@ var section0 = [
       {"meaning":"In order to ease the implementation process and support future maintenance, one or more members of staff will be needed as a point of contact for queries about the policy. Ideally this role will be taken on by you, as the creator of this policy, or another staff member with sufficient time and security knowledge."},
       {"implementation":"The person named here should ideally be approachable and a familiar face around the organisation, with a workload that can support the requirement to answer questions in a timely manner. However, people leave or become unsuitable for the role, and so there should also be a contingency plan in place so that all the security management doesn’t leave with the person."},
       {"more":["security champion role"]},
+    ]
+  },
+  {
+    "isQuestion": true,
+    "id":"q4",
+    "q":"How regularly do you intend to review and update this policy?",
+    "required":true,
+    "policyContent":"This policy will be reviewed by [contactName] ([contactPos]) on a [reviewFreq] basis. Any suggestions or feedback on the policy’s contents should be directed to them.",
+    "appendixContent":"",
+    "answers":[
+      {
+        "type":"checkbox",
+        "answerText":"annual",
+        "storeAs": "[reviewFreq]",
+        "excludes":[],
+        "policyEntry":"",
+        "appendixEntry":[
+          {
+            "reviewList":"",
+            "tipList": "Mark your calendar for review dates on [date+12], [date+24], [date+36]"
+          }
+        ]
+      },
+      {
+        "type":"checkbox",
+        "answerText":"6-monthly",
+        "storeAs": "[reviewFreq]",
+        "excludes":[], // review this
+        "policyEntry":"",
+        "appendixEntry":[
+          {
+            "reviewList":"",
+            "tipList": "Mark your calendar for review dates on [date+6], [date+12], [date+18]"
+          }
+        ],
+      },
+      {
+        "type":"checkbox",
+        "answerText":"quarterly",
+        "storeAs": "[reviewFreq]",
+        "excludes":[],
+        "policyEntry":"",
+        "appendixEntry":[
+          {
+            "reviewList":"",
+            "tipList": "Mark your calendar for review dates on [date+3], [date+6], [date+9]"
+          }
+        ],
+      },
+      {
+        "type":"checkbox",
+        "answerText":'"as threats arise"',
+        "storeAs": "[reviewFreq]",
+        "excludes":[],
+        "policyEntry":"",
+        "appendixEntry":[
+          {
+            "reviewList":"",
+            "tipList": ""
+          }
+        ]
+      },
+    ],
+    "tips":[
+      {"relevance":""},
+      {"meaning":"It is recommended to review at least once a year to improve and update to meet new threats. Check your policy’s appendix at the end to find a checklist that will help when it comes time to review the policy."},
+      {"implementation":"Create calendar events for the next 2 policy reviews and invite stakeholders involved in reviewing the policy (e.g. management, Human Resources, IT)."},
+      {"more":["review security policy"]}
     ]
   },
   {
