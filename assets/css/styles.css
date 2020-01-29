@@ -5,6 +5,13 @@
 html, body {
   height:100%;
 }
+a:visited {
+  color:inherit;
+}
+a:hover {
+  text-decoration: underline;
+}
+
 
 body {
   font-family: "Helvetica", "OpenSans", sans-serif;

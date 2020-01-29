@@ -22,7 +22,7 @@ var ros = [
         "icon": "fa-clipboard-list"
       }
     ],
-    "cta": "Ready to start creating your organizational security policy?",
+    "cta": "Ready to start creating your new organizational security policy?",
     "what":[
       {
         "head":"What is SOAP?",
