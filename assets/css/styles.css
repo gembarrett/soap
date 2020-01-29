@@ -133,7 +133,7 @@ body {
 
 /* Button styles */
 
-/* Actual checkboxes set to display:none. We'll be styling the labels and then simply checking if the checkboxes are checked to show and hide the nav. */
+/* Actual checkboxes set to display:none. Styling the labels and then simply checking if the checkboxes are checked to show and hide the nav. */
 #menu-check {
   display: none;
 }

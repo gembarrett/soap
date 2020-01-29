@@ -7,6 +7,9 @@
     -webkit-flex-flow: column wrap;
     flex-flow: column wrap;
   }
+  #head img {
+    max-width:35%;
+  }
   #head > .wrapper > a {
     display: inline-block;
     text-align: center;
@@ -117,10 +120,6 @@
   #head a {
     width:50%;
   }
-  #head img {
-    width:100%;
-    max-width: initial;
-  }
   #overview {
     flex-direction: column;
     padding: 1em;
@@ -153,12 +152,11 @@
 }
 
 @media (min-width:600px) {
-  .btn {
-    width:auto;
-    margin: 0 auto;
-  }
   #head a {
     max-width: 25%;
+  }
+  #head img {
+    max-width: 50%;
   }
   #head .wrapper {
     display:flex;
@@ -168,8 +166,8 @@
   #expand {
     display: none;
   }
-  .wrap-c {
+  /* .wrap-c {
     flex-direction: row;
     justify-content: space-around;
-  }
+  } */
 }

@@ -3,7 +3,7 @@ var section3 = [
     "isQuestion": false,
     "id":"q20",
     "title": "Scenario three",
-    "paragraph":["Device confiscation scenario"]
+    "paragraph":["Unwanted intrusion into our devices is a concern for many, especially as they can be lost or stolen and expose sensitive information to unauthorised persons. Sometimes the authorities aren't happy about the work we do, and so our devices are at risk of being confiscated during police raids"]
   },
   {
     "isQuestion": true,
