@@ -2,19 +2,19 @@
   #head {
     display:block;
   }
-  #head .wrapper {
+  /* #head .wrapper {
     display: flex;
     -webkit-flex-flow: column wrap;
     flex-flow: column wrap;
-  }
+  } */
   #head img {
     max-width:35%;
   }
-  #head > .wrapper > a {
+  /* #head > .wrapper > a {
     display: inline-block;
     text-align: center;
     width: 100%;
-  }
+  } */
   #menu {
     display:none;
     border-top: 1px solid;
@@ -37,9 +37,12 @@
   .links a {
     padding:0;
   }
-  .questionContent h2 {
-    width:80%;
-    font-size: 1.3em;
+  .questionContent h1 {
+    font-size: 1.5em;
+  }
+  #q0 h2 {
+    width:100%;
+    font-size: 1.2em;
   }
   #intro {
     padding: 1.5em;
@@ -156,6 +159,66 @@
     flex-direction: row;
     justify-content: space-around;
   }
+  #questionContainer {
+    padding:1.5em;
+  }
+  #q0 section {
+    margin:2em 0;
+  }
+  .question-panel {
+    margin-top: 0.5em;
+  }
+  .form-el {
+    margin: 1em;
+    font-size: 0.9em;
+  }
+  .form-el label {
+    line-height: 1em;
+    font-size: 1.1em;
+  }
+  #closePreview {
+    font-size: 1em;
+    top: -1.5em;
+    right:-1em;
+    font-weight: bold;
+  }
+  #preview {
+    width:90%;
+    height:80%;
+  }
+  #inner h1 {
+    font-size: 1.5em;
+  }
+  #inner h4 {
+    border-top:1px solid;
+    padding-top:0.5em;
+  }
+  #dl-wrapper {
+    flex-direction: row;
+  }
+  #policy {
+    padding: 1.5em;
+  }
+  #policy-dl {
+    width: unset;
+    margin-top:2em;
+  }
+  #policy-edit {
+    width: unset;
+  }
+  #policy-edit h3 {
+    margin-top: 0;
+  }
+  #policy textarea {
+    padding-left: 1em;
+  }
+  #policy h1 {
+    font-size: 1.3em;
+    margin-top:2em;
+  }
+  #policy text-img-wrap {
+    margin-top:2em;
+  }
 }
 
 @media (min-width:600px) {
@@ -165,9 +228,12 @@
   #head img {
     max-width: 50%;
   }
-  #head .wrapper {
+  /* #head .wrapper {
     display:flex;
     align-items: center;
+    justify-content: space-between;
+  } */
+  #head {
     justify-content: space-between;
   }
   #expand {
@@ -176,5 +242,8 @@
   .header-menu {
     display: flex;
     flex-direction: row-reverse;
+  }
+  #dl-wrapper {
+    flex-direction: column;
   }
 }

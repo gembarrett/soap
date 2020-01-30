@@ -153,8 +153,8 @@ function handleSubmit() {
   isRequired = match[0] ? match[0].required : false;
   // compare the size of answers array to find out if answers have been provided for this question
   if (id > 0){
-    // add the back button
-    document.querySelector('#backBtn').removeAttribute('disabled');
+    // add the back button - feature postponed until launch
+    // document.querySelector('#backBtn').removeAttribute('disabled');
 
     // have answers been provided for this question?
     noAnswers = beforeSize === answers.length ? true : false;

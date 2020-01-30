@@ -712,3 +712,6 @@ form > div > div > input:checked + label {
 .spacer {
   flex-grow:100;
 }
+#dl-wrapper {
+  display:flex;
+}

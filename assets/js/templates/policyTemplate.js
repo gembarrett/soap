@@ -8,11 +8,11 @@ templates.policyTemplate = function(data){
   var content =
     `<div id="policy"><h1>You just built an organizational security policy!</h1>
     <div class="text-img-wrap">
-    <div id="policy-dl"><h3>Download pre-formatted file:</h3>`
-    + txt + md + html + `</div>
+    <div id="policy-dl"><h3>Download pre-formatted file:</h3><div id="dl-wrapper">`
+    + txt + md + html + `</div></div>
     <div id="policy-edit">
     <h3>Edit, copy and paste into your own file:</h3>
     <textarea class="policyHolder">`+docContent.plain+`</textarea></div>
-    </div><h2>All done? Clear your data from SOAP by refreshing the page or <button id="reset" onclick="clearData()">clicking here</button></h2></div>`;
+    </div><h3>All done? Clear your data from SOAP by refreshing the page or by pressing the <button id="reset" onclick="clearData()">reset button</button></h3></div>`;
   return content;
 };
