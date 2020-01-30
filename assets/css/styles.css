@@ -307,14 +307,19 @@ a {
   z-index: 1;
   position: absolute;
   right: -0.5em;
-  background-color: #fff;
+  background-color: initial;
   color:#668EAA;
-  border: 2px solid #668EAA;
-  border-radius: 50%;
+  border: none;
   padding: 0.5em 0.75em;
   top: -1em;
   cursor: pointer;
   font-size:1.5em;
+}
+#closePreview .fas {
+  transform: rotate(45deg);
+  font-size: 2em;
+  background-color: #fff;
+  border-radius: 50%;
 }
 
 .modalScrollbox {
