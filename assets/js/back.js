@@ -19,3 +19,15 @@ backBtn.addEventListener("click", function() {
 function goBack() {
 
 }
+// var edit = document.getElementById("edit")
+// var questions = document.querySelector(".questionContent")
+// function toggleClass(arr, name){
+//   for (var i=0; i<arr.length; i++){
+//     if(arr[i].classList.contains(name)){
+//       arr[i].classList.remove(name);
+//     } else {
+//       arr[i].classList.add(name);
+//     }
+//   }
+// }
+// edit.addEventListener("onclick", toggleClass(questions, "showAllQs", false))
