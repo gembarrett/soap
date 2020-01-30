@@ -18,7 +18,7 @@ templates.bgTemplate = function(data, params){
 
   var securityGroup = `<img src="assets/images/pic-security.jpg" /><div class="text-img-wrap"><h1>`+text.security[0].head+`</h1>`;
   securityGroup = formatArray(text.security[0].desc, securityGroup);
-  securityGroup += '</div>';
+  securityGroup += '<a href="/assets/SOAP-alphaReport.pdf"><button class="btn btn-seco">Security audit report</button></a></div>';
 
   var bgLinks = "";
   for (var u = 0; u<text.background[0].links.length; u++){

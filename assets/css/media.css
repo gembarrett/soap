@@ -254,6 +254,9 @@
     color:#fff;
     font-weight: bold;
   }
+  .nav-start .links a:hover, .nav-start .links a.active {
+    border-color: #fff;
+  }
   #reset {
     margin:1em auto;
     display:block;
