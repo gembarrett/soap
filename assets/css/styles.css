@@ -306,7 +306,7 @@ a {
 #closePreview {
   z-index: 1;
   position: absolute;
-  right: -0.5em;
+  right: -1.5em;
   background-color: initial;
   color:#668EAA;
   border: none;

@@ -174,7 +174,6 @@
   #closePreview {
     font-size: 1em;
     top: -1.5em;
-    right:-1.5em;
     font-weight: bold;
   }
   #preview {
@@ -265,6 +264,9 @@
   #head a {
     max-width: 25%;
   }
+  #menu-check:checked ~ ul {
+    align-items: center;
+  }
   #head img {
     max-width: 50%;
   }
@@ -281,5 +283,8 @@
   }
   #dl-wrapper {
     flex-direction: column;
+  }
+  #menu-check:checked ~ #collapse {
+    display:none;
   }
 }
