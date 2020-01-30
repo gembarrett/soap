@@ -23,11 +23,9 @@
   }
   #head label {
     font-size: 1.5rem;
-    position: absolute;
-    right: 20px;
-    width:10%;
-    text-align: center;
+    padding: 0.5em 0.5em 1em 1em;
     margin: 10px;
+    margin-right:0;
   }
   .incidentBox {
     width:100%;
@@ -39,6 +37,9 @@
   }
   .questionContent h1 {
     font-size: 1.5em;
+  }
+  .questionContent h2 {
+    font-size: 1.3em;
   }
   #q0 h2 {
     width:100%;
@@ -62,32 +63,25 @@
     width:100%;
     margin:0;
   }
-  #head label {
-    position: unset;
-    width: unset;
-    text-align: right;
-    padding: 0.5em 0.5em 1em 1em;
-    margin-right:0;
-    float: right;
-  }
   #head {
     display:flex;
     justify-content: space-between;
   }
   #menu-check:checked ~ ul {
     flex-direction: column;
-    text-align: right;
+    text-align: center;
     margin:0;
     padding:0;
     align-items: end;
-    width:45%;
+    width:unset;
     border-top: 0;
+    font-size: 0.8em;
   }
   #collapse i {
     opacity: 0.5;
   }
   #page {
-    padding-top: 6em;
+    padding-top: 7em;
   }
   .links li:last-child {
     padding: 0.1em 1em;
@@ -123,6 +117,7 @@
     /* fallback */
     justify-content: center;
     justify-content: space-evenly;
+    padding-left:0;
   }
   #head a {
     width:50%;
@@ -203,6 +198,9 @@
     width: unset;
     margin-top:2em;
   }
+  #policy-dl h3 {
+    margin-top: 0.5em;
+  }
   #policy-edit {
     width: unset;
   }
@@ -218,6 +216,48 @@
   }
   #policy text-img-wrap {
     margin-top:2em;
+  }
+  .btn.btn-prim {
+    min-width: 10em;
+  }
+  .btn-wrap.wrap-c {
+    flex-wrap: wrap-reverse;
+  }
+  #head img {
+    max-width: 40%;
+  }
+  #head a {
+    width: unset;
+  }
+  #header-menu {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  #menu-check:checked ~ #collapse {
+    float:none;
+  }
+  .header-menu {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  #bgContainer img {
+    width:100%;
+    margin:0 auto;
+  }
+  #bgContainer section p {
+    margin-top:0;
+  }
+  #maintenanceGroup .dbl {
+    margin-bottom: 2em;
+    padding-top: 1em;
+  }
+  .nav-start a {
+    color:#fff;
+    font-weight: bold;
+  }
+  #reset {
+    margin:1em auto;
+    display:block;
   }
 }
 
@@ -238,10 +278,6 @@
   }
   #expand {
     display: none;
-  }
-  .header-menu {
-    display: flex;
-    flex-direction: row-reverse;
   }
   #dl-wrapper {
     flex-direction: column;

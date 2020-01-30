@@ -5,9 +5,10 @@
 html, body {
   height:100%;
 }
-a:visited {
+/* TODO: fix so it applies just to external links
+a[href]:visited {
   color:inherit;
-}
+} */
 a:hover {
   text-decoration: underline;
 }
@@ -124,9 +125,11 @@ body {
 }
 .links li:last-child {
   background-color: #fff;
-  color:#066493;
   font-weight: bold;
   padding:1em;
+}
+.nav-start .links li:last-child a{
+  color:#066493;
 }
 
 .nav-scroll .links li:last-child {
@@ -199,7 +202,7 @@ a {
 }
 
 .questionContent h2 {
-  width:90%;
+  width:85%;
 }
 
 .questionContent > .btn-tert {
@@ -517,6 +520,7 @@ a {
 
 .wrap-r {
   justify-content: flex-end;
+  margin-bottom:1em;
 }
 progress {
   width:100%;
@@ -540,6 +544,9 @@ progress[value="0"] {
 small a {
   color:inherit;
   text-decoration: underline;
+}
+small {
+  padding: 1em 0;
 }
 .incidentBox {
   text-align: left;
