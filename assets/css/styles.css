@@ -584,7 +584,8 @@ small {
 
 .form-el label {
   display:inline;
-  font-size: 1.3em;
+  font-size: 1.1em;
+  line-height: 2em;
 }
 .form-el label[contenteditable="true"] {
   border-style: dotted;
