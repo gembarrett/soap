@@ -77,7 +77,7 @@ var section1 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": ""
+            "tipList": "Privacy Badger website: https://www.eff.org/privacybadger"
           }
         ]
       },
@@ -90,7 +90,7 @@ var section1 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": ""
+            "tipList": "GitHub for Privacy Possum: https://github.com/cowlicks/privacypossum"
           }
         ]
       },
@@ -103,7 +103,7 @@ var section1 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": ""
+            "tipList": "GitHub for uBlock: https://github.com/gorhill/uBlock"
           }
         ]
       },
@@ -116,7 +116,7 @@ var section1 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": ""
+            "tipList": "Better website: https://better.fyi/"
           }
         ]
       },
@@ -129,20 +129,20 @@ var section1 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": ""
+            "tipList": "HTTPSEverywhere website: https://www.eff.org/https-everywhere"
           }
         ]
       },
       {
         "type":"checkbox",
-        "answerText":"DuckDuckGo",
+        "answerText":"DuckDuckGo Privacy Essentials",
         "storeAs":"[extArray]",
         "excludes":[],
         "policyEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": ""
+            "tipList": "DuckDuckGo Privacy Essentials description: https://spreadprivacy.com/privacy-simplified/"
           }
         ]
       },
@@ -155,7 +155,7 @@ var section1 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": ""
+            "tipList": "Password Alert FAQ: https://support.google.com/a/answer/6197508"
           }
         ]
       },
