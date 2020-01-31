@@ -322,6 +322,11 @@ a {
   border-radius: 50%;
 }
 
+#preview h4 {
+  border-top:1px solid;
+  padding-top:0.5em;
+}
+
 .modalScrollbox {
   position: absolute;
   top: 0;
@@ -581,6 +586,10 @@ small {
   display:inline;
   font-size: 1.3em;
 }
+.form-el label[contenteditable="true"] {
+  border-style: dotted;
+  border-width:3px;
+}
 
 .btn-edit {
   cursor: text;
@@ -623,9 +632,10 @@ form > div > div > input[type='checkbox'] + label {
   border-radius: 0.5em;
 }
 
-form > div > div > input:checked + label {
+form > div > div > input:checked + label, .form-el label:hover {
   background-color: #96CAEE;
-  color:#fff;
+  color:#066493;
+  border-color: currentColor;
 }
 
 .notice {
@@ -726,4 +736,9 @@ form > div > div > input:checked + label {
 }
 #dl-wrapper {
   display:flex;
+}
+.showAllQs {
+  display:block;
+}
+.hideThisQ{
 }
