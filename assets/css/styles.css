@@ -475,10 +475,10 @@ a {
   color:#fff;
   font-weight: bold;
 }
-.btn-prim:hover, .btn-seco:hover {
+.btn-prim:hover, .btn-seco:hover, #intro .btn-seco:hover{
   background-color: #8FC5EA;
   border-color: #8FC5EA;
-  color:#fff;
+  color:#066493;
 }
 /* ghost for secondary content - thin border */
 .btn-seco {
