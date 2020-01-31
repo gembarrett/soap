@@ -8,30 +8,17 @@ var section3 = [
   {
     "isQuestion": true,
     "id":"q21",
-    "q":"Which authentication method should be used to restrict device access?",
+    "q":"Can staff use biometric authentication to restrict device access?",
     "required":true,
-    "policyContent":"In order to protect devices from unauthorised physical infiltration, all devices which are used for [orgName] purposes should have an automatic screen lock enabled, and the unlock method should, where possible, use [deviceAuth]",
-    "appendixContent":"",
+    "policyContent":"In order to protect devices from unauthorised physical infiltration, all devices which are used for [orgName] purposes should have an automatic screen lock enabled and may be unlocked by [deviceAuth].",
+    "appendixContent":"Be aware that touchscreen devices are susceptible to holding fingerprint marks which can be used to guess recently-used key sequences.",
     "answers":[
-      {
-        "type":"checkbox",
-        "answerText":"Password, code or phrase",
-        "storeAs":"[deviceAuth]",
-        "excludes":[],
-        "policyEntry":"strong passcodes, passwords or passphrases",
-        "appendixEntry":[
-          {
-            "reviewList":"",
-            "tipList": "Be aware that touchscreen devices are susceptible to holding fingerprint marks which can be used to guess recently-used key sequences"
-          }
-        ]
-      },
       {
         "type":"checkbox",
         "answerText":"Fingerprint authentication",
         "storeAs":"[deviceAuth]",
         "excludes":[],
-        "policyEntry":"fingerprint authentication, such as Touch ID",
+        "policyEntry":"fingerprint authentication (such as Touch ID)",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -44,31 +31,18 @@ var section3 = [
         "answerText":"Facial recognition authentication",
         "storeAs":"[deviceAuth]",
         "excludes":[],
-        "policyEntry":"facial recognition authentication, such as Face Unlock",
+        "policyEntry":"facial recognition authentication (such as Face Unlock)",
         "appendixEntry":[
           {
             "reviewList":"",
             "tipList": "Be aware that this method is vulnerable to unauthorised access as most systems won't flag a sleeping face, an unwilling face, or a twin."
           }
         ]
-      },
-      {
-        "type":"checkbox",
-        "answerText":"Staff preference",
-        "storeAs":"[deviceAuth]",
-        "excludes":[],
-        "policyEntry":"an authentication method that uses a combination of letters and/or numbers, or biometric data - according to your preference and the device's capabilities. For help with deciding the most appropriate solution, please seek guidance from [contactName] ([contactPos]).",
-        "appendixEntry":[
-          {
-            "reviewList":"",
-            "tipList": ""
-          }
-        ]
       }
     ],
     "tips":[
       {"relevance":"If your organisation provides devices to staff or installs work profiles on their personal devices"},
-      {"meaning":"Preventing access from physical infiltration is usually done through passcodes and passwords as it provides an additional barrier against anyone trying to get into the device. Recent developments in facial and fingerprint recognition have led to biometric authentication becoming an alternative, although there are security flaws which should be considered."},
+      {"meaning":"Recent developments in facial and fingerprint recognition have led to biometric authentication becoming a convenient alternative to passwords, although there are security flaws which should be considered. It's important to also set up a password, code or phrase as an extra barrier that can't be as easily circumvented."},
       {"implementation":"The unlock method is irrelevant if devices are almost never locked; enabling the automatic screen lock helps to ensure that others can’t walk right through the open doors of an unlocked device."},
       {"more": ["security of face unlock id", "creating strong passwords", "security of biometric authentication"]}
     ]
