@@ -78,7 +78,7 @@ var section4 = [
     "isQuestion": true,
     "id":"q30",
     "q":"How should staff prepare for travel?",
-    "required":true,
+    "required":false,
     "policyContent":"Before travelling, there are steps which should be taken to prepare devices containing sensitive information: [travelSteps] For help with any of these security measures, please contact [contactName] ([contactPos])",
     "appendixContent":"EFF wrote a Border Search Pocket Guide, which may be useful: https://www.eff.org/document/eff-border-search-pocket-guide",
     "answers":[
@@ -105,7 +105,7 @@ var section4 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": "If there are a large amount of staff who wear smart watches at [orgName] then it may be valuable to look into what Emergency SOS calling features they may have access to through the watch."
+            "tipList": "If there's a large amount of staff who wear smart watches at [orgName] then it may be valuable to look into what Emergency SOS calling features they may have access to through the watch."
           }
         ]
       },
@@ -114,11 +114,11 @@ var section4 = [
         "answerText":"Remove unnecessary data",
         "storeAs":"[travelSteps]",
         "excludes":[],
-        "policyEntry":"",
+        "policyEntry":"Deleting unnecessary data from your devices before travelling reduces how much is exposed should the device be accessed without your knowledge. Assess each data group by how essential it is to your trip and whether it can be safely accessed via non-local storage while abroad.",
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": ""
+            "tipList": "Remember to back up your data before removing it from your devices!"
           }
         ]
       },
@@ -127,11 +127,24 @@ var section4 = [
         "answerText":"Encrypt all devices",
         "storeAs":"[travelSteps]",
         "excludes":[],
-        "policyEntry":"",
+        "policyEntry":"Full disk encryption is available on most operating systems, and we require staff to ensure it is set up and working prior to travel. For help on how to do this, please contact [contactName] ([contactPos]).",
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": ""
+            "tipList": "."
+          }
+        ]
+      },
+      {
+        "type":"checkbox",
+        "answerText":"Remove/log out of incriminating services",
+        "storeAs":"[travelSteps]",
+        "excludes":[],
+        "policyEntry":"If your device is searched, you'll want to limit the amount of suspicious or incriminating information that is available. Affected apps and websites will depend on the travel destination, for example some countries will take issue with gay dating apps while others will be more concerned by the presence of a Tor browser.",
+        "appendixEntry":[
+          {
+            "reviewList":"",
+            "tipList": "Don't forget to wipe browser history in addition to logging out and removing services from your devices."
           }
         ]
       },
@@ -140,24 +153,11 @@ var section4 = [
         "answerText":"Disable biometric authentication",
         "storeAs":"[travelSteps]",
         "excludes":[],
-        "policyEntry":"",
+        "policyEntry":"By disabling fingerprint or facial authentication, your device will fallback to requiring a password, code or phrase to gain entry - something which is harder to force as it usually requires a judge to support the search of your device.",
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": ""
-          }
-        ]
-      },
-      {
-        "type":"checkbox",
-        "answerText":"Remove/log out of incriminating apps",
-        "storeAs":"[travelSteps]",
-        "excludes":[],
-        "policyEntry":"",
-        "appendixEntry":[
-          {
-            "reviewList":"",
-            "tipList": ""
+            "tipList": "Switching off devices will also disable biometric authentication - but only for the first successful attempt to gain access."
           }
         ]
       },
@@ -166,7 +166,7 @@ var section4 = [
         "answerText":"Switch off all devices",
         "storeAs":"[travelSteps]",
         "excludes":[],
-        "policyEntry":"",
+        "policyEntry":"If you forget to disable biometric authentication then switching the device off altogether can force the device to fall back to authentication via password, code or phrase the next time it is turned on. This makes it harder for others to force entry to the device.",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -190,82 +190,82 @@ var section4 = [
       },
     ],
     "tips":[
-      {"relevance":""},
-      {"meaning":"Be aware that unusual precautions may make border agents suspicious."},
-      {"implementation":""},
-      {"more": ["enable phone SOS mode", ]}
+      {"relevance":"Organisations with staff who travel outside of their home country for work purposes."},
+      {"meaning":"Be aware that unusual precautions may make border agents suspicious. Some of these measures will need to be implemented on a case-by-case basis in order to avoid standing out. Being visibly security-conscious can draw the attention of border guards."},
+      {"implementation":"Creating a travel checklist for staff out of the relevant content in your security policy can help with implementation."},
+      {"more": ["enable phone SOS mode", "device security while travelling", "how to disable biometric authentication"]}
     ]
   },
   {
     "isQuestion": true,
     "id":"q31",
-    "q":"Should staff use a specific tool to protect their internet connection?",
-    "required":false,
-    "policyContent":"",
-    "appendixContent":"",
+    "q":"Should staff use a specific tool or tools to protect their internet connection?",
+    "required":true,
+    "policyContent":"Protecting your internet activity from invasive monitoring can involve a range of solutions. [orgName] advises staff to use [vpnChoice] on devices that are connected to the internet. [contactName] ([contactPos]) can help with set up.",
+    "appendixContent":"Depending on the country in which you're operating it may be advisable to recommend using these tools even when staff are not travelling.",
     "answers":[
       {
         "type":"checkbox",
         "answerText":"Mullvad",
-        "storeAs":"[]",
+        "storeAs":"[vpnChoice]",
         "excludes":[],
         "policyEntry":"",
         "appendixEntry":[
           {
-            "reviewList":"",
-            "tipList": ""
+            "reviewList":"Is Mullvad still the right tool to recommend to staff?",
+            "tipList": "Mullvad website: https://mullvad.net"
           }
         ]
       },
       {
         "type":"checkbox",
         "answerText":"Psiphon",
-        "storeAs":"[]",
+        "storeAs":"[vpnChoice]",
         "excludes":[],
         "policyEntry":"",
         "appendixEntry":[
           {
-            "reviewList":"",
-            "tipList": ""
+            "reviewList":"Is Psiphon still the right tool to recommend to staff?",
+            "tipList": "Ensure staff download Psiphon directly from the Psiphon website: https://psiphon.ca/ in order to avoid fakes containing malicious code."
           }
         ]
       },
       {
         "type":"checkbox",
         "answerText":"NordVPN",
-        "storeAs":"[]",
+        "storeAs":"[vpnChoice]",
+        "excludes":[],
+        "policyEntry":"",
+        "appendixEntry":[
+          {
+            "reviewList":"Is NordVPN still the right tool to recommend to staff?",
+            "tipList": "NordVPN website: https://nordvpn.com/"
+          }
+        ]
+      },
+      {
+        "type":"checkbox",
+        "answerText":"Tor",
+        "storeAs":"[vpnChoice]",
         "excludes":[],
         "policyEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": ""
+            "tipList": "As one of the most famous circumvention tools, Tor can stand out as a red flag in some countries and you will come across sites that block Tor users altogether, so choose a backup solution for when your circumvention needs to be a little more low-profile. Ensure staff download Tor directly from the Tor Project website at https://www.torproject.org/ in order to avoid fakes containing malicious code."
           }
         ]
       },
       {
         "type":"checkbox",
         "answerText":"Tunnelbear",
-        "storeAs":"[]",
+        "storeAs":"[vpnChoice]",
         "excludes":[],
         "policyEntry":"",
         "appendixEntry":[
           {
-            "reviewList":"",
-            "tipList": ""
-          }
-        ]
-      },
-      {
-        "type":"checkbox",
-        "answerText":"No preference",
-        "storeAs":"[]",
-        "excludes":[],
-        "policyEntry":"",
-        "appendixEntry":[
-          {
-            "reviewList":"",
-            "tipList": ""
+            "reviewList":"Is TunnelBear still the right tool to recommend to staff?",
+            "tipList": "TunnelBear website: https://www.tunnelbear.com/"
           }
         ]
       },
@@ -273,54 +273,54 @@ var section4 = [
         "type":"checkbox",
         "editable":true,
         "answerText":"Other",
-        "storeAs":"[]",
+        "storeAs":"[vpnChoice]",
         "excludes":[],
         "policyEntry":"",
         "appendixEntry":[
           {
-            "reviewList":"",
+            "reviewList":"Is [vpnChoice] still the best option for protecting the internet activity of staff members?",
             "tipList": ""
           }
         ]
       }
     ],
     "tips":[
-      {"relevance":""},
-      {"meaning":""},
-      {"implementation":""},
-      {"more": []}
+      {"relevance":"These tools are most beneficial to staff working or travelling in a country that have invasive powers to monitor online activity."},
+      {"meaning":"VPNs and similar tools can mask a user's location and encrypt their connection, ensuring that anyone watching can only see that a VPN is in use."},
+      {"implementation":"It can sometimes be possible for governments to distinguish which tool is masking the connection so consider carefully which options are least likely to stand out from the crowd. Determining the most popular VPNs (e.g. which ones are used to find porn) in a region will help with blending in."},
+      {"more": ["privacy-conscious VPNs", "how do vpns work"]}
     ]
   },
   {
     "isQuestion": true,
     "id":"q32",
-    "q":"Does your organisation provide a paid subscription to any VPNs or circumvention tools?",
+    "q":"How are the recommended VPNs and circumvention tools paid for?",
     "required":false,
     "policyContent":"",
     "appendixContent":"",
     "answers":[
       {
         "type":"radio",
-        "answerText":"Yes",
+        "answerText":"Free plan",
         "storeAs":"[]",
         "excludes":[],
         "policyEntry":"",
         "appendixEntry":[
           {
-            "reviewList":"",
-            "tipList": ""
+            "reviewList":"Is the free [vpnChoice] plan still sufficient or is there a better option now available?",
+            "tipList": "Using the free plan may result in some compromises on speed or be ad-supported so consider whether the benefits offset these."
           }
         ]
       },
       {
         "type":"radio",
-        "answerText":"No",
+        "answerText":"Company subscription",
         "storeAs":"[]",
         "excludes":[],
-        "policyEntry":"",
+        "policyEntry":"[orgName] provides a paid subscription to [vpnChoice].",
         "appendixEntry":[
           {
-            "reviewList":"",
+            "reviewList":"Is the paid subscription to [vpnChoice] still a good solution or is there a better option now available?",
             "tipList": ""
           }
         ]
@@ -328,7 +328,7 @@ var section4 = [
       {
         "type":"radio",
         "editable":true,
-        "answerText":"Other",
+        "answerText":"other",
         "storeAs":"[]",
         "excludes":[],
         "policyEntry":"",
@@ -342,70 +342,14 @@ var section4 = [
     ],
     "tips":[
       {"relevance":""},
-      {"meaning":""},
-      {"implementation":""},
-      {"more": [""]}
+      {"meaning":"Circumvention tools are usually run by small organisations who rely on funding and donations in order to keep providing a free or low-cost service, while larger VPNs tend to offer additional features and support in exchange for a more expensive subscription plan."},
+      {"implementation":"Asking staff to pay for their own VPN subscription can make it tough for those on a lower income to sufficiently protect their internet connection, putting them at risk and impacting their work. Instead, consider covering part of the cost or migrating to a service with a free plan."},
+      {"more": ["free vs paid vpns"]}
     ]
   },
   {
     "isQuestion": true,
     "id":"q33",
-    "q":"How should staff connect to the internet while they’re in public spaces?",
-    "required":false,
-    "policyContent":"",
-    "appendixContent":"",
-    "answers":[
-      {
-        "type":"checkbox",
-        "answerText":"VPN & WiFi",
-        "storeAs":"[]",
-        "excludes":[],
-        "policyEntry":"",
-        "appendixEntry":[
-          {
-            "reviewList":"",
-            "tipList": ""
-          }
-        ]
-      },
-      {
-        "type":"checkbox",
-        "answerText":"mobile data",
-        "storeAs":"[]",
-        "excludes":[],
-        "policyEntry":"",
-        "appendixEntry":[
-          {
-            "reviewList":"",
-            "tipList": ""
-          }
-        ]
-      },
-      {
-        "type":"checkbox",
-        "editable":true,
-        "answerText":"Other",
-        "storeAs":"[]",
-        "excludes":[],
-        "policyEntry":"",
-        "appendixEntry":[
-          {
-            "reviewList":"",
-            "tipList": ""
-          }
-        ]
-      }
-    ],
-    "tips":[
-      {"relevance":""},
-      {"meaning":""},
-      {"implementation":""},
-      {"more": [""]}
-    ]
-  },
-  {
-    "isQuestion": true,
-    "id":"q34",
     "q":"Who should staff contact in a travel emergency?",
     "required":false,
     "policyContent":"",
@@ -413,27 +357,56 @@ var section4 = [
     "answers":[
       {
         "type":"text",
-        "answerText":"[contactName], [contactPos]",
-        "storeAs":"[]",
+        "answerText":"Name",
+        "placeholder":"e.g. Shohreh Yazdani",
+        "storeAs":"[travelHelpName]",
         "excludes":[],
-        "policyEntry":"",
+        "policyEntry":"If you are in need of assistance while travelling, please contact either your pre-arranged travel buddy or [travelHelpName].",
         "appendixEntry":[
           {
-            "reviewList":"",
+            "reviewList":"Is [travelHelpName] still the most appropriate person to contact for travel assistance?",
             "tipList": ""
           }
         ]
       },
       {
-        "type":"checkbox",
-        "editable":true,
-        "answerText":"Other",
-        "storeAs":"[]",
+        "type":"text",
+        "answerText":"Pronouns",
+        "placeholder": "e.g. she/her",
+        "storeAs":"[travelHelpProns]",
         "excludes":[],
-        "policyEntry":"",
+        "policyEntry":"Their pronouns are [travelHelpProns].",
         "appendixEntry":[
           {
-            "reviewList":"",
+            "reviewList":"Does [travelHelpName] still use [travelHelpProns] pronouns?",
+            "tipList": ""
+          }
+        ]
+      },
+      {
+        "type":"text",
+        "answerText":"Email",
+        "placeholder": "e.g. example@organisation.com",
+        "storeAs":"[travelHelpEmail]",
+        "excludes":[],
+        "policyEntry":"Email: [travelHelpEmail]",
+        "appendixEntry":[
+          {
+            "reviewList":"Is [travelHelpName]'s email address up-to-date?",
+            "tipList": ""
+          }
+        ]
+      },
+      {
+        "type":"text",
+        "answerText":"Phone",
+        "placeholder": "e.g. +1 (234) 567-890",
+        "storeAs":"[travelHelpPhone]",
+        "excludes":[],
+        "policyEntry":"Phone: [travelHelpPhone]",
+        "appendixEntry":[
+          {
+            "reviewList":"Is [travelHelpName]'s phone number correct?",
             "tipList": ""
           }
         ]
@@ -441,9 +414,9 @@ var section4 = [
     ],
     "tips":[
       {"relevance":""},
-      {"meaning":""},
-      {"implementation":""},
-      {"more": [""]}
+      {"meaning":"When staff are travelling abroad it can be useful for them to have a central point of contact should they need assistance. This person should be able to direct them to the appropriate resource or person, or put into action an emergency escalation plan if needs be."},
+      {"implementation":"It may be useful for staff to have a trip-specific 'travel buddy' they can go to for more routine support, such as daily check ins. This means that the person defined here remains the 'emergency' contact and their workload isn't impacted by minor travel support tasks."},
+      {"more": ["help for staff while travelling"]}
     ]
   },
   {
@@ -451,7 +424,7 @@ var section4 = [
     "id":"q35",
     "q":"Bearing the previous questions in mind, what steps should be in your staff members’ travel security plans?",
     "required":true,
-    "policyContent":"",
+    "policyContent":"... you are travelling abroad for work purposes: It's important to avoid assuming the same level of safety abroad as you are used to at home. While it's recommended that you research your destination's security situation, here are some baseline security measures you can use to form a travel plan in order to help with protecting you, your devices and, by extension, [orgName]'s staff and work: [inc4Tactics]",
     "appendixContent": "",
     "answers":[
       {
@@ -463,16 +436,16 @@ var section4 = [
         "policyEntry":"",
         "appendixEntry":[
           {
-            "reviewList":"",
-            "tipList": ""
+            "reviewList":"Is your travel plan template up-to-date?",
+            "tipList": "Check ins with a travel buddy can be as simple as using an agreed-upon set of emoji icons as a code to indicate wellness, vulnerability and emergency."
           }
         ]
       }
     ],
     "tips":[
       {"relevance":""},
-      {"meaning":""},
-      {"implementation":""},
+      {"meaning":"Staff should not make assumptions about the level of privacy they can expect in their destination region. Having a plan to help them prepare for invasive searches, device loss and other issues means that they're not stuck abroad with no support."},
+      {"implementation":"Staff who are travelling alone, or who may be particularly vulnerable to attack while abroad, should have their travel security preparation prioritised"},
       {"more": ["things to consider when crossing the border"]}
     ]
   }

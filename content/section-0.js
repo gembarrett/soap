@@ -149,7 +149,7 @@ var section0 = [
         "policyEntry":"Their pronouns are [contactProns].",
         "appendixEntry":[
           {
-            "reviewList":"",
+            "reviewList":"Does [contactName] still use [contactProns] pronouns?",
             "tipList": ""
           }
         ]
@@ -163,7 +163,7 @@ var section0 = [
         "policyEntry":"Email: [contactEmail]",
         "appendixEntry":[
           {
-            "reviewList":"Is their email address up-to-date?",
+            "reviewList":"Is [contactName]'s email address up-to-date?",
             "tipList": ""
           }
         ]
@@ -177,7 +177,7 @@ var section0 = [
         "policyEntry":"Phone: [contactPhone]",
         "appendixEntry":[
           {
-            "reviewList":"Is their phone number correct?",
+            "reviewList":"Is [contactName]'s phone number correct?",
             "tipList": ""
           }
         ]
