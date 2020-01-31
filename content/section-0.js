@@ -107,6 +107,48 @@ var section0 = [
   {
     "isQuestion": true,
     "id":"q3",
+    "q":"Do all your staff work in the same physical office?",
+    "required":true,
+    "policyContent":"",
+    "appendixContent":"",
+    "answers":[
+      {
+        "type":"radio",
+        "answerText":"Yes",
+        "storeAs": "",
+        "excludes":[],
+        "policyEntry":"",
+        "appendixEntry":[
+          {
+            "reviewList":"",
+            "tipList": ""
+          }
+        ],
+      },
+      {
+        "type":"radio",
+        "answerText":"No - some or all of our staff work remotely.",
+        "storeAs": "",
+        "excludes":[], // exc. environmental Qs when added
+        "policyEntry":"",
+        "appendixEntry":[
+          {
+            "reviewList":"",
+            "tipList": ""
+          }
+        ]
+      },
+    ],
+    "tips":[
+      {"relevance":""},
+      {"meaning":"For the majority of their time, remote staff work outside of a traditional office, such as from home or a cafe. The risks in different working environments vary and there are factors to be considered which apply to remote staff but not so much those who work in a regular office – and vice versa."},
+      {"implementation":"Your organisation is remote if it has any members of staff working from outside [orgName]-controlled premises, and taking this remote-first perspective helps with supporting those staff as part of the team."},
+      {"more":["managing remote staff"]}
+    ]
+  },
+  {
+    "isQuestion": true,
+    "id":"q4",
     "q":"Who is responsible for this policy?",
     "required":true,
     "policyContent":"",
@@ -192,7 +234,7 @@ var section0 = [
   },
   {
     "isQuestion": true,
-    "id":"q4",
+    "id":"q5",
     "q":"How regularly do you intend to review and update this policy?",
     "required":true,
     "policyContent":"This policy will be reviewed by [contactName] ([contactPos]) on a [reviewFreq] basis. Any suggestions or feedback on the policy’s contents should be directed to them.",
@@ -260,7 +302,7 @@ var section0 = [
   },
   {
     "isQuestion": true,
-    "id":"q5",
+    "id":"q6",
     "q":"Which operating systems are used in your organisation?",
     "required":false,
     "policyContent":"",
@@ -368,7 +410,7 @@ var section0 = [
   },
   {
     "isQuestion": true,
-    "id":"q6",
+    "id":"q7",
     "q":"How does your organisation manage staff work devices?",
     "required":true,
     "policyContent":"[orgName] manages device security in the following way, depending on the situation.",
@@ -436,7 +478,7 @@ var section0 = [
   },
   {
     "isQuestion": true,
-    "id":"q7",
+    "id":"q8",
     "q":"Does your organisation provide staff with webcam covers or privacy screens for their devices?",
     "required":false,
     "policyContent":"Protecting the devices we use is crucial in preventing unauthorised access to sensitive [orgName] data. To mitigate this, [orgName] will provide you with [providePrivacy] to use on your devices.",
@@ -474,48 +516,6 @@ var section0 = [
       {"meaning":"Webcam covers are easy to buy online and you can sometimes find branded ones being given away free at conferences. They’re a small, simple plastic device with a cover that slides back and forth to expose or hide the camera. When the camera is hidden, any remote camera view will see only darkness. Note that this only mitigates camera access, and not microphone access. Privacy screens are tinted in such a way that someone looking at the screen from the side, rather than directly in front, will see only a black screen."},
       {"implementation":"Covers are easy to stick over the camera and usually stick pretty well. It will take time for staff to keep the cover closed by default and only opening it when needed. Privacy screens are usually stuck over the device screen, however some laptop versions can be slid on/off easily when needed."},
       {"more":["webcam covers", "computer mobile privacy screens"]}
-    ]
-  },
-  {
-    "isQuestion": true,
-    "id":"q8",
-    "q":"Do all your staff work in the same physical office?",
-    "required":true,
-    "policyContent":"",
-    "appendixContent":"",
-    "answers":[
-      {
-        "type":"radio",
-        "answerText":"Yes",
-        "storeAs": "",
-        "excludes":[],
-        "policyEntry":"",
-        "appendixEntry":[
-          {
-            "reviewList":"",
-            "tipList": ""
-          }
-        ],
-      },
-      {
-        "type":"radio",
-        "answerText":"No - some or all of our staff work remotely.",
-        "storeAs": "",
-        "excludes":[], // exc. environmental Qs when added
-        "policyEntry":"",
-        "appendixEntry":[
-          {
-            "reviewList":"",
-            "tipList": ""
-          }
-        ]
-      },
-    ],
-    "tips":[
-      {"relevance":""},
-      {"meaning":"For the majority of their time, remote staff work outside of a traditional office, such as from home or a cafe. The risks in different working environments vary and there are factors to be considered which apply to remote staff but not so much those who work in a regular office – and vice versa."},
-      {"implementation":"Your organisation is remote if it has any members of staff working from outside [orgName]-controlled premises, and taking this remote-first perspective helps with supporting those staff as part of the team."},
-      {"more":["managing remote staff"]}
     ]
   }
 ]

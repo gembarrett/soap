@@ -421,7 +421,7 @@ var section4 = [
   },
   {
     "isQuestion": true,
-    "id":"q35",
+    "id":"q34",
     "q":"Bearing the previous questions in mind, what steps should be in your staff members’ travel security plans?",
     "required":true,
     "policyContent":"... you are travelling abroad for work purposes: It's important to avoid assuming the same level of safety abroad as you are used to at home. While it's recommended that you research your destination's security situation, here are some baseline security measures you can use to form a travel plan in order to help with protecting you, your devices and, by extension, [orgName]'s staff and work: [inc4Tactics]",
@@ -431,7 +431,7 @@ var section4 = [
         "type":"textarea",
         "answerText":"",
         "placeholder":"Here's some examples: \n\n- determine a “travel buddy” to check in with at regular periods \n- agree on code phrases or emojis to indicate safety or trigger an escalation \n- ensure you have emergency contact information in an accessible place",
-        "storeAs":"[inc3Tactics]",
+        "storeAs":"[inc4Tactics]",
         "excludes":[],
         "policyEntry":"",
         "appendixEntry":[

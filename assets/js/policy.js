@@ -18,6 +18,7 @@ function compileDoc(p,a){
   var commsP = [];
   var acctsP = [];
   var incResP = [];
+  var travelP = [];
   var appContent = {
     general: [],
     review: [],
@@ -43,20 +44,23 @@ function compileDoc(p,a){
       // if there's data
       if (found){
         switch (true) {
-          case qRef < 5:
+          // questions 0-5 are for context
+          case qRef < 6:
             contextP = getPolicyContent(qRef, prevQ, aRef, contextP, found);
             // if we need the appendix too
             if (a) {
-              appContent = getAppendixContent(qRef, prevQ, aRef, appContent, found);
+              appContent = getAppendixContent(qRef, prevQ, aRef, appContent, found); // TODO: instead of repeating this is should just be a function call each time
             }
             break;
-          case qRef < 10:
+          // questions 6-8 are for devices
+          case qRef < 9:
             deviceP = getPolicyContent(qRef, prevQ, aRef, deviceP, found);
             // if we need the appendix too
             if (a) {
               appContent = getAppendixContent(qRef, prevQ, aRef, appContent, found);
             }
             break;
+          // questions 9-12 are for comms
           case qRef < 13:
             commsP = getPolicyContent(qRef, prevQ, aRef, commsP, found);
             // if we need the appendix too
@@ -64,9 +68,11 @@ function compileDoc(p,a){
               appContent = getAppendixContent(qRef, prevQ, aRef, appContent, found);
             }
             break;
+          // question 13 is inc resp
           case qRef < 14:
             incResP = getPolicyContent(qRef, prevQ, aRef, incResP, found);
             break;
+          // questions 14-18 are for accounts
           case qRef < 19:
             acctsP = getPolicyContent(qRef, prevQ, aRef, acctsP, found);
             // if we need the appendix too
@@ -74,9 +80,36 @@ function compileDoc(p,a){
               appContent = getAppendixContent(qRef, prevQ, aRef, appContent, found);
             }
             break;
+          // question 19 is for inc resp
           case qRef < 20:
             incResP = getPolicyContent(qRef, prevQ, aRef, incResP, found);
             break;
+          // questions 20-26 are for devices
+          case qRef < 27:
+            deviceP = getPolicyContent(qRef, prevQ, aRef, deviceP, found);
+            // if we need the appendix too
+            if (a) {
+              appContent = getAppendixContent(qRef, prevQ, aRef, appContent, found);
+            }
+            break;
+          // question 27 is for inc resp
+          case qRef < 28:
+            incResP = getPolicyContent(qRef, prevQ, aRef, incResP, found);
+            break;
+          // questions 28-33 are for travel
+          case qRef < 34:
+            travelP = getPolicyContent(qRef, prevQ, aRef, travelP, found);
+            // if we need the appendix too
+            if (a) {
+              appContent = getAppendixContent(qRef, prevQ, aRef, appContent, found);
+            }
+            break;
+          // question 34 is for inc resp
+          case qRef < 35:
+            incResP = getPolicyContent(qRef, prevQ, aRef, incResP, found);
+            break;
+
+
           default:
             console.log(qRef + ' not found');
         }
@@ -103,6 +136,10 @@ function compileDoc(p,a){
       doc.plain += '\n\nAccounts Security\n' + acctsP.join('\n');
       doc.markdown += '\n\n### Accounts Security \n' + acctsP.join('\n');
       doc.html += '<h3>Accounts Security</h3><p>' + acctsP.join('</p><p>')+'</p>';
+    case travelP.length > 0:
+      doc.plain += '\n\Travel Security\n' + travelP.join('\n');
+      doc.markdown += '\n\n### Travel Security \n' + travelP.join('\n');
+      doc.html += '<h3>Travel Security</h3><p>' + travelP.join('</p><p>')+'</p>';
     case incResP.length > 0:
       doc.plain += '\n\nWhat to do if...\n' + incResP.join('\n\n');
       doc.markdown += '\n\n### What to do if...\n' + incResP.join('\n\n');
