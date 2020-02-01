@@ -382,7 +382,7 @@ var section3 = [
     "isQuestion": true,
     "id":"q27",
     "q":"Bearing the previous questions in mind, what steps should staff take when their devices are seized?",
-    "required":true,
+    "required":false,
     "policyContent":"... your device is seized: whether this is at a border, a protest or a raid, it is important to let someone know as soon about the situation as you are able, in order to begin countering any unauthorised access as early as possible. You are advised to follow these steps: [inc3Tactics]",
     "appendixContent": "Device seizures under any circumstances can be a traumatising event so be sure to offer support to your impacted colleague.",
     "answers":[

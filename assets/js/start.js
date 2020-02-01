@@ -52,13 +52,15 @@ function addChangeListeners() {
   var editBtn = document.getElementById("editBtn");
   editBtn.addEventListener('click', editAnswers, false);
 
-  // grab all the form inputs
+  // grab all the form inputs - these two don't seem to be in use though?
   var radios = Array.from(document.querySelectorAll('.form-el > input[type="radio"]'))
   var checks = Array.from(document.querySelectorAll('.form-el > input[type="checkbox"]'));
 
   var elements = Array.from(document.querySelectorAll('.form-el > input'));
-  var boxes = Array.from(document.querySelectorAll('.form-el > textarea'));
-  elements = elements.concat(boxes);
+  // var boxes = Array.from(document.querySelectorAll('.form-el > textarea'));
+  // console.log(boxes);
+  // elements = elements.concat(boxes);
+  // console.log(elements);
   for (var e = 0; e < elements.length; e++) {
     // if it's a radio or checkbox
     if ((elements[e].type === "radio") || (elements[e].type === "checkbox")){
