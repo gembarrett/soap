@@ -48,6 +48,10 @@ function addChangeListeners() {
   // TODO: investigate why this is triggered on q1, rather than onclick
   notice.onclick = notice.remove();
 
+  // add listener for edit button
+  var editBtn = document.getElementById("editBtn");
+  editBtn.addEventListener('click', editAnswers, false);
+
   // grab all the form inputs
   var radios = Array.from(document.querySelectorAll('.form-el > input[type="radio"]'))
   var checks = Array.from(document.querySelectorAll('.form-el > input[type="checkbox"]'));
@@ -64,6 +68,7 @@ function addChangeListeners() {
     }
   }
 }
+
 
 function updateValue(e) {
   log.textContent = e.target.value;
@@ -96,19 +101,6 @@ function moveForward(id) {
   return id;
 }
 
-function moveBackward(id) {
-  // this increases the counter
-  currentState.questionC--;
-  // start looking at the next question
-  // increase the question id number
-  id--;
-  currentState.questionQ = 'q' + id;
-  // increase position in the array
-  currentState.questionP--;
-  var el = document.querySelector('progress');
-  el.value--;
-  return id;
-}
 
 function isExcludedQ(id) {
   // start looking at the next question
@@ -136,25 +128,24 @@ function updateProgressBar(){
 // this is the function that's called when a user submits an answer
 // TODO: add a special flag to this if it should be looking for edited, rather than new answers
 function handleSubmit() {
-  console.log('submit button clicked');
   // search for the currently shown element - question and answer
   var match = document.querySelector('.current');
   console.log('get the current element');
   // this gets the current question id number e.g. q0
   var id = currentState.questionQ.split('q')[1];
   console.log('get the current question\'s id');
+  // get the number of answers collected so far for comparison later
   beforeSize = currentState.answers.length;
-  // use the form element and the question id to get the inputs
+  // use the current element and the question id to get the inputs
   var answers = getInput(match, id);
 
   canProceed = true;
 
   // before doing anything else, check if this is a required question
   isRequired = match[0] ? match[0].required : false;
+
   // compare the size of answers array to find out if answers have been provided for this question
   if (id > 0){
-    // add the back button - feature postponed until launch
-    // document.querySelector('#backBtn').removeAttribute('disabled');
 
     // have answers been provided for this question?
     noAnswers = beforeSize === answers.length ? true : false;
@@ -165,7 +156,7 @@ function handleSubmit() {
     }
 
     // if there's at least one answer returned and the button is disabled
-    // get the preview button
+    // enable the preview button
     prev = document.querySelector('#previewPolicy');
     if (!noAnswers && prev.disabled){
       prev.removeAttribute('disabled');
@@ -176,6 +167,11 @@ function handleSubmit() {
   if (canProceed){
 
       setUpPage(id);
+
+      if (parseInt(id) > 0){
+        // mark the question as editable
+        match.classList.add("editable");
+      }
 
       // this hides the current question,
       match.classList.remove("current");
@@ -191,6 +187,7 @@ function handleSubmit() {
   }
 }
 
+// not sure this needs to be a function as it's only done once
 function setUpPage(id){
   // add the additional stuff after everything else has loaded
   if (parseInt(id) === 0) {
@@ -201,9 +198,6 @@ function setUpPage(id){
   }
 }
 
-function prevQuestion(){
-  // like nextQuestion but in reverse
-}
 
 function nextQuestion(){
   // if the position is not beyond the total number of questions for the current section

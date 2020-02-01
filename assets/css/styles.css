@@ -271,7 +271,7 @@ a {
 /* ================== */
 /* Preview styles */
 
-#previewPolicy:disabled, #backBtn:disabled {
+#previewPolicy:disabled, #editBtn:disabled {
   display:none;
 }
 
@@ -515,17 +515,6 @@ a {
 .wrap-c {
   flex-direction: column;
   align-items: flex-start;
-}
-
-#backBtn {
-  margin-left: 0;
-  color:#006493;
-  background-color: transparent;
-  border-color: currentColor;
-}
-
-#backBtn:hover {
-
 }
 
 .wrap-r {
