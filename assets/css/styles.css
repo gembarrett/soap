@@ -271,7 +271,7 @@ a {
 /* ================== */
 /* Preview styles */
 
-#previewPolicy:disabled, #editBtn:disabled {
+#previewPolicy:disabled, #editBtn.disabled {
   display:none;
 }
 
@@ -629,7 +629,7 @@ form > div > div > input:checked + label, .form-el label:hover {
 }
 
 .notice {
-  font-size: 0.8em;
+  font-size: 1.2em;
   color: #fff;
   background-color: #7cadcf;
   padding: 1em;

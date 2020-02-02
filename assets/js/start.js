@@ -163,7 +163,6 @@ function handleSubmit() {
     if (!noAnswers && prev.disabled){
       prev.removeAttribute('disabled');
     }
-
   }
 
   if (canProceed){
@@ -171,6 +170,8 @@ function handleSubmit() {
       setUpPage(id);
 
       if (parseInt(id) > 0){
+        // show the edit button
+        document.getElementById('editBtn').classList.remove('disabled');
         // mark the question as editable
         match.classList.add("editable");
       }
@@ -259,6 +260,7 @@ function getInput(el, qId) {
     // unsplit the question ID
     var tempQId = 'q'+qId;
     const result = currentState.sectionQ.find(question => question.id === tempQId);
+    console.log(result);
 
     // push the text value object to the currentState
     currentState.answers.push({
@@ -269,7 +271,8 @@ function getInput(el, qId) {
     });
     // store the inputted value in the dictionary
     // should this be addToDictionary?
-    dict[result.answers[answerID].storeAs] = textareas[0].value;
+    addToDictionary(result.answers[answerID].storeAs, textareas[0].value);
+
   }
 
   // for every input in the form
@@ -280,6 +283,7 @@ function getInput(el, qId) {
     // unsplit the question ID
     var tempQId = 'q'+qId;
     var result = currentState.sectionQ.find(question => question.id === tempQId);
+    console.log(result);
 
     // if the input is a textbox containing value
     if (inputs[i].type === "text" && inputs[i].value !== "") {
