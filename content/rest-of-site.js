@@ -86,7 +86,7 @@ var ros = [
         "head":"What's planned for the SOAP project?",
         "desc":[
           {
-            "text":"SOAP is currently in beta and the full launch is scheduled for March 2020. Here's a few of the new features currently being worked on:",
+            "text":"SOAP is currently in beta and the full launch is scheduled for March 2020. Here are a few of the new features currently being worked on:",
             "url":""
           },
           {

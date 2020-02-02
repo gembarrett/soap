@@ -1,4 +1,4 @@
-SOAP -- Securing Organizations with Automated Policymaking
+SOAP - the tool for building security policies
 ==============================
 
 ## SYNOPSIS
@@ -22,26 +22,28 @@ To minimize the surface area for attack we recommend hosting your own SOAP insta
 
 ## FOLDER STRUCTURE
 
-* the index.html file that serves the app sits at the root
-* the content folder holds all the text content for the site in JSON format
-* the assets folder contains CSS files, images, report PDFs and Javascript files
-* the js folder holds several files containing various section-specific functions
-* also in that folder are the views, controllers and templates folders
-* the view files direct the controller files to pull the data into the templates and serve it up for display
-* e.g. views/questionsView.js calls on controllers/questionPage.js to get all the question data and plug it into templates/questionsTemplate.js 
+* **index.html**: sits at the root and is the place where all the Javascript is injected
+* **content**: holds all the text content for the site in JSON format
+* **assets**: contains CSS files, images, report PDFs and Javascript files
+* **assets/js**: holds several files containing various feature-specific functions
+* **assets/js/views**: files here direct the controller files to pull the data into the templates and serve it up for display. For example, views/questionsView.js calls on controllers/questionPage.js to get all the question data and plug it into templates/questionsTemplate.js
+* **assets/js/controllers**: these files are instructed by their counterparts in the views folder to get all the data needed for that section and parcel it up ready for the corresponding template
+* **assets/js/templates**: these files take the data provided and plug it into the appropriate HTML elements for serving back to the controller, who then renders it in the browser
+
+
 
 ## SUPPORT
 
 Thanks for asking! It’s true: SOAP takes a lot of time (and coffee!) to maintain. So if you’re interested in giving back and supporting the project, here are a few options:
-* Donations to fund SOAP’s upkeep can be made here
-* Fluent in a language other than English? Email feedback(at)usesoap.app with the languages you can translate to and we'll let you know how you can help translate SOAP and make it more accessible to non-English speakers
-* SOAP is an open-source project. Contributions to the code (Javascript, HTML or CSS) or documentation are always welcomed here.
-* Just want to say hi or ask a question? Have an idea for how SOAP could be improved? Email us at: feedback(at)usesoap.app.
+* **Donations** to fund SOAP’s maintenance can be made at
+[ko-fi.com/supportsoap](https://ko-fi.com/supportsoap)
+* **Fluent in a language other than English?** Email feedback(at)usesoap.app with the language(s) you can help with and we'll let you know how you can get started with translating SOAP to make it more accessible to non-English speakers
+* **SOAP is an open-source project**. Contributions to the code (Javascript, HTML or CSS) or documentation are always welcomed on the [issues page](https://github.com/gembarrett/soap/issues)
+* **Just want to say hi or ask a question?** Have an idea for how SOAP could be improved? Email us at: feedback(at)usesoap.app.
 
 ## BUGS
 
-When you find issues, please report them:
+When you find issues, please report them via the following methods - be sure to include any output from the browser console if possible:
 
-* email: feedback at usesoap.app
-
-Be sure to include any output from the browser console if possible.
+* **[GitHub Issues](https://github.com/gembarrett/soap/issues)**: there are templates set up to help you provide all the information needed
+* **Email**: feedback at usesoap.app

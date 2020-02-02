@@ -333,7 +333,7 @@ var section3 = [
       {
         "type":"textarea",
         "answerText":"",
-        "placeholder":"Here's a few examples: \n\n- write down exactly what happened, including any officer numbers, times, etc. \n- warn your coworkers and anyone who could now be at risk \n- contact the org’s lawyer",
+        "placeholder":"Here are a few examples: \n\n- write down exactly what happened, including any officer numbers, times, etc. \n- warn your coworkers and anyone who could now be at risk \n- contact the org’s lawyer",
         "storeAs":"[inc3Tactics]",
         "excludes":[],
         "policyEntry":"",

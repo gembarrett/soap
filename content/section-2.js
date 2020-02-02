@@ -346,7 +346,7 @@ var section2 = [
       {
         "type":"textarea", // check for this before making an input field
         "answerText":"",
-        "placeholder":"Here's a few examples: \n\nIf the account is still accessible: change all passwords and review the recent activity, such as posts and log in times. \n\nIf it’s an email account: review the inbox rules and mail forwarding addresses, removing any that look suspicious. \n\nIf it’s an inaccessible social media account: major social media platforms have dedicated areas in their Help sections which explain how they can help you regain control of a compromised account",
+        "placeholder":"Here are a few examples: \n\nIf the account is still accessible: change all passwords and review the recent activity, such as posts and log in times. \n\nIf it’s an email account: review the inbox rules and mail forwarding addresses, removing any that look suspicious. \n\nIf it’s an inaccessible social media account: major social media platforms have dedicated areas in their Help sections which explain how they can help you regain control of a compromised account",
         "storeAs":"[inc2Tactics]",
         "excludes":[],
         "policyEntry":"",
