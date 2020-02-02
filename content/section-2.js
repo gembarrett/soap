@@ -10,15 +10,15 @@ var section2 = [
     "id":"q15",
     "q":"Should staff use a specific password manager for work accounts?",
     "required":true,
-    "policyContent":"Passwords are hard to remember, so [orgName] prefers staff to use a password manager.",
+    "policyContent":"Passwords are hard to remember, so [orgName] ask staff to use a password manager.",
     "appendixContent":"",
     "answers":[
       {
         "type":"radio",
         "answerText":"LastPass",
         "storeAs":"[passwordPref]",
-        "excludes":[25],
-        "policyEntry":"In particular, we ask you to use [passwordPref] and if you require any help with set up or using this tool then you should discuss it with [contactName] ([contactPos]).",
+        "excludes":[16], // no browser storage
+        "policyEntry":"In particular, we ask you to use [passwordPref] and if you require any help with set up or using this tool then you should discuss it with [contactName].",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -30,8 +30,8 @@ var section2 = [
         "type":"radio",
         "answerText":"1Password",
         "storeAs":"[passwordPref]",
-        "excludes":[25],
-        "policyEntry":"In particular, we ask you to use [passwordPref] and if you require any help with set up or using this tool then you should discuss it with [contactName] ([contactPos]).",
+        "excludes":[16],
+        "policyEntry":"In particular, we ask you to use [passwordPref] and if you require any help with set up or using this tool then you should discuss it with [contactName].",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -43,8 +43,8 @@ var section2 = [
         "type":"radio",
         "answerText":"KeePass",
         "storeAs":"[passwordPref]",
-        "excludes":[25],
-        "policyEntry":"In particular, we ask you to use [passwordPref] and if you require any help with set up or using this tool then you should discuss it with [contactName] ([contactPos]).",
+        "excludes":[16],
+        "policyEntry":"In particular, we ask you to use [passwordPref] and if you require any help with set up or using this tool then you should discuss it with [contactName].",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -56,8 +56,8 @@ var section2 = [
         "type":"radio",
         "answerText":"PasswordSafe",
         "storeAs":"[passwordPref]",
-        "excludes":[25],
-        "policyEntry":"In particular, we ask you to use [passwordPref] and if you require any help with set up or using this tool then you should discuss it with [contactName] ([contactPos]).",
+        "excludes":[16],
+        "policyEntry":"In particular, we ask you to use [passwordPref] and if you require any help with set up or using this tool then you should discuss it with [contactName].",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -70,7 +70,7 @@ var section2 = [
         "answerText":"Staff preference",
         "storeAs":"[passwordPref]",
         "excludes":[],
-        "policyEntry":"As there are several options available, it is up to you to choose which suits your workflow best. If you’re unsure of the best password manager for your situation, please contact [contactName] ([contactPos]) to discuss.",
+        "policyEntry":"As there are several options available, it is up to you to choose which suits your workflow best. If you’re unsure of the best password manager for your situation, please contact [contactName] to discuss.",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -103,6 +103,62 @@ var section2 = [
   {
     "isQuestion": true,
     "id":"q16",
+    "q":"Can staff store passwords in their browser?",
+    "required":false,
+    "policyContent":"",
+    "appendixContent":"",
+    "answers":[
+      {
+        "type":"radio",
+        "answerText":"Yes",
+        "storeAs":"[]",
+        "excludes":[],
+        "policyEntry":"Staff who are aware of the risks may store their passwords in their browser for more convenient access, however they are expected to frequently clear out old logins",
+        "appendixEntry":[
+          {
+            "reviewList":"Are staff still allowed to store passwords in their browser?",
+            "tipList": ""
+          }
+        ]
+      },
+      {
+        "type":"radio",
+        "answerText":"No",
+        "storeAs":"[]",
+        "excludes":[],
+        "policyEntry":"Staff are advised to refrain from storing passwords in their browser due to the security risks. If you need guidance on choosing an alternative password storage system, [contactName, contactPos] will be able to advise you on this.",
+        "appendixEntry":[
+          {
+            "reviewList":"",
+            "tipList": "It’s annoying to keep dismissing the “save your password?” prompt but this can be disabled in the browser settings."
+          }
+        ]
+      },
+      {
+        "type":"radio",
+        "editable":true,
+        "answerText":"Under some circumstances",
+        "storeAs":"[exemptions]",
+        "excludes":[],
+        "policyEntry":"Ordinarily, we would prefer staff to avoid storing passwords in their browser, however it is permitted under these circumstances: [exemptions]",
+        "appendixEntry":[
+          {
+            "reviewList":"",
+            "tipList": ""
+          }
+        ]
+      }
+    ],
+    "tips":[
+      {"relevance":"Applicable when a password manager isn't a feasible storage option."},
+      {"meaning":"Storing long, complex passwords in a convenient place like the browser makes them easier to integrate into a workflow if there’s no password manager in use. However, the lists of password that are stored in the browser are not as well protected as they would be in a password manager. If the device on which that browser is installed gets stolen, confiscated or otherwise accessed without authorisation (physically or remotely), then the browser’s keychain becomes a treasure trove of account logins for anyone in control of that device."},
+      {"implementation":"If in-browser password storage is appropriate for your organisation’s threat model, consider planning for frequent “clearing out” of old stored passwords in order to lessen the impact of any unauthorised access."},
+      {"more": ["storing passwords in browser", "delete stored browser passwords", "browser password risks"]}
+    ]
+  },
+  {
+    "isQuestion": true,
+    "id":"q17",
     "q":"Which multi-factor authentication method does your organisation prefer staff to use when securing work accounts?",
     "required":true,
     "policyContent":"Two-factor authentication is a good method of securing our accounts beyond passwords as it requires an additional one-time code to be provided at login, putting an extra barrier between your data and an attacker. Two-factor authentication should be enabled on every account which supports it.",
@@ -157,7 +213,7 @@ var section2 = [
   },
   {
     "isQuestion": true,
-    "id":"q17",
+    "id":"q18",
     "q":"Does your organisation prefer staff to use a specific authentication app?",
     "required":false,
     "policyContent":"",
@@ -168,10 +224,10 @@ var section2 = [
         "answerText":"Google Authenticator",
         "storeAs":"",
         "excludes":[],
-        "policyEntry":"To ensure consistency and help with training and troubleshooting, [orgName] uses Google Authenticator for two-factor authentication where platforms allow it. This app may be installed automatically as part of your mobile work device set up, otherwise you should install it from your platform’s app store, requesting assistance from [contactName] ([contactPos]) when needed.",
+        "policyEntry":"To ensure consistency and help with training and troubleshooting, [orgName] recommends the Google Authenticator app for two-factor authentication. If this app is not pre-installed then you should install it from your platform’s app store, requesting assistance from [contactName] when needed.",
         "appendixEntry":[
           {
-            "reviewList":"",
+            "reviewList":"Is Google Authenticator well integrated with staff workflows?",
             "tipList": ""
           }
         ]
@@ -181,11 +237,11 @@ var section2 = [
         "answerText":"Duo Mobile",
         "storeAs":"",
         "excludes":[],
-        "policyEntry":"To ensure consistency and help with training and troubleshooting, [orgName] uses Duo Mobile for two-factor authentication where platforms allow it. This app may be installed automatically as part of your mobile work device set up, otherwise you should install it from your platform’s app store, requesting assistance from [contactName] ([contactPos]) when needed.",
+        "policyEntry":"To ensure consistency and help with training and troubleshooting, [orgName] recommends the Duo Mobile app for two-factor authentication. If this app is not pre-installed then you should install it from your platform’s app store, requesting assistance from [contactName] when needed.",
         "appendixEntry":[
           {
-            "reviewList":"",
-            "tipList": ""
+            "reviewList":"Is Duo Mobile well integrated with staff workflows?",
+            "tipList": "Duo Mobile website: https://duo.com/product/multi-factor-authentication-mfa/duo-mobile-app"
           }
         ]
       },
@@ -194,11 +250,11 @@ var section2 = [
         "answerText":"Authy",
         "storeAs":"",
         "excludes":[],
-        "policyEntry":"To ensure consistency and help with training and troubleshooting, [orgName] uses Authy for two-factor authentication where platforms allow it. This app may be installed automatically as part of your mobile work device set up, otherwise you should install it from your platform’s app store, requesting assistance from [contactName] ([contactPos]) when needed.",
+        "policyEntry":"To ensure consistency and help with training and troubleshooting, [orgName] recommends the Authy app for two-factor authentication. If this app is not pre-installed then you should install it from your platform’s app store, requesting assistance from [contactName]  when needed.",
         "appendixEntry":[
           {
-            "reviewList":"",
-            "tipList": ""
+            "reviewList":"Is Authy well integrated with staff workflows?",
+            "tipList": "Authy website: https://authy.com/"
           }
         ]
       },
@@ -207,10 +263,10 @@ var section2 = [
         "answerText":"No preference",
         "storeAs":"",
         "excludes":[],
-        "policyEntry":"While [orgName] requires the use of an authenticator app, we leave it to staff to make their own choice of which one to use. If you are unsure of which is best for your device and workflow, [contactName] ([contactPos]) is available for advice.",
+        "policyEntry":"While [orgName] requires the use of an authenticator app, we leave it to staff to make their own choice of which one to use. If you are unsure of which is best for your device and workflow, [contactName] is available for advice.",
         "appendixEntry":[
           {
-            "reviewList":"",
+            "reviewList":"Are staff consistently using an authenticator app?",
             "tipList": ""
           }
         ]
@@ -221,10 +277,10 @@ var section2 = [
         "answerText":"another app",
         "storeAs": "[authApp]",
         "excludes":[],
-        "policyEntry":"To ensure consistency and help with training and troubleshooting, [orgName] uses [authApp] for two-factor authentication where platforms allow it. This app may be installed automatically as part of your mobile work device set up, otherwise you should install it from your platform’s app store, requesting assistance from [contactName] ([contactPos]) when needed",
+        "policyEntry":"To ensure consistency and help with training and troubleshooting, [orgName] uses [authApp] for two-factor authentication where platforms allow it. This app may be installed automatically as part of your mobile work device set up, otherwise you should install it from your platform’s app store, requesting assistance from [contactName] when needed",
         "appendixEntry":[
           {
-            "reviewList":"",
+            "reviewList":"Is [authApp] well integrated with staff workflows?",
             "tipList": ""
           }
         ]
@@ -239,7 +295,7 @@ var section2 = [
   },
   {
     "isQuestion": true,
-    "id":"q18",
+    "id":"q19",
     "q":"Does your organisation provide hardware security keys to staff?",
     "required":false,
     "policyContent":"",
@@ -250,7 +306,7 @@ var section2 = [
         "answerText":"Yes",
         "storeAs":"",
         "excludes":[],
-        "policyEntry":"For hardware authentication, we will provide you with a security key. Should you require any help with using the key, contact [contactName] ([contactPos]).",
+        "policyEntry":"For hardware authentication, we will provide you with a security key. Should you require any help with using the key, contact [contactName].",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -263,7 +319,7 @@ var section2 = [
         "answerText":"No",
         "storeAs":"",
         "excludes":[],
-        "policyEntry":"Hardware authentication has a few options for keys and it is up to staff to select and purchase their preferred key if they wish to use one. If you are uncertain of the choices available and their suitability for your work, please contact [contactName] ([contactPos]) to discuss.",
+        "policyEntry":"Hardware authentication has a few options for keys and it is up to staff to select and purchase their preferred key if they wish to use one. If you are uncertain of the choices available and their suitability for your work, please contact [contactName] to discuss.",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -281,7 +337,7 @@ var section2 = [
   },
   {
     "isQuestion": true,
-    "id":"q19",
+    "id":"q20",
     "q":"Bearing the previous questions in mind, what steps should staff take when faced with a possibly hacked account?",
     "required":false,
     "policyContent":"... you notice suspicious activity in any work-related accounts: This could look like unprompted two-factor code requests, strange login times, or rejection of correct passwords - any unfamiliar actions performed by, or within, the account should be investigated. To do this, you are advised to follow these steps: [inc2Tactics]",

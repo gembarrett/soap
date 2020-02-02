@@ -40,7 +40,7 @@ var section0 = [
     "id":"q2",
     "q":"Who will this policy apply to?",
     "required":false,
-    "policyContent":"This policy applies to [appliesTo]",
+    "policyContent":"This policy applies to [appliesTo].",
     "appendixContent":"",
     "answers":[
       {
@@ -401,7 +401,7 @@ var section0 = [
         ]
       }
     ],
-    "tips":[ // hide the ? info button if these are all empty
+    "tips":[
       {"relevance":""},
       {"meaning":"Security measures and settings vary in extent and location between operating systems. Specifying those that are relevant and in use at your organisation makes it simpler to provide appropriate instructions and questions in the process."},
       {"implementation":""},
@@ -413,7 +413,7 @@ var section0 = [
     "id":"q7",
     "q":"How does your organisation manage staff work devices?",
     "required":true,
-    "policyContent":"[orgName] manages device security in the following way, depending on the situation.",
+    "policyContent":"[orgName] manages device security in the following way, depending on the situation:",
     "appendixContent":"",
     "answers":[
       {
@@ -421,7 +421,7 @@ var section0 = [
         "answerText":"We install work profiles on staff-owned devices (Bring Your Own Device policy)",
         "storeAs": "",
         "excludes":[],
-        "policyEntry":"Profiles on your devices: With your consent, we will install a work profile on your personal devices in order for you to use them in the course of your work. This work profile will keep your work and personal use of the device separated.",
+        "policyEntry":"- Profiles on your devices: With your consent, we will install a work profile on your personal devices in order for you to use them in the course of your work. This work profile will keep your work and personal use of the device separated.",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -434,7 +434,7 @@ var section0 = [
         "answerText":"We install work and personal profiles on organisation-owned devices.",
         "storeAs": "",
         "excludes":[],
-        "policyEntry":"Profiles on [orgName] devices: [orgName] staff are given some freedom to decide their work environment and equipment, and we acknowledge that there may be times when after hours access to work email and data is needed. We will provide you with devices and install both a work and personal profile for you to use.",
+        "policyEntry":"- Profiles on [orgName] devices: [orgName] staff are given some freedom to decide their work environment and equipment, and we acknowledge that there may be times when after hours access to work email and data is needed. We will provide you with devices and install both a work and personal profile for you to use.",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -444,7 +444,7 @@ var section0 = [
       },
       {
         "type":"checkbox",
-        "answerText":"We provide work-only devices.",
+        "answerText":"- We provide work-only devices.",
         "storeAs": "",
         "excludes":[],
         "policyEntry":"[orgName] devices for work-only use: We will provide you with devices, such as a computer, to use solely for work purposes.",
@@ -460,7 +460,7 @@ var section0 = [
         "answerText":"Staff use their own devices without separate profiles",
         "storeAs": "",
         "excludes":[7],
-        "policyEntry":"Your device, your choice: You may use your own devices as work equipment, we do not require the use of a work profile but please strive to maintain a separation between your work and personal data.",
+        "policyEntry":"- Your device, your choice: You may use your own devices as work equipment, we do not require the use of a work profile but please strive to maintain a separation between your work and personal data.",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -481,7 +481,7 @@ var section0 = [
     "id":"q8",
     "q":"Does your organisation provide staff with webcam covers or privacy screens for their devices?",
     "required":false,
-    "policyContent":"Protecting the devices we use is crucial in preventing unauthorised access to sensitive [orgName] data. To mitigate this, [orgName] will provide you with [providePrivacy] to use on your devices.",
+    "policyContent":"In addition to other device security measures, [orgName] will also provide you with [providePrivacy] to use on your devices.",
     "appendixContent":"",
     "answers":[
       {

@@ -18,7 +18,7 @@ var section1 = [
         "answerText":"Yes",
         "storeAs":"",
         "excludes":[],
-        "policyEntry":"[orgName] requires staff to use PGP to encrypt sensitive emails. If you need help with setting up, please contact [contactName] ([contactPos])",
+        "policyEntry":"[orgName] requires staff to use PGP to encrypt sensitive emails. If you need help with setting up, please contact [contactName].",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -65,7 +65,7 @@ var section1 = [
     "id":"q11",
     "q":"How should staff protect their in-browser interactions?",
     "required":false,
-    "policyContent":"In order to protect your online activities from common tracking and interference, we recommend all staff install the following privacy-enhancing extensions: [extArray]",
+    "policyContent":"In order to protect your online activities from common tracking and interference, we recommend all staff install the following privacy-enhancing extensions: [extArray].",
     "appendixContent":"",
     "answers":[
       {
@@ -195,7 +195,7 @@ var section1 = [
         "placeholder":"e.g. Signal, WhatsApp, Wire, Telegram, Encrypted email, Unencrypted email, SMS, Mattermost, Slack, Matrix",
         "storeAs":"[commsDirect]",
         "excludes":[],
-        "policyEntry":"For 1-1 communications (e.g. direct message to a colleague), please use [commsDirect].",
+        "policyEntry":"- For 1-1 communications (e.g. direct message to a colleague), please use [commsDirect].",
         "appendixEntry":[
           {
             "reviewList":"Is [commsDirect] still the most appropriate method for your direct communications?",
@@ -209,7 +209,7 @@ var section1 = [
         "placeholder":"e.g. Signal, WhatsApp, Wire, Telegram, SMS, Phone Call, Mattermost, Slack, Matrix",
         "storeAs":"[commsGroup]",
         "excludes":[],
-        "policyEntry":"When communicating with a group (e.g. your project team), please use [commsGroup].",
+        "policyEntry":"- When communicating with a group (e.g. your project team), please use [commsGroup].",
         "appendixEntry":[
           {
             "reviewList":"Should you continue recommending [commsGroup] for group communications?",
@@ -223,7 +223,7 @@ var section1 = [
         "placeholder":"e.g. Jitsi, Zoom, Signal, WhatsApp, Wire, Telegram, Google Hangouts, Skype, Phone Call, Mattermost, Slack, Matrix",
         "storeAs":"[commsInt]",
         "excludes":[],
-        "policyEntry":"We use [commsInt] for internal video or audio calls, e.g. for remote staff meetings.",
+        "policyEntry":"- We use [commsInt] for internal video or audio calls, e.g. for remote staff meetings.",
         "appendixEntry":[
           {
             "reviewList":"How well has [commsInt] been working as an internal video calls platform?",
@@ -237,7 +237,7 @@ var section1 = [
         "placeholder":"e.g. Jitsi, Zoom, Signal, WhatsApp, Wire, Telegram, Google Hangouts, Skype, Phone Call, Mattermost, Slack, Matrix",
         "storeAs":"[commsExt]",
         "excludes":[],
-        "policyEntry":"External video and audio calls take place through [commsExt].",
+        "policyEntry":"- External video and audio calls take place through [commsExt].",
         "appendixEntry":[
           {
             "reviewList":"Is [commsExt] still a good option for external video and audio calls?",

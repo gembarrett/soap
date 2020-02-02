@@ -31,7 +31,7 @@ var section4 = [
         "answerText":"Staff must provide these if they require them",
         "storeAs":"[]",
         "excludes":[],
-        "policyEntry":"Staff are encouraged to use separate, 'clean' devices when they travel in order to lessen the impact of any authorised access. For guidance on which types of device would be suitable, speak to [contactName] ([contactPos]).",
+        "policyEntry":"Staff are encouraged to use separate, 'clean' devices when they travel in order to lessen the impact of any authorised access. For guidance on which types of device would be suitable, speak to [contactName].",
         "appendixEntry":[
           {
             "reviewList":"Roughly how many staff are using separate travel devices vs those who use their 'cleaned' everyday devices?",
@@ -44,7 +44,7 @@ var section4 = [
         "answerText":"Staff should prepare and use their everyday devices",
         "storeAs":"[]",
         "excludes":[],
-        "policyEntry":"Before travelling on work-related business, staff should prepare ('clean') their everyday devices in such a way as to reduce the impact of any unauthorised access while abroad. [contactName] ([contactPos]) can provide more information on how to do this.",
+        "policyEntry":"Before travelling on work-related business, staff should prepare ('clean') their everyday devices in such a way as to reduce the impact of any unauthorised access while abroad. [contactName] can provide more information on how to do this.",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -57,7 +57,7 @@ var section4 = [
         "answerText":"Decided on a case-by-case basis",
         "storeAs":"[]",
         "excludes":[],
-        "policyEntry":"The issue of travel devices vs everyday devices is decided on a case-by-case basis and is dependent on your threat model. Speak to [contactName] ([contactPos]) for more information.",
+        "policyEntry":"The issue of travel devices vs everyday devices is decided on a case-by-case basis and is dependent on your threat model. Speak to [contactName] for more information.",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -79,7 +79,7 @@ var section4 = [
     "id":"q30",
     "q":"How should staff prepare for travel?",
     "required":false,
-    "policyContent":"Before travelling, there are steps which should be taken to prepare devices containing sensitive information: [travelSteps] For help with any of these security measures, please contact [contactName] ([contactPos])",
+    "policyContent":"Before travelling, there are steps which should be taken to prepare devices containing sensitive information. For help with any of the following security measures, please contact [contactName].",
     "appendixContent":"EFF wrote a Border Search Pocket Guide, which may be useful: https://www.eff.org/document/eff-border-search-pocket-guide",
     "answers":[
       // NOTE: this only really works if 1Password is selected in q15, so hide until answer-specific exclusions are implemented
@@ -99,48 +99,48 @@ var section4 = [
       {
         "type":"checkbox",
         "answerText":"Enable phone SOS mode",
-        "storeAs":"[travelSteps]",
+        "storeAs":"",
         "excludes":[],
-        "policyEntry":"Enable any SOS features or modes on your phone, and learn how to use them so you are prepared to do so in an emergency. SOS mode provides a shortcut to calling the emergency services or texting emergency contacts, usually triggered by pressing a button several times.",
+        "policyEntry":"- Enable any SOS features or modes on your phone, and learn how to use them so you are prepared to do so in an emergency. SOS mode provides a shortcut to calling the emergency services or texting emergency contacts, usually triggered by pressing a button several times.",
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": "If there's a large amount of staff who wear smart watches at [orgName] then it may be valuable to look into what Emergency SOS calling features they may have access to through the watch."
+            "tipList": "If there's a large amount of staff who wear smart watches at [orgName] then it could be suggested to them to look into what Emergency SOS calling features they may have access to through the watch."
           }
         ]
       },
       {
         "type":"checkbox",
         "answerText":"Remove unnecessary data",
-        "storeAs":"[travelSteps]",
+        "storeAs":"",
         "excludes":[],
-        "policyEntry":"Deleting unnecessary data from your devices before travelling reduces how much is exposed should the device be accessed without your knowledge. Assess each data group by how essential it is to your trip and whether it can be safely accessed via non-local storage while abroad.",
+        "policyEntry":"- Deleting unnecessary data from your devices before travelling reduces how much is exposed should the device be accessed without your knowledge. Assess each data group by how essential it is to your trip and whether it can be safely accessed via non-local storage while abroad.",
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": "Remember to back up your data before removing it from your devices!"
+            "tipList": "Remember to check that your devices are backed up before removing data as part of your travel preparations."
           }
         ]
       },
       {
         "type":"checkbox",
         "answerText":"Encrypt all devices",
-        "storeAs":"[travelSteps]",
+        "storeAs":"",
         "excludes":[],
-        "policyEntry":"Full disk encryption is available on most operating systems, and we require staff to ensure it is set up and working prior to travel. For help on how to do this, please contact [contactName] ([contactPos]).",
+        "policyEntry":"- Full disk encryption is available on most operating systems, and we require staff to ensure it is set up and working prior to travel. For help on how to do this, please contact [contactName].",
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": "."
+            "tipList": ""
           }
         ]
       },
       {
         "type":"checkbox",
         "answerText":"Remove/log out of incriminating services",
-        "storeAs":"[travelSteps]",
+        "storeAs":"",
         "excludes":[],
-        "policyEntry":"If your device is searched, you'll want to limit the amount of suspicious or incriminating information that is available. Affected apps and websites will depend on the travel destination, for example some countries will take issue with gay dating apps while others will be more concerned by the presence of a Tor browser.",
+        "policyEntry":"- If your device is searched, you'll want to limit the amount of suspicious or incriminating information that is available. Affected apps and websites will depend on the travel destination, for example some countries will take issue with gay dating apps while others will be more concerned by the presence of a Tor browser.",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -151,9 +151,9 @@ var section4 = [
       {
         "type":"checkbox",
         "answerText":"Disable biometric authentication",
-        "storeAs":"[travelSteps]",
+        "storeAs":"",
         "excludes":[],
-        "policyEntry":"By disabling fingerprint or facial authentication, your device will fallback to requiring a password, code or phrase to gain entry - something which is harder to force as it usually requires a judge to support the search of your device.",
+        "policyEntry":"- By disabling fingerprint or facial authentication, your device will fallback to requiring a password, code or phrase to gain entry - something which is harder to force as it usually requires a judge to support the search of your device.",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -164,9 +164,9 @@ var section4 = [
       {
         "type":"checkbox",
         "answerText":"Switch off all devices",
-        "storeAs":"[travelSteps]",
+        "storeAs":"",
         "excludes":[],
-        "policyEntry":"If you forget to disable biometric authentication then switching the device off altogether can force the device to fall back to authentication via password, code or phrase the next time it is turned on. This makes it harder for others to force entry to the device.",
+        "policyEntry":"- If you forget to disable biometric authentication then switching the device off altogether can force the device to fall back to authentication via password, code or phrase the next time it is turned on. This makes it harder for others to force entry to the device.",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -201,8 +201,8 @@ var section4 = [
     "id":"q31",
     "q":"Should staff use a specific tool or tools to protect their internet connection?",
     "required":true,
-    "policyContent":"Protecting your internet activity from invasive monitoring can involve a range of solutions. [orgName] advises staff to use [vpnChoice] on devices that are connected to the internet. [contactName] ([contactPos]) can help with set up.",
-    "appendixContent":"Depending on the country in which you're operating it may be advisable to recommend using these tools even when staff are not travelling.",
+    "policyContent":"Protecting your internet activity from invasive monitoring can involve a range of solutions. [orgName] advises staff to use [vpnChoice] on devices that are connected to the internet. [contactName] can help with set up.",
+    "appendixContent":"Depending on the country in which you're operating it may be advisable to recommend using VPNs and similar tools even when staff are not travelling.",
     "answers":[
       {
         "type":"checkbox",
