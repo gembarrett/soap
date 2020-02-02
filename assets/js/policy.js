@@ -52,8 +52,10 @@ function compileDoc(p,a){
               appContent = getAppendixContent(qRef, prevQ, aRef, appContent, found); // TODO: instead of repeating this is should just be a function call each time
             }
             break;
+          // add case for teaming name & pos @ 9
           // questions 6-8 are for devices
           case qRef < 9:
+          console.log(qRef, prevQ, aRef, deviceP, found);
             deviceP = getPolicyContent(qRef, prevQ, aRef, deviceP, found);
             // if we need the appendix too
             if (a) {
@@ -72,18 +74,19 @@ function compileDoc(p,a){
           case qRef < 14:
             incResP = getPolicyContent(qRef, prevQ, aRef, incResP, found);
             break;
-          // questions 14-18 are for accounts
-          case qRef < 19:
+          // questions 14-19 are for accounts
+          case qRef < 20:
             acctsP = getPolicyContent(qRef, prevQ, aRef, acctsP, found);
             // if we need the appendix too
             if (a) {
               appContent = getAppendixContent(qRef, prevQ, aRef, appContent, found);
             }
             break;
-          // question 19 is for inc resp
-          case qRef < 20:
+          // question 20 is for inc resp
+          case qRef < 21:
             incResP = getPolicyContent(qRef, prevQ, aRef, incResP, found);
             break;
+          // add case for inserting Backups heading @ 22
           // questions 20-26 are for devices
           case qRef < 27:
             deviceP = getPolicyContent(qRef, prevQ, aRef, deviceP, found);
@@ -96,6 +99,7 @@ function compileDoc(p,a){
           case qRef < 28:
             incResP = getPolicyContent(qRef, prevQ, aRef, incResP, found);
             break;
+          // add case for teaming name & pos @ 33
           // questions 28-33 are for travel
           case qRef < 34:
             travelP = getPolicyContent(qRef, prevQ, aRef, travelP, found);
@@ -121,7 +125,9 @@ function compileDoc(p,a){
 
   doc.plain = 'Organisational Security Policy\n\nCreated '+dateStamp()+'\n\n'+contextP.join('\n');
   doc.markdown = '# Organisational Security Policy \n#### Created '+dateStamp()+'\n\n'+contextP.join('\n');
-  doc.html = '<h1>Organisational Security Policy</h1><h4>Created '+dateStamp()+'</h4><p>'+contextP.join('</p><p>')+'</p>';
+  doc.html = '<!DOCTYPE html><html><head><title>Cleaned with SOAP on '+dateStamp()+'</title></head><body><h1>Organisational Security Policy</h1><h4>Created '+dateStamp()+'</h4><p>'+contextP.join('</p><p>')+'</p>';
+
+  console.log(incResP.length);
 
   switch (true) {
     case deviceP.length > 0:
@@ -171,7 +177,7 @@ function compileDoc(p,a){
   }
   doc.plain += '\n\nPlease note: it is recommended that this policy undergoes a legal review prior to being implemented in your organisation.';
   doc.markdown += '\n\n#### *Please note: it is recommended that this policy undergoes a legal review prior to being implemented in your organisation.*';
-  doc.html += '<h4>Please note: it is recommended that this policy undergoes a legal review prior to being implemented in your organisation.</h4>';
+  doc.html += '<h4>Please note: it is recommended that this policy undergoes a legal review prior to being implemented in your organisation.</h4></body></html>';
   output = doc;
   return doc;
 }

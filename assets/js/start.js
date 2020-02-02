@@ -49,8 +49,8 @@ function addChangeListeners() {
   notice.onclick = notice.remove();
 
   // add listener for edit button
-  var editBtn = document.getElementById("editBtn");
-  editBtn.addEventListener('click', editAnswers, false);
+  // var editBtn = document.getElementById("editBtn");
+  // editBtn.addEventListener('click', editAnswers, false);
 
   // grab all the form inputs - these two don't seem to be in use though?
   var radios = Array.from(document.querySelectorAll('.form-el > input[type="radio"]'))
@@ -169,12 +169,12 @@ function handleSubmit() {
 
       setUpPage(id);
 
-      if (parseInt(id) > 0){
-        // show the edit button
-        document.getElementById('editBtn').classList.remove('disabled');
-        // mark the question as editable
-        match.classList.add("editable");
-      }
+      // if (parseInt(id) > 0){
+      //   // show the edit button
+      //   document.getElementById('editBtn').classList.remove('disabled');
+      //   // mark the question as editable
+      //   match.classList.add("editable");
+      // }
 
       // this hides the current question,
       match.classList.remove("current");
@@ -283,7 +283,7 @@ function getInput(el, qId) {
     // unsplit the question ID
     var tempQId = 'q'+qId;
     var result = currentState.sectionQ.find(question => question.id === tempQId);
-    console.log(result);
+    // console.log(result);
 
     // if the input is a textbox containing value
     if (inputs[i].type === "text" && inputs[i].value !== "") {
