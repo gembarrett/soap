@@ -44,9 +44,12 @@ var output;
 
 
 function addChangeListeners() {
-  var notice = document.querySelector('.notice');
+  var notice = document.querySelectorAll('.q0-only');
+  for  (var n = 0; n <notice.length; n++){
+    notice[n].remove();
+  }
   // TODO: investigate why this is triggered on q1, rather than onclick
-  notice.onclick = notice.remove();
+  // notice.onclick = notice.remove();
 
   // add listener for edit button
   // var editBtn = document.getElementById("editBtn");

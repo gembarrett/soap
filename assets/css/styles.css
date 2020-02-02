@@ -229,14 +229,21 @@ a {
 }
 
 #q0 section {
-  flex: 2 2 25%;
-  margin: 3em 5em;
+  flex: 2 2 20%;
+  margin: 3em 2em;
   border: 5px solid currentColor;
   border-radius:4%;
 }
 
 #q0 section p {
   padding: 0.5em 2em;
+}
+
+#q0 h1 {
+  font-size: 1.6em;
+}
+#q0 h2 {
+  font-size: 1.2em;
 }
 
 /* ================== */
@@ -467,6 +474,7 @@ a {
   min-width:10em;
   text-align: center;
   cursor: pointer;
+  font-size: 1em;
 }
 
 .btn-prim {
@@ -628,14 +636,19 @@ form > div > div > input:checked + label, .form-el label:hover {
   border-color: currentColor;
 }
 
-.notice {
-  font-size: 1.2em;
+.q0-only {
+  font-size: 1em;
   color: #fff;
   background-color: #7cadcf;
-  padding: 1em;
+  padding: 1em 0;
   text-align: center;
+  margin:0 10px;
 }
-.notice h4, .notice p{
+span.q0-only {
+  background-color: initial;
+  color: inherit;
+}
+.q0-only h4, .q0-only p{
   margin:0;
 }
 
