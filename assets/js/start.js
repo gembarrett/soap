@@ -55,23 +55,21 @@ function addChangeListeners() {
   // var editBtn = document.getElementById("editBtn");
   // editBtn.addEventListener('click', editAnswers, false);
 
-  // grab all the form inputs - these two don't seem to be in use though?
-  var radios = Array.from(document.querySelectorAll('.form-el > input[type="radio"]'))
-  var checks = Array.from(document.querySelectorAll('.form-el > input[type="checkbox"]'));
-
-  var elements = Array.from(document.querySelectorAll('.form-el > input'));
+  // TODO: get skip/next fully working
+  // grab all the form inputs
+  // var elements = Array.from(document.querySelectorAll('.form-el > input'));
   // var boxes = Array.from(document.querySelectorAll('.form-el > textarea'));
   // console.log(boxes);
   // elements = elements.concat(boxes);
   // console.log(elements);
-  for (var e = 0; e < elements.length; e++) {
-    // if it's a radio or checkbox
-    if ((elements[e].type === "radio") || (elements[e].type === "checkbox")){
-      elements[e].addEventListener('change', toggleSkip);
-    } else {
-      elements[e].oninput = toggleSkip;
-    }
-  }
+  // for (var e = 0; e < elements.length; e++) {
+  //   // if it's a radio or checkbox
+  //   if ((elements[e].type === "radio") || (elements[e].type === "checkbox")){
+  //     elements[e].addEventListener('change', toggleSkip);
+  //   } else {
+  //     elements[e].oninput = toggleSkip;
+  //   }
+  // }
 }
 
 
@@ -147,7 +145,7 @@ function handleSubmit() {
   canProceed = true;
 
   // before doing anything else, check if this is a required question
-  isRequired = match[0] ? match[0].required : false;
+  // isRequired = match[0] ? match[0].required : false;
 
   // compare the size of answers array to find out if answers have been provided for this question
   if (id > 0){
@@ -156,9 +154,9 @@ function handleSubmit() {
     noAnswers = beforeSize === answers.length ? true : false;
 
     // if it's required and there are no answers provided
-    if (isRequired && noAnswers){
-      canProceed = false;
-    }
+    // if (isRequired && noAnswers){
+    //   canProceed = false;
+    // }
 
     // if there's at least one answer returned and the button is disabled
     // enable the preview button
@@ -185,8 +183,8 @@ function handleSubmit() {
       // go to next question
       id = isExcludedQ(id);
       console.log('get next id that isn\'t excluded');
-      // TODO reset the skip/next button here
-      document.getElementById('submitAnswers').innerText = "Skip";
+      // TODO change to Skip when skip/next is working
+      document.getElementById('submitAnswers').innerText = "Next";
 
       nextQuestion();
       window.scrollTo(0,0);
@@ -239,14 +237,14 @@ function nextQuestion(){
       }
     }
   }
-  if (nextQ){
-    // if there's a next question and it's required
-    if (nextQ[0] && nextQ[0].required){
-      // get and set the submit button to disabled
-      submit = document.querySelector('#submitAnswers');
-      submit.setAttribute("disabled", "");
-    }
-  }
+  // if (nextQ){
+  //   // if there's a next question and it's required
+  //   if (nextQ[0] && nextQ[0].required){
+  //     // get and set the submit button to disabled
+  //     submit = document.querySelector('#submitAnswers');
+  //     submit.setAttribute("disabled", "");
+  //   }
+  // }
 }
 
 function getInput(el, qId) {

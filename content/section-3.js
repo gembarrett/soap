@@ -110,7 +110,7 @@ var section3 = [
       {
         "type":"checkbox",
         "editable":true,
-        "answerText":"Other",
+        "answerText":"other",
         "storeAs":"[devSecTools]",
         "excludes":[],
         "policyEntry":"",

@@ -444,10 +444,10 @@ var section0 = [
       },
       {
         "type":"checkbox",
-        "answerText":"- We provide work-only devices.",
+        "answerText":"We provide work-only devices.",
         "storeAs": "",
         "excludes":[],
-        "policyEntry":"[orgName] devices for work-only use: We will provide you with devices, such as a computer, to use solely for work purposes.",
+        "policyEntry":"- [orgName] devices for work-only use: We will provide you with devices, such as a computer, to use solely for work purposes.",
         "appendixEntry":[
           {
             "reviewList":"",
