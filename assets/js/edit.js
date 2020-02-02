@@ -113,6 +113,9 @@ var editAnswers = function(){
       editBtn.innerText = 'EDIT';
       // remove the active class from button
       editBtn.classList.remove('editMode');
+      // enable the next and preview buttons
+      document.getElementById('previewPolicy').disabled = false;
+      document.getElementById('submitAnswers').disabled = false;
       // now editing is done, it's time to grab all the answers in case they were updated
       // using questions[i]
       // var updatedAnswers = getAnswers(questions[i], questions[i].id, tempAnswers, tempDict);
@@ -125,6 +128,9 @@ var editAnswers = function(){
       questions[i].classList.add("showAllQs");
       editBtn.innerText = 'DONE';
       editBtn.classList.add('editMode');
+      // while editing, disable the next and preview buttons
+      document.getElementById('previewPolicy').disabled = true;
+      document.getElementById('submitAnswers').disabled = true;
     }
   }
 }
