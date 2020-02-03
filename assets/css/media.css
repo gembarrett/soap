@@ -382,4 +382,7 @@
   .mobileVis{
     display: none;
   }
+  #howTrio {
+    margin-right:1em;
+  }
 }
