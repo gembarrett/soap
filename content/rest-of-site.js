@@ -26,7 +26,7 @@ var ros = [
     "what":[
       {
         "head":"What is SOAP?",
-        "img":"pic-bc",
+        "img":"pic-bc-h",
         "imgBig":"",
         "overview":"SOAP is a free, online security policy generator which aims to make it easier to build and implement security guidelines.",
         "desc": ["SOAP is a free, online security policy generator. The acronym stands for Securing Organizations with Automated Policymaking—reflecting the need to \"clean up\" standard organizational security policies, which all-too-often are unread, irrelevant, or ignored. Thanks to SOAP, organizations can now customize their own unique security policies. Say goodbye to the one-size-fits-all approaches of the past! And along the way, SOAP provides support and implementation tips to ensure the entire process is as easy as possible."]

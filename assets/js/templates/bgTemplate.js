@@ -5,18 +5,18 @@ templates.bgTemplate = function(data, params){
 
   var order;
 
-  var whatGroup = `<img src="assets/images/pic-bc.jpg" /><div class="text-img-wrap"><h1>`+text.what[0].head+`</h1>`;
+  var whatGroup = `<img class="desktopVis" src="assets/images/pic-bc-h.jpg" /><img class="mobileVis" src="assets/images/pic-bc-v.jpg" /><div class="text-img-wrap"><h1>`+text.what[0].head+`</h1>`;
   whatGroup = formatArray(text.what[0].desc, whatGroup);
   whatGroup += '</div>';
 
-  var whoGroup = `<img src="assets/images/pic-policy.jpg" /><div class="text-img-wrap"><h1>`+text.who[0].head+`</h1>`;
+  var whoGroup = `<img class="desktopVis" src="assets/images/pic-policy.jpg" /><div class="text-img-wrap"><h1>`+text.who[0].head+`</h1>`;
   whoGroup = formatArray(text.who[0].desc, whoGroup);
   whoGroup += '</div>';
 
-  var howGroup = `<img src="assets/images/pic-how-1.jpg" /><img src="assets/images/pic-how-2.jpg" /><img src="assets/images/pic-how-3.jpg" /><h1>`+text.how[0].head+`</h1>`;
+  var howGroup = `<div id="howTrio"><img src="assets/images/pic-how-1.jpg" /><img src="assets/images/pic-how-2.jpg" /><img src="assets/images/pic-how-3.jpg" /></div><h1>`+text.how[0].head+`</h1>`;
   howGroup = formatArray(text.how[0].desc, howGroup);
 
-  var securityGroup = `<img src="assets/images/pic-security.jpg" /><div class="text-img-wrap"><h1>`+text.security[0].head+`</h1>`;
+  var securityGroup = `<img class="desktopVis" src="assets/images/pic-security-h.jpg" /><img class="mobileVis" src="assets/images/pic-security-v.jpg" /><div class="text-img-wrap"><h1>`+text.security[0].head+`</h1>`;
   securityGroup = formatArray(text.security[0].desc, securityGroup);
   securityGroup += '<a href="/assets/SOAP-alphaReport.pdf"><button class="btn btn-seco">Security audit report</button></a></div>';
 
