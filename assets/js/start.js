@@ -261,7 +261,6 @@ function getInput(el, qId) {
     // unsplit the question ID
     var tempQId = 'q'+qId;
     const result = currentState.sectionQ.find(question => question.id === tempQId);
-    console.log(result);
 
     // push the text value object to the currentState
     currentState.answers.push({

@@ -55,7 +55,6 @@ function compileDoc(p,a){
           // add case for teaming name & pos @ 9
           // questions 6-8 are for devices
           case qRef < 9:
-          console.log(qRef, prevQ, aRef, deviceP, found);
             deviceP = getPolicyContent(qRef, prevQ, aRef, deviceP, found);
             // if we need the appendix too
             if (a) {
@@ -127,53 +126,58 @@ function compileDoc(p,a){
   doc.markdown = '# Organisational Security Policy \n#### Created '+dateStamp()+'\n\n'+contextP.join('\n');
   doc.html = '<!DOCTYPE html><html><head><title>Cleaned with SOAP on '+dateStamp()+'</title></head><body><h1>Organisational Security Policy</h1><h4>Created '+dateStamp()+'</h4><p>'+contextP.join('</p><p>')+'</p>';
 
-  console.log(incResP.length);
-
-  switch (true) {
-    case deviceP.length > 0:
-      doc.plain += '\n\nDevice Security\n' + deviceP.join('\n');
-      doc.markdown += '\n\n### Device Security \n' + deviceP.join('\n');
-      doc.html += '<h3>Device Security</h3><p>' + deviceP.join('</p><p>')+'</p>';
-    case commsP.length > 0:
-      doc.plain += '\n\nCommunications Security\n' + commsP.join('\n');
-      doc.markdown += '\n\n### Communications Security \n' + commsP.join('\n');
-      doc.html += '<h3>Communications Security</h3><p>' + commsP.join('</p><p>')+'</p>';
-    case acctsP.length > 0:
-      doc.plain += '\n\nAccounts Security\n' + acctsP.join('\n');
-      doc.markdown += '\n\n### Accounts Security \n' + acctsP.join('\n');
-      doc.html += '<h3>Accounts Security</h3><p>' + acctsP.join('</p><p>')+'</p>';
-    case travelP.length > 0:
-      doc.plain += '\n\Travel Security\n' + travelP.join('\n');
-      doc.markdown += '\n\n### Travel Security \n' + travelP.join('\n');
-      doc.html += '<h3>Travel Security</h3><p>' + travelP.join('</p><p>')+'</p>';
-    case incResP.length > 0:
-      doc.plain += '\n\nWhat to do if...\n' + incResP.join('\n\n');
-      doc.markdown += '\n\n### What to do if...\n' + incResP.join('\n\n');
-      doc.html += '<h3>What to do if...</h3><p>' + incResP.join('</p><p>')+'</p>';
-    default:
-      console.log('empty section');
+  if (deviceP.length > 0){
+    console.log(deviceP.length);
+    doc.plain += '\n\nDevice Security\n' + deviceP.join('\n');
+    doc.markdown += '\n\n### Device Security \n' + deviceP.join('\n');
+    doc.html += '<h3>Device Security</h3><p>' + deviceP.join('</p><p>')+'</p>';
   }
+  if (commsP.length > 0){
+    console.log(commsP.length);
+    doc.plain += '\n\nCommunications Security\n' + commsP.join('\n');
+    doc.markdown += '\n\n### Communications Security \n' + commsP.join('\n');
+    doc.html += '<h3>Communications Security</h3><p>' + commsP.join('</p><p>')+'</p>';
+  }
+  if (acctsP.length > 0){
+    console.log(acctsP.length);
+    doc.plain += '\n\nAccounts Security\n' + acctsP.join('\n');
+    doc.markdown += '\n\n### Accounts Security \n' + acctsP.join('\n');
+    doc.html += '<h3>Accounts Security</h3><p>' + acctsP.join('</p><p>')+'</p>';
+  }
+  if (travelP.length > 0){
+    console.log(travelP.length);
+    doc.plain += '\n\Travel Security\n' + travelP.join('\n');
+    doc.markdown += '\n\n### Travel Security \n' + travelP.join('\n');
+    doc.html += '<h3>Travel Security</h3><p>' + travelP.join('</p><p>')+'</p>';
+  }
+  if (incResP.length > 0){
+    console.log(incResP.length);
+    doc.plain += '\n\nWhat to do if...\n' + incResP.join('\n\n');
+    doc.markdown += '\n\n### What to do if...\n' + incResP.join('\n\n');
+    doc.html += '<h3>What to do if...</h3><p>' + incResP.join('</p><p>')+'</p>';
+  }
+
   // if appendix is requested, join the policy and appendix arrays together
   if (a) {
     doc.plain += '\n\nAppendix\n';
     doc.markdown += '\n\n## Appendix <br>';
     doc.html += '<h2>Appendix</h2>';
-    switch (true) {
-      case appContent.general.length > 0:
-        doc.plain += '\n\nGeneral Advice\n' + appContent.general.join('\n');
-        doc.markdown += '\n\n### General Advice \n\n* ' + appContent.general.join('\n* ');
-        doc.html += '<h3>General Advice</h3><ul><li>' + appContent.general.join('</li><li>')+'</li></ul>';
-      case appContent.review.length > 0:
-        doc.plain += '\n\nReview Checklist\n' + appContent.review.join('\n');
-        doc.markdown += '\n\n### Review Checklist \n\n- [ ] ' + appContent.review.join('\n- [ ] ');
-        doc.html += '<h3>Review Checklist</h3><ol><li>' + appContent.review.join('</li><li>')+'</li></ol>';
-      case appContent.tips.length > 0:
-        doc.plain += '\n\nImplementation Tips\n' + appContent.tips.join('\n');
-        doc.markdown += '\n\n### Implementation Tips \n\n* ' + appContent.tips.join('\n* ');
-        doc.html += '<h3>Implementation Tips</h3><ul><li>' + appContent.tips.join('</li><li>')+'</li></ul>';
-      default:
-        console.log('empty section');
+    if (appContent.general.length > 0){
+      doc.plain += '\n\nGeneral Advice\n' + appContent.general.join('\n- ');
+      doc.markdown += '\n\n### General Advice \n\n* ' + appContent.general.join('\n* ');
+      doc.html += '<h3>General Advice</h3><ul><li>' + appContent.general.join('</li><li>')+'</li></ul>';
     }
+    if (appContent.review.length > 0){
+      doc.plain += '\n\nReview Checklist\n' + appContent.review.join('\n- ');
+      doc.markdown += '\n\n### Review Checklist \n\n- [ ] ' + appContent.review.join('\n- [ ] ');
+      doc.html += '<h3>Review Checklist</h3><ol><li>' + appContent.review.join('</li><li>')+'</li></ol>';
+    }
+    if (appContent.tips.length > 0){
+      doc.plain += '\n\nImplementation Tips\n' + appContent.tips.join('\n- ');
+      doc.markdown += '\n\n### Implementation Tips \n\n* ' + appContent.tips.join('\n* ');
+      doc.html += '<h3>Implementation Tips</h3><ul><li>' + appContent.tips.join('</li><li>')+'</li></ul>';
+    }
+
   }
   doc.plain += '\n\nPlease note: it is recommended that this policy undergoes a legal review prior to being implemented in your organisation.';
   doc.markdown += '\n\n#### *Please note: it is recommended that this policy undergoes a legal review prior to being implemented in your organisation.*';
