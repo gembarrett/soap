@@ -1,10 +1,11 @@
 controllers.bgPage = function(data, params){
   console.log('Background - home');
 
-  document.getElementById('bg').classList.add('active');  
-  document.getElementById('co').classList.remove('active');
+  // TODO: refactor into a function
+  document.getElementById('bg').classList.add('active');
   document.getElementById('bu').classList.remove('active');
-
-  var bgContent = templates.bgTemplate();
+  window.scrollTo(0,0);
+  var bgContent = templates.bgTemplate(data, params);
+  bgContent += templates.cta();
   utils.render('page', bgContent);
 };

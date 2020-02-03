@@ -4,7 +4,7 @@
 function injectOverlay() {
   console.log('building - injectOverlay');
   var parent = document.querySelector("#page");
-  parent.insertAdjacentHTML('afterend', '<div id="preview" class="modal closed"><button id="closePreview">X</button><div id="inner" class="modalScrollbox"><h3>Policy Preview</h3></div></div><div id="overlay" class="modalOverlay closed"></div>');
+  parent.insertAdjacentHTML('afterend', '<div id="preview" class="modal closed"><button id="closePreview"><i class="fas fa-plus-circle"></i></button><div id="inner" class="modalScrollbox"><h3>Policy Preview</h3></div></div><div id="overlay" class="modalOverlay closed"></div>');
   var modal = document.querySelector("#preview");
   var scrollbox = document.querySelector("#inner");
   var overlay = document.querySelector("#overlay");

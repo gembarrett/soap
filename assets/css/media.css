@@ -2,19 +2,19 @@
   #head {
     display:block;
   }
-  #head .wrapper {
+  /* #head .wrapper {
     display: flex;
     -webkit-flex-flow: column wrap;
     flex-flow: column wrap;
-  }
+  } */
   #head img {
-    max-width:25%;
+    max-width:35%;
   }
-  #head > .wrapper > a {
+  /* #head > .wrapper > a {
     display: inline-block;
     text-align: center;
     width: 100%;
-  }
+  } */
   #menu {
     display:none;
     border-top: 1px solid;
@@ -23,11 +23,9 @@
   }
   #head label {
     font-size: 1.5rem;
-    position: absolute;
-    right: 20px;
-    width:10%;
-    text-align: center;
+    padding: 0.5em 0.5em 1em 1em;
     margin: 10px;
+    margin-right:0;
   }
   .incidentBox {
     width:100%;
@@ -37,26 +35,354 @@
   .links a {
     padding:0;
   }
+  .questionContent h1 {
+    font-size: 1.5em;
+  }
   .questionContent h2 {
-    width:80%;
     font-size: 1.3em;
+  }
+  #q0 h2 {
+    width:100%;
+    font-size: 1.2em;
+  }
+  #intro {
+    padding: 1.5em;
+  }
+  #intro h1 {
+    line-height: 1.2em;
+    font-size: 2em;
+  }
+  .text-img-wrap {
+    flex-direction: column-reverse;
+  }
+  .text-buttons-wrap {
+    margin:0;
+    max-width: inherit;
+  }
+  #img-intro {
+    width:100%;
+    margin:0;
+  }
+  #head {
+    display:flex;
+    justify-content: space-between;
+  }
+  #menu-check:checked ~ ul {
+    flex-direction: column;
+    text-align: center;
+    margin:0;
+    padding:0;
+    align-items: end;
+    width:unset;
+    border-top: 0;
+    font-size: 0.8em;
+  }
+  #collapse i {
+    opacity: 0.5;
+  }
+  #page {
+    padding-top: 7em;
+  }
+  .links li:last-child {
+    padding: 0.1em 1em;
+  }
+  .links li:first-child {
+    border: 1px solid;
+    padding: 0.1em 1em;
+  }
+  .links li {
+    min-width: 90px;
+  }
+  .feature {
+    width:100%;
+    margin:1em auto;
+  }
+  #features {
+    padding:1em;
+    flex-direction: column;
+  }
+  #overview section {
+    width:100%;
+    padding-bottom: 4em;
+  }
+  #cta {
+    flex-direction: column;
+    padding: 1em;
+    text-align: center;
+  }
+  .links {
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+    /* fallback */
+    justify-content: center;
+    justify-content: space-evenly;
+    padding-left:0;
+  }
+  #head a {
+    width:50%;
+  }
+  #overview {
+    flex-direction: column;
+    padding: 1em;
+  }
+  #maintenanceGroup {
+    flex-direction: column;
+  }
+  #maintenanceGroup .dbl {
+    flex-direction: column-reverse;
+    border-top: 1px solid currentColor;
+    align-items: stretch;
+    margin-bottom: 3em;
+    margin-top: 1em;
+  }
+  .grid {
+    margin-left: 0;
+    margin-bottom: 2em;
+  }
+  #bgContainer .trio img {
+    margin: 0;
+  }
+  #bgContainer section {
+    padding: 2em;
+    flex-direction: column;
+  }
+  .nav-start.trio {
+    padding: 1em;
+  }
+  .wrap-c {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  #questionContainer {
+    padding:1.5em;
+  }
+  #q0 section {
+    margin:2em 0;
+  }
+  .question-panel {
+    margin-top: 0.5em;
+  }
+  .form-el {
+    margin: 1em;
+    font-size: 0.9em;
+  }
+  .form-el label {
+    line-height: 1em;
+    font-size: 1.1em;
+  }
+  #closePreview {
+    font-size: 1em;
+    top: -1.5em;
+    font-weight: bold;
+  }
+  #preview {
+    width:90%;
+    height:80%;
+  }
+  #inner h1 {
+    font-size: 1.5em;
+  }
+  #inner h4 {
+    border-top:1px solid;
+    padding-top:0.5em;
+  }
+  #dl-wrapper {
+    flex-direction: row;
+  }
+  #policy {
+    padding: 1.5em;
+  }
+  #policy-dl {
+    width: unset;
+    margin-top:2em;
+  }
+  #policy-dl h3 {
+    margin-top: 0.5em;
+  }
+  #policy-edit {
+    width: unset;
+  }
+  #policy-edit h3 {
+    margin-top: 0;
+  }
+  #policy textarea {
+    padding-left: 1em;
+  }
+  #policy h1 {
+    font-size: 1.3em;
+    margin-top:2em;
+  }
+  #policy text-img-wrap {
+    margin-top:2em;
+  }
+  .btn.btn-prim {
+    min-width: 10em;
+  }
+  .btn-wrap.wrap-c {
+    flex-wrap: wrap-reverse;
+  }
+  #head img {
+    max-width: 40%;
+  }
+  #head a {
+    width: unset;
+  }
+  #header-menu {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  #menu-check:checked ~ #collapse {
+    float:none;
+  }
+  .header-menu {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  #bgContainer img {
+    width:100%;
+    margin:0 auto;
+  }
+  #bgContainer section p {
+    margin-top:0;
+  }
+  #maintenanceGroup .dbl {
+    margin-bottom: 2em;
+    padding-top: 1em;
+  }
+  .nav-start a {
+    color:#fff;
+    font-weight: bold;
+  }
+  .nav-start .links a:hover, .nav-start .links a.active {
+    border-color: #fff;
+  }
+  #reset {
+    margin:1em auto;
+    display:block;
   }
 }
 
 @media (min-width:600px) {
-  #head, #foot, #page {
-    padding-left: 20px;
-    padding-right: 20px;
+  #head a {
+    max-width: 25%;
+  }
+  #menu-check:checked ~ ul {
+    align-items: center;
   }
   #head img {
     max-width: 50%;
   }
-  #head .wrapper {
+  /* #head .wrapper {
     display:flex;
     align-items: center;
+    justify-content: space-between;
+  } */
+  #head {
     justify-content: space-between;
   }
   #expand {
     display: none;
+  }
+  #dl-wrapper {
+    flex-direction: column;
+  }
+  #menu-check:checked ~ #collapse {
+    display:none;
+  }
+}
+
+@media (min-width:600px) and (max-width:1399px) {
+  #features .btn-prim {
+    width: 100%;
+  }
+  .feature {
+    flex: 1 2 30%;
+  }
+  #overview section {
+    flex: 1 2 40%;
+    /* width: auto; */
+    margin: 1.5em 2em;
+  }
+  #overview {
+    flex-wrap: wrap;
+  }
+  #cta {
+    padding:1em 3em;
+  }
+  #page {
+    padding-top: 6.5em;
+  }
+  .main-content > div {
+    padding:2em;
+  }
+  .text-buttons-wrap {
+    margin: 0;
+    max-width: initial;
+  }
+  #img-intro {
+    width: 100%;
+    margin: 0;
+  }
+  #intro .text-buttons-wrap {
+    flex: 1 2 40%;
+  }
+  #intro .text-img-wrap {
+    margin-bottom: 1.5em;
+    align-items: flex-start;;
+  }
+  #maintenanceGroup {
+    flex-wrap: wrap;
+  }
+  #bgContainer section img {
+    max-width: 50%;
+    margin: 0;
+    padding: 0;
+  }
+  #howTrio {
+    flex-direction: row;
+  }
+  .nav-start.trio {
+    flex-direction: column;
+  }
+  #bgContainer section.dbl img {
+    margin-right: 4em;
+  }
+  #bgContainer .nav-start.dbl.reverse {
+    align-items: flex-start;
+  }
+  .grid h4 {
+    text-align: center;
+  }
+  #q0 section {
+    flex:1 0 40%;
+  }
+  .trioPics {
+    float: 1 1 30%;
+    margin: 1em;
+  }
+}
+
+@media (max-width:1399px) {
+  .desktopVis {
+    display:none;
+  }
+  .mobileVis{
+    display: block;
+  }
+  /* #bgContainer .trio img {
+    height: unset;
+  } */
+}
+
+@media (min-width:1400px){
+  .desktopVis {
+    display:block;
+  }
+  .mobileVis{
+    display: none;
+  }
+  #howTrio {
+    margin-right:1em;
   }
 }

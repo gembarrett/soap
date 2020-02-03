@@ -26,7 +26,7 @@ class Handler(SimpleHTTPServer.SimpleHTTPRequestHandler):
         return SimpleHTTPServer.SimpleHTTPRequestHandler.do_GET(self)
 
 
-host = '0.0.0.0'
+host = '127.0.0.1'
 try:
     port = int(sys.argv[1])
 except IndexError:

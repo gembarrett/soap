@@ -1,7 +1,7 @@
 // initialise counters with the first section and question, this is updated at the end of questions and sections
 
 //  list of sections
-var sections = [section0, section1, section2];
+var sections = [section0, section1, section2, section3, section4];
 // loop through and create list of questions
 var questionsList = [];
 // for each of the sections
@@ -44,26 +44,34 @@ var output;
 
 
 function addChangeListeners() {
-  var notice = document.querySelector('.notice');
-  // TODO: investigate why this is triggered on q1, rather than onclick
-  notice.onclick = notice.remove();
-
-  // grab all the form inputs
-  var radios = Array.from(document.querySelectorAll('.form-el > input[type="radio"]'))
-  var checks = Array.from(document.querySelectorAll('.form-el > input[type="checkbox"]'));
-
-  var elements = Array.from(document.querySelectorAll('.form-el > input'));
-  var boxes = Array.from(document.querySelectorAll('.form-el > textarea'));
-  elements = elements.concat(boxes);
-  for (var e = 0; e < elements.length; e++) {
-    // if it's a radio or checkbox
-    if ((elements[e].type === "radio") || (elements[e].type === "checkbox")){
-      elements[e].addEventListener('change', toggleSkip);
-    } else {
-      elements[e].oninput = toggleSkip;
-    }
+  var notice = document.querySelectorAll('.q0-only');
+  for  (var n = 0; n <notice.length; n++){
+    notice[n].remove();
   }
+  // TODO: investigate why this is triggered on q1, rather than onclick
+  // notice.onclick = notice.remove();
+
+  // add listener for edit button
+  // var editBtn = document.getElementById("editBtn");
+  // editBtn.addEventListener('click', editAnswers, false);
+
+  // TODO: get skip/next fully working
+  // grab all the form inputs
+  // var elements = Array.from(document.querySelectorAll('.form-el > input'));
+  // var boxes = Array.from(document.querySelectorAll('.form-el > textarea'));
+  // console.log(boxes);
+  // elements = elements.concat(boxes);
+  // console.log(elements);
+  // for (var e = 0; e < elements.length; e++) {
+  //   // if it's a radio or checkbox
+  //   if ((elements[e].type === "radio") || (elements[e].type === "checkbox")){
+  //     elements[e].addEventListener('change', toggleSkip);
+  //   } else {
+  //     elements[e].oninput = toggleSkip;
+  //   }
+  // }
 }
+
 
 function updateValue(e) {
   log.textContent = e.target.value;
@@ -96,6 +104,7 @@ function moveForward(id) {
   return id;
 }
 
+
 function isExcludedQ(id) {
   // start looking at the next question
   id = moveForward(id);
@@ -120,61 +129,69 @@ function updateProgressBar(){
 }
 
 // this is the function that's called when a user submits an answer
+// TODO: add a special flag to this if it should be looking for edited, rather than new answers
 function handleSubmit() {
   // search for the currently shown element - question and answer
   var match = document.querySelector('.current');
+  console.log('get the current element');
   // this gets the current question id number e.g. q0
   var id = currentState.questionQ.split('q')[1];
-
+  console.log('get the current question\'s id');
+  // get the number of answers collected so far for comparison later
   beforeSize = currentState.answers.length;
-  // use the form element and the question id to get the inputs
+  // use the current element and the question id to get the inputs
   var answers = getInput(match, id);
 
   canProceed = true;
 
   // before doing anything else, check if this is a required question
-  isRequired = match[0] ? match[0].required : false;
+  // isRequired = match[0] ? match[0].required : false;
+
   // compare the size of answers array to find out if answers have been provided for this question
   if (id > 0){
+
     // have answers been provided for this question?
     noAnswers = beforeSize === answers.length ? true : false;
 
-    console.log(beforeSize);
-    console.log(answers.length);
-
     // if it's required and there are no answers provided
-    if (isRequired && noAnswers){
-      canProceed = false;
-    }
-    console.log(canProceed);
+    // if (isRequired && noAnswers){
+    //   canProceed = false;
+    // }
 
     // if there's at least one answer returned and the button is disabled
-    // get the preview button
+    // enable the preview button
     prev = document.querySelector('#previewPolicy');
     if (!noAnswers && prev.disabled){
       prev.removeAttribute('disabled');
     }
-
   }
 
   if (canProceed){
 
       setUpPage(id);
 
+      // if (parseInt(id) > 0){
+      //   // show the edit button
+      //   document.getElementById('editBtn').classList.remove('disabled');
+      //   // mark the question as editable
+      //   match.classList.add("editable");
+      // }
+
       // this hides the current question,
       match.classList.remove("current");
-
+      console.log('hide current question');
       // go to next question
       id = isExcludedQ(id);
-
-      // TODO reset the skip/next button here
-      document.getElementById('submitAnswers').innerText = "Skip";
+      console.log('get next id that isn\'t excluded');
+      // TODO change to Skip when skip/next is working
+      document.getElementById('submitAnswers').innerText = "Next";
 
       nextQuestion();
       window.scrollTo(0,0);
   }
 }
 
+// not sure this needs to be a function as it's only done once
 function setUpPage(id){
   // add the additional stuff after everything else has loaded
   if (parseInt(id) === 0) {
@@ -184,6 +201,7 @@ function setUpPage(id){
     addChangeListeners();
   }
 }
+
 
 function nextQuestion(){
   // if the position is not beyond the total number of questions for the current section
@@ -219,14 +237,14 @@ function nextQuestion(){
       }
     }
   }
-  if (nextQ){
-    // if there's a next question and it's required
-    if (nextQ[0] && nextQ[0].required){
-      // get and set the submit button to disabled
-      submit = document.querySelector('#submitAnswers');
-      submit.setAttribute("disabled", "");
-    }
-  }
+  // if (nextQ){
+  //   // if there's a next question and it's required
+  //   if (nextQ[0] && nextQ[0].required){
+  //     // get and set the submit button to disabled
+  //     submit = document.querySelector('#submitAnswers');
+  //     submit.setAttribute("disabled", "");
+  //   }
+  // }
 }
 
 function getInput(el, qId) {
@@ -252,7 +270,9 @@ function getInput(el, qId) {
       t: textareas[0].value,
     });
     // store the inputted value in the dictionary
-    dict[result.answers[answerID].storeAs] = textareas[0].value;
+    // should this be addToDictionary?
+    addToDictionary(result.answers[answerID].storeAs, textareas[0].value);
+
   }
 
   // for every input in the form
@@ -263,6 +283,7 @@ function getInput(el, qId) {
     // unsplit the question ID
     var tempQId = 'q'+qId;
     var result = currentState.sectionQ.find(question => question.id === tempQId);
+    // console.log(result);
 
     // if the input is a textbox containing value
     if (inputs[i].type === "text" && inputs[i].value !== "") {
@@ -276,7 +297,7 @@ function getInput(el, qId) {
         s: currentState.sectionC,
         q: qId,
         a: answerID,
-        t: inputs[i].value,
+        t: inputs[i].value, // is this necessary if storeAs is working?
       });
     }
 
@@ -290,7 +311,8 @@ function getInput(el, qId) {
 
       // if there's a storeAs value, store it
       if (result.answers[answerID].storeAs !== "") {
-        addToDictionary(result.answers[answerID].storeAs, result.answers[answerID].answerText);
+        storedText = inputs[i].nextSibling.contentEditable === "true" ? inputs[i].nextSibling.innerText : result.answers[answerID].answerText;
+        addToDictionary(result.answers[answerID].storeAs, storedText);
       }
       // push the question and answer object to the currentState
       currentState.answers.push({
@@ -298,6 +320,7 @@ function getInput(el, qId) {
         q: qId,
         a: answerID,
       });
+
     }
   }
   return currentState.answers;

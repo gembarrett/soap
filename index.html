@@ -8,51 +8,61 @@
     <script src="content/section-0.js"></script>
     <script src="content/section-1.js"></script>
     <script src="content/section-2.js"></script>
+    <script src="content/section-3.js"></script>
+    <script src="content/section-4.js"></script>
     <link rel="stylesheet" href="assets/css/styles.css" />
     <link rel="stylesheet" href="assets/css/media.css" />
-    <link href="/assets/css/all.css" rel="stylesheet">
+    <link href="assets/css/all.css" rel="stylesheet">
     <script src="assets/js/utils.js"></script>
     <script src="assets/js/init.js"></script>
     <!-- these may need to be moved further down or refactored -->
     <script src="assets/js/start.js"></script>
     <script src="assets/js/overlay.js"></script>
+    <script src="assets/js/edit.js"></script>
     <script src="assets/js/policy.js"></script>
   </head>
   <body>
-    <div id="head" class="header">
-      <div class="wrapper">
-        <a href="/">
-          <img src="assets/images/soapLogoW.png" />
-        </a>
+    <div id="head" class="nav-start">
+      <a href="/">
+        <img id="logo" src="assets/images/soapLogoW.png" />
+      </a>
 
+      <div class="header-menu">
         <!-- hamburger icon -->
         <input type="checkbox" id="menu-check" />
         <label for="menu-check" id="expand"><i class="fas fa-ellipsis-v"></i></label>
         <input type="checkbox" id="menu-collapse" />
-        <label for="menu-check" id="collapse"><i class="fas fa-ellipsis-h"></i></label>
+        <label for="menu-check" id="collapse"><i class="fas fa-ellipsis-v"></i></label>
 
         <ul id="menu" class="links">
-          <li><a id="bg" href="/#background">Background</a></li>
-          <li><a id="bu" href="/#build">Build</a></li>
-          <li><a id="co" href="/#contribute">Contribute</a></li>
+          <li><a id="bg" href="/#info">More info</a></li>
+          <li><a id="bu" href="/#build">Try SOAP</a></li>
+          <!-- <li id="editBtn" class="disabled">EDIT</li> -->
         </ul>
       </div>
+
     </div>
-    <div id="page" class="main-content wrapper">
+    <div id="page" class="main-content">
       <div id="no-js">
         <h2>Looks like you've got Javascript disabled!</h2>
         <p>You'll need to enable Javascript in order to use this website. Here's how to do that: <a href="https://enable-javascript.com/">enable-javascript.com</a></p>
         <p>If your threat model requires you to keep Javascript disabled, you can instead go to <a href="https://github.com/gembarrett/soap">SOAP's GitHub repository</a> and grab the code to run the whole website offline on your local computer.</p>
       </div>
     </div>
-    <div id="foot" class="footer wrapper">
+    <div id="foot" class="footer nav-start">
       <ul class="links">
-        <li><a href="/#background">Background</a></li>
-        <li><a href="/#build">Build</a></li>
-        <li><a href="/#contribute">Contribute</a></li>
+        <!-- github, report download, contact, build, more info -->
+        <li><a href="https://github.com/gembarrett/soap" target="_blank">Code</a></li>
+        <li><a href="/assets/SecuringCivilSociety-report.pdf" target="_blank">Research</a></li>
+        <li><a href="mailto:feedback@usesoap.app?subject=Suggested%20change&amp;body=The%20problem%20with%20this%20page%20is%3A%0AThis%20is%20what%20I%20expected%3A%0AAny%20other%20info%3A%0A%0AI%20%5Bam%20%2F%20am%20not%5D%20ok%20with%20being%20contacted%20about%20this%20suggested%20change%20(delete%20as%20appropriate)">Feedback</a></li>
+        <li><a href="/#info">More info</a></li>
+        <li><a href="/#build">Try SOAP</a></li>
       </ul>
     </div>
-    <script src="assets/js/templates/introText.js"></script>
+    <script src="assets/js/templates/intro.js"></script>
+    <script src="assets/js/templates/cta.js"></script>
+    <script src="assets/js/templates/featuresTrio.js"></script>
+    <script src="assets/js/templates/overviewQuad.js"></script>
     <script src="assets/js/templates/questionsTemplate.js"></script>
     <script src="assets/js/templates/bgTemplate.js"></script>
     <script src="assets/js/templates/policyTemplate.js"></script>

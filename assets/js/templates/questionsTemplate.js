@@ -1,6 +1,7 @@
 templates.questionsTemplate = function(data){
   var content = `
-      <progress max="`+questionsList.length+`" value="0"></progress><div id="questionContainer" class=""><div class="notice"><h4>This is the alpha version of SOAP, updated 31/10/19</h4><p>New content and features coming January 2020.</p></div>`;
+      <progress max="`+questionsList.length+`" value="0"></progress><div id="questionContainer" class="">`;
+
 
   for(var i = 0; i < questionsList.length; i++) {
       var question = data[i];
@@ -47,7 +48,9 @@ templates.questionsTemplate = function(data){
            }
            // if this is an input field then create the label
            if (question.answers[j].type !== 'textarea') {
-             thisLabel = '<label for="' +question.id+ "-"+ j+ '-answer">' +question.answers[j].answerText+ '</label>';
+             thisLabel = '<label for="' +question.id+ "-"+ j+ '-answer"';
+             thisLabel += question.answers[j].editable ? ' class="btn-edit" contenteditable="true">' : '>';
+             thisLabel += question.answers[j].answerText+ '</label>';
            }
            // start the form
            content += '<div class="form-el">';
@@ -71,14 +74,23 @@ templates.questionsTemplate = function(data){
          }
       } else {
         // add the title and paragraphs
-        content += '<h2>' + question.title + '</h2>';
-        content = formatArray(question.contentArray, content);
+        content += '<h1>' + question.title + '</h1>';
+        // if it's the first question, lay out the content a bit differently
+        if (question.id === "q0") {
+          content += `<h2>`+question.contentArray[0]+`</h2><div class="text-img-wrap">`;
+          for (var k = 1; k < question.contentArray.length; k++){
+            content += `<section><img src="assets/images/pic-q0-`+k+`.gif"><p>`+question.contentArray[k]+`</p></section>`;
+          }
+          content += `</div>`;
+        } else {
+          content = formatArray(question.contentArray, content);
+        }
       }
       // if its the first question
       // no closing div, just closing form
       content += question.isQ ? '</div></form>' : '</form>';
   }
-  content += '<div class="btn-wrap wrap-r"><button disabled id="previewPolicy" class="previewButton btn btn-seco">Preview</button><button id="submitAnswers" onclick="handleSubmit()" class="nextButton btn btn-prim">Skip</button></div>';
+  content += '<div class="q0-only"><h4>This is the beta version of SOAP</h4><p>New content and features coming March 2020</p></div><div class="btn-wrap wrap-r"><button disabled id="previewPolicy" class="previewButton btn btn-seco">Preview</button><span class="q0-only">Ready?</span><button id="submitAnswers" onclick="handleSubmit()" class="nextButton btn btn-prim">Let\'s go!</button></div>';
   content += '<small><a href="mailto:feedback@usesoap.app?subject=Suggested%20change&amp;body=The%20problem%20with%20this%20page%20is%3A%0AThis%20is%20what%20I%20expected%3A%0AAny%20other%20info%3A%0A%0AI%20%5Bam%20%2F%20am%20not%5D%20ok%20with%20being%20contacted%20about%20this%20suggested%20change%20(delete%20as%20appropriate)">Suggest changes by email</a> or <a href="https://github.com/gembarrett/soap/issues">on GitHub</a></small></div>';
   return content;
 };

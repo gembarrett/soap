@@ -18,6 +18,7 @@ function compileDoc(p,a){
   var commsP = [];
   var acctsP = [];
   var incResP = [];
+  var travelP = [];
   var appContent = {
     general: [],
     review: [],
@@ -43,50 +44,75 @@ function compileDoc(p,a){
       // if there's data
       if (found){
         switch (true) {
-          case qRef < 5:
+          // questions 0-5 are for context
+          case qRef < 6:
             contextP = getPolicyContent(qRef, prevQ, aRef, contextP, found);
             // if we need the appendix too
             if (a) {
-              appContent = getAppendixContent(qRef, prevQ, aRef, appContent, found);
+              appContent = getAppendixContent(qRef, prevQ, aRef, appContent, found); // TODO: instead of repeating this is should just be a function call each time
             }
-            // set the prevQ for next comparison
-            // prevQ = qRef;
             break;
-          case qRef < 10:
+          // add case for teaming name & pos @ 9
+          // questions 6-8 are for devices
+          case qRef < 9:
             deviceP = getPolicyContent(qRef, prevQ, aRef, deviceP, found);
             // if we need the appendix too
             if (a) {
               appContent = getAppendixContent(qRef, prevQ, aRef, appContent, found);
             }
-            // set the prevQ for next comparison
-            // prevQ = qRef;
             break;
+          // questions 9-12 are for comms
           case qRef < 13:
             commsP = getPolicyContent(qRef, prevQ, aRef, commsP, found);
             // if we need the appendix too
             if (a) {
               appContent = getAppendixContent(qRef, prevQ, aRef, appContent, found);
             }
-            // set the prevQ for next comparison
-            // prevQ = qRef;
             break;
+          // question 13 is inc resp
           case qRef < 14:
             incResP = getPolicyContent(qRef, prevQ, aRef, incResP, found);
-            // set the prevQ for next comparison
-            // prevQ = qRef;
             break;
-          case qRef < 19:
+          // questions 14-19 are for accounts
+          case qRef < 20:
             acctsP = getPolicyContent(qRef, prevQ, aRef, acctsP, found);
             // if we need the appendix too
             if (a) {
               appContent = getAppendixContent(qRef, prevQ, aRef, appContent, found);
             }
-            // set the prevQ for next comparison
-            // prevQ = qRef;
             break;
-          case qRef < 20:
+          // question 20 is for inc resp
+          case qRef < 21:
             incResP = getPolicyContent(qRef, prevQ, aRef, incResP, found);
             break;
+          // add case for inserting Backups heading @ 22
+          // questions 20-26 are for devices
+          case qRef < 27:
+            deviceP = getPolicyContent(qRef, prevQ, aRef, deviceP, found);
+            // if we need the appendix too
+            if (a) {
+              appContent = getAppendixContent(qRef, prevQ, aRef, appContent, found);
+            }
+            break;
+          // question 27 is for inc resp
+          case qRef < 28:
+            incResP = getPolicyContent(qRef, prevQ, aRef, incResP, found);
+            break;
+          // add case for teaming name & pos @ 33
+          // questions 28-33 are for travel
+          case qRef < 34:
+            travelP = getPolicyContent(qRef, prevQ, aRef, travelP, found);
+            // if we need the appendix too
+            if (a) {
+              appContent = getAppendixContent(qRef, prevQ, aRef, appContent, found);
+            }
+            break;
+          // question 34 is for inc resp
+          case qRef < 35:
+            incResP = getPolicyContent(qRef, prevQ, aRef, incResP, found);
+            break;
+
+
           default:
             console.log(qRef + ' not found');
         }
@@ -98,53 +124,64 @@ function compileDoc(p,a){
 
   doc.plain = 'Organisational Security Policy\n\nCreated '+dateStamp()+'\n\n'+contextP.join('\n');
   doc.markdown = '# Organisational Security Policy \n#### Created '+dateStamp()+'\n\n'+contextP.join('\n');
-  doc.html = '<h1>Organisational Security Policy</h1><h4>Created '+dateStamp()+'</h4><p>'+contextP.join('</p><p>')+'</p>';
+  doc.html = '<!DOCTYPE html><html><head><title>Cleaned with SOAP on '+dateStamp()+'</title></head><body><h1>Organisational Security Policy</h1><h4>Created '+dateStamp()+'</h4><p>'+contextP.join('</p><p>')+'</p>';
 
-  switch (true) {
-    case deviceP.length > 0:
-      doc.plain += '\n\nDevice Security\n' + deviceP.join('\n');
-      doc.markdown += '\n\n### Device Security \n' + deviceP.join('\n');
-      doc.html += '<h3>Device Security</h3><p>' + deviceP.join('</p><p>')+'</p>';
-    case commsP.length > 0:
-      doc.plain += '\n\nCommunications Security\n' + commsP.join('\n');
-      doc.markdown += '\n\n### Communications Security \n' + commsP.join('\n');
-      doc.html += '<h3>Communications Security</h3><p>' + commsP.join('</p><p>')+'</p>';
-    case acctsP.length > 0:
-      doc.plain += '\n\nAccounts Security\n' + acctsP.join('\n');
-      doc.markdown += '\n\n### Accounts Security \n' + acctsP.join('\n');
-      doc.html += '<h3>Accounts Security</h3><p>' + acctsP.join('</p><p>')+'</p>';
-    case incResP.length > 0:
-      doc.plain += '\n\nWhat to do if...\n' + incResP.join('\n\n');
-      doc.markdown += '\n\n### What to do if...\n' + incResP.join('\n\n');
-      doc.html += '<h3>What to do if...</h3><p>' + incResP.join('</p><p>')+'</p>';
-    default:
-      console.log('empty section');
+  if (deviceP.length > 0){
+    console.log(deviceP.length);
+    doc.plain += '\n\nDevice Security\n' + deviceP.join('\n');
+    doc.markdown += '\n\n### Device Security \n' + deviceP.join('\n');
+    doc.html += '<h3>Device Security</h3><p>' + deviceP.join('</p><p>')+'</p>';
   }
+  if (commsP.length > 0){
+    console.log(commsP.length);
+    doc.plain += '\n\nCommunications Security\n' + commsP.join('\n');
+    doc.markdown += '\n\n### Communications Security \n' + commsP.join('\n');
+    doc.html += '<h3>Communications Security</h3><p>' + commsP.join('</p><p>')+'</p>';
+  }
+  if (acctsP.length > 0){
+    console.log(acctsP.length);
+    doc.plain += '\n\nAccounts Security\n' + acctsP.join('\n');
+    doc.markdown += '\n\n### Accounts Security \n' + acctsP.join('\n');
+    doc.html += '<h3>Accounts Security</h3><p>' + acctsP.join('</p><p>')+'</p>';
+  }
+  if (travelP.length > 0){
+    console.log(travelP.length);
+    doc.plain += '\n\Travel Security\n' + travelP.join('\n');
+    doc.markdown += '\n\n### Travel Security \n' + travelP.join('\n');
+    doc.html += '<h3>Travel Security</h3><p>' + travelP.join('</p><p>')+'</p>';
+  }
+  if (incResP.length > 0){
+    console.log(incResP.length);
+    doc.plain += '\n\nWhat to do if...\n' + incResP.join('\n\n');
+    doc.markdown += '\n\n### What to do if...\n' + incResP.join('\n\n');
+    doc.html += '<h3>What to do if...</h3><p>' + incResP.join('</p><p>')+'</p>';
+  }
+
   // if appendix is requested, join the policy and appendix arrays together
   if (a) {
     doc.plain += '\n\nAppendix\n';
     doc.markdown += '\n\n## Appendix <br>';
     doc.html += '<h2>Appendix</h2>';
-    switch (true) {
-      case appContent.general.length > 0:
-        doc.plain += '\n\nGeneral Advice\n' + appContent.general.join('\n');
-        doc.markdown += '\n\n### General Advice \n\n* ' + appContent.general.join('\n* ');
-        doc.html += '<h3>General Advice</h3><ul><li>' + appContent.general.join('</li><li>')+'</li></ul>';
-      case appContent.review.length > 0:
-        doc.plain += '\n\nReview Checklist\n' + appContent.review.join('\n');
-        doc.markdown += '\n\n### Review Checklist \n\n- [ ] ' + appContent.review.join('\n- [ ] ');
-        doc.html += '<h3>Review Checklist</h3><ol><li>' + appContent.review.join('</li><li>')+'</li></ol>';
-      case appContent.tips.length > 0:
-        doc.plain += '\n\nImplementation Tips\n' + appContent.tips.join('\n');
-        doc.markdown += '\n\n### Implementation Tips \n\n* ' + appContent.tips.join('\n* ');
-        doc.html += '<h3>Implementation Tips</h3><ul><li>' + appContent.tips.join('</li><li>')+'</li></ul>';
-      default:
-        console.log('empty section');
+    if (appContent.general.length > 0){
+      doc.plain += '\n\nGeneral Advice\n' + appContent.general.join('\n- ');
+      doc.markdown += '\n\n### General Advice \n\n* ' + appContent.general.join('\n* ');
+      doc.html += '<h3>General Advice</h3><ul><li>' + appContent.general.join('</li><li>')+'</li></ul>';
     }
+    if (appContent.review.length > 0){
+      doc.plain += '\n\nReview Checklist\n' + appContent.review.join('\n- ');
+      doc.markdown += '\n\n### Review Checklist \n\n- [ ] ' + appContent.review.join('\n- [ ] ');
+      doc.html += '<h3>Review Checklist</h3><ol><li>' + appContent.review.join('</li><li>')+'</li></ol>';
+    }
+    if (appContent.tips.length > 0){
+      doc.plain += '\n\nImplementation Tips\n' + appContent.tips.join('\n- ');
+      doc.markdown += '\n\n### Implementation Tips \n\n* ' + appContent.tips.join('\n* ');
+      doc.html += '<h3>Implementation Tips</h3><ul><li>' + appContent.tips.join('</li><li>')+'</li></ul>';
+    }
+
   }
   doc.plain += '\n\nPlease note: it is recommended that this policy undergoes a legal review prior to being implemented in your organisation.';
   doc.markdown += '\n\n#### *Please note: it is recommended that this policy undergoes a legal review prior to being implemented in your organisation.*';
-  doc.html += '<h4>Please note: it is recommended that this policy undergoes a legal review prior to being implemented in your organisation.</h4>';
+  doc.html += '<h4>Please note: it is recommended that this policy undergoes a legal review prior to being implemented in your organisation.</h4></body></html>';
   output = doc;
   return doc;
 }
@@ -154,6 +191,16 @@ function replaceStr(string) {
   var editedStr = string;
   // for each of the stored keys
   for (var key in dict){
+    // if it's a list of things and the last item does not start with an " and "
+    if ((Array.isArray(dict[key])) && (!dict[key][dict[key].length-1].startsWith(" and "))){
+      last = dict[key][dict[key].length-1];
+      // add "and" plus a full stop to the last item
+      dict[key][dict[key].length-1] = "and " + last;
+      // prepend each item in the array with a space
+      for (var i = 0; i < dict[key].length; i++){
+        dict[key][i] = " " + dict[key][i];
+      }
+    }
     var regexKey = key.replace('[', '\\[').replace(']', '\\]');
     var regex = new RegExp(regexKey, 'gi');
     // check if that key exists in the string and replace it with value from dict
@@ -198,6 +245,18 @@ function dateStamp(){
   return fullDate; // is there a way to return date + 3 months (no day)?
 }
 
+function clearData(){
+  console.log('reset all the things!');
+  currentState = null;
+  dates  = null;
+  dict = null;
+  output = null;
+  qRef = null;
+  tmpContent = null;
+  window.location.reload(true);
+}
+
+
 // function to download data to a file
 function downloadPolicy(type) {
     var data = output[type];
@@ -233,11 +292,15 @@ function downloadPolicy(type) {
 
 
 function getPolicyContent(question, previous, answer, policy, content){
+  // if it's a new question and there's policyContent
   if ((question !== previous) && (content.policyContent !== "")) {
+    // edit the policyContent and push it to the policy
     thisContent = replaceStr(content.policyContent);
     policy.push(thisContent);
   }
+  // if the answer has a policyEntry
   if (content.answers[answer].policyEntry !== ""){
+    // edit the policyEntry and push it to the policy
     thisContent = replaceStr(content.answers[answer].policyEntry);
     policy.push(thisContent);
   }

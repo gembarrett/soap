@@ -3,7 +3,7 @@ var section0 = [
     "isQuestion": false,
     "id":"q0",
     "title": "Getting started!",
-    "paragraph":["The three stages of SOAP’s policy-building process cover key aspects of organizational security. At the start of each section you'll be asked to consider a hypothetical, but common, security incident. What follows next is a series of questions about relevant mitigation tactics, with each selected answer contributing to the appropriate content for your security policy. Each section ends with an opportunity for you to specify the steps you want staff to take if, and when, they find themselves involved in a given incident.", "If you don’t understand the relevance or meaning of a particular question along the way, simply hit the '+' button beside it. This will reveal a panel with implementation tips, definitions, search terms, and other information to help clarify the question and its content. As you progress through the process, you can preview your policy at any time by hitting “Preview.” The progress bar at the top of each page shows how far you’ve come in the process. When you've completed all three sections, you will be shown your full policy, including the appendix. Download options are available so you can share the policy in the best way for your organization.", "This first section is all about understanding your organization's unique context. Your answers here will provide the information we need to start identifying the right questions to help shape your new, totally customized security policy. Ready? Let’s go!"]
+    "paragraph":["Here's what you need to know to get the most out of SOAP:","The first set of questions is all about understanding your organization's unique context. Your answers here will provide the information we need to start identifying the right questions to help shape your new, totally customized security policy.", "Subsequent sections present hypothetical, but common, security incidents and then ask questions that explore preventative tactics and inform your policy's content. Each section ends with an opportunity for you to specify any incident response actions you would wish staff to take in the given scenario.", "If you don’t understand the relevance or meaning of a particular question along the way, simply hit the '+' button beside it. This will reveal a panel with implementation tips, definitions, search terms, and other information to improve clarity.", "Don't see an answer that's right for your situation? Many of the questions have an 'other option' button which you can double-click to edit and add your own answer." ,"The progress bar at the top of each page shows how far you’ve come in the process. As you progress, you can preview your policy at any time by hitting “Preview.”", "When you've completed the process, you will be presented with your full organisational security policy, including a review checklist and appendix of implementation tips. Download options are available so you can share the policy in the best way for your organization."]
   },
   {
     "isQuestion": true,
@@ -40,7 +40,7 @@ var section0 = [
     "id":"q2",
     "q":"Who will this policy apply to?",
     "required":false,
-    "policyContent":"This policy applies to [appliesTo]",
+    "policyContent":"This policy applies to [appliesTo].",
     "appendixContent":"",
     "answers":[
       {
@@ -81,6 +81,20 @@ var section0 = [
             "tipList": ""
           }
         ]
+      },
+      {
+        "type":"checkbox",
+        "editable": true,
+        "answerText":"other group",
+        "storeAs": "[appliesTo]",
+        "excludes":[],
+        "policyEntry":"",
+        "appendixEntry":[
+          {
+            "reviewList":"",
+            "tipList": ""
+          }
+        ]
       }
     ],
     "tips":[
@@ -93,55 +107,29 @@ var section0 = [
   {
     "isQuestion": true,
     "id":"q3",
-    "q":"How regularly do you intend to review and update this policy?",
+    "q":"Do all your staff work in the same physical office?",
     "required":true,
-    "policyContent":"This policy will be reviewed by [contactName] ([contactPos]) on a [reviewFreq] basis. Any suggestions or feedback on the policy’s contents should be directed to them.",
+    "policyContent":"",
     "appendixContent":"",
     "answers":[
       {
         "type":"radio",
-        "answerText":"annually",
-        "storeAs": "[reviewFreq]",
+        "answerText":"Yes",
+        "storeAs": "",
         "excludes":[],
         "policyEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": "Mark your calendar for review dates on [date+12], [date+24], [date+36]"
-          }
-        ]
-      },
-      {
-        "type":"radio",
-        "answerText":"6-monthly",
-        "storeAs": "[reviewFreq]",
-        "excludes":[], // review this
-        "policyEntry":"",
-        "appendixEntry":[
-          {
-            "reviewList":"",
-            "tipList": "Mark your calendar for review dates on [date+6], [date+12], [date+18]"
+            "tipList": ""
           }
         ],
       },
       {
         "type":"radio",
-        "answerText":"quarterly",
-        "storeAs": "[reviewFreq]",
-        "excludes":[],
-        "policyEntry":"",
-        "appendixEntry":[
-          {
-            "reviewList":"",
-            "tipList": "Mark your calendar for review dates on [date+3], [date+6], [date+9]"
-          }
-        ],
-      },
-      {
-        "type":"radio",
-        "answerText":'"as threats arise"',
-        "storeAs": "[reviewFreq]",
-        "excludes":[],
+        "answerText":"No - some or all of our staff work remotely.",
+        "storeAs": "",
+        "excludes":[], // exc. environmental Qs when added
         "policyEntry":"",
         "appendixEntry":[
           {
@@ -153,9 +141,9 @@ var section0 = [
     ],
     "tips":[
       {"relevance":""},
-      {"meaning":"It is recommended to review at least once a year to improve and update to meet new threats. Check your policy’s appendix at the end to find a checklist that will help when it comes time to review the policy."},
-      {"implementation":"Create calendar events for the next 2 policy reviews and invite stakeholders involved in reviewing the policy (e.g. management, Human Resources, IT)."},
-      {"more":["review security policy"]}
+      {"meaning":"For the majority of their time, remote staff work outside of a traditional office, such as from home or a cafe. The risks in different working environments vary and there are factors to be considered which apply to remote staff but not so much those who work in a regular office – and vice versa."},
+      {"implementation":"Your organisation is remote if it has any members of staff working from outside [orgName]-controlled premises, and taking this remote-first perspective helps with supporting those staff as part of the team."},
+      {"more":["managing remote staff"]}
     ]
   },
   {
@@ -203,7 +191,7 @@ var section0 = [
         "policyEntry":"Their pronouns are [contactProns].",
         "appendixEntry":[
           {
-            "reviewList":"",
+            "reviewList":"Does [contactName] still use [contactProns] pronouns?",
             "tipList": ""
           }
         ]
@@ -217,7 +205,7 @@ var section0 = [
         "policyEntry":"Email: [contactEmail]",
         "appendixEntry":[
           {
-            "reviewList":"Is their email address up-to-date?",
+            "reviewList":"Is [contactName]'s email address up-to-date?",
             "tipList": ""
           }
         ]
@@ -231,7 +219,7 @@ var section0 = [
         "policyEntry":"Phone: [contactPhone]",
         "appendixEntry":[
           {
-            "reviewList":"Is their phone number correct?",
+            "reviewList":"Is [contactName]'s phone number correct?",
             "tipList": ""
           }
         ]
@@ -247,6 +235,74 @@ var section0 = [
   {
     "isQuestion": true,
     "id":"q5",
+    "q":"How regularly do you intend to review and update this policy?",
+    "required":true,
+    "policyContent":"This policy will be reviewed by [contactName] ([contactPos]) on a [reviewFreq] basis. Any suggestions or feedback on the policy’s contents should be directed to them.",
+    "appendixContent":"",
+    "answers":[
+      {
+        "type":"checkbox",
+        "answerText":"annual",
+        "storeAs": "[reviewFreq]",
+        "excludes":[],
+        "policyEntry":"",
+        "appendixEntry":[
+          {
+            "reviewList":"",
+            "tipList": "Mark your calendar for review dates on [date+12], [date+24], [date+36]"
+          }
+        ]
+      },
+      {
+        "type":"checkbox",
+        "answerText":"6-monthly",
+        "storeAs": "[reviewFreq]",
+        "excludes":[], // review this
+        "policyEntry":"",
+        "appendixEntry":[
+          {
+            "reviewList":"",
+            "tipList": "Mark your calendar for review dates on [date+6], [date+12], [date+18]"
+          }
+        ],
+      },
+      {
+        "type":"checkbox",
+        "answerText":"quarterly",
+        "storeAs": "[reviewFreq]",
+        "excludes":[],
+        "policyEntry":"",
+        "appendixEntry":[
+          {
+            "reviewList":"",
+            "tipList": "Mark your calendar for review dates on [date+3], [date+6], [date+9]"
+          }
+        ],
+      },
+      {
+        "type":"checkbox",
+        "answerText":'"as threats arise"',
+        "storeAs": "[reviewFreq]",
+        "excludes":[],
+        "policyEntry":"",
+        "appendixEntry":[
+          {
+            "reviewList":"",
+            "tipList": ""
+          }
+        ]
+      },
+    ],
+    "tips":[
+      {"relevance":""},
+      {"meaning":"It is recommended to review at least once a year to improve and update to meet new threats. Check your policy’s appendix at the end to find a checklist that will help when it comes time to review the policy."},
+      {"implementation":"Create calendar events for the next 2 policy reviews and invite stakeholders involved in reviewing the policy (e.g. management, Human Resources, IT)."},
+      {"more":["review security policy"]}
+    ]
+  },
+  {
+    "isQuestion": true,
+    "id":"q6",
     "q":"Which operating systems are used in your organisation?",
     "required":false,
     "policyContent":"",
@@ -332,19 +388,20 @@ var section0 = [
       },
       {
         "type":"checkbox",
-        "answerText":"Blackberry",
+        "editable": true,
+        "answerText":"another system",
         "storeAs": "",
         "excludes":[],
         "policyEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": "This article reviews some of the privacy and security features of the Blackberry K2: https://www.digitaltrends.com/mobile/blackberry-key2-tips-and-tricks/"
+            "tipList": ""
           }
         ]
       }
     ],
-    "tips":[ // hide the ? info button if these are all empty
+    "tips":[
       {"relevance":""},
       {"meaning":"Security measures and settings vary in extent and location between operating systems. Specifying those that are relevant and in use at your organisation makes it simpler to provide appropriate instructions and questions in the process."},
       {"implementation":""},
@@ -353,10 +410,10 @@ var section0 = [
   },
   {
     "isQuestion": true,
-    "id":"q6",
+    "id":"q7",
     "q":"How does your organisation manage staff work devices?",
     "required":true,
-    "policyContent":"[orgName] manages device security in the following way, depending on the situation.",
+    "policyContent":"[orgName] manages device security in the following way, depending on the situation:",
     "appendixContent":"",
     "answers":[
       {
@@ -364,7 +421,7 @@ var section0 = [
         "answerText":"We install work profiles on staff-owned devices (Bring Your Own Device policy)",
         "storeAs": "",
         "excludes":[],
-        "policyEntry":"Profiles on your devices: With your consent, we will install a work profile on your personal devices in order for you to use them in the course of your work. This work profile will keep your work and personal use of the device separated.",
+        "policyEntry":"- Profiles on your devices: With your consent, we will install a work profile on your personal devices in order for you to use them in the course of your work. This work profile will keep your work and personal use of the device separated.",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -377,7 +434,7 @@ var section0 = [
         "answerText":"We install work and personal profiles on organisation-owned devices.",
         "storeAs": "",
         "excludes":[],
-        "policyEntry":"Profiles on [orgName] devices: [orgName] staff are given some freedom to decide their work environment and equipment, and we acknowledge that there may be times when after hours access to work email and data is needed. We will provide you with devices and install both a work and personal profile for you to use.",
+        "policyEntry":"- Profiles on [orgName] devices: [orgName] staff are given some freedom to decide their work environment and equipment, and we acknowledge that there may be times when after hours access to work email and data is needed. We will provide you with devices and install both a work and personal profile for you to use.",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -390,7 +447,7 @@ var section0 = [
         "answerText":"We provide work-only devices.",
         "storeAs": "",
         "excludes":[],
-        "policyEntry":"[orgName] devices for work-only use: We will provide you with devices, such as a computer, to use solely for work purposes.",
+        "policyEntry":"- [orgName] devices for work-only use: We will provide you with devices, such as a computer, to use solely for work purposes.",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -403,7 +460,7 @@ var section0 = [
         "answerText":"Staff use their own devices without separate profiles",
         "storeAs": "",
         "excludes":[7],
-        "policyEntry":"Your device, your choice: You may use your own devices as work equipment, we do not require the use of a work profile but please strive to maintain a separation between your work and personal data.",
+        "policyEntry":"- Your device, your choice: You may use your own devices as work equipment, we do not require the use of a work profile but please strive to maintain a separation between your work and personal data.",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -411,7 +468,6 @@ var section0 = [
           }
         ]
       }
-
     ],
     "tips":[
       {"relevance":""},
@@ -422,10 +478,10 @@ var section0 = [
   },
   {
     "isQuestion": true,
-    "id":"q7",
+    "id":"q8",
     "q":"Does your organisation provide staff with webcam covers or privacy screens for their devices?",
     "required":false,
-    "policyContent":"Protecting the devices we use is crucial in preventing unauthorised access to sensitive [orgName] data. To mitigate this, [orgName] will provide you with [providePrivacy] to use on your devices.",
+    "policyContent":"In addition to other device security measures, [orgName] will also provide you with [providePrivacy] to use on your devices.",
     "appendixContent":"",
     "answers":[
       {
@@ -460,48 +516,6 @@ var section0 = [
       {"meaning":"Webcam covers are easy to buy online and you can sometimes find branded ones being given away free at conferences. They’re a small, simple plastic device with a cover that slides back and forth to expose or hide the camera. When the camera is hidden, any remote camera view will see only darkness. Note that this only mitigates camera access, and not microphone access. Privacy screens are tinted in such a way that someone looking at the screen from the side, rather than directly in front, will see only a black screen."},
       {"implementation":"Covers are easy to stick over the camera and usually stick pretty well. It will take time for staff to keep the cover closed by default and only opening it when needed. Privacy screens are usually stuck over the device screen, however some laptop versions can be slid on/off easily when needed."},
       {"more":["webcam covers", "computer mobile privacy screens"]}
-    ]
-  },
-  {
-    "isQuestion": true,
-    "id":"q8",
-    "q":"Do all your staff work in the same physical office?",
-    "required":true,
-    "policyContent":"",
-    "appendixContent":"",
-    "answers":[
-      {
-        "type":"radio",
-        "answerText":"Yes",
-        "storeAs": "",
-        "excludes":[],
-        "policyEntry":"",
-        "appendixEntry":[
-          {
-            "reviewList":"",
-            "tipList": ""
-          }
-        ],
-      },
-      {
-        "type":"radio",
-        "answerText":"No - some or all of our staff work remotely.",
-        "storeAs": "",
-        "excludes":[], // exc. environmental Qs when added
-        "policyEntry":"",
-        "appendixEntry":[
-          {
-            "reviewList":"",
-            "tipList": ""
-          }
-        ]
-      },
-    ],
-    "tips":[
-      {"relevance":""},
-      {"meaning":"For the majority of their time, remote staff work outside of a traditional office, such as from home or a cafe. The risks in different working environments vary and there are factors to be considered which apply to remote staff but not so much those who work in a regular office – and vice versa."},
-      {"implementation":"Your organisation is remote if it has any members of staff working from outside [orgName]-controlled premises, and taking this remote-first perspective helps with supporting those staff as part of the team."},
-      {"more":["managing remote staff"]}
     ]
   }
 ]
