@@ -11,7 +11,7 @@ templates.intro = function(data){
             <a class="btn btn-seco" href="#features">Find out more</a>
           </div>
         </div>
-        <img id="img-intro" src="assets/images/pic-build-q2.png" />
+        <div id="home-pic"><img id="img-intro" src="assets/images/pic-build.jpg" /></div>
       </div>
     </div>
     `;

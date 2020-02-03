@@ -691,10 +691,10 @@ span.q0-only {
 #bgContainer .nav-scroll img {
   filter:drop-shadow(0px 0px 3px currentColor);
 }
-#bgContainer .trio img {
+/* #bgContainer .trio img {
   margin:1em;
   width:100%;
-}
+} */
 .border-white-round {
   border: 2px solid #fff;
   padding: 1em 2em;
@@ -751,5 +751,26 @@ span.q0-only {
 }
 #howTrio {
   display: flex;
+}
+#home-pic {
+  flex: 1 1 60%;
+  margin: 1em;
+}
+#howTrio .trioPics img {
+  max-width: 100%;
+}
+#img-intro {
+  width:100%;
+  margin:0;
+}
 
+
+.nav-start .btn.btn-seco {
+  color: #fff;
+  background-color: #066493;
+}
+
+.nav-start .btn.btn-seco:hover, .nav-start .btn.btn-tert:hover {
+  color: #066392;
+  background-color: #fff;
 }

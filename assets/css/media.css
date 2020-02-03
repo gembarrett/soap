@@ -321,16 +321,15 @@
     max-width: initial;
   }
   #img-intro {
-    width: initial;
-    margin-right: 1.5em;
-    flex: 1 2 auto;
+    width: 100%;
+    margin: 0;
   }
   #intro .text-buttons-wrap {
-    flex: 1 2 auto;
-    margin-top: 1em;
+    flex: 1 2 40%;
   }
   #intro .text-img-wrap {
     margin-bottom: 1.5em;
+    align-items: flex-start;;
   }
   #maintenanceGroup {
     flex-wrap: wrap;
@@ -342,11 +341,6 @@
   }
   #howTrio {
     flex-direction: row;
-    justify-content: space-between;
-  }
-  #bgContainer #howTrio img {
-    flex: 0 0 20%;
-    margin: 0;
   }
   .nav-start.trio {
     flex-direction: column;
@@ -363,6 +357,10 @@
   #q0 section {
     flex:1 0 40%;
   }
+  .trioPics {
+    float: 1 1 30%;
+    margin: 1em;
+  }
 }
 
 @media (max-width:1399px) {
@@ -372,9 +370,9 @@
   .mobileVis{
     display: block;
   }
-  #bgContainer .trio img {
+  /* #bgContainer .trio img {
     height: unset;
-  }
+  } */
 }
 
 @media (min-width:1400px){

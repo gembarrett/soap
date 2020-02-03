@@ -13,7 +13,7 @@ templates.bgTemplate = function(data, params){
   whoGroup = formatArray(text.who[0].desc, whoGroup);
   whoGroup += '</div>';
 
-  var howGroup = `<div id="howTrio"><img src="assets/images/pic-how-1.jpg" /><img src="assets/images/pic-how-2.jpg" /><img src="assets/images/pic-how-3.jpg" /></div><h1>`+text.how[0].head+`</h1>`;
+  var howGroup = `<div id="howTrio"><div class="trioPics"><img src="assets/images/pic-how-1.jpg" /></div><div class="trioPics"><img src="assets/images/pic-how-2.jpg" /></div><div class="trioPics"><img src="assets/images/pic-how-3.jpg" /></div></div><h1>`+text.how[0].head+`</h1>`;
   howGroup = formatArray(text.how[0].desc, howGroup);
 
   var securityGroup = `<img class="desktopVis" src="assets/images/pic-security-h.jpg" /><img class="mobileVis" src="assets/images/pic-security-v.jpg" /><div class="text-img-wrap"><h1>`+text.security[0].head+`</h1>`;
