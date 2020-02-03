@@ -1,3 +1,45 @@
+document.querySelectorAll('[contenteditable=true]').forEach(function (el) {
+  console.log(el);
+  el.addEventListener('keydown', function(event){
+    if (event.keyCode === 8) {
+      var node = event.srcElement || event.target;
+      if ( !isActiveFormItem(node) ) {
+          event.preventDefault();
+      }
+    }
+  });
+});
+
+function isActiveFormItem(node) {
+    var tagName = node.tagName.toUpperCase();
+    var isInput = ( tagName === "INPUT" && node.type.toUpperCase() in validInputTypes);
+    var isTextarea = ( tagName === "TEXTAREA" );
+    var container = node.ownerDocument.contains ? node.ownerDocument : node.ownerDocument.body;
+    if ( isInput || isTextarea ) {
+        var isDisabled = node.readOnly || node.disabled;
+        return !isDisabled && container.contains(node);  // the element may have been disconnected from the dom between the event happening and the end of the event chain, which is another case that triggers history changes
+    }
+    else if ( isInActiveContentEditable(node) ) {
+        return container.contains(node);
+    }
+    else {
+        return false
+    }
+}
+
+function isInActiveContentEditable(node) {
+    while (node) {
+        if ( node.getAttribute &&
+             node.getAttribute("contenteditable") &&
+             node.getAttribute("contenteditable").toUpperCase() === "TRUE" ) {
+            return true;
+        }
+        node = node.parentNode;
+    }
+    return false;
+}
+
+
 function getAnswers(el, qId, tempA, tempD) {
   // search el for inputs or textboxes.
   var inputs = el.getElementsByTagName('input');
