@@ -22,7 +22,8 @@ var section4 = [
         "appendixEntry":[
           {
             "reviewList":"Are the travel devices up-to-date with the latest security features? If not, they should be updated or upgraded.",
-            "tipList": "When providing a travel phone to staff, consider the SIM card management: will it be provided for use around the world, or should they purchase locally?"
+            "tipList": "When providing a travel phone to staff, consider the SIM card management: will it be provided for use around the world, or should they purchase locally?",
+            "linksList": ""
           }
         ]
       },
@@ -35,7 +36,8 @@ var section4 = [
         "appendixEntry":[
           {
             "reviewList":"Roughly how many staff are using separate travel devices vs those who use their 'cleaned' everyday devices?",
-            "tipList": "It’s expensive to purchase a second device so consider sharing or reimbursing the cost of these for staff who need it."
+            "tipList": "It’s expensive to purchase a second device so consider sharing or reimbursing the cost of these for staff who need it.",
+            "linksList": ""
           }
         ]
       },
@@ -48,7 +50,8 @@ var section4 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": "Consider providing a training session for staff to ensure everyone is clear on how to prepare their regular devices for travel."
+            "tipList": "Consider providing a training session for staff to ensure everyone is clear on how to prepare their regular devices for travel.",
+            "linksList": ""
           }
         ]
       },
@@ -61,7 +64,8 @@ var section4 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": ""
+            "tipList": "",
+            "linksList": ""
           }
         ]
       }
@@ -105,7 +109,8 @@ var section4 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": "If there's a large amount of staff who wear smart watches at [orgName] then it could be suggested to them to look into what Emergency SOS calling features they may have access to through the watch."
+            "tipList": "If there's a large amount of staff who wear smart watches at [orgName] then it could be suggested to them to look into what Emergency SOS calling features they may have access to through the watch.",
+            "linksList": ""
           }
         ]
       },
@@ -118,7 +123,8 @@ var section4 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": "Remember to check that your devices are backed up before removing data as part of your travel preparations."
+            "tipList": "Remember to check that your devices are backed up before removing data as part of your travel preparations.",
+            "linksList": ""
           }
         ]
       },
@@ -131,7 +137,8 @@ var section4 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": ""
+            "tipList": "",
+            "linksList": ""
           }
         ]
       },
@@ -144,7 +151,8 @@ var section4 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": "Don't forget to wipe browser history in addition to logging out and removing services from your devices."
+            "tipList": "Don't forget to wipe browser history in addition to logging out and removing services from your devices.",
+            "linksList": ""
           }
         ]
       },
@@ -157,7 +165,8 @@ var section4 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": "Switching off devices will also disable biometric authentication - but only for the first successful attempt to gain access."
+            "tipList": "Switching off devices will also disable biometric authentication - but only for the first successful attempt to gain access.",
+            "linksList": ""
           }
         ]
       },
@@ -170,7 +179,8 @@ var section4 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": ""
+            "tipList": "",
+            "linksList": ""
           }
         ]
       },
@@ -184,7 +194,8 @@ var section4 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": ""
+            "tipList": "",
+            "linksList": ""
           }
         ]
       },
@@ -213,7 +224,8 @@ var section4 = [
         "appendixEntry":[
           {
             "reviewList":"Is Mullvad still the right tool to recommend to staff?",
-            "tipList": "Mullvad website: https://mullvad.net"
+            "tipList": "",
+            "linksList": "Mullvad website: https://mullvad.net"
           }
         ]
       },
@@ -226,7 +238,8 @@ var section4 = [
         "appendixEntry":[
           {
             "reviewList":"Is Psiphon still the right tool to recommend to staff?",
-            "tipList": "Ensure staff download Psiphon directly from the Psiphon website: https://psiphon.ca/ in order to avoid fakes containing malicious code."
+            "tipList": "Ensure staff download Psiphon directly from their website (see Useful Links below) in order to avoid fakes containing malicious code.",
+            "linksList": "Psiphon website: https://psiphon.ca"
           }
         ]
       },
@@ -239,7 +252,8 @@ var section4 = [
         "appendixEntry":[
           {
             "reviewList":"Is NordVPN still the right tool to recommend to staff?",
-            "tipList": "NordVPN website: https://nordvpn.com/"
+            "tipList": "",
+            "linksList": "NordVPN website: https://nordvpn.com"
           }
         ]
       },
@@ -252,7 +266,8 @@ var section4 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": "As one of the most famous circumvention tools, Tor can stand out as a red flag in some countries and you will come across sites that block Tor users altogether, so choose a backup solution for when your circumvention needs to be a little more low-profile. Ensure staff download Tor directly from the Tor Project website at https://www.torproject.org/ in order to avoid fakes containing malicious code."
+            "tipList": "As one of the most famous circumvention tools, Tor can stand out as a red flag in some countries and you will come across sites that block Tor users altogether, so choose a backup solution for when your circumvention needs to be a little more low-profile or you're sure that there are other Tor users around that will make your usage blend in. Ensure staff download Tor directly from their website (see Useful Links below) in order to avoid fakes containing malicious code.",
+            "linksList": "Tor Project website: https://www.torproject.org"
           }
         ]
       },
@@ -265,7 +280,8 @@ var section4 = [
         "appendixEntry":[
           {
             "reviewList":"Is TunnelBear still the right tool to recommend to staff?",
-            "tipList": "TunnelBear website: https://www.tunnelbear.com/"
+            "tipList": "",
+            "linksList": "TunnelBear website: https://www.tunnelbear.com"
           }
         ]
       },
@@ -279,7 +295,8 @@ var section4 = [
         "appendixEntry":[
           {
             "reviewList":"Is [vpnChoice] still the best option for protecting the internet activity of staff members?",
-            "tipList": ""
+            "tipList": "",
+            "linksList": ""
           }
         ]
       }
@@ -308,7 +325,8 @@ var section4 = [
         "appendixEntry":[
           {
             "reviewList":"Is the free [vpnChoice] plan still sufficient or is there a better option now available?",
-            "tipList": "Using the free plan may result in some compromises on speed or be ad-supported so consider whether the benefits offset these."
+            "tipList": "Using the free plan may result in some compromises on speed or be ad-supported so consider whether the benefits offset these.",
+            "linksList": ""
           }
         ]
       },
@@ -321,7 +339,8 @@ var section4 = [
         "appendixEntry":[
           {
             "reviewList":"Is the paid subscription to [vpnChoice] still a good solution or is there a better option now available?",
-            "tipList": ""
+            "tipList": "",
+            "linksList": ""
           }
         ]
       },
@@ -335,7 +354,8 @@ var section4 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": ""
+            "tipList": "",
+            "linksList": ""
           }
         ]
       }
@@ -365,7 +385,8 @@ var section4 = [
         "appendixEntry":[
           {
             "reviewList":"Is [travelHelpName] still the most appropriate person to contact for travel assistance?",
-            "tipList": ""
+            "tipList": "",
+            "linksList": ""
           }
         ]
       },
@@ -379,7 +400,8 @@ var section4 = [
         "appendixEntry":[
           {
             "reviewList":"Does [travelHelpName] still use [travelHelpProns] pronouns?",
-            "tipList": ""
+            "tipList": "",
+            "linksList": ""
           }
         ]
       },
@@ -393,7 +415,8 @@ var section4 = [
         "appendixEntry":[
           {
             "reviewList":"Is [travelHelpName]'s email address up-to-date?",
-            "tipList": ""
+            "tipList": "",
+            "linksList": ""
           }
         ]
       },
@@ -407,7 +430,8 @@ var section4 = [
         "appendixEntry":[
           {
             "reviewList":"Is [travelHelpName]'s phone number correct?",
-            "tipList": ""
+            "tipList": "",
+            "linksList": ""
           }
         ]
       }
@@ -437,7 +461,8 @@ var section4 = [
         "appendixEntry":[
           {
             "reviewList":"Is your travel plan template up-to-date?",
-            "tipList": "Check ins with a travel buddy can be as simple as using an agreed-upon set of emoji icons as a code to indicate wellness, vulnerability and emergency."
+            "tipList": "Check ins with a travel buddy can be as simple as using an agreed-upon set of emoji icons as a code to indicate wellness, vulnerability and emergency.",
+            "linksList": ""
           }
         ]
       }

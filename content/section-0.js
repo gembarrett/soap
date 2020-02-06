@@ -23,7 +23,8 @@ var section0 = [
         "appendixEntry": [
           {
             "reviewList":"",
-            "tipList": ""
+            "tipList": "",
+            "linksList": ""
           }
         ]
       }
@@ -52,7 +53,8 @@ var section0 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": ""
+            "tipList": "",
+            "linksList": ""
           }
         ]
       },
@@ -65,7 +67,8 @@ var section0 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": ""
+            "tipList": "",
+            "linksList": ""
           }
         ]
       },
@@ -78,7 +81,8 @@ var section0 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": ""
+            "tipList": "",
+            "linksList": ""
           }
         ]
       },
@@ -92,7 +96,8 @@ var section0 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": ""
+            "tipList": "",
+            "linksList": ""
           }
         ]
       }
@@ -121,7 +126,8 @@ var section0 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": ""
+            "tipList": "",
+            "linksList": ""
           }
         ],
       },
@@ -134,7 +140,8 @@ var section0 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": ""
+            "tipList": "",
+            "linksList": ""
           }
         ]
       },
@@ -164,7 +171,8 @@ var section0 = [
         "appendixEntry":[
           {
             "reviewList":"Is [contactName] still responsible for this policy?",
-            "tipList": ""
+            "tipList": "",
+            "linksList": ""
           }
         ]
       },
@@ -178,7 +186,8 @@ var section0 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": ""
+            "tipList": "",
+            "linksList": ""
           }
         ]
       },
@@ -192,7 +201,8 @@ var section0 = [
         "appendixEntry":[
           {
             "reviewList":"Does [contactName] still use [contactProns] pronouns?",
-            "tipList": ""
+            "tipList": "",
+            "linksList": ""
           }
         ]
       },
@@ -206,7 +216,8 @@ var section0 = [
         "appendixEntry":[
           {
             "reviewList":"Is [contactName]'s email address up-to-date?",
-            "tipList": ""
+            "tipList": "",
+            "linksList": ""
           }
         ]
       },
@@ -220,7 +231,8 @@ var section0 = [
         "appendixEntry":[
           {
             "reviewList":"Is [contactName]'s phone number correct?",
-            "tipList": ""
+            "tipList": "",
+            "linksList": ""
           }
         ]
       }
@@ -249,7 +261,8 @@ var section0 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": "Mark your calendar for review dates on [date+12], [date+24], [date+36]"
+            "tipList": "Mark your calendar for review dates on [date+12], [date+24], [date+36]",
+            "linksList": ""
           }
         ]
       },
@@ -262,7 +275,8 @@ var section0 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": "Mark your calendar for review dates on [date+6], [date+12], [date+18]"
+            "tipList": "Mark your calendar for review dates on [date+6], [date+12], [date+18]",
+            "linksList": ""
           }
         ],
       },
@@ -275,7 +289,8 @@ var section0 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": "Mark your calendar for review dates on [date+3], [date+6], [date+9]"
+            "tipList": "Mark your calendar for review dates on [date+3], [date+6], [date+9]",
+            "linksList": ""
           }
         ],
       },
@@ -288,7 +303,8 @@ var section0 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": ""
+            "tipList": "",
+            "linksList": ""
           }
         ]
       },
@@ -317,7 +333,8 @@ var section0 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": "Privacy tips for Windows 10: https://spreadprivacy.com/windows-10-privacy-tips/"
+            "tipList": "",
+            "linksList": "Privacy tips for Windows 10: https://spreadprivacy.com/windows-10-privacy-tips"
           }
         ]
       },
@@ -330,7 +347,8 @@ var section0 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": "Privacy tips for macOS and OS X: https://spreadprivacy.com/mac-privacy-tips/"
+            "tipList": "",
+            "linksList": "Privacy tips for macOS and OS X: https://spreadprivacy.com/mac-privacy-tips"
           }
         ]
       },
@@ -343,7 +361,8 @@ var section0 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": "Privacy tips for Linux: https://spreadprivacy.com/linux-privacy-tips/"
+            "tipList": "",
+            "linksList": "Privacy tips for Linux: https://spreadprivacy.com/linux-privacy-tips"
           }
         ]
       },
@@ -356,7 +375,8 @@ var section0 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": "This article explains privacy settings on Chrome OS: https://www.makeuseof.com/tag/privacy-settings-chrome-os-google-chrome/"
+            "tipList": "",
+            "linksList": "This article explains privacy settings on Chrome OS: https://www.makeuseof.com/tag/privacy-settings-chrome-os-google-chrome"
           }
         ]
       },
@@ -369,7 +389,8 @@ var section0 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": "Privacy tips for Android: https://spreadprivacy.com/android-privacy-tips/"
+            "tipList": "",
+            "linksList": "Privacy tips for Android: https://spreadprivacy.com/android-privacy-tips"
           }
         ]
       },
@@ -382,7 +403,8 @@ var section0 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": "Privacy tips for iOS: https://spreadprivacy.com/iphone-privacy-tips/"
+            "tipList": "",
+            "linksList": "Privacy tips for iOS: https://spreadprivacy.com/iphone-privacy-tips"
           }
         ]
       },
@@ -396,7 +418,8 @@ var section0 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": ""
+            "tipList": "",
+            "linksList": ""
           }
         ]
       }
@@ -425,7 +448,8 @@ var section0 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": ""
+            "tipList": "",
+            "linksList": ""
           }
         ]
       },
@@ -438,7 +462,8 @@ var section0 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": ""
+            "tipList": "",
+            "linksList": ""
           }
         ]
       },
@@ -451,7 +476,8 @@ var section0 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": ""
+            "tipList": "",
+            "linksList": ""
           }
         ]
       },
@@ -464,7 +490,8 @@ var section0 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": ""
+            "tipList": "",
+            "linksList": ""
           }
         ]
       }
@@ -493,7 +520,8 @@ var section0 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": "A quick temporary alternative to webcam covers can be made from a post-it note or sticky-taped paper over the camera."
+            "tipList": "A quick temporary alternative to webcam covers can be made from a post-it note or sticky-taped paper over the camera.",
+            "linksList": ""
           }
         ]
       },
@@ -506,7 +534,8 @@ var section0 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": "In addition to shoulder surfers, privacy screens can also help to protect against dust, scratches and sunlight glare."
+            "tipList": "In addition to shoulder surfers, privacy screens can also help to protect against dust, scratches and sunlight glare.",
+            "linksList": ""
           }
         ]
       }

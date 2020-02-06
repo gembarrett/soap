@@ -22,7 +22,8 @@ var section2 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": ""
+            "tipList": "",
+            "linksList": ""
           }
         ]
       },
@@ -35,7 +36,8 @@ var section2 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": ""
+            "tipList": "",
+            "linksList": "1Password website: https://1password.com"
           }
         ]
       },
@@ -48,7 +50,8 @@ var section2 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": ""
+            "tipList": "",
+            "linksList": "KeePass website: https://keepass.info"
           }
         ]
       },
@@ -61,7 +64,8 @@ var section2 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": ""
+            "tipList": "",
+            "linksList": "PasswordSafe website: https://www.pwsafe.org"
           }
         ]
       },
@@ -74,7 +78,8 @@ var section2 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": ""
+            "tipList": "",
+            "linksList": ""
           }
         ]
       },
@@ -88,7 +93,8 @@ var section2 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": ""
+            "tipList": "",
+            "linksList": ""
           }
         ]
       }
@@ -117,7 +123,8 @@ var section2 = [
         "appendixEntry":[
           {
             "reviewList":"Are staff still allowed to store passwords in their browser?",
-            "tipList": ""
+            "tipList": "",
+            "linksList": ""
           }
         ]
       },
@@ -130,7 +137,8 @@ var section2 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": "It’s annoying to keep dismissing the “save your password?” prompt but this can be disabled in the browser settings."
+            "tipList": "It’s annoying to keep dismissing the “save your password?” prompt but this can be disabled in the browser settings.",
+            "linksList": ""
           }
         ]
       },
@@ -144,7 +152,8 @@ var section2 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": ""
+            "tipList": "",
+            "linksList": ""
           }
         ]
       }
@@ -173,7 +182,8 @@ var section2 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": ""
+            "tipList": "",
+            "linksList": ""
           }
         ]
       },
@@ -186,7 +196,8 @@ var section2 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": ""
+            "tipList": "",
+            "linksList": ""
           }
         ]
       },
@@ -199,7 +210,8 @@ var section2 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": ""
+            "tipList": "",
+            "linksList": ""
           }
         ]
       }
@@ -228,7 +240,8 @@ var section2 = [
         "appendixEntry":[
           {
             "reviewList":"Is Google Authenticator well integrated with staff workflows?",
-            "tipList": ""
+            "tipList": "",
+            "linksList": ""
           }
         ]
       },
@@ -241,7 +254,8 @@ var section2 = [
         "appendixEntry":[
           {
             "reviewList":"Is Duo Mobile well integrated with staff workflows?",
-            "tipList": "Duo Mobile website: https://duo.com/product/multi-factor-authentication-mfa/duo-mobile-app"
+            "tipList": "",
+            "linksList": "Duo Mobile website: https://duo.com/product/multi-factor-authentication-mfa/duo-mobile-app"
           }
         ]
       },
@@ -254,7 +268,8 @@ var section2 = [
         "appendixEntry":[
           {
             "reviewList":"Is Authy well integrated with staff workflows?",
-            "tipList": "Authy website: https://authy.com/"
+            "tipList": "",
+            "linksList": "Authy website: https://authy.com"
           }
         ]
       },
@@ -267,7 +282,8 @@ var section2 = [
         "appendixEntry":[
           {
             "reviewList":"Are staff consistently using an authenticator app?",
-            "tipList": ""
+            "tipList": "",
+            "linksList": ""
           }
         ]
       },
@@ -281,7 +297,8 @@ var section2 = [
         "appendixEntry":[
           {
             "reviewList":"Is [authApp] well integrated with staff workflows?",
-            "tipList": ""
+            "tipList": "",
+            "linksList": ""
           }
         ]
       }
@@ -310,7 +327,8 @@ var section2 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": ""
+            "tipList": "",
+            "linksList": ""
           }
         ]
       },
@@ -323,7 +341,8 @@ var section2 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": ""
+            "tipList": "",
+            "linksList": ""
           }
         ]
       }
@@ -353,7 +372,8 @@ var section2 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": ""
+            "tipList": "",
+            "linksList": ""
           }
         ]
       }

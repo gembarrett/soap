@@ -22,7 +22,8 @@ var section3 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": ""
+            "tipList": "",
+            "linksList": ""
           }
         ]
       },
@@ -35,7 +36,8 @@ var section3 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": "Be aware that facial recognition authentication is vulnerable to unauthorised access as most systems won't flag a sleeping face, an unwilling face, or a twin."
+            "tipList": "Be aware that facial recognition authentication is vulnerable to unauthorised access as most systems won't flag a sleeping face, an unwilling face, or a twin.",
+            "linksList": ""
           }
         ]
       }
@@ -64,7 +66,8 @@ var section3 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": "Flock Agent for macOS & Linux system 'health checks': https://github.com/firstlookmedia/flock-agent"
+            "tipList": "",
+            "linksList": "Flock Agent for macOS & Linux system 'health checks': https://github.com/firstlookmedia/flock-agent"
           }
         ]
       },
@@ -77,7 +80,8 @@ var section3 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": "Stethoscope for Windows & macOS systems: https://ragtag.org/stethoscope"
+            "tipList": "",
+            "linksList": "Stethoscope for Windows & macOS systems: https://ragtag.org/stethoscope"
           }
         ]
       },
@@ -90,7 +94,8 @@ var section3 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": "Apple MDM documentation: https://developer.apple.com/documentation/devicemanagement"
+            "tipList": "",
+            "linksList": "Apple MDM documentation: https://developer.apple.com/documentation/devicemanagement"
           }
         ]
       },
@@ -103,7 +108,8 @@ var section3 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": "Google Endpoint Management: https://gsuite.google.com/products/admin/endpoint"
+            "tipList": "",
+            "linksList": "Google Endpoint Management: https://gsuite.google.com/products/admin/endpoint"
           }
         ]
       },
@@ -117,7 +123,8 @@ var section3 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": ""
+            "tipList": "",
+            "linksList": ""
           }
         ]
       }
@@ -146,7 +153,8 @@ var section3 = [
         "appendixEntry":[
           {
             "reviewList":"Is your physical storage still in good working order or is it time to upgrade?",
-            "tipList": "There are physical storage devices available which offer additional security measures, such as keypads – but be sure to keep them in a protective case to prevent accidental damage that could corrupt or wipe the data."
+            "tipList": "There are physical storage devices available which offer additional security measures, such as keypads – but be sure to keep them in a protective case to prevent accidental damage that could corrupt or wipe the data.",
+            "linksList": ""
           }
         ]
       },
@@ -159,7 +167,8 @@ var section3 = [
         "appendixEntry":[
           {
             "reviewList":"Does your cloud storage provider still provide the most appropriate package for your data or is it time to migrate?",
-            "tipList": "Advise staff on how to recognise a legitimate automatic backup so that suspicious network activity can be flagged quickly."
+            "tipList": "Advise staff on how to recognise a legitimate automatic backup so that suspicious network activity can be flagged quickly.",
+            "linksList": ""
           }
         ]
       }
@@ -188,7 +197,8 @@ var section3 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": ""
+            "tipList": "",
+            "linksList": ""
           }
         ]
       },
@@ -201,7 +211,8 @@ var section3 = [
         "appendixEntry":[
           {
             "reviewList":"Are daily backups still frequent enough or do you need backups throughout the day?",
-            "tipList": "It may be sensible to time automatic backups for after the majority of the day's work has been done."
+            "tipList": "It may be sensible to time automatic backups for after the majority of the day's work has been done.",
+            "linksList": ""
           }
         ]
       },
@@ -214,7 +225,8 @@ var section3 = [
         "appendixEntry":[
           {
             "reviewList":"Is your data changing more frequently? Could an increase in the backup frequency be appropriate?",
-            "tipList": "A week can be a long time, so give your staff a way to trigger infrequent manual backups of their work."
+            "tipList": "A week can be a long time, so give your staff a way to trigger infrequent manual backups of their work.",
+            "linksList": ""
           }
         ]
       },
@@ -228,7 +240,8 @@ var section3 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": ""
+            "tipList": "",
+            "linksList": ""
           }
         ]
       }
@@ -257,7 +270,8 @@ var section3 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": ""
+            "tipList": "",
+            "linksList": ""
           }
         ]
       },
@@ -270,7 +284,8 @@ var section3 = [
         "appendixEntry":[
           {
             "reviewList":"Have there been any recent instances of backup failure that can be learned from?",
-            "tipList": "If backups occur overnight, always check that they have finished without errors in the morning."
+            "tipList": "If backups occur overnight, always check that they have finished without errors in the morning.",
+            "linksList": ""
           }
         ]
       },
@@ -283,7 +298,8 @@ var section3 = [
         "appendixEntry":[
           {
             "reviewList":"Do those with access to backups still require it?",
-            "tipList": "Carefully consider who should be granted access to [orgName]'s cloud storage. Too many people and it becomes tougher to manage. Too few and you may struggle to gain access for emergency data restoration."
+            "tipList": "Carefully consider who should be granted access to [orgName]'s cloud storage. Too many people and it becomes tougher to manage. Too few and you may struggle to gain access for emergency data restoration.",
+            "linksList": ""
           }
         ]
       },
@@ -296,7 +312,8 @@ var section3 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": "When setting a file destruction delay on backups, leave a reasonable amount of time for the scheduled deletion to be detected and cancelled."
+            "tipList": "When setting a file destruction delay on backups, leave a reasonable amount of time for the scheduled deletion to be detected and cancelled.",
+            "linksList": ""
           }
         ]
       },
@@ -310,7 +327,8 @@ var section3 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": ""
+            "tipList": "",
+            "linksList": ""
           }
         ]
       }
@@ -340,7 +358,8 @@ var section3 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": ""
+            "tipList": "",
+            "linksList": ""
           }
         ]
       }

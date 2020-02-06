@@ -22,7 +22,8 @@ var section1 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": ""
+            "tipList": "",
+            "linksList": ""
           }
         ]
       },
@@ -35,7 +36,8 @@ var section1 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": ""
+            "tipList": "",
+            "linksList": ""
           }
         ]
       },
@@ -48,7 +50,8 @@ var section1 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": ""
+            "tipList": "",
+            "linksList": ""
           }
         ]
       }
@@ -77,7 +80,8 @@ var section1 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": "Privacy Badger website: https://www.eff.org/privacybadger"
+            "tipList": "",
+            "linksList": "Privacy Badger website: https://www.eff.org/privacybadger"
           }
         ]
       },
@@ -90,7 +94,8 @@ var section1 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": "GitHub for Privacy Possum: https://github.com/cowlicks/privacypossum"
+            "tipList": "",
+            "linksList": "GitHub for Privacy Possum: https://github.com/cowlicks/privacypossum"
           }
         ]
       },
@@ -103,7 +108,8 @@ var section1 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": "GitHub for uBlock: https://github.com/gorhill/uBlock"
+            "tipList": "",
+            "linksList": "GitHub for uBlock: https://github.com/gorhill/uBlock"
           }
         ]
       },
@@ -116,7 +122,8 @@ var section1 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": "Better website: https://better.fyi/"
+            "tipList": "",
+            "linksList": "Better website: https://better.fyi"
           }
         ]
       },
@@ -129,7 +136,8 @@ var section1 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": "HTTPSEverywhere website: https://www.eff.org/https-everywhere"
+            "tipList": "",
+            "linksList": "HTTPSEverywhere website: https://www.eff.org/https-everywhere"
           }
         ]
       },
@@ -142,7 +150,8 @@ var section1 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": "DuckDuckGo Privacy Essentials description: https://spreadprivacy.com/privacy-simplified/"
+            "tipList": "",
+            "linksList": "DuckDuckGo Privacy Essentials description: https://spreadprivacy.com/privacy-simplified"
           }
         ]
       },
@@ -155,7 +164,8 @@ var section1 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": "Password Alert FAQ: https://support.google.com/a/answer/6197508"
+            "tipList": "",
+            "linksList": "Password Alert FAQ: https://support.google.com/a/answer/6197508"
           }
         ]
       },
@@ -169,7 +179,8 @@ var section1 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": ""
+            "tipList": "",
+            "linksList": ""
           }
         ]
       }
@@ -199,7 +210,8 @@ var section1 = [
         "appendixEntry":[
           {
             "reviewList":"Is [commsDirect] still the most appropriate method for your direct communications?",
-            "tipList": ""
+            "tipList": "",
+            "linksList": ""
           }
         ]
       },
@@ -213,7 +225,8 @@ var section1 = [
         "appendixEntry":[
           {
             "reviewList":"Should you continue recommending [commsGroup] for group communications?",
-            "tipList": ""
+            "tipList": "",
+            "linksList": ""
           }
         ]
       },
@@ -227,7 +240,8 @@ var section1 = [
         "appendixEntry":[
           {
             "reviewList":"How well has [commsInt] been working as an internal video calls platform?",
-            "tipList": ""
+            "tipList": "",
+            "linksList": ""
           }
         ]
       },
@@ -241,7 +255,8 @@ var section1 = [
         "appendixEntry":[
           {
             "reviewList":"Is [commsExt] still a good option for external video and audio calls?",
-            "tipList": ""
+            "tipList": "",
+            "linksList": ""
           }
         ]
       }
@@ -271,7 +286,8 @@ var section1 = [
         "appendixEntry":[
           {
             "reviewList":"Are all of the incident response plans up-to-date?",
-            "tipList": ""
+            "tipList": "",
+            "linksList": ""
           }
         ]
       }

@@ -22,7 +22,8 @@ function compileDoc(p,a){
   var appContent = {
     general: [],
     review: [],
-    tips: []
+    tips: [],
+    links: []
   };
 
   // set up prevQ currentState.answers[0].q
@@ -163,21 +164,25 @@ function compileDoc(p,a){
     doc.markdown += '\n\n## Appendix <br>';
     doc.html += '<h2>Appendix</h2>';
     if (appContent.general.length > 0){
-      doc.plain += '\n\nGeneral Advice\n' + appContent.general.join('\n- ');
+      doc.plain += '\n\nGeneral Advice\n- ' + appContent.general.join('\n- ');
       doc.markdown += '\n\n### General Advice \n\n* ' + appContent.general.join('\n* ');
       doc.html += '<h3>General Advice</h3><ul><li>' + appContent.general.join('</li><li>')+'</li></ul>';
     }
     if (appContent.review.length > 0){
-      doc.plain += '\n\nReview Checklist\n' + appContent.review.join('\n- ');
+      doc.plain += '\n\nReview Checklist\n- ' + appContent.review.join('\n- ');
       doc.markdown += '\n\n### Review Checklist \n\n- [ ] ' + appContent.review.join('\n- [ ] ');
       doc.html += '<h3>Review Checklist</h3><ol><li>' + appContent.review.join('</li><li>')+'</li></ol>';
     }
     if (appContent.tips.length > 0){
-      doc.plain += '\n\nImplementation Tips\n' + appContent.tips.join('\n- ');
+      doc.plain += '\n\nImplementation Tips\n- ' + appContent.tips.join('\n- ');
       doc.markdown += '\n\n### Implementation Tips \n\n* ' + appContent.tips.join('\n* ');
       doc.html += '<h3>Implementation Tips</h3><ul><li>' + appContent.tips.join('</li><li>')+'</li></ul>';
     }
-
+    if (appContent.links.length > 0){
+      doc.plain += '\n\nUseful Links \n- ' + appContent.links.join('\n- ');
+      doc.markdown += '\n\n### Useful Links \n\n* ' + appContent.links.join('\n* ');
+      doc.html += '<h3>Useful Links</h3><ul><li>' + appContent.links.join('</li><li>')+'</li></ul>';
+    }
   }
   doc.plain += '\n\nPlease note: it is recommended that this policy undergoes a legal review prior to being implemented in your organisation.';
   doc.markdown += '\n\n#### *Please note: it is recommended that this policy undergoes a legal review prior to being implemented in your organisation.*';
@@ -319,6 +324,10 @@ function getAppendixContent(question, previous, answer, appDoc, content){
   if (appEntry.tipList.length > 0){
     thisContent = replaceStr(appEntry.tipList);
     appDoc.tips.push(thisContent);
+  }
+  if (appEntry.linksList.length > 0){
+    thisContent = replaceStr(appEntry.linksList);
+    appDoc.links.push(thisContent);
   }
   return appDoc;
 }
