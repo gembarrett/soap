@@ -562,9 +562,9 @@ small {
 }
 .incidentBox {
   text-align: left;
-  min-width: 400px;
-  min-height: 100px;
   padding:2em;
+  width: 95%;
+  min-height: 160px;
 }
 
 .answers-container {
@@ -764,7 +764,6 @@ span.q0-only {
   margin:0;
 }
 
-
 .nav-start .btn.btn-seco {
   color: #fff;
   background-color: #066493;
@@ -773,4 +772,11 @@ span.q0-only {
 .nav-start .btn.btn-seco:hover, .nav-start .btn.btn-tert:hover {
   color: #066392;
   background-color: #fff;
+}
+
+textarea {
+  border-style: dotted;
+}
+textarea[placeholder] {
+  font-size: 1em;
 }
