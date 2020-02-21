@@ -635,7 +635,7 @@ form > div > div > input[type='checkbox'] + label {
   border-radius: 0.5em;
 }
 
-form > div > div > input:checked + label, .form-el label:hover {
+form > div > div > input:checked + label, .form-el input + label:hover {
   background-color: #96CAEE;
   color:#066493;
   border-color: currentColor;
