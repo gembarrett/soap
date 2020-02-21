@@ -188,7 +188,7 @@
     padding-top:0.5em;
   }
   #dl-wrapper {
-    flex-direction: row;
+    flex-direction: column;
   }
   #policy {
     padding: 1.5em;
@@ -260,6 +260,15 @@
   #reset {
     margin:1em auto;
     display:block;
+  }
+  .btn-wrap.wrap-r {
+    justify-content: space-around;
+    margin: 1em 0;
+  }
+  .btn-wrap.wrap-r button {
+    flex-direction: ;
+    min-width: initial;
+    flex: 0 0 40%;
   }
 }
 
