@@ -63,6 +63,18 @@ body {
   flex: 1 0 auto;
   padding-top:8.5em;
 }
+.editMode {
+  border: 3em #8FC5EA solid;
+  border-top: 0;
+  border-bottom: 0;
+}
+
+#editBtn.editMode {
+  border-width: 0.5em;
+}
+#editBtn {
+  color: #066493;
+}
 
 #foot {
   flex-shrink: 0;

@@ -52,24 +52,24 @@ function addChangeListeners() {
   // notice.onclick = notice.remove();
 
   // add listener for edit button
-  // var editBtn = document.getElementById("editBtn");
-  // editBtn.addEventListener('click', editAnswers, false);
+  var editBtn = document.getElementById("editBtn");
+  editBtn.addEventListener('click', editAnswers, false);
 
   // TODO: get skip/next fully working
   // grab all the form inputs
-  // var elements = Array.from(document.querySelectorAll('.form-el > input'));
-  // var boxes = Array.from(document.querySelectorAll('.form-el > textarea'));
-  // console.log(boxes);
-  // elements = elements.concat(boxes);
-  // console.log(elements);
-  // for (var e = 0; e < elements.length; e++) {
-  //   // if it's a radio or checkbox
-  //   if ((elements[e].type === "radio") || (elements[e].type === "checkbox")){
-  //     elements[e].addEventListener('change', toggleSkip);
-  //   } else {
-  //     elements[e].oninput = toggleSkip;
-  //   }
-  // }
+  var elements = Array.from(document.querySelectorAll('.form-el > input'));
+  var boxes = Array.from(document.querySelectorAll('.form-el > textarea'));
+  console.log(boxes);
+  elements = elements.concat(boxes);
+  console.log(elements);
+  for (var e = 0; e < elements.length; e++) {
+    // if it's a radio or checkbox
+    if ((elements[e].type === "radio") || (elements[e].type === "checkbox")){
+      elements[e].addEventListener('change', toggleSkip);
+    } else {
+      elements[e].oninput = toggleSkip;
+    }
+  }
 }
 
 
@@ -170,12 +170,12 @@ function handleSubmit() {
 
       setUpPage(id);
 
-      // if (parseInt(id) > 0){
-      //   // show the edit button
-      //   document.getElementById('editBtn').classList.remove('disabled');
-      //   // mark the question as editable
-      //   match.classList.add("editable");
-      // }
+      if (parseInt(id) > 0){
+        // show the edit button
+        document.getElementById('editBtn').classList.remove('disabled');
+        // mark the question as editable
+        match.classList.add("editable");
+      }
 
       // this hides the current question,
       match.classList.remove("current");

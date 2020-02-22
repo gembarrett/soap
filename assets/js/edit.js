@@ -136,7 +136,6 @@ function pushToDict(storeAs, answerText) {
   }
 }
 
-
 // when clicked, go through array of questions marked as editable and add/remove showAllQs class
 var editAnswers = function(){
   var tempAnswers = [];
@@ -145,16 +144,20 @@ var editAnswers = function(){
   var editBtn = document.getElementById("editBtn");
   // get all the editable questions
   var questions = document.querySelectorAll(".editable");
+  // toggle the editing class on button and page
+  editBtn.classList.toggle('editMode');
+  page.classList.toggle('editMode');
+
+  // toggle edit button inner text
+  editBtn.innerText = editBtn.innerText == "EDIT" ? "DONE" : "EDIT";
+
   // for each of the editable questions
   for (var i=0; i<questions.length; i++){
     // if the question has the visible class
     if(questions[i].classList.contains("showAllQs")){
       // remove it
       questions[i].classList.remove("showAllQs");
-      // change the button text back to default
-      editBtn.innerText = 'EDIT';
-      // remove the active class from button
-      editBtn.classList.remove('editMode');
+
       // enable the next and preview buttons
       document.getElementById('previewPolicy').disabled = false;
       document.getElementById('submitAnswers').disabled = false;
