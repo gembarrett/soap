@@ -71,9 +71,14 @@ body {
 
 #editBtn.editMode {
   border-width: 0.5em;
+  color:#fff;
 }
 #editBtn {
   color: #066493;
+  cursor: pointer;
+}
+.nav-scroll #editBtn.editMode {
+  color:#fff;
 }
 
 #foot {
