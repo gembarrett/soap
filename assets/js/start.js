@@ -59,17 +59,16 @@ function addChangeListeners() {
   // grab all the form inputs
   var elements = Array.from(document.querySelectorAll('.form-el > input'));
   var boxes = Array.from(document.querySelectorAll('.form-el > textarea'));
-  console.log(boxes);
   elements = elements.concat(boxes);
-  console.log(elements);
-  for (var e = 0; e < elements.length; e++) {
-    // if it's a radio or checkbox
-    if ((elements[e].type === "radio") || (elements[e].type === "checkbox")){
-      elements[e].addEventListener('change', toggleSkip);
-    } else {
-      elements[e].oninput = toggleSkip;
-    }
-  }
+  // TODO: add these event listeners back in when required questions are reimplemented
+  // for (var e = 0; e < elements.length; e++) {
+  //   // if it's a radio or checkbox
+  //   if ((elements[e].type === "radio") || (elements[e].type === "checkbox")){
+  //     elements[e].addEventListener('change', toggleSkip);
+  //   } else {
+  //     elements[e].oninput = toggleSkip;
+  //   }
+  // }
 }
 
 
@@ -264,7 +263,6 @@ function getInput(el, qId) {
 
     // push the text value object to the currentState
     currentState.answers.push({
-      s: currentState.sectionC,
       q: qId,
       a: answerID,
       t: textareas[0].value,
@@ -294,7 +292,6 @@ function getInput(el, qId) {
 
       // push the text value object to the currentState
       currentState.answers.push({
-        s: currentState.sectionC,
         q: qId,
         a: answerID,
         t: inputs[i].value, // is this necessary if storeAs is working?
@@ -316,13 +313,13 @@ function getInput(el, qId) {
       }
       // push the question and answer object to the currentState
       currentState.answers.push({
-        s: currentState.sectionC,
         q: qId,
         a: answerID,
       });
 
     }
   }
+  console.log(currentState.answers);
   return currentState.answers;
 }
 

@@ -76,7 +76,7 @@ body {
   color: #066493;
   cursor: pointer;
 }
-.nav-scroll #editBtn.editMode {
+.nav-scroll #editBtn {
   color:#fff;
 }
 
