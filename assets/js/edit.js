@@ -41,6 +41,7 @@ function isInActiveContentEditable(node) {
 
 
 function getAnswers(el, qId, tempA, tempD) {
+  console.log('getting answers');
   // search el for inputs or textboxes.
   var inputs = el.getElementsByTagName('input');
   var textareas = el.getElementsByTagName('textarea');
@@ -150,32 +151,107 @@ var editAnswers = function(){
 
   // toggle edit button inner text
   editBtn.innerText = editBtn.innerText == "EDIT" ? "DONE" : "EDIT";
+  // if we're in edit mode
+  if (editBtn.classList.contains('editMode')) {
+    // create new storage for the answers
+    var edAnswers = [];
+    var edExclusions = [];
+    var edDict = {};
+  }
 
-  // for each of the editable questions
+  // hide or show each of the editable questions
   for (var i=0; i<questions.length; i++){
     // if the question has the visible class
     if(questions[i].classList.contains("showAllQs")){
-      // remove it
-      questions[i].classList.remove("showAllQs");
+      console.log('question is visible');
 
-      // enable the next and preview buttons
-      document.getElementById('previewPolicy').disabled = false;
-      document.getElementById('submitAnswers').disabled = false;
-      // now editing is done, it's time to grab all the answers in case they were updated
-      // using questions[i]
-      // var updatedAnswers = getAnswers(questions[i], questions[i].id, tempAnswers, tempDict);
-      // console.log(updatedAnswers);
-      // console.log(currentState.answers);
-      // getInput takes the question element, gets the inputs
-      // pass each element to getInput along with a temp answers array
-      // then replace the regular answers array with the temp one
+      // get the input fields of this question
+      var edInputs = questions[i].getElementsByTagName('input');
+      var edBoxes = questions[i].getElementsByTagName('textarea');
+
+      // if there are inputs collected
+      if (edInputs.length > 0) {
+        console.log(edInputs);
+
+        // grab the question number from the first input's ID
+        thisQ = edInputs[0].id.split("-")[0];
+        // for each of the inputs this question has
+        for (var j = 0; j > edInputs.length; j++){
+          // get the answer number from the input's ID
+          // use it to look up the answer in the json
+
+          // if the input is selected
+          if (edInputs[j].checked){
+
+            // check for exclusions
+            // add them to edExclusions
+
+            // check for storeAs
+            // push it to edDict
+
+            // then push thisQ and answer ID to edAnswers
+
+          } else if (edInputs[j].type === "text" && edInputs[j].value !== "") { // check for text in fields
+            // check for storeAs
+            // push it to edDict
+
+            // then push thisQ, answer ID and inputted value to edAnswers
+
+          }
+        }
+      }
+      // if there are textboxes collected
+      if (edBoxes.length > 0) {
+        console.log(edBoxes);
+        // grab the question number from the first input's ID
+        thisQ = edBoxes[0].id.split("-")[0];
+        // for each of the boxes this question has
+        for (var k = 0; k > edBoxes.length; k++){
+          // get the answer number from the input's ID
+          // use it to look up the answer in the json
+
+          // if the box contains text
+          if (edBoxes[k].value.length > 0){
+
+            // check for storeAs
+            // push it to edDict
+
+            // then push thisQ, answer ID and inputted value to edAnswers
+
+          }
+        }
+      }
+
+      // remove it and hide that question
+      questions[i].classList.remove("showAllQs");
     } else {
+      console.log('question is not visible');
+      // make the question visible
       questions[i].classList.add("showAllQs");
-      editBtn.innerText = 'DONE';
-      editBtn.classList.add('editMode');
-      // while editing, disable the next and preview buttons
-      document.getElementById('previewPolicy').disabled = true;
-      document.getElementById('submitAnswers').disabled = true;
     }
   }
+
+  // if the buttons are disabled, enable them, otherwise disable them
+  document.getElementById('previewPolicy').disabled === true ? document.getElementById('previewPolicy').disabled = false : document.getElementById('previewPolicy').disabled = true;
+  document.getElementById('submitAnswers').disabled === true ? document.getElementById('submitAnswers').disabled = false : document.getElementById('submitAnswers').disabled = true;
+
+  // now editing is done, it's time to grab all the answers in case they were updated
+
+
+
+
+  // using questions[i]
+  // var updatedAnswers = getAnswers(questions[i], questions[i].id, tempAnswers, tempDict);
+  // console.log(updatedAnswers);
+  // console.log(currentState.answers);
+  // getInput takes the question element, gets the inputs
+  // pass each element to getInput along with a temp answers array
+  // then replace the regular answers array with the temp one
+
+  // check for exclusions and update the list
+
+  // editBtn.innerText = 'DONE'; // not sure this is necessary
+  // editBtn.classList.add('editMode'); // or this tbh
+
+
 }
