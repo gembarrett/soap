@@ -138,6 +138,7 @@ function pushToDict(storeAs, answerText) {
 }
 
 // when clicked, go through array of questions marked as editable and add/remove showAllQs class
+// do these need to be in a variable?
 var editAnswers = function(){
   var tempAnswers = [];
   var tempDict = {};
@@ -152,12 +153,13 @@ var editAnswers = function(){
   // toggle edit button inner text
   editBtn.innerText = editBtn.innerText == "EDIT" ? "DONE" : "EDIT";
   // if we're in edit mode
-  if (editBtn.classList.contains('editMode')) {
+  // should this be before the toggle?
+  // if (editBtn.classList.contains('editMode')) {
     // create new storage for the answers
     var edAnswers = [];
     var edExclusions = [];
     var edDict = {};
-  }
+  // }
 
   // hide or show each of the editable questions
   for (var i=0; i<questions.length; i++){
@@ -171,31 +173,62 @@ var editAnswers = function(){
 
       // if there are inputs collected
       if (edInputs.length > 0) {
-        console.log(edInputs);
 
         // grab the question number from the first input's ID
-        thisQ = edInputs[0].id.split("-")[0];
+        currentQ = edInputs[0].id.split("-")[0];
+        console.log('currentQ is '+currentQ);
+
         // for each of the inputs this question has
-        for (var j = 0; j > edInputs.length; j++){
+        for (var j = 0; j < edInputs.length; j++){
+
           // get the answer number from the input's ID
-          // use it to look up the answer in the json
+          currentA = edInputs[j].id.split("-")[1];
+          console.log('currentA is '+currentA);
+
+          // use it to look up the question in the json
+          const qContent = currentState.sectionQ.find(question => question.id === edInputs[j].id.split("-")[0]);
+          // catch any errors
 
           // if the input is selected
           if (edInputs[j].checked){
 
-            // check for exclusions
-            // add them to edExclusions
+            // see if it excludes any (future?) questions
+            if (qContent.answers[currentA].excludes.length > 0) {
+              // add them to the list of excluded questions
+              edExclusions = edExclusions.concat(result.answers[currentA].excludes);
+            }
 
-            // check for storeAs
-            // push it to edDict
+            // check if the pre-written value or user inputted text should be stored
+            if (qContent.answers[currentA].storeAs !== ""){
+              // if it's an editable button then get the button's text, otherwise use the label text
+              textToStore = edInputs[j].nextSibling.contentEditable === "true" ? edInputs[j].nextSibling.innerText : qContent.answers[currentA].answerText;
 
-            // then push thisQ and answer ID to edAnswers
+              // if the storeAs key already exists in the dictionary because it's a continuation of a list
+              if (qContent.answers[currentA].storeAs in edDict) {
+                // copy its current value into a temp array with the new value
+                // if it's already an array, just push
+                if (Array.isArray(edDict[qContent.answers[currentA].storeAs])){ // checks if array - broken?
+                  edDict[qContent.answers[currentA].storeAs].push(textToStore);
+                } else {
+                  // if not then add values to create an array
+                  temp = [edDict[qContent.answers[currentA].storeAs], textToStore];
+                  // then assign this temp array back to the key, overwriting the old value
+                  edDict[qContent.answers[currentA].storeAs] = temp;
+                }
+              } else {
+                // add the new key and value
+                edDict[qContent.answers[currentA].storeAs] = textToStore;
+              }
+
+            }
+
+            // then push currentQ and answer ID to edAnswers
 
           } else if (edInputs[j].type === "text" && edInputs[j].value !== "") { // check for text in fields
             // check for storeAs
             // push it to edDict
 
-            // then push thisQ, answer ID and inputted value to edAnswers
+            // then push currentQ, answer ID and inputted value to edAnswers
 
           }
         }
@@ -204,7 +237,7 @@ var editAnswers = function(){
       if (edBoxes.length > 0) {
         console.log(edBoxes);
         // grab the question number from the first input's ID
-        thisQ = edBoxes[0].id.split("-")[0];
+        currentQ = edBoxes[0].id.split("-")[0];
         // for each of the boxes this question has
         for (var k = 0; k > edBoxes.length; k++){
           // get the answer number from the input's ID
@@ -216,12 +249,14 @@ var editAnswers = function(){
             // check for storeAs
             // push it to edDict
 
-            // then push thisQ, answer ID and inputted value to edAnswers
+            // then push currentQ, answer ID and inputted value to edAnswers
 
           }
         }
       }
-
+      console.log(edDict);
+      console.log(edExclusions);
+      console.log(edAnswers);
       // remove it and hide that question
       questions[i].classList.remove("showAllQs");
     } else {
