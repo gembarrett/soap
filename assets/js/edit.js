@@ -186,7 +186,8 @@ var editAnswers = function(){
           console.log('currentA is '+currentA);
 
           // use it to look up the question in the json
-          const qContent = currentState.sectionQ.find(question => question.id === edInputs[j].id.split("-")[0]);
+          const qContent = currentState.sectionQ.find(question => question.id === currentQ);
+          console.log(qContent);
           // catch any errors
 
           // if the input is selected
@@ -196,9 +197,11 @@ var editAnswers = function(){
             if (qContent.answers[currentA].excludes.length > 0) {
               // add them to the list of excluded questions
               edExclusions = edExclusions.concat(result.answers[currentA].excludes);
+            } else {
+              console.log('No exclusions found.')
             }
 
-            // check if the pre-written value or user inputted text should be stored
+            // if there's an indication that this answer should be stored in the dictionary
             if (qContent.answers[currentA].storeAs !== ""){
               // if it's an editable button then get the button's text, otherwise use the label text
               textToStore = edInputs[j].nextSibling.contentEditable === "true" ? edInputs[j].nextSibling.innerText : qContent.answers[currentA].answerText;
@@ -220,15 +223,42 @@ var editAnswers = function(){
                 edDict[qContent.answers[currentA].storeAs] = textToStore;
               }
 
+            } else {
+              console.log('No dictionary key found.');
             }
 
-            // then push currentQ and answer ID to edAnswers
+            edAnswers = storeThisA(edAnswers, currentQ, currentA);
+
 
           } else if (edInputs[j].type === "text" && edInputs[j].value !== "") { // check for text in fields
-            // check for storeAs
-            // push it to edDict
+
+            // check if the pre-written value or user inputted text should be stored
+            if (qContent.answers[currentA].storeAs !== ""){
+
+              // if the storeAs key already exists in the dictionary because it's a continuation of a list
+              if (qContent.answers[currentA].storeAs in edDict) {
+                // copy its current value into a temp array with the new value
+                // if it's already an array, just push
+                if (Array.isArray(edDict[qContent.answers[currentA].storeAs])){ // checks if array - broken?
+                  edDict[qContent.answers[currentA].storeAs].push(edInputs[j].value);
+                } else {
+                  // if not then add values to create an array
+                  temp = [edDict[qContent.answers[currentA].storeAs], edInputs[j].value];
+                  // then assign this temp array back to the key, overwriting the old value
+                  edDict[qContent.answers[currentA].storeAs] = temp;
+                }
+              } else {
+                // add the new key and value
+                edDict[qContent.answers[currentA].storeAs] = edInputs[j].value;
+              }
+
+            } else {
+              console.log('No dictionary key found.');
+            }
 
             // then push currentQ, answer ID and inputted value to edAnswers
+            // push the text value object to the currentState
+            edAnswers = storeThisA(edAnswers, currentQ, currentA);
 
           }
         }
@@ -255,8 +285,8 @@ var editAnswers = function(){
         }
       }
       console.log(edDict);
-      console.log(edExclusions);
       console.log(edAnswers);
+      console.log(currentState.answers);
       // remove it and hide that question
       questions[i].classList.remove("showAllQs");
     } else {
@@ -290,3 +320,15 @@ var editAnswers = function(){
 
 
 }
+
+
+
+
+
+function storeThisA(storage, q, a){
+  storage.push({
+    q: q,
+    a: a
+  });
+  return storage;
+};
