@@ -176,6 +176,7 @@ var editAnswers = function(){
 
         // grab the question number from the first input's ID
         currentQ = edInputs[0].id.split("-")[0];
+        // currentQ = edInputs[0].id.split("-")[0].split('q')[1];
         console.log('currentQ is '+currentQ);
 
         // for each of the inputs this question has
@@ -300,24 +301,6 @@ var editAnswers = function(){
   document.getElementById('previewPolicy').disabled === true ? document.getElementById('previewPolicy').disabled = false : document.getElementById('previewPolicy').disabled = true;
   document.getElementById('submitAnswers').disabled === true ? document.getElementById('submitAnswers').disabled = false : document.getElementById('submitAnswers').disabled = true;
 
-  // now editing is done, it's time to grab all the answers in case they were updated
-
-
-
-
-  // using questions[i]
-  // var updatedAnswers = getAnswers(questions[i], questions[i].id, tempAnswers, tempDict);
-  // console.log(updatedAnswers);
-  // console.log(currentState.answers);
-  // getInput takes the question element, gets the inputs
-  // pass each element to getInput along with a temp answers array
-  // then replace the regular answers array with the temp one
-
-  // check for exclusions and update the list
-
-  // editBtn.innerText = 'DONE'; // not sure this is necessary
-  // editBtn.classList.add('editMode'); // or this tbh
-
 
 }
 
@@ -326,6 +309,7 @@ var editAnswers = function(){
 
 
 function storeThisA(storage, q, a){
+  q = q.split('q')[1];
   storage.push({
     q: q,
     a: a
