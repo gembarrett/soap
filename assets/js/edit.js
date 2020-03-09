@@ -177,7 +177,12 @@ var editAnswers = function(){
         // grab the question number from the first input's ID
         currentQ = edInputs[0].id.split("-")[0];
         // currentQ = edInputs[0].id.split("-")[0].split('q')[1];
-        console.log('currentQ is '+currentQ);
+        console.log('currentQ is '+currentQ+ ' ' +currentQ.split('q')[1]);
+        // use it to look up the question in the json
+        var findInSection = whichSection(currentQ.split('q')[1]);
+        const qContent = sections[findInSection].find(question => question.id === currentQ);
+
+        console.log(qContent);
 
         // for each of the inputs this question has
         for (var j = 0; j < edInputs.length; j++){
@@ -185,10 +190,6 @@ var editAnswers = function(){
           // get the answer number from the input's ID
           currentA = edInputs[j].id.split("-")[1];
           console.log('currentA is '+currentA);
-
-          // use it to look up the question in the json
-          const qContent = currentState.sectionQ.find(question => question.id === currentQ);
-          console.log(qContent);
           // catch any errors
 
           // if the input is selected
@@ -197,9 +198,9 @@ var editAnswers = function(){
             // see if it excludes any (future?) questions
             if (qContent.answers[currentA].excludes.length > 0) {
               // add them to the list of excluded questions
-              edExclusions = edExclusions.concat(result.answers[currentA].excludes);
+              edExclusions = edExclusions.concat(qContent.answers[currentA].excludes);
             } else {
-              console.log('No exclusions found.')
+              console.log('No exclusions found.');
             }
 
             // if there's an indication that this answer should be stored in the dictionary
@@ -258,13 +259,14 @@ var editAnswers = function(){
             }
 
             // then push currentQ, answer ID and inputted value to edAnswers
-            // push the text value object to the currentState
+            // push the text value object to the storage
             edAnswers = storeThisA(edAnswers, currentQ, currentA);
 
           }
-        }
-      }
-      // if there are textboxes collected
+        } // end of for loop
+      } // end of inputs section
+
+      // if textareas were collected
       if (edBoxes.length > 0) {
         console.log(edBoxes);
         // grab the question number from the first input's ID
@@ -304,9 +306,23 @@ var editAnswers = function(){
 
 }
 
-
-
-
+function whichSection(q){
+  switch (true) {
+    case q < 9:
+      return 0;
+    case q < 14:
+      return 1;
+    case q < 21:
+      return 2;
+    case q < 27:
+      return 3;
+    case q < 34:
+      return 4;
+    default:
+      console.log('question not found');
+      break;
+  }
+}
 
 function storeThisA(storage, q, a){
   q = q.split('q')[1];
