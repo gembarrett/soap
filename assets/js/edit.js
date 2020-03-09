@@ -177,11 +177,9 @@ var editAnswers = function(){
         // grab the question number from the first input's ID
         currentQ = edInputs[0].id.split("-")[0];
         // currentQ = edInputs[0].id.split("-")[0].split('q')[1];
-        console.log('currentQ is '+currentQ+ ' ' +currentQ.split('q')[1]);
+        console.log('currentQ is '+currentQ);
         // use it to look up the question in the json
-        var findInSection = whichSection(currentQ.split('q')[1]);
-        const qContent = sections[findInSection].find(question => question.id === currentQ);
-
+        const qContent = findContent(currentQ.split('q')[1]);
         console.log(qContent);
 
         // for each of the inputs this question has
@@ -274,15 +272,43 @@ var editAnswers = function(){
         // for each of the boxes this question has
         for (var k = 0; k > edBoxes.length; k++){
           // get the answer number from the input's ID
-          // use it to look up the answer in the json
+          currentA =  edBoxes[k].id.split("-")[1];
+          console.log('currentA is '+currentA);
+
+          // grab the content
+          const qContent = findContent(currentQ.split('q')[1]);
+          console.log(qContent);
 
           // if the box contains text
           if (edBoxes[k].value.length > 0){
 
-            // check for storeAs
-            // push it to edDict
+            // if there's an indication that this answer should be stored in the dictionary
+            if (qContent.answers[currentA].storeAs !== ""){
+              // if it's an editable button then get the button's text, otherwise use the label text
+              textToStore = edBoxes[k].value;
 
-            // then push currentQ, answer ID and inputted value to edAnswers
+              // if the storeAs key already exists in the dictionary because it's a continuation of a list
+              if (qContent.answers[currentA].storeAs in edDict) {
+                // copy its current value into a temp array with the new value
+                // if it's already an array, just push
+                if (Array.isArray(edDict[qContent.answers[currentA].storeAs])){ // checks if array - broken?
+                  edDict[qContent.answers[currentA].storeAs].push(textToStore);
+                } else {
+                  // if not then add values to create an array
+                  temp = [edDict[qContent.answers[currentA].storeAs], textToStore];
+                  // then assign this temp array back to the key, overwriting the old value
+                  edDict[qContent.answers[currentA].storeAs] = temp;
+                }
+              } else {
+                // add the new key and value
+                edDict[qContent.answers[currentA].storeAs] = textToStore;
+              }
+
+            } else {
+              console.log('No dictionary key found.');
+            }
+
+            edAnswers = storeThisA(edAnswers, currentQ, currentA);
 
           }
         }
@@ -306,18 +332,28 @@ var editAnswers = function(){
 
 }
 
-function whichSection(q){
+function findContent(q){
   switch (true) {
     case q < 9:
-      return 0;
+      q = 'q'+q;
+      return sections[0].find(question => question.id === q);
+      break;
     case q < 14:
-      return 1;
+      q = 'q'+q;
+      return sections[1].find(question => question.id === q);
+      break;
     case q < 21:
-      return 2;
+      q = 'q'+q;
+      return sections[2].find(question => question.id === q);
+      break;
     case q < 27:
-      return 3;
+      q = 'q'+q;
+      return sections[3].find(question => question.id === q);
+      break;
     case q < 34:
-      return 4;
+      q = 'q'+q;
+      return sections[4].find(question => question.id === q);
+      break;
     default:
       console.log('question not found');
       break;
