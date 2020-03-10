@@ -147,6 +147,9 @@ var editAnswers = function(){
   var edAnswers = [];
   var edExclusions = [];
 
+  var dic = {};
+  var exc = [];
+  var ans = [];
 
   // get all the editable questions
   var questions = document.querySelectorAll(".editable");
@@ -158,71 +161,37 @@ var editAnswers = function(){
       console.log('question is visible');
 
       // get the input fields of this question
-      var edInputs = questions[i].getElementsByTagName('input');
-      var edBoxes = questions[i].getElementsByTagName('textarea');
+      var elements = questions[i].querySelectorAll('input, textarea');
+      console.log(elements);
 
-      // if there are inputs collected
-      if (edInputs.length > 0) {
-
+      // if this isn't a scenario question
+      if (elements.length > 0){
         // grab the question number from the first input's ID
-        currentQ = edInputs[0].id.split("-")[0];
-        // currentQ = edInputs[0].id.split("-")[0].split('q')[1];
-        console.log('currentQ is '+currentQ);
-        // use it to look up the question in the json
-        const qContent = findContent(currentQ.split('q')[1]);
+        var qData = getQData(elements[0]);
+        console.log(qData);
 
-        // for each of the inputs this question has
-        for (var j = 0; j < edInputs.length; j++){
-          // get the answer number from the input's ID
-          currentA = edInputs[j].id.split("-")[1];
-          console.log('Input currentA is '+currentA);
-          // catch any errors
+        for (var j=0; j<elements.length; j++){
+          // get the answer number
+          aNum = elements[j].id.split("-")[1];
+          console.log('Input currentA is '+aNum);
 
-          // if the input is selected
-          if (edInputs[j].checked){
-            // see if it excludes any (future?) questions
-            if (qContent.answers[currentA].excludes.length > 0) {
+          // if the element is checked or holds a value
+          if (elements[j].checked || elements[j].value !== "") {
+            // check for exclusions
+            if (qData.data.answers[aNum].excludes.length > 0){
               // add them to the list of excluded questions
-              edExclusions = edExclusions.concat(qContent.answers[currentA].excludes);
+              exc = exc.concat(qData.data.answers[aNum].excludes);
             } else {
-              console.log('No exclusions found.');
+              console.log('This answer does not exclude any questions.');
             }
 
-            edDict = saveToDict(edInputs[j], qContent.answers[currentA], edDict, true);
-            edAnswers = storeThisA(edAnswers, currentQ, currentA);
-
-          } else if (edInputs[j].type === "text" && edInputs[j].value !== "") { // check for text in fields
-            edDict = saveToDict(edInputs[j], qContent.answers[currentA], edDict, false);
-            // then push currentQ, answer ID and inputted value to edAnswers
-            // push the text value object to the storage
-            edAnswers = storeThisA(edAnswers, currentQ, currentA);
-
-          }
-        } // end of for loop
-      } // end of inputs section
-
-      // if textareas were collected
-      if (edBoxes.length > 0) {
-        // grab the question number from the first input's ID
-        currentQ = edBoxes[0].id.split("-")[0];
-        // for each of the boxes this question has
-        for (var k = 0; k > edBoxes.length; k++){
-          // get the answer number from the input's ID
-          currentA =  edBoxes[k].id.split("-")[1];
-          console.log('Box currentA is '+currentA);
-
-          // grab the content
-          const qContent = findContent(currentQ.split('q')[1]);
-
-          // if the box contains text
-          if (edBoxes[k].value.length > 0){
-
-            edDict = saveToDict(edBoxes[k], qContent.answers[currentA], edDict, false);
-            edAnswers = storeThisA(edAnswers, currentQ, currentA);
+            // save the answer
+            dic = saveToDict(elements[j], qData.data.answers[aNum], dic);
+            ans = storeThisA(ans, qData.ref, aNum);
           }
         }
       }
-      // remove it and hide that question
+      // remove the visible class and hide that question
       questions[i].classList.remove("showAllQs");
     } else {
       console.log('question is not visible');
@@ -230,28 +199,8 @@ var editAnswers = function(){
       questions[i].classList.add("showAllQs");
     }
   }
-  console.log(edDict);
-  console.log(edAnswers);
-  console.log(edExclusions);
 }
 
-
-function saveToDict(el, a, dict, isBtn){
-  // if this answer has a storeas value
-  if (a.storeAs !== ""){
-    // if it's a selected button
-    if (isBtn){
-      // get the edited or unedited text
-      dict = el.nextSibling.contentEditable === "true" ? storeThisPair(a.storeAs, dict, el.nextSibling.innerText) : storeThisPair(a.storeAs, dict, a.answerText);
-    } else {
-      // or store the contents of the text field
-      dict = storeThisPair(a.storeAs, dict, el.value);
-    }
-  } else {
-    console.log('No dictionary key found.');
-  }
-  return dict;
-}
 
 function findContent(q){
   switch (true) {
@@ -281,6 +230,34 @@ function findContent(q){
   }
 }
 
+function getQData(el){
+  var q = {};
+  //# get the question number
+  q.ref = el.id.split("-")[0];
+  //# get the question data
+  q.data = findContent(q.ref.split('q')[1]);
+  console.log(q);
+  return q;
+}
+
+function saveToDict(el, a, dict){
+  // if this answer has a storeas value
+  if (a.storeAs !== ""){
+    // if it's a selected button
+    if (el.selected){
+      // get the edited or unedited text
+      dict = el.nextSibling.contentEditable === "true" ? storeThisPair(a.storeAs, dict, el.nextSibling.innerText) : storeThisPair(a.storeAs, dict, a.answerText);
+    } else {
+      // or store the contents of the text field
+      dict = storeThisPair(a.storeAs, dict, el.value);
+    }
+  } else {
+    console.log('No dictionary key found.');
+  }
+  return dict;
+}
+
+
 function storeThisA(storage, q, a){
   q = q.split('q')[1];
   storage.push({
@@ -290,7 +267,6 @@ function storeThisA(storage, q, a){
   return storage;
 };
 
-// FIX: this is creating duplicates - need to either accept multiples or overwrite each time
 function storeThisPair(el, dict, text) {
   // if the storeAs key already exists in the dictionary because it's a continuation of a list
   if (el in dict) {
@@ -323,5 +299,30 @@ function toggleEditMode(){
   // if the buttons are disabled, enable them, otherwise disable them
   document.getElementById('previewPolicy').disabled === true ? document.getElementById('previewPolicy').disabled = false : document.getElementById('previewPolicy').disabled = true;
   document.getElementById('submitAnswers').disabled === true ? document.getElementById('submitAnswers').disabled = false : document.getElementById('submitAnswers').disabled = true;
-
 }
+
+
+// hide and show things for edit mode
+// set up temp vars
+// get all the applicable questions
+// for each question
+  // if the question is visible
+  // get the inputs and boxes
+    // if there's inputs
+
+    //# get the question number
+    //# get the question data
+
+      // for each input
+      // get the answer number
+        // if the input is selected or holds text
+          // if the answer data contains exclusions
+          // store the exclusions in list
+          // else log it
+
+          //$ store any key-value pairs in dictionary
+          //$ store any answers in answers array
+
+
+    // then hide the question
+    // else log it and make the question visible
