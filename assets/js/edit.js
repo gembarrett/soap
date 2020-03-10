@@ -137,14 +137,16 @@ function pushToDict(storeAs, answerText) {
   }
 }
 
-var edAnswers = [];
-var edExclusions = [];
-var edDict = {};
-
 // when clicked, go through array of questions marked as editable and add/remove showAllQs class
 // do these need to be in a variable?
 var editAnswers = function(){
   toggleEditMode();
+
+  // maybe keep these local and overwrite the global each time?
+  var edDict = {};
+  var edAnswers = [];
+  var edExclusions = [];
+
 
   // get all the editable questions
   var questions = document.querySelectorAll(".editable");
