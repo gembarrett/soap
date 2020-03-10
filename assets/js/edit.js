@@ -137,40 +137,35 @@ function pushToDict(storeAs, answerText) {
   }
 }
 
+var edAnswers = [];
+var edExclusions = [];
+var edDict = {};
+
 // when clicked, go through array of questions marked as editable and add/remove showAllQs class
 // do these need to be in a variable?
 var editAnswers = function(){
-  var tempAnswers = [];
-  var tempDict = {};
   // get the edit button
   var editBtn = document.getElementById("editBtn");
   // get all the editable questions
   var questions = document.querySelectorAll(".editable");
+
   // toggle the editing class on button and page
   editBtn.classList.toggle('editMode');
   page.classList.toggle('editMode');
-
   // toggle edit button inner text
   editBtn.innerText = editBtn.innerText == "EDIT" ? "DONE" : "EDIT";
-  // if we're in edit mode
-  // should this be before the toggle?
-  // if (editBtn.classList.contains('editMode')) {
-    // create new storage for the answers
-    var edAnswers = [];
-    var edExclusions = [];
-    var edDict = {};
-  // }
 
   // hide or show each of the editable questions
   for (var i=0; i<questions.length; i++){
-    // if the question has the visible class
+    // if the question is visible
     if(questions[i].classList.contains("showAllQs")){
       console.log('question is visible');
 
       // get the input fields of this question
       var edInputs = questions[i].getElementsByTagName('input');
+      console.log(edInputs);
       var edBoxes = questions[i].getElementsByTagName('textarea');
-
+      console.log(edBoxes)
       // if there are inputs collected
       if (edInputs.length > 0) {
 
@@ -184,15 +179,13 @@ var editAnswers = function(){
 
         // for each of the inputs this question has
         for (var j = 0; j < edInputs.length; j++){
-
           // get the answer number from the input's ID
           currentA = edInputs[j].id.split("-")[1];
-          console.log('currentA is '+currentA);
+          console.log('Input currentA is '+currentA);
           // catch any errors
 
           // if the input is selected
           if (edInputs[j].checked){
-
             // see if it excludes any (future?) questions
             if (qContent.answers[currentA].excludes.length > 0) {
               // add them to the list of excluded questions
@@ -206,22 +199,7 @@ var editAnswers = function(){
               // if it's an editable button then get the button's text, otherwise use the label text
               textToStore = edInputs[j].nextSibling.contentEditable === "true" ? edInputs[j].nextSibling.innerText : qContent.answers[currentA].answerText;
 
-              // if the storeAs key already exists in the dictionary because it's a continuation of a list
-              if (qContent.answers[currentA].storeAs in edDict) {
-                // copy its current value into a temp array with the new value
-                // if it's already an array, just push
-                if (Array.isArray(edDict[qContent.answers[currentA].storeAs])){ // checks if array - broken?
-                  edDict[qContent.answers[currentA].storeAs].push(textToStore);
-                } else {
-                  // if not then add values to create an array
-                  temp = [edDict[qContent.answers[currentA].storeAs], textToStore];
-                  // then assign this temp array back to the key, overwriting the old value
-                  edDict[qContent.answers[currentA].storeAs] = temp;
-                }
-              } else {
-                // add the new key and value
-                edDict[qContent.answers[currentA].storeAs] = textToStore;
-              }
+              edDict = storeThisPair(qContent.answers[currentA].storeAs, edDict, textToStore);
 
             } else {
               console.log('No dictionary key found.');
@@ -231,27 +209,9 @@ var editAnswers = function(){
 
 
           } else if (edInputs[j].type === "text" && edInputs[j].value !== "") { // check for text in fields
-
             // check if the pre-written value or user inputted text should be stored
             if (qContent.answers[currentA].storeAs !== ""){
-
-              // if the storeAs key already exists in the dictionary because it's a continuation of a list
-              if (qContent.answers[currentA].storeAs in edDict) {
-                // copy its current value into a temp array with the new value
-                // if it's already an array, just push
-                if (Array.isArray(edDict[qContent.answers[currentA].storeAs])){ // checks if array - broken?
-                  edDict[qContent.answers[currentA].storeAs].push(edInputs[j].value);
-                } else {
-                  // if not then add values to create an array
-                  temp = [edDict[qContent.answers[currentA].storeAs], edInputs[j].value];
-                  // then assign this temp array back to the key, overwriting the old value
-                  edDict[qContent.answers[currentA].storeAs] = temp;
-                }
-              } else {
-                // add the new key and value
-                edDict[qContent.answers[currentA].storeAs] = edInputs[j].value;
-              }
-
+              edDict = storeThisPair(qContent.answers[currentA].storeAs, edDict, edInputs[j].value);
             } else {
               console.log('No dictionary key found.');
             }
@@ -266,18 +226,16 @@ var editAnswers = function(){
 
       // if textareas were collected
       if (edBoxes.length > 0) {
-        console.log(edBoxes);
         // grab the question number from the first input's ID
         currentQ = edBoxes[0].id.split("-")[0];
         // for each of the boxes this question has
         for (var k = 0; k > edBoxes.length; k++){
           // get the answer number from the input's ID
           currentA =  edBoxes[k].id.split("-")[1];
-          console.log('currentA is '+currentA);
+          console.log('Box currentA is '+currentA);
 
           // grab the content
           const qContent = findContent(currentQ.split('q')[1]);
-          console.log(qContent);
 
           // if the box contains text
           if (edBoxes[k].value.length > 0){
@@ -287,35 +245,14 @@ var editAnswers = function(){
               // if it's an editable button then get the button's text, otherwise use the label text
               textToStore = edBoxes[k].value;
 
-              // if the storeAs key already exists in the dictionary because it's a continuation of a list
-              if (qContent.answers[currentA].storeAs in edDict) {
-                // copy its current value into a temp array with the new value
-                // if it's already an array, just push
-                if (Array.isArray(edDict[qContent.answers[currentA].storeAs])){ // checks if array - broken?
-                  edDict[qContent.answers[currentA].storeAs].push(textToStore);
-                } else {
-                  // if not then add values to create an array
-                  temp = [edDict[qContent.answers[currentA].storeAs], textToStore];
-                  // then assign this temp array back to the key, overwriting the old value
-                  edDict[qContent.answers[currentA].storeAs] = temp;
-                }
-              } else {
-                // add the new key and value
-                edDict[qContent.answers[currentA].storeAs] = textToStore;
-              }
-
+              edDict = storeThisPair(qContent.answers[currentA].storeAs, edDict, textToStore);
             } else {
               console.log('No dictionary key found.');
             }
-
             edAnswers = storeThisA(edAnswers, currentQ, currentA);
-
           }
         }
       }
-      console.log(edDict);
-      console.log(edAnswers);
-      console.log(currentState.answers);
       // remove it and hide that question
       questions[i].classList.remove("showAllQs");
     } else {
@@ -368,3 +305,23 @@ function storeThisA(storage, q, a){
   });
   return storage;
 };
+
+function storeThisPair(el, dict, text) {
+  // if the storeAs key already exists in the dictionary because it's a continuation of a list
+  if (el in dict) {
+    // copy its current value into a temp array with the new value
+    // if it's already an array, just push
+    if (Array.isArray(dict[el])){ // checks if array - broken?
+      dict[el].push(text);
+    } else {
+      // if not then add values to create an array
+      temp = [dict[el], text];
+      // then assign this temp array back to the key, overwriting the old value
+      dict[el] = temp;
+    }
+  } else {
+    // add the new key and value
+    dict[el] = text;
+  }
+  return dict;
+}
