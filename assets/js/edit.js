@@ -144,16 +144,10 @@ var edDict = {};
 // when clicked, go through array of questions marked as editable and add/remove showAllQs class
 // do these need to be in a variable?
 var editAnswers = function(){
-  // get the edit button
-  var editBtn = document.getElementById("editBtn");
+  toggleEditMode();
+
   // get all the editable questions
   var questions = document.querySelectorAll(".editable");
-
-  // toggle the editing class on button and page
-  editBtn.classList.toggle('editMode');
-  page.classList.toggle('editMode');
-  // toggle edit button inner text
-  editBtn.innerText = editBtn.innerText == "EDIT" ? "DONE" : "EDIT";
 
   // hide or show each of the editable questions
   for (var i=0; i<questions.length; i++){
@@ -163,9 +157,8 @@ var editAnswers = function(){
 
       // get the input fields of this question
       var edInputs = questions[i].getElementsByTagName('input');
-      console.log(edInputs);
       var edBoxes = questions[i].getElementsByTagName('textarea');
-      console.log(edBoxes)
+
       // if there are inputs collected
       if (edInputs.length > 0) {
 
@@ -175,7 +168,6 @@ var editAnswers = function(){
         console.log('currentQ is '+currentQ);
         // use it to look up the question in the json
         const qContent = findContent(currentQ.split('q')[1]);
-        console.log(qContent);
 
         // for each of the inputs this question has
         for (var j = 0; j < edInputs.length; j++){
@@ -194,28 +186,11 @@ var editAnswers = function(){
               console.log('No exclusions found.');
             }
 
-            // if there's an indication that this answer should be stored in the dictionary
-            if (qContent.answers[currentA].storeAs !== ""){
-              // if it's an editable button then get the button's text, otherwise use the label text
-              textToStore = edInputs[j].nextSibling.contentEditable === "true" ? edInputs[j].nextSibling.innerText : qContent.answers[currentA].answerText;
-
-              edDict = storeThisPair(qContent.answers[currentA].storeAs, edDict, textToStore);
-
-            } else {
-              console.log('No dictionary key found.');
-            }
-
+            edDict = saveToDict(edInputs[j], qContent.answers[currentA], edDict, true);
             edAnswers = storeThisA(edAnswers, currentQ, currentA);
 
-
           } else if (edInputs[j].type === "text" && edInputs[j].value !== "") { // check for text in fields
-            // check if the pre-written value or user inputted text should be stored
-            if (qContent.answers[currentA].storeAs !== ""){
-              edDict = storeThisPair(qContent.answers[currentA].storeAs, edDict, edInputs[j].value);
-            } else {
-              console.log('No dictionary key found.');
-            }
-
+            edDict = saveToDict(edInputs[j], qContent.answers[currentA], edDict, false);
             // then push currentQ, answer ID and inputted value to edAnswers
             // push the text value object to the storage
             edAnswers = storeThisA(edAnswers, currentQ, currentA);
@@ -240,15 +215,7 @@ var editAnswers = function(){
           // if the box contains text
           if (edBoxes[k].value.length > 0){
 
-            // if there's an indication that this answer should be stored in the dictionary
-            if (qContent.answers[currentA].storeAs !== ""){
-              // if it's an editable button then get the button's text, otherwise use the label text
-              textToStore = edBoxes[k].value;
-
-              edDict = storeThisPair(qContent.answers[currentA].storeAs, edDict, textToStore);
-            } else {
-              console.log('No dictionary key found.');
-            }
+            edDict = saveToDict(edBoxes[k], qContent.answers[currentA], edDict, false);
             edAnswers = storeThisA(edAnswers, currentQ, currentA);
           }
         }
@@ -261,12 +228,27 @@ var editAnswers = function(){
       questions[i].classList.add("showAllQs");
     }
   }
+  console.log(edDict);
+  console.log(edAnswers);
+  console.log(edExclusions);
+}
 
-  // if the buttons are disabled, enable them, otherwise disable them
-  document.getElementById('previewPolicy').disabled === true ? document.getElementById('previewPolicy').disabled = false : document.getElementById('previewPolicy').disabled = true;
-  document.getElementById('submitAnswers').disabled === true ? document.getElementById('submitAnswers').disabled = false : document.getElementById('submitAnswers').disabled = true;
 
-
+function saveToDict(el, a, dict, isBtn){
+  // if this answer has a storeas value
+  if (a.storeAs !== ""){
+    // if it's a selected button
+    if (isBtn){
+      // get the edited or unedited text
+      dict = el.nextSibling.contentEditable === "true" ? storeThisPair(a.storeAs, dict, el.nextSibling.innerText) : storeThisPair(a.storeAs, dict, a.answerText);
+    } else {
+      // or store the contents of the text field
+      dict = storeThisPair(a.storeAs, dict, el.value);
+    }
+  } else {
+    console.log('No dictionary key found.');
+  }
+  return dict;
 }
 
 function findContent(q){
@@ -306,6 +288,7 @@ function storeThisA(storage, q, a){
   return storage;
 };
 
+// FIX: this is creating duplicates - need to either accept multiples or overwrite each time
 function storeThisPair(el, dict, text) {
   // if the storeAs key already exists in the dictionary because it's a continuation of a list
   if (el in dict) {
@@ -324,4 +307,19 @@ function storeThisPair(el, dict, text) {
     dict[el] = text;
   }
   return dict;
+}
+
+function toggleEditMode(){
+  // get the edit button
+  var editBtn = document.getElementById("editBtn");
+  // toggle the editing class on button and page
+  editBtn.classList.toggle('editMode');
+  page.classList.toggle('editMode');
+  // toggle edit button inner text
+  editBtn.innerText = editBtn.innerText == "EDIT" ? "DONE" : "EDIT";
+
+  // if the buttons are disabled, enable them, otherwise disable them
+  document.getElementById('previewPolicy').disabled === true ? document.getElementById('previewPolicy').disabled = false : document.getElementById('previewPolicy').disabled = true;
+  document.getElementById('submitAnswers').disabled === true ? document.getElementById('submitAnswers').disabled = false : document.getElementById('submitAnswers').disabled = true;
+
 }
