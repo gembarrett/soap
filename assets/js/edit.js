@@ -39,10 +39,13 @@ function isInActiveContentEditable(node) {
     return false;
 }
 
-// when clicked, go through array of questions marked as editable and add/remove showAllQs class
-// do these need to be in a variable?
-var editAnswers = function(){
+function editAnswers() {
   toggleEditMode();
+  collectAnswers(true);
+}
+
+// when clicked, go through array of questions marked as editable and add/remove showAllQs class
+function collectAnswers(isEdited){
 
   var dic = {};
   var exc = [];
@@ -53,14 +56,14 @@ var editAnswers = function(){
 
   // hide or show each of the editable questions
   for (var i=0; i<questions.length; i++){
-    // if the question is visible
-    if(questions[i].classList.contains("showAllQs")){
-      console.log('question is visible');
 
+    // if we're gathering the answers in edit mode or for policy compilation
+    if ((!isEdited) || (isEdited && questions[i].classList.contains("showAllQs"))) {
+      console.log('Post-edit or pre-compilation')
       // get the input fields of this question
       var elements = questions[i].querySelectorAll('input, textarea');
 
-      // if this isn't a scenario question
+      // if this question has answers
       if (elements.length > 0){
         // grab the question number from the first input's ID
         var qData = getQData(elements[0]);
@@ -82,15 +85,27 @@ var editAnswers = function(){
             // save the answer
             dic = saveToDict(elements[j], qData.data.answers[aNum], dic);
             ans = storeThisA(ans, qData.ref, aNum);
+          } else {
+            console.log('Neither checked box nor text box.');
+            console.log(elements[j]);
           }
         }
       }
-      // remove the visible class and hide that question
-      questions[i].classList.remove("showAllQs");
+      // done with this question's inputs so hide the question if in edit mode
+      if (isEdited){
+        // remove the visible class and hide that question
+        questions[i].classList.remove("showAllQs");
+      } else {
+        console.log('Not in editing mode');
+      }
     } else {
-      console.log('question is not visible');
-      // make the question visible
-      questions[i].classList.add("showAllQs");
+      console.log('Neither post-editing nor pre-compilation.');
+      if (isEdited){
+        // remove the visible class and hide that question
+        questions[i].classList.remove("showAllQs");
+      } else {
+        console.log('Not in editing mode');
+      }
     }
   }
   dict = dic;
