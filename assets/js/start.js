@@ -53,7 +53,7 @@ function addChangeListeners() {
 
   // add listener for edit button
   var editBtn = document.getElementById("editBtn");
-  editBtn.addEventListener('click', editAnswers(), false);
+  editBtn.addEventListener('click', editAnswers, false);
 
   // TODO: get skip/next fully working
   // grab all the form inputs
@@ -128,7 +128,6 @@ function updateProgressBar(){
 }
 
 // this is the function that's called when a user submits an answer
-// TODO: add a special flag to this if it should be looking for edited, rather than new answers
 function handleSubmit() {
   // search for the currently shown element - question and answer
   var match = document.querySelector('.current');
@@ -139,8 +138,9 @@ function handleSubmit() {
   // get the number of answers collected so far for comparison later
   beforeSize = currentState.answers.length;
   // use the current element and the question id to get the inputs
-  var answers = getInput(match, id);
-
+  // var answers = getInput(match, id);
+  // grab the answers from the page
+  collectAnswers(false);
   canProceed = true;
 
   // before doing anything else, check if this is a required question
@@ -150,7 +150,7 @@ function handleSubmit() {
   if (id > 0){
 
     // have answers been provided for this question?
-    noAnswers = beforeSize === answers.length ? true : false;
+    noAnswers = beforeSize === currentState.answers.length ? true : false;
 
     // if it's required and there are no answers provided
     // if (isRequired && noAnswers){
@@ -169,10 +169,12 @@ function handleSubmit() {
 
       setUpPage(id);
 
+      // if we're past the intro
       if (parseInt(id) > 0){
+        console.log('enabling button'+id);
         // show the edit button
         document.getElementById('editBtn').classList.remove('disabled');
-        // mark the question as editable
+        // mark the current question as editable
         match.classList.add("editable");
       }
 

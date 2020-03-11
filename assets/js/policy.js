@@ -26,6 +26,7 @@ function compileDoc(p,a){
     links: []
   };
 
+  console.log(currentState.answers[0]);
   // set up prevQ currentState.answers[0].q
   var prevQ = currentState.answers[0].q;
 
