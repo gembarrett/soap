@@ -56,77 +56,84 @@ function collectAnswers(isEdited){
 
   // get all the editable questions
   var questions = [];
+  // are the edited questions visible?
+  questions = document.querySelectorAll(".showAllQs");
 
-
-  // if we're coming via the editbutton (isEdited) then two things
-  if (isEdited){
-    // 1) we're starting the edit session
-      // show all the editable questions and collect nothing
-    // 2) we're closing the edit session
-      // hide all the questions and collect all the answers
-  } else {
-    // we're collecting for a policy
-    // collect all the answers
-  }
-
-  // if we're closing edit mode
-  if (isEdited && (document.getElementById("editBtn").innerText === "EDIT")){
-    // collect everything with class of showAllQs
-    questions = document.querySelectorAll(".showAllQs");
-  } else if (!isEdited){
-    // collect everything with class current or editable
-    questions = document.querySelectorAll(".editable");
-    // questions.push(document.querySelector(".current"));
-  } else {
-    console.log('Not collecting anything');
-  }
-
-  console.log(questions.length);
-  // for each of the applicable questions
-  for (var i=0; i<questions.length; i++){
-
-      var elements = questions[i].querySelectorAll('input, textarea');
-
-      // if this question has answers
-      if (elements.length > 0){
-        // grab the question number from the first input's ID
-        var qData = getQData(elements[0]);
-        // for each of the answers
-        for (var j=0; j<elements.length; j++){
-          // get the answer number
-          aNum = elements[j].id.split("-")[1];
-
+  // if we're in edit mode but no questions are visible
+  if (isEdited && questions.length === 0){
+      // starting the edit session
+      // grab all the hidden editable questions
+      questions = document.querySelectorAll(".editable");
+      // show each of the questions
+      for (var a = 0; a < questions.length; a++){
+        questions[a].classList.toggle("showAllQs");
+      }
+  } else if (isEdited && questions.length > 0) {
+    // closing the edit session so collect all the visible answers
+    // for each question
+    for (var b = 0; b < questions.length; b++){
+      // get the input fields
+      var inputFields = checkForInputs(questions[b]);
+      // if there are input fields
+      if (inputFields !== false){
+        // grab the question number and data
+        qData = getQData(inputFields[0]);
+        // for each of the input fields
+        for (var bb = 0; bb < inputFields.length; bb++){
+          // get the ID
+          aNum = inputFields[bb].id.split("-")[1];
           // if the element is checked or is a type of text box
-          if (elements[j].checked || elements[j].type.includes("text")) {
-            // check for exclusions
-            if (qData.data.answers[aNum].excludes.length > 0){
-              // add them to the list of excluded questions
-              exc = exc.concat(qData.data.answers[aNum].excludes);
-            } else {
-              console.log('! e');
-            }
-
+          if (inputFields[bb].checked || inputFields[bb].type.includes("text")) {
+            // grab any exclusions
+            exc = updateExc(qData.data.answers[aNum], exc);
             // save the answer
-            dic = saveToDict(elements[j], qData.data.answers[aNum], dic);
+            dic = saveToDict(inputFields[bb], qData.data.answers[aNum], dic);
             ans = storeThisA(ans, qData.ref, aNum);
           } else {
             console.log('Not a selection or text box');
           }
         }
-        console.log('End of loop: '+ans.length+' answers stored in ans');
       } else {
-        console.log('! a')
+        console.log('no inputs');
       }
-      if (isEdited){
-        questions[i].classList.toggle("showAllQs");
+      // then hide the question
+      questions[b].classList.toggle("showAllQs");
+    }
+  } else {
+    // we're collecting for a policy so get all the answers available so far
+    questions = document.querySelectorAll(".editable");
+    // for each question
+    for (var c = 0; c < questions.length; c++){
+      // get the input fields
+      var inputFields = checkForInputs(questions[c]);
+      // if there are input fields
+      if (inputFields !== false){
+        // get the question number and data
+        qData = getQData(inputFields[0]);
+        // for each of the input fields
+        for (var cc = 0; cc < inputFields.length; cc++){
+          // get the ID
+          aNum = inputFields[cc].id.split("-")[1];
+          // if the element is checked or is a type of text box
+          if (inputFields[cc].checked || inputFields[cc].type.includes("text")) {
+            // grab any exclusions
+            exc = updateExc(qData.data.answers[aNum], exc);
+            // save the answer
+            dic = saveToDict(inputFields[cc], qData.data.answers[aNum], dic);
+            ans = storeThisA(ans, qData.ref, aNum);
+          } else {
+            console.log('Not a selection or text box');
+          }
+        }
       } else {
-        console.log('Not in edit mode');
+        console.log('no inputs');
       }
+    }
   }
 
   dict = dic;
   currentState.answers = ans;
-  currentState.exclusions = exc;
+  currentState.exclusions = exc.length > 0 ? exc : currentState.exclusions;
   console.log('There are '+ans.length+' answers stored in ans');
   console.log('There are '+currentState.answers.length+' answers stored in current state');
 
@@ -230,4 +237,31 @@ function toggleEditMode(){
   // if the buttons are disabled, enable them, otherwise disable them
   document.getElementById('previewPolicy').disabled === true ? document.getElementById('previewPolicy').disabled = false : document.getElementById('previewPolicy').disabled = true;
   document.getElementById('submitAnswers').disabled === true ? document.getElementById('submitAnswers').disabled = false : document.getElementById('submitAnswers').disabled = true;
+}
+
+
+function checkForInputs(q){
+  els = q.querySelectorAll('input, textarea');
+  // if this question has answers
+  if (els.length > 0){
+    // return the elements
+    return els;
+  } else {
+    console.log('Text-only question.');
+    return false;
+  }
+}
+
+function updateExc(a, e){
+  console.log(e);
+  // check for exclusions
+  if (a.excludes.length > 0){
+    // add them to the list of excluded questions
+    e = e.concat(a.excludes);
+    return e;
+  } else {
+    console.log('! e');
+    return e = [];
+  }
+
 }
