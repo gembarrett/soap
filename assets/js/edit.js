@@ -108,6 +108,7 @@ function collectAnswers(isEdited){
       var inputFields = checkForInputs(questions[c]);
       // if there are input fields
       if (inputFields !== false){
+        console.log(inputFields);
         // get the question number and data
         qData = getQData(inputFields[0]);
         // for each of the input fields
@@ -134,9 +135,6 @@ function collectAnswers(isEdited){
   dict = dic;
   currentState.answers = ans;
   currentState.exclusions = exc.length > 0 ? exc : currentState.exclusions;
-  console.log('There are '+ans.length+' answers stored in ans');
-  console.log('There are '+currentState.answers.length+' answers stored in current state');
-
 }
 
 
@@ -154,11 +152,11 @@ function findContent(q){
       q = 'q'+q;
       return sections[2].find(question => question.id === q);
       break;
-    case q < 27:
+    case q < 28:
       q = 'q'+q;
       return sections[3].find(question => question.id === q);
       break;
-    case q < 34:
+    case q < 35:
       q = 'q'+q;
       return sections[4].find(question => question.id === q);
       break;
