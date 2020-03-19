@@ -133,10 +133,7 @@ function handleSubmit() {
   var match = document.querySelector('.current');
   // this gets the current question id number e.g. q0
   var id = currentState.questionQ.split('q')[1];
-  // get the number of answers collected so far for comparison later
-  beforeSize = currentState.answers.length;
-  // use the current element and the question id to get the inputs
-  // grab the answers from the page
+  // currently lets everything through, will change when required Qs are back
   canProceed = true;
 
   // before doing anything else, check if this is a required question
@@ -145,18 +142,16 @@ function handleSubmit() {
   // compare the size of answers array to find out if answers have been provided for this question
   if (id > 0){
 
-    // have answers been provided for this question?
-    noAnswers = beforeSize === currentState.answers.length ? true : false;
-
     // if it's required and there are no answers provided
     // if (isRequired && noAnswers){
     //   canProceed = false;
     // }
 
     // if there's at least one answer returned and the button is disabled
+
     // enable the preview button
     prev = document.querySelector('#previewPolicy');
-    if (!noAnswers && prev.disabled){
+    if (prev.disabled && (currentState.answers.length === 0 || dict.length === 0)){
       prev.removeAttribute('disabled');
     }
   }

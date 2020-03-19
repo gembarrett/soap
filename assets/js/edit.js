@@ -40,7 +40,6 @@ function isInActiveContentEditable(node) {
 }
 
 function editAnswers() {
-  console.log('Editing answers');
   toggleEditMode();
   collectAnswers(true);
 }
@@ -48,9 +47,6 @@ function editAnswers() {
 // when clicked, go through array of questions marked as editable and add/remove showAllQs class
 // this should be used when compiling a policy or pressing Done to end an editing session
 function collectAnswers(isEdited){
-  console.log('collecting answers');
-  console.log(currentState);
-  console.log(dict);
   var dic = {};
   var exc = [];
   var ans = [];
