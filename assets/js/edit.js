@@ -43,13 +43,14 @@ function editAnswers() {
   console.log('Editing answers');
   toggleEditMode();
   collectAnswers(true);
-  console.log('There are '+currentState.answers.length+' answers stored in current state');
 }
 
 // when clicked, go through array of questions marked as editable and add/remove showAllQs class
 // this should be used when compiling a policy or pressing Done to end an editing session
 function collectAnswers(isEdited){
-
+  console.log('collecting answers');
+  console.log(currentState);
+  console.log(dict);
   var dic = {};
   var exc = [];
   var ans = [];
@@ -108,7 +109,6 @@ function collectAnswers(isEdited){
       var inputFields = checkForInputs(questions[c]);
       // if there are input fields
       if (inputFields !== false){
-        console.log(inputFields);
         // get the question number and data
         qData = getQData(inputFields[0]);
         // for each of the input fields
@@ -121,9 +121,10 @@ function collectAnswers(isEdited){
             exc = updateExc(qData.data.answers[aNum], exc);
             // save the answer
             dic = saveToDict(inputFields[cc], qData.data.answers[aNum], dic);
+            console.log(dic);
             ans = storeThisA(ans, qData.ref, aNum);
           } else {
-            console.log('Not a selection or text box');
+            console.log('Unchecked or empty');
           }
         }
       } else {
@@ -251,7 +252,6 @@ function checkForInputs(q){
 }
 
 function updateExc(a, e){
-  console.log(e);
   // check for exclusions
   if (a.excludes.length > 0){
     // add them to the list of excluded questions

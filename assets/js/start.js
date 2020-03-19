@@ -131,16 +131,12 @@ function updateProgressBar(){
 function handleSubmit() {
   // search for the currently shown element - question and answer
   var match = document.querySelector('.current');
-  console.log('get the current element');
   // this gets the current question id number e.g. q0
   var id = currentState.questionQ.split('q')[1];
-  console.log('get the current question\'s id');
   // get the number of answers collected so far for comparison later
   beforeSize = currentState.answers.length;
   // use the current element and the question id to get the inputs
-  // var answers = getInput(match, id);
   // grab the answers from the page
-  collectAnswers(false);
   canProceed = true;
 
   // before doing anything else, check if this is a required question
@@ -171,11 +167,11 @@ function handleSubmit() {
 
       // if we're past the intro
       if (parseInt(id) > 0){
-        console.log('enabling button'+id);
         // show the edit button
         document.getElementById('editBtn').classList.remove('disabled');
         // mark the current question as editable
         match.classList.add("editable");
+        collectAnswers(false);
       }
 
       if(parseInt(id) === questionsList.length-1){
@@ -195,6 +191,7 @@ function handleSubmit() {
       window.scrollTo(0,0);
   }
 }
+
 
 // not sure this needs to be a function as it's only done once
 function setUpPage(id){
@@ -250,102 +247,6 @@ function nextQuestion(){
   //     submit.setAttribute("disabled", "");
   //   }
   // }
-}
-
-function getInput(el, qId) {
-  // search el for inputs or textboxes.
-  var inputs = el.getElementsByTagName('input');
-  var textareas = el.getElementsByTagName('textarea');
-
-  // TODO: fix this duplication
-  // if there's a textarea containing text
-  if ((textareas.length > 0) && (textareas[0].value.length > 0)) {
-    // split up the input's id to get the number
-    var answerID = textareas[0].id.split("-")[1];
-
-    // unsplit the question ID
-    var tempQId = 'q'+qId;
-    const result = currentState.sectionQ.find(question => question.id === tempQId);
-
-    // push the text value object to the currentState
-    currentState.answers.push({
-      q: qId,
-      a: answerID,
-      t: textareas[0].value,
-    });
-    // store the inputted value in the dictionary
-    // should this be addToDictionary?
-    addToDictionary(result.answers[answerID].storeAs, textareas[0].value);
-
-  }
-
-  // for every input in the form
-  for (var i = 0; i < inputs.length; i++) {
-    // split up the input's id to get the number
-    var answerID = inputs[i].id.split("-")[1];
-
-    // unsplit the question ID
-    var tempQId = 'q'+qId;
-    var result = currentState.sectionQ.find(question => question.id === tempQId);
-    // console.log(result);
-
-    // if the input is a textbox containing value
-    if (inputs[i].type === "text" && inputs[i].value !== "") {
-      // if there's a storeAs value
-      if (result.answers[answerID].storeAs !== "") {
-        addToDictionary(result.answers[answerID].storeAs, inputs[i].value);
-      }
-
-      // push the text value object to the currentState
-      currentState.answers.push({
-        q: qId,
-        a: answerID,
-        t: inputs[i].value, // is this necessary if storeAs is working?
-      });
-    }
-
-    // if the input is a checked checkbox or selected radio button
-    if (inputs[i].checked) {
-
-      // if this answer excludes another question, add to the list
-      if (result.answers[answerID].excludes.length > 0) {
-        currentState.exclusions = currentState.exclusions.concat(result.answers[answerID].excludes);
-      }
-
-      // if there's a storeAs value, store it
-      if (result.answers[answerID].storeAs !== "") {
-        storedText = inputs[i].nextSibling.contentEditable === "true" ? inputs[i].nextSibling.innerText : result.answers[answerID].answerText;
-        addToDictionary(result.answers[answerID].storeAs, storedText);
-      }
-      // push the question and answer object to the currentState
-      currentState.answers.push({
-        q: qId,
-        a: answerID,
-      });
-
-    }
-  }
-  console.log(currentState.answers);
-  return currentState.answers;
-}
-
-function addToDictionary(storeAs, answerText) {
-  // if the storeAs key already exists in the dictionary because it's a continuation of a list
-  if (storeAs in dict) {
-    // copy its current value into a temp array with the new value
-    // if it's already an array, just push
-    if (Array.isArray(dict[storeAs])){ // checks if array - broken?
-      dict[storeAs].push(answerText);
-    } else {
-      // if not then add values to create an array
-      temp = [dict[storeAs], answerText];
-      // then assign this temp array back to the key, overwriting the old value
-      dict[storeAs] = temp;
-    }
-  } else {
-    // add the new key and value
-    dict[storeAs] = answerText;
-  }
 }
 
 // function to add formatting to array
