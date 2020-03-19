@@ -178,12 +178,16 @@ function handleSubmit() {
         match.classList.add("editable");
       }
 
+      if(parseInt(id) === questionsList.length-1){
+        document.getElementById('editBtn').classList.add('disabled');
+      }
+
       // this hides the current question,
       match.classList.remove("current");
-      console.log('hide current question');
+
       // go to next question
       id = isExcludedQ(id);
-      console.log('get next id that isn\'t excluded');
+
       // TODO change to Skip when skip/next is working
       document.getElementById('submitAnswers').innerText = "Next";
 
