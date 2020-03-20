@@ -80,7 +80,7 @@ function collectAnswers(isEdited){
           // get the ID
           aNum = inputFields[bb].id.split("-")[1];
           // if the element is checked or is a type of text box
-          if (inputFields[bb].checked || inputFields[bb].type.includes("text")) {
+          if (inputFields[bb].checked || (inputFields[bb].type.includes("text") && inputFields[bb].value !== "")) {
             // grab any exclusions
             exc = updateExc(qData.data.answers[aNum], exc);
             // save the answer
@@ -111,8 +111,8 @@ function collectAnswers(isEdited){
         for (var cc = 0; cc < inputFields.length; cc++){
           // get the ID
           aNum = inputFields[cc].id.split("-")[1];
-          // if the element is checked or is a type of text box
-          if (inputFields[cc].checked || inputFields[cc].type.includes("text")) {
+          // if the element is checked or is a type of not-empty text box
+          if (inputFields[cc].checked || (inputFields[cc].type.includes("text") && inputFields[cc].value !== "")) {
             // grab any exclusions
             exc = updateExc(qData.data.answers[aNum], exc);
             // save the answer
