@@ -321,9 +321,9 @@ var section3 = [
         "type":"checkbox",
         "editable":true,
         "answerText":"other security measure",
-        "storeAs":"",
+        "storeAs":"[otherBackupSec]",
         "excludes":[],
-        "policyEntry":"",
+        "policyEntry":"- [otherBackupSec]",
         "appendixEntry":[
           {
             "reviewList":"",

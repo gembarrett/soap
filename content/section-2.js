@@ -89,7 +89,7 @@ var section2 = [
         "answerText":"other service",
         "storeAs": "[passwordPref]",
         "excludes":[],
-        "policyEntry":"",
+        "policyEntry":"In particular, we ask you to use [passwordPref] and if you require any help with set up or using this tool then you should discuss it with [contactName].",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -133,7 +133,7 @@ var section2 = [
         "answerText":"No",
         "storeAs":"[]",
         "excludes":[],
-        "policyEntry":"Staff are advised to refrain from storing passwords in their browser due to the security risks. If you need guidance on choosing an alternative password storage system, [contactName, contactPos] will be able to advise you on this.",
+        "policyEntry":"Staff are advised to refrain from storing passwords in their browser due to the security risks. If you need guidance on choosing an alternative password storage system, [contactName], [contactPos], will be able to advise you on this.",
         "appendixEntry":[
           {
             "reviewList":"",

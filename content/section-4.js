@@ -190,7 +190,7 @@ var section4 = [
         "answerText":"other security measure",
         "storeAs":"[travelSteps]",
         "excludes":[],
-        "policyEntry":"",
+        "policyEntry":"- [travelSteps]",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -348,9 +348,9 @@ var section4 = [
         "type":"radio",
         "editable":true,
         "answerText":"other",
-        "storeAs":"[]",
+        "storeAs":"[otherVPNPayment]",
         "excludes":[],
-        "policyEntry":"",
+        "policyEntry":"Recommended VPN and circumvention tools are paid for by [otherVPNPayment]",
         "appendixEntry":[
           {
             "reviewList":"",
