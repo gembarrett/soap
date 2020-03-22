@@ -47,6 +47,7 @@ function editAnswers() {
 // when clicked, go through array of questions marked as editable and add/remove showAllQs class
 // this should be used when compiling a policy or pressing Done to end an editing session
 function collectAnswers(isEdited){
+  console.log('getting answers');
   var dic = {};
   var exc = [];
   var ans = [];
@@ -60,7 +61,8 @@ function collectAnswers(isEdited){
   if (isEdited && questions.length === 0){
       // starting the edit session
       // grab all the hidden editable questions
-      questions = document.querySelectorAll(".editable");
+      questions = document.querySelectorAll(".editable, .current");
+      console.log(questions);
       // show each of the questions
       for (var a = 0; a < questions.length; a++){
         questions[a].classList.toggle("showAllQs");
@@ -98,7 +100,8 @@ function collectAnswers(isEdited){
     }
   } else {
     // we're collecting for a policy so get all the answers available so far
-    questions = document.querySelectorAll(".editable");
+    questions = document.querySelectorAll(".editable, .current");
+    console.log(questions);
     // for each question
     for (var c = 0; c < questions.length; c++){
       // get the input fields
