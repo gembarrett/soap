@@ -119,7 +119,7 @@ var section0 = [
     "answers":[
       {
         "type":"radio",
-        "answerText":"Yes",
+        "answerText":"Yes.",
         "storeAs": "",
         "excludes":[],
         "policyEntry":"",
@@ -133,7 +133,21 @@ var section0 = [
       },
       {
         "type":"radio",
-        "answerText":"No - some or all of our staff work remotely.",
+        "answerText":"A portion of our staff work remotely.",
+        "storeAs": "",
+        "excludes":[],
+        "policyEntry":"",
+        "appendixEntry":[
+          {
+            "reviewList":"",
+            "tipList": "",
+            "linksList": ""
+          }
+        ]
+      },
+      {
+        "type":"radio",
+        "answerText":"No - all of our staff work remotely.",
         "storeAs": "",
         "excludes":[], // exc. environmental Qs when added
         "policyEntry":"",
