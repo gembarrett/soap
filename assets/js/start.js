@@ -253,3 +253,8 @@ function formatArray(arr, storage) {
     return storage;
   }
 }
+
+function stripCode(t){
+  t = t.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  return t;
+}
