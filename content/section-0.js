@@ -149,7 +149,7 @@ var section0 = [
         "type":"radio",
         "answerText":"No - all of our staff work remotely.",
         "storeAs": "",
-        "excludes":[], // exc. environmental Qs when added
+        "excludes":[35, 36, 37, 38, 39], // exc. environmental Qs when added
         "policyEntry":"",
         "appendixEntry":[
           {

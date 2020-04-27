@@ -217,7 +217,7 @@ var section1 = [
       },
       {
         "type":"text",
-        "answerText":"Group chat",
+        "answerText":"Team messaging",
         "placeholder":"e.g. Signal, WhatsApp, Wire, Telegram, SMS, Phone Call, Mattermost, Slack, Matrix",
         "storeAs":"[commsGroup]",
         "excludes":[],
