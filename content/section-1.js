@@ -25,7 +25,8 @@ var section1 = [
             "tipList": "",
             "linksList": ""
           }
-        ]
+        ],
+        "routineEntry":"Sending an email containing confidential information? Hide it from prying eyes by encrypting it with your PGP key.",
       },
       {
         "type":"radio",
@@ -39,7 +40,8 @@ var section1 = [
             "tipList": "",
             "linksList": ""
           }
-        ]
+        ],
+        "routineEntry":"If you have a PGP key, please use it to encrypt emails containing sensitive information.",
       },
       {
         "type":"radio",
@@ -213,7 +215,8 @@ var section1 = [
             "tipList": "",
             "linksList": ""
           }
-        ]
+        ],
+        "routineEntry":"Use [commsDirect] for direct 1-1 messaging.",
       },
       {
         "type":"text",
@@ -228,7 +231,8 @@ var section1 = [
             "tipList": "",
             "linksList": ""
           }
-        ]
+        ],
+        "routineEntry":"[commsGroup] should be used for team messaging.",
       },
       {
         "type":"text",
@@ -243,7 +247,8 @@ var section1 = [
             "tipList": "",
             "linksList": ""
           }
-        ]
+        ],
+        "routineEntry":"Video or audio calls within [orgName] should be carried out on [commsInt].",
       },
       {
         "type":"text",
@@ -258,7 +263,8 @@ var section1 = [
             "tipList": "",
             "linksList": ""
           }
-        ]
+        ],
+        "routineEntry":"Video or audio calls with those outside of [orgName] should be hosted on [commsExt].",
       }
     ],
     "tips":[

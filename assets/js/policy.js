@@ -25,6 +25,7 @@ function compileDoc(p,a){
     tips: [],
     links: []
   };
+  var routineDoc = [];
 
   // set up prevQ currentState.answers[0].q
   var prevQ = currentState.answers[0].q;
@@ -48,26 +49,29 @@ function compileDoc(p,a){
           // questions 0-5 are for context
           case qRef < 6:
             contextP = getPolicyContent(qRef, prevQ, aRef, contextP, found);
-            // if we need the appendix too
+            // if we need the appendix and routines too
             if (a) {
               appContent = getAppendixContent(qRef, prevQ, aRef, appContent, found); // TODO: instead of repeating this is should just be a function call each time
+              routineDoc = getRoutineEntry(qRef, prevQ, aRef, routineDoc, found);
             }
             break;
           // add case for teaming name & pos @ 9
           // questions 6-8 are for devices
           case qRef < 9:
             deviceP = getPolicyContent(qRef, prevQ, aRef, deviceP, found);
-            // if we need the appendix too
+            // if we need the appendix and routines too
             if (a) {
               appContent = getAppendixContent(qRef, prevQ, aRef, appContent, found);
+              routineDoc = getRoutineEntry(qRef, prevQ, aRef, routineDoc, found);
             }
             break;
           // questions 9-12 are for comms
           case qRef < 13:
             commsP = getPolicyContent(qRef, prevQ, aRef, commsP, found);
-            // if we need the appendix too
+            // if we need the appendix and routines too
             if (a) {
               appContent = getAppendixContent(qRef, prevQ, aRef, appContent, found);
+              routineDoc = getRoutineEntry(qRef, prevQ, aRef, routineDoc, found);
             }
             break;
           // question 13 is inc resp
@@ -77,9 +81,10 @@ function compileDoc(p,a){
           // questions 14-19 are for accounts
           case qRef < 20:
             acctsP = getPolicyContent(qRef, prevQ, aRef, acctsP, found);
-            // if we need the appendix too
+            // if we need the appendix and routines too
             if (a) {
               appContent = getAppendixContent(qRef, prevQ, aRef, appContent, found);
+              routineDoc = getRoutineEntry(qRef, prevQ, aRef, routineDoc, found);
             }
             break;
           // question 20 is for inc resp
@@ -90,9 +95,10 @@ function compileDoc(p,a){
           // questions 20-26 are for devices
           case qRef < 27:
             deviceP = getPolicyContent(qRef, prevQ, aRef, deviceP, found);
-            // if we need the appendix too
+            // if we need the appendix and routines too
             if (a) {
               appContent = getAppendixContent(qRef, prevQ, aRef, appContent, found);
+              routineDoc = getRoutineEntry(qRef, prevQ, aRef, routineDoc, found);
             }
             break;
           // question 27 is for inc resp
@@ -103,17 +109,16 @@ function compileDoc(p,a){
           // questions 28-33 are for travel
           case qRef < 34:
             travelP = getPolicyContent(qRef, prevQ, aRef, travelP, found);
-            // if we need the appendix too
+            // if we need the appendix and routines too
             if (a) {
               appContent = getAppendixContent(qRef, prevQ, aRef, appContent, found);
+              routineDoc = getRoutineEntry(qRef, prevQ, aRef, routineDoc, found);
             }
             break;
           // question 34 is for inc resp
           case qRef < 35:
             incResP = getPolicyContent(qRef, prevQ, aRef, incResP, found);
             break;
-
-
           default:
             console.log(qRef + ' not found');
         }
@@ -158,10 +163,10 @@ function compileDoc(p,a){
     doc.html += '<h3>What to do if...</h3><p>' + incResP.join('</p><p>')+'</p>';
   }
 
-  // if appendix is requested, join the policy and appendix arrays together
+  // if appendix is requested, join the policy, appendix and routines arrays together
   if (a) {
     doc.plain += '\n\nAppendix\n';
-    doc.markdown += '\n\n## Appendix <br>';
+    doc.markdown += '\n\n## Appendix\n';
     doc.html += '<h2>Appendix</h2>';
     if (appContent.general.length > 0){
       doc.plain += '\n\nGeneral Advice\n- ' + appContent.general.join('\n- ');
@@ -182,6 +187,11 @@ function compileDoc(p,a){
       doc.plain += '\n\nUseful Links \n- ' + appContent.links.join('\n- ');
       doc.markdown += '\n\n### Useful Links \n\n* ' + appContent.links.join('\n* ');
       doc.html += '<h3>Useful Links</h3><ul><li>' + appContent.links.join('</li><li>')+'</li></ul>';
+    }
+    if (routineDoc.length > 0){
+      doc.plain += '\n\nEveryday practices \n+ ' + routineDoc.join('\n+ ');
+      doc.markdown += '\n\n## Everyday practices \n\n* ' + routineDoc.join('\n* ');
+      doc.html += '<h2>Everyday practices</h2><ul><li>' + routineDoc.join('</li><li>')+'</li></ul>';
     }
   }
   doc.plain += '\n\nPlease note: it is recommended that this policy undergoes a legal review prior to being implemented in your organisation.';
@@ -295,7 +305,7 @@ function downloadPolicy(type) {
     }
 }
 
-
+// TODO: consider merging these three into one function
 function getPolicyContent(question, previous, answer, policy, content){
   // if it's a new question and there's policyContent
   if ((question !== previous) && (content.policyContent !== "")) {
@@ -311,6 +321,7 @@ function getPolicyContent(question, previous, answer, policy, content){
   }
   return policy;
 }
+
 function getAppendixContent(question, previous, answer, appDoc, content){
   if ((question !== previous) && (content.appendixContent !== "")) {
     thisContent = replaceStr(content.appendixContent);
@@ -330,4 +341,22 @@ function getAppendixContent(question, previous, answer, appDoc, content){
     appDoc.links.push(thisContent);
   }
   return appDoc;
+}
+
+function getRoutineEntry(question, previous, answer, routines, content){
+  // if it's a new question and there's a general routine entry
+  if ((question !== previous) && (content.routineEntry !== "")) {
+    // edit the entry and push it to the doc
+    console.log(content.routineEntry);
+    thisContent = replaceStr(content.routineEntry);
+    routines.push(thisContent);
+  }
+  // if the answer has a specific routine entry
+  if (content.answers[answer].routineEntry !== ""){
+    // edit that entry and push it to the doc
+    console.log(content.answers[answer].routineEntry);
+    thisContent = replaceStr(content.answers[answer].routineEntry);
+    routines.push(thisContent);
+  }
+  return routines;
 }

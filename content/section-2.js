@@ -16,63 +16,67 @@ var section2 = [
       {
         "type":"radio",
         "answerText":"LastPass",
-        "storeAs":"[passwordPref]",
+        "storeAs":"",
         "excludes":[16], // no browser storage
-        "policyEntry":"In particular, we ask you to use [passwordPref] and if you require any help with set up or using this tool then you should discuss it with [contactName].",
+        "policyEntry":"In particular, we ask you to use LastPass and if you require any help with set up or using this tool then you should discuss it with [contactName].",
         "appendixEntry":[
           {
             "reviewList":"",
             "tipList": "",
             "linksList": ""
           }
-        ]
+        ],
+        "routineEntry":"Protect your accounts: use LastPass to generate and store your passwords!",
       },
       {
         "type":"radio",
         "answerText":"1Password",
-        "storeAs":"[passwordPref]",
+        "storeAs":"",
         "excludes":[16],
-        "policyEntry":"In particular, we ask you to use [passwordPref] and if you require any help with set up or using this tool then you should discuss it with [contactName].",
+        "policyEntry":"In particular, we ask you to use 1Password and if you require any help with set up or using this tool then you should discuss it with [contactName].",
         "appendixEntry":[
           {
             "reviewList":"",
             "tipList": "",
             "linksList": "1Password website: https://1password.com"
           }
-        ]
+        ],
+        "routineEntry":"Protect your accounts: use 1Password to generate and store your passwords!",
       },
       {
         "type":"radio",
         "answerText":"KeePass",
-        "storeAs":"[passwordPref]",
+        "storeAs":"",
         "excludes":[16],
-        "policyEntry":"In particular, we ask you to use [passwordPref] and if you require any help with set up or using this tool then you should discuss it with [contactName].",
+        "policyEntry":"In particular, we ask you to use KeePass and if you require any help with set up or using this tool then you should discuss it with [contactName].",
         "appendixEntry":[
           {
             "reviewList":"",
             "tipList": "",
             "linksList": "KeePass website: https://keepass.info"
           }
-        ]
+        ],
+        "routineEntry":"Protect your accounts: use KeePass to generate and store your passwords!",
       },
       {
         "type":"radio",
         "answerText":"PasswordSafe",
-        "storeAs":"[passwordPref]",
+        "storeAs":"",
         "excludes":[16],
-        "policyEntry":"In particular, we ask you to use [passwordPref] and if you require any help with set up or using this tool then you should discuss it with [contactName].",
+        "policyEntry":"In particular, we ask you to use PasswordSafe and if you require any help with set up or using this tool then you should discuss it with [contactName].",
         "appendixEntry":[
           {
             "reviewList":"",
             "tipList": "",
             "linksList": "PasswordSafe website: https://www.pwsafe.org"
           }
-        ]
+        ],
+        "routineEntry":"Protect your accounts: use PasswordSafe to generate and store your passwords!",
       },
       {
         "type":"radio",
         "answerText":"Staff preference",
-        "storeAs":"[passwordPref]",
+        "storeAs":"",
         "excludes":[],
         "policyEntry":"As there are several options available, it is up to you to choose which suits your workflow best. If you’re unsure of the best password manager for your situation, please contact [contactName] to discuss.",
         "appendixEntry":[
@@ -81,7 +85,8 @@ var section2 = [
             "tipList": "",
             "linksList": ""
           }
-        ]
+        ],
+        "routineEntry":"Protect your accounts: use a password manager to generate and store your passwords!",
       },
       {
         "type":"radio",
@@ -96,7 +101,8 @@ var section2 = [
             "tipList": "",
             "linksList": ""
           }
-        ]
+        ],
+        "routineEntry":"Protect your accounts: use [passwordPref] to generate and store your passwords!",
       }
     ],
     "tips":[
@@ -185,7 +191,8 @@ var section2 = [
             "tipList": "",
             "linksList": ""
           }
-        ]
+        ],
+        "routineEntry":"Choose your authenticator! Authentication apps, security keys or just your phone - any multi-factor authentication is better than passwords alone.",
       },
       {
         "type":"radio",
@@ -199,7 +206,8 @@ var section2 = [
             "tipList": "",
             "linksList": ""
           }
-        ]
+        ],
+        "routineEntry":"Please use your security key or authentication app to secure access to your accounts - phone/SMS are not good enough.",
       },
       {
         "type":"radio",
@@ -213,7 +221,8 @@ var section2 = [
             "tipList": "",
             "linksList": ""
           }
-        ]
+        ],
+        "routineEntry":"Add an extra layer of security to your accounts by enabling two-factor authentication that sends your code by phone call or SMS."
       }
     ],
     "tips":[

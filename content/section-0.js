@@ -26,7 +26,8 @@ var section0 = [
             "tipList": "",
             "linksList": ""
           }
-        ]
+        ],
+        "routineEntry":"This is the short version of [orgName] security policy. It is designed to remind you of the everyday practices to include in your routine.",
       }
     ],
     "tips":[
@@ -174,6 +175,7 @@ var section0 = [
     "required":true,
     "policyContent":"",
     "appendixContent":"",
+    "routineEntry":"Got questions? Ask [contactName], [contactPos]!",
     "answers":[
       {
         "type":"text",
@@ -188,7 +190,7 @@ var section0 = [
             "tipList": "",
             "linksList": ""
           }
-        ]
+        ],
       },
       {
         "type":"text",
