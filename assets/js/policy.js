@@ -133,31 +133,26 @@ function compileDoc(p,a){
   doc.html = '<!DOCTYPE html><html><head><title>Cleaned with SOAP on '+dateStamp()+'</title></head><body><h1>Organisational Security Policy</h1><h4>Created '+dateStamp()+'</h4><p>'+contextP.join('</p><p>')+'</p>';
 
   if (deviceP.length > 0){
-    console.log(deviceP.length);
     doc.plain += '\n\nDevice Security\n' + deviceP.join('\n');
     doc.markdown += '\n\n### Device Security \n' + deviceP.join('\n');
     doc.html += '<h3>Device Security</h3><p>' + deviceP.join('</p><p>')+'</p>';
   }
   if (commsP.length > 0){
-    console.log(commsP.length);
     doc.plain += '\n\nCommunications Security\n' + commsP.join('\n');
     doc.markdown += '\n\n### Communications Security \n' + commsP.join('\n');
     doc.html += '<h3>Communications Security</h3><p>' + commsP.join('</p><p>')+'</p>';
   }
   if (acctsP.length > 0){
-    console.log(acctsP.length);
     doc.plain += '\n\nAccounts Security\n' + acctsP.join('\n');
     doc.markdown += '\n\n### Accounts Security \n' + acctsP.join('\n');
     doc.html += '<h3>Accounts Security</h3><p>' + acctsP.join('</p><p>')+'</p>';
   }
   if (travelP.length > 0){
-    console.log(travelP.length);
     doc.plain += '\n\Travel Security\n' + travelP.join('\n');
     doc.markdown += '\n\n### Travel Security \n' + travelP.join('\n');
     doc.html += '<h3>Travel Security</h3><p>' + travelP.join('</p><p>')+'</p>';
   }
   if (incResP.length > 0){
-    console.log(incResP.length);
     doc.plain += '\n\nWhat to do if...\n' + incResP.join('\n\n');
     doc.markdown += '\n\n### What to do if...\n' + incResP.join('\n\n');
     doc.html += '<h3>What to do if...</h3><p>' + incResP.join('</p><p>')+'</p>';
@@ -347,7 +342,6 @@ function getRoutineEntry(question, previous, answer, routines, content){
   // if it's a new question and there's a general routine entry
   if ((question !== previous) && (content.routineEntry !== "")) {
     // edit the entry and push it to the doc
-    console.log(content.routineEntry);
     thisContent = replaceStr(content.routineEntry);
     routines.push(thisContent);
   }

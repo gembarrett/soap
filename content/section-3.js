@@ -12,6 +12,7 @@ var section3 = [
     "required":true,
     "policyContent":"In order to protect devices from unauthorised physical infiltration, all devices which are used for [orgName] purposes should have an automatic screen lock enabled and may be configured to use [deviceAuth].",
     "appendixContent":"Be aware that touchscreen devices are susceptible to holding fingerprint marks which can be used to guess recently-used key sequences.",
+    "routineEntry":"",
     "answers":[
       {
         "type":"checkbox",
@@ -19,6 +20,7 @@ var section3 = [
         "storeAs":"[deviceAuth]",
         "excludes":[],
         "policyEntry":"",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -33,6 +35,7 @@ var section3 = [
         "storeAs":"[deviceAuth]",
         "excludes":[],
         "policyEntry":"",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -56,6 +59,7 @@ var section3 = [
     "required":false,
     "policyContent":"In order to support device security across the organisation, we use the following tools: [devSecTools]",
     "appendixContent":"",
+    "routineEntry":"",
     "answers":[
       {
         "type":"checkbox",
@@ -63,6 +67,7 @@ var section3 = [
         "storeAs":"[devSecTools]",
         "excludes":[],
         "policyEntry":"",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -77,6 +82,7 @@ var section3 = [
         "storeAs":"[devSecTools]",
         "excludes":[],
         "policyEntry":"",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -91,6 +97,7 @@ var section3 = [
         "storeAs":"[devSecTools]",
         "excludes":[],
         "policyEntry":"",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -105,6 +112,7 @@ var section3 = [
         "storeAs":"[devSecTools]",
         "excludes":[],
         "policyEntry":"",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -120,6 +128,7 @@ var section3 = [
         "storeAs":"[devSecTools]",
         "excludes":[],
         "policyEntry":"",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -143,6 +152,7 @@ var section3 = [
     "required":false,
     "policyContent":"[orgName] is responsible for managing data backups which are kept in [storagePref] storage.",
     "appendixContent":"",
+    "routineEntry":"",
     "answers":[
       {
         "type":"checkbox",
@@ -150,6 +160,7 @@ var section3 = [
         "storeAs":"[storagePref]",
         "excludes":[],
         "policyEntry":"",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"Is your physical storage still in good working order or is it time to upgrade?",
@@ -164,6 +175,7 @@ var section3 = [
         "storeAs":"[storagePref]",
         "excludes":[],
         "policyEntry":"",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"Does your cloud storage provider still provide the most appropriate package for your data or is it time to migrate?",
@@ -187,6 +199,7 @@ var section3 = [
     "required":true,
     "policyContent":"To ensure we’re able to recover data during a data loss or compromise incident, we perform backups on an [backupFreq] basis.",
     "appendixContent":"Plan to test your backups on a regular basis! In an ideal world you might never have to restore from backup, but the last thing you want to find during an emergency is that your backups are corrupted or incomplete.",
+    "routineEntry":"",
     "answers":[
       {
         "type":"radio",
@@ -194,6 +207,7 @@ var section3 = [
         "storeAs":"[backupFreq]",
         "excludes":[],
         "policyEntry":"",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -208,6 +222,7 @@ var section3 = [
         "storeAs":"[backupFreq]",
         "excludes":[],
         "policyEntry":"",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"Are daily backups still frequent enough or do you need backups throughout the day?",
@@ -222,6 +237,7 @@ var section3 = [
         "storeAs":"[backupFreq]",
         "excludes":[],
         "policyEntry":"",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"Is your data changing more frequently? Could an increase in the backup frequency be appropriate?",
@@ -237,6 +253,7 @@ var section3 = [
         "storeAs":"[backupFreq]",
         "excludes":[],
         "policyEntry":"",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -260,6 +277,7 @@ var section3 = [
     "required":false,
     "policyContent":"[orgName] requires that devices used for work purposes be backed up as the loss, exposure or corruption of [orgName] data puts us, and those we work with, at risk. Backups are managed in the following ways: ",
     "appendixContent":"Be sure to discuss any recent data loss or similar incidents at each review - they are good learning opportunities. An approach to backups is the 3-2-1 rule: at least 3 backup copies of your data on at least 2 different kinds of medium, with at least 1 of these stored offsite.",
+    "routineEntry":"",
     "answers":[
       {
         "type":"checkbox",
@@ -267,6 +285,7 @@ var section3 = [
         "storeAs":"",
         "excludes":[],
         "policyEntry":"- Backups are encrypted to help protect against unauthorised access.",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -281,6 +300,7 @@ var section3 = [
         "storeAs":"",
         "excludes":[],
         "policyEntry":"- Sometimes backup data becomes corrupted, so to minimise the impact of this we test the backups regularly to detect any issues.",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"Have there been any recent instances of backup failure that can be learned from?",
@@ -295,6 +315,7 @@ var section3 = [
         "storeAs":"",
         "excludes":[],
         "policyEntry":"- Multi-factor authentication is required in order to access the backups.",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"Do those with access to backups still require it?",
@@ -309,6 +330,7 @@ var section3 = [
         "storeAs":"",
         "excludes":[],
         "policyEntry":"- There is a delay in file deletion to minimise accidental destruction.",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -324,6 +346,7 @@ var section3 = [
         "storeAs":"[otherBackupSec]",
         "excludes":[],
         "policyEntry":"- [otherBackupSec]",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -347,6 +370,7 @@ var section3 = [
     "required":false,
     "policyContent":"... your device is seized: whether this is at a border, a protest or a raid, it is important to let someone know as soon about the situation as you are able, in order to begin countering any unauthorised access as early as possible. You are advised to follow these steps: [inc3Tactics]",
     "appendixContent": "Device seizures under any circumstances can be a traumatising event so be sure to offer support to your impacted colleague.",
+    "routineEntry":"",
     "answers":[
       {
         "type":"textarea",
@@ -355,6 +379,7 @@ var section3 = [
         "storeAs":"[inc3Tactics]",
         "excludes":[],
         "policyEntry":"",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",

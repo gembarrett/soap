@@ -12,6 +12,7 @@ var section0 = [
     "required":true,
     "policyContent":"",
     "appendixContent":"",
+    "routineEntry":"",
     "answers":[
       {
         "type":"text",
@@ -20,14 +21,14 @@ var section0 = [
         "storeAs":"[orgName]",
         "excludes":[],
         "policyEntry":"This is the security policy of [orgName], which has been created in order to support staff in carrying out our sensitive work securely. It is important to understand and comply with the rules described as they aim to protect everyone involved in our work, including partner organisations and frontline activists.",
+        "routineEntry":"This is the short version of [orgName] security policy. It is designed to remind you of the everyday practices to include in your routine.",
         "appendixEntry": [
           {
             "reviewList":"",
             "tipList": "",
             "linksList": ""
           }
-        ],
-        "routineEntry":"This is the short version of [orgName] security policy. It is designed to remind you of the everyday practices to include in your routine.",
+        ]
       }
     ],
     "tips":[
@@ -44,6 +45,7 @@ var section0 = [
     "required":false,
     "policyContent":"This policy applies to [appliesTo].",
     "appendixContent":"",
+    "routineEntry":"",
     "answers":[
       {
         "type":"checkbox",
@@ -51,6 +53,7 @@ var section0 = [
         "storeAs":"[appliesTo]",
         "excludes":[],
         "policyEntry":"",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -65,6 +68,7 @@ var section0 = [
         "storeAs":"[appliesTo]",
         "excludes":[],
         "policyEntry":"",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -79,6 +83,7 @@ var section0 = [
         "storeAs": "[appliesTo]",
         "excludes":[],
         "policyEntry":"",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -94,6 +99,7 @@ var section0 = [
         "storeAs": "[appliesTo]",
         "excludes":[],
         "policyEntry":"",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -117,6 +123,7 @@ var section0 = [
     "required":true,
     "policyContent":"",
     "appendixContent":"",
+    "routineEntry":"",
     "answers":[
       {
         "type":"radio",
@@ -124,6 +131,7 @@ var section0 = [
         "storeAs": "",
         "excludes":[],
         "policyEntry":"",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -138,6 +146,7 @@ var section0 = [
         "storeAs": "",
         "excludes":[],
         "policyEntry":"",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -152,6 +161,7 @@ var section0 = [
         "storeAs": "",
         "excludes":[35, 36, 37, 38, 39], // exc. environmental Qs when added
         "policyEntry":"",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -184,6 +194,7 @@ var section0 = [
         "storeAs":"[contactName]",
         "excludes":[],
         "policyEntry":"If you have questions about this policy or its recommendations, please contact [contactName]",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"Is [contactName] still responsible for this policy?",
@@ -199,6 +210,7 @@ var section0 = [
         "storeAs":"[contactPos]",
         "excludes":[],
         "policyEntry":"([contactPos]).",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -214,6 +226,7 @@ var section0 = [
         "storeAs":"[contactProns]",
         "excludes":[],
         "policyEntry":"Their pronouns are [contactProns].",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"Does [contactName] still use [contactProns] pronouns?",
@@ -229,6 +242,7 @@ var section0 = [
         "storeAs":"[contactEmail]",
         "excludes":[],
         "policyEntry":"Email: [contactEmail]",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"Is [contactName]'s email address up-to-date?",
@@ -244,6 +258,7 @@ var section0 = [
         "storeAs":"[contactPhone]",
         "excludes":[],
         "policyEntry":"Phone: [contactPhone]",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"Is [contactName]'s phone number correct?",
@@ -267,6 +282,7 @@ var section0 = [
     "required":true,
     "policyContent":"This policy will be reviewed by [contactName] ([contactPos]) on a [reviewFreq] basis. Any suggestions or feedback on the policy’s contents should be directed to them.",
     "appendixContent":"",
+    "routineEntry":"",
     "answers":[
       {
         "type":"checkbox",
@@ -274,6 +290,7 @@ var section0 = [
         "storeAs": "[reviewFreq]",
         "excludes":[],
         "policyEntry":"",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -288,6 +305,7 @@ var section0 = [
         "storeAs": "[reviewFreq]",
         "excludes":[], // review this
         "policyEntry":"",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -302,6 +320,7 @@ var section0 = [
         "storeAs": "[reviewFreq]",
         "excludes":[],
         "policyEntry":"",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -316,6 +335,7 @@ var section0 = [
         "storeAs": "[reviewFreq]",
         "excludes":[],
         "policyEntry":"",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -339,6 +359,7 @@ var section0 = [
     "required":false,
     "policyContent":"",
     "appendixContent":"",
+    "routineEntry":"",
     "answers":[
       {
         "type":"checkbox",
@@ -346,6 +367,7 @@ var section0 = [
         "storeAs": "",
         "excludes":[],
         "policyEntry":"",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -360,6 +382,7 @@ var section0 = [
         "storeAs": "",
         "excludes":[],
         "policyEntry":"",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -374,6 +397,7 @@ var section0 = [
         "storeAs": "",
         "excludes":[],
         "policyEntry":"",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -388,6 +412,7 @@ var section0 = [
         "storeAs": "",
         "excludes":[],
         "policyEntry":"",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -402,6 +427,7 @@ var section0 = [
         "storeAs": "",
         "excludes":[],
         "policyEntry":"",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -416,6 +442,7 @@ var section0 = [
         "storeAs": "",
         "excludes":[],
         "policyEntry":"",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -431,6 +458,7 @@ var section0 = [
         "storeAs": "",
         "excludes":[],
         "policyEntry":"",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -454,6 +482,7 @@ var section0 = [
     "required":true,
     "policyContent":"[orgName] manages device security in the following way, depending on the situation:",
     "appendixContent":"",
+    "routineEntry":"",
     "answers":[
       {
         "type":"checkbox",
@@ -461,6 +490,7 @@ var section0 = [
         "storeAs": "",
         "excludes":[],
         "policyEntry":"- Profiles on your devices: With your consent, we will install a work profile on your personal devices in order for you to use them in the course of your work. This work profile will keep your work and personal use of the device separated.",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -475,6 +505,7 @@ var section0 = [
         "storeAs": "",
         "excludes":[],
         "policyEntry":"- Profiles on [orgName] devices: [orgName] staff are given some freedom to decide their work environment and equipment, and we acknowledge that there may be times when after hours access to work email and data is needed. We will provide you with devices and install both a work and personal profile for you to use.",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -489,6 +520,7 @@ var section0 = [
         "storeAs": "",
         "excludes":[],
         "policyEntry":"- [orgName] devices for work-only use: We will provide you with devices, such as a computer, to use solely for work purposes.",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -503,6 +535,7 @@ var section0 = [
         "storeAs": "",
         "excludes":[7],
         "policyEntry":"- Your device, your choice: You may use your own devices as work equipment, we do not require the use of a work profile but please strive to maintain a separation between your work and personal data.",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -526,6 +559,7 @@ var section0 = [
     "required":false,
     "policyContent":"In addition to other device security measures, [orgName] will also provide you with [providePrivacy] to use on your devices.",
     "appendixContent":"",
+    "routineEntry":"",
     "answers":[
       {
         "type":"checkbox",
@@ -533,6 +567,7 @@ var section0 = [
         "storeAs": "[providePrivacy]",
         "excludes":[],
         "policyEntry":"",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -547,6 +582,7 @@ var section0 = [
         "storeAs": "[providePrivacy]",
         "excludes":[],
         "policyEntry":"",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
