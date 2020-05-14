@@ -348,7 +348,6 @@ function getRoutineEntry(question, previous, answer, routines, content){
   // if the answer has a specific routine entry
   if (content.answers[answer].routineEntry !== ""){
     // edit that entry and push it to the doc
-    console.log(content.answers[answer].routineEntry);
     thisContent = replaceStr(content.answers[answer].routineEntry);
     routines.push(thisContent);
   }
