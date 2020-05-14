@@ -12,6 +12,7 @@ var section1 = [
     "required":false,
     "policyContent":"",
     "appendixContent":"",
+    "routineEntry":"",
     "answers":[
       {
         "type":"radio",
@@ -19,13 +20,15 @@ var section1 = [
         "storeAs":"",
         "excludes":[],
         "policyEntry":"[orgName] requires staff to use PGP to encrypt sensitive emails. If you need help with setting up, please contact [contactName].",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
             "tipList": "",
             "linksList": ""
           }
-        ]
+        ],
+        "routineEntry":"Sending an email containing confidential information? Hide it from prying eyes by encrypting it with your PGP key.",
       },
       {
         "type":"radio",
@@ -33,13 +36,15 @@ var section1 = [
         "storeAs":"",
         "excludes":[],
         "policyEntry":"[orgName] prefers some staff to use PGP to encrypt sensitive emails. You will be informed if this applies to you and offered help with setting up, should you require it.",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
             "tipList": "",
             "linksList": ""
           }
-        ]
+        ],
+        "routineEntry":"If you have a PGP key, please use it to encrypt emails containing sensitive information.",
       },
       {
         "type":"radio",
@@ -47,6 +52,7 @@ var section1 = [
         "storeAs":"",
         "excludes":[],
         "policyEntry":"",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -70,6 +76,7 @@ var section1 = [
     "required":false,
     "policyContent":"In order to protect your online activities from common tracking and interference, we recommend all staff install the following privacy-enhancing extensions: [extArray].",
     "appendixContent":"",
+    "routineEntry":"",
     "answers":[
       {
         "type":"checkbox",
@@ -77,6 +84,7 @@ var section1 = [
         "storeAs":"[extArray]",
         "excludes":[],
         "policyEntry":"",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -91,6 +99,7 @@ var section1 = [
         "storeAs":"[extArray]",
         "excludes":[],
         "policyEntry":"",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -105,6 +114,7 @@ var section1 = [
         "storeAs":"[extArray]",
         "excludes":[],
         "policyEntry":"",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -119,6 +129,7 @@ var section1 = [
         "storeAs":"[extArray]",
         "excludes":[],
         "policyEntry":"",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -133,6 +144,7 @@ var section1 = [
         "storeAs":"[extArray]",
         "excludes":[],
         "policyEntry":"",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -147,6 +159,7 @@ var section1 = [
         "storeAs":"[extArray]",
         "excludes":[],
         "policyEntry":"",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -161,6 +174,7 @@ var section1 = [
         "storeAs":"[extArray]",
         "excludes":[],
         "policyEntry":"",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -176,6 +190,7 @@ var section1 = [
         "storeAs": "[extArray]",
         "excludes":[],
         "policyEntry":"",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -199,6 +214,7 @@ var section1 = [
     "required":false,
     "policyContent":"When communicating sensitive work data, [orgName] prefers staff use the following tools.",
     "appendixContent":"Pay attention to any changes in encryption standards, data breaches or security vulnerabilities that are in the news and relevant to your communication platforms.",
+    "routineEntry":"",
     "answers":[
       {
         "type":"text",
@@ -207,28 +223,30 @@ var section1 = [
         "storeAs":"[commsDirect]",
         "excludes":[],
         "policyEntry":"- For 1-1 communications (e.g. direct message to a colleague), please use [commsDirect].",
+        "routineEntry":"Use [commsDirect] for direct 1-1 messaging.",
         "appendixEntry":[
           {
             "reviewList":"Is [commsDirect] still the most appropriate method for your direct communications?",
             "tipList": "",
             "linksList": ""
           }
-        ]
+        ],
       },
       {
         "type":"text",
-        "answerText":"Group chat",
+        "answerText":"Team messaging",
         "placeholder":"e.g. Signal, WhatsApp, Wire, Telegram, SMS, Phone Call, Mattermost, Slack, Matrix",
         "storeAs":"[commsGroup]",
         "excludes":[],
         "policyEntry":"- When communicating with a group (e.g. your project team), please use [commsGroup].",
+        "routineEntry":"[commsGroup] should be used for team messaging.",
         "appendixEntry":[
           {
             "reviewList":"Should you continue recommending [commsGroup] for group communications?",
             "tipList": "",
             "linksList": ""
           }
-        ]
+        ],
       },
       {
         "type":"text",
@@ -237,13 +255,14 @@ var section1 = [
         "storeAs":"[commsInt]",
         "excludes":[],
         "policyEntry":"- We use [commsInt] for internal video or audio calls, e.g. for remote staff meetings.",
+        "routineEntry":"Video or audio calls within [orgName] should be carried out on [commsInt].",
         "appendixEntry":[
           {
             "reviewList":"How well has [commsInt] been working as an internal video calls platform?",
             "tipList": "",
             "linksList": ""
           }
-        ]
+        ],
       },
       {
         "type":"text",
@@ -252,13 +271,14 @@ var section1 = [
         "storeAs":"[commsExt]",
         "excludes":[],
         "policyEntry":"- External video and audio calls take place through [commsExt].",
+        "routineEntry":"Video or audio calls with those outside of [orgName] should be hosted on [commsExt].",
         "appendixEntry":[
           {
             "reviewList":"Is [commsExt] still a good option for external video and audio calls?",
             "tipList": "",
             "linksList": ""
           }
-        ]
+        ],
       }
     ],
     "tips":[
@@ -275,6 +295,7 @@ var section1 = [
     "required":false,
     "policyContent":"... you receive a suspicious email: Phishing involves being duped into providing information to parties that you otherwise wouldn’t share, usually through fake account notifications or impersonating a known contact. Unfortunately this kind of attack in common and so it is important to understand the steps we recommend taking to both mitigate and recover from such an attack: [inc1Tactics]",
     "appendixContent": "To check whether a link or attachment contains known malware, upload it to VirusTotal; a service owned by Google which reads the file and detects familiar malicious code. It won’t find every attack, only the known ones it’s seen before, but it’s a valuable tool nonetheless.",
+    "routineEntry":"",
     "answers":[
       {
         "type":"textarea", // check for this before making an input field
@@ -283,6 +304,7 @@ var section1 = [
         "storeAs":"[inc1Tactics]",
         "excludes":[],
         "policyEntry":"",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"Are all of the incident response plans up-to-date?",

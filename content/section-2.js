@@ -12,76 +12,82 @@ var section2 = [
     "required":true,
     "policyContent":"Passwords are hard to remember, so [orgName] ask staff to use a password manager.",
     "appendixContent":"",
+    "routineEntry":"",
     "answers":[
       {
         "type":"radio",
         "answerText":"LastPass",
-        "storeAs":"[passwordPref]",
+        "storeAs":"",
         "excludes":[16], // no browser storage
-        "policyEntry":"In particular, we ask you to use [passwordPref] and if you require any help with set up or using this tool then you should discuss it with [contactName].",
+        "policyEntry":"In particular, we ask you to use LastPass and if you require any help with set up or using this tool then you should discuss it with [contactName].",
+        "routineEntry":"Protect your accounts: use LastPass to generate and store your passwords!",
         "appendixEntry":[
           {
             "reviewList":"",
             "tipList": "",
             "linksList": ""
           }
-        ]
+        ],
       },
       {
         "type":"radio",
         "answerText":"1Password",
-        "storeAs":"[passwordPref]",
+        "storeAs":"",
         "excludes":[16],
-        "policyEntry":"In particular, we ask you to use [passwordPref] and if you require any help with set up or using this tool then you should discuss it with [contactName].",
+        "policyEntry":"In particular, we ask you to use 1Password and if you require any help with set up or using this tool then you should discuss it with [contactName].",
+        "routineEntry":"Protect your accounts: use 1Password to generate and store your passwords!",
         "appendixEntry":[
           {
             "reviewList":"",
             "tipList": "",
             "linksList": "1Password website: https://1password.com"
           }
-        ]
+        ],
       },
       {
         "type":"radio",
         "answerText":"KeePass",
-        "storeAs":"[passwordPref]",
+        "storeAs":"",
         "excludes":[16],
-        "policyEntry":"In particular, we ask you to use [passwordPref] and if you require any help with set up or using this tool then you should discuss it with [contactName].",
+        "policyEntry":"In particular, we ask you to use KeePass and if you require any help with set up or using this tool then you should discuss it with [contactName].",
+        "routineEntry":"Protect your accounts: use KeePass to generate and store your passwords!",
         "appendixEntry":[
           {
             "reviewList":"",
             "tipList": "",
             "linksList": "KeePass website: https://keepass.info"
           }
-        ]
+        ],
       },
       {
         "type":"radio",
         "answerText":"PasswordSafe",
-        "storeAs":"[passwordPref]",
+        "storeAs":"",
         "excludes":[16],
-        "policyEntry":"In particular, we ask you to use [passwordPref] and if you require any help with set up or using this tool then you should discuss it with [contactName].",
+        "policyEntry":"In particular, we ask you to use PasswordSafe and if you require any help with set up or using this tool then you should discuss it with [contactName].",
+        "routineEntry":"Protect your accounts: use PasswordSafe to generate and store your passwords!",
         "appendixEntry":[
           {
             "reviewList":"",
             "tipList": "",
             "linksList": "PasswordSafe website: https://www.pwsafe.org"
           }
-        ]
+        ],
       },
       {
         "type":"radio",
         "answerText":"Staff preference",
-        "storeAs":"[passwordPref]",
+        "storeAs":"",
         "excludes":[],
         "policyEntry":"As there are several options available, it is up to you to choose which suits your workflow best. If you’re unsure of the best password manager for your situation, please contact [contactName] to discuss.",
+        "routineEntry":"Protect your accounts: use a password manager to generate and store your passwords!",
         "appendixEntry":[
           {
             "reviewList":"",
             "tipList": "",
             "linksList": ""
           }
-        ]
+        ],
       },
       {
         "type":"radio",
@@ -90,13 +96,14 @@ var section2 = [
         "storeAs": "[passwordPref]",
         "excludes":[],
         "policyEntry":"In particular, we ask you to use [passwordPref] and if you require any help with set up or using this tool then you should discuss it with [contactName].",
+        "routineEntry":"Protect your accounts: use [passwordPref] to generate and store your passwords!",
         "appendixEntry":[
           {
             "reviewList":"",
             "tipList": "",
             "linksList": ""
           }
-        ]
+        ],
       }
     ],
     "tips":[
@@ -113,6 +120,7 @@ var section2 = [
     "required":false,
     "policyContent":"",
     "appendixContent":"",
+    "routineEntry":"",
     "answers":[
       {
         "type":"radio",
@@ -120,6 +128,7 @@ var section2 = [
         "storeAs":"[]",
         "excludes":[],
         "policyEntry":"Staff who are aware of the risks may store their passwords in their browser for more convenient access, however they are expected to frequently clear out old logins",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"Are staff still allowed to store passwords in their browser?",
@@ -134,6 +143,7 @@ var section2 = [
         "storeAs":"[]",
         "excludes":[],
         "policyEntry":"Staff are advised to refrain from storing passwords in their browser due to the security risks. If you need guidance on choosing an alternative password storage system, [contactName], [contactPos], will be able to advise you on this.",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -149,6 +159,7 @@ var section2 = [
         "storeAs":"[exemptions]",
         "excludes":[],
         "policyEntry":"Ordinarily, we would prefer staff to avoid storing passwords in their browser, however it is permitted under these circumstances: [exemptions]",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -172,6 +183,7 @@ var section2 = [
     "required":true,
     "policyContent":"Two-factor authentication is a good method of securing our accounts beyond passwords as it requires an additional one-time code to be provided at login, putting an extra barrier between your data and an attacker. Two-factor authentication should be enabled on every account which supports it.",
     "appendixContent":"",
+    "routineEntry":"",
     "answers":[
       {
         "type":"radio",
@@ -179,13 +191,14 @@ var section2 = [
         "storeAs":"",
         "excludes":[], // excl. 17/18?
         "policyEntry":"The options for getting this code include authentication apps, hardware keys, SMS or automated phone call and [orgName] asks staff to use their best judgment when choosing a method for securing each work-related account.",
+        "routineEntry":"Choose your authenticator! Authentication apps, security keys or just your phone - any multi-factor authentication is better than passwords alone.",
         "appendixEntry":[
           {
             "reviewList":"",
             "tipList": "",
             "linksList": ""
           }
-        ]
+        ],
       },
       {
         "type":"radio",
@@ -193,13 +206,14 @@ var section2 = [
         "storeAs":"",
         "excludes":[],
         "policyEntry":"[orgName] requires staff to use two-factor apps or hardware authentication methods. Please do not use SMS or phone call authentication as they are insecure methods that can be intercepted.",
+        "routineEntry":"Please use your security key or authentication app to secure access to your accounts - phone/SMS are not good enough.",
         "appendixEntry":[
           {
             "reviewList":"",
             "tipList": "",
             "linksList": ""
           }
-        ]
+        ],
       },
       {
         "type":"radio",
@@ -207,13 +221,14 @@ var section2 = [
         "storeAs":"",
         "excludes":[17, 18],
         "policyEntry":"[orgName] requires staff to use SMS or phone call authentication methods. However, be aware of the risks of interception that come with using these methods.",
+        "routineEntry":"Add an extra layer of security to your accounts by enabling two-factor authentication that sends your code by phone call or SMS.",
         "appendixEntry":[
           {
             "reviewList":"",
             "tipList": "",
             "linksList": ""
           }
-        ]
+        ],
       }
     ],
     "tips":[
@@ -230,6 +245,7 @@ var section2 = [
     "required":false,
     "policyContent":"",
     "appendixContent":"",
+    "routineEntry":"",
     "answers":[
       {
         "type":"radio",
@@ -237,6 +253,7 @@ var section2 = [
         "storeAs":"",
         "excludes":[],
         "policyEntry":"To ensure consistency and help with training and troubleshooting, [orgName] recommends the Google Authenticator app for two-factor authentication. If this app is not pre-installed then you should install it from your platform’s app store, requesting assistance from [contactName] when needed.",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"Is Google Authenticator well integrated with staff workflows?",
@@ -251,6 +268,7 @@ var section2 = [
         "storeAs":"",
         "excludes":[],
         "policyEntry":"To ensure consistency and help with training and troubleshooting, [orgName] recommends the Duo Mobile app for two-factor authentication. If this app is not pre-installed then you should install it from your platform’s app store, requesting assistance from [contactName] when needed.",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"Is Duo Mobile well integrated with staff workflows?",
@@ -265,6 +283,7 @@ var section2 = [
         "storeAs":"",
         "excludes":[],
         "policyEntry":"To ensure consistency and help with training and troubleshooting, [orgName] recommends the Authy app for two-factor authentication. If this app is not pre-installed then you should install it from your platform’s app store, requesting assistance from [contactName]  when needed.",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"Is Authy well integrated with staff workflows?",
@@ -279,6 +298,7 @@ var section2 = [
         "storeAs":"",
         "excludes":[],
         "policyEntry":"While [orgName] requires the use of an authenticator app, we leave it to staff to make their own choice of which one to use. If you are unsure of which is best for your device and workflow, [contactName] is available for advice.",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"Are staff consistently using an authenticator app?",
@@ -294,6 +314,7 @@ var section2 = [
         "storeAs": "[authApp]",
         "excludes":[],
         "policyEntry":"To ensure consistency and help with training and troubleshooting, [orgName] uses [authApp] for two-factor authentication where platforms allow it. This app may be installed automatically as part of your mobile work device set up, otherwise you should install it from your platform’s app store, requesting assistance from [contactName] when needed",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"Is [authApp] well integrated with staff workflows?",
@@ -317,6 +338,7 @@ var section2 = [
     "required":false,
     "policyContent":"",
     "appendixContent":"",
+    "routineEntry":"",
     "answers":[
       {
         "type":"radio",
@@ -324,6 +346,7 @@ var section2 = [
         "storeAs":"",
         "excludes":[],
         "policyEntry":"For hardware authentication, we will provide you with a security key. Should you require any help with using the key, contact [contactName].",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -338,6 +361,7 @@ var section2 = [
         "storeAs":"",
         "excludes":[],
         "policyEntry":"Hardware authentication has a few options for keys and it is up to staff to select and purchase their preferred key if they wish to use one. If you are uncertain of the choices available and their suitability for your work, please contact [contactName] to discuss.",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -361,6 +385,7 @@ var section2 = [
     "required":false,
     "policyContent":"... you notice suspicious activity in any work-related accounts: This could look like unprompted two-factor code requests, strange login times, or rejection of correct passwords - any unfamiliar actions performed by, or within, the account should be investigated. To do this, you are advised to follow these steps: [inc2Tactics]",
     "appendixContent": "Sometimes data breaches are to blame for a hacked account, and so it can be worth checking if the email associated with the account was recently involved in such an incident by visiting Have I Been Pwned or a similar site",
+    "routineEntry":"",
     "answers":[
       {
         "type":"textarea", // check for this before making an input field
@@ -369,6 +394,7 @@ var section2 = [
         "storeAs":"[inc2Tactics]",
         "excludes":[],
         "policyEntry":"",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",

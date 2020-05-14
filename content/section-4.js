@@ -12,6 +12,7 @@ var section4 = [
     "required":true,
     "policyContent":"",
     "appendixContent":"",
+    "routineEntry":"",
     "answers":[
       {
         "type":"radio",
@@ -19,6 +20,7 @@ var section4 = [
         "storeAs":"[]",
         "excludes":[],
         "policyEntry":"We provide staff with devices for use while travelling in order to lessen the impact should they become compromised.",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"Are the travel devices up-to-date with the latest security features? If not, they should be updated or upgraded.",
@@ -33,6 +35,7 @@ var section4 = [
         "storeAs":"[]",
         "excludes":[],
         "policyEntry":"Staff are encouraged to use separate, 'clean' devices when they travel in order to lessen the impact of any authorised access. For guidance on which types of device would be suitable, speak to [contactName].",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"Roughly how many staff are using separate travel devices vs those who use their 'cleaned' everyday devices?",
@@ -47,6 +50,7 @@ var section4 = [
         "storeAs":"[]",
         "excludes":[],
         "policyEntry":"Before travelling on work-related business, staff should prepare ('clean') their everyday devices in such a way as to reduce the impact of any unauthorised access while abroad. [contactName] can provide more information on how to do this.",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -61,6 +65,7 @@ var section4 = [
         "storeAs":"[]",
         "excludes":[],
         "policyEntry":"The issue of travel devices vs everyday devices is decided on a case-by-case basis and is dependent on your threat model. Speak to [contactName] for more information.",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -85,6 +90,7 @@ var section4 = [
     "required":false,
     "policyContent":"Before travelling, there are steps which should be taken to prepare devices containing sensitive information. For help with any of the following security measures, please contact [contactName].",
     "appendixContent":"EFF wrote a Border Search Pocket Guide, which may be useful: https://www.eff.org/document/eff-border-search-pocket-guide",
+    "routineEntry":"",
     "answers":[
       // NOTE: this only really works if 1Password is selected in q15, so hide until answer-specific exclusions are implemented
       // {
@@ -106,6 +112,7 @@ var section4 = [
         "storeAs":"",
         "excludes":[],
         "policyEntry":"- Enable any SOS features or modes on your phone, and learn how to use them so you are prepared to do so in an emergency. SOS mode provides a shortcut to calling the emergency services or texting emergency contacts, usually triggered by pressing a button several times.",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -120,6 +127,7 @@ var section4 = [
         "storeAs":"",
         "excludes":[],
         "policyEntry":"- Deleting unnecessary data from your devices before travelling reduces how much is exposed should the device be accessed without your knowledge. Assess each data group by how essential it is to your trip and whether it can be safely accessed via non-local storage while abroad.",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -134,6 +142,7 @@ var section4 = [
         "storeAs":"",
         "excludes":[],
         "policyEntry":"- Full disk encryption is available on most operating systems, and we require staff to ensure it is set up and working prior to travel. For help on how to do this, please contact [contactName].",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -148,6 +157,7 @@ var section4 = [
         "storeAs":"",
         "excludes":[],
         "policyEntry":"- If your device is searched, you'll want to limit the amount of suspicious or incriminating information that is available. Affected apps and websites will depend on the travel destination, for example some countries will take issue with gay dating apps while others will be more concerned by the presence of a Tor browser.",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -162,6 +172,7 @@ var section4 = [
         "storeAs":"",
         "excludes":[],
         "policyEntry":"- By disabling fingerprint or facial authentication, your device will fallback to requiring a password, code or phrase to gain entry - something which is harder to force as it usually requires a judge to support the search of your device.",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -176,6 +187,7 @@ var section4 = [
         "storeAs":"",
         "excludes":[],
         "policyEntry":"- If you forget to disable biometric authentication then switching the device off altogether can force the device to fall back to authentication via password, code or phrase the next time it is turned on. This makes it harder for others to force entry to the device.",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -191,6 +203,7 @@ var section4 = [
         "storeAs":"[travelSteps]",
         "excludes":[],
         "policyEntry":"- [travelSteps]",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -214,6 +227,7 @@ var section4 = [
     "required":true,
     "policyContent":"Protecting your internet activity from invasive monitoring can involve a range of solutions. [orgName] advises staff to use [vpnChoice] on devices that are connected to the internet. [contactName] can help with set up.",
     "appendixContent":"Depending on the country in which you're operating it may be advisable to recommend using VPNs and similar tools even when staff are not travelling.",
+    "routineEntry":"",
     "answers":[
       {
         "type":"checkbox",
@@ -221,6 +235,7 @@ var section4 = [
         "storeAs":"[vpnChoice]",
         "excludes":[],
         "policyEntry":"",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"Is Mullvad still the right tool to recommend to staff?",
@@ -235,6 +250,7 @@ var section4 = [
         "storeAs":"[vpnChoice]",
         "excludes":[],
         "policyEntry":"",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"Is Psiphon still the right tool to recommend to staff?",
@@ -249,6 +265,7 @@ var section4 = [
         "storeAs":"[vpnChoice]",
         "excludes":[],
         "policyEntry":"",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"Is NordVPN still the right tool to recommend to staff?",
@@ -263,6 +280,7 @@ var section4 = [
         "storeAs":"[vpnChoice]",
         "excludes":[],
         "policyEntry":"",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -277,6 +295,7 @@ var section4 = [
         "storeAs":"[vpnChoice]",
         "excludes":[],
         "policyEntry":"",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"Is TunnelBear still the right tool to recommend to staff?",
@@ -292,6 +311,7 @@ var section4 = [
         "storeAs":"[vpnChoice]",
         "excludes":[],
         "policyEntry":"",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"Is [vpnChoice] still the best option for protecting the internet activity of staff members?",
@@ -315,6 +335,7 @@ var section4 = [
     "required":false,
     "policyContent":"",
     "appendixContent":"",
+    "routineEntry":"",
     "answers":[
       {
         "type":"radio",
@@ -322,6 +343,7 @@ var section4 = [
         "storeAs":"[]",
         "excludes":[],
         "policyEntry":"",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"Is the free [vpnChoice] plan still sufficient or is there a better option now available?",
@@ -336,6 +358,7 @@ var section4 = [
         "storeAs":"[]",
         "excludes":[],
         "policyEntry":"[orgName] provides a paid subscription to [vpnChoice].",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"Is the paid subscription to [vpnChoice] still a good solution or is there a better option now available?",
@@ -351,6 +374,7 @@ var section4 = [
         "storeAs":"[otherVPNPayment]",
         "excludes":[],
         "policyEntry":"Recommended VPN and circumvention tools are paid for by [otherVPNPayment]",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -374,6 +398,7 @@ var section4 = [
     "required":false,
     "policyContent":"",
     "appendixContent":"",
+    "routineEntry":"",
     "answers":[
       {
         "type":"text",
@@ -382,6 +407,7 @@ var section4 = [
         "storeAs":"[travelHelpName]",
         "excludes":[],
         "policyEntry":"If you are in need of assistance while travelling, please contact either your pre-arranged travel buddy or [travelHelpName].",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"Is [travelHelpName] still the most appropriate person to contact for travel assistance?",
@@ -397,6 +423,7 @@ var section4 = [
         "storeAs":"[travelHelpProns]",
         "excludes":[],
         "policyEntry":"Their pronouns are [travelHelpProns].",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"Does [travelHelpName] still use [travelHelpProns] pronouns?",
@@ -412,6 +439,7 @@ var section4 = [
         "storeAs":"[travelHelpEmail]",
         "excludes":[],
         "policyEntry":"Email: [travelHelpEmail]",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"Is [travelHelpName]'s email address up-to-date?",
@@ -427,6 +455,7 @@ var section4 = [
         "storeAs":"[travelHelpPhone]",
         "excludes":[],
         "policyEntry":"Phone: [travelHelpPhone]",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"Is [travelHelpName]'s phone number correct?",
@@ -450,6 +479,7 @@ var section4 = [
     "required":false,
     "policyContent":"... you are travelling abroad for work purposes: It's important to avoid assuming the same level of safety abroad as you are used to at home. While it's recommended that you research your destination's security situation, here are some baseline security measures you can use to form a travel plan in order to help with protecting you, your devices and, by extension, [orgName]'s staff and work: [inc4Tactics]",
     "appendixContent": "",
+    "routineEntry":"",
     "answers":[
       {
         "type":"textarea",
@@ -458,6 +488,7 @@ var section4 = [
         "storeAs":"[inc4Tactics]",
         "excludes":[],
         "policyEntry":"",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"Is your travel plan template up-to-date?",
