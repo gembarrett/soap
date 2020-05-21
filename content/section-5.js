@@ -3,7 +3,7 @@ var section5 = [
     "isQuestion": false,
     "id":"q35",
     "title": "Scenario five",
-    "paragraph":["There's a break in at the office and laptops were stolen from desks.", "Risk of unauthorised access to sensitive information.", "Loss of locally-stored data and cost of device replacement."]
+    "paragraph":["Staff arrive at the office one morning to find that there’s been a break in and several laptops have been stolen from their desks. Although all were set up with password protection, some were running on out-of-date software with unpatched security holes, which the thieves then exploited to bypass the log in screen and gain access to the file systems.", "While cyber attacks pose a big threat, organisations should also consider how they can protect against offline incidents. A break-in at the office can deal a devastating blow to an organisation as the theft of confidential documents and data-rich computers can lead to the exposure of personal information, loss of equipment and destruction of locally-stored files.", "Security needs can differ for home offices and coworking spaces but the overall goal of restricting access is the same, and most measures can be altered to suit the specific environment. Although some environmental security measures will be required by insurance anyway, there are additional habits staff can practice to help keep the office secure. In addition to physical security, this section will also cover WiFi and visitor protocols."]
   },
   {
     "isQuestion": true,
@@ -40,21 +40,7 @@ var section5 = [
             "linksList": ""
           }
         ]
-      },
-      {
-        "type":"radio",
-        "answerText":"Other",
-        "storeAs":"[altCDPol]",
-        "excludes":[],
-        "policyEntry":"",
-        "appendixEntry":[
-          {
-            "reviewList":"",
-            "tipList": "",
-            "linksList": ""
-          }
-        ]
-      },
+      }
     ],
     "tips":[
       {"relevance":""},
