@@ -463,7 +463,7 @@ a {
 
 #resources {
   padding-top: 0;
-  border-top: 2px solid currentColor;  
+  border-top: 2px solid currentColor;
 }
 
 #features {
@@ -806,8 +806,7 @@ textarea[placeholder] {
 
 /* styles.css | http://localhost:8000/assets/css/styles.css */
 
-#intro {
-  background-image: url('https://i.pinimg.com/originals/81/1e/f4/811ef4c2cfec03db43b25cb7a02afac2.jpg');
+/* #intro {
   background-size: cover;
 }
 
@@ -819,4 +818,4 @@ textarea[placeholder] {
   background-color: rgba(255,255,255,0.5);
   padding: 0.5em 1em;
   color: #066493;
-}
+} */
