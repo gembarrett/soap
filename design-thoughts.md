@@ -30,6 +30,16 @@
   * One tip per question, figure out best place to display
     * Overlaid on relevant element
     * X in corner of tip display removes it from the DOM
-* Create a colour theme for each section
+* Differentiate the sections more
+  * Create a colour theme for each section
   * could be shades of main colour or different colours
   * would need the progress bar to match maybe
+* Add icon to each answer:
+0.1 pencil
+0.2.0 user-friends
+0.2.1 users
+0.2.2 user
+0.2.3 pencil
+0.3.0 building
+0.3.1 laptop-house
+0.3.2 
