@@ -1,7 +1,7 @@
 var ros = [
   {
     "head":"SOAP is a free, easy-to-use online tool that helps civil society organizations build better security policies.",
-    "subhead":"",
+    "subhead":"To start building your organizational security policy, enter your organization's name (or an alias)",
     "features":[
       {
         "feat":"Design customized security policies",
