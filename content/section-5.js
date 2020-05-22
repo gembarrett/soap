@@ -119,7 +119,7 @@ var section5 = [
     "id":"q38",
     "q":"What are your visitor protocols?",
     "required":true,
-    "policyContent":"[orgName] staff are responsible for any visitors they bring into the office and are expected to be present for their guest’s arrival, or have prepared another person to receive them.",
+    "policyContent":"[orgName] staff are responsible for any visitors they bring into the office and are expected to be present for their guest’s arrival, or have prepared another person to receive them. No visitors should be given unsupervised access, and all staff should be vigilant against \"tail-gating\" or using another staff member's access code, card or key to gain entry to the office.",
     "appendixContent":"",
     "answers":[
       {
@@ -127,7 +127,7 @@ var section5 = [
         "answerText":"pre-visit announcement",
         "storeAs":"[]",
         "excludes":[],
-        "policyEntry":"Before your guest arrives, you should ensure that in-office staff are aware of their impending visit so they can prepare their work spaces accordingly.",
+        "policyEntry":"Before your guest arrives, you should ensure that in-office staff are aware of their impending visit so they can prepare accordingly.",
         "routineEntry":"Let people know if you’re bringing a visitor to the office",
         "appendixEntry":[
           {
@@ -142,7 +142,7 @@ var section5 = [
         "answerText":"sign-in book",
         "storeAs":"[]",
         "excludes":[],
-        "policyEntry":"Visitors are asked to sign in when they arrive at the office and sign out when they leave.",
+        "policyEntry":"Visitors are expected to sign in when they enter the premises and sign out when they leave.",
         "routineEntry":"Has your guest signed in and out?",
         "appendixEntry":[
           {
@@ -157,7 +157,7 @@ var section5 = [
         "answerText":"guest WiFi",
         "storeAs":"[]",
         "excludes":[],
-        "policyEntry":"While on site, guests should use the visitor WiFi to access the internet.",
+        "policyEntry":"While on site, guests should use the visitor WiFi to access the internet. Credentials can be obtained from [contactName]. When using the [orgName] wireless network, visitors are not to perform any illegal or malicious actions against any internal or external network.",
         "routineEntry":"Visitors must connect to the guest WiFi network; you can get the details of this from [contactName]",
         "appendixEntry":[
           {
@@ -187,7 +187,7 @@ var section5 = [
       {"relevance":"If your office receives visitors, it is worth putting thought into how this impacts your organisation’s security."},
       {"meaning":"Visitor protocols can include many things, depending on the frequency of visits and common purposes. For instance, if there are visitors regularly on site for meetings then a guest WiFi access point can make it easier to restrict their movement around the network. Making staff aware of visitors in advance can give them time to secure their workspace, and avoids any surprise at seeing an unfamiliar face in the office."},
       {"implementation":"When setting up a guest WiFi, remember to implement the same security standards as your company WiFi; for instance, by using complex passwords changed on a regular basis. Organisations that have visitors on an infrequent basis may find it more practical to actively notify their staff each time than those with more frequent visitors, for whom a shared calendar could be easier to manage."},
-      {"more": ["visitor security policy"]}
+      {"more": ["visitor security policy", "office security tailgating"]}
     ]
   },
   {
