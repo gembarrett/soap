@@ -11,6 +11,7 @@ var section5 = [
     "q":"Does your organisation have a 'clean desk' policy?",
     "required":true,
     "policyContent":"",
+    "routineEntry":"",
     "appendixContent":"",
     "answers":[
       {
@@ -18,11 +19,12 @@ var section5 = [
         "answerText":"Yes",
         "storeAs":"[]",
         "excludes":[],
-        "policyEntry":"[orgName] has a 'clean desk' policy. This means that you're expected to ensure that sensitive items such as data storage devices and confidential paperwork are not left visible or easily accessible on your desk while you're away from it, for instance overnight or while a visitor is in the office.",
+        "policyEntry":"Our ‘clean desk’ policy requires staff to keep their workspaces clean and free of any sensitive documents and devices overnight or while not in use. By keeping such items tidied away, you are preventing visitors and other unauthorised persons from viewing confidential information.",
+        "routineEntry":"Done for the day? Don’t forget to clear any devices or sensitive documents from your desk.",
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": "",
+            "tipList": "It can be hard to keep a clean desk during working hours, so encourage staff to have meetings in designated spots, rather than at their desks.",
             "linksList": ""
           }
         ]
@@ -33,6 +35,7 @@ var section5 = [
         "storeAs":"[]",
         "excludes":[],
         "policyEntry":"",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -52,17 +55,19 @@ var section5 = [
   {
     "isQuestion": true,
     "id":"q37",
-    "q":"Are staff given their own lockable storage in the office?",
+    "q":"Are staff provided with lockable storage?",
     "required":true,
-    "policyContent":"If you work regularly from the [orgName] office, you’ll be provided with a lockable [officeStorage] which should be used to store items such as phones, memory sticks and sensitive documents. Please remember to keep the storage secure when you’re out of the office by removing the key from the lock or scrambling the combination lock code.",
-    "appendixContent":"The locks that are built into standard office furniture can be simple to force open, which may be an acceptable risk when a visual deterrent is all that’s required, but it is worth considering options that can have a padlock or other additional security measures added to them.",
+    "policyContent":"If you work regularly from the [orgName] office, you’ll be provided with a lockable [officeStorage] which should be used to store papers and valuable hardware, such as phones, memory sticks and sensitive documents.",
+    "routineEntry":"Before leaving the office, remember to check that your [officeStorage] is locked (and remove/scramble the key).",
+    "appendixContent":"The locks that are built into standard office furniture can be quite easy to force, which may be an acceptable risk when a visual deterrent is all that’s required, but it is worth considering options that can have a padlock or other additional security measures added to them.",
     "answers":[
       {
         "type":"checkbox",
-        "answerText":"cupboard",
+        "answerText":"cabinet",
         "storeAs":"[officeStorage]",
         "excludes":[],
         "policyEntry":"",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -77,6 +82,7 @@ var section5 = [
         "storeAs":"[officeStorage]",
         "excludes":[],
         "policyEntry":"",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -91,6 +97,7 @@ var section5 = [
         "storeAs":"[officeStorage]",
         "excludes":[],
         "policyEntry":"",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -101,7 +108,7 @@ var section5 = [
       },
     ],
     "tips":[
-      {"relevance":"If staff have their own desk in the organisation office, and especially if there is a “clean desk” policy in place."},
+      {"relevance":"If staff have their own desk in the office, and especially if there is a “clean desk” policy in place."},
       {"meaning":"Physical storage can be used to store sensitive printed documents, in accordance with a “clean desk” policy. A lockable cupboard or drawer can hold organisation-owned laptops, thumb drives, or other devices, helping to ensure that they aren’t easily accessed during a break in."},
       {"implementation":"Remind staff of the security risks of leaving the key in the lock overnight."},
       {"more": ["secure office storage"]}
@@ -112,7 +119,7 @@ var section5 = [
     "id":"q38",
     "q":"What are your visitor protocols?",
     "required":true,
-    "policyContent":"[orgName] staff are responsible for any visitors they bring into the office.",
+    "policyContent":"[orgName] staff are responsible for any visitors they bring into the office and are expected to be present for their guest’s arrival, or have prepared another person to receive them.",
     "appendixContent":"",
     "answers":[
       {
@@ -121,6 +128,7 @@ var section5 = [
         "storeAs":"[]",
         "excludes":[],
         "policyEntry":"Before your guest arrives, you should ensure that in-office staff are aware of their impending visit so they can prepare their work spaces accordingly.",
+        "routineEntry":"Let people know if you’re bringing a visitor to the office",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -135,6 +143,7 @@ var section5 = [
         "storeAs":"[]",
         "excludes":[],
         "policyEntry":"Visitors are asked to sign in when they arrive at the office and sign out when they leave.",
+        "routineEntry":"Has your guest signed in and out?",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -148,7 +157,8 @@ var section5 = [
         "answerText":"guest WiFi",
         "storeAs":"[]",
         "excludes":[],
-        "policyEntry":"While on site, guests may use the visitor WiFi to access the internet.",
+        "policyEntry":"While on site, guests should use the visitor WiFi to access the internet.",
+        "routineEntry":"Visitors must connect to the guest WiFi network; you can get the details of this from [contactName]",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -160,9 +170,10 @@ var section5 = [
       {
         "type":"checkbox",
         "answerText":"other",
-        "storeAs":"[]",
+        "storeAs":"[otherVisitorRule]",
         "excludes":[],
-        "policyEntry":"",
+        "policyEntry":"Please also note the following rule: [otherVisitorRule]",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -182,9 +193,10 @@ var section5 = [
   {
     "isQuestion": true,
     "id":"q39",
-    "q":"HWho is responsible for securing the office premises?",
+    "q":"Who is responsible for securing the office premises?",
     "required":true,
     "policyContent":"Any questions about [orgName] office security issues should be directed to [officeSecurityName], [officeSecurityPosition].",
+    "routineEntry":"",
     "appendixContent":"",
     "answers":[
       {
@@ -194,6 +206,7 @@ var section5 = [
         "storeAs":"[officeSecurityName]",
         "excludes":[],
         "policyEntry":"",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -209,6 +222,7 @@ var section5 = [
         "storeAs":"[officeSecurityPosition]",
         "excludes":[],
         "policyEntry":"",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -224,6 +238,7 @@ var section5 = [
         "storeAs":"[officeSecurityPronouns]",
         "excludes":[],
         "policyEntry":"Their pronouns are [officeSecurityPronouns]",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -238,6 +253,7 @@ var section5 = [
         "storeAs":"[officeSecurityEmail]",
         "excludes":[],
         "policyEntry":"You can email [officeSecurityName] at [officeSecurityEmail].",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -252,6 +268,7 @@ var section5 = [
         "storeAs":"[officeSecurityPhone]",
         "excludes":[],
         "policyEntry":"Their phone number is [officeSecurityPhone].",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -274,6 +291,7 @@ var section5 = [
     "q":"Bearing the previous questions in mind, what steps should staff members take if their work device has been lost or stolen?",
     "required":false,
     "policyContent":"... a device you use for work is lost or stolen: it's important to act fast to mitigate the security issues that come from such a situation. Here are the steps you should take to minimise the impact of the loss: [inc5tactics]",
+    "routineEntry":"",
     "appendixContent":"",
     "answers":[
       {
@@ -283,6 +301,7 @@ var section5 = [
         "storeAs":"[inc5tactics]",
         "excludes":[],
         "policyEntry":"",
+        "routineEntry":"",
         "appendixEntry":[
           {
             "reviewList":"",
