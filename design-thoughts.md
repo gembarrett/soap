@@ -6,7 +6,7 @@
   * Content sections should be in blocks
   * Possibly with accompanying illustrations or icons of some kind
   * Each block can have main points overview showing by default
-  * Further info hidden in panel, displayed when down arrow is clicked
+  * Further info hidden in panel, displayed when [same icon as More Info] is clicked
 * Get users building policy earlier
   * Add a CTA, something like "Let's start with the introductions. Who is this policy for? (you can use an alias for your organisation if you prefer, then you can just find and replace with the actual name later)"
   * Add a text input below that, same dotted border style as in build process
@@ -42,4 +42,4 @@
 0.2.3 pencil
 0.3.0 building
 0.3.1 laptop-house
-0.3.2 
+0.3.2
