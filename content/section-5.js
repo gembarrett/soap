@@ -196,7 +196,7 @@ var section5 = [
     "q":"Who is responsible for securing the office premises?",
     "required":true,
     "policyContent":"Any questions about [orgName] office security issues should be directed to [officeSecurityName], [officeSecurityPosition].",
-    "routineEntry":"",
+    "routineEntry":"[officeSecurityName] ([officeSecurityPhone]/[officeSecurityEmail]) is the person to go to with any issues related to office security.",
     "appendixContent":"",
     "answers":[
       {
@@ -209,7 +209,7 @@ var section5 = [
         "routineEntry":"",
         "appendixEntry":[
           {
-            "reviewList":"",
+            "reviewList":"Is [officeSecurityName] still responsible for this policy?",
             "tipList": "",
             "linksList": ""
           }
@@ -241,7 +241,7 @@ var section5 = [
         "routineEntry":"",
         "appendixEntry":[
           {
-            "reviewList":"",
+            "reviewList":"Does [officeSecurityName] still use [officeSecurityPronouns] pronouns?",
             "tipList": "",
             "linksList": ""
           }
@@ -256,7 +256,7 @@ var section5 = [
         "routineEntry":"",
         "appendixEntry":[
           {
-            "reviewList":"",
+            "reviewList":"Is [officeSecurityEmail] the most-up-to-date email for [contactName]",
             "tipList": "",
             "linksList": ""
           }
@@ -271,7 +271,7 @@ var section5 = [
         "routineEntry":"",
         "appendixEntry":[
           {
-            "reviewList":"",
+            "reviewList":"Is [officeSecurityPhone] the most-up-to-date email for [contactName]",
             "tipList": "",
             "linksList": ""
           }
@@ -280,9 +280,9 @@ var section5 = [
     ],
     "tips":[
       {"relevance":""},
-      {"meaning":"Whoever is responsible for office security should be present in the office on a regular basis so that they can be informed of any changes which coould impact the security of the office. Depending on your context, they may need to liaise with the alarm system company, rotate office entry codes or manage the staff access fobs."},
-      {"implementation":""},
-      {"more": [""]}
+      {"meaning":"Whoever is responsible for office security should be present in the office on a regular basis. Depending on your context, they may need to liaise with the alarm system company, rotate office entry codes or manage the staff access fobs. If your office is in a shared or coworking space then the person responsible may be someone outside of your organisation."},
+      {"implementation":"For very small organisations it may make sense for this security officer to be the same responsible person named earlier in this process, while larger organisations may require a dedicated person or team. In either case it’s important that everybody knows who to contact if there is an emergency in-office."},
+      {"more": ["responsible person office security", "security officer responsibilities"]}
     ]
   },
   {
