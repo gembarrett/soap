@@ -285,9 +285,75 @@ var section5 = [
       {"more": ["responsible person office security", "security officer responsibilities"]}
     ]
   },
+  ,
   {
     "isQuestion": true,
     "id":"q40",
+    "q":"Which aspects of office security are staff responsible for?",
+    "required":true,
+    "policyContent":"",
+    "routineEntry":"",
+    "appendixContent":"",
+    "answers":[
+      {
+        "type":"checkbox",
+        "answerText":"",
+        "storeAs":"[]",
+        "excludes":[],
+        "policyEntry":"",
+        "routineEntry":"",
+        "appendixEntry":[
+          {
+            "reviewList":"",
+            "tipList": "",
+            "linksList": ""
+          }
+        ]
+      },
+    ],
+    "tips":[
+      {"relevance":""},
+      {"meaning":""},
+      {"implementation":""},
+      {"more": [""]}
+    ]
+  },
+  ,
+  {
+    "isQuestion": true,
+    "id":"q41",
+    "q":"How do you expect staff to secure their home office space?",
+    "required":true,
+    "policyContent":"",
+    "routineEntry":"",
+    "appendixContent":"",
+    "answers":[
+      {
+        "type":"checkbox",
+        "answerText":"",
+        "storeAs":"[]",
+        "excludes":[],
+        "policyEntry":"",
+        "routineEntry":"",
+        "appendixEntry":[
+          {
+            "reviewList":"",
+            "tipList": "",
+            "linksList": ""
+          }
+        ]
+      },
+    ],
+    "tips":[
+      {"relevance":""},
+      {"meaning":""},
+      {"implementation":""},
+      {"more": [""]}
+    ]
+  },
+  {
+    "isQuestion": true,
+    "id":"q42",
     "q":"Bearing the previous questions in mind, what steps should staff members take if their work device has been lost or stolen?",
     "required":false,
     "policyContent":"... a device you use for work is lost or stolen: it's important to act fast to mitigate the security issues that come from such a situation. Here are the steps you should take to minimise the impact of the loss: [inc5tactics]",
