@@ -35,11 +35,19 @@
   * could be shades of main colour or different colours
   * would need the progress bar to match maybe
 * Add icon to each answer:
-0.1 pencil
-0.2.0 user-friends
-0.2.1 users
-0.2.2 user
-0.2.3 pencil
-0.3.0 building
-0.3.1 laptop-house
-0.3.2
+  0.1 pencil
+  0.2.0 user-friends
+  0.2.1 users
+  0.2.2 user
+  0.2.3 pencil
+  0.3.0 building
+  0.3.1
+  0.3.2 laptop-house
+  0.4.0 user-circle
+  0.5.0 calendar-alt
+  0.5.1 calendar-week
+  0.5.2 calendar-day
+  0.5.3 bell
+  0.6.0-2 laptop
+  0.6.3-4 mobile-alt
+  0.6.5
