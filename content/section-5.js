@@ -297,7 +297,52 @@ var section5 = [
     "answers":[
       {
         "type":"checkbox",
-        "answerText":"",
+        "answerText":"Disabling/enabling the alarm system",
+        "storeAs":"[]",
+        "excludes":[],
+        "policyEntry":"",
+        "routineEntry":"",
+        "appendixEntry":[
+          {
+            "reviewList":"",
+            "tipList": "",
+            "linksList": ""
+          }
+        ]
+      },
+      {
+        "type":"checkbox",
+        "answerText":"Their own access token (e.g. fob or key)",
+        "storeAs":"[]",
+        "excludes":[],
+        "policyEntry":"",
+        "routineEntry":"",
+        "appendixEntry":[
+          {
+            "reviewList":"",
+            "tipList": "",
+            "linksList": ""
+          }
+        ]
+      },
+      {
+        "type":"checkbox",
+        "answerText":"Turning off their computer before leaving",
+        "storeAs":"[]",
+        "excludes":[],
+        "policyEntry":"",
+        "routineEntry":"",
+        "appendixEntry":[
+          {
+            "reviewList":"",
+            "tipList": "",
+            "linksList": ""
+          }
+        ]
+      },
+      {
+        "type":"checkbox",
+        "answerText":"Other",
         "storeAs":"[]",
         "excludes":[],
         "policyEntry":"",
@@ -330,7 +375,67 @@ var section5 = [
     "answers":[
       {
         "type":"checkbox",
-        "answerText":"",
+        "answerText":"Do not share devices with others",
+        "storeAs":"[]",
+        "excludes":[],
+        "policyEntry":"",
+        "routineEntry":"",
+        "appendixEntry":[
+          {
+            "reviewList":"",
+            "tipList": "",
+            "linksList": ""
+          }
+        ]
+      },
+      {
+        "type":"checkbox",
+        "answerText":"Switch off devices when not in use",
+        "storeAs":"[]",
+        "excludes":[],
+        "policyEntry":"",
+        "routineEntry":"",
+        "appendixEntry":[
+          {
+            "reviewList":"",
+            "tipList": "",
+            "linksList": ""
+          }
+        ]
+      },
+      {
+        "type":"checkbox",
+        "answerText":"Lock away documents and devices at night",
+        "storeAs":"[]",
+        "excludes":[],
+        "policyEntry":"",
+        "routineEntry":"",
+        "appendixEntry":[
+          {
+            "reviewList":"",
+            "tipList": "",
+            "linksList": ""
+          }
+        ]
+      },
+      {
+        "type":"checkbox",
+        "answerText":"Restrict access to strangers",
+        "storeAs":"[]",
+        "excludes":[],
+        "policyEntry":"",
+        "routineEntry":"",
+        "appendixEntry":[
+          {
+            "reviewList":"",
+            "tipList": "",
+            "linksList": ""
+          }
+        ]
+      },
+      {
+        "type":"checkbox",
+        "answerText":"Other",
         "storeAs":"[]",
         "excludes":[],
         "policyEntry":"",
