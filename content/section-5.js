@@ -293,18 +293,18 @@ var section5 = [
     "required":true,
     "policyContent":"",
     "routineEntry":"",
-    "appendixContent":"",
+    "appendixContent":"Between reviews, keep a note of any security incidents related to the office environment as these experiences teach those involved, the organisation as a whole and can be used to improve the security policy.",
     "answers":[
       {
         "type":"checkbox",
         "answerText":"Disabling/enabling the alarm system",
         "storeAs":"[]",
         "excludes":[],
-        "policyEntry":"",
-        "routineEntry":"",
+        "policyEntry":"You will receive training in how to enable and disable the security alarm system. This information, including any access codes, should not be shared with others unless authorised to do so by [officeSecurityName]. If you are the last person to leave the office, it is your responsibility to enable the alarm system and lock up. Likewise, if you are the first to arrive at the office, then you should disable the alarm and report any problems immediately to [officeSecurityName] on [officeSecurityPhone].",
+        "routineEntry":"If you’re the last to leave the office: enable the alarm and lock up. If you’re the first to arrive: disable the alarm and report any issues immediately.",
         "appendixEntry":[
           {
-            "reviewList":"",
+            "reviewList":"Have staff had any issues with enabling or disabling the alarm that can be resolved with a refresher training?",
             "tipList": "",
             "linksList": ""
           }
@@ -312,26 +312,26 @@ var section5 = [
       },
       {
         "type":"checkbox",
-        "answerText":"Their own access token (e.g. fob or key)",
+        "answerText":"Their own access token (e.g. key)",
         "storeAs":"[]",
         "excludes":[],
-        "policyEntry":"",
-        "routineEntry":"",
+        "policyEntry":"An access token, such as a key, fob or code, will be provided to you so that you can enter the office during working hours. It is of the upmost importance that you guard this token like a password and avoid sharing it with any other person, whether intentionally or by accident, or leaving it unattended. If you lose the token, it is your responsibility to notify [officeSecurityName] immediately so that the appropriate remedial actions can be taken.",
+        "routineEntry":"It is very important that you protect your access token (e.g. key, fob, entry code). Do not share it or leave it unattended.",
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": "",
+            "tipList": "When staff leave the organisation, be sure to obtain and deactivate their access token so you remain aware of who has access to the office at any given time.",
             "linksList": ""
           }
         ]
       },
       {
         "type":"checkbox",
-        "answerText":"Turning off their computer before leaving",
+        "answerText":"Shutting down their computer before leaving",
         "storeAs":"[]",
         "excludes":[],
-        "policyEntry":"",
-        "routineEntry":"",
+        "policyEntry":"Please turn off your computer when leaving the office to prevent intruders gaining easy access to its file system.",
+        "routineEntry":"Turn your computer off at the end of your workday to enable disk encryption to take place and provide an extra obstacle to intruders.",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -343,9 +343,9 @@ var section5 = [
       {
         "type":"checkbox",
         "answerText":"Other",
-        "storeAs":"[]",
+        "storeAs":"[officeSecOther]",
         "excludes":[],
-        "policyEntry":"",
+        "policyEntry":"[officeSecOther]",
         "routineEntry":"",
         "appendixEntry":[
           {
@@ -358,9 +358,9 @@ var section5 = [
     ],
     "tips":[
       {"relevance":""},
-      {"meaning":""},
-      {"implementation":""},
-      {"more": [""]}
+      {"meaning":"To enable work to continue outside of office working hours, it is useful for staff to be able to securely exit the office when they leave late and enter when they arrive early. Access tokens such as keys, fobs and codes could grant unauthorised entry if they were to be shared outside of the organisation, for example through social engineering tactics such as ‘tailgating’. It’s important to know who has access to the office and have a process in place for changing codes, deactivating fobs, and similar tasks. Turning devices off at night ensures that an intruder would be forced to enter the correct password in order to decrypt (if disk encryption is enabled) and access the file system."},
+      {"implementation":"Social engineering can be a threat both online and offline, and physical penetration testing are frequently employed to use such tactics to gain access in order to test the strength of the organisation’s security plan and see how far a potential intruder could get into a building. The outcomes of these tests can be a valuable metric with which to raise awareness among staff of the importance of keeping the office secure."},
+      {"more": ["social engineering tactics tailgating", "physical penetration testing", "office key security policy"]}
     ]
   },
   ,
@@ -370,16 +370,16 @@ var section5 = [
     "q":"How do you expect staff to secure their home office space?",
     "required":true,
     "policyContent":"",
-    "routineEntry":"",
-    "appendixContent":"",
+    "routineEntry":"Be secure when working remotely; ",
+    "appendixContent":"Between reviews, keep a note of any security incidents related to working remotely as these experiences teach those involved, the organisation as a whole and can be used to improve the security policy.",
     "answers":[
       {
         "type":"checkbox",
-        "answerText":"Do not share devices with others",
+        "answerText":"Prevent others using their devices",
         "storeAs":"[]",
         "excludes":[],
-        "policyEntry":"",
-        "routineEntry":"",
+        "policyEntry":"The devices you use for work should not be shared with others outside of [orgName], as it can put the confidential information they hold at risk of deletion or damage.",
+        "routineEntry":"don’t allow others to use your work devices",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -393,8 +393,8 @@ var section5 = [
         "answerText":"Switch off devices when not in use",
         "storeAs":"[]",
         "excludes":[],
-        "policyEntry":"",
-        "routineEntry":"",
+        "policyEntry":"Please switch off devices when they are not in use, as this will make it harder for intruders to access the file system, especially if the device uses disk encryption and/or requires a password to log in.",
+        "routineEntry":"switch work devices off when not in use",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -405,11 +405,11 @@ var section5 = [
       },
       {
         "type":"checkbox",
-        "answerText":"Lock away documents and devices at night",
+        "answerText":"Lock up documents and devices at night",
         "storeAs":"[]",
         "excludes":[],
-        "policyEntry":"",
-        "routineEntry":"",
+        "policyEntry":"When the work day is over, documents and devices should be locked away to deter thieves.",
+        "routineEntry":"lock away documents and devices at night",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -420,11 +420,11 @@ var section5 = [
       },
       {
         "type":"checkbox",
-        "answerText":"Restrict access to strangers",
+        "answerText":"Restrict workspace access",
         "storeAs":"[]",
         "excludes":[],
-        "policyEntry":"",
-        "routineEntry":"",
+        "policyEntry":"Staff working remotely should know who is able to enter their office. Please avoid allowing access to strangers unless precautions are taken to lock confidential papers away and turn off computers before the visit.",
+        "routineEntry":"prevent others from accessing your workspace unsupervised",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -436,9 +436,9 @@ var section5 = [
       {
         "type":"checkbox",
         "answerText":"Other",
-        "storeAs":"[]",
+        "storeAs":"[remoteSecOther]",
         "excludes":[],
-        "policyEntry":"",
+        "policyEntry":"[remoteSecOther]",
         "routineEntry":"",
         "appendixEntry":[
           {
@@ -450,10 +450,10 @@ var section5 = [
       },
     ],
     "tips":[
-      {"relevance":""},
-      {"meaning":""},
-      {"implementation":""},
-      {"more": [""]}
+      {"relevance":"If anyone in your organisation works remotely, from home or anywhere outside of the organisation’s office, then the security of their work in that environment should be examined."},
+      {"meaning":"Members of staff may find themselves being asked by family or friends if their work device could be borrowed temporarily, for example to look something up. The rules about this can be restrictive or more flexible, depending on whether the devices have work profiles or are owned, and the importance of the data stored on it. Staff members should be aware of everyone who has access to their home office, but that’s not always possible. Measures such as locking the door, putting devices and documents away at night, or switching off devices when not in use, are all additional obstacles for an intruder."},
+      {"implementation":"It may not be possible for some staff to work securely from home office, so consider how everyone can be supported, for example by offering paid membership to a local coworking space."},
+      {"more": ["how to secure a home office", "security of coworking spaces", "risks of public wifi"]}
     ]
   },
   {
