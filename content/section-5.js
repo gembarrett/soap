@@ -57,7 +57,7 @@ var section5 = [
     "id":"q37",
     "q":"Are staff provided with lockable storage?",
     "required":true,
-    "policyContent":"If you work regularly from the [orgName] office, you’ll be provided with a lockable [officeStorage] which should be used to store papers and valuable hardware, such as phones, memory sticks and sensitive documents.",
+    "policyContent":"You’ll be provided with a lockable [officeStorage] which should be used to store papers and valuable hardware, such as phones, memory sticks and sensitive documents.",
     "routineEntry":"Before leaving the office, remember to check that your [officeStorage] is locked (and remove/scramble the key).",
     "appendixContent":"The locks that are built into standard office furniture can be quite easy to force, which may be an acceptable risk when a visual deterrent is all that’s required, but it is worth considering options that can have a padlock or other additional security measures added to them.",
     "answers":[
@@ -461,7 +461,7 @@ var section5 = [
     "id":"q42",
     "q":"Bearing the previous questions in mind, what steps should staff members take if their work device has been lost or stolen?",
     "required":false,
-    "policyContent":"... a device you use for work is lost or stolen: it's important to act fast to mitigate the security issues that come from such a situation. Here are the steps you should take to minimise the impact of the loss: [inc5tactics]",
+    "policyContent":".... a device you use for work is lost or stolen: as with most security incidents, it can be intimidating to report a device loss but the impact can be minimised the sooner it’s reported. Here are the steps you should take immediately upon discovering a work device is lost or stolen: [inc5tactics]",
     "routineEntry":"",
     "appendixContent":"",
     "answers":[
@@ -484,9 +484,9 @@ var section5 = [
     ],
     "tips":[
       {"relevance":""},
-      {"meaning":"A stolen or lost device can result in data loss, unauthorised account or file access, and a delayed response to the incident can worsen the impact on yoour organisation."},
-      {"implementation":""},
-      {"more": [""]}
+      {"meaning":"When a device that provides access to your organisation’s data is lost or stolen, the owner needs to be able to quickly and confidently report the loss. By acting fast, account credentials can be changed and the device can be found or wiped sooner than a third party can gain access to the device’s contents."},
+      {"implementation":"The potential impact of a device loss can make it an intimidating thing to report, so it’s important that staff know they’re supported."},
+      {"more": ["lost stolen device security"]}
     ]
   }
 ]
