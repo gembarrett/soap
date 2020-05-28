@@ -285,7 +285,7 @@ var section1 = [
       {"relevance":"If your organisation would prefer staff to use particular tools in specific scenarios rather than leaving it to individual choice."},
       {"meaning":"Specifying particular tools for each common use case helps with consistent communications management and security. It can also help staff to spot suspicious communications that aren’t using the approved methods. For instance, a request for sensitive information to be sent via Telegram can be more easily flagged if Telegram is not an approved method for work communications. Each of the tools has its pros and cons, particularly when it comes to privacy and security, and it is up to your organisation to decide which is best for your working environments."},
       {"implementation":"Changing tools can be tricky as it’s hard to break a habit, but the previously-selected security champion and management can all set an example to rest of the organisation. For instance,they might only accept internal video call invites which use the approved platform and gently redirect staff to update their invite with the new, more appropriate method."},
-      {"more": ["slack vs mattermost vs matrix", "secure messaging app comparison", "whatsapp vs signal vs telegram", "hangouts vs jitsi vs skype", "cell sms security interception"]}
+      {"more": ["secure group chat and conferencing tools", "slack vs mattermost vs matrix", "secure messaging app comparison", "whatsapp vs signal vs telegram", "hangouts vs jitsi vs skype", "cell sms security interception"]}
     ]
   },
   {
