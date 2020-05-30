@@ -1,6 +1,5 @@
 controllers.questionPage = function(data, params){
   document.getElementById('bu').classList.add('active');
-  document.getElementById('bg').classList.remove('active');
   var templateContext = [];
   window.scrollTo(0,0);
   // queue up all the questions in this section

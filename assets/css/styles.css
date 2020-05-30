@@ -1,5 +1,19 @@
-/* #9E7841
-#EBC58F */
+/* Colors
+Oxford blue
+#1b263b
+
+Sapphire blue
+#066493
+
+Alabaster
+#F2EEE2
+
+Light Steel Blue
+#A9BCD0
+
+Amaranth
+#893168
+*/
 
 /* Structural styles */
 html, body {
@@ -13,9 +27,20 @@ a:hover {
   text-decoration: underline;
 }
 
-
+@font-face {
+  font-family: 'SinkinSansLight';
+  src: url('../fonts/SinkinSans-300Light.otf');
+}
+@font-face {
+  font-family: 'SinkinSansMedium';
+  src: url('../fonts/SinkinSans-500Medium.otf');
+}
+@font-face {
+  font-family: 'SinkinSansBold';
+  src: url('../fonts/SinkinSans-700Bold.otf');
+}
 body {
-  font-family: "Helvetica", "OpenSans", sans-serif;
+  font-family: "SinkinSansMedium", "Helvetica", "OpenSans", sans-serif;
   margin: 0;
   font-size: 16px;
   color: #066493;
@@ -24,14 +49,16 @@ body {
   flex-direction: column;
   overflow: scroll;
   overflow-x:hidden;
+  background-color:#f2eee2;
+}
+
+p {
+  font-family: "SinkinSansLight", "Helvetica", "OpenSans", sans-serif;
 }
 
 #head {
   position: fixed;
-  /* background-color: #8FC5EA; */
-  /* background-color: #96CAEE; */
   width:100%;
-  border-bottom: 1px solid #066493;
   display: flex;
   padding: 1em;
   box-sizing: border-box;
@@ -47,12 +74,12 @@ body {
   filter: drop-shadow(0px 0px 3px #eee);
 }
 .nav-scroll {
-  background-color: #fff;
+  background-color: #f2eee2;
   color:#066493;
 }
 .nav-start {
-  background-color: #066493;
-  color: #fff;
+  background-color: #1b263b;
+  color: #f2eee2;
 }
 
 .nav-scroll #logo{
@@ -107,6 +134,7 @@ body {
   display:flex;
   flex-direction: row;
 }
+
 .text-buttons-wrap {
   margin: 2em 4em 2em 0;
   max-width: 25%;
@@ -407,7 +435,7 @@ a {
 }
 
 #intro {
-  background-color: #066493;
+  background: linear-gradient(to bottom right, #1b263b, #066493);
   padding-top:2em;
 }
 
@@ -417,12 +445,43 @@ a {
 
 #intro h1 {
   font-size: 2.4em;
-  line-height: initial;
+  line-height: 1.5em;
+  margin: 2em 0;
 }
 
 #intro h2 {
   font-weight: lighter;
   font-size: 1em;
+  text-align: center;
+}
+
+#intro input {
+  background: #f2eee2;
+  background:transparent;
+  margin: 0 auto;
+}
+
+#intro .btn {
+  font-size: 0.75em;
+  margin-top:3em;
+}
+
+#intro .wrap-c {
+  align-items: center;
+}
+
+.window {
+  border:1px solid #b93168;
+  margin:4em;
+}
+
+.window h3 {
+  font-family: 'SinkinSansBold';
+  color: #B93168;
+}
+
+.curtain {
+  display:none;
 }
 
 #policy .text-img-wrap {
@@ -495,7 +554,7 @@ a {
 .btn {
   border-radius: 5%;
   border:2px solid;
-  padding: 10px;
+  padding: 5px;
   margin: 10px;
   min-width:10em;
   text-align: center;
@@ -504,8 +563,8 @@ a {
 }
 
 .btn-prim {
-  background-color: #668EAA;
-  border-color: #668EAA;
+  background-color: #b93168;
+  border-color: #b93168;
   color:#fff;
   font-weight: bold;
 }

@@ -1,7 +1,7 @@
 var ros = [
   {
     "head":"SOAP is a free, easy-to-use online tool that helps civil society organizations build better security policies.",
-    "subhead":"To start building your organizational security policy, enter your organization's name (or an alias)",
+    "subhead":"To get started, enter your organization's name (or an alias):",
     "what":[
       {
         "head":"What is SOAP?",

@@ -16,8 +16,8 @@ templates.homeSection = function(data){
     <h3>`+text.head+`</h3>
     <p>`+text.subhead+`</p>`
     +list+
-    `<div class="curtain">
-      <p>secondary text</p>
+    `<button class="openClose btn btn-seco"><i class="fas fa-plus-circle"></i></button><div class="curtain">
+      <p>`+text.more+`</p>
     </div>
   </div>`;
   return content;
