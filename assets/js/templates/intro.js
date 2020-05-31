@@ -2,6 +2,7 @@ templates.intro = function(data){
   var text = ros[0];
   var content = `
     <div id="intro" class="nav-start">
+      <img id="logoBig" src="assets/images/soapLogoW.png" />
       <h1>`+text.head+`</h1>
       <h2>`+text.subhead+`</h2>
       <div class="btn-wrap wrap-c">

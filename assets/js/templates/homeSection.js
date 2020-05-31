@@ -13,11 +13,12 @@ templates.homeSection = function(data){
   }
   var content = `
   <div class="window">
-    <h3>`+text.head+`</h3>
-    <p>`+text.subhead+`</p>`
+  <div class="title">
+    <h3>`+text.head+`</h3></div>
+    <div class="overview"><p>`+text.subhead+`</p>`
     +list+
     `<button class="openClose btn btn-seco"><i class="fas fa-plus-circle"></i></button><div class="curtain">
-      <p>`+text.more+`</p>
+      <p>`+text.more+`</p></div>
     </div>
   </div>`;
   return content;

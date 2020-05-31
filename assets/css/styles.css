@@ -49,7 +49,6 @@ body {
   flex-direction: column;
   overflow: scroll;
   overflow-x:hidden;
-  background-color:#f2eee2;
 }
 
 p {
@@ -60,7 +59,7 @@ p {
   position: fixed;
   width:100%;
   display: flex;
-  padding: 1em;
+  padding: 1em 4em;
   box-sizing: border-box;
   max-height: 9em;
   align-items: center;
@@ -74,21 +73,22 @@ p {
   filter: drop-shadow(0px 0px 3px #eee);
 }
 .nav-scroll {
-  background-color: #f2eee2;
   color:#066493;
 }
 .nav-start {
-  background-color: #1b263b;
+  background-color: transparent;
   color: #f2eee2;
 }
-
+#head.nav-start {
+  opacity:0;
+}
 .nav-scroll #logo{
   filter:brightness(0.9);
 }
 
 #page {
   flex: 1 0 auto;
-  padding-top:8.5em;
+  background: #1b263b;
 }
 .editMode {
   border: 3em #8FC5EA solid;
@@ -109,6 +109,7 @@ p {
 
 #foot {
   flex-shrink: 0;
+  background: #1b263b;
 }
 .wrapper {
   width: 75%;
@@ -435,8 +436,8 @@ a {
 }
 
 #intro {
-  background: linear-gradient(to bottom right, #1b263b, #066493);
-  padding-top:2em;
+  background: linear-gradient(to right bottom, #1b263b, #066493, #b93168);
+  padding: 5em 4em 8em;
 }
 
 #intro h1, #intro h2 {
@@ -473,11 +474,32 @@ a {
 .window {
   border:1px solid #b93168;
   margin:4em;
+  margin-top: -4em;
+  background: #f2eee2;
+  box-shadow: 0px 0px 1em #b93168;
+  display:flex;
+  flex-direction: row;
+}
+.window .title {
+  background: #1b263b;
+  color: #f2eee2;
+}
+
+.window:first-child {
+  margin-top: -4em;
+}
+#page > .window ~ .window {
+  margin-top: 4em;
 }
 
 .window h3 {
   font-family: 'SinkinSansBold';
-  color: #B93168;
+  text-transform: uppercase;
+  font-size: 5em;
+  max-width: 5em;
+  line-height: 1.5em;
+  margin: 0;
+  padding:0 2em 0 0;
 }
 
 .curtain {
