@@ -274,13 +274,13 @@
 
 @media (min-width:600px) {
   #head a {
-    max-width: 25%;
+    width: auto;
   }
   #menu-check:checked ~ ul {
     align-items: center;
   }
   #head img {
-    max-width: 50%;
+    max-width: 47%;
   }
   /* #head .wrapper {
     display:flex;
