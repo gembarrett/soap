@@ -2,8 +2,10 @@ templates.intro = function(data){
   var text = ros[0];
   var content = `
     <div id="intro" class="nav-start">
-      <img id="logoBig" src="assets/images/soapLogoW.png" />
-      <h1>`+text.head+`</h1>
+      <div id="logoContainer">
+        <div><img id="logoBig" src="assets/images/soapLogoW.png" /></div>
+        <h1>`+text.head+`</h1>
+      </div>
       <h2>`+text.subhead+`</h2>
       <div class="btn-wrap wrap-c">
         <label for="home-q1-0-answer"></label><input type="text" id="home-q1-0-answer" name="home-q1-el" placeholder="Great Organization Name" required="">
