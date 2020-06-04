@@ -1,7 +1,6 @@
 templates.homeSection = function(data){
   var text = data[0];
   var list = "";
-  console.log(text.list[0]);
   // if there's a list
   if (text.list !== ""){
     list += `<`+text.list[0].type+`>`;
@@ -9,8 +8,9 @@ templates.homeSection = function(data){
     for (var i = 0; i<text.list[0].content.length; i++){
       list += `<li>`+text.list[0].content[i]+`</li>`;
     }
-    list += `</ul>`;
+    list += `</`+text.list[0].type+`>`;
   }
+  var moreText = text.more.join('\n');
   var content = `
   <div class="window">
   <div class="title">
@@ -20,7 +20,7 @@ templates.homeSection = function(data){
     `<div class="curtain">
     <details>
     <summary>More</summary>
-      <p>`+text.more+`</p>
+      <p>`+moreText+`</p>
     </details>
       </div>
     </div>

@@ -413,9 +413,29 @@ a {
 }
 
 .homeSectionOverview{
-  padding: 0 0 2em 2em;
+  padding: 0 0 2em 3em;
+  font-size: 1.2em;
+  line-height: 1.6em;
 }
-
+.homeSectionOverview li {
+  padding: 0.5em 0;
+}
+.homeSectionOverview ol, .homeSectionOverview ul {
+  margin-left: 1em;
+  padding: 0;
+}
+.curtain {
+  margin-top: 1em;
+  font-size: initial;
+}
+.curtain summary {
+  background: rgba(27,38,59,0.75);
+  color: #f2eee2;
+  padding: 1em;
+}
+details[open=""] summary {
+  opacity: 0.5;
+}
 #overview {
   display: flex;
   justify-content: space-evenly;
