@@ -160,6 +160,14 @@ function findContent(q){
       q = 'q'+q;
       return sections[4].find(question => question.id === q);
       break;
+    case q < 43:
+      q = 'q'+q;
+      return sections[5].find(question => question.id === q);
+      break;
+    case q < 49:
+      q = 'q'+q;
+      return sections[6].find(question => question.id === q);
+      break;
     default:
       console.log('question not found');
       break;

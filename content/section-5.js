@@ -93,6 +93,7 @@ var section5 = [
       },
       {
         "type":"checkbox",
+        "editable":true,
         "answerText":"other",
         "storeAs":"[officeStorage]",
         "excludes":[],
@@ -169,6 +170,7 @@ var section5 = [
       },
       {
         "type":"checkbox",
+        "editable":true,
         "answerText":"other",
         "storeAs":"[otherVisitorRule]",
         "excludes":[],
@@ -202,7 +204,7 @@ var section5 = [
       {
         "type":"text",
         "answerText":"Name",
-        "placeholder": "",
+        "placeholder": "e.g. Kendrick Floyd",
         "storeAs":"[officeSecurityName]",
         "excludes":[],
         "policyEntry":"",
@@ -218,7 +220,7 @@ var section5 = [
       {
         "type":"text",
         "answerText":"Position",
-        "placeholder": "",
+        "placeholder": "e.g. Head of Office Security",
         "storeAs":"[officeSecurityPosition]",
         "excludes":[],
         "policyEntry":"",
@@ -234,7 +236,7 @@ var section5 = [
       {
         "type":"text",
         "answerText":"Pronouns",
-        "placeholder": "",
+        "placeholder": "e.g. he/him",
         "storeAs":"[officeSecurityPronouns]",
         "excludes":[],
         "policyEntry":"Their pronouns are [officeSecurityPronouns]",
@@ -250,6 +252,7 @@ var section5 = [
       {
         "type":"text",
         "answerText":"Email",
+        "placeholder": ["e.g. example@organisation.com"],
         "storeAs":"[officeSecurityEmail]",
         "excludes":[],
         "policyEntry":"You can email [officeSecurityName] at [officeSecurityEmail].",
@@ -265,6 +268,7 @@ var section5 = [
       {
         "type":"text",
         "answerText":"Phone",
+        "placeholder": "e.g. +1 (234) 567-890",
         "storeAs":"[officeSecurityPhone]",
         "excludes":[],
         "policyEntry":"Their phone number is [officeSecurityPhone].",
@@ -285,7 +289,6 @@ var section5 = [
       {"more": ["responsible person office security", "security officer responsibilities"]}
     ]
   },
-  ,
   {
     "isQuestion": true,
     "id":"q40",
@@ -342,6 +345,7 @@ var section5 = [
       },
       {
         "type":"checkbox",
+        "editable":true,
         "answerText":"Other",
         "storeAs":"[officeSecOther]",
         "excludes":[],
@@ -363,7 +367,6 @@ var section5 = [
       {"more": ["social engineering tactics tailgating", "physical penetration testing", "office key security policy"]}
     ]
   },
-  ,
   {
     "isQuestion": true,
     "id":"q41",
@@ -435,6 +438,7 @@ var section5 = [
       },
       {
         "type":"checkbox",
+        "editable":true,
         "answerText":"Other",
         "storeAs":"[remoteSecOther]",
         "excludes":[],

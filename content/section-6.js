@@ -374,7 +374,7 @@ var section6 = [
         "type":"textarea",
         "answerText":"",
         "placeholder":"- note down the exact message displayed on your screen, - contact the security officer, - locate your backups to prepare for a system restore",
-        "storeAs":"[inc3Tactics]",
+        "storeAs":"[inc6tactics]",
         "excludes":[],
         "policyEntry":"",
         "routineEntry":"",
@@ -391,39 +391,6 @@ var section6 = [
       {"relevance":""},
       {"meaning":"Ransom malware, or ransomware, infects computers and mobile devices through spam, phishing and malicious advertising. Its goal is to lock the user out of their device while demanding a ransom for the decryption and/or release of their files. It’s a popular type of malware attack that is increasingly used against companies and organisations, due to the higher value of the data being held ransom. The first rule of dealing with ransomware is to never pay the ransom: it encourages the attacker and there’s no guarantee your files will be released. There are decryptors available for some ransomware and remediation software for removing the threat, but a full system restore may be the only solution for some infections."},
       {"implementation":"what to do when infected with ransomware"},
-      {"more": [""]}
-    ]
-  },
-  {
-    "isQuestion": true,
-    "id":"q49",
-    "q":"",
-    "required":false,
-    "policyContent":"",
-    "routineEntry":"",
-    "appendixContent":"",
-    "answers":[
-      {
-        "type":"textarea",
-        "answerText":"",
-        "placeholder":"",
-        "storeAs":"[]",
-        "excludes":[],
-        "policyEntry":"",
-        "routineEntry":"",
-        "appendixEntry":[
-          {
-            "reviewList":"",
-            "tipList": "",
-            "linksList": ""
-          }
-        ]
-      },
-    ],
-    "tips":[
-      {"relevance":""},
-      {"meaning":""},
-      {"implementation":""},
       {"more": [""]}
     ]
   }

@@ -1,7 +1,7 @@
 // initialise counters with the first section and question, this is updated at the end of questions and sections
 
 //  list of sections
-var sections = [section0, section1, section2, section3, section4];
+var sections = [section0, section1, section2, section3, section4, section5, section6];
 // loop through and create list of questions
 var questionsList = [];
 // for each of the sections
