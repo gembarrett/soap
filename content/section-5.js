@@ -468,7 +468,7 @@ var section5 = [
       {
         "type":"textarea",
         "answerText":"",
-        "placeholder":"Here are a few examples: \n\n- report to the police, \n- reset account passwords \n- contact IT for a replacement device",
+        "placeholder":"Here are a few examples: \n\n- report to their phone company, \n- reset account passwords \n- contact IT for a replacement device",
         "storeAs":"[inc5tactics]",
         "excludes":[],
         "policyEntry":"",
