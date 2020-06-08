@@ -28,11 +28,10 @@ templates.questionsTemplate = function(data){
           }
           panel += '</p>';
         }
-        var button = '<i id="info-trigger-'+question.id+'" class="fas fa-plus-circle"></i>';
         // add the question
-        content += '<div class="question-panel" onclick="toggleInfo(\''+question.id+'\')"><h2>' + question.q + '</h2>';
+        content += '<details class="question-panel pink-border-glow"><summary><h2>' + question.q + '</h2></summary>';
         // if the panel content exists add it
-        content += panel !== "" ? button+'<div class="info-display panel-'+question.id+' closed">'+panel+'</div></div>' : '<br />';
+        content += panel !== "" ? panel+'</details>' : '<br />';
 
         content += '<div class="answers-container">';
 
@@ -79,7 +78,7 @@ templates.questionsTemplate = function(data){
         if (question.id === "q0") {
           content += `<h2>`+question.contentArray[0]+`</h2><div class="text-img-wrap">`;
           for (var k = 1; k < question.contentArray.length; k++){
-            content += `<section><img src="assets/images/pic-q0-`+k+`.gif"><p>`+question.contentArray[k]+`</p></section>`;
+            content += `<section class="pink-border-glow"><img src="assets/images/pic-q0-`+k+`.gif"><p>`+question.contentArray[k]+`</p></section>`;
           }
           content += `</div>`;
         } else {

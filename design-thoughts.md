@@ -1,19 +1,7 @@
 # Design changes
 
 ## Home page
-* Consolidate the ROS content
-  * Remove info page and merge content with home
-  * Content sections should be in blocks
-  * Possibly with accompanying illustrations or icons of some kind
-  * Each block can have main points overview showing by default
-  * Further info hidden in panel, displayed when [same icon as More Info] is clicked
 * Get users building policy earlier
-  * Add a CTA, something like "Let's start with the introductions. Who is this policy for? (you can use an alias for your organisation if you prefer, then you can just find and replace with the actual name later)"
-  * Add a text input below that, same dotted border style as in build process
-  * Change the #build CTA button to say "Next question"
-  * Put that button next to or just below the input
-  * Push the "Find out more" button down below the previous content
-  * Centre it and change text to "Tell me more" with fa-arrow-down
   * When user provides org name, save it and send them to #build
   * In process, first question should be pre-filled with the provided org name, and hidden from user, with applicable edit-related classes added
 
