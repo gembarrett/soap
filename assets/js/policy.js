@@ -19,6 +19,8 @@ function compileDoc(p,a){
   var acctsP = [];
   var incResP = [];
   var travelP = [];
+  var envP = [];
+  var networkP = [];
   var appContent = {
     general: [],
     review: [],
@@ -119,6 +121,32 @@ function compileDoc(p,a){
           case qRef < 35:
             incResP = getPolicyContent(qRef, prevQ, aRef, incResP, found);
             break;
+          // questions 35-41 are for environmental security
+          case qRef < 42:
+            envP = getPolicyContent(qRef, prevQ, aRef, envP, found);
+            // if we need appendix and routines
+            if (a){
+              appContent = getAppendixContent(qRef, prevQ, aRef, appContent, found);
+              routineDoc = getRoutineEntry(qRef, prevQ, aRef, routineDoc, found);
+            }
+            break;
+          // question 42 is for inc resp
+          case qRef < 43:
+            incResP = getPolicyContent(qRef, prevQ, aRef, incResP, found);
+            break;
+          // questions 43-47 are for network security
+          case qRef < 48:
+            networkP = getPolicyContent(qRef, prevQ, aRef, networkP, found);
+            // if we need appendix and routines
+            if (a){
+              appContent = getAppendixContent(qRef, prevQ, aRef, appContent, found);
+              routineDoc = getRoutineEntry(qRef, prevQ, aRef, routineDoc, found);
+            }
+            break;
+          // question 48 is for inc resp
+          case qRef <49:
+            incResP = getPolicyContent(qRef, prevQ, aRef, incResP, found);
+            break;
           default:
             console.log(qRef + ' not found');
         }
@@ -130,7 +158,7 @@ function compileDoc(p,a){
 
   doc.plain = 'Organisational Security Policy\n\nCreated '+dateStamp()+'\n\n'+contextP.join('\n');
   doc.markdown = '# Organisational Security Policy \n#### Created '+dateStamp()+'\n\n'+contextP.join('\n');
-  doc.html = '<!DOCTYPE html><html><head><title>Cleaned with SOAP on '+dateStamp()+'</title></head><body><h1>Organisational Security Policy</h1><h4>Created '+dateStamp()+'</h4><p>'+contextP.join('</p><p>')+'</p>';
+  doc.html = '<!DOCTYPE html><html><head><title>Organisational Security Policy '+dateStamp()+'</title></head><body><h1>Organisational Security Policy</h1><h4>Created '+dateStamp()+'</h4><p>'+contextP.join('</p><p>')+'</p>';
 
   if (deviceP.length > 0){
     doc.plain += '\n\nDevice Security\n' + deviceP.join('\n');
@@ -151,6 +179,16 @@ function compileDoc(p,a){
     doc.plain += '\n\Travel Security\n' + travelP.join('\n');
     doc.markdown += '\n\n### Travel Security \n' + travelP.join('\n');
     doc.html += '<h3>Travel Security</h3><p>' + travelP.join('</p><p>')+'</p>';
+  }
+  if (envP.length > 0){
+    doc.plain += '\n\Environmental Security\n' + envP.join('\n');
+    doc.markdown += '\n\n### Environmental Security \n' + envP.join('\n');
+    doc.html += '<h3>Environmental Security</h3><p>' + envP.join('</p><p>')+'</p>';
+  }
+  if (networkP.length > 0){
+    doc.plain += '\n\Network Security\n' + networkP.join('\n');
+    doc.markdown += '\n\n### Network Security \n' + networkP.join('\n');
+    doc.html += '<h3>Network Security</h3><p>' + networkP.join('</p><p>')+'</p>';
   }
   if (incResP.length > 0){
     doc.plain += '\n\nWhat to do if...\n' + incResP.join('\n\n');
@@ -199,8 +237,10 @@ function compileDoc(p,a){
 // function to replace temporary placeholder text in policy
 function replaceStr(string) {
   var editedStr = string;
+  console.log('String is '+string);
   // for each of the stored keys
   for (var key in dict){
+    console.log('Key is ' +key);
     // if it's a list of things and the last item does not start with an " and "
     if ((Array.isArray(dict[key])) && (!dict[key][dict[key].length-1].startsWith(" and "))){
       last = dict[key][dict[key].length-1];

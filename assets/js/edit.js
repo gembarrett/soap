@@ -120,7 +120,6 @@ function collectAnswers(isEdited){
             exc = updateExc(qData.data.answers[aNum], exc);
             // save the answer
             dic = saveToDict(inputFields[cc], qData.data.answers[aNum], dic);
-            console.log(dic);
             ans = storeThisA(ans, qData.ref, aNum);
           } else {
             console.log('Unchecked or empty');
@@ -159,6 +158,14 @@ function findContent(q){
     case q < 35:
       q = 'q'+q;
       return sections[4].find(question => question.id === q);
+      break;
+    case q < 43:
+      q = 'q'+q;
+      return sections[5].find(question => question.id === q);
+      break;
+    case q < 49:
+      q = 'q'+q;
+      return sections[6].find(question => question.id === q);
       break;
     default:
       console.log('question not found');

@@ -86,7 +86,7 @@ var section4 = [
   {
     "isQuestion": true,
     "id":"q30",
-    "q":"How should staff prepare for travel?",
+    "q":"How should staff prepare their devices for travel?",
     "required":false,
     "policyContent":"Before travelling, there are steps which should be taken to prepare devices containing sensitive information. For help with any of the following security measures, please contact [contactName].",
     "appendixContent":"EFF wrote a Border Search Pocket Guide, which may be useful: https://www.eff.org/document/eff-border-search-pocket-guide",
@@ -362,22 +362,6 @@ var section4 = [
         "appendixEntry":[
           {
             "reviewList":"Is the paid subscription to [vpnChoice] still a good solution or is there a better option now available?",
-            "tipList": "",
-            "linksList": ""
-          }
-        ]
-      },
-      {
-        "type":"radio",
-        "editable":true,
-        "answerText":"other",
-        "storeAs":"[otherVPNPayment]",
-        "excludes":[],
-        "policyEntry":"Recommended VPN and circumvention tools are paid for by [otherVPNPayment]",
-        "routineEntry":"",
-        "appendixEntry":[
-          {
-            "reviewList":"",
             "tipList": "",
             "linksList": ""
           }

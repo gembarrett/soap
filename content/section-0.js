@@ -129,7 +129,7 @@ var section0 = [
         "type":"radio",
         "answerText":"Yes.",
         "storeAs": "",
-        "excludes":[],
+        "excludes":[41],
         "policyEntry":"",
         "routineEntry":"",
         "appendixEntry":[
@@ -159,7 +159,7 @@ var section0 = [
         "type":"radio",
         "answerText":"No - all of our staff work remotely.",
         "storeAs": "",
-        "excludes":[35, 36, 37, 38, 39], // exc. environmental Qs when added
+        "excludes":[36, 38, 39, 40, 44, 45],
         "policyEntry":"",
         "routineEntry":"",
         "appendixEntry":[
