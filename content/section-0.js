@@ -159,7 +159,7 @@ var section0 = [
         "type":"radio",
         "answerText":"No - all of our staff work remotely.",
         "storeAs": "",
-        "excludes":[36, 38, 39, 40],
+        "excludes":[36, 38, 39, 40, 44, 45],
         "policyEntry":"",
         "routineEntry":"",
         "appendixEntry":[

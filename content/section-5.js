@@ -373,7 +373,7 @@ var section5 = [
     "q":"How do you expect staff to secure their home office space?",
     "required":true,
     "policyContent":"",
-    "routineEntry":"Be secure when working remotely; ",
+    "routineEntry":"",
     "appendixContent":"Between reviews, keep a note of any security incidents related to working remotely as these experiences teach those involved, the organisation as a whole and can be used to improve the security policy.",
     "answers":[
       {
@@ -382,7 +382,7 @@ var section5 = [
         "storeAs":"[]",
         "excludes":[],
         "policyEntry":"The devices you use for work should not be shared with others outside of [orgName], as it can put the confidential information they hold at risk of deletion or damage.",
-        "routineEntry":"don’t allow others to use your work devices",
+        "routineEntry":"Don’t allow others to use your work devices",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -397,7 +397,7 @@ var section5 = [
         "storeAs":"[]",
         "excludes":[],
         "policyEntry":"Please switch off devices when they are not in use, as this will make it harder for intruders to access the file system, especially if the device uses disk encryption and/or requires a password to log in.",
-        "routineEntry":"switch work devices off when not in use",
+        "routineEntry":"Switch work devices off when not in use",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -412,7 +412,7 @@ var section5 = [
         "storeAs":"[]",
         "excludes":[],
         "policyEntry":"When the work day is over, documents and devices should be locked away to deter thieves.",
-        "routineEntry":"lock away documents and devices at night",
+        "routineEntry":"Lock away documents and devices at night",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -427,7 +427,7 @@ var section5 = [
         "storeAs":"[]",
         "excludes":[],
         "policyEntry":"Staff working remotely should know who is able to enter their office. Please avoid allowing access to strangers unless precautions are taken to lock confidential papers away and turn off computers before the visit.",
-        "routineEntry":"prevent others from accessing your workspace unsupervised",
+        "routineEntry":"Prevent others from accessing your workspace unsupervised",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -442,7 +442,7 @@ var section5 = [
         "answerText":"Other",
         "storeAs":"[remoteSecOther]",
         "excludes":[],
-        "policyEntry":"[remoteSecOther]",
+        "policyEntry":"[orgName] staff are expected to secure their home office using the following method: [remoteSecOther]",
         "routineEntry":"",
         "appendixEntry":[
           {

@@ -123,7 +123,7 @@ function compileDoc(p,a){
             break;
           // questions 35-41 are for environmental security
           case qRef < 42:
-            envP = getPolicyContent(qRef, prevQ, aRef, incResP, found);
+            envP = getPolicyContent(qRef, prevQ, aRef, envP, found);
             // if we need appendix and routines
             if (a){
               appContent = getAppendixContent(qRef, prevQ, aRef, appContent, found);
@@ -136,7 +136,7 @@ function compileDoc(p,a){
             break;
           // questions 43-47 are for network security
           case qRef < 48:
-            envP = getPolicyContent(qRef, prevQ, aRef, incResP, found);
+            networkP = getPolicyContent(qRef, prevQ, aRef, networkP, found);
             // if we need appendix and routines
             if (a){
               appContent = getAppendixContent(qRef, prevQ, aRef, appContent, found);
@@ -158,7 +158,7 @@ function compileDoc(p,a){
 
   doc.plain = 'Organisational Security Policy\n\nCreated '+dateStamp()+'\n\n'+contextP.join('\n');
   doc.markdown = '# Organisational Security Policy \n#### Created '+dateStamp()+'\n\n'+contextP.join('\n');
-  doc.html = '<!DOCTYPE html><html><head><title>Cleaned with SOAP on '+dateStamp()+'</title></head><body><h1>Organisational Security Policy</h1><h4>Created '+dateStamp()+'</h4><p>'+contextP.join('</p><p>')+'</p>';
+  doc.html = '<!DOCTYPE html><html><head><title>Organisational Security Policy '+dateStamp()+'</title></head><body><h1>Organisational Security Policy</h1><h4>Created '+dateStamp()+'</h4><p>'+contextP.join('</p><p>')+'</p>';
 
   if (deviceP.length > 0){
     doc.plain += '\n\nDevice Security\n' + deviceP.join('\n');
@@ -237,8 +237,10 @@ function compileDoc(p,a){
 // function to replace temporary placeholder text in policy
 function replaceStr(string) {
   var editedStr = string;
+  console.log('String is '+string);
   // for each of the stored keys
   for (var key in dict){
+    console.log('Key is ' +key);
     // if it's a list of things and the last item does not start with an " and "
     if ((Array.isArray(dict[key])) && (!dict[key][dict[key].length-1].startsWith(" and "))){
       last = dict[key][dict[key].length-1];

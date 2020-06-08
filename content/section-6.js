@@ -195,7 +195,7 @@ var section6 = [
     "id":"q46",
     "q":"How can staff protect themselves from browser-based intrusions?",
     "required":true,
-    "policyContent":"Please use the following security hygiene techniques in your browser:",
+    "policyContent":"Your web browser can provide a window into your online activities, potentially exposing confidential data such as activist identities and [orgName] project details. To mitigate this, we recommend implementing the following security hygiene techniques in your browser:",
     "routineEntry":"",
     "appendixContent":"",
     "answers":[
@@ -204,7 +204,7 @@ var section6 = [
         "answerText":"Clear cookies",
         "storeAs":"[]",
         "excludes":[],
-        "policyEntry":"clear cookies",
+        "policyEntry":"- clear cookies",
         "routineEntry":"",
         "appendixEntry":[
           {
@@ -219,7 +219,7 @@ var section6 = [
         "answerText":"Clear history",
         "storeAs":"[]",
         "excludes":[],
-        "policyEntry":"delete browser history (this can be set up on an automatic schedule)",
+        "policyEntry":"- delete browser history (this can be set up on an automatic schedule)",
         "routineEntry":"When did you last clear your browsing history?",
         "appendixEntry":[
           {
@@ -234,7 +234,7 @@ var section6 = [
         "answerText":"Do Not Track",
         "storeAs":"[]",
         "excludes":[],
-        "policyEntry":"enable Do Not Track to hide from trackers",
+        "policyEntry":"- enable Do Not Track to hide from trackers",
         "routineEntry":"",
         "appendixEntry":[
           {
@@ -249,7 +249,7 @@ var section6 = [
         "answerText":"Javascript off",
         "storeAs":"[]",
         "excludes":[],
-        "policyEntry":"disable Javascript",
+        "policyEntry":"- disable Javascript",
         "routineEntry":"",
         "appendixEntry":[
           {
@@ -265,7 +265,7 @@ var section6 = [
         "answerText":"Other",
         "storeAs":"[otherBrowserSec]",
         "excludes":[],
-        "policyEntry":"[otherBrowserSec]",
+        "policyEntry":"- also, [otherBrowserSec]",
         "routineEntry":"",
         "appendixEntry":[
           {
@@ -364,7 +364,7 @@ var section6 = [
   {
     "isQuestion": true,
     "id":"q48",
-    "q":"Bearing the previous questions in mind, what steps should staff take when their devices are seized?",
+    "q":"Bearing the previous questions in mind, what steps should staff members take if their device is taken over by ransomware?",
     "required":false,
     "policyContent":"... you suspect your device is infected with ransomware: it’s important not to panic and pay the ransom as that gives no guarantee that your files will be released. Instead, you should follow these steps: [inc6tactics]",
     "appendixContent": "",
@@ -373,7 +373,7 @@ var section6 = [
       {
         "type":"textarea",
         "answerText":"",
-        "placeholder":"- note down the exact message displayed on your screen, - contact the security officer, - locate your backups to prepare for a system restore",
+        "placeholder":"- note down the exact message displayed on your screen, \n- contact the security officer, \n- locate your backups to prepare for a system restore",
         "storeAs":"[inc6tactics]",
         "excludes":[],
         "policyEntry":"",
@@ -390,8 +390,8 @@ var section6 = [
     "tips":[
       {"relevance":""},
       {"meaning":"Ransom malware, or ransomware, infects computers and mobile devices through spam, phishing and malicious advertising. Its goal is to lock the user out of their device while demanding a ransom for the decryption and/or release of their files. It’s a popular type of malware attack that is increasingly used against companies and organisations, due to the higher value of the data being held ransom. The first rule of dealing with ransomware is to never pay the ransom: it encourages the attacker and there’s no guarantee your files will be released. There are decryptors available for some ransomware and remediation software for removing the threat, but a full system restore may be the only solution for some infections."},
-      {"implementation":"what to do when infected with ransomware"},
-      {"more": [""]}
+      {"implementation":""},
+      {"more": ["what to do when infected with ransomware"]}
     ]
   }
 ]

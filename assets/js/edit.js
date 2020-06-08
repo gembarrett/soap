@@ -120,7 +120,6 @@ function collectAnswers(isEdited){
             exc = updateExc(qData.data.answers[aNum], exc);
             // save the answer
             dic = saveToDict(inputFields[cc], qData.data.answers[aNum], dic);
-            console.log(dic);
             ans = storeThisA(ans, qData.ref, aNum);
           } else {
             console.log('Unchecked or empty');
