@@ -414,7 +414,7 @@ color: #A9bcd0;
   height: 100%;
   padding: 20px 50px 20px 20px;
   overflow: auto;
-  background-color: #fff;
+  background-color: #f2eee2;
   box-sizing: border-box;
 }
 
@@ -540,11 +540,6 @@ details a {
   display:flex;
   flex-direction: row;
 }
-.window .title {
-  background: #1b263b;
-  color: #f2eee2;
-  max-width: 40%;
-}
 
 .window:first-child {
   margin-top: -4em;
@@ -557,51 +552,29 @@ details a {
   font-family: 'SinkinSansBold';
   text-transform: uppercase;
   font-size: 5em;
-  max-width: 5em;
   line-height: 1.5em;
   margin: 0;
-  padding:0 2em 0 0;
+  background: #1b263b;
+  color: #f2eee2;
+  flex: 0 0 40%;
 }
 
-#policy .text-img-wrap {
-  justify-content: space-between;
-  margin-top:2.5em;
+.buildPage .window:first-child {
+  margin-top:4em;
 }
-
-#policy textarea {
-  border: none;
-  padding: 1em 2em;
-  box-sizing: border-box;
-  text-align: left;
+.buildPage .window > :not(h3) {
+  padding: 0 2em;
 }
-
 #policy-dl {
   display: flex;
-  flex-direction: column;
-  width: 20%;
-  align-items: center;
-  border: 4px solid currentColor;
-  border-radius: 4%;
-  padding: 1em;
+  flex-direction: row;
 }
 
-#policy-edit {
-  width: 70%;
-  background-color: currentColor;
-  padding: 1em;
-}
-
-#policy-edit h3 {
-  color:#fff;
-}
-
-#policy i {
+#policy-dl i{
   padding-left: 5px;
 }
-
-#resources {
-  padding-top: 0;
-  border-top: 2px solid currentColor;
+#link-wrapper a {
+  display:block;
 }
 
 #features {
@@ -631,7 +604,6 @@ details a {
   padding: 10px;
 }
 .btn {
-  border-radius: 5%;
   border:2px solid;
   padding: 0.75em;
   font-family: SinkinSansMedium;
@@ -657,14 +629,10 @@ details a {
   border-color: #066493;
   background: #f2eee2;
 }
-#intro .btn-seco {
-  color:#fff;
-}
 .btn-tert {
   border: 0;
   color: #fff;
   background-color: #066493;
-  border-radius: 5%;
   min-width: 0;
   border:1px solid #fff;
 }
@@ -704,10 +672,14 @@ progress[value="0"] {
 }
 .policyHolder {
   width:100%;
-  height: 50%;
-  padding: 2em 0;
   display:inline-block;
-  min-height:200px;
+  min-height:300px;
+  border: none;
+  padding: 1em 2em;
+  box-sizing: border-box;
+  text-align: left;
+  line-height: 1.8em;
+  color:#1b263b;
 }
 small a {
   color:#a9bcd0;
@@ -907,21 +879,15 @@ span.q0-only {
 .spacer {
   flex-grow:100;
 }
-#dl-wrapper {
+#policy-dl {
   display:flex;
 }
 .showAllQs {
   display:block;
 }
-#howTrio {
-  display: flex;
-}
 #home-pic {
   flex: 1 1 60%;
   margin: 1em;
-}
-#howTrio .trioPics img {
-  max-width: 100%;
 }
 #img-intro {
   width:100%;

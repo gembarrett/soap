@@ -464,7 +464,7 @@ var section5 = [
   {
     "isQuestion": true,
     "id":"q42",
-    "q":"Bearing the previous questions in mind, what steps should staff members take if their work device has been lost or stolen?",
+    "q":"What steps should staff members take if their work device has been lost or stolen?",
     "required":false,
     "policyContent":".... a device you use for work is lost or stolen: as with most security incidents, it can be intimidating to report a device loss but the impact can be minimised the sooner it’s reported. Here are the steps you should take immediately upon discovering a work device is lost or stolen: [inc5tactics]",
     "routineEntry":"",

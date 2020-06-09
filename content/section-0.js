@@ -555,7 +555,7 @@ var section0 = [
   {
     "isQuestion": true,
     "id":"q8",
-    "q":"Does your organisation provide staff with webcam covers or privacy screens for their devices?",
+    "q":"Does your organisation provide staff with privacy equipment for their devices?",
     "required":false,
     "policyContent":"In addition to other device security measures, [orgName] will also provide you with [providePrivacy] to use on your devices.",
     "appendixContent":"",

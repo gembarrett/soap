@@ -187,10 +187,10 @@
     border-top:1px solid;
     padding-top:0.5em;
   }
-  #dl-wrapper {
-    flex-direction: column;
+  #policy-dl {
+    flex-direction: row;
   }
-  #policy {
+  .buildPage {
     padding: 1.5em;
   }
   #policy-dl {
@@ -206,14 +206,14 @@
   #policy-edit h3 {
     margin-top: 0;
   }
-  #policy textarea {
+  .buildPage textarea {
     padding-left: 1em;
   }
-  #policy h1 {
+  .buildPage h1 {
     font-size: 1.3em;
     margin-top:2em;
   }
-  #policy text-img-wrap {
+  .buildPage text-img-wrap {
     margin-top:2em;
   }
   .btn.btn-prim {
@@ -293,8 +293,8 @@
   #expand {
     display: none;
   }
-  #dl-wrapper {
-    flex-direction: column;
+  #policy-dl {
+    flex-direction: row;
   }
   #menu-check:checked ~ #collapse {
     display:none;
@@ -345,9 +345,6 @@
     margin: 0;
     padding: 0;
   }
-  #howTrio {
-    flex-direction: row;
-  }
   .nav-start.trio {
     flex-direction: column;
   }
@@ -387,8 +384,5 @@
   }
   .mobileVis{
     display: none;
-  }
-  #howTrio {
-    margin-right:1em;
   }
 }

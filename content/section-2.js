@@ -381,7 +381,7 @@ var section2 = [
   {
     "isQuestion": true,
     "id":"q20",
-    "q":"Bearing the previous questions in mind, what steps should staff take when faced with a possibly hacked account?",
+    "q":"What steps should staff take when faced with a possibly hacked account?",
     "required":false,
     "policyContent":"... you notice suspicious activity in any work-related accounts: This could look like unprompted two-factor code requests, strange login times, or rejection of correct passwords - any unfamiliar actions performed by, or within, the account should be investigated. To do this, you are advised to follow these steps: [inc2Tactics]",
     "appendixContent": "Sometimes data breaches are to blame for a hacked account, and so it can be worth checking if the email associated with the account was recently involved in such an incident by visiting Have I Been Pwned or a similar site",

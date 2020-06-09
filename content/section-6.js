@@ -364,7 +364,7 @@ var section6 = [
   {
     "isQuestion": true,
     "id":"q48",
-    "q":"Bearing the previous questions in mind, what steps should staff members take if their device is taken over by ransomware?",
+    "q":"What steps should staff members take if their device is taken over by ransomware?",
     "required":false,
     "policyContent":"... you suspect your device is infected with ransomware: it’s important not to panic and pay the ransom as that gives no guarantee that your files will be released. Instead, you should follow these steps: [inc6tactics]",
     "appendixContent": "",

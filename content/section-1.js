@@ -291,7 +291,7 @@ var section1 = [
   {
     "isQuestion": true,
     "id":"q13",
-    "q":"Bearing the previous questions in mind, what steps should staff take if they are faced with a suspicious email?",
+    "q":"What steps should staff take if they are faced with a suspicious email?",
     "required":false,
     "policyContent":"... you receive a suspicious email: Phishing involves being duped into providing information to parties that you otherwise wouldn’t share, usually through fake account notifications or impersonating a known contact. Unfortunately this kind of attack in common and so it is important to understand the steps we recommend taking to both mitigate and recover from such an attack: [inc1Tactics]",
     "appendixContent": "To check whether a link or attachment contains known malware, upload it to VirusTotal; a service owned by Google which reads the file and detects familiar malicious code. It won’t find every attack, only the known ones it’s seen before, but it’s a valuable tool nonetheless.",
