@@ -11,7 +11,7 @@ templates.policyTemplate = function(data){
   md = '<button class="btn btn-prim" onclick="downloadPolicy(\'markdown\')">Markdown  <i class="fas fa-download"></i></button>';
   html = '<button class="btn btn-prim" onclick="downloadPolicy(\'html\')">HTML  <i class="fas fa-download"></i></button>';
   var content =
-    `<div id="policy"><h1>You just built an organizational security policy!</h1>
+    `<div id="policy"><h1>Your organizational security policy</h1>
     <div class="text-img-wrap">
     <div id="policy-dl"><h3>Download pre-formatted file:</h3><div id="dl-wrapper">`
     + txt + md + html + `</div></div>

@@ -17,12 +17,10 @@ templates.homeSection = function(data){
     <h3>`+text.head+`</h3></div>
     <div class="homeSectionOverview"><p>`+text.subhead+`</p>`
     +list+
-    `<div class="curtain">
-    <details>
+    `<details>
     <summary>More</summary>
       <p>`+moreText+`</p>
     </details>
-      </div>
     </div>
   </div>`;
   return content;

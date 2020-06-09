@@ -1,56 +1,8 @@
-// initialise counters with the first section and question, this is updated at the end of questions and sections
-
-//  list of sections
-var sections = [section0, section1, section2, section3, section4, section5, section6];
-// loop through and create list of questions
-var questionsList = [];
-// for each of the sections
-for (var i = 0; i < sections.length; i++) {
-  // get the section data
-  tmpContent = sections[i];
-  // for each of the questions in that section
-  for (var j = 0; j < tmpContent.length; j++) {
-    // push the id to the queue
-    questionsList.push(tmpContent[j].id);
-  }
-}
-
-// set up progress tracking
-var currentState = {
-  // which number in the section queue are we?
-  sectionC: 0,
-  // which section's data is in use?
-  sectionQ: sections[0],
-  // which number in the question queue are we?
-  questionC: 0,
-  // which question's data is in use?
-  questionQ: questionsList[0],
-  // position in section
-  questionP: 0,
-  // which answers have been given for which questions?
-  answers: [],
-  // list of exclusions, updated on every submission and checked on every question load
-  exclusions: []
-}
-// for storing the storeAs names and values
-var dict = {};
-
-// delete and replace
-var policyText = [];
-var appendixText = [];
-
-
-var output;
-
-
 function addChangeListeners() {
   var notice = document.querySelectorAll('.q0-only');
   for  (var n = 0; n <notice.length; n++){
     notice[n].remove();
   }
-  // TODO: investigate why this is triggered on q1, rather than onclick
-  // notice.onclick = notice.remove();
-
   // add listener for edit button
   var editBtn = document.getElementById("editBtn");
   editBtn.addEventListener('click', editAnswers, false);
@@ -135,20 +87,15 @@ function handleSubmit() {
   var id = currentState.questionQ.split('q')[1];
   // currently lets everything through, will change when required Qs are back
   canProceed = true;
-
   // before doing anything else, check if this is a required question
   // isRequired = match[0] ? match[0].required : false;
-
   // compare the size of answers array to find out if answers have been provided for this question
   if (id > 0){
-
     // if it's required and there are no answers provided
     // if (isRequired && noAnswers){
     //   canProceed = false;
     // }
-
     // if there's at least one answer returned and the button is disabled
-
     // enable the preview button
     prev = document.querySelector('#previewPolicy');
     if (prev.disabled && (currentState.answers.length === 0 || dict.length === 0)){
@@ -175,13 +122,10 @@ function handleSubmit() {
 
       // this hides the current question,
       match.classList.remove("current");
-
       // go to next question
       id = isExcludedQ(id);
-
       // TODO change to Skip when skip/next is working
       document.getElementById('submitAnswers').innerText = "Next";
-
       nextQuestion();
       window.scrollTo(0,0);
   }

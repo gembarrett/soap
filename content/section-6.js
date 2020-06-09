@@ -94,7 +94,7 @@ var section6 = [
       {
         "type":"checkbox",
         "answerText":"Password protection",
-        "storeAs":"[]",
+        "storeAs":"",
         "excludes":[],
         "policyEntry":"You will need a password in order to gain access, which can be obtained from [contactName].",
         "routineEntry":"",
@@ -109,7 +109,7 @@ var section6 = [
       {
         "type":"checkbox",
         "answerText":"Firewall",
-        "storeAs":"[]",
+        "storeAs":"",
         "excludes":[],
         "policyEntry":"A firewall has been set up to prevent malicious connections. If you believe the firewall may be negatively impacting your internet activities, and therefore your work, please speak to [contactName].",
         "routineEntry":"",
@@ -124,7 +124,7 @@ var section6 = [
       {
         "type":"checkbox",
         "answerText":"Approved devices only",
-        "storeAs":"[]",
+        "storeAs":"",
         "excludes":[],
         "policyEntry":"Only approved devices are to be on the [orgName] internal network. If you need to use an unapproved device you should request permission to connect from [contactName] so it can be added to the safe list.",
         "routineEntry":"",
@@ -139,7 +139,7 @@ var section6 = [
       {
         "type":"checkbox",
         "answerText":"Wired connections available",
-        "storeAs":"[]",
+        "storeAs":"",
         "excludes":[],
         "policyEntry":"Wired connections are available and recommended. Let [contactName] know if you need a cable for connecting your device.",
         "routineEntry":"",
@@ -154,7 +154,7 @@ var section6 = [
       {
         "type":"checkbox",
         "answerText":"Traffic inspection",
-        "storeAs":"[]",
+        "storeAs":"",
         "excludes":[],
         "policyEntry":"It is important to understand that any and all traffic can be inspected while on the [orgName] internal network.",
         "routineEntry":"",
@@ -202,7 +202,7 @@ var section6 = [
       {
         "type":"checkbox",
         "answerText":"Clear cookies",
-        "storeAs":"[]",
+        "storeAs":"",
         "excludes":[],
         "policyEntry":"- clear cookies",
         "routineEntry":"",
@@ -217,7 +217,7 @@ var section6 = [
       {
         "type":"checkbox",
         "answerText":"Clear history",
-        "storeAs":"[]",
+        "storeAs":"",
         "excludes":[],
         "policyEntry":"- delete browser history (this can be set up on an automatic schedule)",
         "routineEntry":"When did you last clear your browsing history?",
@@ -232,7 +232,7 @@ var section6 = [
       {
         "type":"checkbox",
         "answerText":"Do Not Track",
-        "storeAs":"[]",
+        "storeAs":"",
         "excludes":[],
         "policyEntry":"- enable Do Not Track to hide from trackers",
         "routineEntry":"",
@@ -247,7 +247,7 @@ var section6 = [
       {
         "type":"checkbox",
         "answerText":"Javascript off",
-        "storeAs":"[]",
+        "storeAs":"",
         "excludes":[],
         "policyEntry":"- disable Javascript",
         "routineEntry":"",
@@ -295,7 +295,7 @@ var section6 = [
       {
         "type":"checkbox",
         "answerText":"Anti-virus",
-        "storeAs":"[]",
+        "storeAs":"",
         "excludes":[],
         "policyEntry":"Anti-virus software is required on your computer, in order to deal with any virus-related threats. However, this will not take care of all viruses, and so you should continue to be vigilant against suspicious downloads.",
         "routineEntry":"",
@@ -310,7 +310,7 @@ var section6 = [
       {
         "type":"checkbox",
         "answerText":"Automatic updates",
-        "storeAs":"[]",
+        "storeAs":"",
         "excludes":[],
         "policyEntry":"Automatic updates simply ensures that your software is updated quietly in the background, so there is less chance of it being out-of-date and therefore vulnerable to exploits. On occasion, the latest software version may be unstable, in which case you will be informed to prevent the update.",
         "routineEntry":"",
@@ -325,7 +325,7 @@ var section6 = [
       {
         "type":"checkbox",
         "answerText":"Firewall",
-        "storeAs":"[]",
+        "storeAs":"",
         "excludes":[],
         "policyEntry":"A firewall will be set up on your device to manage the incoming and outgoing connections and prevent malicious data from being transferred. If you find that this interferes with your ability to carry out work activities then you should inform [contactname].",
         "routineEntry":"",

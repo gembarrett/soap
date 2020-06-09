@@ -32,8 +32,6 @@ var utils = (function(){
         function_to_invoke = 'questionsView';
       } else if (temp[0] === 'policy') {
         function_to_invoke = 'policyView';
-      } else if (temp[0] === 'info') {
-        function_to_invoke = 'bgView';
       } else {
         function_to_invoke = temp[0] || false;
       }

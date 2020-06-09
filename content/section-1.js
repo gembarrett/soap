@@ -219,7 +219,7 @@ var section1 = [
       {
         "type":"text",
         "answerText":"1-1 messaging",
-        "placeholder":"e.g. Signal, WhatsApp, Wire, Telegram, Encrypted email, Unencrypted email, SMS, Mattermost, Slack, Matrix",
+        "placeholder":"e.g. Signal, WhatsApp, encrypted email",
         "storeAs":"[commsDirect]",
         "excludes":[],
         "policyEntry":"- For 1-1 communications (e.g. direct message to a colleague), please use [commsDirect].",
@@ -235,7 +235,7 @@ var section1 = [
       {
         "type":"text",
         "answerText":"Team messaging",
-        "placeholder":"e.g. Signal, WhatsApp, Wire, Telegram, SMS, Phone Call, Mattermost, Slack, Matrix",
+        "placeholder":"e.g. Mattermost, Signal, unencrypted email",
         "storeAs":"[commsGroup]",
         "excludes":[],
         "policyEntry":"- When communicating with a group (e.g. your project team), please use [commsGroup].",
@@ -251,7 +251,7 @@ var section1 = [
       {
         "type":"text",
         "answerText":"Internal video/audio calls",
-        "placeholder":"e.g. Jitsi, Zoom, Signal, WhatsApp, Wire, Telegram, Google Hangouts, Skype, Phone Call, Mattermost, Slack, Matrix",
+        "placeholder":"e.g. Jitsi, Signal, Google Hangouts",
         "storeAs":"[commsInt]",
         "excludes":[],
         "policyEntry":"- We use [commsInt] for internal video or audio calls, e.g. for remote staff meetings.",
@@ -267,7 +267,7 @@ var section1 = [
       {
         "type":"text",
         "answerText":"External video/audio calls",
-        "placeholder":"e.g. Jitsi, Zoom, Signal, WhatsApp, Wire, Telegram, Google Hangouts, Skype, Phone Call, Mattermost, Slack, Matrix",
+        "placeholder":"e.g. Jitsi, Signal, Skype",
         "storeAs":"[commsExt]",
         "excludes":[],
         "policyEntry":"- External video and audio calls take place through [commsExt].",

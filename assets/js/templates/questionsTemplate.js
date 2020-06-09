@@ -1,6 +1,6 @@
 templates.questionsTemplate = function(data){
   var content = `
-      <progress max="`+questionsList.length+`" value="0"></progress><div id="questionContainer" class="">`;
+      <div id="questionContainer" class=""><progress max="`+questionsList.length+`" value="0"></progress>`;
 
 
   for(var i = 0; i < questionsList.length; i++) {

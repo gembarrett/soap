@@ -17,7 +17,7 @@ var section4 = [
       {
         "type":"radio",
         "answerText":"Yes and we provide them",
-        "storeAs":"[]",
+        "storeAs":"",
         "excludes":[],
         "policyEntry":"We provide staff with devices for use while travelling in order to lessen the impact should they become compromised.",
         "routineEntry":"",
@@ -32,7 +32,7 @@ var section4 = [
       {
         "type":"radio",
         "answerText":"Staff must provide these if they require them",
-        "storeAs":"[]",
+        "storeAs":"",
         "excludes":[],
         "policyEntry":"Staff are encouraged to use separate, 'clean' devices when they travel in order to lessen the impact of any authorised access. For guidance on which types of device would be suitable, speak to [contactName].",
         "routineEntry":"",
@@ -47,7 +47,7 @@ var section4 = [
       {
         "type":"radio",
         "answerText":"Staff should prepare and use their everyday devices",
-        "storeAs":"[]",
+        "storeAs":"",
         "excludes":[],
         "policyEntry":"Before travelling on work-related business, staff should prepare ('clean') their everyday devices in such a way as to reduce the impact of any unauthorised access while abroad. [contactName] can provide more information on how to do this.",
         "routineEntry":"",
@@ -62,7 +62,7 @@ var section4 = [
       {
         "type":"radio",
         "answerText":"Decided on a case-by-case basis",
-        "storeAs":"[]",
+        "storeAs":"",
         "excludes":[],
         "policyEntry":"The issue of travel devices vs everyday devices is decided on a case-by-case basis and is dependent on your threat model. Speak to [contactName] for more information.",
         "routineEntry":"",
@@ -340,7 +340,7 @@ var section4 = [
       {
         "type":"radio",
         "answerText":"Free plan",
-        "storeAs":"[]",
+        "storeAs":"",
         "excludes":[],
         "policyEntry":"",
         "routineEntry":"",
@@ -355,7 +355,7 @@ var section4 = [
       {
         "type":"radio",
         "answerText":"Company subscription",
-        "storeAs":"[]",
+        "storeAs":"",
         "excludes":[],
         "policyEntry":"[orgName] provides a paid subscription to [vpnChoice].",
         "routineEntry":"",

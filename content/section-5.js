@@ -17,7 +17,7 @@ var section5 = [
       {
         "type":"radio",
         "answerText":"Yes",
-        "storeAs":"[]",
+        "storeAs":"",
         "excludes":[],
         "policyEntry":"Our ‘clean desk’ policy requires staff to keep their workspaces clean and free of any sensitive documents and devices overnight or while not in use. By keeping such items tidied away, you are preventing visitors and other unauthorised persons from viewing confidential information.",
         "routineEntry":"Done for the day? Don’t forget to clear any devices or sensitive documents from your desk.",
@@ -32,7 +32,7 @@ var section5 = [
       {
         "type":"radio",
         "answerText":"No",
-        "storeAs":"[]",
+        "storeAs":"",
         "excludes":[],
         "policyEntry":"",
         "routineEntry":"",
@@ -121,12 +121,13 @@ var section5 = [
     "q":"What are your visitor protocols?",
     "required":true,
     "policyContent":"[orgName] staff are responsible for any visitors they bring into the office and are expected to be present for their guest’s arrival, or have prepared another person to receive them. No visitors should be given unsupervised access, and all staff should be vigilant against \"tail-gating\" or using another staff member's access code, card or key to gain entry to the office.",
+    "routineEntry":"",
     "appendixContent":"",
     "answers":[
       {
         "type":"checkbox",
         "answerText":"pre-visit announcement",
-        "storeAs":"[]",
+        "storeAs":"",
         "excludes":[],
         "policyEntry":"Before your guest arrives, you should ensure that in-office staff are aware of their impending visit so they can prepare accordingly.",
         "routineEntry":"Let people know if you’re bringing a visitor to the office",
@@ -141,7 +142,7 @@ var section5 = [
       {
         "type":"checkbox",
         "answerText":"sign-in book",
-        "storeAs":"[]",
+        "storeAs":"",
         "excludes":[],
         "policyEntry":"Visitors are expected to sign in when they enter the premises and sign out when they leave.",
         "routineEntry":"Has your guest signed in and out?",
@@ -156,7 +157,7 @@ var section5 = [
       {
         "type":"checkbox",
         "answerText":"guest WiFi",
-        "storeAs":"[]",
+        "storeAs":"",
         "excludes":[],
         "policyEntry":"While on site, guests should use the visitor WiFi to access the internet. Credentials can be obtained from [contactName]. When using the [orgName] wireless network, visitors are not to perform any illegal or malicious actions against any internal or external network.",
         "routineEntry":"Visitors must connect to the guest WiFi network; you can get the details of this from [contactName]",
@@ -301,7 +302,7 @@ var section5 = [
       {
         "type":"checkbox",
         "answerText":"Disabling/enabling the alarm system",
-        "storeAs":"[]",
+        "storeAs":"",
         "excludes":[],
         "policyEntry":"You will receive training in how to enable and disable the security alarm system. This information, including any access codes, should not be shared with others unless authorised to do so by [officeSecurityName]. If you are the last person to leave the office, it is your responsibility to enable the alarm system and lock up. Likewise, if you are the first to arrive at the office, then you should disable the alarm and report any problems immediately to [officeSecurityName] on [officeSecurityPhone].",
         "routineEntry":"If you’re the last to leave the office: enable the alarm and lock up. If you’re the first to arrive: disable the alarm and report any issues immediately.",
@@ -316,7 +317,7 @@ var section5 = [
       {
         "type":"checkbox",
         "answerText":"Their own access token (e.g. key)",
-        "storeAs":"[]",
+        "storeAs":"",
         "excludes":[],
         "policyEntry":"An access token, such as a key, fob or code, will be provided to you so that you can enter the office during working hours. It is of the upmost importance that you guard this token like a password and avoid sharing it with any other person, whether intentionally or by accident, or leaving it unattended. If you lose the token, it is your responsibility to notify [officeSecurityName] immediately so that the appropriate remedial actions can be taken.",
         "routineEntry":"It is very important that you protect your access token (e.g. key, fob, entry code). Do not share it or leave it unattended.",
@@ -331,7 +332,7 @@ var section5 = [
       {
         "type":"checkbox",
         "answerText":"Shutting down their computer before leaving",
-        "storeAs":"[]",
+        "storeAs":"",
         "excludes":[],
         "policyEntry":"Please turn off your computer when leaving the office to prevent intruders gaining easy access to its file system.",
         "routineEntry":"Turn your computer off at the end of your workday to enable disk encryption to take place and provide an extra obstacle to intruders.",
@@ -379,7 +380,7 @@ var section5 = [
       {
         "type":"checkbox",
         "answerText":"Prevent others using their devices",
-        "storeAs":"[]",
+        "storeAs":"",
         "excludes":[],
         "policyEntry":"The devices you use for work should not be shared with others outside of [orgName], as it can put the confidential information they hold at risk of deletion or damage.",
         "routineEntry":"Don’t allow others to use your work devices",
@@ -394,7 +395,7 @@ var section5 = [
       {
         "type":"checkbox",
         "answerText":"Switch off devices when not in use",
-        "storeAs":"[]",
+        "storeAs":"",
         "excludes":[],
         "policyEntry":"Please switch off devices when they are not in use, as this will make it harder for intruders to access the file system, especially if the device uses disk encryption and/or requires a password to log in.",
         "routineEntry":"Switch work devices off when not in use",
@@ -409,7 +410,7 @@ var section5 = [
       {
         "type":"checkbox",
         "answerText":"Lock up documents and devices at night",
-        "storeAs":"[]",
+        "storeAs":"",
         "excludes":[],
         "policyEntry":"When the work day is over, documents and devices should be locked away to deter thieves.",
         "routineEntry":"Lock away documents and devices at night",
@@ -424,7 +425,7 @@ var section5 = [
       {
         "type":"checkbox",
         "answerText":"Restrict workspace access",
-        "storeAs":"[]",
+        "storeAs":"",
         "excludes":[],
         "policyEntry":"Staff working remotely should know who is able to enter their office. Please avoid allowing access to strangers unless precautions are taken to lock confidential papers away and turn off computers before the visit.",
         "routineEntry":"Prevent others from accessing your workspace unsupervised",

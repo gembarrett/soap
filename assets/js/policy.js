@@ -176,17 +176,17 @@ function compileDoc(p,a){
     doc.html += '<h3>Accounts Security</h3><p>' + acctsP.join('</p><p>')+'</p>';
   }
   if (travelP.length > 0){
-    doc.plain += '\n\Travel Security\n' + travelP.join('\n');
+    doc.plain += '\n\nTravel Security\n' + travelP.join('\n');
     doc.markdown += '\n\n### Travel Security \n' + travelP.join('\n');
     doc.html += '<h3>Travel Security</h3><p>' + travelP.join('</p><p>')+'</p>';
   }
   if (envP.length > 0){
-    doc.plain += '\n\Environmental Security\n' + envP.join('\n');
+    doc.plain += '\n\nEnvironmental Security\n' + envP.join('\n');
     doc.markdown += '\n\n### Environmental Security \n' + envP.join('\n');
     doc.html += '<h3>Environmental Security</h3><p>' + envP.join('</p><p>')+'</p>';
   }
   if (networkP.length > 0){
-    doc.plain += '\n\Network Security\n' + networkP.join('\n');
+    doc.plain += '\n\nNetwork Security\n' + networkP.join('\n');
     doc.markdown += '\n\n### Network Security \n' + networkP.join('\n');
     doc.html += '<h3>Network Security</h3><p>' + networkP.join('</p><p>')+'</p>';
   }
@@ -237,10 +237,8 @@ function compileDoc(p,a){
 // function to replace temporary placeholder text in policy
 function replaceStr(string) {
   var editedStr = string;
-  console.log('String is '+string);
   // for each of the stored keys
   for (var key in dict){
-    console.log('Key is ' +key);
     // if it's a list of things and the last item does not start with an " and "
     if ((Array.isArray(dict[key])) && (!dict[key][dict[key].length-1].startsWith(" and "))){
       last = dict[key][dict[key].length-1];

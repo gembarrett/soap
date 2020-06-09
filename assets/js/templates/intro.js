@@ -9,7 +9,7 @@ templates.intro = function(data){
       <h2>`+text.subhead+`</h2>
       <div class="btn-wrap wrap-c">
         <label for="home-q1-0-answer"></label><input type="text" id="home-q1-0-answer" name="home-q1-el" placeholder="Great Organization Name" required="">
-        <a class="btn btn-prim" href="/#build">Let's go!</a>
+        <button class="btn btn-prim" id="submit-home-q1" onclick="getNameFromHome()">Let's go!</button>
         </div>
       </div>
     </div>
