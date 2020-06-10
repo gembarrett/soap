@@ -21,6 +21,12 @@ controllers.questionPage = function(data, params){
           'isQ':true,
           'required': el.required
         };
+      } else if (el.id === 'q0'){
+        var item = {
+          'id':el.id,
+          'title':el.title,
+          'contentArray': el.steps,
+        };
       } else {
         var item = {
           'id':el.id,

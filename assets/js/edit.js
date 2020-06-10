@@ -209,7 +209,6 @@ function storeThisA(storage, q, a){
 };
 
 function storeThisPair(el, storage, text) {
-  console.log(dict);
   text = stripCode(text);
   // if the storeAs key already exists in the dictionary because it's a continuation of a list
   if (el in storage) {

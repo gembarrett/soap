@@ -2,8 +2,21 @@ var section0 = [
   {
     "isQuestion": false,
     "id":"q0",
-    "title": "Getting started!",
-    "paragraph":["Here's what you need to know to get the most out of SOAP:","The first set of questions is all about understanding your organization's unique context. Your answers here will provide the information we need to start identifying the right questions to help shape your new, totally customized security policy.", "Subsequent sections present hypothetical, but common, security incidents and then ask questions that explore preventative tactics and inform your policy's content. Each section ends with an opportunity for you to specify any incident response actions you would wish staff to take in the given scenario.", "If you don’t understand the relevance or meaning of a particular question along the way, simply hit the '+' button beside it. This will reveal a panel with implementation tips, definitions, search terms, and other information to improve clarity.", "Don't see an answer that's right for your situation? Many of the questions have an 'other option' button which you can double-click to edit and add your own answer." ,"The progress bar at the top of each page shows how far you’ve come in the process. As you progress, you can preview your policy at any time by hitting “Preview.”", "When you've completed the process, you will be presented with your full organisational security policy, including a review checklist and appendix of implementation tips. Download options are available so you can share the policy in the best way for your organization."]
+    "title": "",
+    "steps":[
+      {
+        "title":"Plan",
+        "text":"The first set of questions is all about understanding your organization's unique context.  The following five sections present common security incidents and then ask questions that explore preventative tactics and inform your policy's content. Each section ends with an opportunity for you to specify any incident response actions you would wish staff to take in the given scenario."
+      },
+      {
+        "title":"Build",
+        "text":"Unsure how to answer a question? Click or tap on the question to reveal a panel with implementation tips, definitions, search terms, and other information to improve clarity. If the answers aren't quite right, many questions have an 'other' button you can double-click to edit and add your own answers."
+      },
+      {
+        "title":"Apply",
+        "text":"When you've completed the process, you will be presented with your full organisational security policy, including a review checklist, appendix of implementation tips and an \"Everyday Practices\" reminder document. Download options are available so you can share the policy in the best way for your organization."
+      }
+    ],
   },
   {
     "isQuestion": true,
