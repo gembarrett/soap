@@ -7,13 +7,15 @@ templates.policyTemplate = function(data){
     links += `<a href="`+resources[r].url+`" target="_blank">`;
     links += `<button class="btn btn-tert">`+resources[r].name+`</button></a>`;
   }
-  txt = '<button class="btn btn-prim pink-border-glow" onclick="downloadPolicy(\'plain\')">Text  <i class="fas fa-download"></i></button>';
-  md = '<button class="btn btn-prim pink-border-glow" onclick="downloadPolicy(\'markdown\')">Markdown  <i class="fas fa-download"></i></button>';
-  html = '<button class="btn btn-prim pink-border-glow" onclick="downloadPolicy(\'html\')">HTML  <i class="fas fa-download"></i></button>';
+  txt = '<button class="btn btn-prim pink-border-glow" onclick="downloadPolicy(\'plain\')"><i class="fas fa-download"></i> Text</button>';
+  md = '<button class="btn btn-prim pink-border-glow" onclick="downloadPolicy(\'markdown\')"><i class="fas fa-download"></i> Markdown</button>';
+  html = '<button class="btn btn-prim pink-border-glow" onclick="downloadPolicy(\'html\')"><i class="fas fa-download"></i> HTML</button>';
   var content =
     `<div id="policy-dl" class="window">
-        <h3>Get policy</h3>`+ txt + md + html +
-      `</div>
+        <h3>Get policy</h3>
+        <div class="dlBtnWrapper">
+          <p>Download pre-formatted versions of your organizational security policy in plaintext, markdown and HTML.</p><div>`+ txt + md + html +
+      `</div></div></div>
       <div id="policy-edit" class="window">
         <h3>Edit policy</h3>
         <textarea class="policyHolder">`+docContent.plain+`</textarea>
@@ -21,7 +23,7 @@ templates.policyTemplate = function(data){
       <div id="policy-reset" class="window">
         <h3>Start over</h3>
         <button id="reset" onclick="clearData()" class="btn btn-seco">
-        Build another policy <i class="fas fa-redo"></i>
+        <i class="fas fa-redo"></i> Build another policy
         </button>
       </div>
       <div id="resources" class="window">

@@ -558,7 +558,15 @@ details a {
   color: #f2eee2;
   flex: 0 0 40%;
 }
-
+.dlBtnWrapper {
+  display: flex;
+  flex-direction: column;
+}
+.dlBtnWrapper > div {
+  justify-content: space-evenly;
+  display: flex;
+  margin-top: 1em;
+}
 .buildPage .window:first-child {
   margin-top:4em;
 }
