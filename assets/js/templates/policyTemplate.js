@@ -2,10 +2,9 @@ templates.policyTemplate = function(data){
   var docContent = compileDoc(true, true);
   output = docContent;
   var resources = ros[0].background[0].links;
-  var links = "<div id='link-wrapper'>";
+  var links = "<div><p>For more information on organizational and personal security, and how you can get the most out of your new policy, check out these resources:</p>";
   for (var r = 0; r<resources.length; r++){
-    links += `<a href="`+resources[r].url+`" target="_blank">`;
-    links += `<button class="btn btn-tert">`+resources[r].name+`</button></a>`;
+    links += `<a href="`+resources[r].url+`" target="_blank" class="btn btn-seco">`+resources[r].name+`</a>`;
   }
   txt = '<button class="btn btn-prim pink-border-glow" onclick="downloadPolicy(\'plain\')"><i class="fas fa-download"></i> Text</button>';
   md = '<button class="btn btn-prim pink-border-glow" onclick="downloadPolicy(\'markdown\')"><i class="fas fa-download"></i> Markdown</button>';
@@ -20,16 +19,17 @@ templates.policyTemplate = function(data){
         <h3>Edit policy</h3>
         <textarea class="policyHolder">`+docContent.plain+`</textarea>
       </div>
+      <div id="resources" class="window">
+        <h3>Learn more</h3>`
+        +links+`
+      </div>
       <div id="policy-reset" class="window">
-        <h3>Start over</h3>
+        <h3>Start over</h3><div>
+        <p>All done? You'll need to reload the page before building another policy.</p>
         <button id="reset" onclick="clearData()" class="btn btn-seco">
         <i class="fas fa-redo"></i> Build another policy
-        </button>
+        </button></div>
       </div>
-      <div id="resources" class="window">
-        <h3>Learn more</h3>
-        <p>For more information on organizational security and how you can get the most out of your new policy, check out these resources:</p>`
-        +links+`
-      </div></div>`;
+      </div>`;
   return content;
 };
