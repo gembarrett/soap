@@ -49,6 +49,9 @@ var currentState = {
 // for storing the storeAs names and values
 var dict = {};
 
+// for storing the orgName when it's entered on the home page
+var homeName = "";
+
 // for holding the end result
 var policyText = [];
 var appendixText = [];

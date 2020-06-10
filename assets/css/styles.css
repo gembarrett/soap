@@ -85,6 +85,7 @@ body.buildPage #head.nav-start {
 }
 body.buildPage #page {
   padding-top:4em;
+  background: linear-gradient(to right bottom, #1b263b, #066493);
 }
 .nav-start {
   background-color: transparent;
@@ -187,7 +188,7 @@ body.buildPage #page {
   padding-left: 0;
 }
 .links li:last-child {
-  background-color: #fff;
+  background-color: #f2eee2;
   font-weight: bold;
   padding:1em;
 }
@@ -288,10 +289,7 @@ color: #A9bcd0;
 }
 
 #questionContainer {
-  padding-top:2em;
-}
-#q0 {
-  padding: 0 2em;
+  padding: 2em 4em;
 }
 
 #q0 .text-img-wrap {
@@ -467,7 +465,12 @@ details > h3, details > p {
 details a {
   color:#b93168;
 }
-
+.questionContent details h3{
+  text-transform: uppercase;
+  background: #1b263b;
+  color: #f2eee2;
+  padding: 1em;
+}
 #overview {
   display: flex;
   justify-content: space-evenly;
@@ -658,7 +661,7 @@ details a {
 
 .btn-wrap {
   display:flex;
-  padding: 2em;
+  padding: 2em 0 0 1em;
 }
 
 .wrap-c {

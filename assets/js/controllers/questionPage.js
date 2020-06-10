@@ -6,7 +6,6 @@ controllers.questionPage = function(data, params){
   window.scrollTo(0,0);
   // queue up all the questions in this section
   console.log('questionPage - get the questions, answers, id, tips');
-
   // for each of the sections
   for (var i = 0; i < sections.length; i++){
     // get each of the questions

@@ -140,6 +140,7 @@ function setUpPage(id){
     // sneaking this in here so it's done when textboxes exist
     resizingBoxes();
     addChangeListeners();
+    checkForName();
   }
 }
 
