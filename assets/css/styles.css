@@ -31,18 +31,21 @@ a[href]:visited {
 a:hover {
   text-decoration: underline;
 }
+a.btn:hover {
+  text-decoration: none;
+}
 
 @font-face {
   font-family: 'SinkinSansLight';
-  src: url('../fonts/SinkinSans-300Light.otf');
+  src: url('webfonts/SinkinSans-300Light.otf');
 }
 @font-face {
   font-family: 'SinkinSansMedium';
-  src: url('../fonts/SinkinSans-500Medium.otf');
+  src: url('webfonts/SinkinSans-500Medium.otf');
 }
 @font-face {
   font-family: 'SinkinSansBold';
-  src: url('../fonts/SinkinSans-700Bold.otf');
+  src: url('webfonts/SinkinSans-700Bold.otf');
 }
 body {
   font-family: "SinkinSansMedium", "Helvetica", "OpenSans", sans-serif;
@@ -288,8 +291,12 @@ color: #A9bcd0;
   color:#fff;
 }
 
-#questionContainer {
+.qContainer {
+  margin-top: -4em;
   padding: 2em 4em;
+}
+.buildPage .qContainer {
+  margin-top:0;
 }
 
 #q0 .text-img-wrap {
@@ -431,14 +438,9 @@ color: #A9bcd0;
   background-color: rgba(0,0,0,0.5);
 }
 
-.main-content > div {
-  padding: 4em 6em;
-}
-
 .homeSectionOverview{
   padding: 0 0 2em 3em;
   font-size: 1em;
-  line-height: 1.6em;
 }
 .homeSectionOverview li {
   padding: 0.5em 0;
@@ -540,15 +542,15 @@ details a {
 }
 
 .window {
-  margin:4em;
-  margin-top: -4em;
+  margin:4em 0;
+  padding:2em;
   background: #f2eee2;
   display:flex;
   flex-direction: row;
 }
 
 .window:first-child {
-  margin-top: -4em;
+  margin-top: 0;
 }
 #page > .window ~ .window {
   margin-top: 4em;
@@ -580,15 +582,15 @@ details a {
 .buildPage .window > :not(h3) {
   padding: 0 2em;
 }
-#policy-dl {
-  display: flex;
-  flex-direction: row;
-}
 
 #policy-dl i{
   padding-left: 5px;
 }
-
+#policy-reset > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
 #features {
   display: flex;
   justify-content: space-evenly;
@@ -891,9 +893,6 @@ span.q0-only {
 
 .spacer {
   flex-grow:100;
-}
-#policy-dl {
-  display:flex;
 }
 .showAllQs {
   display:block;

@@ -179,7 +179,7 @@ var section2 = [
   {
     "isQuestion": true,
     "id":"q17",
-    "q":"Which multi-factor authentication method does your organisation prefer staff to use when securing work accounts?",
+    "q":"Which multi-factor authentication method should staff use when securing work accounts?",
     "required":true,
     "policyContent":"Two-factor authentication is a good method of securing our accounts beyond passwords as it requires an additional one-time code to be provided at login, putting an extra barrier between your data and an attacker. Two-factor authentication should be enabled on every account which supports it.",
     "appendixContent":"",

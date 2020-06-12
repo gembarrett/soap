@@ -231,7 +231,7 @@ var section6 = [
       },
       {
         "type":"checkbox",
-        "answerText":"Do Not Track",
+        "answerText":"Enable \"Do Not Track\"",
         "storeAs":"",
         "excludes":[],
         "policyEntry":"- enable Do Not Track to hide from trackers",

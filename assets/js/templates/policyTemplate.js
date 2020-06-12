@@ -10,21 +10,25 @@ templates.policyTemplate = function(data){
   md = '<button class="btn btn-prim pink-border-glow" onclick="downloadPolicy(\'markdown\')"><i class="fas fa-download"></i> Markdown</button>';
   html = '<button class="btn btn-prim pink-border-glow" onclick="downloadPolicy(\'html\')"><i class="fas fa-download"></i> HTML</button>';
   var content =
-    `<div id="policy-dl" class="window">
+    `<div class="qContainer">
+      <div id="policy-dl" class="window pink-border-glow">
         <h3>Get policy</h3>
         <div class="dlBtnWrapper">
-          <p>Download pre-formatted versions of your organizational security policy in plaintext, markdown and HTML.</p><div>`+ txt + md + html +
-      `</div></div></div>
-      <div id="policy-edit" class="window">
+          <p>Download pre-formatted versions of your organizational security policy in plaintext, markdown and HTML.</p>
+        <div>`+ txt + md + html + `</div>
+      </div>
+      </div>
+      <div id="policy-edit" class="window pink-border-glow">
         <h3>Edit policy</h3>
         <textarea class="policyHolder">`+docContent.plain+`</textarea>
       </div>
       <div id="resources" class="window">
         <h3>Learn more</h3>`
-        +links+`
+        +links+`</div>
       </div>
-      <div id="policy-reset" class="window">
-        <h3>Start over</h3><div>
+      <div id="policy-reset" class="window pink-border-glow">
+        <h3>Start over</h3>
+        <div>
         <p>All done? You'll need to reload the page before building another policy.</p>
         <button id="reset" onclick="clearData()" class="btn btn-seco">
         <i class="fas fa-redo"></i> Build another policy

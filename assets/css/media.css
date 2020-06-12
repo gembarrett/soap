@@ -154,7 +154,7 @@
     flex-direction: row;
     justify-content: space-around;
   }
-  #questionContainer {
+  .qContainer {
     padding:1.5em;
   }
   #q0 section {
@@ -292,9 +292,6 @@
   }
   #expand {
     display: none;
-  }
-  #policy-dl {
-    flex-direction: row;
   }
   #menu-check:checked ~ #collapse {
     display:none;
