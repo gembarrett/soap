@@ -73,6 +73,9 @@ p {
   align-items: center;
   z-index: 1;
 }
+#head a {
+  margin-top:0.5em;
+}
 
 #img-intro {
   width: 75%;
@@ -457,6 +460,7 @@ color: #A9bcd0;
   background: rgba(27,38,59,0.75);
   color: #f2eee2;
   padding: 1em;
+  cursor: pointer;
 }
 details[open=""] summary {
   opacity: 0.5;
