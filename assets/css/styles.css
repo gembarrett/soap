@@ -590,11 +590,16 @@ details a {
 #policy-dl i{
   padding-left: 5px;
 }
-#policy-reset > div {
+
+.buildPage .window div {
+  display: flex;
+  flex-direction: column;
+}
+/* #policy-reset > div {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-}
+} */
 #features {
   display: flex;
   justify-content: space-evenly;
