@@ -316,7 +316,7 @@ var section0 = [
         "type":"checkbox",
         "answerText":"6-monthly",
         "storeAs": "[reviewFreq]",
-        "excludes":[], // review this
+        "excludes":[], 
         "policyEntry":"",
         "routineEntry":"",
         "appendixEntry":[

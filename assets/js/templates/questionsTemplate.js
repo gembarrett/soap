@@ -21,7 +21,7 @@ templates.questionsTemplate = function(data){
           panel += '<h3>Implementation</h3><p>' + question.tips[2].implementation + '</p>';
         }
         if (question.tips[3].more) {
-          panel += '<h3>Search terms</h3><p>| ';
+          panel += '<h3>Further research</h3><p>| ';
           for (var s = 0; s < question.tips[3].more.length; s++){
             more = encodeURIComponent(question.tips[3].more[s]);
             panel += '<a href="https://duckduckgo.com/?q='+more+'" target="_blank">'+question.tips[3].more[s]+'</a> | ';

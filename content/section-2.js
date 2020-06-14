@@ -155,7 +155,7 @@ var section2 = [
       {
         "type":"radio",
         "editable":true,
-        "answerText":"Under some circumstances",
+        "answerText":"In these cases:",
         "storeAs":"[exemptions]",
         "excludes":[],
         "policyEntry":"Ordinarily, we would prefer staff to avoid storing passwords in their browser, however it is permitted under these circumstances: [exemptions]",
@@ -189,7 +189,7 @@ var section2 = [
         "type":"radio",
         "answerText":"None - staff preference",
         "storeAs":"",
-        "excludes":[], // excl. 17/18?
+        "excludes":[],
         "policyEntry":"The options for getting this code include authentication apps, hardware keys, SMS or automated phone call and [orgName] asks staff to use their best judgment when choosing a method for securing each work-related account.",
         "routineEntry":"Choose your authenticator! Authentication apps, security keys or just your phone - any multi-factor authentication is better than passwords alone.",
         "appendixEntry":[
@@ -219,7 +219,7 @@ var section2 = [
         "type":"radio",
         "answerText":"SMS or phone call",
         "storeAs":"",
-        "excludes":[17, 18],
+        "excludes":[18],
         "policyEntry":"[orgName] requires staff to use SMS or phone call authentication methods. However, be aware of the risks of interception that come with using these methods.",
         "routineEntry":"Add an extra layer of security to your accounts by enabling two-factor authentication that sends your code by phone call or SMS.",
         "appendixEntry":[
