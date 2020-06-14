@@ -386,7 +386,7 @@
 
 
 
-@media (max-width:1000px) {
+@media (max-width:1024px) {
   #intro {
     padding: 4em 4em 6em;
   }
@@ -409,5 +409,9 @@
   }
   .buildPage .window:last-child {
     margin-bottom:0;
+  }
+  #preview h1 {
+    line-height: 2em;
+    font-size: 1.5em;
   }
 }

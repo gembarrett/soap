@@ -49,7 +49,7 @@ var ros = [
             "content":["Neither your answers nor any identifying data are stored or sent anywhere","SOAP relies on Javascript to work, which may be relevant to your threat model","The code has been open-sourced to enable scrutiny"],
           }
         ],
-        "more":["SOAP is a web app that works solely in your browser: no cookies or server-side processing is involved in building your policy. No IP addresses, web logs, or any text entered into the answer boxes is stored or sent back to the SOAP servers. A report on SOAP's security (alpha version) was carried out by SubGraph as part of OTF's Red Team program, and verified that \"SOAP is quite simple and has essentially no attack surface that's (realistically) exposed, at this time, to a third-party attacker.\"","Like many websites, SOAP relies on Javascript to achieve its functionality, so it must be enabled in your browser for SOAP to work (hint: if you’re reading this, it’s already enabled). If your threat model means you can’t turn on Javascript, you can download the code (<a href='https://github.com/gembarrett/soap'>github.com/gembarrett/soap</a>) to run the tool in your own secure environment. Questions? Concerns? Email <a href='mailto:feedback@usesoap.app'>feedback@usesoap.app</a>"],
+        "more":["SOAP is a web app that works solely in your browser: no cookies or server-side processing is involved in building your policy. No IP addresses, web logs, or any text entered into the answer boxes is stored or sent back to the SOAP servers. A report on SOAP's security (alpha version) was carried out by SubGraph as part of OTF's Red Team program, and verified that \"SOAP is quite simple and has essentially no attack surface that's (realistically) exposed, at this time, to a third-party attacker.\"","Like many websites, SOAP relies on Javascript to achieve its functionality, so it must be enabled in your browser for SOAP to work (hint: if you’re reading this, it’s already enabled). If your threat model means you can’t turn on Javascript, you can download the code (<a href='https://github.com/gembarrett/soap' target='_blank'>github.com/gembarrett/soap</a>) to run the tool in your own secure environment. Questions? Concerns? Email <a href='mailto:feedback@usesoap.app'>feedback@usesoap.app</a>"],
         "links":[]
       }
     ],
@@ -58,7 +58,7 @@ var ros = [
         "head":"What's behind the SOAP project?",
         "subhead":"SOAP was researched, designed, and built by Gem Barrett, with funding from the Open Technology Fund. In developing SOAP, research was conducted to understand the frustrations faced and obstacles encountered by organizations when creating, implementing, and maintaining security policies.",
         "list":"",
-        "more":["The findings of this research and accompanying interviews are shared in the report “Securing Civil Society” (<a href='https://usesoap.app/assets/SecuringCivilSociety-report.pdf'>PDF currently available</a> in English, other versions coming soon). These findings, coupled with research into organizational security best practices, helped create the methodology that forms the basis of SOAP’s innovative process."],
+        "more":["The findings of this research and accompanying interviews are shared in the report “Securing Civil Society” (<a href='https://usesoap.app/assets/SecuringCivilSociety-report.pdf' target='_blank'>PDF currently available</a> in English, other versions coming soon). These findings, coupled with research into organizational security best practices, helped create the methodology that forms the basis of SOAP’s innovative process."],
         "links":[
           {
             "name":"SAFETAG by Internews",
@@ -86,7 +86,7 @@ var ros = [
         "list":[
           {
             "type":"ul",
-            "content":["Donations to fund SOAP’s upkeep can be made at <a href='https://www.ko-fi.com/supportsoap' target='_blank'>ko-fi.com/supportsoap</a>","Fluent in a language other than English? Email <a href='mailto:feedback@usesoap.app'>feedback(at)usesoap.app</a> with the languages you can translate to and we'll let you know how you can help translate SOAP and make it more accessible to non-English speakers","SOAP is an open-source project. Contributions to the code (Javascript, HTML or CSS) or documentation are always welcomed at <a hre='https://github.com/gembarrett/soap' target='_blank'>github.com/gembarrett/soap</a>"]
+            "content":["Donations to fund SOAP’s upkeep can be made at <a href='https://www.ko-fi.com/supportsoap' target='_blank'>ko-fi.com/supportsoap</a>","Fluent in a language other than English? Email <a href='mailto:feedback@usesoap.app'>feedback(at)usesoap.app</a> with the languages you can translate to and we'll let you know how you can help translate SOAP and make it more accessible to non-English speakers","SOAP is an open-source project. Contributions to the code (Javascript, HTML or CSS) or documentation are always welcomed at <a href='https://github.com/gembarrett/soap' target='_blank'>github.com/gembarrett/soap</a>"]
           }
         ],
         "more":["Just want to say hi or ask a question? Have an idea for how SOAP could be improved? Email us at: <a href='mailto:feedback@usesoap.app'>feedback(at)usesoap.app</a>."]
