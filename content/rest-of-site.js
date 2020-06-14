@@ -56,9 +56,9 @@ var ros = [
     "background":[
       {
         "head":"What's behind the SOAP project?",
-        "subhead":"SOAP was researched, designed, and built by Gem Barrett, with funding from the Open Technology Fund. In developing SOAP, research was conducted to understand the frustrations faced and obstacles encountered by organizations when creating, implementing, and maintaining security policies. The findings of this research and accompanying interviews are shared in the report “Securing Civil Society” (<a href='https://usesoap.app/assets/SecuringCivilSociety-report.pdf'>PDF currently available</a> in English, other versions coming soon). These findings, coupled with research into organizational security best practices, helped create the methodology that forms the basis of SOAP’s innovative process.",
+        "subhead":"SOAP was researched, designed, and built by Gem Barrett, with funding from the Open Technology Fund. In developing SOAP, research was conducted to understand the frustrations faced and obstacles encountered by organizations when creating, implementing, and maintaining security policies.",
         "list":"",
-        "more":["In developing SOAP, research was conducted to understand the frustrations faced and obstacles encountered by organizations when creating, implementing, and maintaining security policies. The findings of this research and accompanying interviews are shared in the report <a href='/assets/SecuringCivilSociety-report.pdf'>“Securing Civil Society”</a> (PDF currently available in English, other versions coming soon). These findings, coupled with research into organizational security best practices, helped create the methodology that forms the basis of SOAP’s innovative process."],
+        "more":["The findings of this research and accompanying interviews are shared in the report “Securing Civil Society” (<a href='https://usesoap.app/assets/SecuringCivilSociety-report.pdf'>PDF currently available</a> in English, other versions coming soon). These findings, coupled with research into organizational security best practices, helped create the methodology that forms the basis of SOAP’s innovative process."],
         "links":[
           {
             "name":"SAFETAG by Internews",
@@ -89,7 +89,7 @@ var ros = [
             "content":["Donations to fund SOAP’s upkeep can be made at <a href='https://www.ko-fi.com/supportsoap' target='_blank'>ko-fi.com/supportsoap</a>","Fluent in a language other than English? Email <a href='mailto:feedback@usesoap.app'>feedback(at)usesoap.app</a> with the languages you can translate to and we'll let you know how you can help translate SOAP and make it more accessible to non-English speakers","SOAP is an open-source project. Contributions to the code (Javascript, HTML or CSS) or documentation are always welcomed at <a hre='https://github.com/gembarrett/soap' target='_blank'>github.com/gembarrett/soap</a>"]
           }
         ],
-        "more":["Regular donations can be made via GitHub Sponsors <a href='https://www.ko-fi.com/supportsoap' target='_blank'>GitHub Link</a>. Just want to say hi or ask a question? Have an idea for how SOAP could be improved? Email us at: <a href='mailto:feedback@usesoap.app'>feedback(at)usesoap.app</a>."]
+        "more":["Just want to say hi or ask a question? Have an idea for how SOAP could be improved? Email us at: <a href='mailto:feedback@usesoap.app'>feedback(at)usesoap.app</a>."]
       }
     ],
     "features":[
