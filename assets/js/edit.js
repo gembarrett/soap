@@ -47,7 +47,6 @@ function editAnswers() {
 // when clicked, go through array of questions marked as editable and add/remove showAllQs class
 // this should be used when compiling a policy or pressing Done to end an editing session
 function collectAnswers(isEdited){
-  console.log('getting answers');
   var dic = {};
   var exc = [];
   var ans = [];
@@ -57,17 +56,18 @@ function collectAnswers(isEdited){
   // are the edited questions visible?
   questions = document.querySelectorAll(".showAllQs");
 
-  // if we're in edit mode but no questions are visible
+  // if we're in edit mode but no previous questions are visible
   if (isEdited && questions.length === 0){
+    console.log("Edit mode: show all previous questions");
       // starting the edit session
       // grab all the hidden editable questions
       questions = document.querySelectorAll(".editable, .current");
-      console.log(questions);
       // show each of the questions
       for (var a = 0; a < questions.length; a++){
         questions[a].classList.toggle("showAllQs");
       }
   } else if (isEdited && questions.length > 0) {
+    console.log("Edit mode: collect and hide")
     // closing the edit session so collect all the visible answers
     // for each question
     for (var b = 0; b < questions.length; b++){
@@ -84,6 +84,7 @@ function collectAnswers(isEdited){
           // if the element is checked or is a type of text box
           if (inputFields[bb].checked || (inputFields[bb].type.includes("text") && inputFields[bb].value !== "")) {
             // grab any exclusions
+            console.log(exc);
             exc = updateExc(qData.data.answers[aNum], exc);
             // save the answer
             dic = saveToDict(inputFields[bb], qData.data.answers[aNum], dic);
@@ -93,12 +94,13 @@ function collectAnswers(isEdited){
           }
         }
       } else {
-        console.log('no inputs');
+        console.log('No inputs');
       }
       // then hide the question
       questions[b].classList.toggle("showAllQs");
     }
   } else {
+    console.log("Not in edit mode: collect and compile");
     // we're collecting for a policy so get all the answers available so far
     questions = document.querySelectorAll(".editable, .current");
     // for each question
@@ -116,6 +118,7 @@ function collectAnswers(isEdited){
           // if the element is checked or is a type of not-empty text box
           if (inputFields[cc].checked || (inputFields[cc].type.includes("text") && inputFields[cc].value !== "")) {
             // grab any exclusions
+            console.log(exc);
             exc = updateExc(qData.data.answers[aNum], exc);
             // save the answer
             dic = saveToDict(inputFields[cc], qData.data.answers[aNum], dic);
@@ -125,14 +128,13 @@ function collectAnswers(isEdited){
           }
         }
       } else {
-        console.log('no inputs');
+        console.log('No inputs');
       }
     }
   }
 
   dict = dic;
   currentState.answers = ans;
-  currentState.exclusions = exc.length > 0 ? exc : currentState.exclusions;
 }
 
 
@@ -257,13 +259,14 @@ function checkForInputs(q){
 }
 
 function updateExc(a, e){
+  console.log(e);
   // check for exclusions
   if (a.excludes.length > 0){
     // add them to the list of excluded questions
     e = e.concat(a.excludes);
     return e;
   } else {
-    return e = [];
+    return e;
   }
 
 }
