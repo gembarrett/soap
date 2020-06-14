@@ -14,7 +14,7 @@ var section0 = [
       },
       {
         "title":"Apply",
-        "text":"When you've completed the process, you will be presented with your full organisational security policy, including a review checklist, appendix of implementation tips and an \"Everyday Practices\" reminder document. Download options are available so you can share the policy in the best way for your organization."
+        "text":"When you've completed the process, you will be presented with your full organizational security policy, including a review checklist, appendix of implementation tips and an \"Everyday Practices\" reminder document. Download options are available so you can share the policy in the best way for your organization."
       }
     ],
   },
