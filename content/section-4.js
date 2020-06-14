@@ -34,7 +34,7 @@ var section4 = [
         "answerText":"Staff must provide these if they require them",
         "storeAs":"",
         "excludes":[],
-        "policyEntry":"Staff are encouraged to use separate, 'clean' devices when they travel in order to lessen the impact of any authorised access. For guidance on which types of device would be suitable, speak to [contactName].",
+        "policyEntry":"Staff are encouraged to use separate, 'clean' devices when they travel to lessen the impact of any authorised access. For guidance on which types of device would be suitable, speak to [contactName].",
         "routineEntry":"",
         "appendixEntry":[
           {
@@ -215,7 +215,7 @@ var section4 = [
     ],
     "tips":[
       {"relevance":"Organisations with staff who travel outside of their home country for work purposes."},
-      {"meaning":"Be aware that unusual precautions may make border agents suspicious. Some of these measures will need to be implemented on a case-by-case basis in order to avoid standing out. Being visibly security-conscious can draw the attention of border guards."},
+      {"meaning":"Be aware that unusual precautions may make border agents suspicious. Some of these measures will need to be implemented on a case-by-case basis to avoid standing out. Being visibly security-conscious can draw the attention of border guards."},
       {"implementation":"Creating a travel checklist for staff out of the relevant content in your security policy can help with implementation."},
       {"more": ["enable phone SOS mode", "device security while travelling", "how to disable biometric authentication"]}
     ]
@@ -254,7 +254,7 @@ var section4 = [
         "appendixEntry":[
           {
             "reviewList":"Is Psiphon still the right tool to recommend to staff?",
-            "tipList": "Ensure staff download Psiphon directly from their website (see Useful Links below) in order to avoid fakes containing malicious code.",
+            "tipList": "Ensure staff download Psiphon directly from their website (see Useful Links below) to avoid fakes containing malicious code.",
             "linksList": "Psiphon website: https://psiphon.ca"
           }
         ]
@@ -284,7 +284,7 @@ var section4 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": "As one of the most famous circumvention tools, Tor can stand out as a red flag in some countries and you will come across sites that block Tor users altogether, so choose a backup solution for when your circumvention needs to be a little more low-profile or you're sure that there are other Tor users around that will make your usage blend in. Ensure staff download Tor directly from their website (see Useful Links below) in order to avoid fakes containing malicious code.",
+            "tipList": "As one of the most famous circumvention tools, Tor can stand out as a red flag in some countries and you will come across sites that block Tor users altogether, so choose a backup solution for when your circumvention needs to be a little more low-profile or you're sure that there are other Tor users around that will make your usage blend in. Ensure staff download Tor directly from their website (see Useful Links below) to avoid fakes containing malicious code.",
             "linksList": "Tor Project website: https://www.torproject.org"
           }
         ]

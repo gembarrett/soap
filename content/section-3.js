@@ -10,7 +10,7 @@ var section3 = [
     "id":"q22",
     "q":"Can staff use biometric authentication to restrict device access?",
     "required":true,
-    "policyContent":"In order to protect devices from unauthorised physical infiltration, all devices which are used for [orgName] purposes should have an automatic screen lock enabled and may be configured to use [deviceAuth].",
+    "policyContent":"To protect devices from unauthorised physical infiltration, all devices which are used for [orgName] purposes should have an automatic screen lock enabled and may be configured to use [deviceAuth].",
     "appendixContent":"Be aware that touchscreen devices are susceptible to holding fingerprint marks which can be used to guess recently-used key sequences.",
     "routineEntry":"",
     "answers":[
@@ -57,7 +57,7 @@ var section3 = [
     "id":"q23",
     "q":"Does your organisation use any tools for device security management?",
     "required":false,
-    "policyContent":"In order to support device security across the organisation, we use the following tools: [devSecTools]",
+    "policyContent":"To support device security across the organisation, we use the following tools: [devSecTools]",
     "appendixContent":"",
     "routineEntry":"",
     "answers":[
@@ -314,7 +314,7 @@ var section3 = [
         "answerText":"Multi-factor authentication",
         "storeAs":"",
         "excludes":[],
-        "policyEntry":"- Multi-factor authentication is required in order to access the backups.",
+        "policyEntry":"- Multi-factor authentication is required to access the backups.",
         "routineEntry":"",
         "appendixEntry":[
           {

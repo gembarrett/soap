@@ -52,7 +52,7 @@ templates.questionsTemplate = function(data){
              thisLabel += question.answers[j].answerText+ '</label>';
            }
            // start the form
-           content += '<div class="form-el">';
+           content += '<div class="form-el type-'+question.answers[j].type+'">';
 
            // if there's a textarea
            if (question.answers[j].type === 'textarea') {

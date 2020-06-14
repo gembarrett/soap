@@ -429,6 +429,7 @@ color: #A9bcd0;
   overflow: auto;
   background-color: #f2eee2;
   box-sizing: border-box;
+  text-align: justify;
 }
 
 .modalOverlay {
