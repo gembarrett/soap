@@ -252,7 +252,6 @@ function checkForInputs(q){
     // return the elements
     return els;
   } else {
-    console.log('Text-only question.');
     return false;
   }
 }
@@ -264,7 +263,6 @@ function updateExc(a, e){
     e = e.concat(a.excludes);
     return e;
   } else {
-    console.log('! e');
     return e = [];
   }
 
