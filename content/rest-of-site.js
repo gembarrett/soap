@@ -9,7 +9,7 @@ var ros = [
         "list": [
           {
             "type": "ul",
-            "content": ["Design customized security policies for your organisation","Make informed decisions about your organization’s security plan","Successfully implement and maintain your organization’s security policy"],
+            "content": ["Design customized security policies for your organization","Make informed decisions about your organization’s security plan","Successfully implement and maintain your organization’s security policy"],
           }
         ],
         "more": ["The acronym stands for Securing Organizations with Automated Policymaking—reflecting the need to \"clean up\" standard organizational security policies, which all-too-often are unread, irrelevant, or ignored. Thanks to SOAP, organizations can now customize their own unique security policies. Say goodbye to the one-size-fits-all approaches of the past! And along the way, SOAP provides support and implementation tips to ensure the entire process is as easy as possible."],

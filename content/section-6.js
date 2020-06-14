@@ -3,7 +3,7 @@ var section6 = [
     "isQuestion": false,
     "id":"q43",
     "title": "Scenario six",
-    "paragraph":["Your organisation receives a stern letter from your internet service provider explaining that illegal downloading violates their terms of service and warning of consequences for continued violation. It soon emerges that the organisation’s WiFi network is reachable in the cafe below the office, and an opponent to your work has been sitting in there using your network to torrent films.", "Intrusions involving the network can range in their spread and impact, and there are several ways you can limit both, whether at browser, device or network level. Browser-based intrusions can involve websites themselves, but they can also expose confidential browsing information to any attacker who gains control of the computer.", "This section will also cover preparedness for viruses, suspicious network activity, and other aspects of device and network level attacks."]
+    "paragraph":["Your organization receives a stern letter from your internet service provider explaining that illegal downloading violates their terms of service and warning of consequences for continued violation. It soon emerges that the organization’s WiFi network is reachable in the cafe below the office, and an opponent to your work has been sitting in there using your network to torrent films.", "Intrusions involving the network can range in their spread and impact, and there are several ways you can limit both, whether at browser, device or network level. Browser-based intrusions can involve websites themselves, but they can also expose confidential browsing information to any attacker who gains control of the computer.", "This section will also cover preparedness for viruses, suspicious network activity, and other aspects of device and network level attacks."]
   },
   {
     "isQuestion": true,
@@ -76,7 +76,7 @@ var section6 = [
       },
     ],
     "tips":[
-      {"relevance":"If your organisation uses a password-protected wireless internet connection."},
+      {"relevance":"If your organization uses a password-protected wireless internet connection."},
       {"meaning":"It’s important to keep in mind that WiFi extends beyond the physical walls of the office, and so an attacker can gain access even if they’re outside or next door. Strong passwords changed regularly are key to ensuring that, even if the password is compromised somehow, its ability to grant access is time-limited."},
       {"implementation":"Consider how you can share the latest password easily and securely, for instance through an encrypted email or secure file share."},
       {"more": [""]}
@@ -184,8 +184,8 @@ var section6 = [
       },
     ],
     "tips":[
-      {"relevance":"Your organisation controls the security of the internet it uses, e.g. in an owned office, rather than a coworking space."},
-      {"meaning":"There are several measures you can put in place to protect your office network from intruders and each one helps to build a trusted environment in which you are aware of who is on the network with you. A wired connection is recommended, and where a wireless network is in use it should be password-protected (secured with WPA2 or WPA3). A firewall guards your network by monitoring the traffic and allowing or denying connections based on your rules. Organisations may also ask staff to request permission before connecting their personal devices to the network as this can make it easier to spot suspicious activity when monitoring traffic."},
+      {"relevance":"Your organization controls the security of the internet it uses, e.g. in an owned office, rather than a coworking space."},
+      {"meaning":"There are several measures you can put in place to protect your office network from intruders and each one helps to build a trusted environment in which you are aware of who is on the network with you. A wired connection is recommended, and where a wireless network is in use it should be password-protected (secured with WPA2 or WPA3). A firewall guards your network by monitoring the traffic and allowing or denying connections based on your rules. Organizations may also ask staff to request permission before connecting their personal devices to the network as this can make it easier to spot suspicious activity when monitoring traffic."},
       {"implementation":""},
       {"more": ["how to configure a firewall", "security of wired vs wireless network", "difference between WPA2 and WPA3", "vulnerabilities in WPA2", "spotting suspicious network activity"]}
     ]
@@ -279,7 +279,7 @@ var section6 = [
     "tips":[
       {"relevance":""},
       {"meaning":"In the course of your employees’ work, their online searches, clicks and website visits can put together a picture of their activities that exposes sensitive or confidential information. Anyone accessing the computer can see the sites accessed and the logins used, so clearing browsing history regularly can reduce how much history is accessible. Cookies and scripting attacks have been used maliciously in the past as they are usually trusted elements of websites which are used to execute code or store data files on the client computer. Disabling cookies and Javascript in the browser can affect the user’s ability to use websites which rely on JS and cookies though, so the seriousness of the threat should be balanced against the inconvenience. Enabling Do Not Track in the browser helps to reduce the amount of information that advertisers and tracking companies can gather about your employees’ searches, but does rely on websites complying with the request."},
-      {"implementation":"If your organisation provides devices to staff, then these solutions can be implemented in the set up."},
+      {"implementation":"If your organization provides devices to staff, then these solutions can be implemented in the set up."},
       {"more": ["how to turn on Do Not Track", "risks of cookies and scripting attacks", "why how to clear browsing history", "why turn javascript off"]}
     ]
   },
@@ -357,7 +357,7 @@ var section6 = [
     "tips":[
       {"relevance":""},
       {"meaning":"There are many types of virus, many of which can be picked up by anti-virus software. Some viruses exploit out-of-date software with unpatched security holes, and so enabling automatic software updates can help to reduce these vulnerabilities. Using a firewall at the device level to manage incoming and outgoing connections can assist with flagging suspicious activity early."},
-      {"implementation":"If your organisation provides devices to staff, then these solutions can be implemented in the set up."},
+      {"implementation":"If your organization provides devices to staff, then these solutions can be implemented in the set up."},
       {"more": ["how to enable automatic updates", "how to configure firewall"]}
     ]
   },
@@ -389,7 +389,7 @@ var section6 = [
     ],
     "tips":[
       {"relevance":""},
-      {"meaning":"Ransom malware, or ransomware, infects computers and mobile devices through spam, phishing and malicious advertising. Its goal is to lock the user out of their device while demanding a ransom for the decryption and/or release of their files. It’s a popular type of malware attack that is increasingly used against companies and organisations, due to the higher value of the data being held ransom. The first rule of dealing with ransomware is to never pay the ransom: it encourages the attacker and there’s no guarantee your files will be released. There are decryptors available for some ransomware and remediation software for removing the threat, but a full system restore may be the only solution for some infections."},
+      {"meaning":"Ransom malware, or ransomware, infects computers and mobile devices through spam, phishing and malicious advertising. Its goal is to lock the user out of their device while demanding a ransom for the decryption and/or release of their files. It’s a popular type of malware attack that is increasingly used against companies and organizations, due to the higher value of the data being held ransom. The first rule of dealing with ransomware is to never pay the ransom: it encourages the attacker and there’s no guarantee your files will be released. There are decryptors available for some ransomware and remediation software for removing the threat, but a full system restore may be the only solution for some infections."},
       {"implementation":""},
       {"more": ["what to do when infected with ransomware"]}
     ]

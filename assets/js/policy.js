@@ -227,9 +227,9 @@ function compileDoc(p,a){
       doc.html += '<h2>Everyday practices</h2><ul><li>' + routineDoc.join('</li><li>')+'</li></ul>';
     }
   }
-  doc.plain += '\n\nPlease note: it is recommended that this policy undergoes a legal review prior to being implemented in your organisation.';
-  doc.markdown += '\n\n#### *Please note: it is recommended that this policy undergoes a legal review prior to being implemented in your organisation.*';
-  doc.html += '<h4>Please note: it is recommended that this policy undergoes a legal review prior to being implemented in your organisation.</h4></body></html>';
+  doc.plain += '\n\nPlease note: it is recommended that this policy undergoes a legal review prior to being implemented in your organization.';
+  doc.markdown += '\n\n#### *Please note: it is recommended that this policy undergoes a legal review prior to being implemented in your organization.*';
+  doc.html += '<h4>Please note: it is recommended that this policy undergoes a legal review prior to being implemented in your organization.</h4></body></html>';
   output = doc;
   return doc;
 }
@@ -318,9 +318,11 @@ function downloadPolicy(type) {
       filename += '.'+type;
     }
 
-    var file = new File([data], filename, {
-      type: format,
-    });
+    var file = makeFile(data, filename, format);
+
+    // var file = new File([data], filename, {
+    //   type: format,
+    // });
 
     if (window.navigator.msSaveOrOpenBlob) // IE10+
         window.navigator.msSaveOrOpenBlob(file, filename);
@@ -334,8 +336,18 @@ function downloadPolicy(type) {
         setTimeout(function() {
             document.body.removeChild(a);
             window.URL.revokeObjectURL(url);
-        }, 0);
+        }, 1000);
     }
+}
+
+function makeFile(d, n, f){
+  console.log(d, n, f);
+  try {
+    return new File([d], n,{type: f});
+  } catch {
+    const blob = new Blob([d], {type: f, name: n});
+    return blob;
+  }
 }
 
 // TODO: consider merging these three into one function

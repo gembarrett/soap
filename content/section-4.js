@@ -77,7 +77,7 @@ var section4 = [
 
     ],
     "tips":[
-      {"relevance":"Relevant to organisations with staff who carry sensitive information on their devices when they travel."},
+      {"relevance":"Relevant to organizations with staff who carry sensitive information on their devices when they travel."},
       {"meaning":"Travel devices are typically phones, laptops and other portable devices which are ‘clean’ (i.e. with minimal to no sensitive information on them) and used solely during travel to minimise the impact of unwanted access by border agents or other authorities. Our everyday devices contain a large amount of information and it can be time-consuming to clear them of all but the most innocuous data. Carrying a near-empty device can look suspicious and so some people choose to create a false profile filled with family photos and other “memories” from stock imagery sites. If the risk isn’t high enough to warrant the use of travel devices, then staff should be made aware of how they can secure their regular devices while travelling."},
       {"implementation":""},
       {"more": ["clean devices when travelling"]}
@@ -214,7 +214,7 @@ var section4 = [
       },
     ],
     "tips":[
-      {"relevance":"Organisations with staff who travel outside of their home country for work purposes."},
+      {"relevance":"Organizations with staff who travel outside of their home country for work purposes."},
       {"meaning":"Be aware that unusual precautions may make border agents suspicious. Some of these measures will need to be implemented on a case-by-case basis to avoid standing out. Being visibly security-conscious can draw the attention of border guards."},
       {"implementation":"Creating a travel checklist for staff out of the relevant content in your security policy can help with implementation."},
       {"more": ["enable phone SOS mode", "device security while travelling", "how to disable biometric authentication"]}
@@ -370,7 +370,7 @@ var section4 = [
     ],
     "tips":[
       {"relevance":""},
-      {"meaning":"Circumvention tools are usually run by small organisations who rely on funding and donations in order to keep providing a free or low-cost service, while larger VPNs tend to offer additional features and support in exchange for a more expensive subscription plan."},
+      {"meaning":"Circumvention tools are usually run by small organizations who rely on funding and donations in order to keep providing a free or low-cost service, while larger VPNs tend to offer additional features and support in exchange for a more expensive subscription plan."},
       {"implementation":"Asking staff to pay for their own VPN subscription can make it tough for those on a lower income to sufficiently protect their internet connection, putting them at risk and impacting their work. Instead, consider covering part of the cost or migrating to a service with a free plan."},
       {"more": ["free vs paid vpns"]}
     ]
@@ -419,7 +419,7 @@ var section4 = [
       {
         "type":"text",
         "answerText":"Email",
-        "placeholder": "e.g. example@organisation.com",
+        "placeholder": "e.g. example@organization.com",
         "storeAs":"[travelHelpEmail]",
         "excludes":[],
         "policyEntry":"Email: [travelHelpEmail]",

@@ -8,11 +8,6 @@
   #head img {
     max-width: 47%;
   }
-  /* #head .wrapper {
-    display:flex;
-    align-items: center;
-    justify-content: space-between;
-  } */
   #head {
     justify-content: space-between;
   }
@@ -22,6 +17,10 @@
   #menu-check:checked ~ #collapse {
     display:none;
   }
+  #policy-edit p{
+    display:none;
+  }
+
 }
 
 @media (min-width:600px) and (max-width:1399px) {
@@ -30,7 +29,6 @@
   }
   #overview section {
     flex: 1 2 40%;
-    /* width: auto; */
     margin: 1.5em 2em;
   }
   #overview {

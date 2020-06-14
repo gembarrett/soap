@@ -46,7 +46,7 @@ var section3 = [
       }
     ],
     "tips":[
-      {"relevance":"If your organisation provides devices to staff or installs work profiles on their personal devices"},
+      {"relevance":"If your organization provides devices to staff or installs work profiles on their personal devices"},
       {"meaning":"Recent developments in facial and fingerprint recognition have led to biometric authentication becoming a convenient alternative to passwords, although there are security flaws which should be considered. It's important to also set up a password, code or phrase as an extra barrier that can't be as easily circumvented."},
       {"implementation":"The unlock method is irrelevant if devices are almost never locked; enabling the automatic screen lock helps to ensure that others can’t walk right through the open doors of an unlocked device."},
       {"more": ["security of face unlock id", "creating strong passwords", "security of biometric authentication"]}
@@ -55,9 +55,9 @@ var section3 = [
   {
     "isQuestion": true,
     "id":"q23",
-    "q":"Does your organisation use any tools for device security management?",
+    "q":"Does your organization use any tools for device security management?",
     "required":false,
-    "policyContent":"To support device security across the organisation, we use the following tools: [devSecTools]",
+    "policyContent":"To support device security across the organization, we use the following tools: [devSecTools]",
     "appendixContent":"",
     "routineEntry":"",
     "answers":[
@@ -139,8 +139,8 @@ var section3 = [
       }
     ],
     "tips":[
-      {"relevance":"For organisations where there are more than a handful of devices in use."},
-      {"meaning":"A security policy is of little use unless everyone it applies to is adhering to the rules it lays out, but it’s time-consuming to dig into the settings of every device in your organisation. Tools like Flock and Stethoscope can help with this; enabling you to perform a security “health check” on devices. Managing the security of multiple devices can also be made easier with Mobile Device Management (MDM) services, as it can enable the remote install of VPNs and other security apps, as well as remote wipe in the case of device confiscation."},
+      {"relevance":"For organizations where there are more than a handful of devices in use."},
+      {"meaning":"A security policy is of little use unless everyone it applies to is adhering to the rules it lays out, but it’s time-consuming to dig into the settings of every device in your organization. Tools like Flock and Stethoscope can help with this; enabling you to perform a security “health check” on devices. Managing the security of multiple devices can also be made easier with Mobile Device Management (MDM) services, as it can enable the remote install of VPNs and other security apps, as well as remote wipe in the case of device confiscation."},
       {"implementation":"Getting this sort of management tool in place is better done earlier rather than later while there are a manageable number of devices and people to introduce to the system."},
       {"more": ["mobile device management solutions"]}
     ]
@@ -148,7 +148,7 @@ var section3 = [
   {
     "isQuestion": true,
     "id":"q24",
-    "q":"Does your organisation use physical or cloud storage for backups?",
+    "q":"Does your organization use physical or cloud storage for backups?",
     "required":false,
     "policyContent":"[orgName] is responsible for managing data backups which are kept in [storagePref] storage.",
     "appendixContent":"",
@@ -265,7 +265,7 @@ var section3 = [
     ],
     "tips":[
       {"relevance":""},
-      {"meaning":"Whether automatic or manual, it’s important to back up every device’s data on a regular basis to avoid potential loss due to device confiscation or damage. The frequency of your backups should be dictated by how often your data is created or updated, with hourly or end-of-day being the ideal for organisations that rely heavily on digital documents."},
+      {"meaning":"Whether automatic or manual, it’s important to back up every device’s data on a regular basis to avoid potential loss due to device confiscation or damage. The frequency of your backups should be dictated by how often your data is created or updated, with hourly or end-of-day being the ideal for organizations that rely heavily on digital documents."},
       {"implementation":"If all staff are on the same operating system then using the built-in software to perform automatic backups can make the implementation process easier. There are great cross-platform alternatives available too, and whichever option you choose it’s advisable to go for a zero-knowledge service wherever possible."},
       {"more": ["how often should I back up my data", "zero-knowledge cloud storage", "cross-platform backup solutions"]}
     ]
@@ -273,7 +273,7 @@ var section3 = [
   {
     "isQuestion": true,
     "id":"q26",
-    "q":"How does your organisation secure its backups?",
+    "q":"How does your organization secure its backups?",
     "required":false,
     "policyContent":"[orgName] requires that devices used for work purposes be backed up as the loss, exposure or corruption of [orgName] data puts us, and those we work with, at risk. Backups are managed in the following ways: ",
     "appendixContent":"Be sure to discuss any recent data loss or similar incidents at each review - they are good learning opportunities. An approach to backups is the 3-2-1 rule: at least 3 backup copies of your data on at least 2 different kinds of medium, with at least 1 of these stored offsite.",

@@ -21,7 +21,7 @@ var section0 = [
   {
     "isQuestion": true,
     "id":"q1",
-    "q":"What is the name of your organisation?",
+    "q":"What is the name of your organization?",
     "required":true,
     "policyContent":"",
     "appendixContent":"",
@@ -30,10 +30,10 @@ var section0 = [
       {
         "type":"text",
         "answerText":"",
-        "placeholder":"Example Organisation",
+        "placeholder":"Example Organization",
         "storeAs":"[orgName]",
         "excludes":[],
-        "policyEntry":"This is the security policy of [orgName], which has been created in order to support staff in carrying out our sensitive work securely. It is important to understand and comply with the rules described as they aim to protect everyone involved in our work, including partner organisations and frontline activists.",
+        "policyEntry":"This is the security policy of [orgName], which has been created in order to support staff in carrying out our sensitive work securely. It is important to understand and comply with the rules described as they aim to protect everyone involved in our work, including partner organizations and frontline activists.",
         "routineEntry":"This is the short version of [orgName] security policy. It is designed to remind you of the everyday practices to include in your routine.",
         "appendixEntry": [
           {
@@ -46,7 +46,7 @@ var section0 = [
     ],
     "tips":[
       {"relevance":""},
-      {"meaning":"Your organisation’s name will be used in the policy to make the ownership of it clear. If you would prefer not to give a name, you can instead use an alias name to find and replace later if you wish."},
+      {"meaning":"Your organization’s name will be used in the policy to make the ownership of it clear. If you would prefer not to give a name, you can instead use an alias name to find and replace later if you wish."},
       {"implementation":""},
       {"more":""}
     ]
@@ -187,7 +187,7 @@ var section0 = [
     "tips":[
       {"relevance":""},
       {"meaning":"For the majority of their time, remote staff work outside of a traditional office, such as from home or a cafe. The risks in different working environments vary and there are factors to be considered which apply to remote staff but not so much those who work in a regular office – and vice versa."},
-      {"implementation":"Your organisation is remote if it has any members of staff working from outside [orgName]-controlled premises, and taking this remote-first perspective helps with supporting those staff as part of the team."},
+      {"implementation":"Your organization is remote if it has any members of staff working from outside [orgName]-controlled premises, and taking this remote-first perspective helps with supporting those staff as part of the team."},
       {"more":["managing remote staff"]}
     ]
   },
@@ -251,7 +251,7 @@ var section0 = [
       {
         "type":"text",
         "answerText":"Email",
-        "placeholder": "e.g. example@organisation.com",
+        "placeholder": "e.g. example@organization.com",
         "storeAs":"[contactEmail]",
         "excludes":[],
         "policyEntry":"Email: [contactEmail]",
@@ -284,7 +284,7 @@ var section0 = [
     "tips":[
       {"relevance":""},
       {"meaning":"In order to ease the implementation process and support future maintenance, one or more members of staff will be needed as a point of contact for queries about the policy. Ideally this role will be taken on by you, as the creator of this policy, or another staff member with sufficient time and security knowledge."},
-      {"implementation":"The person named here should ideally be approachable and a familiar face around the organisation, with a workload that can support the requirement to answer questions in a timely manner. However, people leave or become unsuitable for the role, and so there should also be a contingency plan in place so that all the security management doesn’t leave with the person."},
+      {"implementation":"The person named here should ideally be approachable and a familiar face around the organization, with a workload that can support the requirement to answer questions in a timely manner. However, people leave or become unsuitable for the role, and so there should also be a contingency plan in place so that all the security management doesn’t leave with the person."},
       {"more":["security champion role"]},
     ]
   },
@@ -368,7 +368,7 @@ var section0 = [
   {
     "isQuestion": true,
     "id":"q6",
-    "q":"Which operating systems are used in your organisation?",
+    "q":"Which operating systems are used in your organization?",
     "required":false,
     "policyContent":"",
     "appendixContent":"",
@@ -483,7 +483,7 @@ var section0 = [
     ],
     "tips":[
       {"relevance":""},
-      {"meaning":"Security measures and settings vary in extent and location between operating systems. Specifying those that are relevant and in use at your organisation makes it simpler to provide appropriate instructions and questions in the process."},
+      {"meaning":"Security measures and settings vary in extent and location between operating systems. Specifying those that are relevant and in use at your organization makes it simpler to provide appropriate instructions and questions in the process."},
       {"implementation":""},
       {"more":["comparing security of operating systems", "desktop/mobile os security features"]}
     ]
@@ -491,7 +491,7 @@ var section0 = [
   {
     "isQuestion": true,
     "id":"q7",
-    "q":"How does your organisation manage staff work devices?",
+    "q":"How does your organization manage staff work devices?",
     "required":true,
     "policyContent":"[orgName] manages device security in the following way, depending on the situation:",
     "appendixContent":"",
@@ -514,7 +514,7 @@ var section0 = [
       },
       {
         "type":"checkbox",
-        "answerText":"We install work and personal profiles on organisation-owned devices.",
+        "answerText":"We install work and personal profiles on organization-owned devices.",
         "storeAs": "",
         "excludes":[],
         "policyEntry":"- Profiles on [orgName] devices: [orgName] staff are given some freedom to decide their work environment and equipment, and we acknowledge that there may be times when after hours access to work email and data is needed. We will provide you with devices and install both a work and personal profile for you to use.",
@@ -560,15 +560,15 @@ var section0 = [
     ],
     "tips":[
       {"relevance":""},
-      {"meaning":"Providing devices to staff can be expensive but it makes it easier to achieve complete separation of personal and work activities. Work profiles can be installed on most ‘smart’ devices and computers as an alternative that maintains the convenience of remote control for wiping (the profile), installation and updates. Although the personal and work profiles are kept isolated from each other, reducing leakage of sensitive information between the two, it can blur the boundaries between work and personal lives and feel intrusive to staff. BYOD policies allow staff to use their own computers and phones, and paired with work profiles can provide convenience for staff member and organisation."},
-      {"implementation":"Commonly the choice of work device vs work profile is given to individual staff members to decide the best option for their own situation. For the staff member, convenience and work-life balance are major factors in this decision. For the organisation, security and cost are top priority. Be aware though, that not all staff members will be in a position to provide a suitable device for use at work."},
+      {"meaning":"Providing devices to staff can be expensive but it makes it easier to achieve complete separation of personal and work activities. Work profiles can be installed on most ‘smart’ devices and computers as an alternative that maintains the convenience of remote control for wiping (the profile), installation and updates. Although the personal and work profiles are kept isolated from each other, reducing leakage of sensitive information between the two, it can blur the boundaries between work and personal lives and feel intrusive to staff. BYOD policies allow staff to use their own computers and phones, and paired with work profiles can provide convenience for staff member and organization."},
+      {"implementation":"Commonly the choice of work device vs work profile is given to individual staff members to decide the best option for their own situation. For the staff member, convenience and work-life balance are major factors in this decision. For the organization, security and cost are top priority. Be aware though, that not all staff members will be in a position to provide a suitable device for use at work."},
       {"more":["comparing security of operating systems", "desktop/mobile os security features"]}
     ]
   },
   {
     "isQuestion": true,
     "id":"q8",
-    "q":"Does your organisation provide staff with privacy equipment for their devices?",
+    "q":"Does your organization provide staff with privacy equipment for their devices?",
     "required":false,
     "policyContent":"In addition to other device security measures, [orgName] will also provide you with [providePrivacy] to use on your devices.",
     "appendixContent":"",

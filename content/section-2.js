@@ -3,7 +3,7 @@ var section2 = [
     "isQuestion": false,
     "id":"q14",
     "title": "Scenario two",
-    "paragraph":["Now consider the situation if the same staff member clicks the link in that suspicious email and the attacker steals their work account login details. We rely on many online services in the course of our work, and as a result the accounts we inhabit get filled with sensitive information that can be accessed, deleted, manipulated and shared by an attacker.", "In this case, red flags of a hacked account can include unrecognised activity, strange login times and being 'locked out' of the account. Once inside, an attacker may steal login details for other accounts, leak sensitive information or impersonate the staff member to damage the organisation.", "In most cases, changing passwords and implementing two-factor authentication is enough to stop the attacker. But if the situation esclates, it can take time to persuade the platform to hand you back control of the account so acting quickly to protect accounts is key. Setting rules for where and how to share, store and discuss information can also help to reduce the impact of an intrusion by limiting what each account can provide access to."]
+    "paragraph":["Now consider the situation if the same staff member clicks the link in that suspicious email and the attacker steals their work account login details. We rely on many online services in the course of our work, and as a result the accounts we inhabit get filled with sensitive information that can be accessed, deleted, manipulated and shared by an attacker.", "In this case, red flags of a hacked account can include unrecognised activity, strange login times and being 'locked out' of the account. Once inside, an attacker may steal login details for other accounts, leak sensitive information or impersonate the staff member to damage the organization.", "In most cases, changing passwords and implementing two-factor authentication is enough to stop the attacker. But if the situation esclates, it can take time to persuade the platform to hand you back control of the account so acting quickly to protect accounts is key. Setting rules for where and how to share, store and discuss information can also help to reduce the impact of an intrusion by limiting what each account can provide access to."]
   },
   {
     "isQuestion": true,
@@ -172,7 +172,7 @@ var section2 = [
     "tips":[
       {"relevance":"Applicable when a password manager isn't a feasible storage option."},
       {"meaning":"Storing long, complex passwords in a convenient place like the browser makes them easier to integrate into a workflow if there’s no password manager in use. However, the lists of password that are stored in the browser are not as well protected as they would be in a password manager. If the device on which that browser is installed gets stolen, confiscated or otherwise accessed without authorisation (physically or remotely), then the browser’s keychain becomes a treasure trove of account logins for anyone in control of that device."},
-      {"implementation":"If in-browser password storage is appropriate for your organisation’s threat model, consider planning for frequent “clearing out” of old stored passwords in order to lessen the impact of any unauthorised access."},
+      {"implementation":"If in-browser password storage is appropriate for your organization’s threat model, consider planning for frequent “clearing out” of old stored passwords in order to lessen the impact of any unauthorised access."},
       {"more": ["storing passwords in browser", "delete stored browser passwords", "browser password risks"]}
     ]
   },
@@ -241,7 +241,7 @@ var section2 = [
   {
     "isQuestion": true,
     "id":"q18",
-    "q":"Does your organisation prefer staff to use a specific authentication app?",
+    "q":"Does your organization prefer staff to use a specific authentication app?",
     "required":false,
     "policyContent":"",
     "appendixContent":"",
@@ -326,15 +326,15 @@ var section2 = [
     ],
     "tips":[
       {"relevance":""},
-      {"meaning":"Most authentication apps work the same way, but it may be more convenient for troubleshooting if all staff use the same app. Some additional features might be more useful to your organisation than others, for example multi-device access."},
-      {"implementation":"Using work profiles and similar device management processes can be helpful for installing the same app across the organisation. Whichever service is chosen, staff may need assistance with setting up and using the app for the first time."},
+      {"meaning":"Most authentication apps work the same way, but it may be more convenient for troubleshooting if all staff use the same app. Some additional features might be more useful to your organization than others, for example multi-device access."},
+      {"implementation":"Using work profiles and similar device management processes can be helpful for installing the same app across the organization. Whichever service is chosen, staff may need assistance with setting up and using the app for the first time."},
       {"more": ["authentication app comparison"]}
     ]
   },
   {
     "isQuestion": true,
     "id":"q19",
-    "q":"Does your organisation provide hardware security keys to staff?",
+    "q":"Does your organization provide hardware security keys to staff?",
     "required":false,
     "policyContent":"",
     "appendixContent":"",
@@ -373,8 +373,8 @@ var section2 = [
     ],
     "tips":[
       {"relevance":""},
-      {"meaning":"Hardware security keys are an alternative to using authentication apps. Rather than generating codes for a user to type in, they are simply plugged into the computer to authenticate with the browser directly. If your organisation is enrolled in the Google Protection Program then Google recommends using Titan keys in its set up process."},
-      {"implementation":"Providing staff with hardware keys helps to ensure consistency across the organisation and makes troubleshooting easier. Alternatively, your organisation can empower staff to choose their own key which will help with buy-in. Either way, watch out for staff leaving the key plugged into their devices when not in use as this poses a risk of damage or loss."},
+      {"meaning":"Hardware security keys are an alternative to using authentication apps. Rather than generating codes for a user to type in, they are simply plugged into the computer to authenticate with the browser directly. If your organization is enrolled in the Google Protection Program then Google recommends using Titan keys in its set up process."},
+      {"implementation":"Providing staff with hardware keys helps to ensure consistency across the organization and makes troubleshooting easier. Alternatively, your organization can empower staff to choose their own key which will help with buy-in. Either way, watch out for staff leaving the key plugged into their devices when not in use as this poses a risk of damage or loss."},
       {"more": ["hardware security key comparison"]}
     ]
   },

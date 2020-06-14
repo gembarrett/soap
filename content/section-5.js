@@ -3,12 +3,12 @@ var section5 = [
     "isQuestion": false,
     "id":"q35",
     "title": "Scenario five",
-    "paragraph":["Staff arrive at the office one morning to find that there’s been a break in and several laptops have been stolen from their desks. Although all were set up with password protection, some were running on out-of-date software with unpatched security holes, which the thieves then exploited to bypass the log in screen and gain access to the file systems.", "While cyber attacks pose a big threat, organisations should also consider how they can protect against offline incidents. A break-in at the office can deal a devastating blow to an organisation as the theft of confidential documents and data-rich computers can lead to the exposure of personal information, loss of equipment and destruction of locally-stored files.", "Security needs can differ for home offices and coworking spaces but the overall goal of restricting access is the same, and most measures can be altered to suit the specific environment. Although some environmental security measures will be required by insurance anyway, there are additional habits staff can practice to help keep the office secure. In addition to physical security, this section will also cover WiFi and visitor protocols."]
+    "paragraph":["Staff arrive at the office one morning to find that there’s been a break in and several laptops have been stolen from their desks. Although all were set up with password protection, some were running on out-of-date software with unpatched security holes, which the thieves then exploited to bypass the log in screen and gain access to the file systems.", "While cyber attacks pose a big threat, organizations should also consider how they can protect against offline incidents. A break-in at the office can deal a devastating blow to an organization as the theft of confidential documents and data-rich computers can lead to the exposure of personal information, loss of equipment and destruction of locally-stored files.", "Security needs can differ for home offices and coworking spaces but the overall goal of restricting access is the same, and most measures can be altered to suit the specific environment. Although some environmental security measures will be required by insurance anyway, there are additional habits staff can practice to help keep the office secure. In addition to physical security, this section will also cover WiFi and visitor protocols."]
   },
   {
     "isQuestion": true,
     "id":"q36",
-    "q":"Does your organisation have a 'clean desk' policy?",
+    "q":"Does your organization have a 'clean desk' policy?",
     "required":true,
     "policyContent":"",
     "routineEntry":"",
@@ -110,7 +110,7 @@ var section5 = [
     ],
     "tips":[
       {"relevance":"If staff have their own desk in the office, and especially if there is a “clean desk” policy in place."},
-      {"meaning":"Physical storage can be used to store sensitive printed documents, in accordance with a “clean desk” policy. A lockable cupboard or drawer can hold organisation-owned laptops, thumb drives, or other devices, helping to ensure that they aren’t easily accessed during a break in."},
+      {"meaning":"Physical storage can be used to store sensitive printed documents, in accordance with a “clean desk” policy. A lockable cupboard or drawer can hold organization-owned laptops, thumb drives, or other devices, helping to ensure that they aren’t easily accessed during a break in."},
       {"implementation":"Remind staff of the security risks of leaving the key in the lock overnight."},
       {"more": ["secure office storage"]}
     ]
@@ -187,9 +187,9 @@ var section5 = [
       },
     ],
     "tips":[
-      {"relevance":"If your office receives visitors, it is worth putting thought into how this impacts your organisation’s security."},
+      {"relevance":"If your office receives visitors, it is worth putting thought into how this impacts your organization’s security."},
       {"meaning":"Visitor protocols can include many things, depending on the frequency of visits and common purposes. For instance, if there are visitors regularly on site for meetings then a guest WiFi access point can make it easier to restrict their movement around the network. Making staff aware of visitors in advance can give them time to secure their workspace, and avoids any surprise at seeing an unfamiliar face in the office."},
-      {"implementation":"When setting up a guest WiFi, remember to implement the same security standards as your company WiFi; for instance, by using complex passwords changed on a regular basis. Organisations that have visitors on an infrequent basis may find it more practical to actively notify their staff each time than those with more frequent visitors, for whom a shared calendar could be easier to manage."},
+      {"implementation":"When setting up a guest WiFi, remember to implement the same security standards as your company WiFi; for instance, by using complex passwords changed on a regular basis. Organizations that have visitors on an infrequent basis may find it more practical to actively notify their staff each time than those with more frequent visitors, for whom a shared calendar could be easier to manage."},
       {"more": ["visitor security policy", "office security tailgating"]}
     ]
   },
@@ -253,7 +253,7 @@ var section5 = [
       {
         "type":"text",
         "answerText":"Email",
-        "placeholder": ["e.g. example@organisation.com"],
+        "placeholder": ["e.g. example@organization.com"],
         "storeAs":"[officeSecurityEmail]",
         "excludes":[],
         "policyEntry":"You can email [officeSecurityName] at [officeSecurityEmail].",
@@ -285,8 +285,8 @@ var section5 = [
     ],
     "tips":[
       {"relevance":""},
-      {"meaning":"Whoever is responsible for office security should be present in the office on a regular basis. Depending on your context, they may need to liaise with the alarm system company, rotate office entry codes or manage the staff access fobs. If your office is in a shared or coworking space then the person responsible may be someone outside of your organisation."},
-      {"implementation":"For very small organisations it may make sense for this security officer to be the same responsible person named earlier in this process, while larger organisations may require a dedicated person or team. In either case it’s important that everybody knows who to contact if there is an emergency in-office."},
+      {"meaning":"Whoever is responsible for office security should be present in the office on a regular basis. Depending on your context, they may need to liaise with the alarm system company, rotate office entry codes or manage the staff access fobs. If your office is in a shared or coworking space then the person responsible may be someone outside of your organization."},
+      {"implementation":"For very small organizations it may make sense for this security officer to be the same responsible person named earlier in this process, while larger organizations may require a dedicated person or team. In either case it’s important that everybody knows who to contact if there is an emergency in-office."},
       {"more": ["responsible person office security", "security officer responsibilities"]}
     ]
   },
@@ -297,7 +297,7 @@ var section5 = [
     "required":true,
     "policyContent":"",
     "routineEntry":"",
-    "appendixContent":"Between reviews, keep a note of any security incidents related to the office environment as these experiences teach those involved, the organisation as a whole and can be used to improve the security policy.",
+    "appendixContent":"Between reviews, keep a note of any security incidents related to the office environment as these experiences teach those involved, the organization as a whole and can be used to improve the security policy.",
     "answers":[
       {
         "type":"checkbox",
@@ -324,7 +324,7 @@ var section5 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": "When staff leave the organisation, be sure to obtain and deactivate their access token so you remain aware of who has access to the office at any given time.",
+            "tipList": "When staff leave the organization, be sure to obtain and deactivate their access token so you remain aware of who has access to the office at any given time.",
             "linksList": ""
           }
         ]
@@ -363,8 +363,8 @@ var section5 = [
     ],
     "tips":[
       {"relevance":""},
-      {"meaning":"To enable work to continue outside of office working hours, it is useful for staff to be able to securely exit the office when they leave late and enter when they arrive early. Access tokens such as keys, fobs and codes could grant unauthorised entry if they were to be shared outside of the organisation, for example through social engineering tactics such as ‘tailgating’. It’s important to know who has access to the office and have a process in place for changing codes, deactivating fobs, and similar tasks. Turning devices off at night ensures that an intruder would be forced to enter the correct password in order to decrypt (if disk encryption is enabled) and access the file system."},
-      {"implementation":"Social engineering can be a threat both online and offline, and physical penetration testing are frequently employed to use such tactics to gain access to test the strength of the organisation’s security plan and see how far a potential intruder could get into a building. The outcomes of these tests can be a valuable metric with which to raise awareness among staff of the importance of keeping the office secure."},
+      {"meaning":"To enable work to continue outside of office working hours, it is useful for staff to be able to securely exit the office when they leave late and enter when they arrive early. Access tokens such as keys, fobs and codes could grant unauthorised entry if they were to be shared outside of the organization, for example through social engineering tactics such as ‘tailgating’. It’s important to know who has access to the office and have a process in place for changing codes, deactivating fobs, and similar tasks. Turning devices off at night ensures that an intruder would be forced to enter the correct password in order to decrypt (if disk encryption is enabled) and access the file system."},
+      {"implementation":"Social engineering can be a threat both online and offline, and physical penetration testing are frequently employed to use such tactics to gain access to test the strength of the organization’s security plan and see how far a potential intruder could get into a building. The outcomes of these tests can be a valuable metric with which to raise awareness among staff of the importance of keeping the office secure."},
       {"more": ["social engineering tactics tailgating", "physical penetration testing", "office key security policy"]}
     ]
   },
@@ -375,7 +375,7 @@ var section5 = [
     "required":true,
     "policyContent":"",
     "routineEntry":"",
-    "appendixContent":"Between reviews, keep a note of any security incidents related to working remotely as these experiences teach those involved, the organisation as a whole and can be used to improve the security policy.",
+    "appendixContent":"Between reviews, keep a note of any security incidents related to working remotely as these experiences teach those involved, the organization as a whole and can be used to improve the security policy.",
     "answers":[
       {
         "type":"checkbox",
@@ -455,7 +455,7 @@ var section5 = [
       },
     ],
     "tips":[
-      {"relevance":"If anyone in your organisation works remotely, from home or anywhere outside of the organisation’s office, then the security of their work in that environment should be examined."},
+      {"relevance":"If anyone in your organization works remotely, from home or anywhere outside of the organization’s office, then the security of their work in that environment should be examined."},
       {"meaning":"Members of staff may find themselves being asked by family or friends if their work device could be borrowed temporarily, for example to look something up. The rules about this can be restrictive or more flexible, depending on whether the devices have work profiles or are owned, and the importance of the data stored on it. Staff members should be aware of everyone who has access to their home office, but that’s not always possible. Measures such as locking the door, putting devices and documents away at night, or switching off devices when not in use, are all additional obstacles for an intruder."},
       {"implementation":"It may not be possible for some staff to work securely from home office, so consider how everyone can be supported, for example by offering paid membership to a local coworking space."},
       {"more": ["how to secure a home office", "security of coworking spaces", "risks of public wifi"]}
@@ -489,7 +489,7 @@ var section5 = [
     ],
     "tips":[
       {"relevance":""},
-      {"meaning":"When a device that provides access to your organisation’s data is lost or stolen, the owner needs to be able to quickly and confidently report the loss. By acting fast, account credentials can be changed and the device can be found or wiped sooner than a third party can gain access to the device’s contents."},
+      {"meaning":"When a device that provides access to your organization’s data is lost or stolen, the owner needs to be able to quickly and confidently report the loss. By acting fast, account credentials can be changed and the device can be found or wiped sooner than a third party can gain access to the device’s contents."},
       {"implementation":"The potential impact of a device loss can make it an intimidating thing to report, so it’s important that staff know they’re supported."},
       {"more": ["lost stolen device security"]}
     ]
