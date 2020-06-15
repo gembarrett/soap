@@ -111,7 +111,7 @@
     padding-top: 0;
   }
   .window h3 {
-    font-size: 4em;
+    font-size: 3em;
   }
   .buildPage .window {
     margin-top: 1em;
@@ -428,9 +428,6 @@
   }
   .editMode {
     border-width: 1em;
-  }
-  .editMode .questionContent {
-    margin-bottom: 3em;
   }
   #page {
     padding-top: 0;

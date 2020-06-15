@@ -113,6 +113,9 @@ body.buildPage #page {
   border-top: 0;
   border-bottom: 0;
 }
+.editMode .questionContent {
+  margin-bottom: 3em;
+}
 
 #editBtn.editMode {
   border-width: 0.5em;
@@ -780,11 +783,14 @@ form > div > div > input[type='checkbox'] + label {
   border-radius: 0.5em;
 }
 
-form > div > div > input:checked + label, .form-el input + label:hover {
+form > div > div > input:checked + label {
   background-color: #a9bcd0;
   color: #1b263b;
   box-shadow: 0px 0px 1em #b93168;
   border-color: #b93168;
+}
+.form-el input + label:hover {
+  opacity:0.6;
 }
 
 .q0-only {
@@ -926,7 +932,9 @@ summary::marker {
 }
 #no-js.window {
   flex-direction: column;
-  margin:4em;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .contain > * {
   max-width: 1600px;

@@ -1,5 +1,4 @@
 document.querySelectorAll('[contenteditable=true]').forEach(function (el) {
-  console.log(el);
   el.addEventListener('keydown', function(event){
     if (event.keyCode === 8) {
       var node = event.srcElement || event.target;
@@ -168,7 +167,7 @@ function findContent(q){
       return sections[6].find(question => question.id === q);
       break;
     default:
-      console.log('question not found');
+      console.log('Question not found');
       break;
   }
 }
@@ -231,7 +230,6 @@ function storeThisPair(el, storage, text) {
 }
 
 function toggleEditMode(){
-  console.log('Toggle edit mode');
   // get the edit button
   var editBtn = document.getElementById("editBtn");
   // toggle the editing class on button and page

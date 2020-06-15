@@ -341,7 +341,6 @@ function downloadPolicy(type) {
 }
 
 function makeFile(d, n, f){
-  console.log(d, n, f);
   try {
     return new File([d], n,{type: f});
   } catch (exception) {

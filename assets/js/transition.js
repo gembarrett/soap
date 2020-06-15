@@ -8,14 +8,13 @@ function getNameFromHome(){
     // go to #build
     window.location.href="/#build";
   } else {
-    console.log('no org name provided');
+    console.log('No organization name provided');
   }
 }
 
 function checkForName() {
   // if there's a name been entered previously
   if (homeName !== ""){
-    console.log(currentState);
     // autofill q1 input field with the variable
     var orgNameInput = document.querySelectorAll('#q1-0-answer');
     orgNameInput[0].value = homeName;
@@ -24,10 +23,8 @@ function checkForName() {
     // currentState.questionQ++;
     // currentState.questionP++;
     // moveForward(1);
-    // console.log(currentState);
     // nextQuestion();
-    // console.log(currentState);
   } else {
-    console.log('no name stored');
+    console.log('No organization name stored');
   }
 }
