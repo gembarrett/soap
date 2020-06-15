@@ -314,10 +314,6 @@
   #head img {
     max-width: 50%;
   }
-  #header-menu {
-    display: flex;
-    flex-direction: row-reverse;
-  }
   #menu-check:checked ~ #collapse {
     float:none;
   }

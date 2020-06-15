@@ -57,6 +57,7 @@ body {
   flex-direction: column;
   overflow: scroll;
   overflow-x:hidden;
+  background: #1b263b;
 }
 
 p {
@@ -74,7 +75,7 @@ p {
   z-index: 1;
 }
 #head a {
-  margin-top:0.5em;
+  margin:0.5em 0;
 }
 
 #img-intro {
@@ -106,7 +107,6 @@ body.buildPage #page {
 
 #page {
   flex: 1 0 auto;
-  background: #1b263b;
 }
 .editMode {
   border: 3em #a9bcd0 solid;
@@ -446,6 +446,7 @@ color: #A9bcd0;
   padding: 0 0 2em 3em;
   font-size: 1em;
   font-family: "SinkinSansLight", "Helvetica", "OpenSans", sans-serif;
+  width:100%;
 }
 .homeSectionOverview li {
   padding: 0.5em 0;
@@ -574,7 +575,7 @@ details a {
   margin-top: 1em;
 }
 .buildPage .window {
-  margin:4em 0 0 0;
+  margin:4em auto;
   padding: 2em;
 }
 .buildPage .window > :not(h3) {
@@ -587,6 +588,7 @@ details a {
 .buildPage .window div {
   display: flex;
   flex-direction: column;
+  width:100%
 }
 .feature {
   width: 30%;
@@ -672,6 +674,7 @@ progress {
   border: 1px solid #B93168;
   background: #1b263b;
   border: 0;
+  display: block;
 }
 progress[value="0"] {
   display:none;
@@ -694,6 +697,7 @@ small a {
 small {
   padding: 1em 0;
   color:#f2eee2;
+  display:block;
 }
 .incidentBox {
   text-align: left;
@@ -923,4 +927,12 @@ summary::marker {
 #no-js.window {
   flex-direction: column;
   margin:4em;
+}
+.contain > * {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.header-menu{
+  margin:0;
 }

@@ -1,6 +1,6 @@
 templates.questionsTemplate = function(data){
   var content = `
-      <div class="qContainer"><progress max="`+questionsList.length+`" value="0"></progress>`;
+      <div class="qContainer contain"><progress max="`+questionsList.length+`" value="0"></progress>`;
 
 
   for(var i = 0; i < questionsList.length; i++) {

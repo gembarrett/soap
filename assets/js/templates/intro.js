@@ -1,7 +1,7 @@
 templates.intro = function(data){
   var text = ros[0];
   var content = `
-    <div id="intro" class="nav-start">
+    <div id="intro" class="nav-start contain">
       <div id="logoContainer">
         <div><img id="logoBig" src="assets/images/soapLogoW.png" /></div>
         <h1>`+text.head+`</h1>

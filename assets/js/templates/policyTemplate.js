@@ -10,7 +10,7 @@ templates.policyTemplate = function(data){
   md = '<button class="btn btn-prim pink-border-glow" onclick="downloadPolicy(\'markdown\')"><i class="fas fa-download"></i> Markdown</button>';
   html = '<button class="btn btn-prim pink-border-glow" onclick="downloadPolicy(\'html\')"><i class="fas fa-download"></i> HTML</button>';
   var content =
-    `<div class="qContainer">
+    `<div class="qContainer contain">
       <div id="policy-dl" class="window pink-border-glow">
         <h3>Get policy</h3>
         <div class="dlBtnWrapper">
