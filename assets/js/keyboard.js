@@ -27,6 +27,7 @@ function reactToPress(e){
       // this key won't be relevant on home page
       case "Enter":
         // simulate a click on the edit button
+        // FIXME: if you hold the Enter button down you can swiftly skip alllllllll the questions :/
         var subBtn = document.querySelector("#submitAnswers");
         subBtn.click();
         break;
@@ -47,6 +48,7 @@ function reactToPress(e){
         // simulate a click on the edit button
         var editBtn = document.querySelector("#editBtn");
         console.log(editBtn);
+        // FIXME: for some reason this is triggered when input is in focus
         editBtn.click();
         break;
       default:
