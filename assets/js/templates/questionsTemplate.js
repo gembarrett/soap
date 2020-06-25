@@ -56,12 +56,12 @@ templates.questionsTemplate = function(data){
 
            // if there's a textarea
            if (question.answers[j].type === 'textarea') {
-             content += '<textarea ' +thisID+thisName+thisPlaceholder+ ' class="incidentBox" '+required+'></textarea>';
+             content += '<textarea ' +thisID+thisName+thisPlaceholder+ ' class="incidentBox" '+required+' title="'+question.answers[j].placeholder+'"></textarea>';
            }
 
            // if there's a textbox
            else if (question.answers[j].type === 'text') {
-             content += thisLabel + '<input type="' +question.answers[j].type+ '"' +thisID+thisName+thisPlaceholder+required+ '>';
+             content += thisLabel + '<input type="' +question.answers[j].type+ '"' +thisID+thisName+thisPlaceholder+required+ ' title="'+question.answers[j].placeholder+'">';
            }
 
            // if there's another input type

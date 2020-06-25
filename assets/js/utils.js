@@ -24,7 +24,6 @@ var utils = (function(){
   return {
     router: function(route, data){
       route = route || location.hash.slice(1) || 'home';
-      // route = route || 'home';
       var temp = route.split('?');
       var route_split = temp.length;
       var function_to_invoke;
