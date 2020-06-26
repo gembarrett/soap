@@ -351,10 +351,10 @@ function makeFile(d, n, f){
 
 // TODO: consider merging these three into one function
 function getPolicyContent(question, previous, answer, policy, content){
-  // if it's a new question and there's policyContent
-  if ((question !== previous) && (content.policyContent !== "")) {
-    // edit the policyContent and push it to the policy
-    thisContent = replaceStr(content.policyContent);
+  // if it's a new question and there's policyEntry
+  if ((question !== previous) && (content.policyEntry !== "")) {
+    // edit the policyEntry and push it to the policy
+    thisContent = replaceStr(content.policyEntry);
     policy.push(thisContent);
   }
   // if the answer has a policyEntry
@@ -367,8 +367,8 @@ function getPolicyContent(question, previous, answer, policy, content){
 }
 
 function getAppendixContent(question, previous, answer, appDoc, content){
-  if ((question !== previous) && (content.appendixContent !== "")) {
-    thisContent = replaceStr(content.appendixContent);
+  if ((question !== previous) && (content.appendixEntry !== "")) {
+    thisContent = replaceStr(content.appendixEntry);
     appDoc.general.push(thisContent);
   }
   appEntry = content.answers[answer].appendixEntry[0];

@@ -10,9 +10,9 @@ var section6 = [
     "id":"q44",
     "q":"How often are the office WiFi passwords changed?",
     "required":true,
-    "policyContent":"To ensure that the WiFi access is restricted to authorised staff, [orgName] rotates the password [pwdFreq] and the new credentials will be made available to you by [contactName].",
+    "policyEntry":"To ensure that the WiFi access is restricted to authorised staff, [orgName] rotates the password [pwdFreq] and the new credentials will be made available to you by [contactName].",
     "routineEntry":"",
-    "appendixContent":"",
+    "appendixEntry":"",
     "answers":[
       {
         "type":"radio",
@@ -87,9 +87,9 @@ var section6 = [
     "id":"q45",
     "q":"What measures do you take to protect your office network?",
     "required":true,
-    "policyContent":"When using the internal network, you can expect to find the following security measures in place. ",
+    "policyEntry":"When using the internal network, you can expect to find the following security measures in place. ",
     "routineEntry":"",
-    "appendixContent":"",
+    "appendixEntry":"",
     "answers":[
       {
         "type":"checkbox",
@@ -195,9 +195,9 @@ var section6 = [
     "id":"q46",
     "q":"How can staff protect themselves from browser-based intrusions?",
     "required":true,
-    "policyContent":"Your web browser can provide a window into your online activities, potentially exposing confidential data such as activist identities and [orgName] project details. To mitigate this, we recommend implementing the following security hygiene techniques in your browser:",
+    "policyEntry":"Your web browser can provide a window into your online activities, potentially exposing confidential data such as activist identities and [orgName] project details. To mitigate this, we recommend implementing the following security hygiene techniques in your browser:",
     "routineEntry":"",
-    "appendixContent":"",
+    "appendixEntry":"",
     "answers":[
       {
         "type":"checkbox",
@@ -288,9 +288,9 @@ var section6 = [
     "id":"q47",
     "q":"How should devices be set up to protect against network-based attacks?",
     "required":true,
-    "policyContent":"",
+    "policyEntry":"",
     "routineEntry":"",
-    "appendixContent":"",
+    "appendixEntry":"",
     "answers":[
       {
         "type":"checkbox",
@@ -366,8 +366,8 @@ var section6 = [
     "id":"q48",
     "q":"What steps should staff members take if their device is taken over by ransomware?",
     "required":false,
-    "policyContent":"... you suspect your device is infected with ransomware: it’s important not to panic and pay the ransom as that gives no guarantee that your files will be released. Instead, you should follow these steps: [inc6tactics]",
-    "appendixContent": "",
+    "policyEntry":"... you suspect your device is infected with ransomware: it’s important not to panic and pay the ransom as that gives no guarantee that your files will be released. Instead, you should follow these steps: [inc6tactics]",
+    "appendixEntry": "",
     "routineEntry":"",
     "answers":[
       {

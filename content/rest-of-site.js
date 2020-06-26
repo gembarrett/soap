@@ -91,27 +91,6 @@ var ros = [
         ],
         "more":["Just want to say hi or ask a question? Have an idea for how SOAP could be improved? Email us at: <a href='mailto:feedback@usesoap.app'>feedback(at)usesoap.app</a>."]
       }
-    ],
-    "features":[
-      {
-        "feat":"Design customized security policies",
-        "desc":"SOAP allows users to create useful, relevant security policies that fit their organization’s unique needs.",
-        "points":["Each answer contributes to refining the process and eliminating irrelevant questions", "Non-essential questions can be skipped to further refine the policy-building process","No suitable answer? Editable buttons mean you can write your own answers in"],
-        "icon": "fa-drafting-compass"
-      },
-      {
-        "feat":"Receive security policy support",
-        "desc":"Security policies need support to be effective. SOAP provides users with effective and efficient support throughout the process based on innovative security policy research and analysis.",
-        "points":["Each question has a dropdown panel containing useful tips","Definitions of key terms help to ensure clarity", "Use the linked search terms to do further research on the topics covered"],
-        "icon": "fa-layer-group"
-      },
-      {
-        "feat":"Successfully implement new policies",
-        "desc":"SOAP offers implementation and maintenance tips to help users ensure their new security policies are impactful and up-to-date.",
-        "points":["Every policy comes with an appendix of implementation tips", "A review checklist is provided to support future maintenance","Download and share your policy as text, Markdown or HTML"],
-        "icon": "fa-clipboard-list"
-      }
-    ],
-    "cta": "Ready to start creating your new organizational security policy?",
+    ]
   }
 ]

@@ -10,8 +10,8 @@ var section4 = [
     "id":"q29",
     "q":"Should staff use separate travel devices?",
     "required":true,
-    "policyContent":"",
-    "appendixContent":"",
+    "policyEntry":"",
+    "appendixEntry":"",
     "routineEntry":"",
     "answers":[
       {
@@ -88,8 +88,8 @@ var section4 = [
     "id":"q30",
     "q":"How should staff prepare their devices for travel?",
     "required":false,
-    "policyContent":"Before travelling, there are steps which should be taken to prepare devices containing sensitive information. For help with any of the following security measures, please contact [contactName].",
-    "appendixContent":"EFF wrote a Border Search Pocket Guide, which may be useful: https://www.eff.org/document/eff-border-search-pocket-guide",
+    "policyEntry":"Before travelling, there are steps which should be taken to prepare devices containing sensitive information. For help with any of the following security measures, please contact [contactName].",
+    "appendixEntry":"EFF wrote a Border Search Pocket Guide, which may be useful: https://www.eff.org/document/eff-border-search-pocket-guide",
     "routineEntry":"",
     "answers":[
       // NOTE: this only really works if 1Password is selected in q15, so hide until answer-specific exclusions are implemented
@@ -225,8 +225,8 @@ var section4 = [
     "id":"q31",
     "q":"Should staff use a specific tool or tools to protect their internet connection?",
     "required":true,
-    "policyContent":"Protecting your internet activity from invasive monitoring can involve a range of solutions. [orgName] advises staff to use [vpnChoice] on devices that are connected to the internet. [contactName] can help with set up.",
-    "appendixContent":"Depending on the country in which you're operating it may be advisable to recommend using VPNs and similar tools even when staff are not travelling.",
+    "policyEntry":"Protecting your internet activity from invasive monitoring can involve a range of solutions. [orgName] advises staff to use [vpnChoice] on devices that are connected to the internet. [contactName] can help with set up.",
+    "appendixEntry":"Depending on the country in which you're operating it may be advisable to recommend using VPNs and similar tools even when staff are not travelling.",
     "routineEntry":"",
     "answers":[
       {
@@ -333,8 +333,8 @@ var section4 = [
     "id":"q32",
     "q":"How are the recommended VPNs and circumvention tools paid for?",
     "required":false,
-    "policyContent":"",
-    "appendixContent":"",
+    "policyEntry":"",
+    "appendixEntry":"",
     "routineEntry":"",
     "answers":[
       {
@@ -380,8 +380,8 @@ var section4 = [
     "id":"q33",
     "q":"Who should staff contact in a travel emergency?",
     "required":false,
-    "policyContent":"",
-    "appendixContent":"",
+    "policyEntry":"",
+    "appendixEntry":"",
     "routineEntry":"",
     "answers":[
       {
@@ -461,8 +461,8 @@ var section4 = [
     "id":"q34",
     "q":"What steps should be in your staff members’ travel security plans?",
     "required":false,
-    "policyContent":"... you are travelling abroad for work purposes: It's important to avoid assuming the same level of safety abroad as you are used to at home. While it's recommended that you research your destination's security situation, here are some baseline security measures you can use to form a travel plan in order to help with protecting you, your devices and, by extension, [orgName]'s staff and work: [inc4Tactics]",
-    "appendixContent": "",
+    "policyEntry":"... you are travelling abroad for work purposes: It's important to avoid assuming the same level of safety abroad as you are used to at home. While it's recommended that you research your destination's security situation, here are some baseline security measures you can use to form a travel plan in order to help with protecting you, your devices and, by extension, [orgName]'s staff and work: [inc4Tactics]",
+    "appendixEntry": "",
     "routineEntry":"",
     "answers":[
       {

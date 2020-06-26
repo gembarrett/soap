@@ -10,8 +10,8 @@ var section2 = [
     "id":"q15",
     "q":"Should staff use a specific password manager for work accounts?",
     "required":true,
-    "policyContent":"Passwords are hard to remember, so [orgName] ask staff to use a password manager.",
-    "appendixContent":"",
+    "policyEntry":"Passwords are hard to remember, so [orgName] ask staff to use a password manager.",
+    "appendixEntry":"",
     "routineEntry":"",
     "answers":[
       {
@@ -118,14 +118,14 @@ var section2 = [
     "id":"q16",
     "q":"Can staff store passwords in their browser?",
     "required":false,
-    "policyContent":"",
-    "appendixContent":"",
+    "policyEntry":"",
+    "appendixEntry":"",
     "routineEntry":"",
     "answers":[
       {
         "type":"radio",
         "answerText":"Yes",
-        "storeAs":"[]",
+        "storeAs":"",
         "excludes":[],
         "policyEntry":"Staff who are aware of the risks may store their passwords in their browser for more convenient access, however they are expected to frequently clear out old logins",
         "routineEntry":"",
@@ -140,7 +140,7 @@ var section2 = [
       {
         "type":"radio",
         "answerText":"No",
-        "storeAs":"[]",
+        "storeAs":"",
         "excludes":[],
         "policyEntry":"Staff are advised to refrain from storing passwords in their browser due to the security risks. If you need guidance on choosing an alternative password storage system, [contactName], [contactPos], will be able to advise you on this.",
         "routineEntry":"",
@@ -181,8 +181,8 @@ var section2 = [
     "id":"q17",
     "q":"Which multi-factor authentication method should staff use when securing work accounts?",
     "required":true,
-    "policyContent":"Two-factor authentication is a good method of securing our accounts beyond passwords as it requires an additional one-time code to be provided at login, putting an extra barrier between your data and an attacker. Two-factor authentication should be enabled on every account which supports it.",
-    "appendixContent":"",
+    "policyEntry":"Two-factor authentication is a good method of securing our accounts beyond passwords as it requires an additional one-time code to be provided at login, putting an extra barrier between your data and an attacker. Two-factor authentication should be enabled on every account which supports it.",
+    "appendixEntry":"",
     "routineEntry":"",
     "answers":[
       {
@@ -243,8 +243,8 @@ var section2 = [
     "id":"q18",
     "q":"Does your organization prefer staff to use a specific authentication app?",
     "required":false,
-    "policyContent":"",
-    "appendixContent":"",
+    "policyEntry":"",
+    "appendixEntry":"",
     "routineEntry":"",
     "answers":[
       {
@@ -336,8 +336,8 @@ var section2 = [
     "id":"q19",
     "q":"Does your organization provide hardware security keys to staff?",
     "required":false,
-    "policyContent":"",
-    "appendixContent":"",
+    "policyEntry":"",
+    "appendixEntry":"",
     "routineEntry":"",
     "answers":[
       {
@@ -383,8 +383,8 @@ var section2 = [
     "id":"q20",
     "q":"What steps should staff take when faced with a possibly hacked account?",
     "required":false,
-    "policyContent":"... you notice suspicious activity in any work-related accounts: This could look like unprompted two-factor code requests, strange login times, or rejection of correct passwords - any unfamiliar actions performed by, or within, the account should be investigated. To do this, you are advised to follow these steps: [inc2Tactics]",
-    "appendixContent": "Sometimes data breaches are to blame for a hacked account, and so it can be worth checking if the email associated with the account was recently involved in such an incident by visiting Have I Been Pwned or a similar site",
+    "policyEntry":"... you notice suspicious activity in any work-related accounts: This could look like unprompted two-factor code requests, strange login times, or rejection of correct passwords - any unfamiliar actions performed by, or within, the account should be investigated. To do this, you are advised to follow these steps: [inc2Tactics]",
+    "appendixEntry": "Sometimes data breaches are to blame for a hacked account, and so it can be worth checking if the email associated with the account was recently involved in such an incident by visiting Have I Been Pwned or a similar site",
     "routineEntry":"",
     "answers":[
       {

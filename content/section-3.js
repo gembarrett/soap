@@ -10,8 +10,8 @@ var section3 = [
     "id":"q22",
     "q":"Can staff use biometric authentication to restrict device access?",
     "required":true,
-    "policyContent":"To protect devices from unauthorised physical infiltration, all devices which are used for [orgName] purposes should have an automatic screen lock enabled and may be configured to use [deviceAuth].",
-    "appendixContent":"Be aware that touchscreen devices are susceptible to holding fingerprint marks which can be used to guess recently-used key sequences.",
+    "policyEntry":"To protect devices from unauthorised physical infiltration, all devices which are used for [orgName] purposes should have an automatic screen lock enabled and may be configured to use [deviceAuth].",
+    "appendixEntry":"Be aware that touchscreen devices are susceptible to holding fingerprint marks which can be used to guess recently-used key sequences.",
     "routineEntry":"",
     "answers":[
       {
@@ -57,8 +57,8 @@ var section3 = [
     "id":"q23",
     "q":"Does your organization use any tools for device security management?",
     "required":false,
-    "policyContent":"To support device security across the organization, we use the following tools: [devSecTools]",
-    "appendixContent":"",
+    "policyEntry":"To support device security across the organization, we use the following tools: [devSecTools]",
+    "appendixEntry":"",
     "routineEntry":"",
     "answers":[
       {
@@ -150,8 +150,8 @@ var section3 = [
     "id":"q24",
     "q":"Does your organization use physical or cloud storage for backups?",
     "required":false,
-    "policyContent":"[orgName] is responsible for managing data backups which are kept in [storagePref] storage.",
-    "appendixContent":"",
+    "policyEntry":"[orgName] is responsible for managing data backups which are kept in [storagePref] storage.",
+    "appendixEntry":"",
     "routineEntry":"",
     "answers":[
       {
@@ -197,8 +197,8 @@ var section3 = [
     "id":"q25",
     "q":"How often are backups performed?",
     "required":true,
-    "policyContent":"To ensure we’re able to recover data during a data loss or compromise incident, we perform backups on an [backupFreq] basis.",
-    "appendixContent":"Plan to test your backups on a regular basis! In an ideal world you might never have to restore from backup, but the last thing you want to find during an emergency is that your backups are corrupted or incomplete.",
+    "policyEntry":"To ensure we’re able to recover data during a data loss or compromise incident, we perform backups on an [backupFreq] basis.",
+    "appendixEntry":"Plan to test your backups on a regular basis! In an ideal world you might never have to restore from backup, but the last thing you want to find during an emergency is that your backups are corrupted or incomplete.",
     "routineEntry":"",
     "answers":[
       {
@@ -275,8 +275,8 @@ var section3 = [
     "id":"q26",
     "q":"How does your organization secure its backups?",
     "required":false,
-    "policyContent":"[orgName] requires that devices used for work purposes be backed up as the loss, exposure or corruption of [orgName] data puts us, and those we work with, at risk. Backups are managed in the following ways: ",
-    "appendixContent":"Be sure to discuss any recent data loss or similar incidents at each review - they are good learning opportunities. An approach to backups is the 3-2-1 rule: at least 3 backup copies of your data on at least 2 different kinds of medium, with at least 1 of these stored offsite.",
+    "policyEntry":"[orgName] requires that devices used for work purposes be backed up as the loss, exposure or corruption of [orgName] data puts us, and those we work with, at risk. Backups are managed in the following ways: ",
+    "appendixEntry":"Be sure to discuss any recent data loss or similar incidents at each review - they are good learning opportunities. An approach to backups is the 3-2-1 rule: at least 3 backup copies of your data on at least 2 different kinds of medium, with at least 1 of these stored offsite.",
     "routineEntry":"",
     "answers":[
       {
@@ -368,8 +368,8 @@ var section3 = [
     "id":"q27",
     "q":"What steps should staff take when their devices are seized?",
     "required":false,
-    "policyContent":"... your device is seized: whether this is at a border, a protest or a raid, it is important to let someone know as soon about the situation as you are able, in order to begin countering any unauthorised access as early as possible. You are advised to follow these steps: [inc3Tactics]",
-    "appendixContent": "Device seizures under any circumstances can be a traumatising event so be sure to offer support to your impacted colleague.",
+    "policyEntry":"... your device is seized: whether this is at a border, a protest or a raid, it is important to let someone know as soon about the situation as you are able, in order to begin countering any unauthorised access as early as possible. You are advised to follow these steps: [inc3Tactics]",
+    "appendixEntry": "Device seizures under any circumstances can be a traumatising event so be sure to offer support to your impacted colleague.",
     "routineEntry":"",
     "answers":[
       {

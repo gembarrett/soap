@@ -10,9 +10,9 @@ var section5 = [
     "id":"q36",
     "q":"Does your organization have a 'clean desk' policy?",
     "required":true,
-    "policyContent":"",
+    "policyEntry":"",
     "routineEntry":"",
-    "appendixContent":"",
+    "appendixEntry":"",
     "answers":[
       {
         "type":"radio",
@@ -57,9 +57,9 @@ var section5 = [
     "id":"q37",
     "q":"Are staff provided with lockable storage?",
     "required":true,
-    "policyContent":"You’ll be provided with a lockable [officeStorage] which should be used to store papers and valuable hardware, such as phones, memory sticks and sensitive documents.",
+    "policyEntry":"You’ll be provided with a lockable [officeStorage] which should be used to store papers and valuable hardware, such as phones, memory sticks and sensitive documents.",
     "routineEntry":"Before leaving the office, remember to check that your [officeStorage] is locked (and remove/scramble the key).",
-    "appendixContent":"The locks that are built into standard office furniture can be quite easy to force, which may be an acceptable risk when a visual deterrent is all that’s required, but it is worth considering options that can have a padlock or other additional security measures added to them.",
+    "appendixEntry":"The locks that are built into standard office furniture can be quite easy to force, which may be an acceptable risk when a visual deterrent is all that’s required, but it is worth considering options that can have a padlock or other additional security measures added to them.",
     "answers":[
       {
         "type":"checkbox",
@@ -120,9 +120,9 @@ var section5 = [
     "id":"q38",
     "q":"What are your visitor protocols?",
     "required":true,
-    "policyContent":"[orgName] staff are responsible for any visitors they bring into the office and are expected to be present for their guest’s arrival, or have prepared another person to receive them. No visitors should be given unsupervised access, and all staff should be vigilant against \"tail-gating\" or using another staff member's access code, card or key to gain entry to the office.",
+    "policyEntry":"[orgName] staff are responsible for any visitors they bring into the office and are expected to be present for their guest’s arrival, or have prepared another person to receive them. No visitors should be given unsupervised access, and all staff should be vigilant against \"tail-gating\" or using another staff member's access code, card or key to gain entry to the office.",
     "routineEntry":"",
-    "appendixContent":"",
+    "appendixEntry":"",
     "answers":[
       {
         "type":"checkbox",
@@ -198,9 +198,9 @@ var section5 = [
     "id":"q39",
     "q":"Who is responsible for securing the office premises?",
     "required":true,
-    "policyContent":"Any questions about [orgName] office security issues should be directed to [officeSecurityName], [officeSecurityPosition].",
+    "policyEntry":"Any questions about [orgName] office security issues should be directed to [officeSecurityName], [officeSecurityPosition].",
     "routineEntry":"[officeSecurityName] ([officeSecurityPhone]/[officeSecurityEmail]) is the person to go to with any issues related to office security.",
-    "appendixContent":"",
+    "appendixEntry":"",
     "answers":[
       {
         "type":"text",
@@ -295,9 +295,9 @@ var section5 = [
     "id":"q40",
     "q":"Which aspects of office security are staff responsible for?",
     "required":true,
-    "policyContent":"",
+    "policyEntry":"",
     "routineEntry":"",
-    "appendixContent":"Between reviews, keep a note of any security incidents related to the office environment as these experiences teach those involved, the organization as a whole and can be used to improve the security policy.",
+    "appendixEntry":"Between reviews, keep a note of any security incidents related to the office environment as these experiences teach those involved, the organization as a whole and can be used to improve the security policy.",
     "answers":[
       {
         "type":"checkbox",
@@ -373,9 +373,9 @@ var section5 = [
     "id":"q41",
     "q":"How do you expect staff to secure their home office space?",
     "required":true,
-    "policyContent":"",
+    "policyEntry":"",
     "routineEntry":"",
-    "appendixContent":"Between reviews, keep a note of any security incidents related to working remotely as these experiences teach those involved, the organization as a whole and can be used to improve the security policy.",
+    "appendixEntry":"Between reviews, keep a note of any security incidents related to working remotely as these experiences teach those involved, the organization as a whole and can be used to improve the security policy.",
     "answers":[
       {
         "type":"checkbox",
@@ -466,9 +466,9 @@ var section5 = [
     "id":"q42",
     "q":"What steps should staff members take if their work device has been lost or stolen?",
     "required":false,
-    "policyContent":".... a device you use for work is lost or stolen: as with most security incidents, it can be intimidating to report a device loss but the impact can be minimised the sooner it’s reported. Here are the steps you should take immediately upon discovering a work device is lost or stolen: [inc5tactics]",
+    "policyEntry":".... a device you use for work is lost or stolen: as with most security incidents, it can be intimidating to report a device loss but the impact can be minimised the sooner it’s reported. Here are the steps you should take immediately upon discovering a work device is lost or stolen: [inc5tactics]",
     "routineEntry":"",
-    "appendixContent":"",
+    "appendixEntry":"",
     "answers":[
       {
         "type":"textarea",

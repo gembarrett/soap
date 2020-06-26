@@ -10,8 +10,8 @@ var section1 = [
     "id":"q10",
     "q":"Do all members of staff need a PGP key for their work email?",
     "required":false,
-    "policyContent":"",
-    "appendixContent":"",
+    "policyEntry":"",
+    "appendixEntry":"",
     "routineEntry":"",
     "answers":[
       {
@@ -74,8 +74,8 @@ var section1 = [
     "id":"q11",
     "q":"How should staff protect their in-browser interactions?",
     "required":false,
-    "policyContent":"In order to protect your online activities from common tracking and interference, we recommend all staff install the following privacy-enhancing extensions: [extArray].",
-    "appendixContent":"",
+    "policyEntry":"In order to protect your online activities from common tracking and interference, we recommend all staff install the following privacy-enhancing extensions: [extArray].",
+    "appendixEntry":"",
     "routineEntry":"",
     "answers":[
       {
@@ -212,8 +212,8 @@ var section1 = [
     "id":"q12",
     "q":"For each of the following communication types, which tools should staff use when discussing sensitive work topics?",
     "required":false,
-    "policyContent":"When communicating sensitive work data, [orgName] prefers staff use the following tools.",
-    "appendixContent":"Pay attention to any changes in encryption standards, data breaches or security vulnerabilities that are in the news and relevant to your communication platforms.",
+    "policyEntry":"When communicating sensitive work data, [orgName] prefers staff use the following tools.",
+    "appendixEntry":"Pay attention to any changes in encryption standards, data breaches or security vulnerabilities that are in the news and relevant to your communication platforms.",
     "routineEntry":"",
     "answers":[
       {
@@ -293,8 +293,8 @@ var section1 = [
     "id":"q13",
     "q":"What steps should staff take if they are faced with a suspicious email?",
     "required":false,
-    "policyContent":"... you receive a suspicious email: Phishing involves being duped into providing information to parties that you otherwise wouldn’t share, usually through fake account notifications or impersonating a known contact. Unfortunately this kind of attack in common and so it is important to understand the steps we recommend taking to both mitigate and recover from such an attack: [inc1Tactics]",
-    "appendixContent": "To check whether a link or attachment contains known malware, upload it to VirusTotal; a service owned by Google which reads the file and detects familiar malicious code. It won’t find every attack, only the known ones it’s seen before, but it’s a valuable tool nonetheless.",
+    "policyEntry":"... you receive a suspicious email: Phishing involves being duped into providing information to parties that you otherwise wouldn’t share, usually through fake account notifications or impersonating a known contact. Unfortunately this kind of attack in common and so it is important to understand the steps we recommend taking to both mitigate and recover from such an attack: [inc1Tactics]",
+    "appendixEntry": "To check whether a link or attachment contains known malware, upload it to VirusTotal; a service owned by Google which reads the file and detects familiar malicious code. It won’t find every attack, only the known ones it’s seen before, but it’s a valuable tool nonetheless.",
     "routineEntry":"",
     "answers":[
       {

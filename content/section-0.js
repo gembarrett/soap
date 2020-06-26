@@ -23,8 +23,8 @@ var section0 = [
     "id":"q1",
     "q":"What is the name of your organization?",
     "required":true,
-    "policyContent":"",
-    "appendixContent":"",
+    "policyEntry":"",
+    "appendixEntry":"",
     "routineEntry":"",
     "answers":[
       {
@@ -56,8 +56,8 @@ var section0 = [
     "id":"q2",
     "q":"Who will this policy apply to?",
     "required":false,
-    "policyContent":"This policy applies to [appliesTo].",
-    "appendixContent":"",
+    "policyEntry":"This policy applies to [appliesTo].",
+    "appendixEntry":"",
     "routineEntry":"",
     "answers":[
       {
@@ -134,8 +134,8 @@ var section0 = [
     "id":"q3",
     "q":"Do all your staff work in the same physical office?",
     "required":true,
-    "policyContent":"",
-    "appendixContent":"",
+    "policyEntry":"",
+    "appendixEntry":"",
     "routineEntry":"",
     "answers":[
       {
@@ -196,8 +196,8 @@ var section0 = [
     "id":"q4",
     "q":"Who is responsible for this policy?",
     "required":true,
-    "policyContent":"",
-    "appendixContent":"",
+    "policyEntry":"",
+    "appendixEntry":"",
     "routineEntry":"Got questions? Ask [contactName], [contactPos]!",
     "answers":[
       {
@@ -293,8 +293,8 @@ var section0 = [
     "id":"q5",
     "q":"How regularly do you intend to review and update this policy?",
     "required":true,
-    "policyContent":"This policy will be reviewed by [contactName] ([contactPos]) on a [reviewFreq] basis. Any suggestions or feedback on the policy’s contents should be directed to them.",
-    "appendixContent":"",
+    "policyEntry":"This policy will be reviewed by [contactName] ([contactPos]) on a [reviewFreq] basis. Any suggestions or feedback on the policy’s contents should be directed to them.",
+    "appendixEntry":"",
     "routineEntry":"",
     "answers":[
       {
@@ -316,7 +316,7 @@ var section0 = [
         "type":"checkbox",
         "answerText":"6-monthly",
         "storeAs": "[reviewFreq]",
-        "excludes":[], 
+        "excludes":[],
         "policyEntry":"",
         "routineEntry":"",
         "appendixEntry":[
@@ -370,8 +370,8 @@ var section0 = [
     "id":"q6",
     "q":"Which operating systems are used in your organization?",
     "required":false,
-    "policyContent":"",
-    "appendixContent":"",
+    "policyEntry":"",
+    "appendixEntry":"",
     "routineEntry":"",
     "answers":[
       {
@@ -493,8 +493,8 @@ var section0 = [
     "id":"q7",
     "q":"How does your organization manage staff work devices?",
     "required":true,
-    "policyContent":"[orgName] manages device security in the following way, depending on the situation:",
-    "appendixContent":"",
+    "policyEntry":"[orgName] manages device security in the following way, depending on the situation:",
+    "appendixEntry":"",
     "routineEntry":"",
     "answers":[
       {
@@ -570,8 +570,8 @@ var section0 = [
     "id":"q8",
     "q":"Does your organization provide staff with privacy equipment for their devices?",
     "required":false,
-    "policyContent":"In addition to other device security measures, [orgName] will also provide you with [providePrivacy] to use on your devices.",
-    "appendixContent":"",
+    "policyEntry":"In addition to other device security measures, [orgName] will also provide you with [providePrivacy] to use on your devices.",
+    "appendixEntry":"",
     "routineEntry":"",
     "answers":[
       {
