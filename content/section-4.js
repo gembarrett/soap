@@ -388,13 +388,13 @@ var section4 = [
         "type":"text",
         "answerText":"Name",
         "placeholder":"e.g. Shohreh Yazdani",
-        "storeAs":"[travelHelpName]",
+        "storeAs":"[travel-security-contact-name]",
         "excludes":[],
-        "policyEntry":"If you are in need of assistance while travelling, please contact either your pre-arranged travel buddy or [travelHelpName].",
+        "policyEntry":"If you are in need of assistance while travelling, please contact either your pre-arranged travel buddy or [travel-security-contact-name].",
         "routineEntry":"",
         "appendixEntry":[
           {
-            "reviewList":"Is [travelHelpName] still the most appropriate person to contact for travel assistance?",
+            "reviewList":"Is [travel-security-contact-name] still the most appropriate person to contact for travel assistance?",
             "tipList": "",
             "linksList": ""
           }
@@ -404,13 +404,13 @@ var section4 = [
         "type":"text",
         "answerText":"Pronouns",
         "placeholder": "e.g. she/her",
-        "storeAs":"[travelHelpProns]",
+        "storeAs":"[travel-security-contact-pronouns]",
         "excludes":[],
-        "policyEntry":"Their pronouns are [travelHelpProns].",
+        "policyEntry":"Their pronouns are [travel-security-contact-pronouns].",
         "routineEntry":"",
         "appendixEntry":[
           {
-            "reviewList":"Does [travelHelpName] still use [travelHelpProns] pronouns?",
+            "reviewList":"Does [travel-security-contact-name] still use [travel-security-contact-pronouns] pronouns?",
             "tipList": "",
             "linksList": ""
           }
@@ -420,13 +420,13 @@ var section4 = [
         "type":"text",
         "answerText":"Email",
         "placeholder": "e.g. example@organization.com",
-        "storeAs":"[travelHelpEmail]",
+        "storeAs":"[travel-security-contact-email]",
         "excludes":[],
-        "policyEntry":"Email: [travelHelpEmail]",
+        "policyEntry":"Email: [travel-security-contact-email]",
         "routineEntry":"",
         "appendixEntry":[
           {
-            "reviewList":"Is [travelHelpName]'s email address up-to-date?",
+            "reviewList":"Is [travel-security-contact-name]'s email address up-to-date?",
             "tipList": "",
             "linksList": ""
           }
@@ -436,13 +436,13 @@ var section4 = [
         "type":"text",
         "answerText":"Phone",
         "placeholder": "e.g. +1 (234) 567-890",
-        "storeAs":"[travelHelpPhone]",
+        "storeAs":"[travel-security-contact-phone]",
         "excludes":[],
-        "policyEntry":"Phone: [travelHelpPhone]",
+        "policyEntry":"Phone: [travel-security-contact-phone]",
         "routineEntry":"",
         "appendixEntry":[
           {
-            "reviewList":"Is [travelHelpName]'s phone number correct?",
+            "reviewList":"Is [travel-security-contact-name]'s phone number correct?",
             "tipList": "",
             "linksList": ""
           }
@@ -461,7 +461,7 @@ var section4 = [
     "id":"q34",
     "q":"What steps should be in your staff members’ travel security plans?",
     "required":false,
-    "policyEntry":"... you are travelling abroad for work purposes: It's important to avoid assuming the same level of safety abroad as you are used to at home. While it's recommended that you research your destination's security situation, here are some baseline security measures you can use to form a travel plan in order to help with protecting you, your devices and, by extension, [organisation-name]'s staff and work: [inc4Tactics]",
+    "policyEntry":"... you are travelling abroad for work purposes: It's important to avoid assuming the same level of safety abroad as you are used to at home. While it's recommended that you research your destination's security situation, here are some baseline security measures you can use to form a travel plan in order to help with protecting you, your devices and, by extension, [organisation-name]'s staff and work: [do-this-if-travelling]",
     "appendixEntry": "",
     "routineEntry":"",
     "answers":[
@@ -469,7 +469,7 @@ var section4 = [
         "type":"textarea",
         "answerText":"",
         "placeholder":"Here's some examples: \n\n- determine a “travel buddy” to check in with at regular periods \n- agree on code phrases or emojis to indicate safety or trigger an escalation \n- ensure you have emergency contact information in an accessible place",
-        "storeAs":"[inc4Tactics]",
+        "storeAs":"[do-this-if-travelling]",
         "excludes":[],
         "policyEntry":"",
         "routineEntry":"",
