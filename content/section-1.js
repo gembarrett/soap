@@ -293,7 +293,7 @@ var section1 = [
     "id":"q13",
     "q":"What steps should staff take if they are faced with a suspicious email?",
     "required":false,
-    "policyEntry":"... you receive a suspicious email: Phishing involves being duped into providing information to parties that you otherwise wouldn’t share, usually through fake account notifications or impersonating a known contact. Unfortunately this kind of attack in common and so it is important to understand the steps we recommend taking to both mitigate and recover from such an attack: [inc1Tactics]",
+    "policyEntry":"... you receive a suspicious email: Phishing involves being duped into providing information to parties that you otherwise wouldn’t share, usually through fake account notifications or impersonating a known contact. Unfortunately this kind of attack in common and so it is important to understand the steps we recommend taking to both mitigate and recover from such an attack: [do-this-if-phished]",
     "appendixEntry": "To check whether a link or attachment contains known malware, upload it to VirusTotal; a service owned by Google which reads the file and detects familiar malicious code. It won’t find every attack, only the known ones it’s seen before, but it’s a valuable tool nonetheless.",
     "routineEntry":"",
     "answers":[
@@ -301,7 +301,7 @@ var section1 = [
         "type":"textarea", // check for this before making an input field
         "answerText":"",
         "placeholder":"Here are a few examples: \n\nIf the email gives you a login link: open a new browser window and sign into the site there without using the link. Emailed links can have subtle changes made to them which redirect users to malicious sites for collecting login details. \n\nIf the email isn’t addressed to you, but to multiple people: attackers often send messages to large groups in order to ‘catch out’ as many people as possible \n\nIf the email has an unexpected attachment: don’t open the file unless you have contacted the sender through another channel to verify it. If you clicked on a link or opened an unexpected attachment, even from a trusted contact: disconnect from the internet and cease using the device – use a different device to change any passwords you used on that device.",
-        "storeAs":"[inc1Tactics]",
+        "storeAs":"[do-this-if-phished]",
         "excludes":[],
         "policyEntry":"",
         "routineEntry":"",
