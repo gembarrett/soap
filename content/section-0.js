@@ -293,14 +293,14 @@ var section0 = [
     "id":"q5",
     "q":"How regularly do you intend to review and update this policy?",
     "required":true,
-    "policyEntry":"This policy will be reviewed by [security-contact-name] ([security-contact-role]) on a [reviewFreq] basis. Any suggestions or feedback on the policy’s contents should be directed to them.",
+    "policyEntry":"This policy will be reviewed by [security-contact-name] ([security-contact-role]) on a [how-often-policy-reviewed] basis. Any suggestions or feedback on the policy’s contents should be directed to them.",
     "appendixEntry":"",
     "routineEntry":"",
     "answers":[
       {
         "type":"checkbox",
         "answerText":"annual",
-        "storeAs": "[reviewFreq]",
+        "storeAs": "[how-often-policy-reviewed]",
         "excludes":[],
         "policyEntry":"",
         "routineEntry":"",
@@ -315,7 +315,7 @@ var section0 = [
       {
         "type":"checkbox",
         "answerText":"6-monthly",
-        "storeAs": "[reviewFreq]",
+        "storeAs": "[how-often-policy-reviewed]",
         "excludes":[],
         "policyEntry":"",
         "routineEntry":"",
@@ -330,7 +330,7 @@ var section0 = [
       {
         "type":"checkbox",
         "answerText":"quarterly",
-        "storeAs": "[reviewFreq]",
+        "storeAs": "[how-often-policy-reviewed]",
         "excludes":[],
         "policyEntry":"",
         "routineEntry":"",
@@ -345,7 +345,7 @@ var section0 = [
       {
         "type":"checkbox",
         "answerText":'"as threats arise"',
-        "storeAs": "[reviewFreq]",
+        "storeAs": "[how-often-policy-reviewed]",
         "excludes":[],
         "policyEntry":"",
         "routineEntry":"",
