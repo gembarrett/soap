@@ -198,19 +198,19 @@ var section0 = [
     "required":true,
     "policyEntry":"",
     "appendixEntry":"",
-    "routineEntry":"Got questions? Ask [contactName], [contactPos]!",
+    "routineEntry":"Got questions? Ask [security-contact-name], [contactPos]!",
     "answers":[
       {
         "type":"text",
         "answerText":"Name",
         "placeholder":"e.g. Alice Smith",
-        "storeAs":"[contactName]",
+        "storeAs":"[security-contact-name]",
         "excludes":[],
-        "policyEntry":"If you have questions about this policy or its recommendations, please contact [contactName]",
+        "policyEntry":"If you have questions about this policy or its recommendations, please contact [security-contact-name]",
         "routineEntry":"",
         "appendixEntry":[
           {
-            "reviewList":"Is [contactName] still responsible for this policy?",
+            "reviewList":"Is [security-contact-name] still responsible for this policy?",
             "tipList": "",
             "linksList": ""
           }
@@ -242,7 +242,7 @@ var section0 = [
         "routineEntry":"",
         "appendixEntry":[
           {
-            "reviewList":"Does [contactName] still use [contactProns] pronouns?",
+            "reviewList":"Does [security-contact-name] still use [contactProns] pronouns?",
             "tipList": "",
             "linksList": ""
           }
@@ -258,7 +258,7 @@ var section0 = [
         "routineEntry":"",
         "appendixEntry":[
           {
-            "reviewList":"Is [contactName]'s email address up-to-date?",
+            "reviewList":"Is [security-contact-name]'s email address up-to-date?",
             "tipList": "",
             "linksList": ""
           }
@@ -274,7 +274,7 @@ var section0 = [
         "routineEntry":"",
         "appendixEntry":[
           {
-            "reviewList":"Is [contactName]'s phone number correct?",
+            "reviewList":"Is [security-contact-name]'s phone number correct?",
             "tipList": "",
             "linksList": ""
           }
@@ -293,7 +293,7 @@ var section0 = [
     "id":"q5",
     "q":"How regularly do you intend to review and update this policy?",
     "required":true,
-    "policyEntry":"This policy will be reviewed by [contactName] ([contactPos]) on a [reviewFreq] basis. Any suggestions or feedback on the policy’s contents should be directed to them.",
+    "policyEntry":"This policy will be reviewed by [security-contact-name] ([contactPos]) on a [reviewFreq] basis. Any suggestions or feedback on the policy’s contents should be directed to them.",
     "appendixEntry":"",
     "routineEntry":"",
     "answers":[

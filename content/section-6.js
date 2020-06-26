@@ -10,7 +10,7 @@ var section6 = [
     "id":"q44",
     "q":"How often are the office WiFi passwords changed?",
     "required":true,
-    "policyEntry":"To ensure that the WiFi access is restricted to authorised staff, [organisation-name] rotates the password [pwdFreq] and the new credentials will be made available to you by [contactName].",
+    "policyEntry":"To ensure that the WiFi access is restricted to authorised staff, [organisation-name] rotates the password [pwdFreq] and the new credentials will be made available to you by [security-contact-name].",
     "routineEntry":"",
     "appendixEntry":"",
     "answers":[
@@ -96,7 +96,7 @@ var section6 = [
         "answerText":"Password protection",
         "storeAs":"",
         "excludes":[],
-        "policyEntry":"You will need a password in order to gain access, which can be obtained from [contactName].",
+        "policyEntry":"You will need a password in order to gain access, which can be obtained from [security-contact-name].",
         "routineEntry":"",
         "appendixEntry":[
           {
@@ -111,7 +111,7 @@ var section6 = [
         "answerText":"Firewall",
         "storeAs":"",
         "excludes":[],
-        "policyEntry":"A firewall has been set up to prevent malicious connections. If you believe the firewall may be negatively impacting your internet activities, and therefore your work, please speak to [contactName].",
+        "policyEntry":"A firewall has been set up to prevent malicious connections. If you believe the firewall may be negatively impacting your internet activities, and therefore your work, please speak to [security-contact-name].",
         "routineEntry":"",
         "appendixEntry":[
           {
@@ -126,7 +126,7 @@ var section6 = [
         "answerText":"Approved devices only",
         "storeAs":"",
         "excludes":[],
-        "policyEntry":"Only approved devices are to be on the [organisation-name] internal network. If you need to use an unapproved device you should request permission to connect from [contactName] so it can be added to the safe list.",
+        "policyEntry":"Only approved devices are to be on the [organisation-name] internal network. If you need to use an unapproved device you should request permission to connect from [security-contact-name] so it can be added to the safe list.",
         "routineEntry":"",
         "appendixEntry":[
           {
@@ -141,7 +141,7 @@ var section6 = [
         "answerText":"Wired connections available",
         "storeAs":"",
         "excludes":[],
-        "policyEntry":"Wired connections are available and recommended. Let [contactName] know if you need a cable for connecting your device.",
+        "policyEntry":"Wired connections are available and recommended. Let [security-contact-name] know if you need a cable for connecting your device.",
         "routineEntry":"",
         "appendixEntry":[
           {

@@ -19,7 +19,7 @@ var section1 = [
         "answerText":"Yes",
         "storeAs":"",
         "excludes":[],
-        "policyEntry":"[organisation-name] requires staff to use PGP to encrypt sensitive emails. If you need help with setting up, please contact [contactName].",
+        "policyEntry":"[organisation-name] requires staff to use PGP to encrypt sensitive emails. If you need help with setting up, please contact [security-contact-name].",
         "routineEntry":"",
         "appendixEntry":[
           {

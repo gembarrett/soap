@@ -19,7 +19,7 @@ var section2 = [
         "answerText":"LastPass",
         "storeAs":"",
         "excludes":[16], // no browser storage
-        "policyEntry":"In particular, we ask you to use LastPass and if you require any help with set up or using this tool then you should discuss it with [contactName].",
+        "policyEntry":"In particular, we ask you to use LastPass and if you require any help with set up or using this tool then you should discuss it with [security-contact-name].",
         "routineEntry":"Protect your accounts: use LastPass to generate and store your passwords!",
         "appendixEntry":[
           {
@@ -34,7 +34,7 @@ var section2 = [
         "answerText":"1Password",
         "storeAs":"",
         "excludes":[16],
-        "policyEntry":"In particular, we ask you to use 1Password and if you require any help with set up or using this tool then you should discuss it with [contactName].",
+        "policyEntry":"In particular, we ask you to use 1Password and if you require any help with set up or using this tool then you should discuss it with [security-contact-name].",
         "routineEntry":"Protect your accounts: use 1Password to generate and store your passwords!",
         "appendixEntry":[
           {
@@ -49,7 +49,7 @@ var section2 = [
         "answerText":"KeePass",
         "storeAs":"",
         "excludes":[16],
-        "policyEntry":"In particular, we ask you to use KeePass and if you require any help with set up or using this tool then you should discuss it with [contactName].",
+        "policyEntry":"In particular, we ask you to use KeePass and if you require any help with set up or using this tool then you should discuss it with [security-contact-name].",
         "routineEntry":"Protect your accounts: use KeePass to generate and store your passwords!",
         "appendixEntry":[
           {
@@ -64,7 +64,7 @@ var section2 = [
         "answerText":"PasswordSafe",
         "storeAs":"",
         "excludes":[16],
-        "policyEntry":"In particular, we ask you to use PasswordSafe and if you require any help with set up or using this tool then you should discuss it with [contactName].",
+        "policyEntry":"In particular, we ask you to use PasswordSafe and if you require any help with set up or using this tool then you should discuss it with [security-contact-name].",
         "routineEntry":"Protect your accounts: use PasswordSafe to generate and store your passwords!",
         "appendixEntry":[
           {
@@ -79,7 +79,7 @@ var section2 = [
         "answerText":"Staff preference",
         "storeAs":"",
         "excludes":[],
-        "policyEntry":"As there are several options available, it is up to you to choose which suits your workflow best. If you’re unsure of the best password manager for your situation, please contact [contactName] to discuss.",
+        "policyEntry":"As there are several options available, it is up to you to choose which suits your workflow best. If you’re unsure of the best password manager for your situation, please contact [security-contact-name] to discuss.",
         "routineEntry":"Protect your accounts: use a password manager to generate and store your passwords!",
         "appendixEntry":[
           {
@@ -95,7 +95,7 @@ var section2 = [
         "answerText":"other service",
         "storeAs": "[passwordPref]",
         "excludes":[],
-        "policyEntry":"In particular, we ask you to use [passwordPref] and if you require any help with set up or using this tool then you should discuss it with [contactName].",
+        "policyEntry":"In particular, we ask you to use [passwordPref] and if you require any help with set up or using this tool then you should discuss it with [security-contact-name].",
         "routineEntry":"Protect your accounts: use [passwordPref] to generate and store your passwords!",
         "appendixEntry":[
           {
@@ -142,7 +142,7 @@ var section2 = [
         "answerText":"No",
         "storeAs":"",
         "excludes":[],
-        "policyEntry":"Staff are advised to refrain from storing passwords in their browser due to the security risks. If you need guidance on choosing an alternative password storage system, [contactName], [contactPos], will be able to advise you on this.",
+        "policyEntry":"Staff are advised to refrain from storing passwords in their browser due to the security risks. If you need guidance on choosing an alternative password storage system, [security-contact-name], [contactPos], will be able to advise you on this.",
         "routineEntry":"",
         "appendixEntry":[
           {
@@ -252,7 +252,7 @@ var section2 = [
         "answerText":"Google Authenticator",
         "storeAs":"",
         "excludes":[],
-        "policyEntry":"To ensure consistency and help with training and troubleshooting, [organisation-name] recommends the Google Authenticator app for two-factor authentication. If this app is not pre-installed then you should install it from your platform’s app store, requesting assistance from [contactName] when needed.",
+        "policyEntry":"To ensure consistency and help with training and troubleshooting, [organisation-name] recommends the Google Authenticator app for two-factor authentication. If this app is not pre-installed then you should install it from your platform’s app store, requesting assistance from [security-contact-name] when needed.",
         "routineEntry":"",
         "appendixEntry":[
           {
@@ -267,7 +267,7 @@ var section2 = [
         "answerText":"Duo Mobile",
         "storeAs":"",
         "excludes":[],
-        "policyEntry":"To ensure consistency and help with training and troubleshooting, [organisation-name] recommends the Duo Mobile app for two-factor authentication. If this app is not pre-installed then you should install it from your platform’s app store, requesting assistance from [contactName] when needed.",
+        "policyEntry":"To ensure consistency and help with training and troubleshooting, [organisation-name] recommends the Duo Mobile app for two-factor authentication. If this app is not pre-installed then you should install it from your platform’s app store, requesting assistance from [security-contact-name] when needed.",
         "routineEntry":"",
         "appendixEntry":[
           {
@@ -282,7 +282,7 @@ var section2 = [
         "answerText":"Authy",
         "storeAs":"",
         "excludes":[],
-        "policyEntry":"To ensure consistency and help with training and troubleshooting, [organisation-name] recommends the Authy app for two-factor authentication. If this app is not pre-installed then you should install it from your platform’s app store, requesting assistance from [contactName]  when needed.",
+        "policyEntry":"To ensure consistency and help with training and troubleshooting, [organisation-name] recommends the Authy app for two-factor authentication. If this app is not pre-installed then you should install it from your platform’s app store, requesting assistance from [security-contact-name]  when needed.",
         "routineEntry":"",
         "appendixEntry":[
           {
@@ -297,7 +297,7 @@ var section2 = [
         "answerText":"No preference",
         "storeAs":"",
         "excludes":[],
-        "policyEntry":"While [organisation-name] requires the use of an authenticator app, we leave it to staff to make their own choice of which one to use. If you are unsure of which is best for your device and workflow, [contactName] is available for advice.",
+        "policyEntry":"While [organisation-name] requires the use of an authenticator app, we leave it to staff to make their own choice of which one to use. If you are unsure of which is best for your device and workflow, [security-contact-name] is available for advice.",
         "routineEntry":"",
         "appendixEntry":[
           {
@@ -313,7 +313,7 @@ var section2 = [
         "answerText":"another app",
         "storeAs": "[authApp]",
         "excludes":[],
-        "policyEntry":"To ensure consistency and help with training and troubleshooting, [organisation-name] uses [authApp] for two-factor authentication where platforms allow it. This app may be installed automatically as part of your mobile work device set up, otherwise you should install it from your platform’s app store, requesting assistance from [contactName] when needed",
+        "policyEntry":"To ensure consistency and help with training and troubleshooting, [organisation-name] uses [authApp] for two-factor authentication where platforms allow it. This app may be installed automatically as part of your mobile work device set up, otherwise you should install it from your platform’s app store, requesting assistance from [security-contact-name] when needed",
         "routineEntry":"",
         "appendixEntry":[
           {
@@ -345,7 +345,7 @@ var section2 = [
         "answerText":"Yes",
         "storeAs":"",
         "excludes":[],
-        "policyEntry":"For hardware authentication, we will provide you with a security key. Should you require any help with using the key, contact [contactName].",
+        "policyEntry":"For hardware authentication, we will provide you with a security key. Should you require any help with using the key, contact [security-contact-name].",
         "routineEntry":"",
         "appendixEntry":[
           {
@@ -360,7 +360,7 @@ var section2 = [
         "answerText":"No",
         "storeAs":"",
         "excludes":[],
-        "policyEntry":"Hardware authentication has a few options for keys and it is up to staff to select and purchase their preferred key if they wish to use one. If you are uncertain of the choices available and their suitability for your work, please contact [contactName] to discuss.",
+        "policyEntry":"Hardware authentication has a few options for keys and it is up to staff to select and purchase their preferred key if they wish to use one. If you are uncertain of the choices available and their suitability for your work, please contact [security-contact-name] to discuss.",
         "routineEntry":"",
         "appendixEntry":[
           {

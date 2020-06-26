@@ -34,7 +34,7 @@ var section4 = [
         "answerText":"Staff must provide these if they require them",
         "storeAs":"",
         "excludes":[],
-        "policyEntry":"Staff are encouraged to use separate, 'clean' devices when they travel to lessen the impact of any authorised access. For guidance on which types of device would be suitable, speak to [contactName].",
+        "policyEntry":"Staff are encouraged to use separate, 'clean' devices when they travel to lessen the impact of any authorised access. For guidance on which types of device would be suitable, speak to [security-contact-name].",
         "routineEntry":"",
         "appendixEntry":[
           {
@@ -49,7 +49,7 @@ var section4 = [
         "answerText":"Staff should prepare and use their everyday devices",
         "storeAs":"",
         "excludes":[],
-        "policyEntry":"Before travelling on work-related business, staff should prepare ('clean') their everyday devices in such a way as to reduce the impact of any unauthorised access while abroad. [contactName] can provide more information on how to do this.",
+        "policyEntry":"Before travelling on work-related business, staff should prepare ('clean') their everyday devices in such a way as to reduce the impact of any unauthorised access while abroad. [security-contact-name] can provide more information on how to do this.",
         "routineEntry":"",
         "appendixEntry":[
           {
@@ -64,7 +64,7 @@ var section4 = [
         "answerText":"Decided on a case-by-case basis",
         "storeAs":"",
         "excludes":[],
-        "policyEntry":"The issue of travel devices vs everyday devices is decided on a case-by-case basis and is dependent on your threat model. Speak to [contactName] for more information.",
+        "policyEntry":"The issue of travel devices vs everyday devices is decided on a case-by-case basis and is dependent on your threat model. Speak to [security-contact-name] for more information.",
         "routineEntry":"",
         "appendixEntry":[
           {
@@ -88,7 +88,7 @@ var section4 = [
     "id":"q30",
     "q":"How should staff prepare their devices for travel?",
     "required":false,
-    "policyEntry":"Before travelling, there are steps which should be taken to prepare devices containing sensitive information. For help with any of the following security measures, please contact [contactName].",
+    "policyEntry":"Before travelling, there are steps which should be taken to prepare devices containing sensitive information. For help with any of the following security measures, please contact [security-contact-name].",
     "appendixEntry":"EFF wrote a Border Search Pocket Guide, which may be useful: https://www.eff.org/document/eff-border-search-pocket-guide",
     "routineEntry":"",
     "answers":[
@@ -141,7 +141,7 @@ var section4 = [
         "answerText":"Encrypt all devices",
         "storeAs":"",
         "excludes":[],
-        "policyEntry":"- Full disk encryption is available on most operating systems, and we require staff to ensure it is set up and working prior to travel. For help on how to do this, please contact [contactName].",
+        "policyEntry":"- Full disk encryption is available on most operating systems, and we require staff to ensure it is set up and working prior to travel. For help on how to do this, please contact [security-contact-name].",
         "routineEntry":"",
         "appendixEntry":[
           {
@@ -225,7 +225,7 @@ var section4 = [
     "id":"q31",
     "q":"Should staff use a specific tool or tools to protect their internet connection?",
     "required":true,
-    "policyEntry":"Protecting your internet activity from invasive monitoring can involve a range of solutions. [organisation-name] advises staff to use [vpnChoice] on devices that are connected to the internet. [contactName] can help with set up.",
+    "policyEntry":"Protecting your internet activity from invasive monitoring can involve a range of solutions. [organisation-name] advises staff to use [vpnChoice] on devices that are connected to the internet. [security-contact-name] can help with set up.",
     "appendixEntry":"Depending on the country in which you're operating it may be advisable to recommend using VPNs and similar tools even when staff are not travelling.",
     "routineEntry":"",
     "answers":[

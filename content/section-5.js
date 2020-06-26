@@ -159,8 +159,8 @@ var section5 = [
         "answerText":"guest WiFi",
         "storeAs":"",
         "excludes":[],
-        "policyEntry":"While on site, guests should use the visitor WiFi to access the internet. Credentials can be obtained from [contactName]. When using the [organisation-name] wireless network, visitors are not to perform any illegal or malicious actions against any internal or external network.",
-        "routineEntry":"Visitors must connect to the guest WiFi network; you can get the details of this from [contactName]",
+        "policyEntry":"While on site, guests should use the visitor WiFi to access the internet. Credentials can be obtained from [security-contact-name]. When using the [organisation-name] wireless network, visitors are not to perform any illegal or malicious actions against any internal or external network.",
+        "routineEntry":"Visitors must connect to the guest WiFi network; you can get the details of this from [security-contact-name]",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -260,7 +260,7 @@ var section5 = [
         "routineEntry":"",
         "appendixEntry":[
           {
-            "reviewList":"Is [officeSecurityEmail] the most-up-to-date email for [contactName]",
+            "reviewList":"Is [officeSecurityEmail] the most-up-to-date email for [security-contact-name]",
             "tipList": "",
             "linksList": ""
           }
@@ -276,7 +276,7 @@ var section5 = [
         "routineEntry":"",
         "appendixEntry":[
           {
-            "reviewList":"Is [officeSecurityPhone] the most-up-to-date email for [contactName]",
+            "reviewList":"Is [officeSecurityPhone] the most-up-to-date email for [security-contact-name]",
             "tipList": "",
             "linksList": ""
           }
