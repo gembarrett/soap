@@ -93,10 +93,10 @@ var section2 = [
         "type":"radio",
         "editable": true,
         "answerText":"other service",
-        "storeAs": "[passwordPref]",
+        "storeAs": "[use-this-for-password-storage]",
         "excludes":[],
-        "policyEntry":"In particular, we ask you to use [passwordPref] and if you require any help with set up or using this tool then you should discuss it with [security-contact-name].",
-        "routineEntry":"Protect your accounts: use [passwordPref] to generate and store your passwords!",
+        "policyEntry":"In particular, we ask you to use [use-this-for-password-storage] and if you require any help with set up or using this tool then you should discuss it with [security-contact-name].",
+        "routineEntry":"Protect your accounts: use [use-this-for-password-storage] to generate and store your passwords!",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -156,9 +156,9 @@ var section2 = [
         "type":"radio",
         "editable":true,
         "answerText":"In these cases:",
-        "storeAs":"[exemptions]",
+        "storeAs":"[browser-password-exceptions]",
         "excludes":[],
-        "policyEntry":"Ordinarily, we would prefer staff to avoid storing passwords in their browser, however it is permitted under these circumstances: [exemptions]",
+        "policyEntry":"Ordinarily, we would prefer staff to avoid storing passwords in their browser, however it is permitted under these circumstances: [browser-password-exceptions]",
         "routineEntry":"",
         "appendixEntry":[
           {
@@ -311,13 +311,13 @@ var section2 = [
         "type":"radio",
         "editable": true,
         "answerText":"another app",
-        "storeAs": "[authApp]",
+        "storeAs": "[use-this-for-authentication]",
         "excludes":[],
-        "policyEntry":"To ensure consistency and help with training and troubleshooting, [organisation-name] uses [authApp] for two-factor authentication where platforms allow it. This app may be installed automatically as part of your mobile work device set up, otherwise you should install it from your platform’s app store, requesting assistance from [security-contact-name] when needed",
+        "policyEntry":"To ensure consistency and help with training and troubleshooting, [organisation-name] uses [use-this-for-authentication] for two-factor authentication where platforms allow it. This app may be installed automatically as part of your mobile work device set up, otherwise you should install it from your platform’s app store, requesting assistance from [security-contact-name] when needed",
         "routineEntry":"",
         "appendixEntry":[
           {
-            "reviewList":"Is [authApp] well integrated with staff workflows?",
+            "reviewList":"Is [use-this-for-authentication] well integrated with staff workflows?",
             "tipList": "",
             "linksList": ""
           }
@@ -383,7 +383,7 @@ var section2 = [
     "id":"q20",
     "q":"What steps should staff take when faced with a possibly hacked account?",
     "required":false,
-    "policyEntry":"... you notice suspicious activity in any work-related accounts: This could look like unprompted two-factor code requests, strange login times, or rejection of correct passwords - any unfamiliar actions performed by, or within, the account should be investigated. To do this, you are advised to follow these steps: [inc2Tactics]",
+    "policyEntry":"... you notice suspicious activity in any work-related accounts: This could look like unprompted two-factor code requests, strange login times, or rejection of correct passwords - any unfamiliar actions performed by, or within, the account should be investigated. To do this, you are advised to follow these steps: [do-this-if-hacked]",
     "appendixEntry": "Sometimes data breaches are to blame for a hacked account, and so it can be worth checking if the email associated with the account was recently involved in such an incident by visiting Have I Been Pwned or a similar site",
     "routineEntry":"",
     "answers":[
@@ -391,7 +391,7 @@ var section2 = [
         "type":"textarea", // check for this before making an input field
         "answerText":"",
         "placeholder":"Here are a few examples: \n\nIf the account is still accessible: change all passwords and review the recent activity, such as posts and log in times. \n\nIf it’s an email account: review the inbox rules and mail forwarding addresses, removing any that look suspicious. \n\nIf it’s an inaccessible social media account: major social media platforms have dedicated areas in their Help sections which explain how they can help you regain control of a compromised account",
-        "storeAs":"[inc2Tactics]",
+        "storeAs":"[do-this-if-hacked]",
         "excludes":[],
         "policyEntry":"",
         "routineEntry":"",
