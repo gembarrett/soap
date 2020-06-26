@@ -268,9 +268,9 @@ var section0 = [
         "type":"text",
         "answerText":"Phone",
         "placeholder": "e.g. +1 (234) 567-890",
-        "storeAs":"[contactPhone]",
+        "storeAs":"[security-contact-phone]",
         "excludes":[],
-        "policyEntry":"Phone: [contactPhone]",
+        "policyEntry":"Phone: [security-contact-phone]",
         "routineEntry":"",
         "appendixEntry":[
           {
