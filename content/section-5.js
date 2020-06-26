@@ -348,9 +348,9 @@ var section5 = [
         "type":"checkbox",
         "editable":true,
         "answerText":"Other",
-        "storeAs":"[officeSecOther]",
+        "storeAs":"[alt-office-security]",
         "excludes":[],
-        "policyEntry":"[officeSecOther]",
+        "policyEntry":"[alt-office-security]",
         "routineEntry":"",
         "appendixEntry":[
           {
@@ -441,9 +441,9 @@ var section5 = [
         "type":"checkbox",
         "editable":true,
         "answerText":"Other",
-        "storeAs":"[remoteSecOther]",
+        "storeAs":"[alt-home-office-security]",
         "excludes":[],
-        "policyEntry":"[organisation-name] staff are expected to secure their home office using the following method: [remoteSecOther]",
+        "policyEntry":"[organisation-name] staff are expected to secure their home office using the following method: [alt-home-office-security]",
         "routineEntry":"",
         "appendixEntry":[
           {
@@ -466,7 +466,7 @@ var section5 = [
     "id":"q42",
     "q":"What steps should staff members take if their work device has been lost or stolen?",
     "required":false,
-    "policyEntry":".... a device you use for work is lost or stolen: as with most security incidents, it can be intimidating to report a device loss but the impact can be minimised the sooner it’s reported. Here are the steps you should take immediately upon discovering a work device is lost or stolen: [inc5tactics]",
+    "policyEntry":".... a device you use for work is lost or stolen: as with most security incidents, it can be intimidating to report a device loss but the impact can be minimised the sooner it’s reported. Here are the steps you should take immediately upon discovering a work device is lost or stolen: [do-this-if-lost-stolen]",
     "routineEntry":"",
     "appendixEntry":"",
     "answers":[
@@ -474,7 +474,7 @@ var section5 = [
         "type":"textarea",
         "answerText":"",
         "placeholder":"Here are a few examples: \n\n- report to their phone company, \n- reset account passwords \n- contact IT for a replacement device",
-        "storeAs":"[inc5tactics]",
+        "storeAs":"[do-this-if-lost-stolen]",
         "excludes":[],
         "policyEntry":"",
         "routineEntry":"",
