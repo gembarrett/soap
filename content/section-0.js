@@ -252,9 +252,9 @@ var section0 = [
         "type":"text",
         "answerText":"Email",
         "placeholder": "e.g. example@organization.com",
-        "storeAs":"[contactEmail]",
+        "storeAs":"[security-contact-email]",
         "excludes":[],
-        "policyEntry":"Email: [contactEmail]",
+        "policyEntry":"Email: [security-contact-email]",
         "routineEntry":"",
         "appendixEntry":[
           {
