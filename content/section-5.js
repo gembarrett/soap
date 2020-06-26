@@ -198,21 +198,21 @@ var section5 = [
     "id":"q39",
     "q":"Who is responsible for securing the office premises?",
     "required":true,
-    "policyEntry":"Any questions about [organisation-name] office security issues should be directed to [officeSecurityName], [officeSecurityPosition].",
-    "routineEntry":"[officeSecurityName] ([officeSecurityPhone]/[officeSecurityEmail]) is the person to go to with any issues related to office security.",
+    "policyEntry":"Any questions about [organisation-name] office security issues should be directed to [office-security-contact-name], [office-security-contact-role].",
+    "routineEntry":"[office-security-contact-name] ([office-security-contact-phone]/[office-security-contact-email]) is the person to go to with any issues related to office security.",
     "appendixEntry":"",
     "answers":[
       {
         "type":"text",
         "answerText":"Name",
         "placeholder": "e.g. Kendrick Floyd",
-        "storeAs":"[officeSecurityName]",
+        "storeAs":"[office-security-contact-name]",
         "excludes":[],
         "policyEntry":"",
         "routineEntry":"",
         "appendixEntry":[
           {
-            "reviewList":"Is [officeSecurityName] still responsible for this policy?",
+            "reviewList":"Is [office-security-contact-name] still responsible for this policy?",
             "tipList": "",
             "linksList": ""
           }
@@ -222,7 +222,7 @@ var section5 = [
         "type":"text",
         "answerText":"Position",
         "placeholder": "e.g. Head of Office Security",
-        "storeAs":"[officeSecurityPosition]",
+        "storeAs":"[office-security-contact-role]",
         "excludes":[],
         "policyEntry":"",
         "routineEntry":"",
@@ -238,13 +238,13 @@ var section5 = [
         "type":"text",
         "answerText":"Pronouns",
         "placeholder": "e.g. he/him",
-        "storeAs":"[officeSecurityPronouns]",
+        "storeAs":"[office-security-contact-pronouns]",
         "excludes":[],
-        "policyEntry":"Their pronouns are [officeSecurityPronouns]",
+        "policyEntry":"Their pronouns are [office-security-contact-pronouns]",
         "routineEntry":"",
         "appendixEntry":[
           {
-            "reviewList":"Does [officeSecurityName] still use [officeSecurityPronouns] pronouns?",
+            "reviewList":"Does [office-security-contact-name] still use [office-security-contact-pronouns] pronouns?",
             "tipList": "",
             "linksList": ""
           }
@@ -254,13 +254,13 @@ var section5 = [
         "type":"text",
         "answerText":"Email",
         "placeholder": ["e.g. example@organization.com"],
-        "storeAs":"[officeSecurityEmail]",
+        "storeAs":"[office-security-contact-email]",
         "excludes":[],
-        "policyEntry":"You can email [officeSecurityName] at [officeSecurityEmail].",
+        "policyEntry":"You can email [office-security-contact-name] at [office-security-contact-email].",
         "routineEntry":"",
         "appendixEntry":[
           {
-            "reviewList":"Is [officeSecurityEmail] the most-up-to-date email for [security-contact-name]",
+            "reviewList":"Is [office-security-contact-email] the most-up-to-date email for [security-contact-name]",
             "tipList": "",
             "linksList": ""
           }
@@ -270,13 +270,13 @@ var section5 = [
         "type":"text",
         "answerText":"Phone",
         "placeholder": "e.g. +1 (234) 567-890",
-        "storeAs":"[officeSecurityPhone]",
+        "storeAs":"[office-security-contact-phone]",
         "excludes":[],
-        "policyEntry":"Their phone number is [officeSecurityPhone].",
+        "policyEntry":"Their phone number is [office-security-contact-phone].",
         "routineEntry":"",
         "appendixEntry":[
           {
-            "reviewList":"Is [officeSecurityPhone] the most-up-to-date email for [security-contact-name]",
+            "reviewList":"Is [office-security-contact-phone] the most-up-to-date email for [security-contact-name]",
             "tipList": "",
             "linksList": ""
           }
@@ -304,7 +304,7 @@ var section5 = [
         "answerText":"Disabling/enabling the alarm system",
         "storeAs":"",
         "excludes":[],
-        "policyEntry":"You will receive training in how to enable and disable the security alarm system. This information, including any access codes, should not be shared with others unless authorised to do so by [officeSecurityName]. If you are the last person to leave the office, it is your responsibility to enable the alarm system and lock up. Likewise, if you are the first to arrive at the office, then you should disable the alarm and report any problems immediately to [officeSecurityName] on [officeSecurityPhone].",
+        "policyEntry":"You will receive training in how to enable and disable the security alarm system. This information, including any access codes, should not be shared with others unless authorised to do so by [office-security-contact-name]. If you are the last person to leave the office, it is your responsibility to enable the alarm system and lock up. Likewise, if you are the first to arrive at the office, then you should disable the alarm and report any problems immediately to [office-security-contact-name] on [office-security-contact-phone].",
         "routineEntry":"If you’re the last to leave the office: enable the alarm and lock up. If you’re the first to arrive: disable the alarm and report any issues immediately.",
         "appendixEntry":[
           {
@@ -319,7 +319,7 @@ var section5 = [
         "answerText":"Their own access token (e.g. key)",
         "storeAs":"",
         "excludes":[],
-        "policyEntry":"An access token, such as a key, fob or code, will be provided to you so that you can enter the office during working hours. It is of the upmost importance that you guard this token like a password and avoid sharing it with any other person, whether intentionally or by accident, or leaving it unattended. If you lose the token, it is your responsibility to notify [officeSecurityName] immediately so that the appropriate remedial actions can be taken.",
+        "policyEntry":"An access token, such as a key, fob or code, will be provided to you so that you can enter the office during working hours. It is of the upmost importance that you guard this token like a password and avoid sharing it with any other person, whether intentionally or by accident, or leaving it unattended. If you lose the token, it is your responsibility to notify [office-security-contact-name] immediately so that the appropriate remedial actions can be taken.",
         "routineEntry":"It is very important that you protect your access token (e.g. key, fob, entry code). Do not share it or leave it unattended.",
         "appendixEntry":[
           {
