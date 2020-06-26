@@ -57,14 +57,14 @@ var section5 = [
     "id":"q37",
     "q":"Are staff provided with lockable storage?",
     "required":true,
-    "policyEntry":"You’ll be provided with a lockable [officeStorage] which should be used to store papers and valuable hardware, such as phones, memory sticks and sensitive documents.",
-    "routineEntry":"Before leaving the office, remember to check that your [officeStorage] is locked (and remove/scramble the key).",
+    "policyEntry":"You’ll be provided with a lockable [secure-storage-options] which should be used to store papers and valuable hardware, such as phones, memory sticks and sensitive documents.",
+    "routineEntry":"Before leaving the office, remember to check that your [secure-storage-options] is locked (and remove/scramble the key).",
     "appendixEntry":"The locks that are built into standard office furniture can be quite easy to force, which may be an acceptable risk when a visual deterrent is all that’s required, but it is worth considering options that can have a padlock or other additional security measures added to them.",
     "answers":[
       {
         "type":"checkbox",
         "answerText":"cabinet",
-        "storeAs":"[officeStorage]",
+        "storeAs":"[secure-storage-options]",
         "excludes":[],
         "policyEntry":"",
         "routineEntry":"",
@@ -79,7 +79,7 @@ var section5 = [
       {
         "type":"checkbox",
         "answerText":"drawer",
-        "storeAs":"[officeStorage]",
+        "storeAs":"[secure-storage-options]",
         "excludes":[],
         "policyEntry":"",
         "routineEntry":"",
@@ -95,7 +95,7 @@ var section5 = [
         "type":"checkbox",
         "editable":true,
         "answerText":"other",
-        "storeAs":"[officeStorage]",
+        "storeAs":"[secure-storage-options]",
         "excludes":[],
         "policyEntry":"",
         "routineEntry":"",
@@ -173,9 +173,9 @@ var section5 = [
         "type":"checkbox",
         "editable":true,
         "answerText":"other",
-        "storeAs":"[otherVisitorRule]",
+        "storeAs":"[alt-visitor-rule]",
         "excludes":[],
-        "policyEntry":"Please also note the following rule: [otherVisitorRule]",
+        "policyEntry":"Please also note the following rule: [alt-visitor-rule]",
         "routineEntry":"",
         "appendixEntry":[
           {
