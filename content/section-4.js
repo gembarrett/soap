@@ -96,7 +96,7 @@ var section4 = [
       // {
       //   "type":"checkbox",
       //   "answerText":"Enable password manager's 'travel mode'",
-      //   "storeAs":"[travelSteps]",
+      //   "storeAs":"[alt-travel-security]",
       //   "excludes":[],
       //   "policyEntry":"Enable 'travel mode' on your password manager. This will ",
       //   "appendixEntry":[
@@ -200,9 +200,9 @@ var section4 = [
         "type":"checkbox",
         "editable":true,
         "answerText":"other security measure",
-        "storeAs":"[travelSteps]",
+        "storeAs":"[alt-travel-security]",
         "excludes":[],
-        "policyEntry":"- [travelSteps]",
+        "policyEntry":"- [alt-travel-security]",
         "routineEntry":"",
         "appendixEntry":[
           {
@@ -225,14 +225,14 @@ var section4 = [
     "id":"q31",
     "q":"Should staff use a specific tool or tools to protect their internet connection?",
     "required":true,
-    "policyEntry":"Protecting your internet activity from invasive monitoring can involve a range of solutions. [organisation-name] advises staff to use [vpnChoice] on devices that are connected to the internet. [security-contact-name] can help with set up.",
+    "policyEntry":"Protecting your internet activity from invasive monitoring can involve a range of solutions. [organisation-name] advises staff to use [use-this-for-vpn] on devices that are connected to the internet. [security-contact-name] can help with set up.",
     "appendixEntry":"Depending on the country in which you're operating it may be advisable to recommend using VPNs and similar tools even when staff are not travelling.",
     "routineEntry":"",
     "answers":[
       {
         "type":"checkbox",
         "answerText":"Mullvad",
-        "storeAs":"[vpnChoice]",
+        "storeAs":"[use-this-for-vpn]",
         "excludes":[],
         "policyEntry":"",
         "routineEntry":"",
@@ -247,7 +247,7 @@ var section4 = [
       {
         "type":"checkbox",
         "answerText":"Psiphon",
-        "storeAs":"[vpnChoice]",
+        "storeAs":"[use-this-for-vpn]",
         "excludes":[],
         "policyEntry":"",
         "routineEntry":"",
@@ -262,7 +262,7 @@ var section4 = [
       {
         "type":"checkbox",
         "answerText":"NordVPN",
-        "storeAs":"[vpnChoice]",
+        "storeAs":"[use-this-for-vpn]",
         "excludes":[],
         "policyEntry":"",
         "routineEntry":"",
@@ -277,7 +277,7 @@ var section4 = [
       {
         "type":"checkbox",
         "answerText":"Tor",
-        "storeAs":"[vpnChoice]",
+        "storeAs":"[use-this-for-vpn]",
         "excludes":[],
         "policyEntry":"",
         "routineEntry":"",
@@ -292,7 +292,7 @@ var section4 = [
       {
         "type":"checkbox",
         "answerText":"Tunnelbear",
-        "storeAs":"[vpnChoice]",
+        "storeAs":"[use-this-for-vpn]",
         "excludes":[],
         "policyEntry":"",
         "routineEntry":"",
@@ -308,13 +308,13 @@ var section4 = [
         "type":"checkbox",
         "editable":true,
         "answerText":"other",
-        "storeAs":"[vpnChoice]",
+        "storeAs":"[use-this-for-vpn]",
         "excludes":[],
         "policyEntry":"",
         "routineEntry":"",
         "appendixEntry":[
           {
-            "reviewList":"Is [vpnChoice] still the best option for protecting the internet activity of staff members?",
+            "reviewList":"Is [use-this-for-vpn] still the best option for protecting the internet activity of staff members?",
             "tipList": "",
             "linksList": ""
           }
@@ -346,7 +346,7 @@ var section4 = [
         "routineEntry":"",
         "appendixEntry":[
           {
-            "reviewList":"Is the free [vpnChoice] plan still sufficient or is there a better option now available?",
+            "reviewList":"Is the free [use-this-for-vpn] plan still sufficient or is there a better option now available?",
             "tipList": "Using the free plan may result in some compromises on speed or be ad-supported so consider whether the benefits offset these.",
             "linksList": ""
           }
@@ -357,11 +357,11 @@ var section4 = [
         "answerText":"Company subscription",
         "storeAs":"",
         "excludes":[],
-        "policyEntry":"[organisation-name] provides a paid subscription to [vpnChoice].",
+        "policyEntry":"[organisation-name] provides a paid subscription to [use-this-for-vpn].",
         "routineEntry":"",
         "appendixEntry":[
           {
-            "reviewList":"Is the paid subscription to [vpnChoice] still a good solution or is there a better option now available?",
+            "reviewList":"Is the paid subscription to [use-this-for-vpn] still a good solution or is there a better option now available?",
             "tipList": "",
             "linksList": ""
           }

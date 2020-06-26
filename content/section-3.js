@@ -343,9 +343,9 @@ var section3 = [
         "type":"checkbox",
         "editable":true,
         "answerText":"other security measure",
-        "storeAs":"[otherBackupSec]",
+        "storeAs":"[alt-backup-security]",
         "excludes":[],
-        "policyEntry":"- [otherBackupSec]",
+        "policyEntry":"- [alt-backup-security]",
         "routineEntry":"",
         "appendixEntry":[
           {
@@ -368,7 +368,7 @@ var section3 = [
     "id":"q27",
     "q":"What steps should staff take when their devices are seized?",
     "required":false,
-    "policyEntry":"... your device is seized: whether this is at a border, a protest or a raid, it is important to let someone know as soon about the situation as you are able, in order to begin countering any unauthorised access as early as possible. You are advised to follow these steps: [inc3Tactics]",
+    "policyEntry":"... your device is seized: whether this is at a border, a protest or a raid, it is important to let someone know as soon about the situation as you are able, in order to begin countering any unauthorised access as early as possible. You are advised to follow these steps: [do-this-if-seized]",
     "appendixEntry": "Device seizures under any circumstances can be a traumatising event so be sure to offer support to your impacted colleague.",
     "routineEntry":"",
     "answers":[
@@ -376,7 +376,7 @@ var section3 = [
         "type":"textarea",
         "answerText":"",
         "placeholder":"Here are a few examples: \n\n- write down exactly what happened, including any officer numbers, times, etc. \n- warn your coworkers and anyone who could now be at risk \n- contact the org’s lawyer",
-        "storeAs":"[inc3Tactics]",
+        "storeAs":"[do-this-if-seized]",
         "excludes":[],
         "policyEntry":"",
         "routineEntry":"",
