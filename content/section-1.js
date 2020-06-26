@@ -74,14 +74,14 @@ var section1 = [
     "id":"q11",
     "q":"How should staff protect their in-browser interactions?",
     "required":false,
-    "policyEntry":"In order to protect your online activities from common tracking and interference, we recommend all staff install the following privacy-enhancing extensions: [extArray].",
+    "policyEntry":"In order to protect your online activities from common tracking and interference, we recommend all staff install the following privacy-enhancing extensions: [use-these-browser-extensions].",
     "appendixEntry":"",
     "routineEntry":"",
     "answers":[
       {
         "type":"checkbox",
         "answerText":"Privacy Badger",
-        "storeAs":"[extArray]",
+        "storeAs":"[use-these-browser-extensions]",
         "excludes":[],
         "policyEntry":"",
         "routineEntry":"",
@@ -96,7 +96,7 @@ var section1 = [
       {
         "type":"checkbox",
         "answerText":"Privacy Possum",
-        "storeAs":"[extArray]",
+        "storeAs":"[use-these-browser-extensions]",
         "excludes":[],
         "policyEntry":"",
         "routineEntry":"",
@@ -111,7 +111,7 @@ var section1 = [
       {
         "type":"checkbox",
         "answerText":"uBlock Origin",
-        "storeAs":"[extArray]",
+        "storeAs":"[use-these-browser-extensions]",
         "excludes":[],
         "policyEntry":"",
         "routineEntry":"",
@@ -126,7 +126,7 @@ var section1 = [
       {
         "type":"checkbox",
         "answerText":"Better",
-        "storeAs":"[extArray]",
+        "storeAs":"[use-these-browser-extensions]",
         "excludes":[],
         "policyEntry":"",
         "routineEntry":"",
@@ -141,7 +141,7 @@ var section1 = [
       {
         "type":"checkbox",
         "answerText":"HTTPSEverywhere",
-        "storeAs":"[extArray]",
+        "storeAs":"[use-these-browser-extensions]",
         "excludes":[],
         "policyEntry":"",
         "routineEntry":"",
@@ -156,7 +156,7 @@ var section1 = [
       {
         "type":"checkbox",
         "answerText":"DuckDuckGo Privacy Essentials",
-        "storeAs":"[extArray]",
+        "storeAs":"[use-these-browser-extensions]",
         "excludes":[],
         "policyEntry":"",
         "routineEntry":"",
@@ -171,7 +171,7 @@ var section1 = [
       {
         "type":"checkbox",
         "answerText":"Password Alert",
-        "storeAs":"[extArray]",
+        "storeAs":"[use-these-browser-extensions]",
         "excludes":[],
         "policyEntry":"",
         "routineEntry":"",
@@ -187,7 +187,7 @@ var section1 = [
         "type":"checkbox",
         "editable": true,
         "answerText":"other add-on",
-        "storeAs": "[extArray]",
+        "storeAs": "[use-these-browser-extensions]",
         "excludes":[],
         "policyEntry":"",
         "routineEntry":"",
@@ -220,13 +220,13 @@ var section1 = [
         "type":"text",
         "answerText":"1-1 messaging",
         "placeholder":"e.g. Signal, WhatsApp, encrypted email",
-        "storeAs":"[commsDirect]",
+        "storeAs":"[use-these-for-direct-chat]",
         "excludes":[],
-        "policyEntry":"- For 1-1 communications (e.g. direct message to a colleague), please use [commsDirect].",
-        "routineEntry":"Use [commsDirect] for direct 1-1 messaging.",
+        "policyEntry":"- For 1-1 communications (e.g. direct message to a colleague), please use [use-these-for-direct-chat].",
+        "routineEntry":"Use [use-these-for-direct-chat] for direct 1-1 messaging.",
         "appendixEntry":[
           {
-            "reviewList":"Is [commsDirect] still the most appropriate method for your direct communications?",
+            "reviewList":"Is [use-these-for-direct-chat] still the most appropriate method for your direct communications?",
             "tipList": "",
             "linksList": ""
           }
@@ -236,13 +236,13 @@ var section1 = [
         "type":"text",
         "answerText":"Team messaging",
         "placeholder":"e.g. Mattermost, Signal, unencrypted email",
-        "storeAs":"[commsGroup]",
+        "storeAs":"[use-these-for-group-chat]",
         "excludes":[],
-        "policyEntry":"- When communicating with a group (e.g. your project team), please use [commsGroup].",
-        "routineEntry":"[commsGroup] should be used for team messaging.",
+        "policyEntry":"- When communicating with a group (e.g. your project team), please use [use-these-for-group-chat].",
+        "routineEntry":"[use-these-for-group-chat] should be used for team messaging.",
         "appendixEntry":[
           {
-            "reviewList":"Should you continue recommending [commsGroup] for group communications?",
+            "reviewList":"Should you continue recommending [use-these-for-group-chat] for group communications?",
             "tipList": "",
             "linksList": ""
           }
@@ -252,13 +252,13 @@ var section1 = [
         "type":"text",
         "answerText":"Internal video/audio calls",
         "placeholder":"e.g. Jitsi, Signal, Google Hangouts",
-        "storeAs":"[commsInt]",
+        "storeAs":"[use-these-for-internal-chat]",
         "excludes":[],
-        "policyEntry":"- We use [commsInt] for internal video or audio calls, e.g. for remote staff meetings.",
-        "routineEntry":"Video or audio calls within [organisation-name] should be carried out on [commsInt].",
+        "policyEntry":"- We use [use-these-for-internal-chat] for internal video or audio calls, e.g. for remote staff meetings.",
+        "routineEntry":"Video or audio calls within [organisation-name] should be carried out on [use-these-for-internal-chat].",
         "appendixEntry":[
           {
-            "reviewList":"How well has [commsInt] been working as an internal video calls platform?",
+            "reviewList":"How well has [use-these-for-internal-chat] been working as an internal video calls platform?",
             "tipList": "",
             "linksList": ""
           }
@@ -268,13 +268,13 @@ var section1 = [
         "type":"text",
         "answerText":"External video/audio calls",
         "placeholder":"e.g. Jitsi, Signal, Skype",
-        "storeAs":"[commsExt]",
+        "storeAs":"[use-these-for-external-chat]",
         "excludes":[],
-        "policyEntry":"- External video and audio calls take place through [commsExt].",
-        "routineEntry":"Video or audio calls with those outside of [organisation-name] should be hosted on [commsExt].",
+        "policyEntry":"- External video and audio calls take place through [use-these-for-external-chat].",
+        "routineEntry":"Video or audio calls with those outside of [organisation-name] should be hosted on [use-these-for-external-chat].",
         "appendixEntry":[
           {
-            "reviewList":"Is [commsExt] still a good option for external video and audio calls?",
+            "reviewList":"Is [use-these-for-external-chat] still a good option for external video and audio calls?",
             "tipList": "",
             "linksList": ""
           }
