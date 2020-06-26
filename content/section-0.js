@@ -56,14 +56,14 @@ var section0 = [
     "id":"q2",
     "q":"Who will this policy apply to?",
     "required":false,
-    "policyEntry":"This policy applies to [appliesTo].",
+    "policyEntry":"This policy applies to [who-policy-applies-to].",
     "appendixEntry":"",
     "routineEntry":"",
     "answers":[
       {
         "type":"checkbox",
         "answerText":"contractors",
-        "storeAs":"[appliesTo]",
+        "storeAs":"[who-policy-applies-to]",
         "excludes":[],
         "policyEntry":"",
         "routineEntry":"",
@@ -78,7 +78,7 @@ var section0 = [
       {
         "type":"checkbox",
         "answerText":"full or part-time staff",
-        "storeAs":"[appliesTo]",
+        "storeAs":"[who-policy-applies-to]",
         "excludes":[],
         "policyEntry":"",
         "routineEntry":"",
@@ -93,7 +93,7 @@ var section0 = [
       {
         "type":"checkbox",
         "answerText":"volunteers",
-        "storeAs": "[appliesTo]",
+        "storeAs": "[who-policy-applies-to]",
         "excludes":[],
         "policyEntry":"",
         "routineEntry":"",
@@ -109,7 +109,7 @@ var section0 = [
         "type":"checkbox",
         "editable": true,
         "answerText":"other group",
-        "storeAs": "[appliesTo]",
+        "storeAs": "[who-policy-applies-to]",
         "excludes":[],
         "policyEntry":"",
         "routineEntry":"",
