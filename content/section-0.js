@@ -236,13 +236,13 @@ var section0 = [
         "type":"text",
         "answerText":"Pronouns",
         "placeholder": "e.g. they/them",
-        "storeAs":"[contactProns]",
+        "storeAs":"[security-contact-pronouns]",
         "excludes":[],
-        "policyEntry":"Their pronouns are [contactProns].",
+        "policyEntry":"Their pronouns are [security-contact-pronouns].",
         "routineEntry":"",
         "appendixEntry":[
           {
-            "reviewList":"Does [security-contact-name] still use [contactProns] pronouns?",
+            "reviewList":"Does [security-contact-name] still use [security-contact-pronouns] pronouns?",
             "tipList": "",
             "linksList": ""
           }
