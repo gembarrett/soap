@@ -142,7 +142,7 @@ var section2 = [
         "answerText":"No",
         "storeAs":"",
         "excludes":[],
-        "policyEntry":"Staff are advised to refrain from storing passwords in their browser due to the security risks. If you need guidance on choosing an alternative password storage system, [security-contact-name], [contactPos], will be able to advise you on this.",
+        "policyEntry":"Staff are advised to refrain from storing passwords in their browser due to the security risks. If you need guidance on choosing an alternative password storage system, [security-contact-name], [security-contact-role], will be able to advise you on this.",
         "routineEntry":"",
         "appendixEntry":[
           {

@@ -198,7 +198,7 @@ var section0 = [
     "required":true,
     "policyEntry":"",
     "appendixEntry":"",
-    "routineEntry":"Got questions? Ask [security-contact-name], [contactPos]!",
+    "routineEntry":"Got questions? Ask [security-contact-name], [security-contact-role]!",
     "answers":[
       {
         "type":"text",
@@ -220,9 +220,9 @@ var section0 = [
         "type":"text",
         "answerText":"Job title or department",
         "placeholder":"e.g. Security Officer",
-        "storeAs":"[contactPos]",
+        "storeAs":"[security-contact-role]",
         "excludes":[],
-        "policyEntry":"([contactPos]).",
+        "policyEntry":"([security-contact-role]).",
         "routineEntry":"",
         "appendixEntry":[
           {
@@ -293,7 +293,7 @@ var section0 = [
     "id":"q5",
     "q":"How regularly do you intend to review and update this policy?",
     "required":true,
-    "policyEntry":"This policy will be reviewed by [security-contact-name] ([contactPos]) on a [reviewFreq] basis. Any suggestions or feedback on the policy’s contents should be directed to them.",
+    "policyEntry":"This policy will be reviewed by [security-contact-name] ([security-contact-role]) on a [reviewFreq] basis. Any suggestions or feedback on the policy’s contents should be directed to them.",
     "appendixEntry":"",
     "routineEntry":"",
     "answers":[
