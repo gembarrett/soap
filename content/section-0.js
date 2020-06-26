@@ -570,14 +570,14 @@ var section0 = [
     "id":"q8",
     "q":"Does your organization provide staff with privacy equipment for their devices?",
     "required":false,
-    "policyEntry":"In addition to other device security measures, [organisation-name] will also provide you with [providePrivacy] to use on your devices.",
+    "policyEntry":"In addition to other device security measures, [organisation-name] will also provide you with [privacy-peripherals-provided] to use on your devices.",
     "appendixEntry":"",
     "routineEntry":"",
     "answers":[
       {
         "type":"checkbox",
         "answerText":"webcam cover",
-        "storeAs": "[providePrivacy]",
+        "storeAs": "[privacy-peripherals-provided]",
         "excludes":[],
         "policyEntry":"",
         "routineEntry":"",
@@ -592,7 +592,7 @@ var section0 = [
       {
         "type":"checkbox",
         "answerText":"privacy screen",
-        "storeAs": "[providePrivacy]",
+        "storeAs": "[privacy-peripherals-provided]",
         "excludes":[],
         "policyEntry":"",
         "routineEntry":"",
