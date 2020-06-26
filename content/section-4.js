@@ -116,7 +116,7 @@ var section4 = [
         "appendixEntry":[
           {
             "reviewList":"",
-            "tipList": "If there's a large amount of staff who wear smart watches at [orgName] then it could be suggested to them to look into what Emergency SOS calling features they may have access to through the watch.",
+            "tipList": "If there's a large amount of staff who wear smart watches at [organisation-name] then it could be suggested to them to look into what Emergency SOS calling features they may have access to through the watch.",
             "linksList": ""
           }
         ]
@@ -225,7 +225,7 @@ var section4 = [
     "id":"q31",
     "q":"Should staff use a specific tool or tools to protect their internet connection?",
     "required":true,
-    "policyEntry":"Protecting your internet activity from invasive monitoring can involve a range of solutions. [orgName] advises staff to use [vpnChoice] on devices that are connected to the internet. [contactName] can help with set up.",
+    "policyEntry":"Protecting your internet activity from invasive monitoring can involve a range of solutions. [organisation-name] advises staff to use [vpnChoice] on devices that are connected to the internet. [contactName] can help with set up.",
     "appendixEntry":"Depending on the country in which you're operating it may be advisable to recommend using VPNs and similar tools even when staff are not travelling.",
     "routineEntry":"",
     "answers":[
@@ -357,7 +357,7 @@ var section4 = [
         "answerText":"Company subscription",
         "storeAs":"",
         "excludes":[],
-        "policyEntry":"[orgName] provides a paid subscription to [vpnChoice].",
+        "policyEntry":"[organisation-name] provides a paid subscription to [vpnChoice].",
         "routineEntry":"",
         "appendixEntry":[
           {
@@ -461,7 +461,7 @@ var section4 = [
     "id":"q34",
     "q":"What steps should be in your staff members’ travel security plans?",
     "required":false,
-    "policyEntry":"... you are travelling abroad for work purposes: It's important to avoid assuming the same level of safety abroad as you are used to at home. While it's recommended that you research your destination's security situation, here are some baseline security measures you can use to form a travel plan in order to help with protecting you, your devices and, by extension, [orgName]'s staff and work: [inc4Tactics]",
+    "policyEntry":"... you are travelling abroad for work purposes: It's important to avoid assuming the same level of safety abroad as you are used to at home. While it's recommended that you research your destination's security situation, here are some baseline security measures you can use to form a travel plan in order to help with protecting you, your devices and, by extension, [organisation-name]'s staff and work: [inc4Tactics]",
     "appendixEntry": "",
     "routineEntry":"",
     "answers":[

@@ -10,7 +10,7 @@ var section6 = [
     "id":"q44",
     "q":"How often are the office WiFi passwords changed?",
     "required":true,
-    "policyEntry":"To ensure that the WiFi access is restricted to authorised staff, [orgName] rotates the password [pwdFreq] and the new credentials will be made available to you by [contactName].",
+    "policyEntry":"To ensure that the WiFi access is restricted to authorised staff, [organisation-name] rotates the password [pwdFreq] and the new credentials will be made available to you by [contactName].",
     "routineEntry":"",
     "appendixEntry":"",
     "answers":[
@@ -126,7 +126,7 @@ var section6 = [
         "answerText":"Approved devices only",
         "storeAs":"",
         "excludes":[],
-        "policyEntry":"Only approved devices are to be on the [orgName] internal network. If you need to use an unapproved device you should request permission to connect from [contactName] so it can be added to the safe list.",
+        "policyEntry":"Only approved devices are to be on the [organisation-name] internal network. If you need to use an unapproved device you should request permission to connect from [contactName] so it can be added to the safe list.",
         "routineEntry":"",
         "appendixEntry":[
           {
@@ -156,7 +156,7 @@ var section6 = [
         "answerText":"Traffic inspection",
         "storeAs":"",
         "excludes":[],
-        "policyEntry":"It is important to understand that any and all traffic can be inspected while on the [orgName] internal network.",
+        "policyEntry":"It is important to understand that any and all traffic can be inspected while on the [organisation-name] internal network.",
         "routineEntry":"",
         "appendixEntry":[
           {
@@ -195,7 +195,7 @@ var section6 = [
     "id":"q46",
     "q":"How can staff protect themselves from browser-based intrusions?",
     "required":true,
-    "policyEntry":"Your web browser can provide a window into your online activities, potentially exposing confidential data such as activist identities and [orgName] project details. To mitigate this, we recommend implementing the following security hygiene techniques in your browser:",
+    "policyEntry":"Your web browser can provide a window into your online activities, potentially exposing confidential data such as activist identities and [organisation-name] project details. To mitigate this, we recommend implementing the following security hygiene techniques in your browser:",
     "routineEntry":"",
     "appendixEntry":"",
     "answers":[

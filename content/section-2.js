@@ -10,7 +10,7 @@ var section2 = [
     "id":"q15",
     "q":"Should staff use a specific password manager for work accounts?",
     "required":true,
-    "policyEntry":"Passwords are hard to remember, so [orgName] ask staff to use a password manager.",
+    "policyEntry":"Passwords are hard to remember, so [organisation-name] ask staff to use a password manager.",
     "appendixEntry":"",
     "routineEntry":"",
     "answers":[
@@ -190,7 +190,7 @@ var section2 = [
         "answerText":"None - staff preference",
         "storeAs":"",
         "excludes":[],
-        "policyEntry":"The options for getting this code include authentication apps, hardware keys, SMS or automated phone call and [orgName] asks staff to use their best judgment when choosing a method for securing each work-related account.",
+        "policyEntry":"The options for getting this code include authentication apps, hardware keys, SMS or automated phone call and [organisation-name] asks staff to use their best judgment when choosing a method for securing each work-related account.",
         "routineEntry":"Choose your authenticator! Authentication apps, security keys or just your phone - any multi-factor authentication is better than passwords alone.",
         "appendixEntry":[
           {
@@ -205,7 +205,7 @@ var section2 = [
         "answerText":"Two-factor apps or hardware authentication keys",
         "storeAs":"",
         "excludes":[],
-        "policyEntry":"[orgName] requires staff to use two-factor apps or hardware authentication methods. Please do not use SMS or phone call authentication as they are insecure methods that can be intercepted.",
+        "policyEntry":"[organisation-name] requires staff to use two-factor apps or hardware authentication methods. Please do not use SMS or phone call authentication as they are insecure methods that can be intercepted.",
         "routineEntry":"Please use your security key or authentication app to secure access to your accounts - phone/SMS are not good enough.",
         "appendixEntry":[
           {
@@ -220,7 +220,7 @@ var section2 = [
         "answerText":"SMS or phone call",
         "storeAs":"",
         "excludes":[18],
-        "policyEntry":"[orgName] requires staff to use SMS or phone call authentication methods. However, be aware of the risks of interception that come with using these methods.",
+        "policyEntry":"[organisation-name] requires staff to use SMS or phone call authentication methods. However, be aware of the risks of interception that come with using these methods.",
         "routineEntry":"Add an extra layer of security to your accounts by enabling two-factor authentication that sends your code by phone call or SMS.",
         "appendixEntry":[
           {
@@ -252,7 +252,7 @@ var section2 = [
         "answerText":"Google Authenticator",
         "storeAs":"",
         "excludes":[],
-        "policyEntry":"To ensure consistency and help with training and troubleshooting, [orgName] recommends the Google Authenticator app for two-factor authentication. If this app is not pre-installed then you should install it from your platform’s app store, requesting assistance from [contactName] when needed.",
+        "policyEntry":"To ensure consistency and help with training and troubleshooting, [organisation-name] recommends the Google Authenticator app for two-factor authentication. If this app is not pre-installed then you should install it from your platform’s app store, requesting assistance from [contactName] when needed.",
         "routineEntry":"",
         "appendixEntry":[
           {
@@ -267,7 +267,7 @@ var section2 = [
         "answerText":"Duo Mobile",
         "storeAs":"",
         "excludes":[],
-        "policyEntry":"To ensure consistency and help with training and troubleshooting, [orgName] recommends the Duo Mobile app for two-factor authentication. If this app is not pre-installed then you should install it from your platform’s app store, requesting assistance from [contactName] when needed.",
+        "policyEntry":"To ensure consistency and help with training and troubleshooting, [organisation-name] recommends the Duo Mobile app for two-factor authentication. If this app is not pre-installed then you should install it from your platform’s app store, requesting assistance from [contactName] when needed.",
         "routineEntry":"",
         "appendixEntry":[
           {
@@ -282,7 +282,7 @@ var section2 = [
         "answerText":"Authy",
         "storeAs":"",
         "excludes":[],
-        "policyEntry":"To ensure consistency and help with training and troubleshooting, [orgName] recommends the Authy app for two-factor authentication. If this app is not pre-installed then you should install it from your platform’s app store, requesting assistance from [contactName]  when needed.",
+        "policyEntry":"To ensure consistency and help with training and troubleshooting, [organisation-name] recommends the Authy app for two-factor authentication. If this app is not pre-installed then you should install it from your platform’s app store, requesting assistance from [contactName]  when needed.",
         "routineEntry":"",
         "appendixEntry":[
           {
@@ -297,7 +297,7 @@ var section2 = [
         "answerText":"No preference",
         "storeAs":"",
         "excludes":[],
-        "policyEntry":"While [orgName] requires the use of an authenticator app, we leave it to staff to make their own choice of which one to use. If you are unsure of which is best for your device and workflow, [contactName] is available for advice.",
+        "policyEntry":"While [organisation-name] requires the use of an authenticator app, we leave it to staff to make their own choice of which one to use. If you are unsure of which is best for your device and workflow, [contactName] is available for advice.",
         "routineEntry":"",
         "appendixEntry":[
           {
@@ -313,7 +313,7 @@ var section2 = [
         "answerText":"another app",
         "storeAs": "[authApp]",
         "excludes":[],
-        "policyEntry":"To ensure consistency and help with training and troubleshooting, [orgName] uses [authApp] for two-factor authentication where platforms allow it. This app may be installed automatically as part of your mobile work device set up, otherwise you should install it from your platform’s app store, requesting assistance from [contactName] when needed",
+        "policyEntry":"To ensure consistency and help with training and troubleshooting, [organisation-name] uses [authApp] for two-factor authentication where platforms allow it. This app may be installed automatically as part of your mobile work device set up, otherwise you should install it from your platform’s app store, requesting assistance from [contactName] when needed",
         "routineEntry":"",
         "appendixEntry":[
           {

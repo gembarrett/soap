@@ -120,7 +120,7 @@ var section5 = [
     "id":"q38",
     "q":"What are your visitor protocols?",
     "required":true,
-    "policyEntry":"[orgName] staff are responsible for any visitors they bring into the office and are expected to be present for their guest’s arrival, or have prepared another person to receive them. No visitors should be given unsupervised access, and all staff should be vigilant against \"tail-gating\" or using another staff member's access code, card or key to gain entry to the office.",
+    "policyEntry":"[organisation-name] staff are responsible for any visitors they bring into the office and are expected to be present for their guest’s arrival, or have prepared another person to receive them. No visitors should be given unsupervised access, and all staff should be vigilant against \"tail-gating\" or using another staff member's access code, card or key to gain entry to the office.",
     "routineEntry":"",
     "appendixEntry":"",
     "answers":[
@@ -159,7 +159,7 @@ var section5 = [
         "answerText":"guest WiFi",
         "storeAs":"",
         "excludes":[],
-        "policyEntry":"While on site, guests should use the visitor WiFi to access the internet. Credentials can be obtained from [contactName]. When using the [orgName] wireless network, visitors are not to perform any illegal or malicious actions against any internal or external network.",
+        "policyEntry":"While on site, guests should use the visitor WiFi to access the internet. Credentials can be obtained from [contactName]. When using the [organisation-name] wireless network, visitors are not to perform any illegal or malicious actions against any internal or external network.",
         "routineEntry":"Visitors must connect to the guest WiFi network; you can get the details of this from [contactName]",
         "appendixEntry":[
           {
@@ -198,7 +198,7 @@ var section5 = [
     "id":"q39",
     "q":"Who is responsible for securing the office premises?",
     "required":true,
-    "policyEntry":"Any questions about [orgName] office security issues should be directed to [officeSecurityName], [officeSecurityPosition].",
+    "policyEntry":"Any questions about [organisation-name] office security issues should be directed to [officeSecurityName], [officeSecurityPosition].",
     "routineEntry":"[officeSecurityName] ([officeSecurityPhone]/[officeSecurityEmail]) is the person to go to with any issues related to office security.",
     "appendixEntry":"",
     "answers":[
@@ -382,7 +382,7 @@ var section5 = [
         "answerText":"Prevent others using their devices",
         "storeAs":"",
         "excludes":[],
-        "policyEntry":"The devices you use for work should not be shared with others outside of [orgName], as it can put the confidential information they hold at risk of deletion or damage.",
+        "policyEntry":"The devices you use for work should not be shared with others outside of [organisation-name], as it can put the confidential information they hold at risk of deletion or damage.",
         "routineEntry":"Don’t allow others to use your work devices",
         "appendixEntry":[
           {
@@ -443,7 +443,7 @@ var section5 = [
         "answerText":"Other",
         "storeAs":"[remoteSecOther]",
         "excludes":[],
-        "policyEntry":"[orgName] staff are expected to secure their home office using the following method: [remoteSecOther]",
+        "policyEntry":"[organisation-name] staff are expected to secure their home office using the following method: [remoteSecOther]",
         "routineEntry":"",
         "appendixEntry":[
           {

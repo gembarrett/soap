@@ -10,7 +10,7 @@ var section3 = [
     "id":"q22",
     "q":"Can staff use biometric authentication to restrict device access?",
     "required":true,
-    "policyEntry":"To protect devices from unauthorised physical infiltration, all devices which are used for [orgName] purposes should have an automatic screen lock enabled and may be configured to use [deviceAuth].",
+    "policyEntry":"To protect devices from unauthorised physical infiltration, all devices which are used for [organisation-name] purposes should have an automatic screen lock enabled and may be configured to use [deviceAuth].",
     "appendixEntry":"Be aware that touchscreen devices are susceptible to holding fingerprint marks which can be used to guess recently-used key sequences.",
     "routineEntry":"",
     "answers":[
@@ -150,7 +150,7 @@ var section3 = [
     "id":"q24",
     "q":"Does your organization use physical or cloud storage for backups?",
     "required":false,
-    "policyEntry":"[orgName] is responsible for managing data backups which are kept in [storagePref] storage.",
+    "policyEntry":"[organisation-name] is responsible for managing data backups which are kept in [storagePref] storage.",
     "appendixEntry":"",
     "routineEntry":"",
     "answers":[
@@ -275,7 +275,7 @@ var section3 = [
     "id":"q26",
     "q":"How does your organization secure its backups?",
     "required":false,
-    "policyEntry":"[orgName] requires that devices used for work purposes be backed up as the loss, exposure or corruption of [orgName] data puts us, and those we work with, at risk. Backups are managed in the following ways: ",
+    "policyEntry":"[organisation-name] requires that devices used for work purposes be backed up as the loss, exposure or corruption of [organisation-name] data puts us, and those we work with, at risk. Backups are managed in the following ways: ",
     "appendixEntry":"Be sure to discuss any recent data loss or similar incidents at each review - they are good learning opportunities. An approach to backups is the 3-2-1 rule: at least 3 backup copies of your data on at least 2 different kinds of medium, with at least 1 of these stored offsite.",
     "routineEntry":"",
     "answers":[
@@ -319,7 +319,7 @@ var section3 = [
         "appendixEntry":[
           {
             "reviewList":"Do those with access to backups still require it?",
-            "tipList": "Carefully consider who should be granted access to [orgName]'s cloud storage. Too many people and it becomes tougher to manage. Too few and you may struggle to gain access for emergency data restoration.",
+            "tipList": "Carefully consider who should be granted access to [organisation-name]'s cloud storage. Too many people and it becomes tougher to manage. Too few and you may struggle to gain access for emergency data restoration.",
             "linksList": ""
           }
         ]

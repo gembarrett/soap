@@ -19,7 +19,7 @@ var section1 = [
         "answerText":"Yes",
         "storeAs":"",
         "excludes":[],
-        "policyEntry":"[orgName] requires staff to use PGP to encrypt sensitive emails. If you need help with setting up, please contact [contactName].",
+        "policyEntry":"[organisation-name] requires staff to use PGP to encrypt sensitive emails. If you need help with setting up, please contact [contactName].",
         "routineEntry":"",
         "appendixEntry":[
           {
@@ -35,7 +35,7 @@ var section1 = [
         "answerText":"Some staff need a key",
         "storeAs":"",
         "excludes":[],
-        "policyEntry":"[orgName] prefers some staff to use PGP to encrypt sensitive emails. You will be informed if this applies to you and offered help with setting up, should you require it.",
+        "policyEntry":"[organisation-name] prefers some staff to use PGP to encrypt sensitive emails. You will be informed if this applies to you and offered help with setting up, should you require it.",
         "routineEntry":"",
         "appendixEntry":[
           {
@@ -212,7 +212,7 @@ var section1 = [
     "id":"q12",
     "q":"For each of the following communication types, which tools should staff use when discussing sensitive work topics?",
     "required":false,
-    "policyEntry":"When communicating sensitive work data, [orgName] prefers staff use the following tools.",
+    "policyEntry":"When communicating sensitive work data, [organisation-name] prefers staff use the following tools.",
     "appendixEntry":"Pay attention to any changes in encryption standards, data breaches or security vulnerabilities that are in the news and relevant to your communication platforms.",
     "routineEntry":"",
     "answers":[
@@ -255,7 +255,7 @@ var section1 = [
         "storeAs":"[commsInt]",
         "excludes":[],
         "policyEntry":"- We use [commsInt] for internal video or audio calls, e.g. for remote staff meetings.",
-        "routineEntry":"Video or audio calls within [orgName] should be carried out on [commsInt].",
+        "routineEntry":"Video or audio calls within [organisation-name] should be carried out on [commsInt].",
         "appendixEntry":[
           {
             "reviewList":"How well has [commsInt] been working as an internal video calls platform?",
@@ -271,7 +271,7 @@ var section1 = [
         "storeAs":"[commsExt]",
         "excludes":[],
         "policyEntry":"- External video and audio calls take place through [commsExt].",
-        "routineEntry":"Video or audio calls with those outside of [orgName] should be hosted on [commsExt].",
+        "routineEntry":"Video or audio calls with those outside of [organisation-name] should be hosted on [commsExt].",
         "appendixEntry":[
           {
             "reviewList":"Is [commsExt] still a good option for external video and audio calls?",

@@ -31,10 +31,10 @@ var section0 = [
         "type":"text",
         "answerText":"",
         "placeholder":"Example Organization",
-        "storeAs":"[orgName]",
+        "storeAs":"[organisation-name]",
         "excludes":[],
-        "policyEntry":"This is the security policy of [orgName], which has been created in order to support staff in carrying out our sensitive work securely. It is important to understand and comply with the rules described as they aim to protect everyone involved in our work, including partner organizations and frontline activists.",
-        "routineEntry":"This is the short version of [orgName] security policy. It is designed to remind you of the everyday practices to include in your routine.",
+        "policyEntry":"This is the security policy of [organisation-name], which has been created in order to support staff in carrying out our sensitive work securely. It is important to understand and comply with the rules described as they aim to protect everyone involved in our work, including partner organizations and frontline activists.",
+        "routineEntry":"This is the short version of [organisation-name] security policy. It is designed to remind you of the everyday practices to include in your routine.",
         "appendixEntry": [
           {
             "reviewList":"",
@@ -187,7 +187,7 @@ var section0 = [
     "tips":[
       {"relevance":""},
       {"meaning":"For the majority of their time, remote staff work outside of a traditional office, such as from home or a cafe. The risks in different working environments vary and there are factors to be considered which apply to remote staff but not so much those who work in a regular office – and vice versa."},
-      {"implementation":"Your organization is remote if it has any members of staff working from outside [orgName]-controlled premises, and taking this remote-first perspective helps with supporting those staff as part of the team."},
+      {"implementation":"Your organization is remote if it has any members of staff working from outside [organisation-name]-controlled premises, and taking this remote-first perspective helps with supporting those staff as part of the team."},
       {"more":["managing remote staff"]}
     ]
   },
@@ -493,7 +493,7 @@ var section0 = [
     "id":"q7",
     "q":"How does your organization manage staff work devices?",
     "required":true,
-    "policyEntry":"[orgName] manages device security in the following way, depending on the situation:",
+    "policyEntry":"[organisation-name] manages device security in the following way, depending on the situation:",
     "appendixEntry":"",
     "routineEntry":"",
     "answers":[
@@ -517,7 +517,7 @@ var section0 = [
         "answerText":"We install work and personal profiles on organization-owned devices.",
         "storeAs": "",
         "excludes":[],
-        "policyEntry":"- Profiles on [orgName] devices: [orgName] staff are given some freedom to decide their work environment and equipment, and we acknowledge that there may be times when after hours access to work email and data is needed. We will provide you with devices and install both a work and personal profile for you to use.",
+        "policyEntry":"- Profiles on [organisation-name] devices: [organisation-name] staff are given some freedom to decide their work environment and equipment, and we acknowledge that there may be times when after hours access to work email and data is needed. We will provide you with devices and install both a work and personal profile for you to use.",
         "routineEntry":"",
         "appendixEntry":[
           {
@@ -532,7 +532,7 @@ var section0 = [
         "answerText":"We provide work-only devices.",
         "storeAs": "",
         "excludes":[],
-        "policyEntry":"- [orgName] devices for work-only use: We will provide you with devices, such as a computer, to use solely for work purposes.",
+        "policyEntry":"- [organisation-name] devices for work-only use: We will provide you with devices, such as a computer, to use solely for work purposes.",
         "routineEntry":"",
         "appendixEntry":[
           {
@@ -570,7 +570,7 @@ var section0 = [
     "id":"q8",
     "q":"Does your organization provide staff with privacy equipment for their devices?",
     "required":false,
-    "policyEntry":"In addition to other device security measures, [orgName] will also provide you with [providePrivacy] to use on your devices.",
+    "policyEntry":"In addition to other device security measures, [organisation-name] will also provide you with [providePrivacy] to use on your devices.",
     "appendixEntry":"",
     "routineEntry":"",
     "answers":[
