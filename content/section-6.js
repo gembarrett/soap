@@ -10,14 +10,14 @@ var section6 = [
     "id":"q44",
     "q":"How often are the office WiFi passwords changed?",
     "required":true,
-    "policyEntry":"To ensure that the WiFi access is restricted to authorised staff, [organisation-name] rotates the password [pwdFreq] and the new credentials will be made available to you by [security-contact-name].",
+    "policyEntry":"To ensure that the WiFi access is restricted to authorised staff, [organisation-name] rotates the password [how-often-wifi-changed] and the new credentials will be made available to you by [security-contact-name].",
     "routineEntry":"",
     "appendixEntry":"",
     "answers":[
       {
         "type":"radio",
         "answerText":"at every security review",
-        "storeAs":"[pwdFreq]",
+        "storeAs":"[how-often-wifi-changed]",
         "excludes":[],
         "policyEntry":"",
         "routineEntry":"",
@@ -32,7 +32,7 @@ var section6 = [
       {
         "type":"radio",
         "answerText":"every 6 months",
-        "storeAs":"[pwdFreq]",
+        "storeAs":"[how-often-wifi-changed]",
         "excludes":[],
         "policyEntry":"",
         "routineEntry":"",
@@ -47,7 +47,7 @@ var section6 = [
       {
         "type":"radio",
         "answerText":"every month",
-        "storeAs":"[pwdFreq]",
+        "storeAs":"[how-often-wifi-changed]",
         "excludes":[],
         "policyEntry":"",
         "routineEntry":"",
@@ -62,7 +62,7 @@ var section6 = [
       {
         "type":"radio",
         "answerText":"each week",
-        "storeAs":"[pwdFreq]",
+        "storeAs":"[how-often-wifi-changed]",
         "excludes":[],
         "policyEntry":"",
         "routineEntry":"",
@@ -170,9 +170,9 @@ var section6 = [
         "type":"checkbox",
         "editable":true,
         "answerText":"Other",
-        "storeAs":"[otherNetSec]",
+        "storeAs":"[alt-network-security]",
         "excludes":[],
-        "policyEntry":"Please also note the following rule: [otherNetSec]",
+        "policyEntry":"Please also note the following rule: [alt-network-security]",
         "routineEntry":"",
         "appendixEntry":[
           {
@@ -263,9 +263,9 @@ var section6 = [
         "type":"checkbox",
         "editable":true,
         "answerText":"Other",
-        "storeAs":"[otherBrowserSec]",
+        "storeAs":"[alt-browser-security]",
         "excludes":[],
-        "policyEntry":"- also, [otherBrowserSec]",
+        "policyEntry":"- also, [alt-browser-security]",
         "routineEntry":"",
         "appendixEntry":[
           {
@@ -341,9 +341,9 @@ var section6 = [
         "type":"checkbox",
         "editable":true,
         "answerText":"Other",
-        "storeAs":"[otherDeviceNetworkSec]",
+        "storeAs":"[alt-device-security]",
         "excludes":[],
-        "policyEntry":"In addition, please note the following rule: [otherDeviceNetworkSec]",
+        "policyEntry":"In addition, please note the following rule: [alt-device-security]",
         "routineEntry":"",
         "appendixEntry":[
           {
@@ -366,7 +366,7 @@ var section6 = [
     "id":"q48",
     "q":"What steps should staff members take if their device is taken over by ransomware?",
     "required":false,
-    "policyEntry":"... you suspect your device is infected with ransomware: it’s important not to panic and pay the ransom as that gives no guarantee that your files will be released. Instead, you should follow these steps: [inc6tactics]",
+    "policyEntry":"... you suspect your device is infected with ransomware: it’s important not to panic and pay the ransom as that gives no guarantee that your files will be released. Instead, you should follow these steps: [do-this-if-ransomware]",
     "appendixEntry": "",
     "routineEntry":"",
     "answers":[
@@ -374,7 +374,7 @@ var section6 = [
         "type":"textarea",
         "answerText":"",
         "placeholder":"- note down the exact message displayed on your screen, \n- contact the security officer, \n- locate your backups to prepare for a system restore",
-        "storeAs":"[inc6tactics]",
+        "storeAs":"[do-this-if-ransomware]",
         "excludes":[],
         "policyEntry":"",
         "routineEntry":"",
