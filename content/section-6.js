@@ -246,10 +246,10 @@ var section6 = [
       },
       {
         "type":"checkbox",
-        "answerText":"Javascript off",
+        "answerText":"JavaScript off",
         "storeAs":"",
         "excludes":[],
-        "policyEntry":"- disable Javascript",
+        "policyEntry":"- disable JavaScript",
         "routineEntry":"",
         "appendixEntry":[
           {
@@ -278,7 +278,7 @@ var section6 = [
     ],
     "tips":[
       {"relevance":""},
-      {"meaning":"In the course of your employees’ work, their online searches, clicks and website visits can put together a picture of their activities that exposes sensitive or confidential information. Anyone accessing the computer can see the sites accessed and the logins used, so clearing browsing history regularly can reduce how much history is accessible. Cookies and scripting attacks have been used maliciously in the past as they are usually trusted elements of websites which are used to execute code or store data files on the client computer. Disabling cookies and Javascript in the browser can affect the user’s ability to use websites which rely on JS and cookies though, so the seriousness of the threat should be balanced against the inconvenience. Enabling Do Not Track in the browser helps to reduce the amount of information that advertisers and tracking companies can gather about your employees’ searches, but does rely on websites complying with the request."},
+      {"meaning":"In the course of your employees’ work, their online searches, clicks and website visits can put together a picture of their activities that exposes sensitive or confidential information. Anyone accessing the computer can see the sites accessed and the logins used, so clearing browsing history regularly can reduce how much history is accessible. Cookies and scripting attacks have been used maliciously in the past as they are usually trusted elements of websites which are used to execute code or store data files on the client computer. Disabling cookies and JavaScript in the browser can affect the user’s ability to use websites which rely on JavaScript and cookies though, so the seriousness of the threat should be balanced against the inconvenience. Enabling Do Not Track in the browser helps to reduce the amount of information that advertisers and tracking companies can gather about your employees’ searches, but does rely on websites complying with the request."},
       {"implementation":"If your organization provides devices to staff, then these solutions can be implemented in the set up."},
       {"more": ["how to turn on Do Not Track", "risks of cookies and scripting attacks", "why how to clear browsing history", "why turn javascript off"]}
     ]

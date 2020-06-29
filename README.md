@@ -16,15 +16,15 @@ In developing SOAP, research was conducted to understand the frustrations faced 
 
 ## Run your own SOAP
 
-You can run SOAP on any web server that can fallback to index.html on 404 not found. SOAP is a single-page Javascript application, and needs this fallback to support navigation with the History API.
+You can run SOAP on any web server that can fallback to index.html on 404 not found. SOAP is a single-page JavaScript application, and needs this fallback to support navigation with the History API.
 
 To minimize the surface area for attack we recommend hosting your own SOAP instance on a fully-managed static hosting service. If you want to host SOAP on your own hardware/OS we recommend following all reasonable precautions in securing a public web server, including modern TLS profiles. Services such as Amazon S3 or GitHub Pages are options for self-hosting.
 
 ## FOLDER STRUCTURE
 
-* **index.html**: sits at the root and is the place where all the Javascript is injected
+* **index.html**: sits at the root and is the place where all the JavaScript is injected
 * **content**: holds all the text content for the site in JSON format
-* **assets**: contains CSS files, images, report PDFs and Javascript files
+* **assets**: contains CSS files, images, report PDFs and JavaScript files
 * **assets/js**: holds several files containing various feature-specific functions
 * **assets/js/views**: files here direct the controller files to pull the data into the templates and serve it up for display. For example, views/questionsView.js calls on controllers/questionPage.js to get all the question data and plug it into templates/questionsTemplate.js
 * **assets/js/controllers**: these files are instructed by their counterparts in the views folder to get all the data needed for that section and parcel it up ready for the corresponding template
@@ -38,7 +38,7 @@ Thanks for asking! It’s true: SOAP takes a lot of time (and coffee!) to mainta
 * **Donations** to fund SOAP’s maintenance can be made at
 [ko-fi.com/supportsoap](https://ko-fi.com/supportsoap)
 * **Fluent in a language other than English?** Email feedback(at)usesoap.app with the language(s) you can help with and we'll let you know how you can get started with translating SOAP to make it more accessible to non-English speakers
-* **SOAP is an open-source project**. Contributions to the code (Javascript, HTML or CSS) or documentation are always welcomed on the [issues page](https://github.com/gembarrett/soap/issues)
+* **SOAP is an open-source project**. Contributions to the code (JavaScript, HTML or CSS) or documentation are always welcomed on the [issues page](https://github.com/gembarrett/soap/issues)
 * **Just want to say hi or ask a question?** Have an idea for how SOAP could be improved? Email us at: feedback(at)usesoap.app.
 
 ## BUGS
