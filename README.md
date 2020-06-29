@@ -9,16 +9,16 @@ SOAP was researched, designed, and built by Gem Barrett, with funding from the O
 
 In developing SOAP, research was conducted to understand the frustrations faced and obstacles encountered by organizations when creating, implementing, and maintaining security policies. The findings of this research and accompanying interviews are shared in the report [“Securing Civil Society”](https://usesoap.app/assets/SecuringCivilSociety-report.pdf) (PDF currently available in English, other versions coming soon). These findings, coupled with research into organizational security best practices, helped create the methodology that forms the basis of SOAP’s innovative process.
 
-## Run SOAP locally
+## Run SOAP locally (quick demo only)
 
 1. python -m server.py
 1. open browser to: http://localhost:8000/
 
 ## Run your own SOAP
 
-You can run SOAP on any web server that can fallback to index.html on 404 not found. SOAP is a single-page javascript application, and needs this fallback to support navigation with the History API.
+You can run SOAP on any web server that can fallback to index.html on 404 not found. SOAP is a single-page Javascript application, and needs this fallback to support navigation with the History API.
 
-To minimize the surface area for attack we recommend hosting your own SOAP instance on a fully-managed static hosting service. If you want to host SOAP on your own hardware/OS we recommend following all reasonable precautions in securing a public web server, including modern TLS profiles.
+To minimize the surface area for attack we recommend hosting your own SOAP instance on a fully-managed static hosting service. If you want to host SOAP on your own hardware/OS we recommend following all reasonable precautions in securing a public web server, including modern TLS profiles. Services such as Amazon S3 or GitHub Pages are options for self-hosting.
 
 ## FOLDER STRUCTURE
 
