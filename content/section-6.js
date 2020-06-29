@@ -23,7 +23,7 @@ var section6 = [
         "routineEntry":"",
         "appendixEntry":[
           {
-            "reviewList":"Time to change the office WiFi passwords!",
+            "reviewList":"It's time to change the office WiFi passwords!",
             "tipList": "",
             "linksList": ""
           }
@@ -87,7 +87,7 @@ var section6 = [
     "id":"q45",
     "q":"What measures do you take to protect your office network?",
     "required":true,
-    "policyEntry":"When using the internal network, you can expect to find the following security measures in place. ",
+    "policyEntry":"When using the internal network, you can expect to find the following security measures in place.",
     "routineEntry":"",
     "appendixEntry":"",
     "answers":[

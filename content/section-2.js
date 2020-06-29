@@ -3,7 +3,7 @@ var section2 = [
     "isQuestion": false,
     "id":"q14",
     "title": "Scenario two",
-    "paragraph":["Now consider the situation if the same staff member clicks the link in that suspicious email and the attacker steals their work account login details. We rely on many online services in the course of our work, and as a result the accounts we inhabit get filled with sensitive information that can be accessed, deleted, manipulated and shared by an attacker.", "In this case, red flags of a hacked account can include unrecognised activity, strange login times and being 'locked out' of the account. Once inside, an attacker may steal login details for other accounts, leak sensitive information or impersonate the staff member to damage the organization.", "In most cases, changing passwords and implementing two-factor authentication is enough to stop the attacker. But if the situation esclates, it can take time to persuade the platform to hand you back control of the account so acting quickly to protect accounts is key. Setting rules for where and how to share, store and discuss information can also help to reduce the impact of an intrusion by limiting what each account can provide access to."]
+    "paragraph":["Now consider the situation if the same staff member clicks the link in that suspicious email and the attacker steals their work account login details. We rely on many online services in the course of our work, and as a result the accounts we inhabit get filled with sensitive information that can be accessed, deleted, manipulated and shared by an attacker.", "In this case, red flags of a hacked account can include unrecognised activity, strange login times and being 'locked out' of the account. Once inside, an attacker may steal login details for other accounts, leak sensitive information or impersonate the staff member to damage the organization.", "In most cases, changing passwords and implementing two-factor authentication is enough to stop the attacker. But if the situation escalates, it can take time to persuade the platform to hand you back control of the account so acting quickly to protect accounts is key. Setting rules for where and how to share, store and discuss information can also help to reduce the impact of an intrusion by limiting what each account can provide access to."]
   },
   {
     "isQuestion": true,
@@ -127,7 +127,7 @@ var section2 = [
         "answerText":"Yes",
         "storeAs":"",
         "excludes":[],
-        "policyEntry":"Staff who are aware of the risks may store their passwords in their browser for more convenient access, however they are expected to frequently clear out old logins",
+        "policyEntry":"Staff who are aware of the risks may store their passwords in their browser for more convenient access, however they are expected to frequently clear out old logins.",
         "routineEntry":"",
         "appendixEntry":[
           {
@@ -313,7 +313,7 @@ var section2 = [
         "answerText":"another app",
         "storeAs": "[use-this-for-authentication]",
         "excludes":[],
-        "policyEntry":"To ensure consistency and help with training and troubleshooting, [organisation-name] uses [use-this-for-authentication] for two-factor authentication where platforms allow it. This app may be installed automatically as part of your mobile work device set up, otherwise you should install it from your platform’s app store, requesting assistance from [security-contact-name] when needed",
+        "policyEntry":"To ensure consistency and help with training and troubleshooting, [organisation-name] uses [use-this-for-authentication] for two-factor authentication where platforms allow it. This app may be installed automatically as part of your mobile work device set up, otherwise you should install it from your platform’s app store, requesting assistance from [security-contact-name] when needed.",
         "routineEntry":"",
         "appendixEntry":[
           {
@@ -384,7 +384,7 @@ var section2 = [
     "q":"What steps should staff take when faced with a possibly hacked account?",
     "required":false,
     "policyEntry":"... you notice suspicious activity in any work-related accounts: This could look like unprompted two-factor code requests, strange login times, or rejection of correct passwords - any unfamiliar actions performed by, or within, the account should be investigated. To do this, you are advised to follow these steps: [do-this-if-hacked]",
-    "appendixEntry": "Sometimes data breaches are to blame for a hacked account, and so it can be worth checking if the email associated with the account was recently involved in such an incident by visiting Have I Been Pwned or a similar site",
+    "appendixEntry": "Sometimes data breaches are to blame for a hacked account, and so it can be worth checking if the email associated with the account was recently involved in such an incident by visiting Have I Been Pwned or a similar site.",
     "routineEntry":"",
     "answers":[
       {

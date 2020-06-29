@@ -3,7 +3,7 @@ var section1 = [
     "isQuestion": false,
     "id":"q9",
     "title": "Scenario one",
-    "paragraph":["In this first scenario, we'll look at security threats which occur through organizational communications channels. A very common example of this that you've no doubt already experienced, is that of the suspicious email. Staff may already be aware of some 'red flags' from their personal experience of spam emails, but scammers are becoming more sophsticated all the time and attacks can be especially persuasive in instances where they have been directly targeting civil society organizations.", "An example of this is fake Google notifications sent with a request to 'review' some account detail by logging in using the provided link - at which point the login details are stolen by the attackers. Other risks can come from unexpected attachments containing malware or urgent requests for sensitive information from attackers impersonating one of the recipients trusted contacts.","Although we're talking about email here, this section will also look at other methods as really any communications channel can be vulnerable and should be considered when building your security policy."]
+    "paragraph":["In this first scenario, we'll look at security threats which occur through organizational communications channels. A very common example of this that you've no doubt already experienced, is that of the suspicious email. Staff may already be aware of some 'red flags' from their personal experience of spam emails, but scammers are becoming more sophisticated all the time and attacks can be especially persuasive in instances where they have been directly targeting civil society organizations.", "An example of this is fake Google notifications sent with a request to 'review' some account detail by logging in using the provided link - at which point the login details are stolen by the attackers. Other risks can come from unexpected attachments containing malware or urgent requests for sensitive information from attackers impersonating one of the recipients trusted contacts.","Although we're talking about email here, this section will also look at other methods as really any communications channel can be vulnerable and should be considered when building your security policy."]
   },
   {
     "isQuestion": true,
@@ -20,7 +20,7 @@ var section1 = [
         "storeAs":"",
         "excludes":[],
         "policyEntry":"[organisation-name] requires staff to use PGP to encrypt sensitive emails. If you need help with setting up, please contact [security-contact-name].",
-        "routineEntry":"",
+        "routineEntry":"Sending an email containing confidential information? Hide it from prying eyes by encrypting it with your PGP key.",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -28,7 +28,6 @@ var section1 = [
             "linksList": ""
           }
         ],
-        "routineEntry":"Sending an email containing confidential information? Hide it from prying eyes by encrypting it with your PGP key.",
       },
       {
         "type":"radio",
@@ -36,7 +35,7 @@ var section1 = [
         "storeAs":"",
         "excludes":[],
         "policyEntry":"[organisation-name] prefers some staff to use PGP to encrypt sensitive emails. You will be informed if this applies to you and offered help with setting up, should you require it.",
-        "routineEntry":"",
+        "routineEntry":"If you have a PGP key, please use it to encrypt emails containing sensitive information.",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -44,7 +43,6 @@ var section1 = [
             "linksList": ""
           }
         ],
-        "routineEntry":"If you have a PGP key, please use it to encrypt emails containing sensitive information.",
       },
       {
         "type":"radio",
@@ -298,7 +296,7 @@ var section1 = [
     "routineEntry":"",
     "answers":[
       {
-        "type":"textarea", // check for this before making an input field
+        "type":"textarea",
         "answerText":"",
         "placeholder":"Here are a few examples: \n\nIf the email gives you a login link: open a new browser window and sign into the site there without using the link. Emailed links can have subtle changes made to them which redirect users to malicious sites for collecting login details. \n\nIf the email isn’t addressed to you, but to multiple people: attackers often send messages to large groups in order to ‘catch out’ as many people as possible \n\nIf the email has an unexpected attachment: don’t open the file unless you have contacted the sender through another channel to verify it. If you clicked on a link or opened an unexpected attachment, even from a trusted contact: disconnect from the internet and cease using the device – use a different device to change any passwords you used on that device.",
         "storeAs":"[do-this-if-phished]",

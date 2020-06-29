@@ -130,7 +130,7 @@ var section5 = [
         "storeAs":"",
         "excludes":[],
         "policyEntry":"Before your guest arrives, you should ensure that in-office staff are aware of their impending visit so they can prepare accordingly.",
-        "routineEntry":"Let people know if you’re bringing a visitor to the office",
+        "routineEntry":"Let people know if you’re bringing a visitor to the office.",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -145,7 +145,7 @@ var section5 = [
         "storeAs":"",
         "excludes":[],
         "policyEntry":"Visitors are expected to sign in when they enter the premises and sign out when they leave.",
-        "routineEntry":"Has your guest signed in and out?",
+        "routineEntry":"Has your guest signed in and out of the office?",
         "appendixEntry":[
           {
             "reviewList":"",
@@ -240,7 +240,7 @@ var section5 = [
         "placeholder": "e.g. he/him",
         "storeAs":"[office-security-contact-pronouns]",
         "excludes":[],
-        "policyEntry":"Their pronouns are [office-security-contact-pronouns]",
+        "policyEntry":"Their pronouns are [office-security-contact-pronouns].",
         "routineEntry":"",
         "appendixEntry":[
           {
@@ -260,7 +260,7 @@ var section5 = [
         "routineEntry":"",
         "appendixEntry":[
           {
-            "reviewList":"Is [office-security-contact-email] the most-up-to-date email for [security-contact-name]",
+            "reviewList":"Is [office-security-contact-email] the most-up-to-date email for [security-contact-name]?",
             "tipList": "",
             "linksList": ""
           }
@@ -276,7 +276,7 @@ var section5 = [
         "routineEntry":"",
         "appendixEntry":[
           {
-            "reviewList":"Is [office-security-contact-phone] the most-up-to-date email for [security-contact-name]",
+            "reviewList":"Is [office-security-contact-phone] the most-up-to-date phone for [security-contact-name]?",
             "tipList": "",
             "linksList": ""
           }
@@ -428,7 +428,7 @@ var section5 = [
         "storeAs":"",
         "excludes":[],
         "policyEntry":"Staff working remotely should know who is able to enter their office. Please avoid allowing access to strangers unless precautions are taken to lock confidential papers away and turn off computers before the visit.",
-        "routineEntry":"Prevent others from accessing your workspace unsupervised",
+        "routineEntry":"Prevent others from accessing your workspace unsupervised.",
         "appendixEntry":[
           {
             "reviewList":"",

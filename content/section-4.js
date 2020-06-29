@@ -3,7 +3,7 @@ var section4 = [
     "isQuestion": false,
     "id":"q28",
     "title": "Scenario four",
-    "paragraph":["Travelling to conferences and other work-related events may involve crossing a border or two, which can be a headache for security-conscious folks as the security process requires your devices to be out of your sight, at least for a few minutes. If you're detained for extra screening that can turn into an extended period of time, during which your devices may be accessed without your knowledge - you could then be stuck with a potentially compromised device while far from home.", "Going to the border with your devices encrypted (if possible), locked and holding little to no sensitive data is the safest approach. In addition, having a travel plan and a 'buddy' to check in with can make it easier to deal with an emergency and trigger an escalation back at the office", "It's important to remind staff to know their rights when crossing borders, especially as laptop stickers, authentication keys and an unusually empty device are all elements that can make them look suspicious. Staff should also remember to stay calm and polite during border interactions as lying, rudeness and physical interference with an agent's search will not help the situation."]
+    "paragraph":["Travelling to conferences and other work-related events may involve crossing a border or two, which can be a headache for security-conscious folks as the security process requires your devices to be out of your sight, at least for a few minutes. If you're detained for extra screening that can turn into an extended period of time, during which your devices may be accessed without your knowledge - you could then be stuck with a potentially compromised device while far from home.", "Going to the border with your devices encrypted (if possible), locked and holding little to no sensitive data is the safest approach. In addition, having a travel plan and a 'buddy' to check in with can make it easier to deal with an emergency and trigger an escalation back at the office.", "It's important to remind staff to know their rights when crossing borders, especially as laptop stickers, authentication keys and an unusually empty device are all elements that can make them look suspicious. Staff should also remember to stay calm and polite during border interactions as lying, rudeness and physical interference with an agent's search will not help the situation."]
   },
   {
     "isQuestion": true,
@@ -371,7 +371,7 @@ var section4 = [
     "tips":[
       {"relevance":""},
       {"meaning":"Circumvention tools are usually run by small organizations who rely on funding and donations in order to keep providing a free or low-cost service, while larger VPNs tend to offer additional features and support in exchange for a more expensive subscription plan."},
-      {"implementation":"Asking staff to pay for their own VPN subscription can make it tough for those on a lower income to sufficiently protect their internet connection, putting them at risk and impacting their work. Instead, consider covering part of the cost or migrating to a service with a free plan."},
+      {"implementation":"Asking staff to pay for their own VPN subscription can make it tough for those on a lower income to sufficiently protect their internet connection, putting them at risk and impacting their work. Instead, consider covering at least part of the cost or migrating to a service with a free plan."},
       {"more": ["free vs paid vpns"]}
     ]
   },
@@ -485,7 +485,7 @@ var section4 = [
     "tips":[
       {"relevance":""},
       {"meaning":"Staff should not make assumptions about the level of privacy they can expect in their destination region. Having a plan to help them prepare for invasive searches, device loss and other issues means that they're not stuck abroad with no support."},
-      {"implementation":"Staff who are travelling alone, or who may be particularly vulnerable to attack while abroad, should have their travel security preparation prioritised"},
+      {"implementation":"Staff who are travelling alone, or who may be particularly vulnerable to attack while abroad, should have their travel security preparation prioritised."},
       {"more": ["things to consider when crossing the border"]}
     ]
   }

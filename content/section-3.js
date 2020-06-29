@@ -46,7 +46,7 @@ var section3 = [
       }
     ],
     "tips":[
-      {"relevance":"If your organization provides devices to staff or installs work profiles on their personal devices"},
+      {"relevance":"If your organization provides devices to staff or installs work profiles on their personal devices."},
       {"meaning":"Recent developments in facial and fingerprint recognition have led to biometric authentication becoming a convenient alternative to passwords, although there are security flaws which should be considered. It's important to also set up a password, code or phrase as an extra barrier that can't be as easily circumvented."},
       {"implementation":"The unlock method is irrelevant if devices are almost never locked; enabling the automatic screen lock helps to ensure that others can’t walk right through the open doors of an unlocked device."},
       {"more": ["security of face unlock id", "creating strong passwords", "security of biometric authentication"]}
