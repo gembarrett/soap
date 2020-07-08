@@ -4,7 +4,7 @@ templates.policyTemplate = function(data){
   var resources = ros[0].background[0].links;
   var links = "<div><p>For more information on organizational and personal security, and how you can get the most out of your new policy, check out these resources:</p>";
   for (var r = 0; r<resources.length; r++){
-    links += `<a href="`+resources[r].url+`" target="_blank" class="btn btn-seco">`+resources[r].name+`</a>`;
+    links += `<a href="`+resources[r].url+`" target="_blank" class="btn btn-seco" title="Get more info about `+resources[r].name+`">`+resources[r].name+`</a>`;
   }
   txt = '<button class="btn btn-prim pink-border-glow" onclick="downloadPolicy(\'plain\')"><i class="fas fa-download"></i> Text</button>';
   md = '<button class="btn btn-prim pink-border-glow" onclick="downloadPolicy(\'markdown\')"><i class="fas fa-download"></i> Markdown</button>';

@@ -793,6 +793,15 @@ form > div > div > input:checked + label {
   opacity:0.6;
 }
 
+/* styles for highlighting current element in focus */
+form > div > div > input[type="radio"]:focus + label,
+form > div > div > input[type='checkbox']:focus + label,
+input[type="text"]:focus,
+textarea:focus,
+#editBtn {
+  box-shadow: 0px 0px 1em #b93168;
+}
+
 .q0-only {
   font-size: 1em;
   color: #fff;

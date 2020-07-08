@@ -446,4 +446,11 @@
   .buildPage #menu li:first-child {
     display: none;
   }
+  #head > a {
+    flex: 0 0 auto;
+  }
+  #editBtn {
+    min-height: 44px;
+    line-height: 44px;
+  }
 }
