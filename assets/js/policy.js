@@ -156,9 +156,9 @@ function compileDoc(p,a){
     prevQ = qRef;
   }
 
-  doc.plain = 'Organizational Security Policy\n\nCreated using SOAP v.'+soapv+' on '+dateStamp()+'\n\n'+contextP.join('\n');
-  doc.markdown = '# Organizational Security Policy \n#### Created using SOAP v.'+soapv+' on '+dateStamp()+'\n\n'+contextP.join('\n');
-  doc.html = '<!DOCTYPE html><html><head><title>Organizational Security Policy '+dateStamp()+'</title></head><body><h1>Organizational Security Policy</h1><h4>Created using SOAP v.'+soapv+' on '+dateStamp()+'</h4><p>'+contextP.join('</p><p>')+'</p>';
+  doc.plain = 'Organizational Security Policy\n\nCreated '+dateStamp()+'\n\n'+contextP.join('\n');
+  doc.markdown = '# Organizational Security Policy \n#### Created '+dateStamp()+'\n\n'+contextP.join('\n');
+  doc.html = '<!DOCTYPE html><html><head><title>Organizational Security Policy '+dateStamp()+'</title></head><body><h1>Organizational Security Policy</h1><h4>Created '+dateStamp()+'</h4><p>'+contextP.join('</p><p>')+'</p>';
 
   if (deviceP.length > 0){
     doc.plain += '\n\nDevice Security\n' + deviceP.join('\n');
@@ -227,9 +227,9 @@ function compileDoc(p,a){
       doc.html += '<h2>Everyday practices</h2><ul><li>' + routineDoc.join('</li><li>')+'</li></ul>';
     }
   }
-  doc.plain += '\n\nPlease note: it is recommended that this policy undergoes a legal review prior to being implemented in your organization.';
-  doc.markdown += '\n\n#### *Please note: it is recommended that this policy undergoes a legal review prior to being implemented in your organization.*';
-  doc.html += '<h4>Please note: it is recommended that this policy undergoes a legal review prior to being implemented in your organization.</h4></body></html>';
+  doc.plain += '\n\nPlease note: it is recommended that this policy undergoes a legal review prior to being implemented in your organization. \n\nBuilt with SOAP v.'+soapv;
+  doc.markdown += '\n\n#### *Please note: it is recommended that this policy undergoes a legal review prior to being implemented in your organization.* \n\n##### Built with SOAP v.'+soapv;
+  doc.html += '<h4>Please note: it is recommended that this policy undergoes a legal review prior to being implemented in your organization.</h4><h5>Built with SOAP v. '+soapv+'</h5></body></html>';
   output = doc;
   return doc;
 }
