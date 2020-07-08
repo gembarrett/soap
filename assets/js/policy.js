@@ -156,9 +156,9 @@ function compileDoc(p,a){
     prevQ = qRef;
   }
 
-  doc.plain = 'Organizational Security Policy\n\nCreated '+dateStamp()+'\n\n'+contextP.join('\n');
-  doc.markdown = '# Organizational Security Policy \n#### Created '+dateStamp()+'\n\n'+contextP.join('\n');
-  doc.html = '<!DOCTYPE html><html><head><title>Organizational Security Policy '+dateStamp()+'</title></head><body><h1>Organizational Security Policy</h1><h4>Created '+dateStamp()+'</h4><p>'+contextP.join('</p><p>')+'</p>';
+  doc.plain = 'Organizational Security Policy\n\nCreated using SOAP v.'+soapv+' on '+dateStamp()+'\n\n'+contextP.join('\n');
+  doc.markdown = '# Organizational Security Policy \n#### Created using SOAP v.'+soapv+' on '+dateStamp()+'\n\n'+contextP.join('\n');
+  doc.html = '<!DOCTYPE html><html><head><title>Organizational Security Policy '+dateStamp()+'</title></head><body><h1>Organizational Security Policy</h1><h4>Created using SOAP v.'+soapv+' on '+dateStamp()+'</h4><p>'+contextP.join('</p><p>')+'</p>';
 
   if (deviceP.length > 0){
     doc.plain += '\n\nDevice Security\n' + deviceP.join('\n');

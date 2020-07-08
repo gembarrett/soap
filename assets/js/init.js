@@ -1,3 +1,6 @@
+// update current SOAP version here
+var soapv = "1.1.0";
+
 var templates = {};
 var controllers = {};
 var views = {};
