@@ -30,6 +30,7 @@ function reactToPress(e){
         // FIXME: if you hold the Enter button down you can swiftly skip alllllllll the questions :/
         var subBtn = document.querySelector("#submitAnswers");
         subBtn.click();
+        console.log('redirect focus');
         break;
       // this key won't be relevant on home page
       case "KeyS":
