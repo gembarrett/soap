@@ -26,11 +26,12 @@ function reactToPress(e){
         break;
       // this key won't be relevant on home page
       case "Enter":
-        // simulate a click on the edit button
-        // FIXME: if you hold the Enter button down you can swiftly skip alllllllll the questions :/
+        // simulate a click on the next button
+        // FIXME: if you hold the Enter button down you can swiftly skip alllllllll the questions
         var subBtn = document.querySelector("#submitAnswers");
         subBtn.click();
-        console.log('redirect focus');
+        // reset the focus to top of the page
+        document.getElementById('homeLink').focus();
         break;
       // this key won't be relevant on home page
       case "KeyS":
