@@ -23,7 +23,7 @@ templates.policyTemplate = function(data){
         <p>Edit your policy below for copying and pasting into your own file.</p>
         <textarea class="policyHolder">`+docContent.plain+`</textarea>
       </div>
-      <div id="resources" class="window">
+      <div id="resources" class="window pink-border-glow">
         <h3>Learn more</h3>`
         +links+`</div>
       </div>
