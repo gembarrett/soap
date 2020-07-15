@@ -11,8 +11,7 @@ function reactToPress(e){
     var focusEl = document.activeElement;
 
     // is text field or textarea in focus
-    // FIX: check for label input too
-    if (focusEl.type === "textarea" || focusEl.type === "text"){
+    if (focusEl.type === "textarea" || focusEl.type === "text" || focusEl.isContentEditable){
       // do nothing
       return;
     } else {
@@ -53,7 +52,7 @@ function reactToPress(e){
         // Space to submit
         case keyNavArr[3]:
           // FIX: investigate why q1 is skipped when user navigates from home using this key
-          // is submit button enabled
+          // is submit button enabled (it's disabled when in edit mode)
           if (document.querySelector("#submitAnswers").disabled){
             // do nothing
             break;
