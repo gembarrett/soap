@@ -17,7 +17,7 @@ templates.homeSection = function(data){
     <div class="homeSectionOverview"><p>`+text.subhead+`</p>`
     +list+
     `<details>
-    <summary>More</summary>
+    <summary title="Click or press Enter (while focused) to view more information">More</summary>
       <p>`+moreText+`</p>
     </details>
     </div>

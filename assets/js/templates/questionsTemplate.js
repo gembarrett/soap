@@ -29,7 +29,7 @@ templates.questionsTemplate = function(data){
           panel += '</p>';
         }
         // add the question
-        content += '<details class="question-panel"><summary><h2>' + question.q + '</h2></summary>';
+        content += '<details class="question-panel"><summary title="Click or press Enter (while focused) to view more information"><h2>' + question.q + '</h2></summary>';
         // if the panel content exists add it
         content += panel !== "" ? panel+'</details>' : '<br />';
 

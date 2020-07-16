@@ -68,7 +68,7 @@ function reactToPress(e){
           }else{
             // click it
             document.querySelector("#submitAnswers").click();
-            // reset focus
+            // reset focus to logo otherwise elements get selected on each press
             document.getElementById('homeLink').focus();
             // prevent scroll to bottom of page
             e.preventDefault();
