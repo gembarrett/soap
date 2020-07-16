@@ -48,7 +48,7 @@ templates.questionsTemplate = function(data){
            // if this is an input field then create the label
            if (question.answers[j].type !== 'textarea') {
              thisLabel = '<label for="' +question.id+ "-"+ j+ '-answer"';
-             thisLabel += question.answers[j].editable ? ' class="btn-edit" contenteditable="true">' : '>';
+             thisLabel += question.answers[j].editable ? ' class="btn-edit" contenteditable="true"  title="Click or press S to select this editable option">' : '  title="Click or press S to select this option">';
              thisLabel += question.answers[j].answerText+ '</label>';
            }
            // start the form
@@ -85,7 +85,7 @@ templates.questionsTemplate = function(data){
       // no closing div, just closing form
       content += question.isQ ? '</div></form>' : '</form>';
   }
-  content += '<div class="btn-wrap wrap-r"><button disabled id="previewPolicy" class="previewButton btn btn-seco">Preview</button><button id="submitAnswers" onclick="handleSubmit()" class="nextButton btn btn-prim">Got it!</button></div>';
+  content += '<div class="btn-wrap wrap-r"><button disabled id="previewPolicy" class="previewButton btn btn-seco" title="Click or press P to view your policy preview">Preview</button><button id="submitAnswers" onclick="handleSubmit()" class="nextButton btn btn-prim" title="Click or press Space to go to the next question">Got it!</button></div>';
   content += '<small><a href="mailto:feedback@usesoap.app?subject=Suggested%20change&amp;body=The%20problem%20with%20this%20page%20is%3A%0AThis%20is%20what%20I%20expected%3A%0AAny%20other%20info%3A%0A%0AI%20%5Bam%20%2F%20am%20not%5D%20ok%20with%20being%20contacted%20about%20this%20suggested%20change%20(delete%20as%20appropriate)">Suggest changes by email</a> or <a href="https://github.com/gembarrett/soap/issues">on GitHub</a></small></div>';
   return content;
 };

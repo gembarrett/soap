@@ -70,8 +70,8 @@ function reactToPress(e){
             document.querySelector("#submitAnswers").click();
             // reset focus
             document.getElementById('homeLink').focus();
-            // FIXME: investigate why q4 scrolls down on load
-            window.scrollTo(0,0);
+            // prevent scroll to bottom of page
+            e.preventDefault();
             break;
           }
       }
