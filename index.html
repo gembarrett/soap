@@ -21,6 +21,7 @@
     <script src="assets/js/init.js"></script>
     <!-- these may need to be moved further down or refactored -->
     <script src="assets/js/start.js"></script>
+    <script src="assets/js/keyboard.js"></script>
     <script src="assets/js/overlay.js"></script>
     <script src="assets/js/edit.js"></script>
     <script src="assets/js/policy.js"></script>
@@ -31,14 +32,14 @@
   </head>
   <body>
     <div id="head" class="nav-start contain">
-      <a href="/" title="Go to the home page">
+      <a href="/" title="Go to the home page" id="homeLink">
         <img id="logo" alt="SOAP logo" src="assets/images/soapLogoW.png" />
       </a>
 
       <div class="header-menu">
         <ul id="menu" class="links">
           <li><a id="bu" href="/#build" title="Build an organizational security policy">Build policy</a></li>
-          <li id="editBtn" class="disabled">EDIT</li>
+          <li id="editBtn" class="disabled" tabindex="0" title="Click or press E to Edit your answers">EDIT</li>
         </ul>
       </div>
 
