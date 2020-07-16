@@ -35,6 +35,12 @@ a.btn:hover {
   text-decoration: none;
 }
 
+:focus {
+  border-style: solid;
+  border-width: 0.5px;
+}
+
+
 @font-face {
   font-family: 'SinkinSansLight';
   src: url('webfonts/SinkinSans-300Light.otf');
@@ -793,14 +799,6 @@ form > div > div > input:checked + label {
   opacity:0.6;
 }
 
-/* styles for highlighting current element in focus */
-form > div > div > input[type="radio"]:focus + label,
-form > div > div > input[type='checkbox']:focus + label,
-input[type="text"]:focus,
-textarea:focus,
-#editBtn {
-  box-shadow: 0px 0px 1em #b93168;
-}
 
 .q0-only {
   font-size: 1em;
@@ -927,9 +925,27 @@ textarea[placeholder] {
   line-height: 1.4em;
 }
 
-.pink-border-glow {
+/* styles for highlighting current element in focus */
+.pink-border-glow,
+:focus,
+form > div > div > input[type="radio"]:focus + label,
+form > div > div > input[type="checkbox"]:focus + label,
+input[type="text"]:focus,
+textarea:focus,
+#homeLink:focus > img {
   box-shadow: 0px 0px 1em #b93168;
   border-color: #b93168;
+}
+
+/* reset style on logo link */
+#homeLink:focus {
+  box-shadow: initial;
+  border: initial;
+  outline: none;
+}
+button::-moz-focus-inner {
+  outline: none;
+  border: none;
 }
 
 summary h2 {
