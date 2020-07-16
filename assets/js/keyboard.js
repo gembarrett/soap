@@ -3,16 +3,23 @@ const bodyEl = document.getElementsByTagName('body');
 document.addEventListener('keydown', reactToPress);
 
 function reactToPress(e){
-  // is the key code a S, E, W, P or Space
+  // is the key code a S, E, P, Space or Enter
   var keyNavArr = ['KeyS', 'KeyE', 'KeyP', 'Space', 'Enter'];
+  // first up, stop users from skipping through all the questions by sitting on the Enter key
+  if ((e.code === keyNavArr[4]) && (onRepeat(e) === true)){
+    e.preventDefault();
+    return false;
+  }
 
-  if (keyNavArr.includes(e.code)){
+  // if the key is one we are interested in and we're not on repeat
+  if ((keyNavArr.includes(e.code)) && (onRepeat(e) === false)){
     // get the element in focus
     var focusEl = document.activeElement;
     // is text field or textarea in focus
     if (focusEl.type === "textarea" || focusEl.type === "text" || focusEl.isContentEditable){
-      // stop the form submitting and reloading
+      // when you press Enter inside text fields
       if (e.code === keyNavArr[4]){
+        // stop the form submitting and reloading
         e.preventDefault();
       }
       // do nothing
@@ -69,5 +76,14 @@ function reactToPress(e){
           }
       }
     }
+  }
+  return false;
+}
+
+function onRepeat(e){
+  if (e.repeat){
+    return true;
+  } else {
+    return false;
   }
 }
