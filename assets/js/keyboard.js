@@ -1,17 +1,20 @@
 const bodyEl = document.getElementsByTagName('body');
 // user presses a key
-document.addEventListener('keyup', reactToPress);
+document.addEventListener('keydown', reactToPress);
 
 function reactToPress(e){
   // is the key code a S, E, W, P or Space
-  var keyNavArr = ['KeyS', 'KeyE', 'KeyP', 'Space'];
+  var keyNavArr = ['KeyS', 'KeyE', 'KeyP', 'Space', 'Enter'];
 
   if (keyNavArr.includes(e.code)){
     // get the element in focus
     var focusEl = document.activeElement;
-
     // is text field or textarea in focus
     if (focusEl.type === "textarea" || focusEl.type === "text" || focusEl.isContentEditable){
+      // stop the form submitting and reloading
+      if (e.code === keyNavArr[4]){
+        e.preventDefault();
+      }
       // do nothing
       return;
     } else {
@@ -20,9 +23,9 @@ function reactToPress(e){
         case keyNavArr[0]:
           // is radio or checkbox in focus
           if (focusEl.type === "radio" || focusEl.type === "checkbox"){
-          // click it
-          focusEl.click();
-          break;
+            // click it
+            focusEl.click();
+            break;
           }else{
             // do nothing
             break;
@@ -51,7 +54,6 @@ function reactToPress(e){
           }
         // Space to submit
         case keyNavArr[3]:
-          // FIX: investigate why q1 is skipped when user navigates from home using this key
           // is submit button enabled (it's disabled when in edit mode)
           if (document.querySelector("#submitAnswers").disabled){
             // do nothing
@@ -61,6 +63,8 @@ function reactToPress(e){
             document.querySelector("#submitAnswers").click();
             // reset focus
             document.getElementById('homeLink').focus();
+            // FIXME: investigate why q4 scrolls down on load
+            window.scrollTo(0,0);
             break;
           }
       }
