@@ -90,18 +90,12 @@ function handleSubmit() {
   // before doing anything else, check if this is a required question
   // isRequired = match[0] ? match[0].required : false;
   // compare the size of answers array to find out if answers have been provided for this question
-  if (id > 0){
+  // if (id > 0){
     // if it's required and there are no answers provided
     // if (isRequired && noAnswers){
     //   canProceed = false;
     // }
-    // if there's at least one answer returned and the button is disabled
-    // enable the preview button
-    prev = document.querySelector('#previewPolicy');
-    if (prev.disabled && (currentState.answers.length === 0 || dict.length === 0)){
-      prev.removeAttribute('disabled');
-    }
-  }
+  // }
 
   if (canProceed){
 
@@ -114,6 +108,12 @@ function handleSubmit() {
         // mark the current question as editable
         match.classList.add("editable");
         collectAnswers(false);
+        // show the preview button if answers are available
+        prev = document.querySelector('#previewPolicy');
+        console.log(prev.disabled, currentState.answers.length, Object.values(dict).length);
+        if (prev.disabled && (currentState.answers.length > 0 || Object.values(dict).length)){
+          prev.removeAttribute('disabled');
+        }
       }
 
       if(parseInt(id) === questionsList.length-1){
