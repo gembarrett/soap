@@ -130,6 +130,14 @@ body.buildPage #page {
   color: #066493;
   cursor: pointer;
 }
+.prompt {
+  cursor: pointer;
+}
+.prompt:hover, .prompt:focus {
+  text-decoration: underline;
+  padding:5px 20px;
+}
+
 .nav-scroll #editBtn {
   color:#fff;
 }
@@ -179,7 +187,7 @@ body.buildPage #page {
   margin-left: auto;
 }
 
-.links a, .links a:visited {
+.links a, .links a:visited, .prompt {
   padding: 5px;
   border:2px solid;
   border-radius: 5%;
@@ -187,7 +195,7 @@ body.buildPage #page {
   color:inherit;
 }
 
-.links a:hover, .links a.active {
+.links a:hover, .links a.active, .prompt:hover, .prompt:active {
   border-color: #066493;
 }
 .nav-scroll .links a:hover, .nav-scroll .links a.active {
@@ -216,7 +224,7 @@ body.buildPage #page {
   color: #fff;
 }
 
-#foot a {
+#foot li {
   font-size: 0.8rem;
 }
 
