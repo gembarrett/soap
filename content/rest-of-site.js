@@ -58,7 +58,7 @@ var ros = [
         "head":"What's behind the SOAP project?",
         "subhead":"SOAP was researched, designed, and built by Gem Barrett, with funding from the Open Technology Fund. In developing SOAP, research was conducted to understand the frustrations faced and obstacles encountered by organizations when creating, implementing, and maintaining security policies.",
         "list":"",
-        "more":["The findings of this research and accompanying interviews are shared in the report “Securing Civil Society” (<a href='https://usesoap.app/assets/SecuringCivilSociety-report.pdf' target='_blank'>PDF currently available</a> in English, other versions coming soon). These findings, coupled with research into organizational security best practices, helped create the methodology that forms the basis of SOAP’s innovative process."],
+        "more":["The findings of this research and accompanying interviews are shared in the report “Securing Civil Society” (<a href='https://usesoap.app/assets/SecuringCivilSociety-report.pdf' target='_blank'>PDF currently available</a> in English, other versions coming soon). These findings, coupled with research into organizational security best practices, helped create the methodology that forms the basis of SOAP’s innovative process. For updates on SOAP's future development, follow <a href='https://twitter.com/@thatsoapapp' target='_blank'>@thatSOAPapp on Twitter</a>."],
         "links":[
           {
             "name":"SAFETAG by Internews",
