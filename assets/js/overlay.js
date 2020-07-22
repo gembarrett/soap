@@ -4,6 +4,7 @@
 function injectOverlay() {
   var parent = document.querySelector("#page");
   parent.insertAdjacentHTML('afterend', '<div id="preview" class="modal closed"><button id="closePreview"><i class="fas fa-plus-circle"></i></button><div id="inner" class="modalScrollbox"><h3>Policy Preview</h3></div></div><div id="overlay" class="modalOverlay closed"></div>');
+
   var modal = document.querySelector("#preview");
   var scrollbox = document.querySelector("#inner");
   var overlay = document.querySelector("#overlay");
@@ -27,6 +28,7 @@ function injectOverlay() {
 
 // function to show/hide the preview overlay
 function toggleModal(m, o) {
+  console.log('toggling');
   m.classList.toggle("closed");
   o.classList.toggle("closed");
 }
@@ -38,4 +40,23 @@ function toggleInfo(id) {
   panel.classList.toggle("closed");
   query = '#info-trigger-'+id;
   document.querySelector(query).classList.toggle("highlight");
+}
+
+function setUpFeedback(){
+  // listen for click on feedback button
+  var feedbackBtn = document.getElementById('feedbackBtn');
+  var mod = document.getElementById("feedback");
+  var ove = document.getElementById("overlay-feedback");
+  // when it happens, toggle the visibility of these elements
+  feedbackBtn.addEventListener('click', function() {
+    toggleModal(mod,ove);
+  }, false);
+  // listen for click on close button or outside overlay
+  var close = document.querySelector("#close-feedback");
+  close.addEventListener("click", function() {
+    toggleModal(mod, ove);
+  });
+  ove.addEventListener("click", function() {
+    toggleModal(mod, ove);
+  });
 }
