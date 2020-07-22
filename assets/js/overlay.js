@@ -11,22 +11,22 @@ function injectOverlay() {
   var open = document.querySelector("#previewPolicy");
 
   close.addEventListener("click", function() {
-    togglePreview(modal, overlay);
+    toggleModal(modal, overlay);
   });
   overlay.addEventListener("click", function() {
-    togglePreview(modal, overlay);
+    toggleModal(modal, overlay);
   });
 
   open.addEventListener("click", function() {
     collectAnswers(false);
     policyText = compileDoc(true, false);
     scrollbox.innerHTML = policyText.html;
-    togglePreview(modal, overlay);
+    toggleModal(modal, overlay);
   });
 }
 
 // function to show/hide the preview overlay
-function togglePreview(m, o) {
+function toggleModal(m, o) {
   m.classList.toggle("closed");
   o.classList.toggle("closed");
 }
