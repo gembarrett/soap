@@ -52,7 +52,7 @@ function setUpFeedback(){
     toggleModal(mod,ove);
   }, false);
   // listen for click on close button or outside overlay
-  var close = document.querySelector("#close-feedback");
+  var close = document.querySelector("#closeFeedback");
   close.addEventListener("click", function() {
     toggleModal(mod, ove);
   });
