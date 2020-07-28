@@ -23,6 +23,13 @@ templates.policyTemplate = function(data){
         <p>Edit your policy below for copying and pasting into your own file.</p>
         <textarea class="policyHolder">`+docContent.plain+`</textarea>
       </div>
+      <div class="window pink-border-glow">
+        <h3>What did you think?</h3>
+        <div>
+          <p>If you've got a free moment, it would be great to hear your thoughts on SOAP so it can be improved in the future. SOAP doesn't use analytics to follow you around the site, so this is the best way to share your opinion.</p>
+          <a class="btn btn-seco" href="https://feedback024968.typeform.com/to/ykpDnElo" target="_blank">Sure, I'll complete a quick survey!</a>
+        </div>
+      </div>
       <div id="resources" class="window pink-border-glow">
         <h3>Learn more</h3>`
         +links+`</div>
@@ -30,10 +37,11 @@ templates.policyTemplate = function(data){
       <div id="policy-reset" class="window pink-border-glow">
         <h3>Start over</h3>
         <div>
-        <p>All done? You'll need to reload the page before building another policy.</p>
-        <button id="reset" onclick="clearData()" class="btn btn-seco">
-        <i class="fas fa-redo"></i> Build another policy
-        </button></div>
+          <p>All done? You'll need to reload the page before building another policy.</p>
+          <button id="reset" onclick="clearData()" class="btn btn-seco">
+            <i class="fas fa-redo"></i> Build another policy
+          </button>
+        </div>
       </div>
       </div>`;
   return content;

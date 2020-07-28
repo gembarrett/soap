@@ -185,6 +185,7 @@ body.buildPage #page {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  max-width: unset;
 }
 .links {
   list-style: none;
