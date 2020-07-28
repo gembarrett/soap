@@ -177,14 +177,19 @@ body.buildPage #page {
   display:flex;
   flex-direction: row;
 }
-
 .text-buttons-wrap {
   margin: 2em 4em 2em 0;
   max-width: 25%;
 }
+#feedback .text-buttons-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
 .links {
   list-style: none;
   margin-left: auto;
+  cursor: pointer;
 }
 
 .links a, .links a:visited, .prompt {

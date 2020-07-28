@@ -20,7 +20,6 @@
   #policy-edit p{
     display:none;
   }
-
 }
 
 @media (min-width:600px) and (max-width:1399px) {
@@ -84,6 +83,12 @@
   }
   .mobileVis{
     display: block;
+  }
+}
+
+@media (min-width: 900px) {
+  #feedback{
+    height:60%;
   }
 }
 
@@ -153,6 +158,12 @@
 }
 
 @media (max-width:600px) {
+  #feedback .text-buttons-wrap {
+    flex-direction: column;
+  }
+  #feedback {
+    height: 60%;
+  }
   #head label {
     font-size: 1.5rem;
     padding: 0.5em 0.5em 1em 1em;
