@@ -110,7 +110,6 @@ function handleSubmit() {
         collectAnswers(false);
         // show the preview button if answers are available
         prev = document.querySelector('#previewPolicy');
-        console.log(prev.disabled, currentState.answers.length, Object.values(dict).length);
         if (prev.disabled && (currentState.answers.length > 0 || Object.values(dict).length)){
           prev.removeAttribute('disabled');
         }

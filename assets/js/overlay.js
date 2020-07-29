@@ -50,10 +50,18 @@ function setUpFeedback(){
   // when it happens, toggle the visibility of these elements and generate the mailto link
   feedbackBtn.addEventListener('click', function() {
     // what page are we on
-    // if we're on build, which question are we on
-    // if can't get either piece of info then leave blank
-    // generate the mailto link, containing the info if it exists
+    page = whereAreWe();
+    var link;
+    // if we're on a question page
+    if (page !== "Question ID not found"){
+      // generate the mailto link, containing the info if it exists
+      link = "mailto:feedback@usesoap.app?subject=Suggested%20change%20(question%20"+page+")";
+    } else {
+      link = "mailto:feedback@usesoap.app?subject=Suggested%20change";
+    }
+
     // update the link used in the modal
+    document.getElementById('updateLink').href = link;
     // then show the modal and overlay
     toggleModal(mod,ove);
   }, false);
@@ -65,4 +73,16 @@ function setUpFeedback(){
   ove.addEventListener("click", function() {
     toggleModal(mod, ove);
   });
+}
+
+function whereAreWe(){
+  // is currentState available
+  if (currentState.questionQ){
+    // return the questionQ
+    return currentState.questionQ;
+  }
+  // if not then handle error
+  else {
+    return "Question ID not found";
+  }
 }
