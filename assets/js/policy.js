@@ -402,3 +402,11 @@ function getRoutineEntry(question, previous, answer, routines, content){
   }
   return routines;
 }
+
+function resetChanges(){
+  console.log('policy editing!');
+}
+
+function handlePolicyEdit() {
+  console.log('policy editing!');
+}
