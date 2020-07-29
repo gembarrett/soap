@@ -16,6 +16,51 @@ var section2 = [
     "answers":[
       {
         "type":"radio",
+        "answerText":"KeePass",
+        "storeAs":"",
+        "excludes":[16],
+        "policyEntry":"In particular, we ask you to use KeePass and if you require any help with set up or using this tool then you should discuss it with [security-contact-name].",
+        "routineEntry":"Protect your accounts: use KeePass to generate and store your passwords!",
+        "appendixEntry":[
+          {
+            "reviewList":"",
+            "tipList": "",
+            "linksList": "KeePass website: https://keepass.info"
+          }
+        ],
+      },
+      {
+        "type":"radio",
+        "answerText":"Bitwarden",
+        "storeAs":"",
+        "excludes":[16],
+        "policyEntry":"In particular, we ask you to use Bitwarden and if you require any help with set up or using this tool then you should discuss it with [security-contact-name].",
+        "routineEntry":"Protect your accounts: use Bitwarden to generate and store your passwords!",
+        "appendixEntry":[
+          {
+            "reviewList":"",
+            "tipList": "",
+            "linksList": "Bitwarden website: https://bitwarden.com"
+          }
+        ],
+      },
+      {
+        "type":"radio",
+        "answerText":"PasswordSafe",
+        "storeAs":"",
+        "excludes":[16],
+        "policyEntry":"In particular, we ask you to use PasswordSafe and if you require any help with set up or using this tool then you should discuss it with [security-contact-name].",
+        "routineEntry":"Protect your accounts: use PasswordSafe to generate and store your passwords!",
+        "appendixEntry":[
+          {
+            "reviewList":"",
+            "tipList": "",
+            "linksList": "PasswordSafe website: https://www.pwsafe.org"
+          }
+        ],
+      },
+      {
+        "type":"radio",
         "answerText":"LastPass",
         "storeAs":"",
         "excludes":[16], // no browser storage
@@ -41,36 +86,6 @@ var section2 = [
             "reviewList":"",
             "tipList": "",
             "linksList": "1Password website: https://1password.com"
-          }
-        ],
-      },
-      {
-        "type":"radio",
-        "answerText":"KeePass",
-        "storeAs":"",
-        "excludes":[16],
-        "policyEntry":"In particular, we ask you to use KeePass and if you require any help with set up or using this tool then you should discuss it with [security-contact-name].",
-        "routineEntry":"Protect your accounts: use KeePass to generate and store your passwords!",
-        "appendixEntry":[
-          {
-            "reviewList":"",
-            "tipList": "",
-            "linksList": "KeePass website: https://keepass.info"
-          }
-        ],
-      },
-      {
-        "type":"radio",
-        "answerText":"PasswordSafe",
-        "storeAs":"",
-        "excludes":[16],
-        "policyEntry":"In particular, we ask you to use PasswordSafe and if you require any help with set up or using this tool then you should discuss it with [security-contact-name].",
-        "routineEntry":"Protect your accounts: use PasswordSafe to generate and store your passwords!",
-        "appendixEntry":[
-          {
-            "reviewList":"",
-            "tipList": "",
-            "linksList": "PasswordSafe website: https://www.pwsafe.org"
           }
         ],
       },
