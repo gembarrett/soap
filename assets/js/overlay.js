@@ -47,8 +47,14 @@ function setUpFeedback(){
   var feedbackBtn = document.getElementById('feedbackBtn');
   var mod = document.getElementById("feedback");
   var ove = document.getElementById("overlay-feedback");
-  // when it happens, toggle the visibility of these elements
+  // when it happens, toggle the visibility of these elements and generate the mailto link
   feedbackBtn.addEventListener('click', function() {
+    // what page are we on
+    // if we're on build, which question are we on
+    // if can't get either piece of info then leave blank
+    // generate the mailto link, containing the info if it exists
+    // update the link used in the modal
+    // then show the modal and overlay
     toggleModal(mod,ove);
   }, false);
   // listen for click on close button or outside overlay
