@@ -306,38 +306,49 @@ function clearData(){
 
 
 // function to download data to a file
-function downloadPolicy(type) {
-    var data = output[type];
-    var format = 'text/'+type;
-    var filename = "SOAP-policy";
-    if (type === 'markdown'){
-      filename += '.md';
-    } else if (type === 'plain'){
-      filename += '.txt';
+function downloadPolicy(type, edit) {
+  var data;
+  // if we're looking to download an edited policy
+  if (edit === true){
+    // grab the edited textcontent
+    var editedPolicy = document.querySelector('.policyHolder').value;
+    // store it in data
+    if (editedPolicy !== ""){
+      data = editedPolicy;
     } else {
-      filename += '.'+type;
+      data = output[type];
     }
+  } else {
+    // else grab the content from output as usual
+    data = output[type];
+  }
 
-    var file = makeFile(data, filename, format);
+  var format = 'text/'+type;
+  var filename = "SOAP-policy";
+  if (type === 'markdown'){
+    filename += '.md';
+  } else if (type === 'plain'){
+    filename += '.txt';
+  } else {
+    filename += '.'+type;
+  }
 
-    // var file = new File([data], filename, {
-    //   type: format,
-    // });
+  var file = makeFile(data, filename, format);
 
-    if (window.navigator.msSaveOrOpenBlob) // IE10+
-        window.navigator.msSaveOrOpenBlob(file, filename);
-    else { // Others
-        var a = document.createElement("a"),
-                url = URL.createObjectURL(file);
-        a.href = url;
-        a.download = filename;
-        document.body.appendChild(a);
-        a.click();
-        setTimeout(function() {
-            document.body.removeChild(a);
-            window.URL.revokeObjectURL(url);
-        }, 1000);
-    }
+  if (window.navigator.msSaveOrOpenBlob){ // IE10+
+      window.navigator.msSaveOrOpenBlob(file, filename);
+  } else { // Others
+      var a = document.createElement("a"),
+              url = URL.createObjectURL(file);
+      a.href = url;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      setTimeout(function() {
+          document.body.removeChild(a);
+          window.URL.revokeObjectURL(url);
+      }, 1000);
+  }
 }
 
 function makeFile(d, n, f){
@@ -401,4 +412,9 @@ function getRoutineEntry(question, previous, answer, routines, content){
     routines.push(thisContent);
   }
   return routines;
+}
+
+function resetChanges(){
+  // could also use textContent instead of output here
+  document.querySelector('.policyHolder').value = output.plain;
 }
