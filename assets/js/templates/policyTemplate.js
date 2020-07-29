@@ -7,8 +7,7 @@ templates.policyTemplate = function(data){
     links += `<a href="`+resources[r].url+`" target="_blank" class="btn btn-seco" title="Get more info about `+resources[r].name+`">`+resources[r].name+`</a>`;
   }
   txt = '<button class="btn btn-prim pink-border-glow" onclick="downloadPolicy(\'plain\')"><i class="fas fa-download"></i> Text (.txt)</button>';
-  // need to change this so the function gets updated version but still holds onto the original version (to reset changes)
-  editTxt = '<button class="btn btn-prim pink-border-glow" onclick="handlePolicyEdit()"><i class="fas fa-download"></i> Download this policy text (.txt)</button>';
+  editTxt = '<button class="btn btn-prim pink-border-glow" onclick="downloadPolicy(\'plain\', true)"><i class="fas fa-download"></i> Download this policy text (.txt)</button>';
 
   md = '<button class="btn btn-prim pink-border-glow" onclick="downloadPolicy(\'markdown\')"><i class="fas fa-download"></i> Markdown (.md)</button>';
   html = '<button class="btn btn-prim pink-border-glow" onclick="downloadPolicy(\'html\')"><i class="fas fa-download"></i> HTML (.html)</button>';
@@ -26,7 +25,7 @@ templates.policyTemplate = function(data){
         <div>
           <p>Edit your policy below for copying and pasting into your own file.</p>
           <textarea class="policyHolder">`+docContent.plain+`</textarea>
-          <button class="btn btn-seco">
+          <button class="btn btn-seco" onclick="resetChanges()">
             <i class="fas fa-redo"></i> Reset changes
           </button>
           `+editTxt+`
