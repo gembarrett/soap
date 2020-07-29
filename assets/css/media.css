@@ -230,10 +230,6 @@
   .links li:last-child {
     padding: 0.1em 1em;
   }
-  .links li:first-child {
-    border: 1px solid;
-    padding: 0.1em 1em;
-  }
   .links li {
     min-width: 90px;
   }
