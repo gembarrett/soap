@@ -234,7 +234,6 @@ function toggleEditMode(){
   var editBtn = document.getElementById("editBtn");
   // toggle the editing class on button and page
   editBtn.classList.toggle('editMode');
-  page.classList.toggle('editMode');
   // toggle edit button inner text
   editBtn.innerText = editBtn.innerText == "EDIT" ? "DONE" : "EDIT";
 
