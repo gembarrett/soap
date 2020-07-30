@@ -90,6 +90,7 @@
   #feedback{
     height:40%;
     max-width: 800px;
+    min-height: 200px;
   }
 }
 
