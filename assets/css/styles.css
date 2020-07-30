@@ -990,3 +990,22 @@ summary::marker {
 .header-menu{
   margin:0;
 }
+#spinner {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  z-index: 10;
+  background: #893168;
+  padding:1em;
+}
+#spinner img {
+  max-width: 100px;
+}
+#spinner p{
+  text-align: center;
+  color:#f2eee2;
+}
+#spinner.loading{
+  display: block;
+}

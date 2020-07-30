@@ -79,8 +79,13 @@ function updateProgressBar(){
   el.value++;
 }
 
+function toggleSpinner(){
+  document.getElementById('spinner').classList.toggle('loading');
+}
+
 // this is the function that's called when a user submits an answer
 function handleSubmit() {
+  toggleSpinner();
   // search for the currently shown element - question and answer
   var match = document.querySelector('.current');
   // this gets the current question id number e.g. q0
@@ -128,6 +133,7 @@ function handleSubmit() {
       nextQuestion();
       window.scrollTo(0,0);
   }
+  toggleSpinner();
 }
 
 
