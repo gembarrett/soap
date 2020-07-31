@@ -35,7 +35,7 @@ templates.policyTemplate = function(data){
         <h3>What did you think?</h3>
         <div>
           <p>If you've got a free moment, it would be great to hear your thoughts on SOAP so it can be improved in the future. SOAP doesn't use analytics to follow you around the site, so this is the best way to share your opinion.</p>
-          <a class="btn btn-seco" href="https://feedback024968.typeform.com/to/ykpDnElo" target="_blank">Sure, I'll complete a quick survey!</a>
+          <a class="btn btn-seco" href="https://feedback024968.typeform.com/to/ykpDnElo" target="_blank" title="Click to take a short survey about SOAP">Sure, I'll complete a quick survey!</a>
         </div>
       </div>
       <div id="resources" class="window pink-border-glow">
