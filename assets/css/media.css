@@ -88,9 +88,9 @@
 
 @media (min-width: 900px) {
   #feedback{
-    height:40%;
+    height:50%;
     max-width: 800px;
-    min-height: 200px;
+    min-height: 300px;
   }
 }
 
