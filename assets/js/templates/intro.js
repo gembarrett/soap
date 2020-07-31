@@ -3,7 +3,7 @@ templates.intro = function(data){
   var content = `
     <div id="intro" class="nav-start contain">
       <div id="logoContainer">
-        <div><img id="logoBig" src="assets/images/soapLogoW.png" /></div>
+        <div><img id="logoBig" alt="SOAP logo" src="assets/images/soapLogoW.png" /></div>
         <h1>`+text.head+`</h1>
       </div>
       <h2>`+text.subhead+`</h2>
