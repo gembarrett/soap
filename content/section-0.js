@@ -485,7 +485,7 @@ var section0 = [
       {"relevance":""},
       {"meaning":"Security measures and settings vary in extent and location between operating systems. Specifying those that are relevant and in use at your organization makes it simpler to provide appropriate instructions and questions in the process."},
       {"implementation":""},
-      {"more":["comparing security of operating systems", "desktop/mobile os security features"]}
+      {"more":["comparing security of operating systems", "desktop/mobile os security features", "windows security", "mac security", "linux security", "chrome os security", "ios security", "android security"]}
     ]
   },
   {
