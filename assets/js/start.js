@@ -133,7 +133,6 @@ function handleSubmit() {
       nextQuestion();
       window.scrollTo(0,0);
   }
-  console.log(dict);
   toggleSpinner();
 }
 

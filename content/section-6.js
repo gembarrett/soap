@@ -169,7 +169,7 @@ var section6 = [
       {
         "type":"checkbox",
         "editable":true,
-        "answerText":"Other",
+        "answerText":"other",
         "storeAs":"[alt-network-security]",
         "excludes":[],
         "policyEntry":"Please also note the following rule: [alt-network-security]",
@@ -262,7 +262,7 @@ var section6 = [
       {
         "type":"checkbox",
         "editable":true,
-        "answerText":"Other",
+        "answerText":"other",
         "storeAs":"[alt-browser-security]",
         "excludes":[],
         "policyEntry":"- also, [alt-browser-security]",
@@ -340,7 +340,7 @@ var section6 = [
       {
         "type":"checkbox",
         "editable":true,
-        "answerText":"Other",
+        "answerText":"other",
         "storeAs":"[alt-device-security]",
         "excludes":[],
         "policyEntry":"In addition, please note the following rule: [alt-device-security]",

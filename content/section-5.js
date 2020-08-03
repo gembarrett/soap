@@ -347,7 +347,7 @@ var section5 = [
       {
         "type":"checkbox",
         "editable":true,
-        "answerText":"Other",
+        "answerText":"other",
         "storeAs":"[alt-office-security]",
         "excludes":[],
         "policyEntry":"[alt-office-security]",
@@ -440,7 +440,7 @@ var section5 = [
       {
         "type":"checkbox",
         "editable":true,
-        "answerText":"Other",
+        "answerText":"other",
         "storeAs":"[alt-home-office-security]",
         "excludes":[],
         "policyEntry":"[organisation-name] staff are expected to secure their home office using the following method: [alt-home-office-security]",
