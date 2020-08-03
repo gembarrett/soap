@@ -29,7 +29,7 @@ templates.questionsTemplate = function(data){
           panel += '</p>';
         }
         // add the question
-        content += '<details class="question-panel"><summary title="Click or press Enter (while focused) to view more information"><h2>' + question.q + '</h2></summary>';
+        content += '<details class="question-panel"><summary title="Click or press Space (while focused) to view more information"><h2>' + question.q + '</h2></summary>';
         // if the panel content exists add it
         content += panel !== "" ? panel+'</details>' : '<br />';
 
@@ -85,6 +85,6 @@ templates.questionsTemplate = function(data){
       // no closing div, just closing form
       content += question.isQ ? '</div></form>' : '</form>';
   }
-  content += '<div class="btn-wrap wrap-r"><button disabled id="previewPolicy" class="previewButton btn btn-seco" title="Click or press P to view your policy preview">Preview</button><button id="submitAnswers" onclick="handleSubmit()" class="nextButton btn btn-prim" title="Click or press Space to go to the next question">Got it!</button></div></div>';
+  content += '<div class="btn-wrap wrap-r"><button disabled id="previewPolicy" class="previewButton btn btn-seco" title="Click or press P to view your policy preview">Preview</button><button id="submitAnswers" onclick="handleSubmit()" class="nextButton btn btn-prim" title="Click or press Enter to go to the next question">Got it!</button></div></div>';
   return content;
 };
