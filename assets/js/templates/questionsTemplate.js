@@ -48,7 +48,11 @@ templates.questionsTemplate = function(data){
            // if this is an input field then create the label
            if (question.answers[j].type !== 'textarea') {
              thisLabel = '<label for="' +question.id+ "-"+ j+ '-answer"';
-             thisLabel += question.answers[j].editable ? ' class="btn-edit" contenteditable="true"  title="Click or press S to select this editable option">' : '  title="Click or press S to select this option">';
+             if (question.answers[j].type === 'radio'){
+               thisLabel += ' title="Click or press S to select this option, or arrow keys to choose another">';
+             } else {
+               thisLabel += question.answers[j].editable ? ' class="btn-edit" contenteditable="true" title="Click or press S to select this editable option">' : ' title="Click or press S to select this option">';
+             }
              thisLabel += question.answers[j].answerText+ '</label>';
            }
            // start the form
