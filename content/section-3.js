@@ -142,7 +142,7 @@ var section3 = [
       {"relevance":"For organizations where there are more than a handful of devices in use."},
       {"meaning":"A security policy is of little use unless everyone it applies to is adhering to the rules it lays out, but it’s time-consuming to dig into the settings of every device in your organization. Tools like Flock and Stethoscope can help with this; enabling you to perform a security “health check” on devices. Managing the security of multiple devices can also be made easier with Mobile Device Management (MDM) services, as it can enable the remote install of VPNs and other security apps, as well as remote wipe in the case of device confiscation."},
       {"implementation":"Getting this sort of management tool in place is better done earlier rather than later while there are a manageable number of devices and people to introduce to the system."},
-      {"more": ["mobile device management solutions"]}
+      {"more": ["mobile device management solutions", "Flock agent firstlookmedia", "Stethoscope security tool", "Apple MDM device enrollment", "Google Endpoint Management"]}
     ]
   },
   {

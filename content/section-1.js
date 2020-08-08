@@ -202,7 +202,7 @@ var section1 = [
       {"relevance":"If your organization’s staff use internet browsers that are capable of having extensions or plug-ins extend their functionality."},
       {"meaning":"Using an internet browser is such an everyday part of most people’s work that we often forget it is also a prime target for privacy invasions and attacks. Thankfully, browser extensions – add-ons that extend a browser’s features beyond the default – are available for defending against tracking by Google, Facebook and other advertising companies. They can also be used to detect fake Google login pages (used in spear phishing attacks) and encrypt communication with a website."},
       {"implementation":"Many of these extensions do their job silently in the background, only disturbing the user’s workflow on the occasions when doing their job causes disruption to the page’s functionality. Mobile browsing can also be protected through tracker-blocking apps and privacy-conscious browsers, and this can help with building a consistent defence for staff whenever they are using the internet for work purposes."},
-      {"more": ["privacy browser extensions firefox/chrome/safari", "privacy browser add-ons internet explorer", "privacy badger possum", "ublock origin", "https everywhere", "better privacy tool", "duckduckgo search engine", "google password alert"]}
+      {"more": ["privacy browser extensions", "Privacy Badger Possum", "uBlock Origin", "HTTPSEverywhere", "Better privacy tool", "DuckDuckGo search engine", "Google password alert"]}
     ]
   },
   {
@@ -283,7 +283,7 @@ var section1 = [
       {"relevance":"If your organization would prefer staff to use particular tools in specific scenarios rather than leaving it to individual choice."},
       {"meaning":"Specifying particular tools for each common use case helps with consistent communications management and security. It can also help staff to spot suspicious communications that aren’t using the approved methods. For instance, a request for sensitive information to be sent via Telegram can be more easily flagged if Telegram is not an approved method for work communications. Each of the tools has its pros and cons, particularly when it comes to privacy and security, and it is up to your organization to decide which is best for your working environments."},
       {"implementation":"Changing tools can be tricky as it’s hard to break a habit, but the previously-selected security champion and management can all set an example to rest of the organization. For instance,they might only accept internal video call invites which use the approved platform and gently redirect staff to update their invite with the new, more appropriate method."},
-      {"more": ["secure group chat and conferencing tools", "slack vs mattermost vs matrix", "secure messaging app comparison", "whatsapp vs signal vs telegram", "hangouts vs jitsi vs skype", "cell sms security interception"]}
+      {"more": ["secure group chat and conferencing tools", "Slack vs Mattermost vs Matrix", "secure messaging app comparison", "WhatsApp vs Signal vs Telegram", "Hangouts vs Jitsi vs Skype", "cell sms security interception"]}
     ]
   },
   {

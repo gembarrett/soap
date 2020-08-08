@@ -125,7 +125,7 @@ var section2 = [
       {"relevance":""},
       {"meaning":"Password managers can help staff to keep track of their passwords, with many providing features such as password generation, 2-factor authentication codes, browser extensions and mobile apps alongside the password storage facility. A risk to consider here is the security of these companies you are trusting with important passwords – what would happen if they were hacked? With services that store your passwords locally this may be less of a concern, however those which provide cross-device access to passwords can be more vulnerable to attack."},
       {"implementation":"Browser extensions and mobile apps being available for many password managers enables staff to always have their passwords to hand, making it easier to integrate with their workflow."},
-      {"more": ["password manager comparison", "risks of password managers"]}
+      {"more": ["password manager comparison", "risks of password managers", "KeePass", "Bitwarden", "PasswordSafe", "LastPass", "1Password"]}
     ]
   },
   {
@@ -343,7 +343,7 @@ var section2 = [
       {"relevance":""},
       {"meaning":"Most authentication apps work the same way, but it may be more convenient for troubleshooting if all staff use the same app. Some additional features might be more useful to your organization than others, for example multi-device access."},
       {"implementation":"Using work profiles and similar device management processes can be helpful for installing the same app across the organization. Whichever service is chosen, staff may need assistance with setting up and using the app for the first time."},
-      {"more": ["authentication app comparison"]}
+      {"more": ["authentication app comparison", "Google Authenticator", "Duo Mobile", "Authy"]}
     ]
   },
   {
@@ -390,7 +390,7 @@ var section2 = [
       {"relevance":""},
       {"meaning":"Hardware security keys are an alternative to using authentication apps. Rather than generating codes for a user to type in, they are simply plugged into the computer to authenticate with the browser directly. If your organization is enrolled in the Google Protection Program then Google recommends using Titan keys in its set up process."},
       {"implementation":"Providing staff with hardware keys helps to ensure consistency across the organization and makes troubleshooting easier. Alternatively, your organization can empower staff to choose their own key which will help with buy-in. Either way, watch out for staff leaving the key plugged into their devices when not in use as this poses a risk of damage or loss."},
-      {"more": ["hardware security key comparison"]}
+      {"more": ["hardware security key comparison", "Yubikey", "Google Advanced Protection Kit"]}
     ]
   },
   {

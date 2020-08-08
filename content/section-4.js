@@ -325,7 +325,7 @@ var section4 = [
       {"relevance":"These tools are most beneficial to staff working or travelling in a country that have invasive powers to monitor online activity."},
       {"meaning":"VPNs and similar tools can mask a user's location and encrypt their connection, ensuring that anyone watching can only see that a VPN is in use."},
       {"implementation":"It can sometimes be possible for governments to distinguish which tool is masking the connection so consider carefully which options are least likely to stand out from the crowd. Determining the most popular VPNs (e.g. which ones are used to find porn) in a region will help with blending in."},
-      {"more": ["privacy-conscious VPNs", "how do vpns work"]}
+      {"more": ["privacy-conscious VPNs", "how do vpns work", "Mullvad vpn", "Psiphon", "NordVPN", "Tor", "TunnelBear"]}
     ]
   },
   {
