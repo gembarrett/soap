@@ -89,6 +89,6 @@ templates.questionsTemplate = function(data){
       // no closing div, just closing form
       content += question.isQ ? '</div></form>' : '</form>';
   }
-  content += '<div class="btn-wrap wrap-r"><button disabled id="previewPolicy" class="previewButton btn btn-seco" title="Click or press P to view your policy preview">Preview</button><button id="submitAnswers" onclick="handleSubmit()" class="nextButton btn btn-prim" title="Click or press Enter to go to the next question">Got it!</button></div></div>';
+  content += '<div class="btn-wrap wrap-r"><button id="pausePolicy" class="btn btn-tert" title="Click or press U to get a URL for returning to this process later">Get snapshot</button><div><button disabled id="previewPolicy" class="previewButton btn btn-seco" title="Click or press P to view your policy preview">Preview</button><button id="submitAnswers" onclick="handleSubmit()" class="nextButton btn btn-prim" title="Click or press Enter to go to the next question">Got it!</button></div></div></div>';
   return content;
 };

@@ -694,7 +694,7 @@ details a {
 }
 
 .wrap-r {
-  justify-content: flex-end;
+  justify-content: space-between;
   margin-bottom:1em;
 }
 progress {
