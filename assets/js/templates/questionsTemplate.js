@@ -1,31 +1,33 @@
 templates.questionsTemplate = function(data, params){
-  // build the currentState array
-  // get the answer groups
-  var snapQs = params[0].split("_");
-  var count = 0;
-  // for each answer group
-  for (var s = 0; s < snapQs.length; s++){
-    snapQ = snapQs[s].split("-")[0];
-    snapA = snapQs[s].split("-")[1];
-    // if there's multiple answers for this question
-    if (snapA.length > 1){
-      snapA = snapA.split("");
-      for (var a = 0; a < snapA.length; a++){
-        // get each answer and add it to the currentState array
+  // if there's a snapshot url then build the currentState array
+  if (params){
+    // get the answer groups
+    var snapQs = params[0].split("_");
+    var count = 0;
+    // for each answer group
+    for (var s = 0; s < snapQs.length; s++){
+      snapQ = snapQs[s].split("-")[0];
+      snapA = snapQs[s].split("-")[1];
+      // if there's multiple answers for this question
+      if (snapA.length > 1){
+        snapA = snapA.split("");
+        for (var a = 0; a < snapA.length; a++){
+          // get each answer and add it to the currentState array
+          currentState.answers[count] = {
+            q:snapQ,
+            a:snapA[a]
+          }
+          count++;
+        }
+      } else {
+        // if there's just one (radio) then add that answer
         currentState.answers[count] = {
           q:snapQ,
-          a:snapA[a]
+          a:snapA
         }
         count++;
-      }
-    } else {
-      // if there's just one (radio) then add that answer
-      currentState.answers[count] = {
-        q:snapQ,
-        a:snapA
-      }
-      count++;
 
+      }
     }
   }
   // build the page elements
