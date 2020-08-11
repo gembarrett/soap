@@ -19,8 +19,6 @@ templates.questionsTemplate = function(data, params){
         count++;
       }
     } else {
-      console.log(snapA);
-
       // if there's just one (radio) then add that answer
       currentState.answers[count] = {
         q:snapQ,
@@ -99,10 +97,19 @@ templates.questionsTemplate = function(data, params){
              content += thisLabel + '<input type="' +question.answers[j].type+ '"' +thisID+thisName+thisPlaceholder+required+ ' title="'+question.answers[j].placeholder+'">';
            }
 
-           // if there's another input type, check if there's an answer already
+           // if there's a radio or checkbox, check if there's an answer already that can be prepopulated
            else {
-             content += '<input type="' +question.answers[j].type+ '"' +thisID+thisName+required+ '>' + thisLabel;
-             // console.log(question.id + question.answers[j].type);
+             // find a match for this question and answer object
+             var qMatch = currentState.answers.filter(o => (o.q === question.id.split('q')[1] && o.a === String(j)));
+
+             // if there's a previous answer for this
+             if ((qMatch !== 'undefined' && qMatch.length > 0)){
+               // add a checked element
+               content += '<input type="' +question.answers[j].type+ '"' +thisID+thisName+required+ ' checked="true">' + thisLabel;
+             } else {
+               // otherwise make an unchecked one
+               content += '<input type="' +question.answers[j].type+ '"' +thisID+thisName+required+ '>' + thisLabel;
+             }
            }
            // end the form
            content += '</div>';
