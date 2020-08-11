@@ -27,7 +27,7 @@ var utils = (function(){
       var temp = route.split('?');
       var route_split = temp.length;
       var function_to_invoke;
-      if (temp[0] === 'build') {
+      if ((temp[0] === 'build') || (temp[0] === 'b')) {
         function_to_invoke = 'questionsView';
       } else if (temp[0] === 'policy') {
         function_to_invoke = 'policyView';

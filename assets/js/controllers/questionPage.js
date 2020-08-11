@@ -35,7 +35,8 @@ controllers.questionPage = function(data, params){
       templateContext.push(item);
     }
   }
+
   // put that data into the template and return it for rendering
-  var questionContainer = templates.questionsTemplate(templateContext);
+  var questionContainer = templates.questionsTemplate(templateContext, params);
   utils.render('page', questionContainer);
 };

@@ -5,7 +5,7 @@ function setUpSnapshot(){
 }
 
 function getSnapshotURL(){
-  var snapshotUrl = "https://usesoap.app/b";
+  var snapshotUrl = "https://usesoap.app/#b";
   var qNo = "0";
   for (var i = 0; i < currentState.answers.length; i++){
     // if we're on the same question
@@ -16,7 +16,7 @@ function getSnapshotURL(){
       // get the new question number
       qNo = currentState.answers[i].q;
       // start new answer group, format appropriately if it's the first answer
-      snapshotUrl += snapshotUrl[snapshotUrl.length - 1] === "b" ? "/" : "_";
+      snapshotUrl += snapshotUrl[snapshotUrl.length - 1] === "b" ? "?" : "_";
       // add the question number and first answer for that question
       snapshotUrl += qNo + "-" + currentState.answers[i].a;
     } else {

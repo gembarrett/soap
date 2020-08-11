@@ -1,7 +1,32 @@
-templates.questionsTemplate = function(data){
+templates.questionsTemplate = function(data, params){
+  console.log(params[0]);
+  // build the currentState array
+  // get the answer groups
+  var snapQs = params[0].split("_");
+  // for each answer group
+  for (var s = 0; s < snapQs.length; s++){
+    snapQ = snapQs[s].split("-")[0];
+    snapA = snapQs[s].split("-")[1];
+    // if there's multiple answers
+    if (snapA.length > 1){
+      for (var a = 0; a < snapA.length; a++){
+        // get each answer and add it to the currentState array
+        currentState.answers[s] = {
+          q:snapQ,
+          a:snapA[a]
+        }
+      }
+    } else {
+      // if there's just one (radio) then add that answer
+      currentState.answers[s] = {
+        q:snapQ,
+        a:snapA
+      }
+    }
+  }
+  // build the page elements
   var content = `
       <div class="qContainer contain"><progress max="`+questionsList.length+`" value="0"></progress>`;
-
 
   for(var i = 0; i < questionsList.length; i++) {
       var question = data[i];
@@ -68,9 +93,10 @@ templates.questionsTemplate = function(data){
              content += thisLabel + '<input type="' +question.answers[j].type+ '"' +thisID+thisName+thisPlaceholder+required+ ' title="'+question.answers[j].placeholder+'">';
            }
 
-           // if there's another input type
+           // if there's another input type, check if there's an answer already
            else {
              content += '<input type="' +question.answers[j].type+ '"' +thisID+thisName+required+ '>' + thisLabel;
+             // console.log(question.id + question.answers[j].type);
            }
            // end the form
            content += '</div>';
