@@ -1009,3 +1009,6 @@ summary::marker {
 #spinner.loading{
   display: block;
 }
+#pausePolicy:disabled {
+  visibility: hidden;
+}
