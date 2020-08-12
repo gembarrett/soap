@@ -115,9 +115,9 @@ function handleSubmit() {
         collectAnswers(false);
         // show the preview button if answers are available
         prev = document.querySelector('#previewPolicy');
-        setUpSnapshot();
-        if (prev.disabled && (currentState.answers.length > 0 || Object.values(dict).length)){
+        if (prev.disabled && (currentState.answers.length > 1 || Object.values(dict).length > 1)){
           prev.removeAttribute('disabled');
+          setUpSnapshot();
         }
       }
 
@@ -152,6 +152,8 @@ function setUpPage(id){
 
 
 function nextQuestion(){
+  // reset the snapshot visibility
+  document.querySelector('#snapshotGroup').classList.add('hidden');
   // if the position is not beyond the total number of questions for the current section
   if (currentState.questionP < currentState.sectionQ.length) {
     // grab the next question's element and add class of current

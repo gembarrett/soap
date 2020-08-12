@@ -1009,6 +1009,28 @@ summary::marker {
 #spinner.loading{
   display: block;
 }
-#pausePolicy:disabled {
-  visibility: hidden;
+#snapshotPolicy:disabled, #snapshotPolicy:disabled + div {
+  display: none;
+}
+#snapshotGroup.hidden{
+  display:none !important;
+}
+#snapshotLink {
+  padding:1em;
+  margin: 10px;
+  border-style: dotted;
+  text-align: left;
+}
+.fa-copy{
+  color:#f2eee2;
+  font-size: 2em;
+  cursor: pointer;
+  opacity: 0.8;
+}
+.fa-copy:hover {
+  opacity: 1;
+}
+#snapshotGroup{
+  display: flex;
+  align-items: center;
 }

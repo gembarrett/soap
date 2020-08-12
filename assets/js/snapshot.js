@@ -1,11 +1,28 @@
 function setUpSnapshot(){
-  var snapshotBtn = document.getElementById('pausePolicy');
+  var snapshotBtn = document.getElementById('snapshotPolicy');
   snapshotBtn.removeAttribute('disabled');
   snapshotBtn.addEventListener('click', getSnapshotURL);
+  document.querySelector('#copyBtn').addEventListener('click', copyUrl);
+}
+
+function copyUrl(){
+  try {
+    // does copy work here?
+    if (document.queryCommandSupported('copy')) {
+      var copyText = document.querySelector('#snapshotLink');
+      copyText.select();
+      document.execCommand('copy');
+    } else {
+      window.alert('Sorry, SOAP can\'t access your clipboard right now');
+    }
+  } catch (error){
+    console.log(error);
+  }
 }
 
 function getSnapshotURL(){
-  var snapshotUrl = "https://usesoap.app/#b";
+  // var snapshotUrl = "https://usesoap.app/#b";
+  var snapshotUrl = "localhost:8000/#b";
   var qNo = "0";
   for (var i = 0; i < currentState.answers.length; i++){
     // if we're on the same question
@@ -26,6 +43,10 @@ function getSnapshotURL(){
   }
   // show the link to the user
   console.log(snapshotUrl);
+  // get the input box and update the value
+  document.querySelector('#snapshotLink').value = snapshotUrl;
+  // show the link
+  document.querySelector('#snapshotGroup').classList.remove('hidden');
 }
 
 function isCheckableQ(q){
