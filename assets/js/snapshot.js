@@ -22,7 +22,7 @@ function copyUrl(){
 
 function getSnapshotURL(){
   // var snapshotUrl = "https://usesoap.app/#b";
-  var snapshotUrl = "localhost:8000/#b";
+  var snapshotUrl = "localhost:8000/#b-"+soapv+"-p";
   var qNo = "0";
   for (var i = 0; i < currentState.answers.length; i++){
     // if we're on the same question
@@ -33,7 +33,7 @@ function getSnapshotURL(){
       // get the new question number
       qNo = currentState.answers[i].q;
       // start new answer group, format appropriately if it's the first answer
-      snapshotUrl += snapshotUrl[snapshotUrl.length - 1] === "b" ? "?" : "_";
+      snapshotUrl += snapshotUrl[snapshotUrl.length - 1] === "p" ? "?" : "_";
       // add the question number and first answer for that question
       snapshotUrl += qNo + "-" + currentState.answers[i].a;
     } else {
@@ -41,8 +41,6 @@ function getSnapshotURL(){
       console.log('either no answers or no questions');
     }
   }
-  // show the link to the user
-  console.log(snapshotUrl);
   // get the input box and update the value
   document.querySelector('#snapshotLink').value = snapshotUrl;
   // show the link

@@ -349,15 +349,29 @@
     display:block;
   }
   .btn-wrap.wrap-r {
-    justify-content: space-around;
+    justify-content: center;
     margin: 3em 0;
   }
   .btn-wrap.wrap-r button {
-    flex-direction: ;
     min-width: initial;
     flex: 0 0 40%;
+    margin-left: 0;
+    margin-right: 0;
   }
-
+  .buildPage .btn-wrap.wrap-r{
+    flex-direction: column-reverse;
+    margin: 0;
+    padding-left: 0;
+  }
+  .buildPage .btn-wrap.wrap-r div {
+    display: flex;
+  }
+  .buildPage .btn-wrap.wrap-r div:first-child{
+    flex-direction: column;
+  }
+  .buildPage .btn-wrap.wrap-r div:last-child {
+    justify-content: space-evenly;
+  }
   #logoContainer {
     flex-direction: column;
   }
@@ -461,5 +475,10 @@
   #editBtn {
     min-height: 44px;
     line-height: 44px;
+  }
+  #snapshotGroup{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
   }
 }
