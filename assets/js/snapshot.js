@@ -22,7 +22,7 @@ function copyUrl(){
 
 function getSnapshotURL(){
   // var snapshotUrl = "https://usesoap.app/#b";
-  var snapshotUrl = "localhost:8000/#b-"+soapv+"-p";
+  var snapshotUrl = thisEnv+"/#b-"+soapv+"-p";
   var qNo = "0";
   for (var i = 0; i < currentState.answers.length; i++){
     // if we're on the same question

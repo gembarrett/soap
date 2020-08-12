@@ -220,6 +220,7 @@ body.buildPage #page {
   background-color: #f2eee2;
   font-weight: bold;
   padding:1em;
+  white-space: nowrap;
 }
 .nav-start .links li:last-child a{
   color:#066493;
@@ -1020,6 +1021,7 @@ summary::marker {
   margin: 10px;
   border-style: dotted;
   text-align: left;
+  margin-left: 0;
 }
 .fa-copy{
   color:#f2eee2;
@@ -1032,5 +1034,13 @@ summary::marker {
 }
 #snapshotGroup{
   display: flex;
+  flex-direction: column;
+  color: #f2eee2;
+}
+#snapshotGroup div {
+  display: flex;
   align-items: center;
+}
+.btn-wrap.wrap-r p {
+  color:#a9bcd0;
 }

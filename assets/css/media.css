@@ -20,6 +20,16 @@
   #policy-edit p{
     display:none;
   }
+  .btn-wrap.wrap-r {
+    padding-left: 0;
+  }
+  #snapshotPolicy {
+    margin-left: 0;
+  }
+  .btn-wrap.wrap-r > div:last-child {
+    flex: 1 1 60%;
+    text-align: right;
+  }
 }
 
 @media (min-width:600px) and (max-width:1399px) {

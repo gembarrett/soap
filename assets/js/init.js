@@ -1,5 +1,6 @@
 // update current SOAP version here
 var soapv = "1.2.0";
+var thisEnv = window.location.origin;
 
 var templates = {};
 var controllers = {};
