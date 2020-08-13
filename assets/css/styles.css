@@ -762,6 +762,7 @@ small {
 .form-el label[contenteditable="true"] {
   border-style: dotted;
   border-width:4px;
+  cursor: text;
 }
 
 .btn-edit {
