@@ -380,7 +380,7 @@ var section4 = [
     "id":"q33",
     "q":"Who should staff contact in a travel emergency?",
     "required":false,
-    "policyEntry":"",
+    "policyEntry":"If you are in need of assistance while travelling, please contact either your pre-arranged travel buddy or: ",
     "appendixEntry":"",
     "routineEntry":"",
     "answers":[
@@ -390,7 +390,7 @@ var section4 = [
         "placeholder":"e.g. Shohreh Yazdani",
         "storeAs":"[travel-security-contact-name]",
         "excludes":[],
-        "policyEntry":"If you are in need of assistance while travelling, please contact either your pre-arranged travel buddy or [travel-security-contact-name].",
+        "policyEntry":"[travel-security-contact-name].",
         "routineEntry":"",
         "appendixEntry":[
           {

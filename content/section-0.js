@@ -196,7 +196,7 @@ var section0 = [
     "id":"q4",
     "q":"Who is responsible for this policy?",
     "required":true,
-    "policyEntry":"",
+    "policyEntry":"If you have questions about this policy or its recommendations, please contact: ",
     "appendixEntry":"",
     "routineEntry":"Got questions? Ask [security-contact-name], [security-contact-role]!",
     "answers":[
@@ -206,7 +206,7 @@ var section0 = [
         "placeholder":"e.g. Alice Smith",
         "storeAs":"[security-contact-name]",
         "excludes":[],
-        "policyEntry":"If you have questions about this policy or its recommendations, please contact [security-contact-name]",
+        "policyEntry":"[security-contact-name]",
         "routineEntry":"",
         "appendixEntry":[
           {
