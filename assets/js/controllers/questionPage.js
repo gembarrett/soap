@@ -25,6 +25,14 @@ controllers.questionPage = function(data, params){
           'title':el.title,
           'contentArray': el.steps,
         };
+      } else if (el.id === 'q49'){ // update this if new questions added so it's always targetting last one
+        var item = {
+          'id':el.id,
+          'q': el.q,
+          'desc': el.desc,
+          'teams':el.teams,
+          'areas':el.contents
+        }
       } else {
         var item = {
           'id':el.id,

@@ -121,6 +121,9 @@ templates.questionsTemplate = function(data, params){
         for (var k = 0; k < question.contentArray.length; k++){
           content += `<div class="window pink-border-glow"><h3>`+question.contentArray[k].title+`</h3><p>`+question.contentArray[k].text+`</p></div>`;
         }
+      } else if (question.id === ("q"+(questionsList.length-1))){
+        // call a function to deal with this
+        buildSubPolicies(question);
       } else {
         // add the title and paragraphs
         content += '<h1>' + question.title + '</h1>';
