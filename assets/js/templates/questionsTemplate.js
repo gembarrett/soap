@@ -123,7 +123,7 @@ templates.questionsTemplate = function(data, params){
         }
       } else if (question.id === ("q"+(questionsList.length-1))){
         // call a function to deal with this
-        buildSubPolicies(question);
+        content += buildSubPolicies(question);
       } else {
         // add the title and paragraphs
         content += '<h1>' + question.title + '</h1>';

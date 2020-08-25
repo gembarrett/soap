@@ -56,7 +56,7 @@ function simulateClick(el, key, keys){
         if (isPreviewOpen() === false){ // if the preview isn't open
           if (document.getElementById("submitAnswers").disabled === false){ // if the next button is enabled
             document.getElementById('submitAnswers').click();
-            document.querySelector('.current summary').focus();
+            document.querySelector('.current summary') ? document.querySelector('.current summary').focus() : document.querySelector('#logo');
             key.preventDefault();
           } else { // if the next button is disabled, do nothing
             return false;
