@@ -51,24 +51,34 @@ function buildSubPolicies(data){
   return layout;
 }
 
-// TODO change the data references to something based on what can be grabbed from the e values
-function updateTeams(e){
-  //if button pressed was add button then
-  console.log(e);
+function addTeam(e){
+  // get the id of this last question
+  lastQid = e.target.id.split('-')[0];
   // count the number of input-label pairs in the teams column
   allEls = document.querySelectorAll('#teams input');
-  if (allEls.length < 11){
+  // if it won't exceed the maximum
+  if (allEls.length < 10){
+    // build another team element
     thingToAdd = `<div class="form-el type-radio">
-          <input type="radio" id="`+data.id+`-`+allEls.length+`-answer" name="`+data.id+`-el">
-          <label for="`+data.id+`-`+allEls.length+`-answer" contenteditable="true" class="btn-edit">`+data.teams[0].name+`</label>
+          <input type="radio" id="`+lastQid+`-`+allEls.length+`-answer" name="`+lastQid+`-el">
+          <label for="`+lastQid+`-`+allEls.length+`-answer" contenteditable="true" class="btn-edit">New team</label>
         </div>`;
+    // then add it to the screen
     e.target.insertAdjacentHTML('afterend', thingToAdd);
+    // don't do any other buttony stuff
     e.preventDefault();
   } else {
     // if it's more than 10, do nothing (maybe show error text)
     console.log('too many teams');
+    // don't do any other buttony stuff
+    e.preventDefault();
   }
 
+}
+
+// TODO change the data references to something based on what can be grabbed from the e values
+function updateTeams(e){
+  console.log(e);
   // if changed element was a radio button then
   // does this element have stored policy areas
   // if so, toggle the selections on/off accordingly
