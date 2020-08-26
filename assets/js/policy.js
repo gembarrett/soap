@@ -94,7 +94,7 @@ function compileDoc(p,a){
             incResP = getPolicyContent(qRef, prevQ, aRef, incResP, found);
             break;
           // add case for inserting Backups heading @ 22
-          // questions 20-26 are for devices
+          // questions 22-26 are for devices
           case qRef < 27:
             deviceP = getPolicyContent(qRef, prevQ, aRef, deviceP, found);
             // if we need the appendix and routines too
