@@ -6,6 +6,8 @@ function addChangeListeners() {
   // add listener for edit button
   var editBtn = document.getElementById("editBtn");
   editBtn.addEventListener('click', editAnswers, false);
+  // and a listener for changes in the subpolicies question
+  document.querySelector('#teams').addEventListener('change', updateTeams);
 
   // TODO: get skip/next fully working
   // grab all the form inputs
