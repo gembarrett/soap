@@ -53,6 +53,8 @@ var currentState = {
 }
 // for storing the storeAs names and values
 var dict = {};
+// for storing the team-content names and values
+var teamContentDict = {};
 
 // for storing the orgName when it's entered on the home page
 var homeName = "";

@@ -1,51 +1,32 @@
 function buildSubPolicies(data){
-  layout = `<details class="question-panel"><summary><h2>`+data.q+`</h2></summary>
-  <p>`+data.desc[0]+`</p>
-  <p>`+data.desc[1]+`</p>
-  <p>`+data.desc[2]+`</p></details>
-  <div id="teams">
-    <button id="addTeam">+ add team (up to 10)</button>
-    <div class="form-el type-radio">
-      <input type="radio" id="`+data.id+`-00-answer" name="`+data.id+`-el">
-      <label for="`+data.id+`-00-answer" contenteditable="true" class="btn-edit">`+data.teams[0].name+`</label>
-    </div>
-    <div class="form-el type-radio">
-      <input type="radio" id="`+data.id+`-01-answer" name="`+data.id+`-el">
-      <label for="`+data.id+`-01-answer" contenteditable="true" class="btn-edit">`+data.teams[1].name+`</label>
-    </div>
-  </div>
-
-  <div id="content">
-    <div class="form-el type-checkbox">
-      <input type="checkbox" id="`+data.id+`-10-answer" name="`+data.id+`-el">
-      <label for="`+data.id+`-10-answer" class="btn-edit">`+data.areas[0].name+`</label>
-    </div>
-    <div class="form-el type-checkbox">
-      <input type="checkbox" id="`+data.id+`-11-answer" name="`+data.id+`-el">
-      <label for="`+data.id+`-11-answer" class="btn-edit">`+data.areas[1].name+`</label>
-    </div>
-    <div class="form-el type-checkbox">
-      <input type="checkbox" id="`+data.id+`-12-answer" name="`+data.id+`-el">
-      <label for="`+data.id+`-12-answer" class="btn-edit">`+data.areas[2].name+`</label>
-    </div>
-    <div class="form-el type-checkbox">
-      <input type="checkbox" id="`+data.id+`-13-answer" name="`+data.id+`-el">
-      <label for="`+data.id+`-13-answer" class="btn-edit">`+data.areas[3].name+`</label>
-    </div>
-    <div class="form-el type-checkbox">
-      <input type="checkbox" id="`+data.id+`-14-answer" name="`+data.id+`-el">
-      <label for="`+data.id+`-14-answer" class="btn-edit">`+data.areas[4].name+`</label>
-    </div>
-    <div class="form-el type-checkbox">
-      <input type="checkbox" id="`+data.id+`-15-answer" name="`+data.id+`-el">
-      <label for="`+data.id+`-15-answer" class="btn-edit">`+data.areas[5].name+`</label>
-    </div>
-  </div>
-
-  <p>What you'll get when you hit Next:
-  <ul><li>Organizational Security Policy (full version)</li>
-  <li>Appendix (inc. tips, links and Everyday Practices document)</li>
-  </ul></p>`;
+  layout = `<details class="question-panel">
+            <summary><h2>`+data.q+`</h2></summary>`;
+  // add each of the description paragraphs
+  for (var p = 0; p < data.desc.length; p++){
+    layout += `<p>`+data.desc[p]+`</p>`;
+  }
+  layout += `</details><div id="teamContentCols">
+            <div id="teams"><button id="addTeam">+ add team (up to 10)</button>`;
+  // add each of the default teams
+  for (var e = 0; e < data.teams.length; e++){
+      layout += `<div class="form-el type-radio">
+                <input type="radio" id="`+data.id+`-0`+e+`-answer" name="`+data.id+`-el">
+                <label for="`+data.id+`-0`+e+`-answer" contenteditable="true" class="btn-edit">`+data.teams[e].name+`</label></div>`;
+  }
+  layout += `</div><div id="content">`;
+  // add all of the content areas
+  for (var t = 0; t < data.areas.length; t++){
+    layout += `<div class="form-el type-checkbox">
+      <input type="checkbox" id="`+data.id+`-1`+t+`-answer" name="`+data.id+`-el">
+      <label for="`+data.id+`-1`+t+`-answer">`+data.areas[t].name+`</label></div>`;
+  }
+  // close the columns and add the summary
+  layout += `</div></div>
+  <div id="expectedOutput">
+    <p>What you'll get when you hit Next:
+    <ul><li>Organizational Security Policy (full version)</li>
+    <li>Appendix (inc. tips, links and Everyday Practices document)</li>
+    </ul></p></div>`;
 
   // return the complete page
   return layout;
@@ -79,6 +60,7 @@ function addTeam(e){
 // TODO change the data references to something based on what can be grabbed from the e values
 function updateTeams(e){
   console.log(e);
+  // use teamContentDict to store the pairs
   // if changed element was a radio button then
   // does this element have stored policy areas
   // if so, toggle the selections on/off accordingly

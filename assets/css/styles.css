@@ -1045,3 +1045,7 @@ summary::marker {
 .btn-wrap.wrap-r p {
   color:#a9bcd0;
 }
+#teamContentCols{
+  display:flex;
+  justify-content: space-around;
+}
