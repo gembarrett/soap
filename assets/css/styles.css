@@ -50,6 +50,10 @@ a.btn:hover {
   src: url('webfonts/SinkinSans-500Medium.otf');
 }
 @font-face {
+  font-family: 'SinkinSansMediumItalic';
+  src: url('webfonts/SinkinSans-500MediumItalic.otf');
+}
+@font-face {
   font-family: 'SinkinSansBold';
   src: url('webfonts/SinkinSans-700Bold.otf');
 }
@@ -1037,6 +1041,7 @@ summary::marker {
   display: flex;
   flex-direction: column;
   color: #f2eee2;
+  font-size:0.8em;
 }
 #snapshotGroup div {
   display: flex;
@@ -1048,4 +1053,17 @@ summary::marker {
 #teamContentCols{
   display:flex;
   justify-content: space-around;
+}
+#teams {
+  text-align: center;
+}
+#expectedOutput{
+  color: #F2EEE2;
+  border:1px solid currentColor;
+  padding:1em;
+}
+label span {
+  display: block;
+  font-size: 0.8em;
+  font-family: "SinkinSansMediumItalic";
 }

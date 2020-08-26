@@ -16,27 +16,27 @@ var section7 = [
     "contents": [
       {
         "name": "device security",
-        "desc":""
+        "desc":"(inc. work profiles, touchID and backups)"
       },
       {
         "name": "communications security",
-        "desc":"",
+        "desc":"(inc. encrypting messages, safe browsing, preferred platforms)",
       },
       {
         "name": "accounts security",
-        "desc":"",
+        "desc":"(inc. password management and other authentication methods)",
       },
       {
         "name": "travel security",
-        "desc":"",
+        "desc":"(inc. preparing devices, VPNs, emergency contact)",
       },
       {
         "name": "environmental security",
-        "desc":"",
+        "desc":"(inc. locked storage, visitors, office security)",
       },
       {
         "name": "network security",
-        "desc":"",
+        "desc":"(inc. WiFi passwords, browser security, firewalls)",
       }
     ]
   }
