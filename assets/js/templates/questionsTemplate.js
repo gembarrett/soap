@@ -80,7 +80,7 @@ templates.questionsTemplate = function(data, params){
            if (question.answers[j].type !== 'textarea') {
              thisLabel = '<label for="' +question.id+ "-"+ j+ '-answer"';
              if (question.answers[j].type === 'radio'){
-               thisLabel += ' title="Click or press S to select this option, or arrow keys to choose another">';
+               thisLabel += question.answers[j].editable ? ' class="btn-edit" contenteditable="true" title="Click or press S to select this editable option, or arrow keys to choose another">' : ' title="Click or press S to select this option">';
              } else {
                thisLabel += question.answers[j].editable ? ' class="btn-edit" contenteditable="true" title="Click or press S to select this editable option">' : ' title="Click or press S to select this option">';
              }

@@ -118,11 +118,11 @@ function collectAnswers(isEdited){
             dic = saveToDict(inputFields[cc], qData.data.answers[aNum], dic);
             ans = storeThisA(ans, qData.ref, aNum);
           } else {
-            console.log('Unchecked or empty');
+            return;
           }
         }
       } else {
-        console.log('No inputs');
+        return false;
       }
     }
   }
