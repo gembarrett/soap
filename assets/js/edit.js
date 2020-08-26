@@ -86,7 +86,7 @@ function collectAnswers(isEdited){
             dic = saveToDict(inputFields[bb], qData.data.answers[aNum], dic);
             ans = storeThisA(ans, qData.ref, aNum);
           } else {
-            console.log('Not a selection or text box');
+            return false;
           }
         }
       } else {
@@ -118,7 +118,7 @@ function collectAnswers(isEdited){
             dic = saveToDict(inputFields[cc], qData.data.answers[aNum], dic);
             ans = storeThisA(ans, qData.ref, aNum);
           } else {
-            return;
+            return false;
           }
         }
       } else {
@@ -193,7 +193,7 @@ function saveToDict(el, a, storage){
       storage = storeThisPair(a.storeAs, storage, el.value);
     }
   } else {
-    console.log('No dictionary key found.');
+    return false;
   }
   return storage;
 }
