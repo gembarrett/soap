@@ -79,28 +79,27 @@ function updateTeams(e){
 
   // if user clicked a team and its now checked
   if ((e.target.type === "radio") && (e.target.checked)){
-    // if its stored already
-    if (teamContent.includes(e.target.id)){
-      // compare the stored areas with the currently selected ones
-      // get the current selections
-      currentAreas = document.querySelectorAll('#policyAreas input:checked');
-      // get the match from the array
-      console.log(teamContent[e.target.id]);
 
-      // if there are current selections and stored areas
-      if (currentAreas.length > 0){
-        console.log(currentAreas);
+    // clear selections and load the team-specific ones
+    // get all the areas
+    allAreas = document.querySelectorAll('#policyAreas input');
+    // for each area
+    for (var aa = 0; aa < allAreas.length; aa++){
+      // get the position number of that input
+      thisEl = allAreas[aa].id.split('-')[1].split('')[1];
+      // and the position number of that team
+      thisT = e.target.id.split('-')[1].split('')[1];
+      // if it's in the areas array then check it
+      if (teamContent[parseInt(thisT)].areas.includes(parseInt(thisEl))){
+        allAreas[aa].checked = true;
+      } else {
+        // otherwise deselect
+        allAreas[aa].checked = false;
       }
-      // if they're the same, do nothing
-      // else de/select the correct options
-    } else { // if they selected a team that isn't currently stored
-      // grab the name
-      // teamContent.push({
-      //
-      // });
-      // store it in teamContent, along with any currently selected content areas
-      // or clear the selections?
     }
+    // compare label to what's stored and replace if necessary
+    // TODO: pick up the name earlier
+    teamContent[parseInt(thisT)].name = e.target.labels[0].textContent !== teamContent[parseInt(thisT)].name ? e.target.labels[0].textContent : teamContent[parseInt(thisT)].name;
 
   } else if (e.target.type === "checkbox"){   // if user clicked a content area
     // which team is selected
