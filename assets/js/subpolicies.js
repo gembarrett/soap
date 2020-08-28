@@ -50,7 +50,8 @@ function addTeam(e){
     teamContent.push({
       "tId" : lastQid+`-0`+allEls.length+`-answer`,
       "name": "New team",
-      "areas": []
+      "areas": [],
+      "output": ""
     });
 
     // store the currently selected things
@@ -120,16 +121,43 @@ function updateTeams(e){
         teamContent[tc].name = thisTeam.labels[0].textContent;
         // update the stored values if needed
         teamContent[tc].areas = areaRefs;
+        // update the summary text
+        teamContent[tc].output = teamContent[tc].name +" policy (inc. "+teamContent[tc].areas+" )";
+        updateSummary(teamContent[tc]);
         // then break the loop
         tc = teamContent.length;
       } else {
-        // if it isn't stored then do nothing
+        // if it isn't a match then do nothing
         return false;
       }
     }
   } else {
     console.log(e.target);
   }
+}
+
+function updateSummary(el){
+  // get the list items
+  list = document.querySelectorAll('#expectedOutput ul li');
+  // search list for li with matching id
+  itemID = el.tId+'-output';
+  for (var li = 0; li<list.length; li++){
+    if (list[li].id === "itemID"){
+      console.log('found a matching element to replace');
+    } else {
+      return false;
+    }
+  }
+  // build the new list item for adding
+  item = '<li id="'+itemID+'">'+el.output+'</li>';
+  // add new summary text to the top of the list
+  list[0].insertAdjacentHTML('beforebegin', item);
+
+  // when an answer is clicked
+  // are any answers checked
+  // if there are answers checked, get the selected team
+  // find the teamContent
+  //
 }
 
 function setUpTeamContent(){
@@ -141,7 +169,8 @@ function setUpTeamContent(){
     teamContent.push({
       "tId" : teams[a].id,
       "name" : "",
-      "areas" : []
+      "areas" : [],
+      "output": ""
     });
   }
 }
