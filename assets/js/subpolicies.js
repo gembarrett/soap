@@ -48,7 +48,8 @@ function addTeam(e){
     e.target.insertAdjacentHTML('beforebegin', thingToAdd);
     // add this team to teamContent
     teamContent.push({
-      "name": lastQid+`-0`+allEls.length+`-answer`,
+      "tId" : lastQid+`-0`+allEls.length+`-answer`,
+      "name": "New team",
       "areas": []
     });
 
@@ -122,8 +123,8 @@ function updateTeams(e){
         // then break the loop
         tc = teamContent.length;
       } else {
-        // if it isn't stored then log it
-        console.log(teamContent[tc].tId, thisTeam.id);
+        // if it isn't stored then do nothing
+        return false;
       }
     }
   } else {
