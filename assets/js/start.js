@@ -166,7 +166,7 @@ function nextQuestion(){
     nextQ.classList.add("current");
   }
   // if the sections have not run out (using the counter because it isn't changed)
-  // consider whether I want this to happen here, before the last q, or after it
+  // consider whether this should happen here, before the last q, or after it
   else if (currentState.sectionC < sections.length-1) {
     // increase the section counter
     currentState.sectionC++;
