@@ -66,12 +66,12 @@ function collectAnswers(isEdited){
       }
   } else if (isEdited && questions.length > 0) {
     // closing the edit session so collect all the visible answers
-    // for each question, excpt the last one
-    for (var b = 0; b < questions.length-1; b++){
+    // for each question
+    for (var b = 0; b < questions.length; b++){
       // get the input fields
       var inputFields = checkForInputs(questions[b]);
-      // if there are input fields
-      if (inputFields !== false){
+      // if there are input fields and we're not on the last question
+      if ((inputFields !== false) && (b !== questions.length-1)){
         // grab the question number and data
         qData = getQData(inputFields[0]);
         // for each of the input fields
@@ -90,7 +90,7 @@ function collectAnswers(isEdited){
           }
         }
       } else {
-        console.log('No inputs');
+        console.log('No inputs to collect');
       }
       // then hide the question
       questions[b].classList.toggle("showAllQs");
