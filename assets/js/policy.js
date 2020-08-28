@@ -156,6 +156,81 @@ function compileDoc(p,a){
     prevQ = qRef;
   }
 
+  doc.plain = 'Organizational Security Policy\n\nCreated '+dateStamp()+'\n\n'+contextP.join('\n');
+  doc.markdown = '# Organizational Security Policy \n#### Created '+dateStamp()+'\n\n'+contextP.join('\n');
+  doc.html = '<!DOCTYPE html><html><head><title>Organizational Security Policy '+dateStamp()+'</title></head><body><h1>Organizational Security Policy</h1><h4>Created '+dateStamp()+'</h4><p>'+contextP.join('</p><p>')+'</p>';
+
+  if (deviceP.length > 0){
+    doc.plain += '\n\nDevice Security\n' + deviceP.join('\n');
+    doc.markdown += '\n\n### Device Security \n' + deviceP.join('\n');
+    doc.html += '<h3>Device Security</h3><p>' + deviceP.join('</p><p>')+'</p>';
+  }
+  if (commsP.length > 0){
+    doc.plain += '\n\nCommunications Security\n' + commsP.join('\n');
+    doc.markdown += '\n\n### Communications Security \n' + commsP.join('\n');
+    doc.html += '<h3>Communications Security</h3><p>' + commsP.join('</p><p>')+'</p>';
+  }
+  if (acctsP.length > 0){
+    doc.plain += '\n\nAccounts Security\n' + acctsP.join('\n');
+    doc.markdown += '\n\n### Accounts Security \n' + acctsP.join('\n');
+    doc.html += '<h3>Accounts Security</h3><p>' + acctsP.join('</p><p>')+'</p>';
+  }
+  if (travelP.length > 0){
+    doc.plain += '\n\nTravel Security\n' + travelP.join('\n');
+    doc.markdown += '\n\n### Travel Security \n' + travelP.join('\n');
+    doc.html += '<h3>Travel Security</h3><p>' + travelP.join('</p><p>')+'</p>';
+  }
+  if (envP.length > 0){
+    doc.plain += '\n\nEnvironmental Security\n' + envP.join('\n');
+    doc.markdown += '\n\n### Environmental Security \n' + envP.join('\n');
+    doc.html += '<h3>Environmental Security</h3><p>' + envP.join('</p><p>')+'</p>';
+  }
+  if (networkP.length > 0){
+    doc.plain += '\n\nNetwork Security\n' + networkP.join('\n');
+    doc.markdown += '\n\n### Network Security \n' + networkP.join('\n');
+    doc.html += '<h3>Network Security</h3><p>' + networkP.join('</p><p>')+'</p>';
+  }
+  if (incResP.length > 0){
+    doc.plain += '\n\nWhat to do if...\n' + incResP.join('\n\n');
+    doc.markdown += '\n\n### What to do if...\n' + incResP.join('\n\n');
+    doc.html += '<h3>What to do if...</h3><p>' + incResP.join('</p><p>')+'</p>';
+  }
+
+  // if appendix is requested, join the policy, appendix and routines arrays together, and add the team-specific policies
+  if (a) {
+    doc.plain += '\n\nAppendix\n';
+    doc.markdown += '\n\n## Appendix\n';
+    doc.html += '<h2>Appendix</h2>';
+    if (appContent.general.length > 0){
+      doc.plain += '\n\nGeneral Advice\n- ' + appContent.general.join('\n- ');
+      doc.markdown += '\n\n### General Advice \n\n* ' + appContent.general.join('\n* ');
+      doc.html += '<h3>General Advice</h3><ul><li>' + appContent.general.join('</li><li>')+'</li></ul>';
+    }
+    if (appContent.review.length > 0){
+      doc.plain += '\n\nReview Checklist\n- ' + appContent.review.join('\n- ');
+      doc.markdown += '\n\n### Review Checklist \n\n- [ ] ' + appContent.review.join('\n- [ ] ');
+      doc.html += '<h3>Review Checklist</h3><ol><li>' + appContent.review.join('</li><li>')+'</li></ol>';
+    }
+    if (appContent.tips.length > 0){
+      doc.plain += '\n\nImplementation Tips\n- ' + appContent.tips.join('\n- ');
+      doc.markdown += '\n\n### Implementation Tips \n\n* ' + appContent.tips.join('\n* ');
+      doc.html += '<h3>Implementation Tips</h3><ul><li>' + appContent.tips.join('</li><li>')+'</li></ul>';
+    }
+    if (appContent.links.length > 0){
+      doc.plain += '\n\nUseful Links \n- ' + appContent.links.join('\n- ');
+      doc.markdown += '\n\n### Useful Links \n\n* ' + appContent.links.join('\n* ');
+      doc.html += '<h3>Useful Links</h3><ul><li>' + appContent.links.join('</li><li>')+'</li></ul>';
+    }
+    if (routineDoc.length > 0){
+      doc.plain += '\n\nEveryday practices \n+ ' + routineDoc.join('\n+ ');
+      doc.markdown += '\n\n## Everyday practices \n\n* ' + routineDoc.join('\n* ');
+      doc.html += '<h2>Everyday practices</h2><ul><li>' + routineDoc.join('</li><li>')+'</li></ul>';
+    }
+  }
+  doc.plain += '\n\nPlease note: it is recommended that this policy undergoes a legal review prior to being implemented in your organization. \n\nBuilt with SOAP v.'+soapv;
+  doc.markdown += '\n\n#### *Please note: it is recommended that this policy undergoes a legal review prior to being implemented in your organization.* \n\n##### Built with SOAP v.'+soapv;
+  doc.html += '<h4>Please note: it is recommended that this policy undergoes a legal review prior to being implemented in your organization.</h4><h5>Built with SOAP v. '+soapv+'</h5></body></html>';
+
   var teamPolicies = [];
   // for each of the teams in teamContent
   for (var t=0; t<teamContent.length; t++){
@@ -166,7 +241,7 @@ function compileDoc(p,a){
       areas = teamContent[t].areas;
 
       // add the contextP
-      pText = teamContent[t].name + '\n\nOrganizational Security Policy\n\nCreated '+dateStamp()+'\n\n'+contextP.join('\n');
+      pText = '\n\n'+teamContent[t].name + '\n\nOrganizational Security Policy\n\nCreated '+dateStamp()+'\n\n'+contextP.join('\n');
       mText = '# '+teamContent[t].name + '## Organizational Security Policy \n#### Created '+dateStamp()+'\n\n'+contextP.join('\n');
       hText = '<!DOCTYPE html><html><head><title>Organizational Security Policy '+dateStamp()+'</title></head><body><h1>Organizational Security Policy</h1><h4>Created '+dateStamp()+'</h4><p>'+contextP.join('</p><p>')+'</p>';
 
@@ -210,97 +285,28 @@ function compileDoc(p,a){
         }
 
       }
-      // then add the other default content
-      pText += '\n\nWhat to do if...\n' + incResP.join('\n\n');
-      mText += '\n\n### What to do if...\n' + incResP.join('\n\n');
-      hText += '<h3>What to do if...</h3><p>' + incResP.join('</p><p>')+'</p>';
-
-      // get the name
+      // then add any other default content
+      if (incResP.length > 0){
+        pText += '\n\nWhat to do if...\n' + incResP.join('\n\n');
+        mText += '\n\n### What to do if...\n' + incResP.join('\n\n');
+        hText += '<h3>What to do if...</h3><p>' + incResP.join('</p><p>')+'</p>';
+      }
+      // and push the team policies to the array
       teamPolicies.push({
-        // build team policy title
         "team":teamContent[t].name,
         "plain": pText,
         "markdown": mText,
         "html": hText,
-      })
+      });
     }
+  }
+  for (var tm=0; tm<teamPolicies.length; tm++){
+    // get the content of each team pushed
+    doc.plain += teamPolicies[tm].plain;
+    doc.markdown += teamPolicies[tm].markdown;
+    doc.html += teamPolicies[tm].html;
   }
 
-
-  doc.plain = 'Organizational Security Policy\n\nCreated '+dateStamp()+'\n\n'+contextP.join('\n');
-  doc.markdown = '# Organizational Security Policy \n#### Created '+dateStamp()+'\n\n'+contextP.join('\n');
-  doc.html = '<!DOCTYPE html><html><head><title>Organizational Security Policy '+dateStamp()+'</title></head><body><h1>Organizational Security Policy</h1><h4>Created '+dateStamp()+'</h4><p>'+contextP.join('</p><p>')+'</p>';
-
-  if (deviceP.length > 0){
-    doc.plain += '\n\nDevice Security\n' + deviceP.join('\n');
-    doc.markdown += '\n\n### Device Security \n' + deviceP.join('\n');
-    doc.html += '<h3>Device Security</h3><p>' + deviceP.join('</p><p>')+'</p>';
-  }
-  if (commsP.length > 0){
-    doc.plain += '\n\nCommunications Security\n' + commsP.join('\n');
-    doc.markdown += '\n\n### Communications Security \n' + commsP.join('\n');
-    doc.html += '<h3>Communications Security</h3><p>' + commsP.join('</p><p>')+'</p>';
-  }
-  if (acctsP.length > 0){
-    doc.plain += '\n\nAccounts Security\n' + acctsP.join('\n');
-    doc.markdown += '\n\n### Accounts Security \n' + acctsP.join('\n');
-    doc.html += '<h3>Accounts Security</h3><p>' + acctsP.join('</p><p>')+'</p>';
-  }
-  if (travelP.length > 0){
-    doc.plain += '\n\nTravel Security\n' + travelP.join('\n');
-    doc.markdown += '\n\n### Travel Security \n' + travelP.join('\n');
-    doc.html += '<h3>Travel Security</h3><p>' + travelP.join('</p><p>')+'</p>';
-  }
-  if (envP.length > 0){
-    doc.plain += '\n\nEnvironmental Security\n' + envP.join('\n');
-    doc.markdown += '\n\n### Environmental Security \n' + envP.join('\n');
-    doc.html += '<h3>Environmental Security</h3><p>' + envP.join('</p><p>')+'</p>';
-  }
-  if (networkP.length > 0){
-    doc.plain += '\n\nNetwork Security\n' + networkP.join('\n');
-    doc.markdown += '\n\n### Network Security \n' + networkP.join('\n');
-    doc.html += '<h3>Network Security</h3><p>' + networkP.join('</p><p>')+'</p>';
-  }
-  if (incResP.length > 0){
-    doc.plain += '\n\nWhat to do if...\n' + incResP.join('\n\n');
-    doc.markdown += '\n\n### What to do if...\n' + incResP.join('\n\n');
-    doc.html += '<h3>What to do if...</h3><p>' + incResP.join('</p><p>')+'</p>';
-  }
-
-  // if appendix is requested, join the policy, appendix and routines arrays together
-  if (a) {
-    doc.plain += '\n\nAppendix\n';
-    doc.markdown += '\n\n## Appendix\n';
-    doc.html += '<h2>Appendix</h2>';
-    if (appContent.general.length > 0){
-      doc.plain += '\n\nGeneral Advice\n- ' + appContent.general.join('\n- ');
-      doc.markdown += '\n\n### General Advice \n\n* ' + appContent.general.join('\n* ');
-      doc.html += '<h3>General Advice</h3><ul><li>' + appContent.general.join('</li><li>')+'</li></ul>';
-    }
-    if (appContent.review.length > 0){
-      doc.plain += '\n\nReview Checklist\n- ' + appContent.review.join('\n- ');
-      doc.markdown += '\n\n### Review Checklist \n\n- [ ] ' + appContent.review.join('\n- [ ] ');
-      doc.html += '<h3>Review Checklist</h3><ol><li>' + appContent.review.join('</li><li>')+'</li></ol>';
-    }
-    if (appContent.tips.length > 0){
-      doc.plain += '\n\nImplementation Tips\n- ' + appContent.tips.join('\n- ');
-      doc.markdown += '\n\n### Implementation Tips \n\n* ' + appContent.tips.join('\n* ');
-      doc.html += '<h3>Implementation Tips</h3><ul><li>' + appContent.tips.join('</li><li>')+'</li></ul>';
-    }
-    if (appContent.links.length > 0){
-      doc.plain += '\n\nUseful Links \n- ' + appContent.links.join('\n- ');
-      doc.markdown += '\n\n### Useful Links \n\n* ' + appContent.links.join('\n* ');
-      doc.html += '<h3>Useful Links</h3><ul><li>' + appContent.links.join('</li><li>')+'</li></ul>';
-    }
-    if (routineDoc.length > 0){
-      doc.plain += '\n\nEveryday practices \n+ ' + routineDoc.join('\n+ ');
-      doc.markdown += '\n\n## Everyday practices \n\n* ' + routineDoc.join('\n* ');
-      doc.html += '<h2>Everyday practices</h2><ul><li>' + routineDoc.join('</li><li>')+'</li></ul>';
-    }
-  }
-  doc.plain += '\n\nPlease note: it is recommended that this policy undergoes a legal review prior to being implemented in your organization. \n\nBuilt with SOAP v.'+soapv;
-  doc.markdown += '\n\n#### *Please note: it is recommended that this policy undergoes a legal review prior to being implemented in your organization.* \n\n##### Built with SOAP v.'+soapv;
-  doc.html += '<h4>Please note: it is recommended that this policy undergoes a legal review prior to being implemented in your organization.</h4><h5>Built with SOAP v. '+soapv+'</h5></body></html>';
   output = doc;
   return doc;
 }

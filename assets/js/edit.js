@@ -22,7 +22,7 @@ function isActiveFormItem(node) {
         return container.contains(node);
     }
     else {
-        return false
+        return false;
     }
 }
 
@@ -66,8 +66,8 @@ function collectAnswers(isEdited){
       }
   } else if (isEdited && questions.length > 0) {
     // closing the edit session so collect all the visible answers
-    // for each question
-    for (var b = 0; b < questions.length; b++){
+    // for each question, excpt the last one
+    for (var b = 0; b < questions.length-1; b++){
       // get the input fields
       var inputFields = checkForInputs(questions[b]);
       // if there are input fields
@@ -86,7 +86,7 @@ function collectAnswers(isEdited){
             dic = saveToDict(inputFields[bb], qData.data.answers[aNum], dic);
             ans = storeThisA(ans, qData.ref, aNum);
           } else {
-            return false;
+            console.log('This element is '+inputFields[bb].id);
           }
         }
       } else {
@@ -98,8 +98,8 @@ function collectAnswers(isEdited){
   } else {
     // we're collecting for a policy so get all the answers available so far
     questions = document.querySelectorAll(".editable, .current");
-    // for each question
-    for (var c = 0; c < questions.length; c++){
+    // for each question, except the last one
+    for (var c = 0; c < questions.length-1; c++){
       // get the input fields
       var inputFields = checkForInputs(questions[c]);
       // if there are input fields
@@ -112,17 +112,19 @@ function collectAnswers(isEdited){
           aNum = inputFields[cc].id.split("-")[1];
           // if the element is checked or is a type of not-empty text box
           if (inputFields[cc].checked || (inputFields[cc].type.includes("text") && inputFields[cc].value !== "")) {
+            // this throws an error because the final question is in a different format
+            // should just skip the last question as its dealt with separately anyway.
             // grab any exclusions
             exc = updateExc(qData.data.answers[aNum], exc);
             // save the answer
             dic = saveToDict(inputFields[cc], qData.data.answers[aNum], dic);
             ans = storeThisA(ans, qData.ref, aNum);
           } else {
-            return false;
+            console.log('This element is '+inputFields[cc].id);
           }
         }
       } else {
-        return false;
+        console.log('No input fields');
       }
     }
   }
@@ -193,7 +195,7 @@ function saveToDict(el, a, storage){
       storage = storeThisPair(a.storeAs, storage, el.value);
     }
   } else {
-    return false;
+    console.log('No storing that here');
   }
   return storage;
 }
