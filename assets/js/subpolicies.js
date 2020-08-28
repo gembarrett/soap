@@ -78,6 +78,7 @@ function addTeam(e){
 // TODO change the data references to something based on what can be grabbed from the e values
 function updateTeams(e){
   // use teamContent to store the pairs as array of objects
+  var areaTitles = ["device", "communications", "accounts", "travel", "environmental", "network"];
 
   // if user clicked a team and its now checked
   if ((e.target.type === "radio") && (e.target.checked)){
@@ -113,7 +114,7 @@ function updateTeams(e){
     for (var ta = 0; ta < theseAreas.length; ta++){
       areaRefs[ta] = parseInt(theseAreas[ta].id.split('-')[1].split('')[1]);
     }
-    // for each of the stored objects
+    // for each of the stored teams
     for (var tc = 0; tc < teamContent.length; tc++){
       // check the id against currently selected team
       if (teamContent[tc].tId === thisTeam.id){
@@ -121,14 +122,24 @@ function updateTeams(e){
         teamContent[tc].name = thisTeam.labels[0].textContent;
         // update the stored values if needed
         teamContent[tc].areas = areaRefs;
+        teamContent[tc].output = teamContent[tc].name +" policy (inc. ";
+        // concatenate the area titles
+        for (var at=0; at<teamContent[tc].areas.length; at++){
+          if (at === teamContent[tc].areas.length-1){
+            // if its the last area title being added, then include appropriate ending
+            teamContent[tc].output += "and " + areaTitles[teamContent[tc].areas[at]] + " security)";
+          } else {
+            // otherwise just separate the areas with a comma
+            teamContent[tc].output += areaTitles[teamContent[tc].areas[at]] + ", ";
+          }
+        }
         // update the summary text
-        teamContent[tc].output = teamContent[tc].name +" policy (inc. "+teamContent[tc].areas+" )";
         updateSummary(teamContent[tc]);
         // then break the loop
         tc = teamContent.length;
       } else {
         // if it isn't a match then do nothing
-        return false;
+        console.log('Not a match');
       }
     }
   } else {
@@ -137,28 +148,30 @@ function updateTeams(e){
 }
 
 function updateSummary(el){
-  // get the list items
+  // we are given a teamContent element
+  // in the summary, is there an li with a matching id
   list = document.querySelectorAll('#expectedOutput ul li');
-  // search list for li with matching id
   itemID = el.tId+'-output';
+  var found = false;
+  // if there is a matching one
   for (var li = 0; li<list.length; li++){
-    if (list[li].id === "itemID"){
-      console.log('found a matching element to replace');
-    } else {
-      return false;
+    // does this list item match the element we've been given
+    if (list[li].id === itemID){
+      found = list[li];
+      li = list.length;
     }
   }
-  // build the new list item for adding
-  item = '<li id="'+itemID+'">'+el.output+'</li>';
-  // add new summary text to the top of the list
-  list[0].insertAdjacentHTML('beforebegin', item);
-
-  // when an answer is clicked
-  // are any answers checked
-  // if there are answers checked, get the selected team
-  // find the teamContent
-  //
+  if (found){
+    // if it does we should update the innerText
+    found.innerText = el.output;
+  } else {
+    // build the new list item for adding
+    item = '<li id="'+itemID+'">'+el.output+'</li>';
+    // add new summary text to the top of the list
+    list[0].insertAdjacentHTML('beforebegin', item);
+  }
 }
+
 
 function setUpTeamContent(){
   // get all the default teams on the page
