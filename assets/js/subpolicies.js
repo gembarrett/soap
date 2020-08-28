@@ -110,12 +110,15 @@ function updateTeams(e){
     // get all selected areas
     theseAreas = document.querySelectorAll('#policyAreas input:checked'); // returns multiple checkboxes
     areaRefs = [];
+
     // for each of the elements, get the id, then split it down to single figure
     for (var ta = 0; ta < theseAreas.length; ta++){
       areaRefs[ta] = parseInt(theseAreas[ta].id.split('-')[1].split('')[1]);
     }
+
     // for each of the stored teams
     for (var tc = 0; tc < teamContent.length; tc++){
+
       // check the id against currently selected team
       if (teamContent[tc].tId === thisTeam.id){
         // update the stored name if needs be
@@ -123,20 +126,31 @@ function updateTeams(e){
         // update the stored values if needed
         teamContent[tc].areas = areaRefs;
         teamContent[tc].output = teamContent[tc].name +" policy (inc. ";
+
         // concatenate the area titles
         for (var at=0; at<teamContent[tc].areas.length; at++){
-          if (at === teamContent[tc].areas.length-1){
+
+          // if there's just one area
+          if (teamContent[tc].areas.length === 1){
+            // just add the area name and a space
+            teamContent[tc].output += areaTitles[teamContent[tc].areas[at]] + " ";
+          }
+          else if ((at === teamContent[tc].areas.length-1) && (at > 0)){
             // if its the last area title being added, then include appropriate ending
-            teamContent[tc].output += "and " + areaTitles[teamContent[tc].areas[at]] + " security)";
-          } else {
+            teamContent[tc].output += "and " + areaTitles[teamContent[tc].areas[at]];
+          }
+          else {
             // otherwise just separate the areas with a comma
             teamContent[tc].output += areaTitles[teamContent[tc].areas[at]] + ", ";
           }
         }
+
+        teamContent[tc].output += " security)";
         // update the summary text
         updateSummary(teamContent[tc]);
         // then break the loop
         tc = teamContent.length;
+
       } else {
         // if it isn't a match then do nothing
         console.log('Not a match');
@@ -158,13 +172,24 @@ function updateSummary(el){
     // does this list item match the element we've been given
     if (list[li].id === itemID){
       found = list[li];
+      console.log('matching element has id '+found.id);
       li = list.length;
     }
   }
   if (found){
-    // if it does we should update the innerText
-    found.innerText = el.output;
+    // if it does then should we update the innerText
+    // are there no areas selected for this team
+    if (el.areas.length === 0){
+      console.log('this team has '+el.areas.length+' areas');
+      // no selections, no policy - delete the element
+      found.remove();
+    } else {
+      // update the text to describe all the areas
+      console.log('this team has '+el.areas.length+' areas');
+      found.innerText = el.output;
+    }
   } else {
+    console.log(itemID + 'not found');
     // build the new list item for adding
     item = '<li id="'+itemID+'">'+el.output+'</li>';
     // add new summary text to the top of the list
