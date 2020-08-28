@@ -156,6 +156,77 @@ function compileDoc(p,a){
     prevQ = qRef;
   }
 
+  var teamPolicies = [];
+  // for each of the teams in teamContent
+  for (var t=0; t<teamContent.length; t++){
+    // if there are selected areas for this team
+    if (teamContent[t].areas.length > 0){
+
+      // get the area numbers
+      areas = teamContent[t].areas;
+
+      // add the contextP
+      pText = teamContent[t].name + '\n\nOrganizational Security Policy\n\nCreated '+dateStamp()+'\n\n'+contextP.join('\n');
+      mText = '# '+teamContent[t].name + '## Organizational Security Policy \n#### Created '+dateStamp()+'\n\n'+contextP.join('\n');
+      hText = '<!DOCTYPE html><html><head><title>Organizational Security Policy '+dateStamp()+'</title></head><body><h1>Organizational Security Policy</h1><h4>Created '+dateStamp()+'</h4><p>'+contextP.join('</p><p>')+'</p>';
+
+      // for each of the optional areas
+      for (var a = 0; a< areas.length; a++){
+        // add the area title
+        // add the corresponding policy text in each format
+        switch (areas[a]) {
+          case 0:
+            pText += '\n\nDevice Security\n' + deviceP.join('\n');
+            mText += '\n\n### Device Security \n' + deviceP.join('\n');
+            hText += '<h3>Device Security</h3><p>' + deviceP.join('</p><p>')+'</p>';
+            break;
+          case 1:
+            pText += '\n\nCommunications Security\n' + commsP.join('\n');
+            mText += '\n\n### Communications Security \n' + commsP.join('\n');
+            hText += '<h3>Communications Security</h3><p>' + commsP.join('</p><p>')+'</p>';
+            break;
+          case 2:
+            pText += '\n\nAccounts Security\n' + acctsP.join('\n');
+            mText += '\n\n### Accounts Security \n' + acctsP.join('\n');
+            hText += '<h3>Accounts Security</h3><p>' + acctsP.join('</p><p>')+'</p>';
+            break;
+          case 3:
+            pText += '\n\nTravel Security\n' + travelP.join('\n');
+            mText += '\n\n### Travel Security \n' + travelP.join('\n');
+            hText += '<h3>Travel Security</h3><p>' + travelP.join('</p><p>')+'</p>';
+            break;
+          case 4:
+            pText += '\n\nEnvironmental Security\n' + envP.join('\n');
+            mText += '\n\n### Environmental Security \n' + envP.join('\n');
+            hText += '<h3>Environmental Security</h3><p>' + envP.join('</p><p>')+'</p>';
+            break;
+          case 5:
+            pText += '\n\nNetwork Security\n' + networkP.join('\n');
+            mText += '\n\n### Network Security \n' + networkP.join('\n');
+            hText += '<h3>Network Security</h3><p>' + networkP.join('</p><p>')+'</p>';
+            break;
+          default:
+          console.log(areas[a]);
+        }
+
+      }
+      // then add the other default content
+      pText += '\n\nWhat to do if...\n' + incResP.join('\n\n');
+      mText += '\n\n### What to do if...\n' + incResP.join('\n\n');
+      hText += '<h3>What to do if...</h3><p>' + incResP.join('</p><p>')+'</p>';
+
+      // get the name
+      teamPolicies.push({
+        // build team policy title
+        "team":teamContent[t].name,
+        "plain": pText,
+        "markdown": mText,
+        "html": hText,
+      })
+    }
+  }
+
+
   doc.plain = 'Organizational Security Policy\n\nCreated '+dateStamp()+'\n\n'+contextP.join('\n');
   doc.markdown = '# Organizational Security Policy \n#### Created '+dateStamp()+'\n\n'+contextP.join('\n');
   doc.html = '<!DOCTYPE html><html><head><title>Organizational Security Policy '+dateStamp()+'</title></head><body><h1>Organizational Security Policy</h1><h4>Created '+dateStamp()+'</h4><p>'+contextP.join('</p><p>')+'</p>';
@@ -233,6 +304,7 @@ function compileDoc(p,a){
   output = doc;
   return doc;
 }
+
 
 // function to replace temporary placeholder text in policy
 function replaceStr(string) {

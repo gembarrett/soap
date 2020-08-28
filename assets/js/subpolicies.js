@@ -172,7 +172,6 @@ function updateSummary(el){
     // does this list item match the element we've been given
     if (list[li].id === itemID){
       found = list[li];
-      console.log('matching element has id '+found.id);
       li = list.length;
     }
   }
@@ -180,16 +179,13 @@ function updateSummary(el){
     // if it does then should we update the innerText
     // are there no areas selected for this team
     if (el.areas.length === 0){
-      console.log('this team has '+el.areas.length+' areas');
       // no selections, no policy - delete the element
       found.remove();
     } else {
       // update the text to describe all the areas
-      console.log('this team has '+el.areas.length+' areas');
       found.innerText = el.output;
     }
   } else {
-    console.log(itemID + 'not found');
     // build the new list item for adding
     item = '<li id="'+itemID+'">'+el.output+'</li>';
     // add new summary text to the top of the list
