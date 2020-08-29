@@ -386,6 +386,19 @@ color: #A9bcd0;
 .question-panel i.highlight{
   transform: rotate(45deg);
 }
+
+.question-panel div{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.question-panel span{
+  font-size: 2em;
+  padding-right: 0.5em;
+  min-width: 30px;
+}
+
 /* ================== */
 /* Preview styles */
 
