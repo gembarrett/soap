@@ -101,7 +101,7 @@ function updateTeams(e){
       }
     }
     // compare label to what's stored and replace if necessary
-    // TODO: pick up the name earlier
+    // TODO: pick up the name on blur
     teamContent[parseInt(thisT)].name = e.target.labels[0].textContent !== teamContent[parseInt(thisT)].name ? e.target.labels[0].textContent : teamContent[parseInt(thisT)].name;
 
   } else if (e.target.type === "checkbox"){   // if user clicked a content area

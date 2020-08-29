@@ -242,8 +242,8 @@ function compileDoc(p,a){
 
       // add the contextP
       pText = '\n\n'+teamContent[t].name + '\n\nOrganizational Security Policy\n\nCreated '+dateStamp()+'\n\n'+contextP.join('\n');
-      mText = '# '+teamContent[t].name + '## Organizational Security Policy \n#### Created '+dateStamp()+'\n\n'+contextP.join('\n');
-      hText = '<!DOCTYPE html><html><head><title>Organizational Security Policy '+dateStamp()+'</title></head><body><h1>Organizational Security Policy</h1><h4>Created '+dateStamp()+'</h4><p>'+contextP.join('</p><p>')+'</p>';
+      mText = '\n\n# '+teamContent[t].name + '\n## Organizational Security Policy \n#### Created '+dateStamp()+'\n\n'+contextP.join('\n');
+      hText = '<!DOCTYPE html><html><head><title>Organizational Security Policy '+dateStamp()+'</title></head><body><h1>'+teamContent[t].name+'</h1><h2>Organizational Security Policy</h2><h4>Created '+dateStamp()+'</h4><p>'+contextP.join('</p><p>')+'</p>';
 
       // for each of the optional areas
       for (var a = 0; a< areas.length; a++){
