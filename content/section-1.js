@@ -184,7 +184,7 @@ var section1 = [
       {
         "type":"checkbox",
         "editable": true,
-        "answerText":"other add-on",
+        "answerText":"another add-on",
         "storeAs": "[use-these-browser-extensions]",
         "excludes":[],
         "policyEntry":"",

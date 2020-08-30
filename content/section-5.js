@@ -94,7 +94,7 @@ var section5 = [
       {
         "type":"checkbox",
         "editable":true,
-        "answerText":"other",
+        "answerText":"another storage option",
         "storeAs":"[secure-storage-options]",
         "excludes":[],
         "policyEntry":"",
@@ -172,7 +172,7 @@ var section5 = [
       {
         "type":"checkbox",
         "editable":true,
-        "answerText":"other",
+        "answerText":"something else",
         "storeAs":"[alt-visitor-rule]",
         "excludes":[],
         "policyEntry":"Please also note the following rule: [alt-visitor-rule]",
@@ -347,7 +347,7 @@ var section5 = [
       {
         "type":"checkbox",
         "editable":true,
-        "answerText":"other",
+        "answerText":"something else",
         "storeAs":"[alt-office-security]",
         "excludes":[],
         "policyEntry":"[alt-office-security]",
@@ -440,7 +440,7 @@ var section5 = [
       {
         "type":"checkbox",
         "editable":true,
-        "answerText":"other",
+        "answerText":"something else",
         "storeAs":"[alt-home-office-security]",
         "excludes":[],
         "policyEntry":"[organisation-name] staff are expected to secure their home office using the following method: [alt-home-office-security]",

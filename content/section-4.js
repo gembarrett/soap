@@ -199,7 +199,7 @@ var section4 = [
       {
         "type":"checkbox",
         "editable":true,
-        "answerText":"other security measure",
+        "answerText":"something else",
         "storeAs":"[alt-travel-security]",
         "excludes":[],
         "policyEntry":"- [alt-travel-security]",
@@ -307,7 +307,7 @@ var section4 = [
       {
         "type":"checkbox",
         "editable":true,
-        "answerText":"other",
+        "answerText":"another VPN",
         "storeAs":"[use-this-for-vpn]",
         "excludes":[],
         "policyEntry":"",

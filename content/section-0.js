@@ -108,7 +108,7 @@ var section0 = [
       {
         "type":"checkbox",
         "editable": true,
-        "answerText":"other group",
+        "answerText":"another team",
         "storeAs": "[who-policy-applies-to]",
         "excludes":[],
         "policyEntry":"",

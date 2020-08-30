@@ -107,7 +107,7 @@ var section2 = [
       {
         "type":"radio",
         "editable": true,
-        "answerText":"other service",
+        "answerText":"another password manager",
         "storeAs": "[use-this-for-password-storage]",
         "excludes":[],
         "policyEntry":"In particular, we ask you to use [use-this-for-password-storage] and if you require any help with set up or using this tool then you should discuss it with [security-contact-name].",
@@ -170,7 +170,7 @@ var section2 = [
       {
         "type":"radio",
         "editable":true,
-        "answerText":"In these cases:",
+        "answerText":"in specific circumstances",
         "storeAs":"[browser-password-exceptions]",
         "excludes":[],
         "policyEntry":"Ordinarily, we would prefer staff to avoid storing passwords in their browser, however it is permitted under these circumstances: [browser-password-exceptions]",
@@ -325,7 +325,7 @@ var section2 = [
       {
         "type":"radio",
         "editable": true,
-        "answerText":"another app",
+        "answerText":"another authentication app",
         "storeAs": "[use-this-for-authentication]",
         "excludes":[],
         "policyEntry":"To ensure consistency and help with training and troubleshooting, [organisation-name] uses [use-this-for-authentication] for two-factor authentication where platforms allow it. This app may be installed automatically as part of your mobile work device set up, otherwise you should install it from your platform’s app store, requesting assistance from [security-contact-name] when needed.",

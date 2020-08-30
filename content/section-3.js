@@ -124,7 +124,7 @@ var section3 = [
       {
         "type":"checkbox",
         "editable":true,
-        "answerText":"other",
+        "answerText":"another device manager",
         "storeAs":"[we-use-this-device-manager]",
         "excludes":[],
         "policyEntry":"",
@@ -249,7 +249,7 @@ var section3 = [
       {
         "type":"radio",
         "editable":true,
-        "answerText":"another basis",
+        "answerText":"another schedule",
         "storeAs":"[how-often-backups-done]",
         "excludes":[],
         "policyEntry":"",
@@ -342,7 +342,7 @@ var section3 = [
       {
         "type":"checkbox",
         "editable":true,
-        "answerText":"other security measure",
+        "answerText":"something else",
         "storeAs":"[alt-backup-security]",
         "excludes":[],
         "policyEntry":"- [alt-backup-security]",
