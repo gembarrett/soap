@@ -112,15 +112,13 @@ function collectAnswers(isEdited){
           aNum = inputFields[cc].id.split("-")[1];
           // if the element is checked or is a type of not-empty text box
           if (inputFields[cc].checked || (inputFields[cc].type.includes("text") && inputFields[cc].value !== "")) {
-            // this throws an error because the final question is in a different format
-            // should just skip the last question as its dealt with separately anyway.
             // grab any exclusions
             exc = updateExc(qData.data.answers[aNum], exc);
             // save the answer
             dic = saveToDict(inputFields[cc], qData.data.answers[aNum], dic);
             ans = storeThisA(ans, qData.ref, aNum);
           } else {
-            console.log('This element is '+inputFields[cc].id);
+            return;
           }
         }
       } else {
@@ -134,6 +132,33 @@ function collectAnswers(isEdited){
   // collect any excluded question numbers
   if (exc.length > 0){
     currentState.exclusions = exc;
+  }
+}
+
+function collectExclusions(id){
+  console.log('looking for q'+id+' exclusions!');
+  find = "#q"+id+' input:checked';
+  var exc = [];
+  if (inputs = document.querySelectorAll(find)){
+    // for each checked input
+    for (var i = 0; i < inputs.length; i++){
+      // look up the question's data
+      q = getQData(inputs[i]);
+
+      // get the input's answer's id
+      id = inputs[i].id.split('-')[1];
+      console.log(q);
+      console.log('answer id is '+id);
+      // if it has exclusions
+      // add them to the array
+      exc = updateExc(q.data.answers[id], exc);
+    }
+    if (exc.length > 0){
+      currentState.exclusions = exc.concat(currentState.exclusions);
+      console.log(currentState.exclusions);
+    }
+  } else {
+    console.log('none found');
   }
 }
 

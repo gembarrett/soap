@@ -63,14 +63,17 @@ function moveForward(id) {
 function isExcludedQ(id) {
   // start looking at the next question
   id = moveForward(id);
+  console.log('is question '+id+' excluded?');
   // for each of the questions remaining
   for (var q = id; q < questionsList.length; q++) {
     // if the question isn't on the list
     if (currentState.exclusions.indexOf(parseInt(id)) === -1) {
       // if the question is not excluded
       // break the loop
-      return false;
+      console.log('not excluded: '+id);
+      // console.log('Go to next question.');
     } else {
+      console.log('excluded: '+id);
       // update everything to the next question
       id = moveForward(id);
     }
@@ -127,12 +130,16 @@ function handleSubmit() {
 
       if(parseInt(id) === questionsList.length-1){
         document.getElementById('editBtn').classList.add('disabled');
+      } else {
+        // collect the exclusions for this question
+        collectExclusions(id);        
       }
-
       // this hides the current question,
       match.classList.remove("current");
+      // is the next question excluded
       // go to next question
       id = isExcludedQ(id);
+      console.log('returned from function: '+id);
       // TODO change to Skip when skip/next is working
       document.getElementById('submitAnswers').innerText = "Next";
       nextQuestion();
@@ -159,13 +166,13 @@ function setUpPage(id){
 function nextQuestion(){
   // reset the snapshot visibility
   document.querySelector('#snapshotGroup').classList.add('hidden');
-  // if the position is not beyond the total number of questions for the current section
+  // if there's more questions left in this section
   if (currentState.questionP < currentState.sectionQ.length) {
     // grab the next question's element and add class of current
     var nextQ = document.getElementById(currentState.questionQ);
     nextQ.classList.add("current");
   }
-  // if the sections have not run out (using the counter because it isn't changed)
+  // if there's more sections left
   // consider whether this should happen here, before the last q, or after it
   else if (currentState.sectionC < sections.length-1) {
     // increase the section counter
@@ -178,7 +185,7 @@ function nextQuestion(){
     var nextQ = document.getElementById(currentState.questionQ);
     nextQ.classList.add("current");
   }
-  // if we're out of sections then show the policy
+  // if we're out of questions and sections then show the policy
   else {
     // if there are answers
     if (currentState.answers.length > 0) {
