@@ -63,7 +63,6 @@ function moveForward(id) {
 function isExcludedQ(id) {
   // start looking at the next question
   id = moveForward(id);
-  console.log('is question '+id+' excluded?');
   // for each of the questions remaining
   for (var q = id; q < questionsList.length; q++) {
     // if the question isn't on the list
@@ -73,7 +72,6 @@ function isExcludedQ(id) {
       console.log('not excluded: '+id);
       // console.log('Go to next question.');
     } else {
-      console.log('excluded: '+id);
       // update everything to the next question
       id = moveForward(id);
     }
@@ -132,14 +130,13 @@ function handleSubmit() {
         document.getElementById('editBtn').classList.add('disabled');
       } else {
         // collect the exclusions for this question
-        collectExclusions(id);        
+        collectExclusions(id);
       }
       // this hides the current question,
       match.classList.remove("current");
       // is the next question excluded
       // go to next question
       id = isExcludedQ(id);
-      console.log('returned from function: '+id);
       // TODO change to Skip when skip/next is working
       document.getElementById('submitAnswers').innerText = "Next";
       nextQuestion();

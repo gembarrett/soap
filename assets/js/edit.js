@@ -118,7 +118,7 @@ function collectAnswers(isEdited){
             dic = saveToDict(inputFields[cc], qData.data.answers[aNum], dic);
             ans = storeThisA(ans, qData.ref, aNum);
           } else {
-            return;
+            console.log('Not the right input');
           }
         }
       } else {
@@ -136,7 +136,6 @@ function collectAnswers(isEdited){
 }
 
 function collectExclusions(id){
-  console.log('looking for q'+id+' exclusions!');
   find = "#q"+id+' input:checked';
   var exc = [];
   if (inputs = document.querySelectorAll(find)){
@@ -147,15 +146,12 @@ function collectExclusions(id){
 
       // get the input's answer's id
       id = inputs[i].id.split('-')[1];
-      console.log(q);
-      console.log('answer id is '+id);
       // if it has exclusions
       // add them to the array
       exc = updateExc(q.data.answers[id], exc);
     }
     if (exc.length > 0){
       currentState.exclusions = exc.concat(currentState.exclusions);
-      console.log(currentState.exclusions);
     }
   } else {
     console.log('none found');
