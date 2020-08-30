@@ -173,6 +173,9 @@
   #feedback .text-buttons-wrap {
     flex-direction: column;
   }
+  progress {
+    margin-top:1em;
+  }
   #feedback {
     height: 60%;
   }
