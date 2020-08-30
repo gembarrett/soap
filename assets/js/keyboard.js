@@ -64,7 +64,10 @@ function simulateClick(el, key, keys){
         } else { // if the preview is open
           return false;
         }
-      } else { // if it's a text entry
+      } else if (el.type === "textarea") { // if it's a textbox
+        el.value += '\n';
+        key.preventDefault();
+      } else {
         key.preventDefault();
       }
       break;
