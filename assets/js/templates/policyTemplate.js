@@ -16,7 +16,7 @@ templates.policyTemplate = function(data){
       <div id="policy-dl" class="window pink-border-glow">
         <h3>Get policy</h3>
         <div class="dlBtnWrapper">
-          <p>Download pre-formatted versions of your organizational security policy in plaintext, markdown and HTML.</p>
+          <p>Download pre-formatted versions of your organizational security policy documents in plaintext, markdown and HTML.</p>
         <div>`+ txt + md + html + `</div>
       </div>
       </div>

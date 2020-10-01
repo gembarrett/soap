@@ -155,7 +155,7 @@ var section0 = [
       },
       {
         "type":"radio",
-        "answerText":"A portion of our staff work remotely.",
+        "answerText":"Some work remote.",
         "storeAs": "",
         "excludes":[],
         "policyEntry":"",
@@ -170,7 +170,7 @@ var section0 = [
       },
       {
         "type":"radio",
-        "answerText":"No - all of our staff work remotely.",
+        "answerText":"No - everyone works remote.",
         "storeAs": "",
         "excludes":[36, 38, 39, 40, 44, 45],
         "policyEntry":"",
