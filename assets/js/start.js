@@ -96,7 +96,7 @@ function enablePreview(p){
     if ((currentState.answers.length !== 0) && (Object.values(dict).length !== 0)){
       p.removeAttribute('disabled');
     } else {
-      console.log('Not enough content for preview');
+      console.log('More answers needed for preview');
     }
   } else {
     // if we're past the contextual section
@@ -104,7 +104,7 @@ function enablePreview(p){
     if ((currentState.answers.length !== 0) || (Object.values(dict).length !== 0)){
       p.removeAttribute('disabled');
     } else {
-      console.log('Not enough content for preview');
+      console.log('More answers needed for preview');
     }
   }
 }
@@ -126,7 +126,7 @@ function enableSnapshot(s){
       }
     }
   } else {
-    console.log(currentState.answers.length + ' is not enough answers for snapshotting');
+    console.log('More answers needed for snapshotting');
   }
 }
 

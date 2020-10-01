@@ -124,11 +124,11 @@ function collectAnswers(isEdited){
               dic = saveToDict(inputFields[cc], qData.data.answers[aNum], dic);
               ans = storeThisA(ans, qData.ref, aNum);
             } else {
-              console.log('Not the right input');
+              console.log('Checked or text values only');
             }
           }
         } else {
-          console.log('No input fields');
+          console.log('Input fields only');
         }
       }
     }
