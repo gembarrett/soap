@@ -88,6 +88,16 @@ function toggleSpinner(){
   document.getElementById('spinner').classList.toggle('loading');
 }
 
+function isThereAnAnswer(){
+  if (currentState.answers.length !== 0){
+    return true;
+  } else if (Object.values(dict).length !== 0){
+    return true;
+  } else {
+    return false;
+  }
+}
+
 // this is the function that's called when a user submits an answer
 function handleSubmit() {
   toggleSpinner();
@@ -118,15 +128,18 @@ function handleSubmit() {
         // mark the current question as editable
         match.classList.add("editable");
         collectAnswers(false);
+
         // show the preview button if answers are available
         prev = document.querySelector('#previewPolicy');
-        if (prev.disabled && (currentState.answers.length > 1 || Object.values(dict).length > 1)){
+        if (prev.disabled && isThereAnAnswer()){
           prev.removeAttribute('disabled');
           setUpSnapshot();
         }
       }
 
+      // if we're at the last question
       if(parseInt(id) === questionsList.length-1){
+        // disable the edit button
         document.getElementById('editBtn').classList.add('disabled');
       } else {
         // collect the exclusions for this question

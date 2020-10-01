@@ -99,30 +99,37 @@ function collectAnswers(isEdited){
     // we're collecting for a policy so get all the answers available so far
     questions = document.querySelectorAll(".editable, .current");
     // for each question, except the last one
-    for (var c = 0; c < questions.length-1; c++){
-      // get the input fields
-      var inputFields = checkForInputs(questions[c]);
-      // if there are input fields
-      if (inputFields !== false){
-        // get the question number and data
-        qData = getQData(inputFields[0]);
-        // for each of the input fields
-        for (var cc = 0; cc < inputFields.length; cc++){
-          // get the ID
-          aNum = inputFields[cc].id.split("-")[1];
-          // if the element is checked or is a type of not-empty text box
-          if (inputFields[cc].checked || (inputFields[cc].type.includes("text") && inputFields[cc].value !== "")) {
-            // grab any exclusions
-            exc = updateExc(qData.data.answers[aNum], exc);
-            // save the answer
-            dic = saveToDict(inputFields[cc], qData.data.answers[aNum], dic);
-            ans = storeThisA(ans, qData.ref, aNum);
-          } else {
-            console.log('Not the right input');
-          }
-        }
+    for (var c = 0; c < questions.length; c++){
+
+      // if this question id is the same as that of the last element in questionsList then skip
+      if (questions[c].id === questionsList[questionsList.length - 1]){
+        console.log('Skip');
       } else {
-        console.log('No input fields');
+        // get the input fields
+        var inputFields = checkForInputs(questions[c]);
+        // if there are input fields
+        if (inputFields !== false){
+
+          // get the question number and data
+          qData = getQData(inputFields[0]);
+          // for each of the input fields
+          for (var cc = 0; cc < inputFields.length; cc++){
+            // get the ID
+            aNum = inputFields[cc].id.split("-")[1];
+            // if the element is checked or is a type of not-empty text box
+            if (inputFields[cc].checked || (inputFields[cc].type.includes("text") && inputFields[cc].value !== "")) {
+              // grab any exclusions
+              exc = updateExc(qData.data.answers[aNum], exc);
+              // save the answer
+              dic = saveToDict(inputFields[cc], qData.data.answers[aNum], dic);
+              ans = storeThisA(ans, qData.ref, aNum);
+            } else {
+              console.log('Not the right input');
+            }
+          }
+        } else {
+          console.log('No input fields');
+        }  
       }
     }
   }
@@ -205,6 +212,7 @@ function getQData(el){
 }
 
 function saveToDict(el, a, storage){
+  console.log('storing a text value');
   // if this answer has a storeas value
   if (a.storeAs !== ""){
     // if it's a selected button
