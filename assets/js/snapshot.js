@@ -1,10 +1,3 @@
-function setUpSnapshot(){
-  var snapshotBtn = document.getElementById('snapshotPolicy');
-  snapshotBtn.removeAttribute('disabled');
-  snapshotBtn.addEventListener('click', getSnapshotURL);
-  document.querySelector('#copyBtn').addEventListener('click', copyUrl);
-}
-
 function copyUrl(){
   try {
     // does copy work here?

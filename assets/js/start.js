@@ -88,13 +88,45 @@ function toggleSpinner(){
   document.getElementById('spinner').classList.toggle('loading');
 }
 
-function isThereAnAnswer(){
-  if (currentState.answers.length !== 0){
-    return true;
-  } else if (Object.values(dict).length !== 0){
-    return true;
+// if prev button is disabled then call this
+function enablePreview(p){
+  // if the section is 0
+  if (currentState.sectionC === 0){
+    // if there's text AND button answers
+    if ((currentState.answers.length !== 0) && (Object.values(dict).length !== 0)){
+      p.removeAttribute('disabled');
+    } else {
+      console.log('Not enough content for preview');
+    }
   } else {
-    return false;
+    // if we're past the contextual section
+    // and there are text OR button answers
+    if ((currentState.answers.length !== 0) || (Object.values(dict).length !== 0)){
+      p.removeAttribute('disabled');
+    } else {
+      console.log('Not enough content for preview');
+    }
+  }
+}
+
+// if snapshot button is disabled then call this
+function enableSnapshot(s){
+  // if there's answers stored
+  if (currentState.answers.length !== 0){
+    // check the ids against the checkableQs
+    for (count = 0; count< currentState.answers.length; count++){
+      if (isCheckableQ(parseInt(currentState.answers[count].q))){
+        // enable the snapshot button
+        s.removeAttribute('disabled');
+        s.addEventListener('click', getSnapshotURL);
+        document.querySelector('#copyBtn').addEventListener('click', copyUrl);
+        return;
+      } else {
+        console.log(currentState.answers[count].q + ' is not a question that can be snapshotted');
+      }
+    }
+  } else {
+    console.log(currentState.answers.length + ' is not enough answers for snapshotting');
   }
 }
 
@@ -131,9 +163,13 @@ function handleSubmit() {
 
         // show the preview button if answers are available
         prev = document.querySelector('#previewPolicy');
-        if (prev.disabled && isThereAnAnswer()){
-          prev.removeAttribute('disabled');
-          setUpSnapshot();
+        snapshotBtn = document.querySelector('#snapshotPolicy');
+
+        if (prev.disabled){
+          enablePreview(prev);
+        }
+        if (snapshotBtn.disabled){
+          enableSnapshot(snapshotBtn);  // enable the snapshot button
         }
       }
 
