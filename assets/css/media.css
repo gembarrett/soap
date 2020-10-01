@@ -196,9 +196,6 @@
   .questionContent h1 {
     font-size: 1.5em;
   }
-  .questionContent h2 {
-    font-size: 1.3em;
-  }
   #q0 h2 {
     width:100%;
     font-size: 1.2em;
@@ -398,7 +395,7 @@
     margin-top:2em;
   }
   .questionContent h2 {
-    font-size: 1.3em;
+    font-size: 1em;
     line-height: 1.5em;
   }
   #head {
@@ -413,10 +410,6 @@
   }
   .answers-container {
     flex-direction: column;
-  }
-  .questionContent h2 {
-    font-size: 1.3em;
-    line-height: 1.5em;
   }
   #closePreview .fas {
     font-size: 1.5em;
@@ -493,5 +486,12 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+  }
+  .question-panel div {
+    flex-direction: column;
+    padding: 1em 0;
+  }
+  #teamContentCols {
+    flex-direction: column;
   }
 }

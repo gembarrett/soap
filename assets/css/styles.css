@@ -1072,8 +1072,7 @@ summary::marker {
 }
 #expectedOutput{
   color: #F2EEE2;
-  border:1px solid currentColor;
-  padding:1em;
+  margin-top: 4em;
 }
 label span {
   display: block;

@@ -22,11 +22,11 @@ function buildSubPolicies(data){
   }
   // close the columns and add the summary
   layout += `</div></div>
-  <div id="expectedOutput">
-    <p>Here's what you'll get when you hit Next:
+  <details id="expectedOutput">
+    <summary>Your policy package:</summary>
     <ul><li>Organizational Security Policy (full version)</li>
     <li>Appendix (inc. tips, links and Everyday Practices document)</li>
-    </ul></p></div>`;
+    </ul></details>`;
 
   // return the complete page
   return layout;
