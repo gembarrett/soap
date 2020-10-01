@@ -28,7 +28,6 @@ function injectOverlay() {
 
 // function to show/hide the preview overlay
 function toggleModal(m, o) {
-  console.log('toggling');
   m.classList.toggle("closed");
   o.classList.toggle("closed");
 }

@@ -68,7 +68,6 @@ function addTeam(e){
     e.preventDefault();
   } else {
     // if it's more than 10, do nothing (maybe show error text)
-    console.log('too many teams');
     // don't do any other buttony stuff
     e.preventDefault();
   }

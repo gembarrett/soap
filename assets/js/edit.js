@@ -129,7 +129,7 @@ function collectAnswers(isEdited){
           }
         } else {
           console.log('No input fields');
-        }  
+        }
       }
     }
   }
@@ -212,7 +212,6 @@ function getQData(el){
 }
 
 function saveToDict(el, a, storage){
-  console.log('storing a text value');
   // if this answer has a storeas value
   if (a.storeAs !== ""){
     // if it's a selected button

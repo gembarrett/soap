@@ -55,7 +55,7 @@ var section0 = [
     "isQuestion": true,
     "id":"q2",
     "q":"Who will this policy apply to?",
-    "required":false,
+    "required":true,
     "policyEntry":"This policy applies to [who-policy-applies-to].",
     "appendixEntry":"",
     "routineEntry":"",

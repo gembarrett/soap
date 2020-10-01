@@ -29,8 +29,8 @@ function compileDoc(p,a){
   };
   var routineDoc = [];
 
-  // set up prevQ currentState.answers[0].q
-  var prevQ = currentState.answers[0].q;
+  // what is the first q in the answers array?
+  var prevQ = 0;
 
   // for each of the answer references
   for (var i = 0; i < currentState.answers.length; i++){
@@ -40,7 +40,6 @@ function compileDoc(p,a){
     qRef = currentState.answers[i].q;
     // set up question name
     var thisQ = 'q'+qRef;
-
     // search for the relevant data using the answer reference
     for (var j = 0; j < sections.length; j++){
       // store if the data is found
@@ -372,7 +371,6 @@ function dateStamp(){
 }
 
 function clearData(){
-  console.log('reset all the things!');
   currentState = null;
   dates  = null;
   dict = null;
@@ -438,19 +436,27 @@ function makeFile(d, n, f){
   }
 }
 
-// TODO: consider merging these three into one function
 function getPolicyContent(question, previous, answer, policy, content){
   // if it's a new question and there's policyEntry
   if ((question !== previous) && (content.policyEntry !== "")) {
     // edit the policyEntry and push it to the policy
     thisContent = replaceStr(content.policyEntry);
     policy.push(thisContent);
+  } else {
+    console.log(question + ' is not a new question');
   }
+
+  // TODO: add a case that deals with the first question
+  // if q1 isn't answered then the next answered question is being skipped over because it's the same as previous
+  // need to check (one-time) if the question is same as previous but has not been processed before
+
   // if the answer has a policyEntry
   if (content.answers[answer].policyEntry !== ""){
     // edit the policyEntry and push it to the policy
     thisContent = replaceStr(content.answers[answer].policyEntry);
     policy.push(thisContent);
+  } else {
+    console.log(question + ' does not have an answer-specific entry');
   }
   return policy;
 }
