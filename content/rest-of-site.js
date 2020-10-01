@@ -1,6 +1,6 @@
 var ros = [
   {
-    "head":"The free and simple online tool that enables civil society organizations to build better security policies.",
+    "head":"The free and simple tool that enables civil society organizations to build better security policies.",
     "subhead":"To get started, enter your organization's name (or an alias):",
     "what":[
       {
