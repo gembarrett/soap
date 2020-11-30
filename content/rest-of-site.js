@@ -73,8 +73,8 @@ var ros = [
             "url":"https://www.level-up.cc"
           },
           {
-            "name":"Security Planner by Citizen Lab",
-            "url":"https://securityplanner.org"
+            "name":"Security Planner by Consumer Reports",
+            "url":"https://securityplanner.consumerreports.org"
           }
         ]
       }
