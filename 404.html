@@ -9,20 +9,18 @@
     <link href="/assets/css/all.css" rel="stylesheet">
   </head>
   <body>
-    <div id="head" class="nav-start">
-      <a href="/" title="Go to the home page">
+    <div id="head" class="nav-start contain">
+      <a href="/" title="Go to the home page" id="homeLink">
         <img id="logo" alt="SOAP logo" src="assets/images/soapLogoW.png" />
       </a>
 
-      <!-- hamburger icon -->
-      <input type="checkbox" id="menu-check" />
-      <label for="menu-check" id="expand"><i class="fas fa-ellipsis-v"></i></label>
-      <input type="checkbox" id="menu-collapse" />
-      <label for="menu-check" id="collapse"><i class="fas fa-ellipsis-h"></i></label>
+      <div class="header-menu">
+        <ul id="menu" class="links">
+          <li><a id="bu" href="/#build" title="Build an organizational security policy">Build policy</a></li>
+          <li id="editBtn" class="disabled" tabindex="0" title="Click or press E to edit your answers">EDIT</li>
+        </ul>
+      </div>
 
-      <ul id="menu" class="links">
-        <li><a id="bu" href="/#build" title="Build an organizational security policy">Build policy</a></li>
-      </ul>
     </div>
     <div id="page" class="main-content">
       <div id="no-js" class="window">
