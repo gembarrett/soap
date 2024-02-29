@@ -91,6 +91,26 @@ var ros = [
         ],
         "more":["Just want to say hi or ask a question? Have an idea for how SOAP could be improved? Email us at: <a href='mailto:feedback@usesoap.app?subject=Suggested%20change' title='Email your feedback about SOAP'>feedback(at)usesoap.app</a>."]
       }
-    ]
-  }
+    ],
+      "policyPage":{
+          "resourcesHeading": "Learn more",
+          "resourcesIntro": "For more information on organizational and personal security, and how you can get the most out of your new policy, check out these resources:",
+          "resourceBtnLabel": "Get more info about",
+          "textPolicyLabel": "Text",
+          "editPolicyLabel": "Download this policy text",
+          "editPolicyHeading":"Edit policy",
+          "editPolicyInstruction":"Edit your policy below for copying and pasting into your own file.",
+          "markdownPolicyLabel": "Markdown",
+          "htmlPolicyLabel":"HTML",
+          "policyHeading": "Get policy",
+          "policyPreFormat": "Download pre-formatted versions of your organizational security policy documents in plaintext, markdown and HTML.",
+          "feedbackHeading": "What did you think?",
+          "feedbackInstruction": "If you have a few minutes, it would be great to hear your thoughts on SOAP so it can be improved in the future. SOAP doesn't use analytics to follow you around the site, so this is the best way to share your opinion.",
+          "feedbackTitle": "Click to take a short survey about SOAP",
+          "feedbackBtnLabel": "Sure, I'll complete a quick survey!",
+          "resetHeading":"Start over",
+          "resetInstruction":"All done? You'll need to reload the page before building another policy.",
+          "resetBtnLabel":"Build another policy"
+      }
+  },
 ]

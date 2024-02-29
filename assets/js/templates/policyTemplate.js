@@ -2,15 +2,21 @@ templates.policyTemplate = function(data){
   var docContent = compileDoc(true, true);
   output = docContent;
   var resources = ros[0].background[0].links;
+    // insert resourcesIntro
   var links = "<div><p>For more information on organizational and personal security, and how you can get the most out of your new policy, check out these resources:</p>";
   for (var r = 0; r<resources.length; r++){
+      // insert resourceBtnLabel
     links += `<a href="`+resources[r].url+`" target="_blank" class="btn btn-seco" title="Get more info about `+resources[r].name+`">`+resources[r].name+`</a>`;
   }
+    // insert textPolicyLabel
   txt = '<button class="btn btn-prim pink-border-glow" onclick="downloadPolicy(\'plain\')"><i class="fas fa-download"></i> Text (.txt)</button>';
+    // insert editPolicyLabel
   editTxt = '<button class="btn btn-prim pink-border-glow" onclick="downloadPolicy(\'plain\', true)"><i class="fas fa-download"></i> Download this policy text (.txt)</button>';
-
+    // insert markdownPolicyLabel
   md = '<button class="btn btn-prim pink-border-glow" onclick="downloadPolicy(\'markdown\')"><i class="fas fa-download"></i> Markdown (.md)</button>';
+    // insert htmlPolicyLabel
   html = '<button class="btn btn-prim pink-border-glow" onclick="downloadPolicy(\'html\')"><i class="fas fa-download"></i> HTML (.html)</button>';
+    // insert policyHeading, policyPreFormat, editPolicyHeading, editPolicyInstruction, feedbackInstruction, feedbackTitle, feedbackBtnLabel, resourcesHeading, resetHeading, resetInstruction, resetBtnLabel
   var content =
     `<div class="qContainer contain">
       <div id="policy-dl" class="window pink-border-glow">
