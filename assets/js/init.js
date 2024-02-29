@@ -6,8 +6,34 @@ var templates = {};
 var controllers = {};
 var views = {};
 
+//        var textStore = {
+//            qs : {},
+//            rs : {},
+//            oc : {}
+//        }
+//
+//        async function loadContentFromJSON(lang) {
+//            const response = await fetch(`${thisEnv}/content/${lang}-content.json`);
+//            const json = await response.json();
+//                textStore.qs = json.qs;
+//                textStore.rs = json.rs;
+//                textStore.oc = json.oc;
+//        }
+
 window.onload = function(){
   document.querySelector('#no-js').remove();
+    
+//        loadContentFromJSON('en').then(()=>{
+//        buildMobileMenu(sections);        
+//        window.addEventListener(
+//              "hashchange",
+//              function(){utils.router()}
+//        );
+//        //  setUpMenu();
+//        buildCatRefLib();
+//        utils.router();    
+//    });
+
   window.addEventListener(
       "hashchange",
       function(){utils.router()}
