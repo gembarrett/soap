@@ -3182,6 +3182,46 @@
     },
     "ros":[
       {
+          "index": {
+              "meta": {
+                "pageTitle": "SOAP: Securing Organizations with Automated Policymaking",
+                "pageDescription:":"SOAP is a free online security policy generator that helps civil society organizations build better security policies.",
+                  "keywords": ["soap", "security policy", "security policy generator", "security policy template", "security plan builder", "organizational security tool"]
+              },
+              "nav": {
+                  "logoLink": "Go to the home page",
+                  "logoAlt": "SOAP logo",
+                  "buildTitle": "Build an organizational security policy",
+                  "buildLabel":"Build policy",
+                  "editTitle": "Click or press E to edit your answers",
+                  "editLabel": "EDIT",
+                  "codeTitle": "View the open-source SOAP code at GitHub",
+                  "codeLabel": "Code",
+                  "researchTitle": "Open the PDF research report Securing Civil Society (in English)",
+                  "researchLabel": "Research",
+                  "feedbackTitle": "Click to send feedback on SOAP by survey, email or GitHub issue",
+                  "feedbackLabel": "Feedback"
+              },
+              "pageError": {
+                  "errorTitle": "Looks like you've got Javascript disabled",
+                  "linkToSolution": "You'll need to enable Javascript in order to use this website. Here's how to do that:",
+                  "alternativeSolution": "If your threat model requires you to keep Javascript disabled, you can instead go to <a href=\"https://github.com/gembarrett/soap\" title=\"View the open-source SOAP code at GitHub\">SOAP's GitHub repository</a> and grab the code to run the whole website offline on your local computer."
+              },
+              "feedback": {
+                  "feedbackTitle": "Have your say!",
+                  "feedback": "Take a quick survey and tell us how you rate SOAP. If you've spotted a problem with the site, including typos or bugs, please raise an issue on GitHub (account required). Alternatively, you can email about your experience - and feel free to <a href=\"https://keys.openpgp.org/search?q=feedback%40usesoap.app\" target=\"_blank\" title=\"Get the PGP public key\">download the PGP key</a> to send encrypted.",
+                  "surveyLinkTitle":"Take a short survey on Typeform",
+                  "surveyLabel":"Take a survey (in English)" ,
+                  "repoTitle": "Go to the issues on the GitHub code repository",
+                  "repoLabel": "Report an issue",
+                  "sendEmailTitle": "Send an email to give feedback about SOAP",
+                  "sendEmailLabel": "Send an email"
+              },
+              "buffer":{
+                  "spinnerAlt": "Spinning circle - the page is loading",
+                  "spinnerLabel": "LOADING"
+              },
+          },          
         "head":"The free and simple tool that enables civil society organizations to build better security policies.",
         "subhead":"To get started, enter your organization's name (or an alias):",
         "what":[
