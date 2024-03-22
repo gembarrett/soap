@@ -1,7 +1,7 @@
 templates.policyTemplate = function(data){
   var docContent = compileDoc(true, true);
   output = docContent;
-  var resources = ros[0].background[0].links;
+  var resources = textStore.ros[0].background[0].links;
     // insert resourcesIntro
   var links = "<div><p>For more information on organizational and personal security, and how you can get the most out of your new policy, check out these resources:</p>";
   for (var r = 0; r<resources.length; r++){

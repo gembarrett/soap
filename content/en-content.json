@@ -1,0 +1,3301 @@
+{
+    "qs":{
+            "section0": [
+              {
+                "isQuestion": false,
+                "id":"q0",
+                "title": "",
+                "steps":[
+                  {
+                    "title":"Plan",
+                    "text":"The first set of questions is all about understanding your organization's unique context.  The following five sections present common security incidents and then ask questions that explore preventative tactics and inform your policy's content. Each section ends with an opportunity for you to specify any incident response actions you would wish staff to take in the given scenario."
+                  },
+                  {
+                    "title":"Build",
+                    "text":"Unsure how to answer a question? Click or tap on the question to reveal a panel with implementation tips, definitions, search terms, and other information to improve clarity. If the answers aren't quite right, many questions have an 'other' button you can double-click to edit and add your own answers."
+                  },
+                  {
+                    "title":"Apply",
+                    "text":"When you've completed the process, you will be presented with your full organizational security policy, including a review checklist, appendix of implementation tips and an \"Everyday Practices\" reminder document. Download options are available so you can share the policy in the best way for your organization."
+                  }
+                ]
+              },
+              {
+                "isQuestion": true,
+                "id":"q1",
+                "q":"What is the name of your organization?",
+                "required":true,
+                "policyEntry":"",
+                "appendixEntry":"",
+                "routineEntry":"",
+                "answers":[
+                  {
+                    "type":"text",
+                    "answerText":"",
+                    "placeholder":"Example Organization",
+                    "storeAs":"[organisation-name]",
+                    "excludes":[],
+                    "policyEntry":"This is the security policy of [organisation-name], which has been created in order to support staff in carrying out our sensitive work securely. It is important to understand and comply with the rules described as they aim to protect everyone involved in our work, including partner organizations and frontline activists.",
+                    "routineEntry":"This is the short version of [organisation-name] security policy. It is designed to remind you of the everyday practices to include in your routine.",
+                    "appendixEntry": [
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  }
+                ],
+                "tips":[
+                  {"relevance":""},
+                  {"meaning":"Your organization’s name will be used in the policy to make the ownership of it clear. If you would prefer not to give a name, you can instead use an alias name to find and replace later if you wish."},
+                  {"implementation":""},
+                  {"more":""}
+                ]
+              },
+              {
+                "isQuestion": true,
+                "id":"q2",
+                "q":"Who will this policy apply to?",
+                "required":true,
+                "policyEntry":"This policy applies to [who-policy-applies-to].",
+                "appendixEntry":"",
+                "routineEntry":"",
+                "answers":[
+                  {
+                    "type":"checkbox",
+                    "answerText":"contractors",
+                    "storeAs":"[who-policy-applies-to]",
+                    "excludes":[],
+                    "policyEntry":"",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type":"checkbox",
+                    "answerText":"full or part-time staff",
+                    "storeAs":"[who-policy-applies-to]",
+                    "excludes":[],
+                    "policyEntry":"",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type":"checkbox",
+                    "answerText":"volunteers",
+                    "storeAs": "[who-policy-applies-to]",
+                    "excludes":[],
+                    "policyEntry":"",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type":"checkbox",
+                    "editable": true,
+                    "answerText":"another team",
+                    "storeAs": "[who-policy-applies-to]",
+                    "excludes":[],
+                    "policyEntry":"",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  }
+                ],
+                "tips":[
+                  {"relevance":""},
+                  {"meaning":"It should be clear exactly who is responsible for adhering to the policy and liable for violations. Use this moment to decide whether to create a separate policy for staff with different access levels, for instance volunteers or contractors."},
+                  {"implementation":"No one wants to read a policy that doesn’t apply to them. Presenting staff with only the most relevant of rules for their working environment will help with implementation and buy-in."},
+                  {"more":""}
+                ]
+              },
+              {
+                "isQuestion": true,
+                "id":"q3",
+                "q":"Do all your staff work in the same physical office?",
+                "required":true,
+                "policyEntry":"",
+                "appendixEntry":"",
+                "routineEntry":"",
+                "answers":[
+                  {
+                    "type":"radio",
+                    "answerText":"Yes.",
+                    "storeAs": "",
+                    "excludes":[41],
+                    "policyEntry":"",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type":"radio",
+                    "answerText":"Some work remote.",
+                    "storeAs": "",
+                    "excludes":[],
+                    "policyEntry":"",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type":"radio",
+                    "answerText":"No - everyone works remote.",
+                    "storeAs": "",
+                    "excludes":[36, 38, 39, 40, 44, 45],
+                    "policyEntry":"",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  }
+                ],
+                "tips":[
+                  {"relevance":""},
+                  {"meaning":"For the majority of their time, remote staff work outside of a traditional office, such as from home or a cafe. The risks in different working environments vary and there are factors to be considered which apply to remote staff but not so much those who work in a regular office – and vice versa."},
+                  {"implementation":"Your organization is remote if it has any members of staff working from outside [organisation-name]-controlled premises, and taking this remote-first perspective helps with supporting those staff as part of the team."},
+                  {"more":["managing remote staff"]}
+                ]
+              },
+              {
+                "isQuestion": true,
+                "id":"q4",
+                "q":"Who is responsible for this policy?",
+                "required":true,
+                "policyEntry":"If you have questions about this policy or its recommendations, please contact: ",
+                "appendixEntry":"",
+                "routineEntry":"Got questions? Ask [security-contact-name], [security-contact-role]!",
+                "answers":[
+                  {
+                    "type":"text",
+                    "answerText":"Name",
+                    "placeholder":"e.g. Alice Smith",
+                    "storeAs":"[security-contact-name]",
+                    "excludes":[],
+                    "policyEntry":"[security-contact-name]",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"Is [security-contact-name] still responsible for this policy?",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type":"text",
+                    "answerText":"Job title or department",
+                    "placeholder":"e.g. Security Officer",
+                    "storeAs":"[security-contact-role]",
+                    "excludes":[],
+                    "policyEntry":"([security-contact-role]).",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type":"text",
+                    "answerText":"Pronouns",
+                    "placeholder": "e.g. they/them",
+                    "storeAs":"[security-contact-pronouns]",
+                    "excludes":[],
+                    "policyEntry":"Their pronouns are [security-contact-pronouns].",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"Does [security-contact-name] still use [security-contact-pronouns] pronouns?",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type":"text",
+                    "answerText":"Email",
+                    "placeholder": "e.g. example@organization.com",
+                    "storeAs":"[security-contact-email]",
+                    "excludes":[],
+                    "policyEntry":"Email: [security-contact-email]",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"Is [security-contact-name]'s email address up-to-date?",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type":"text",
+                    "answerText":"Phone",
+                    "placeholder": "e.g. +1 (234) 567-890",
+                    "storeAs":"[security-contact-phone]",
+                    "excludes":[],
+                    "policyEntry":"Phone: [security-contact-phone]",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"Is [security-contact-name]'s phone number correct?",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  }
+                ],
+                "tips":[
+                  {"relevance":""},
+                  {"meaning":"In order to ease the implementation process and support future maintenance, one or more members of staff will be needed as a point of contact for queries about the policy. Ideally this role will be taken on by you, as the creator of this policy, or another staff member with sufficient time and security knowledge."},
+                  {"implementation":"The person named here should ideally be approachable and a familiar face around the organization, with a workload that can support the requirement to answer questions in a timely manner. However, people leave or become unsuitable for the role, and so there should also be a contingency plan in place so that all the security management doesn’t leave with the person."},
+                  {"more":["security champion role"]}
+                ]
+              },
+              {
+                "isQuestion": true,
+                "id":"q5",
+                "q":"How regularly do you intend to review and update this policy?",
+                "required":true,
+                "policyEntry":"This policy will be reviewed by [security-contact-name] ([security-contact-role]) on a [how-often-policy-reviewed] basis. Any suggestions or feedback on the policy’s contents should be directed to them.",
+                "appendixEntry":"",
+                "routineEntry":"",
+                "answers":[
+                  {
+                    "type":"checkbox",
+                    "answerText":"annual",
+                    "storeAs": "[how-often-policy-reviewed]",
+                    "excludes":[],
+                    "policyEntry":"",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "Mark your calendar for review dates on [date+12], [date+24], [date+36]",
+                        "linksList": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type":"checkbox",
+                    "answerText":"6-monthly",
+                    "storeAs": "[how-often-policy-reviewed]",
+                    "excludes":[],
+                    "policyEntry":"",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "Mark your calendar for review dates on [date+6], [date+12], [date+18]",
+                        "linksList": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type":"checkbox",
+                    "answerText":"quarterly",
+                    "storeAs": "[how-often-policy-reviewed]",
+                    "excludes":[],
+                    "policyEntry":"",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "Mark your calendar for review dates on [date+3], [date+6], [date+9]",
+                        "linksList": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type":"checkbox",
+                    "answerText":"\"as threats arise\"",
+                    "storeAs": "[how-often-policy-reviewed]",
+                    "excludes":[],
+                    "policyEntry":"",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  }
+                ],
+                "tips":[
+                  {"relevance":""},
+                  {"meaning":"It is recommended to review at least once a year to improve and update to meet new threats. Check your policy’s appendix at the end to find a checklist that will help when it comes time to review the policy."},
+                  {"implementation":"Create calendar events for the next 2 policy reviews and invite stakeholders involved in reviewing the policy (e.g. management, Human Resources, IT)."},
+                  {"more":["review security policy"]}
+                ]
+              },
+              {
+                "isQuestion": true,
+                "id":"q6",
+                "q":"Which operating systems are used in your organization?",
+                "required":false,
+                "policyEntry":"",
+                "appendixEntry":"",
+                "routineEntry":"",
+                "answers":[
+                  {
+                    "type":"checkbox",
+                    "answerText":"Windows",
+                    "storeAs": "",
+                    "excludes":[],
+                    "policyEntry":"",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": "Privacy tips for Windows 10: https://spreadprivacy.com/windows-10-privacy-tips"
+                      }
+                    ]
+                  },
+                  {
+                    "type":"checkbox",
+                    "answerText":"macOS or OS X",
+                    "storeAs": "",
+                    "excludes":[],
+                    "policyEntry":"",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": "Privacy tips for macOS and OS X: https://spreadprivacy.com/mac-privacy-tips"
+                      }
+                    ]
+                  },
+                  {
+                    "type":"checkbox",
+                    "answerText":"Linux (any)",
+                    "storeAs": "",
+                    "excludes":[],
+                    "policyEntry":"",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": "Privacy tips for Linux: https://spreadprivacy.com/linux-privacy-tips"
+                      }
+                    ]
+                  },
+                  {
+                    "type":"checkbox",
+                    "answerText":"Chrome OS",
+                    "storeAs": "",
+                    "excludes":[],
+                    "policyEntry":"",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": "This article explains privacy settings on Chrome OS: https://www.makeuseof.com/tag/privacy-settings-chrome-os-google-chrome"
+                      }
+                    ]
+                  },
+                  {
+                    "type":"checkbox",
+                    "answerText":"Android",
+                    "storeAs": "",
+                    "excludes":[],
+                    "policyEntry":"",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": "Privacy tips for Android: https://spreadprivacy.com/android-privacy-tips"
+                      }
+                    ]
+                  },
+                  {
+                    "type":"checkbox",
+                    "answerText":"iOS",
+                    "storeAs": "",
+                    "excludes":[],
+                    "policyEntry":"",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": "Privacy tips for iOS: https://spreadprivacy.com/iphone-privacy-tips"
+                      }
+                    ]
+                  },
+                  {
+                    "type":"checkbox",
+                    "editable": true,
+                    "answerText":"another system",
+                    "storeAs": "",
+                    "excludes":[],
+                    "policyEntry":"",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  }
+                ],
+                "tips":[
+                  {"relevance":""},
+                  {"meaning":"Security measures and settings vary in extent and location between operating systems. Specifying those that are relevant and in use at your organization makes it simpler to provide appropriate instructions and questions in the process."},
+                  {"implementation":""},
+                  {"more":["comparing security of operating systems", "desktop/mobile os security features", "Mac security", "Linux security", "Windows security", "Chrome os security", "iOS security", "Android security"]}
+                ]
+              },
+              {
+                "isQuestion": true,
+                "id":"q7",
+                "q":"How does your organization manage staff work devices?",
+                "required":true,
+                "policyEntry":"[organisation-name] manages device security in the following way, depending on the situation:",
+                "appendixEntry":"",
+                "routineEntry":"",
+                "answers":[
+                  {
+                    "type":"checkbox",
+                    "answerText":"We install work profiles on staff-owned devices (Bring Your Own Device policy)",
+                    "storeAs": "",
+                    "excludes":[],
+                    "policyEntry":"- Profiles on your devices: With your consent, we will install a work profile on your personal devices in order for you to use them in the course of your work. This work profile will keep your work and personal use of the device separated.",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type":"checkbox",
+                    "answerText":"We install work and personal profiles on organization-owned devices.",
+                    "storeAs": "",
+                    "excludes":[],
+                    "policyEntry":"- Profiles on [organisation-name] devices: [organisation-name] staff are given some freedom to decide their work environment and equipment, and we acknowledge that there may be times when after hours access to work email and data is needed. We will provide you with devices and install both a work and personal profile for you to use.",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type":"checkbox",
+                    "answerText":"We provide work-only devices.",
+                    "storeAs": "",
+                    "excludes":[],
+                    "policyEntry":"- [organisation-name] devices for work-only use: We will provide you with devices, such as a computer, to use solely for work purposes.",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type":"checkbox",
+                    "answerText":"Staff use their own devices without separate profiles",
+                    "storeAs": "",
+                    "excludes":[7],
+                    "policyEntry":"- Your device, your choice: You may use your own devices as work equipment, we do not require the use of a work profile but please strive to maintain a separation between your work and personal data.",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  }
+                ],
+                "tips":[
+                  {"relevance":""},
+                  {"meaning":"Providing devices to staff can be expensive but it makes it easier to achieve complete separation of personal and work activities. Work profiles can be installed on most ‘smart’ devices and computers as an alternative that maintains the convenience of remote control for wiping (the profile), installation and updates. Although the personal and work profiles are kept isolated from each other, reducing leakage of sensitive information between the two, it can blur the boundaries between work and personal lives and feel intrusive to staff. BYOD policies allow staff to use their own computers and phones, and paired with work profiles can provide convenience for staff member and organization."},
+                  {"implementation":"Commonly the choice of work device vs work profile is given to individual staff members to decide the best option for their own situation. For the staff member, convenience and work-life balance are major factors in this decision. For the organization, security and cost are top priority. Be aware though, that not all staff members will be in a position to provide a suitable device for use at work."},
+                  {"more":["comparing security of operating systems", "desktop/mobile os security features"]}
+                ]
+              },
+              {
+                "isQuestion": true,
+                "id":"q8",
+                "q":"Does your organization provide staff with privacy equipment for their devices?",
+                "required":false,
+                "policyEntry":"In addition to other device security measures, [organisation-name] will also provide you with [privacy-peripherals-provided] to use on your devices.",
+                "appendixEntry":"",
+                "routineEntry":"",
+                "answers":[
+                  {
+                    "type":"checkbox",
+                    "answerText":"webcam cover",
+                    "storeAs": "[privacy-peripherals-provided]",
+                    "excludes":[],
+                    "policyEntry":"",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "A quick temporary alternative to webcam covers can be made from a post-it note or sticky-taped paper over the camera.",
+                        "linksList": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type":"checkbox",
+                    "answerText":"privacy screen",
+                    "storeAs": "[privacy-peripherals-provided]",
+                    "excludes":[],
+                    "policyEntry":"",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "In addition to shoulder surfers, privacy screens can also help to protect against dust, scratches and sunlight glare.",
+                        "linksList": ""
+                      }
+                    ]
+                  }
+                ],
+                "tips":[
+                  {"relevance":"If a device has been hacked, there is a risk that the hacker can access the camera (and/or microphone) remotely. If a malicious actor has “shoulder surfed” (i.e. viewed your screen over your shoulder or in the reflection of glasses) there is a risk they may have seen sensitive information onscreen."},
+                  {"meaning":"Webcam covers are easy to buy online and you can sometimes find branded ones being given away free at conferences. They’re a small, simple plastic device with a cover that slides back and forth to expose or hide the camera. When the camera is hidden, any remote camera view will see only darkness. Note that this only mitigates camera access, and not microphone access. Privacy screens are tinted in such a way that someone looking at the screen from the side, rather than directly in front, will see only a black screen."},
+                  {"implementation":"Covers are easy to stick over the camera and usually stick pretty well. It will take time for staff to keep the cover closed by default and only opening it when needed. Privacy screens are usually stuck over the device screen, however some laptop versions can be slid on/off easily when needed."},
+                  {"more":["webcam covers", "computer mobile privacy screens"]}
+                ]
+              }
+            ],
+            "section1": [
+              {
+                "isQuestion": false,
+                "id":"q9",
+                "title": "Scenario one",
+                "paragraph":["In this first scenario, we'll look at security threats which occur through organizational communications channels. A very common example of this that you've no doubt already experienced, is that of the suspicious email. Staff may already be aware of some 'red flags' from their personal experience of spam emails, but scammers are becoming more sophisticated all the time and attacks can be especially persuasive in instances where they have been directly targeting civil society organizations.", "An example of this is fake Google notifications sent with a request to 'review' some account detail by logging in using the provided link - at which point the login details are stolen by the attackers. Other risks can come from unexpected attachments containing malware or urgent requests for sensitive information from attackers impersonating one of the recipients trusted contacts.","Although we're talking about email here, this section will also look at other methods as really any communications channel can be vulnerable and should be considered when building your security policy."]
+              },
+              {
+                "isQuestion": true,
+                "id":"q10",
+                "q":"Do all members of staff need a PGP key for their work email?",
+                "required":false,
+                "policyEntry":"",
+                "appendixEntry":"",
+                "routineEntry":"",
+                "answers":[
+                  {
+                    "type":"radio",
+                    "answerText":"Yes",
+                    "storeAs":"",
+                    "excludes":[],
+                    "policyEntry":"[organisation-name] requires staff to use PGP to encrypt sensitive emails. If you need help with setting up, please contact [security-contact-name].",
+                    "routineEntry":"Sending an email containing confidential information? Hide it from prying eyes by encrypting it with your PGP key.",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type":"radio",
+                    "answerText":"Some staff need a key",
+                    "storeAs":"",
+                    "excludes":[],
+                    "policyEntry":"[organisation-name] prefers some staff to use PGP to encrypt sensitive emails. You will be informed if this applies to you and offered help with setting up, should you require it.",
+                    "routineEntry":"If you have a PGP key, please use it to encrypt emails containing sensitive information.",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type":"radio",
+                    "answerText":"None of our staff use PGP",
+                    "storeAs":"",
+                    "excludes":[],
+                    "policyEntry":"",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  }
+                ],
+                "tips":[
+                  {"relevance":"If you think there’s a chance that your organization’s emails could be intercepted, or someone could impersonate a member of your staff via email."},
+                  {"meaning":"PGP (Pretty Good Privacy) is a reliable way to encrypt the contents of your emails and verify that it was you who sent them. Putting your public key on the keyserver helps ensure people can contact you securely, or you can include the public key in your email signature."},
+                  {"implementation":"The process to set up PGP can be intimidating, so it’s best to read up on it before starting. An introduction to it during an all-staff meeting will help with getting buy-in, and additional 1-1 training should be given to staff with little to no experience of encrypting email. Implementation will depend on the email clients your staff use, but Enigmail with Thunderbird is a popular option. Note: PGP uses encryption and therefore may not be suitable for all working contexts."},
+                  {"more": ["how to set up PGP", "using PGP with Enigmail"]}
+                ]
+              },
+              {
+                "isQuestion": true,
+                "id":"q11",
+                "q":"How should staff protect their in-browser interactions?",
+                "required":false,
+                "policyEntry":"In order to protect your online activities from common tracking and interference, we recommend all staff install the following privacy-enhancing extensions: [use-these-browser-extensions].",
+                "appendixEntry":"",
+                "routineEntry":"",
+                "answers":[
+                  {
+                    "type":"checkbox",
+                    "answerText":"Privacy Badger",
+                    "storeAs":"[use-these-browser-extensions]",
+                    "excludes":[],
+                    "policyEntry":"",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": "Privacy Badger website: https://www.eff.org/privacybadger"
+                      }
+                    ]
+                  },
+                  {
+                    "type":"checkbox",
+                    "answerText":"Privacy Possum",
+                    "storeAs":"[use-these-browser-extensions]",
+                    "excludes":[],
+                    "policyEntry":"",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": "GitHub for Privacy Possum: https://github.com/cowlicks/privacypossum"
+                      }
+                    ]
+                  },
+                  {
+                    "type":"checkbox",
+                    "answerText":"uBlock Origin",
+                    "storeAs":"[use-these-browser-extensions]",
+                    "excludes":[],
+                    "policyEntry":"",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": "GitHub for uBlock: https://github.com/gorhill/uBlock"
+                      }
+                    ]
+                  },
+                  {
+                    "type":"checkbox",
+                    "answerText":"Better",
+                    "storeAs":"[use-these-browser-extensions]",
+                    "excludes":[],
+                    "policyEntry":"",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": "Better website: https://better.fyi"
+                      }
+                    ]
+                  },
+                  {
+                    "type":"checkbox",
+                    "answerText":"HTTPSEverywhere",
+                    "storeAs":"[use-these-browser-extensions]",
+                    "excludes":[],
+                    "policyEntry":"",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": "HTTPSEverywhere website: https://www.eff.org/https-everywhere"
+                      }
+                    ]
+                  },
+                  {
+                    "type":"checkbox",
+                    "answerText":"DuckDuckGo Privacy Essentials",
+                    "storeAs":"[use-these-browser-extensions]",
+                    "excludes":[],
+                    "policyEntry":"",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": "DuckDuckGo Privacy Essentials description: https://spreadprivacy.com/privacy-simplified"
+                      }
+                    ]
+                  },
+                  {
+                    "type":"checkbox",
+                    "answerText":"Password Alert",
+                    "storeAs":"[use-these-browser-extensions]",
+                    "excludes":[],
+                    "policyEntry":"",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": "Password Alert FAQ: https://support.google.com/a/answer/6197508"
+                      }
+                    ]
+                  },
+                  {
+                    "type":"checkbox",
+                    "editable": true,
+                    "answerText":"another add-on",
+                    "storeAs": "[use-these-browser-extensions]",
+                    "excludes":[],
+                    "policyEntry":"",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  }
+                ],
+                "tips":[
+                  {"relevance":"If your organization’s staff use internet browsers that are capable of having extensions or plug-ins extend their functionality."},
+                  {"meaning":"Using an internet browser is such an everyday part of most people’s work that we often forget it is also a prime target for privacy invasions and attacks. Thankfully, browser extensions – add-ons that extend a browser’s features beyond the default – are available for defending against tracking by Google, Facebook and other advertising companies. They can also be used to detect fake Google login pages (used in spear phishing attacks) and encrypt communication with a website."},
+                  {"implementation":"Many of these extensions do their job silently in the background, only disturbing the user’s workflow on the occasions when doing their job causes disruption to the page’s functionality. Mobile browsing can also be protected through tracker-blocking apps and privacy-conscious browsers, and this can help with building a consistent defence for staff whenever they are using the internet for work purposes."},
+                  {"more": ["privacy browser extensions", "Privacy Badger Possum", "uBlock Origin", "HTTPSEverywhere", "Better privacy tool", "DuckDuckGo search engine", "Google password alert"]}
+                ]
+              },
+              {
+                "isQuestion": true,
+                "id":"q12",
+                "q":"For each of the following communication types, which tools should staff use when discussing sensitive work topics?",
+                "required":false,
+                "policyEntry":"When communicating sensitive work data, [organisation-name] prefers staff use the following tools.",
+                "appendixEntry":"Pay attention to any changes in encryption standards, data breaches or security vulnerabilities that are in the news and relevant to your communication platforms.",
+                "routineEntry":"",
+                "answers":[
+                  {
+                    "type":"text",
+                    "answerText":"1-1 messaging",
+                    "placeholder":"e.g. Signal, WhatsApp, encrypted email",
+                    "storeAs":"[use-these-for-direct-chat]",
+                    "excludes":[],
+                    "policyEntry":"- For 1-1 communications (e.g. direct message to a colleague), please use [use-these-for-direct-chat].",
+                    "routineEntry":"Use [use-these-for-direct-chat] for direct 1-1 messaging.",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"Is [use-these-for-direct-chat] still the most appropriate method for your direct communications?",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type":"text",
+                    "answerText":"Team messaging",
+                    "placeholder":"e.g. Mattermost, Signal, unencrypted email",
+                    "storeAs":"[use-these-for-group-chat]",
+                    "excludes":[],
+                    "policyEntry":"- When communicating with a group (e.g. your project team), please use [use-these-for-group-chat].",
+                    "routineEntry":"[use-these-for-group-chat] should be used for team messaging.",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"Should you continue recommending [use-these-for-group-chat] for group communications?",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type":"text",
+                    "answerText":"Internal video/audio calls",
+                    "placeholder":"e.g. Jitsi, Signal, Google Hangouts",
+                    "storeAs":"[use-these-for-internal-chat]",
+                    "excludes":[],
+                    "policyEntry":"- We use [use-these-for-internal-chat] for internal video or audio calls, e.g. for remote staff meetings.",
+                    "routineEntry":"Video or audio calls within [organisation-name] should be carried out on [use-these-for-internal-chat].",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"How well has [use-these-for-internal-chat] been working as an internal video calls platform?",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type":"text",
+                    "answerText":"External video/audio calls",
+                    "placeholder":"e.g. Jitsi, Signal, Skype",
+                    "storeAs":"[use-these-for-external-chat]",
+                    "excludes":[],
+                    "policyEntry":"- External video and audio calls take place through [use-these-for-external-chat].",
+                    "routineEntry":"Video or audio calls with those outside of [organisation-name] should be hosted on [use-these-for-external-chat].",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"Is [use-these-for-external-chat] still a good option for external video and audio calls?",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  }
+                ],
+                "tips":[
+                  {"relevance":"If your organization would prefer staff to use particular tools in specific scenarios rather than leaving it to individual choice."},
+                  {"meaning":"Specifying particular tools for each common use case helps with consistent communications management and security. It can also help staff to spot suspicious communications that aren’t using the approved methods. For instance, a request for sensitive information to be sent via Telegram can be more easily flagged if Telegram is not an approved method for work communications. Each of the tools has its pros and cons, particularly when it comes to privacy and security, and it is up to your organization to decide which is best for your working environments."},
+                  {"implementation":"Changing tools can be tricky as it’s hard to break a habit, but the previously-selected security champion and management can all set an example to rest of the organization. For instance,they might only accept internal video call invites which use the approved platform and gently redirect staff to update their invite with the new, more appropriate method."},
+                  {"more": ["secure group chat and conferencing tools", "Slack vs Mattermost vs Matrix", "secure messaging app comparison", "WhatsApp vs Signal vs Telegram", "Hangouts vs Jitsi vs Skype", "cell sms security interception"]}
+                ]
+              },
+              {
+                "isQuestion": true,
+                "id":"q13",
+                "q":"What steps should staff take if they are faced with a suspicious email?",
+                "required":false,
+                "policyEntry":"... you receive a suspicious email: Phishing involves being duped into providing information to parties that you otherwise wouldn’t share, usually through fake account notifications or impersonating a known contact. Unfortunately this kind of attack in common and so it is important to understand the steps we recommend taking to both mitigate and recover from such an attack: [do-this-if-phished]",
+                "appendixEntry": "To check whether a link or attachment contains known malware, upload it to VirusTotal; a service owned by Google which reads the file and detects familiar malicious code. It won’t find every attack, only the known ones it’s seen before, but it’s a valuable tool nonetheless.",
+                "routineEntry":"",
+                "answers":[
+                  {
+                    "type":"textarea",
+                    "answerText":"",
+                    "placeholder":"Here are a few examples: \n\nIf the email gives you a login link: open a new browser window and sign into the site there without using the link. Emailed links can have subtle changes made to them which redirect users to malicious sites for collecting login details. \n\nIf the email isn’t addressed to you, but to multiple people: attackers often send messages to large groups in order to ‘catch out’ as many people as possible \n\nIf the email has an unexpected attachment: don’t open the file unless you have contacted the sender through another channel to verify it. If you clicked on a link or opened an unexpected attachment, even from a trusted contact: disconnect from the internet and cease using the device – use a different device to change any passwords you used on that device.",
+                    "storeAs":"[do-this-if-phished]",
+                    "excludes":[],
+                    "policyEntry":"",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"Are all of the incident response plans up-to-date?",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  }
+                ],
+                "tips":[
+                  {"relevance":""},
+                  {"meaning":"A common attack used against civil society organizations involves sending fake account (most often Google) notifications that ask the reader to sign in via a provided link in order to take some urgent action, such as “reactivating” the account. This kind of attack is known as phishing, and its aim is to convince the reader to enter their username and password into the sender’s fake login page, thus giving them access to the account. Spear phishing is also a threat in our work as, rather than impersonating big companies, it uses personal information about its target (e.g. the name of a trusted contact) to appear more convincing. Phishing emails of all types can be hard to spot, so it’s best to prepare staff for the main red flags as well as the inevitable day when one slips through the net."},
+                  {"implementation":"Changing tools can be tricky as it’s hard to break a habit, but the previously-selected security champion and management can all set an example to rest of the organization. For instance,they might only accept internal video call invites which use the approved platform and gently redirect staff to update their invite with the new, more appropriate method."},
+                  {"more": ["how to avoid a phishing attack", "what is spear phishing", "report google phishing email"]}
+                ]
+              }
+            ],
+            "section2": [
+              {
+                "isQuestion": false,
+                "id":"q14",
+                "title": "Scenario two",
+                "paragraph":["Now consider the situation if the same staff member clicks the link in that suspicious email and the attacker steals their work account login details. We rely on many online services in the course of our work, and as a result the accounts we inhabit get filled with sensitive information that can be accessed, deleted, manipulated and shared by an attacker.", "In this case, red flags of a hacked account can include unrecognised activity, strange login times and being 'locked out' of the account. Once inside, an attacker may steal login details for other accounts, leak sensitive information or impersonate the staff member to damage the organization.", "In most cases, changing passwords and implementing two-factor authentication is enough to stop the attacker. But if the situation escalates, it can take time to persuade the platform to hand you back control of the account so acting quickly to protect accounts is key. Setting rules for where and how to share, store and discuss information can also help to reduce the impact of an intrusion by limiting what each account can provide access to."]
+              },
+              {
+                "isQuestion": true,
+                "id":"q15",
+                "q":"Should staff use a specific password manager for work accounts?",
+                "required":true,
+                "policyEntry":"Passwords are hard to remember, so [organisation-name] ask staff to use a password manager.",
+                "appendixEntry":"",
+                "routineEntry":"",
+                "answers":[
+                  {
+                    "type":"radio",
+                    "answerText":"KeePass",
+                    "storeAs":"",
+                    "excludes":[16],
+                    "policyEntry":"In particular, we ask you to use KeePass and if you require any help with set up or using this tool then you should discuss it with [security-contact-name].",
+                    "routineEntry":"Protect your accounts: use KeePass to generate and store your passwords!",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": "KeePass website: https://keepass.info"
+                      }
+                    ]
+                  },
+                  {
+                    "type":"radio",
+                    "answerText":"Bitwarden",
+                    "storeAs":"",
+                    "excludes":[16],
+                    "policyEntry":"In particular, we ask you to use Bitwarden and if you require any help with set up or using this tool then you should discuss it with [security-contact-name].",
+                    "routineEntry":"Protect your accounts: use Bitwarden to generate and store your passwords!",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": "Bitwarden website: https://bitwarden.com"
+                      }
+                    ]
+                  },
+                  {
+                    "type":"radio",
+                    "answerText":"PasswordSafe",
+                    "storeAs":"",
+                    "excludes":[16],
+                    "policyEntry":"In particular, we ask you to use PasswordSafe and if you require any help with set up or using this tool then you should discuss it with [security-contact-name].",
+                    "routineEntry":"Protect your accounts: use PasswordSafe to generate and store your passwords!",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": "PasswordSafe website: https://www.pwsafe.org"
+                      }
+                    ]
+                  },
+                  {
+                    "type":"radio",
+                    "answerText":"LastPass",
+                    "storeAs":"",
+                    "excludes":[16],
+                    "policyEntry":"In particular, we ask you to use LastPass and if you require any help with set up or using this tool then you should discuss it with [security-contact-name].",
+                    "routineEntry":"Protect your accounts: use LastPass to generate and store your passwords!",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type":"radio",
+                    "answerText":"1Password",
+                    "storeAs":"",
+                    "excludes":[16],
+                    "policyEntry":"In particular, we ask you to use 1Password and if you require any help with set up or using this tool then you should discuss it with [security-contact-name].",
+                    "routineEntry":"Protect your accounts: use 1Password to generate and store your passwords!",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": "1Password website: https://1password.com"
+                      }
+                    ]
+                  },
+                  {
+                    "type":"radio",
+                    "answerText":"Staff preference",
+                    "storeAs":"",
+                    "excludes":[],
+                    "policyEntry":"As there are several options available, it is up to you to choose which suits your workflow best. If you’re unsure of the best password manager for your situation, please contact [security-contact-name] to discuss.",
+                    "routineEntry":"Protect your accounts: use a password manager to generate and store your passwords!",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type":"radio",
+                    "editable": true,
+                    "answerText":"another password manager",
+                    "storeAs": "[use-this-for-password-storage]",
+                    "excludes":[],
+                    "policyEntry":"In particular, we ask you to use [use-this-for-password-storage] and if you require any help with set up or using this tool then you should discuss it with [security-contact-name].",
+                    "routineEntry":"Protect your accounts: use [use-this-for-password-storage] to generate and store your passwords!",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  }
+                ],
+                "tips":[
+                  {"relevance":""},
+                  {"meaning":"Password managers can help staff to keep track of their passwords, with many providing features such as password generation, 2-factor authentication codes, browser extensions and mobile apps alongside the password storage facility. A risk to consider here is the security of these companies you are trusting with important passwords – what would happen if they were hacked? With services that store your passwords locally this may be less of a concern, however those which provide cross-device access to passwords can be more vulnerable to attack."},
+                  {"implementation":"Browser extensions and mobile apps being available for many password managers enables staff to always have their passwords to hand, making it easier to integrate with their workflow."},
+                  {"more": ["password manager comparison", "risks of password managers", "KeePass", "Bitwarden", "PasswordSafe", "LastPass", "1Password"]}
+                ]
+              },
+              {
+                "isQuestion": true,
+                "id":"q16",
+                "q":"Can staff store passwords in their browser?",
+                "required":false,
+                "policyEntry":"",
+                "appendixEntry":"",
+                "routineEntry":"",
+                "answers":[
+                  {
+                    "type":"radio",
+                    "answerText":"Yes",
+                    "storeAs":"",
+                    "excludes":[],
+                    "policyEntry":"Staff who are aware of the risks may store their passwords in their browser for more convenient access, however they are expected to frequently clear out old logins.",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"Are staff still allowed to store passwords in their browser?",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type":"radio",
+                    "answerText":"No",
+                    "storeAs":"",
+                    "excludes":[],
+                    "policyEntry":"Staff are advised to refrain from storing passwords in their browser due to the security risks. If you need guidance on choosing an alternative password storage system, [security-contact-name], [security-contact-role], will be able to advise you on this.",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "It’s annoying to keep dismissing the “save your password?” prompt but this can be disabled in the browser settings.",
+                        "linksList": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type":"radio",
+                    "editable":true,
+                    "answerText":"in specific circumstances",
+                    "storeAs":"[browser-password-exceptions]",
+                    "excludes":[],
+                    "policyEntry":"Ordinarily, we would prefer staff to avoid storing passwords in their browser, however it is permitted under these circumstances: [browser-password-exceptions]",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  }
+                ],
+                "tips":[
+                  {"relevance":"Applicable when a password manager isn't a feasible storage option."},
+                  {"meaning":"Storing long, complex passwords in a convenient place like the browser makes them easier to integrate into a workflow if there’s no password manager in use. However, the lists of password that are stored in the browser are not as well protected as they would be in a password manager. If the device on which that browser is installed gets stolen, confiscated or otherwise accessed without authorisation (physically or remotely), then the browser’s keychain becomes a treasure trove of account logins for anyone in control of that device."},
+                  {"implementation":"If in-browser password storage is appropriate for your organization’s threat model, consider planning for frequent “clearing out” of old stored passwords in order to lessen the impact of any unauthorised access."},
+                  {"more": ["storing passwords in browser", "delete stored browser passwords", "browser password risks"]}
+                ]
+              },
+              {
+                "isQuestion": true,
+                "id":"q17",
+                "q":"Which multi-factor authentication method should staff use when securing work accounts?",
+                "required":true,
+                "policyEntry":"Two-factor authentication is a good method of securing our accounts beyond passwords as it requires an additional one-time code to be provided at login, putting an extra barrier between your data and an attacker. Two-factor authentication should be enabled on every account which supports it.",
+                "appendixEntry":"",
+                "routineEntry":"",
+                "answers":[
+                  {
+                    "type":"radio",
+                    "answerText":"None - staff preference",
+                    "storeAs":"",
+                    "excludes":[],
+                    "policyEntry":"The options for getting this code include authentication apps, hardware keys, SMS or automated phone call and [organisation-name] asks staff to use their best judgment when choosing a method for securing each work-related account.",
+                    "routineEntry":"Choose your authenticator! Authentication apps, security keys or just your phone - any multi-factor authentication is better than passwords alone.",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type":"radio",
+                    "answerText":"Two-factor apps or hardware authentication keys",
+                    "storeAs":"",
+                    "excludes":[],
+                    "policyEntry":"[organisation-name] requires staff to use two-factor apps or hardware authentication methods. Please do not use SMS or phone call authentication as they are insecure methods that can be intercepted.",
+                    "routineEntry":"Please use your security key or authentication app to secure access to your accounts - phone/SMS are not good enough.",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type":"radio",
+                    "answerText":"SMS or phone call",
+                    "storeAs":"",
+                    "excludes":[18],
+                    "policyEntry":"[organisation-name] requires staff to use SMS or phone call authentication methods. However, be aware of the risks of interception that come with using these methods.",
+                    "routineEntry":"Add an extra layer of security to your accounts by enabling two-factor authentication that sends your code by phone call or SMS.",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  }
+                ],
+                "tips":[
+                  {"relevance":""},
+                  {"meaning":"Multi-factor authentication adds an extra layer of security to accounts by requiring the account holder to enter an additional one-time code to verify their identity. Receiving this code via SMS or phone call risks interception but this method may be more feasible than the alternative authentication app in cases where staff do not use smartphones. Generating the code through an authentication app (e.g. Authy) or a hardware security key (e.g. Yubikey) has the advantage of not requiring a data or cell service. While authentication apps are free, widely available and well-supported by online platforms, U2F keys require purchasing and are supported on fewer services."},
+                  {"implementation":"Allowing staff to choose their own authentication method enables them to choose the most convenient option for their workflow, however it is more common to set a baseline level of account security by requiring all staff use authentication apps and hardware security keys where possible."},
+                  {"more": ["two factor auth list", "sms phone 2 factor authentication", "hardware security keys"]}
+                ]
+              },
+              {
+                "isQuestion": true,
+                "id":"q18",
+                "q":"Does your organization prefer staff to use a specific authentication app?",
+                "required":false,
+                "policyEntry":"",
+                "appendixEntry":"",
+                "routineEntry":"",
+                "answers":[
+                  {
+                    "type":"radio",
+                    "answerText":"Google Authenticator",
+                    "storeAs":"",
+                    "excludes":[],
+                    "policyEntry":"To ensure consistency and help with training and troubleshooting, [organisation-name] recommends the Google Authenticator app for two-factor authentication. If this app is not pre-installed then you should install it from your platform’s app store, requesting assistance from [security-contact-name] when needed.",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"Is Google Authenticator well integrated with staff workflows?",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type":"radio",
+                    "answerText":"Duo Mobile",
+                    "storeAs":"",
+                    "excludes":[],
+                    "policyEntry":"To ensure consistency and help with training and troubleshooting, [organisation-name] recommends the Duo Mobile app for two-factor authentication. If this app is not pre-installed then you should install it from your platform’s app store, requesting assistance from [security-contact-name] when needed.",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"Is Duo Mobile well integrated with staff workflows?",
+                        "tipList": "",
+                        "linksList": "Duo Mobile website: https://duo.com/product/multi-factor-authentication-mfa/duo-mobile-app"
+                      }
+                    ]
+                  },
+                  {
+                    "type":"radio",
+                    "answerText":"Authy",
+                    "storeAs":"",
+                    "excludes":[],
+                    "policyEntry":"To ensure consistency and help with training and troubleshooting, [organisation-name] recommends the Authy app for two-factor authentication. If this app is not pre-installed then you should install it from your platform’s app store, requesting assistance from [security-contact-name]  when needed.",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"Is Authy well integrated with staff workflows?",
+                        "tipList": "",
+                        "linksList": "Authy website: https://authy.com"
+                      }
+                    ]
+                  },
+                  {
+                    "type":"radio",
+                    "answerText":"No preference",
+                    "storeAs":"",
+                    "excludes":[],
+                    "policyEntry":"While [organisation-name] requires the use of an authenticator app, we leave it to staff to make their own choice of which one to use. If you are unsure of which is best for your device and workflow, [security-contact-name] is available for advice.",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"Are staff consistently using an authenticator app?",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type":"radio",
+                    "editable": true,
+                    "answerText":"another authentication app",
+                    "storeAs": "[use-this-for-authentication]",
+                    "excludes":[],
+                    "policyEntry":"To ensure consistency and help with training and troubleshooting, [organisation-name] uses [use-this-for-authentication] for two-factor authentication where platforms allow it. This app may be installed automatically as part of your mobile work device set up, otherwise you should install it from your platform’s app store, requesting assistance from [security-contact-name] when needed.",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"Is [use-this-for-authentication] well integrated with staff workflows?",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  }
+                ],
+                "tips":[
+                  {"relevance":""},
+                  {"meaning":"Most authentication apps work the same way, but it may be more convenient for troubleshooting if all staff use the same app. Some additional features might be more useful to your organization than others, for example multi-device access."},
+                  {"implementation":"Using work profiles and similar device management processes can be helpful for installing the same app across the organization. Whichever service is chosen, staff may need assistance with setting up and using the app for the first time."},
+                  {"more": ["authentication app comparison", "Google Authenticator", "Duo Mobile", "Authy"]}
+                ]
+              },
+              {
+                "isQuestion": true,
+                "id":"q19",
+                "q":"Does your organization provide hardware security keys to staff?",
+                "required":false,
+                "policyEntry":"",
+                "appendixEntry":"",
+                "routineEntry":"",
+                "answers":[
+                  {
+                    "type":"radio",
+                    "answerText":"Yes",
+                    "storeAs":"",
+                    "excludes":[],
+                    "policyEntry":"For hardware authentication, we will provide you with a security key. Should you require any help with using the key, contact [security-contact-name].",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type":"radio",
+                    "answerText":"No",
+                    "storeAs":"",
+                    "excludes":[],
+                    "policyEntry":"Hardware authentication has a few options for keys and it is up to staff to select and purchase their preferred key if they wish to use one. If you are uncertain of the choices available and their suitability for your work, please contact [security-contact-name] to discuss.",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  }
+                ],
+                "tips":[
+                  {"relevance":""},
+                  {"meaning":"Hardware security keys are an alternative to using authentication apps. Rather than generating codes for a user to type in, they are simply plugged into the computer to authenticate with the browser directly. If your organization is enrolled in the Google Protection Program then Google recommends using Titan keys in its set up process."},
+                  {"implementation":"Providing staff with hardware keys helps to ensure consistency across the organization and makes troubleshooting easier. Alternatively, your organization can empower staff to choose their own key which will help with buy-in. Either way, watch out for staff leaving the key plugged into their devices when not in use as this poses a risk of damage or loss."},
+                  {"more": ["hardware security key comparison", "Yubikey", "Google Advanced Protection Kit"]}
+                ]
+              },
+              {
+                "isQuestion": true,
+                "id":"q20",
+                "q":"What steps should staff take when faced with a possibly hacked account?",
+                "required":false,
+                "policyEntry":"... you notice suspicious activity in any work-related accounts: This could look like unprompted two-factor code requests, strange login times, or rejection of correct passwords - any unfamiliar actions performed by, or within, the account should be investigated. To do this, you are advised to follow these steps: [do-this-if-hacked]",
+                "appendixEntry": "Sometimes data breaches are to blame for a hacked account, and so it can be worth checking if the email associated with the account was recently involved in such an incident by visiting Have I Been Pwned or a similar site.",
+                "routineEntry":"",
+                "answers":[
+                  {
+                    "type":"textarea",
+                    "answerText":"",
+                    "placeholder":"Here are a few examples: \n\nIf the account is still accessible: change all passwords and review the recent activity, such as posts and log in times. \n\nIf it’s an email account: review the inbox rules and mail forwarding addresses, removing any that look suspicious. \n\nIf it’s an inaccessible social media account: major social media platforms have dedicated areas in their Help sections which explain how they can help you regain control of a compromised account",
+                    "storeAs":"[do-this-if-hacked]",
+                    "excludes":[],
+                    "policyEntry":"",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  }
+                ],
+                "tips":[
+                  {"relevance":""},
+                  {"meaning":"There are various ways an account can be accessed by unauthorised persons, but secure passwords and two-factor authentication can help mitigate this threat. Of course, once a person is in an account they can “lock” the door behind them, at which point it is usually advisable to appeal to the account provider for help to regain control."},
+                  {"implementation":""},
+                  {"more": ["help compromised account", "incident response hacked account"]}
+                ]
+              }
+            ],
+            "section3": [
+              {
+                "isQuestion": false,
+                "id":"q21",
+                "title": "Scenario three",
+                "paragraph":["A staff member was arrested while attending a protest and their phone was confiscated by the police. While the phone is out of your colleague's sight, data from the phone, SIM and SD card could all be copied and searched. This means that contacts on the SIM card, photos on the SD card and any logged in apps on the phone may have been accessed and could be potentially used to justify warrants for escalated surveillance in the future.", "Replacing the SIM, phone and SD card, rotating credentials and watching for suspicious activity can be time-consuming remedies to the situation, and so defining how to secure devices is an important and useful tool against such incidents.", "A lost or compromised device can be remotely wiped with a device management tool, and backup maintenance can ensure it's easy to get back up and running with a new or reset device. This section will also cover the prevention of unauthorised device and backup access."]
+              },
+              {
+                "isQuestion": true,
+                "id":"q22",
+                "q":"Can staff use biometric authentication to restrict device access?",
+                "required":true,
+                "policyEntry":"To protect devices from unauthorised physical infiltration, all devices which are used for [organisation-name] purposes should have an automatic screen lock enabled and may be configured to use [biometric-authentication-options].",
+                "appendixEntry":"Be aware that touchscreen devices are susceptible to holding fingerprint marks which can be used to guess recently-used key sequences.",
+                "routineEntry":"",
+                "answers":[
+                  {
+                    "type":"checkbox",
+                    "answerText":"fingerprint authentication",
+                    "storeAs":"[biometric-authentication-options]",
+                    "excludes":[],
+                    "policyEntry":"",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type":"checkbox",
+                    "answerText":"facial recognition authentication",
+                    "storeAs":"[biometric-authentication-options]",
+                    "excludes":[],
+                    "policyEntry":"",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "Be aware that facial recognition authentication is vulnerable to unauthorised access as most systems won't flag a sleeping face, an unwilling face, or a twin.",
+                        "linksList": ""
+                      }
+                    ]
+                  }
+                ],
+                "tips":[
+                  {"relevance":"If your organization provides devices to staff or installs work profiles on their personal devices."},
+                  {"meaning":"Recent developments in facial and fingerprint recognition have led to biometric authentication becoming a convenient alternative to passwords, although there are security flaws which should be considered. It's important to also set up a password, code or phrase as an extra barrier that can't be as easily circumvented."},
+                  {"implementation":"The unlock method is irrelevant if devices are almost never locked; enabling the automatic screen lock helps to ensure that others can’t walk right through the open doors of an unlocked device."},
+                  {"more": ["security of face unlock id", "creating strong passwords", "security of biometric authentication"]}
+                ]
+              },
+              {
+                "isQuestion": true,
+                "id":"q23",
+                "q":"Does your organization use any tools for device security management?",
+                "required":false,
+                "policyEntry":"To support device security across the organization, we use the following tools: [we-use-this-device-manager]",
+                "appendixEntry":"",
+                "routineEntry":"",
+                "answers":[
+                  {
+                    "type":"checkbox",
+                    "answerText":"Flock",
+                    "storeAs":"[we-use-this-device-manager]",
+                    "excludes":[],
+                    "policyEntry":"",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": "Flock Agent for macOS & Linux system 'health checks': https://github.com/firstlookmedia/flock-agent"
+                      }
+                    ]
+                  },
+                  {
+                    "type":"checkbox",
+                    "answerText":"Stethoscope",
+                    "storeAs":"[we-use-this-device-manager]",
+                    "excludes":[],
+                    "policyEntry":"",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": "Stethoscope for Windows & macOS systems: https://ragtag.org/stethoscope"
+                      }
+                    ]
+                  },
+                  {
+                    "type":"checkbox",
+                    "answerText":"Apple MDM",
+                    "storeAs":"[we-use-this-device-manager]",
+                    "excludes":[],
+                    "policyEntry":"",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": "Apple MDM documentation: https://developer.apple.com/documentation/devicemanagement"
+                      }
+                    ]
+                  },
+                  {
+                    "type":"checkbox",
+                    "answerText":"Google Endpoint Management",
+                    "storeAs":"[we-use-this-device-manager]",
+                    "excludes":[],
+                    "policyEntry":"",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": "Google Endpoint Management: https://gsuite.google.com/products/admin/endpoint"
+                      }
+                    ]
+                  },
+                  {
+                    "type":"checkbox",
+                    "editable":true,
+                    "answerText":"another device manager",
+                    "storeAs":"[we-use-this-device-manager]",
+                    "excludes":[],
+                    "policyEntry":"",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  }
+                ],
+                "tips":[
+                  {"relevance":"For organizations where there are more than a handful of devices in use."},
+                  {"meaning":"A security policy is of little use unless everyone it applies to is adhering to the rules it lays out, but it’s time-consuming to dig into the settings of every device in your organization. Tools like Flock and Stethoscope can help with this; enabling you to perform a security “health check” on devices. Managing the security of multiple devices can also be made easier with Mobile Device Management (MDM) services, as it can enable the remote install of VPNs and other security apps, as well as remote wipe in the case of device confiscation."},
+                  {"implementation":"Getting this sort of management tool in place is better done earlier rather than later while there are a manageable number of devices and people to introduce to the system."},
+                  {"more": ["mobile device management solutions", "Flock agent firstlookmedia", "Stethoscope security tool", "Apple MDM device enrollment", "Google Endpoint Management"]}
+                ]
+              },
+              {
+                "isQuestion": true,
+                "id":"q24",
+                "q":"Does your organization use physical or cloud storage for backups?",
+                "required":false,
+                "policyEntry":"[organisation-name] is responsible for managing data backups which are kept in [we-use-this-backup-storage] storage.",
+                "appendixEntry":"",
+                "routineEntry":"",
+                "answers":[
+                  {
+                    "type":"checkbox",
+                    "answerText":"physical",
+                    "storeAs":"[we-use-this-backup-storage]",
+                    "excludes":[],
+                    "policyEntry":"",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"Is your physical storage still in good working order or is it time to upgrade?",
+                        "tipList": "There are physical storage devices available which offer additional security measures, such as keypads – but be sure to keep them in a protective case to prevent accidental damage that could corrupt or wipe the data.",
+                        "linksList": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type":"checkbox",
+                    "answerText":"cloud",
+                    "storeAs":"[we-use-this-backup-storage]",
+                    "excludes":[],
+                    "policyEntry":"",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"Does your cloud storage provider still provide the most appropriate package for your data or is it time to migrate?",
+                        "tipList": "Advise staff on how to recognise a legitimate automatic backup so that suspicious network activity can be flagged quickly.",
+                        "linksList": ""
+                      }
+                    ]
+                  }
+                ],
+                "tips":[
+                  {"relevance":""},
+                  {"meaning":"Physical storage includes devices like memory sticks and external hard drives and is preferable when the internet connection is insecure or unreliable, but physically vulnerable to loss or damage. Cloud storage includes services like SpiderOak One, Dropbox and iCloud and are preferable when a secure, reliable internet connection is available, but digitally vulnerable to data breaches and loss. When choosing a cloud storage solution, look for zero- or no-knowledge security and/or one which stores your data in a country with progressive privacy laws. Using a zero-knowledge service can make your backup data inaccessible to the service provider’s employees and, by extension, protects you from intrusion via government access requests."},
+                  {"implementation":"Backing up to both physical and cloud storage helps to ensure that if one is corrupted or lost then the other remains available to restore devices from."},
+                  {"more": ["physical storage vs cloud storage", "backing up data", "data backup types", "zero-knowledge cloud storage", "cloud backup vs traditional backup"]}
+                ]
+              },
+              {
+                "isQuestion": true,
+                "id":"q25",
+                "q":"How often are backups performed?",
+                "required":true,
+                "policyEntry":"To ensure we’re able to recover data during a data loss or compromise incident, we perform backups on an [how-often-backups-done] basis.",
+                "appendixEntry":"Plan to test your backups on a regular basis! In an ideal world you might never have to restore from backup, but the last thing you want to find during an emergency is that your backups are corrupted or incomplete.",
+                "routineEntry":"",
+                "answers":[
+                  {
+                    "type":"radio",
+                    "answerText":"hourly",
+                    "storeAs":"[how-often-backups-done]",
+                    "excludes":[],
+                    "policyEntry":"",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type":"radio",
+                    "answerText":"daily",
+                    "storeAs":"[how-often-backups-done]",
+                    "excludes":[],
+                    "policyEntry":"",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"Are daily backups still frequent enough or do you need backups throughout the day?",
+                        "tipList": "It may be sensible to time automatic backups for after the majority of the day's work has been done.",
+                        "linksList": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type":"radio",
+                    "answerText":"weekly",
+                    "storeAs":"[how-often-backups-done]",
+                    "excludes":[],
+                    "policyEntry":"",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"Is your data changing more frequently? Could an increase in the backup frequency be appropriate?",
+                        "tipList": "A week can be a long time, so give your staff a way to trigger infrequent manual backups of their work.",
+                        "linksList": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type":"radio",
+                    "editable":true,
+                    "answerText":"another schedule",
+                    "storeAs":"[how-often-backups-done]",
+                    "excludes":[],
+                    "policyEntry":"",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  }
+                ],
+                "tips":[
+                  {"relevance":""},
+                  {"meaning":"Whether automatic or manual, it’s important to back up every device’s data on a regular basis to avoid potential loss due to device confiscation or damage. The frequency of your backups should be dictated by how often your data is created or updated, with hourly or end-of-day being the ideal for organizations that rely heavily on digital documents."},
+                  {"implementation":"If all staff are on the same operating system then using the built-in software to perform automatic backups can make the implementation process easier. There are great cross-platform alternatives available too, and whichever option you choose it’s advisable to go for a zero-knowledge service wherever possible."},
+                  {"more": ["how often should I back up my data", "zero-knowledge cloud storage", "cross-platform backup solutions"]}
+                ]
+              },
+              {
+                "isQuestion": true,
+                "id":"q26",
+                "q":"How does your organization secure its backups?",
+                "required":false,
+                "policyEntry":"[organisation-name] requires that devices used for work purposes be backed up as the loss, exposure or corruption of [organisation-name] data puts us, and those we work with, at risk. Backups are managed in the following ways: ",
+                "appendixEntry":"Be sure to discuss any recent data loss or similar incidents at each review - they are good learning opportunities. An approach to backups is the 3-2-1 rule: at least 3 backup copies of your data on at least 2 different kinds of medium, with at least 1 of these stored offsite.",
+                "routineEntry":"",
+                "answers":[
+                  {
+                    "type":"checkbox",
+                    "answerText":"Backups are encrypted",
+                    "storeAs":"",
+                    "excludes":[],
+                    "policyEntry":"- Backups are encrypted to help protect against unauthorised access.",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type":"checkbox",
+                    "answerText":"Backups are tested regularly",
+                    "storeAs":"",
+                    "excludes":[],
+                    "policyEntry":"- Sometimes backup data becomes corrupted, so to minimise the impact of this we test the backups regularly to detect any issues.",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"Have there been any recent instances of backup failure that can be learned from?",
+                        "tipList": "If backups occur overnight, always check that they have finished without errors in the morning.",
+                        "linksList": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type":"checkbox",
+                    "answerText":"Multi-factor authentication",
+                    "storeAs":"",
+                    "excludes":[],
+                    "policyEntry":"- Multi-factor authentication is required to access the backups.",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"Do those with access to backups still require it?",
+                        "tipList": "Carefully consider who should be granted access to [organisation-name]'s cloud storage. Too many people and it becomes tougher to manage. Too few and you may struggle to gain access for emergency data restoration.",
+                        "linksList": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type":"checkbox",
+                    "answerText":"Delayed file deletion",
+                    "storeAs":"",
+                    "excludes":[],
+                    "policyEntry":"- There is a delay in file deletion to minimise accidental destruction.",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "When setting a file destruction delay on backups, leave a reasonable amount of time for the scheduled deletion to be detected and cancelled.",
+                        "linksList": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type":"checkbox",
+                    "editable":true,
+                    "answerText":"something else",
+                    "storeAs":"[alt-backup-security]",
+                    "excludes":[],
+                    "policyEntry":"- [alt-backup-security]",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  }
+                ],
+                "tips":[
+                  {"relevance":""},
+                  {"meaning":"Backups aren’t much use if they’ve been damaged or corrupted during unauthorised access, so encrypting the files, requiring extra verification for access and preventing instant file deletion are all useful ways of protecting your backed up data. While it’s common to back up files, it’s not common enough to test them regularly to ensure they restore correctly and aren’t corrupted. Checking the integrity of the files can help to avoid a nasty shock when they have to be relied upon during emergency data recovery."},
+                  {"implementation":""},
+                  {"more": ["automatic backups vs manual", "how to secure your stored data"]}
+                ]
+              },
+              {
+                "isQuestion": true,
+                "id":"q27",
+                "q":"What steps should staff take when their devices are seized?",
+                "required":false,
+                "policyEntry":"... your device is seized: whether this is at a border, a protest or a raid, it is important to let someone know as soon about the situation as you are able, in order to begin countering any unauthorised access as early as possible. You are advised to follow these steps: [do-this-if-seized]",
+                "appendixEntry": "Device seizures under any circumstances can be a traumatising event so be sure to offer support to your impacted colleague.",
+                "routineEntry":"",
+                "answers":[
+                  {
+                    "type":"textarea",
+                    "answerText":"",
+                    "placeholder":"Here are a few examples: \n\n- write down exactly what happened, including any officer numbers, times, etc. \n- warn your coworkers and anyone who could now be at risk \n- contact the org’s lawyer",
+                    "storeAs":"[do-this-if-seized]",
+                    "excludes":[],
+                    "policyEntry":"",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  }
+                ],
+                "tips":[
+                  {"relevance":""},
+                  {"meaning":"Device seizures involve your device being taken out of your possession by an authority, and it can be hard to tell whether anyone has broken into it when it's returned. Given this uncertainty and confusion, it can be helpful to have a clear process for staff to follow in order to regain some control over the situation."},
+                  {"implementation":""},
+                  {"more": ["what to do if your phone is seized by police", "how to secure sim card"]}
+                ]
+              }
+            ],
+            "section4": [
+              {
+                "isQuestion": false,
+                "id":"q28",
+                "title": "Scenario four",
+                "paragraph":["Travelling to conferences and other work-related events may involve crossing a border or two, which can be a headache for security-conscious folks as the security process requires your devices to be out of your sight, at least for a few minutes. If you're detained for extra screening that can turn into an extended period of time, during which your devices may be accessed without your knowledge - you could then be stuck with a potentially compromised device while far from home.", "Going to the border with your devices encrypted (if possible), locked and holding little to no sensitive data is the safest approach. In addition, having a travel plan and a 'buddy' to check in with can make it easier to deal with an emergency and trigger an escalation back at the office.", "It's important to remind staff to know their rights when crossing borders, especially as laptop stickers, authentication keys and an unusually empty device are all elements that can make them look suspicious. Staff should also remember to stay calm and polite during border interactions as lying, rudeness and physical interference with an agent's search will not help the situation."]
+              },
+              {
+                "isQuestion": true,
+                "id":"q29",
+                "q":"Should staff use separate travel devices?",
+                "required":true,
+                "policyEntry":"",
+                "appendixEntry":"",
+                "routineEntry":"",
+                "answers":[
+                  {
+                    "type":"radio",
+                    "answerText":"Yes and we provide them",
+                    "storeAs":"",
+                    "excludes":[],
+                    "policyEntry":"We provide staff with devices for use while travelling in order to lessen the impact should they become compromised.",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"Are the travel devices up-to-date with the latest security features? If not, they should be updated or upgraded.",
+                        "tipList": "When providing a travel phone to staff, consider the SIM card management: will it be provided for use around the world, or should they purchase locally?",
+                        "linksList": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type":"radio",
+                    "answerText":"Staff must provide these if they require them",
+                    "storeAs":"",
+                    "excludes":[],
+                    "policyEntry":"Staff are encouraged to use separate, 'clean' devices when they travel to lessen the impact of any authorised access. For guidance on which types of device would be suitable, speak to [security-contact-name].",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"Roughly how many staff are using separate travel devices vs those who use their 'cleaned' everyday devices?",
+                        "tipList": "It’s expensive to purchase a second device so consider sharing or reimbursing the cost of these for staff who need it.",
+                        "linksList": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type":"radio",
+                    "answerText":"Staff should prepare and use their everyday devices",
+                    "storeAs":"",
+                    "excludes":[],
+                    "policyEntry":"Before travelling on work-related business, staff should prepare ('clean') their everyday devices in such a way as to reduce the impact of any unauthorised access while abroad. [security-contact-name] can provide more information on how to do this.",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "Consider providing a training session for staff to ensure everyone is clear on how to prepare their regular devices for travel.",
+                        "linksList": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type":"radio",
+                    "answerText":"Decided on a case-by-case basis",
+                    "storeAs":"",
+                    "excludes":[],
+                    "policyEntry":"The issue of travel devices vs everyday devices is decided on a case-by-case basis and is dependent on your threat model. Speak to [security-contact-name] for more information.",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  }
+
+                ],
+                "tips":[
+                  {"relevance":"Relevant to organizations with staff who carry sensitive information on their devices when they travel."},
+                  {"meaning":"Travel devices are typically phones, laptops and other portable devices which are ‘clean’ (i.e. with minimal to no sensitive information on them) and used solely during travel to minimise the impact of unwanted access by border agents or other authorities. Our everyday devices contain a large amount of information and it can be time-consuming to clear them of all but the most innocuous data. Carrying a near-empty device can look suspicious and so some people choose to create a false profile filled with family photos and other “memories” from stock imagery sites. If the risk isn’t high enough to warrant the use of travel devices, then staff should be made aware of how they can secure their regular devices while travelling."},
+                  {"implementation":""},
+                  {"more": ["clean devices when travelling"]}
+                ]
+              },
+              {
+                "isQuestion": true,
+                "id":"q30",
+                "q":"How should staff prepare their devices for travel?",
+                "required":false,
+                "policyEntry":"Before travelling, there are steps which should be taken to prepare devices containing sensitive information. For help with any of the following security measures, please contact [security-contact-name].",
+                "appendixEntry":"EFF wrote a Border Search Pocket Guide, which may be useful: https://www.eff.org/document/eff-border-search-pocket-guide",
+                "routineEntry":"",
+                "answers":[
+                  {
+                    "type":"checkbox",
+                    "answerText":"Enable phone SOS mode",
+                    "storeAs":"",
+                    "excludes":[],
+                    "policyEntry":"- Enable any SOS features or modes on your phone, and learn how to use them so you are prepared to do so in an emergency. SOS mode provides a shortcut to calling the emergency services or texting emergency contacts, usually triggered by pressing a button several times.",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "If there's a large amount of staff who wear smart watches at [organisation-name] then it could be suggested to them to look into what Emergency SOS calling features they may have access to through the watch.",
+                        "linksList": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type":"checkbox",
+                    "answerText":"Remove unnecessary data",
+                    "storeAs":"",
+                    "excludes":[],
+                    "policyEntry":"- Deleting unnecessary data from your devices before travelling reduces how much is exposed should the device be accessed without your knowledge. Assess each data group by how essential it is to your trip and whether it can be safely accessed via non-local storage while abroad.",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "Remember to check that your devices are backed up before removing data as part of your travel preparations.",
+                        "linksList": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type":"checkbox",
+                    "answerText":"Encrypt all devices",
+                    "storeAs":"",
+                    "excludes":[],
+                    "policyEntry":"- Full disk encryption is available on most operating systems, and we require staff to ensure it is set up and working prior to travel. For help on how to do this, please contact [security-contact-name].",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type":"checkbox",
+                    "answerText":"Remove/log out of incriminating services",
+                    "storeAs":"",
+                    "excludes":[],
+                    "policyEntry":"- If your device is searched, you'll want to limit the amount of suspicious or incriminating information that is available. Affected apps and websites will depend on the travel destination, for example some countries will take issue with gay dating apps while others will be more concerned by the presence of a Tor browser.",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "Don't forget to wipe browser history in addition to logging out and removing services from your devices.",
+                        "linksList": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type":"checkbox",
+                    "answerText":"Disable biometric authentication",
+                    "storeAs":"",
+                    "excludes":[],
+                    "policyEntry":"- By disabling fingerprint or facial authentication, your device will fallback to requiring a password, code or phrase to gain entry - something which is harder to force as it usually requires a judge to support the search of your device.",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "Switching off devices will also disable biometric authentication - but only for the first successful attempt to gain access.",
+                        "linksList": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type":"checkbox",
+                    "answerText":"Switch off all devices",
+                    "storeAs":"",
+                    "excludes":[],
+                    "policyEntry":"- If you forget to disable biometric authentication then switching the device off altogether can force the device to fall back to authentication via password, code or phrase the next time it is turned on. This makes it harder for others to force entry to the device.",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type":"checkbox",
+                    "editable":true,
+                    "answerText":"something else",
+                    "storeAs":"[alt-travel-security]",
+                    "excludes":[],
+                    "policyEntry":"- [alt-travel-security]",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  }
+                ],
+                "tips":[
+                  {"relevance":"Organizations with staff who travel outside of their home country for work purposes."},
+                  {"meaning":"Be aware that unusual precautions may make border agents suspicious. Some of these measures will need to be implemented on a case-by-case basis to avoid standing out. Being visibly security-conscious can draw the attention of border guards."},
+                  {"implementation":"Creating a travel checklist for staff out of the relevant content in your security policy can help with implementation."},
+                  {"more": ["enable phone SOS mode", "device security while travelling", "how to disable biometric authentication"]}
+                ]
+              },
+              {
+                "isQuestion": true,
+                "id":"q31",
+                "q":"Should staff use a specific tool or tools to protect their internet connection?",
+                "required":true,
+                "policyEntry":"Protecting your internet activity from invasive monitoring can involve a range of solutions. [organisation-name] advises staff to use [use-this-for-vpn] on devices that are connected to the internet. [security-contact-name] can help with set up.",
+                "appendixEntry":"Depending on the country in which you're operating it may be advisable to recommend using VPNs and similar tools even when staff are not travelling.",
+                "routineEntry":"",
+                "answers":[
+                  {
+                    "type":"checkbox",
+                    "answerText":"Mullvad",
+                    "storeAs":"[use-this-for-vpn]",
+                    "excludes":[],
+                    "policyEntry":"",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"Is Mullvad still the right tool to recommend to staff?",
+                        "tipList": "",
+                        "linksList": "Mullvad website: https://mullvad.net"
+                      }
+                    ]
+                  },
+                  {
+                    "type":"checkbox",
+                    "answerText":"Psiphon",
+                    "storeAs":"[use-this-for-vpn]",
+                    "excludes":[],
+                    "policyEntry":"",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"Is Psiphon still the right tool to recommend to staff?",
+                        "tipList": "Ensure staff download Psiphon directly from their website (see Useful Links below) to avoid fakes containing malicious code.",
+                        "linksList": "Psiphon website: https://psiphon.ca"
+                      }
+                    ]
+                  },
+                  {
+                    "type":"checkbox",
+                    "answerText":"NordVPN",
+                    "storeAs":"[use-this-for-vpn]",
+                    "excludes":[],
+                    "policyEntry":"",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"Is NordVPN still the right tool to recommend to staff?",
+                        "tipList": "",
+                        "linksList": "NordVPN website: https://nordvpn.com"
+                      }
+                    ]
+                  },
+                  {
+                    "type":"checkbox",
+                    "answerText":"Tor",
+                    "storeAs":"[use-this-for-vpn]",
+                    "excludes":[],
+                    "policyEntry":"",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "As one of the most famous circumvention tools, Tor can stand out as a red flag in some countries and you will come across sites that block Tor users altogether, so choose a backup solution for when your circumvention needs to be a little more low-profile or you're sure that there are other Tor users around that will make your usage blend in. Ensure staff download Tor directly from their website (see Useful Links below) to avoid fakes containing malicious code.",
+                        "linksList": "Tor Project website: https://www.torproject.org"
+                      }
+                    ]
+                  },
+                  {
+                    "type":"checkbox",
+                    "answerText":"Tunnelbear",
+                    "storeAs":"[use-this-for-vpn]",
+                    "excludes":[],
+                    "policyEntry":"",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"Is TunnelBear still the right tool to recommend to staff?",
+                        "tipList": "",
+                        "linksList": "TunnelBear website: https://www.tunnelbear.com"
+                      }
+                    ]
+                  },
+                  {
+                    "type":"checkbox",
+                    "editable":true,
+                    "answerText":"another VPN",
+                    "storeAs":"[use-this-for-vpn]",
+                    "excludes":[],
+                    "policyEntry":"",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"Is [use-this-for-vpn] still the best option for protecting the internet activity of staff members?",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  }
+                ],
+                "tips":[
+                  {"relevance":"These tools are most beneficial to staff working or travelling in a country that have invasive powers to monitor online activity."},
+                  {"meaning":"VPNs and similar tools can mask a user's location and encrypt their connection, ensuring that anyone watching can only see that a VPN is in use."},
+                  {"implementation":"It can sometimes be possible for governments to distinguish which tool is masking the connection so consider carefully which options are least likely to stand out from the crowd. Determining the most popular VPNs (e.g. which ones are used to find porn) in a region will help with blending in."},
+                  {"more": ["privacy-conscious VPNs", "how do vpns work", "Mullvad vpn", "Psiphon", "NordVPN", "Tor", "TunnelBear"]}
+                ]
+              },
+              {
+                "isQuestion": true,
+                "id":"q32",
+                "q":"How are the recommended VPNs and circumvention tools paid for?",
+                "required":false,
+                "policyEntry":"",
+                "appendixEntry":"",
+                "routineEntry":"",
+                "answers":[
+                  {
+                    "type":"radio",
+                    "answerText":"Free plan",
+                    "storeAs":"",
+                    "excludes":[],
+                    "policyEntry":"",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"Is the free [use-this-for-vpn] plan still sufficient or is there a better option now available?",
+                        "tipList": "Using the free plan may result in some compromises on speed or be ad-supported so consider whether the benefits offset these.",
+                        "linksList": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type":"radio",
+                    "answerText":"Company subscription",
+                    "storeAs":"",
+                    "excludes":[],
+                    "policyEntry":"[organisation-name] provides a paid subscription to [use-this-for-vpn].",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"Is the paid subscription to [use-this-for-vpn] still a good solution or is there a better option now available?",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  }
+                ],
+                "tips":[
+                  {"relevance":""},
+                  {"meaning":"Circumvention tools are usually run by small organizations who rely on funding and donations in order to keep providing a free or low-cost service, while larger VPNs tend to offer additional features and support in exchange for a more expensive subscription plan."},
+                  {"implementation":"Asking staff to pay for their own VPN subscription can make it tough for those on a lower income to sufficiently protect their internet connection, putting them at risk and impacting their work. Instead, consider covering at least part of the cost or migrating to a service with a free plan."},
+                  {"more": ["free vs paid vpns"]}
+                ]
+              },
+              {
+                "isQuestion": true,
+                "id":"q33",
+                "q":"Who should staff contact in a travel emergency?",
+                "required":false,
+                "policyEntry":"If you are in need of assistance while travelling, please contact either your pre-arranged travel buddy or: ",
+                "appendixEntry":"",
+                "routineEntry":"",
+                "answers":[
+                  {
+                    "type":"text",
+                    "answerText":"Name",
+                    "placeholder":"e.g. Shohreh Yazdani",
+                    "storeAs":"[travel-security-contact-name]",
+                    "excludes":[],
+                    "policyEntry":"[travel-security-contact-name].",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"Is [travel-security-contact-name] still the most appropriate person to contact for travel assistance?",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type":"text",
+                    "answerText":"Pronouns",
+                    "placeholder": "e.g. she/her",
+                    "storeAs":"[travel-security-contact-pronouns]",
+                    "excludes":[],
+                    "policyEntry":"Their pronouns are [travel-security-contact-pronouns].",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"Does [travel-security-contact-name] still use [travel-security-contact-pronouns] pronouns?",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type":"text",
+                    "answerText":"Email",
+                    "placeholder": "e.g. example@organization.com",
+                    "storeAs":"[travel-security-contact-email]",
+                    "excludes":[],
+                    "policyEntry":"Email: [travel-security-contact-email]",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"Is [travel-security-contact-name]'s email address up-to-date?",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type":"text",
+                    "answerText":"Phone",
+                    "placeholder": "e.g. +1 (234) 567-890",
+                    "storeAs":"[travel-security-contact-phone]",
+                    "excludes":[],
+                    "policyEntry":"Phone: [travel-security-contact-phone]",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"Is [travel-security-contact-name]'s phone number correct?",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  }
+                ],
+                "tips":[
+                  {"relevance":""},
+                  {"meaning":"When staff are travelling abroad it can be useful for them to have a central point of contact should they need assistance. This person should be able to direct them to the appropriate resource or person, or put into action an emergency escalation plan if needs be."},
+                  {"implementation":"It may be useful for staff to have a trip-specific 'travel buddy' they can go to for more routine support, such as daily check ins. This means that the person defined here remains the 'emergency' contact and their workload isn't impacted by minor travel support tasks."},
+                  {"more": ["help for staff while travelling"]}
+                ]
+              },
+              {
+                "isQuestion": true,
+                "id":"q34",
+                "q":"What steps should be in your staff members’ travel security plans?",
+                "required":false,
+                "policyEntry":"... you are travelling abroad for work purposes: It's important to avoid assuming the same level of safety abroad as you are used to at home. While it's recommended that you research your destination's security situation, here are some baseline security measures you can use to form a travel plan in order to help with protecting you, your devices and, by extension, [organisation-name]'s staff and work: [do-this-if-travelling]",
+                "appendixEntry": "",
+                "routineEntry":"",
+                "answers":[
+                  {
+                    "type":"textarea",
+                    "answerText":"",
+                    "placeholder":"Here's some examples: \n\n- determine a “travel buddy” to check in with at regular periods \n- agree on code phrases or emojis to indicate safety or trigger an escalation \n- ensure you have emergency contact information in an accessible place",
+                    "storeAs":"[do-this-if-travelling]",
+                    "excludes":[],
+                    "policyEntry":"",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"Is your travel plan template up-to-date?",
+                        "tipList": "Check ins with a travel buddy can be as simple as using an agreed-upon set of emoji icons as a code to indicate wellness, vulnerability and emergency.",
+                        "linksList": ""
+                      }
+                    ]
+                  }
+                ],
+                "tips":[
+                  {"relevance":""},
+                  {"meaning":"Staff should not make assumptions about the level of privacy they can expect in their destination region. Having a plan to help them prepare for invasive searches, device loss and other issues means that they're not stuck abroad with no support."},
+                  {"implementation":"Staff who are travelling alone, or who may be particularly vulnerable to attack while abroad, should have their travel security preparation prioritised."},
+                  {"more": ["things to consider when crossing the border"]}
+                ]
+              }
+            ],
+            "section5": [
+              {
+                "isQuestion": false,
+                "id":"q35",
+                "title": "Scenario five",
+                "paragraph":["Staff arrive at the office one morning to find that there’s been a break in and several laptops have been stolen from their desks. Although all were set up with password protection, some were running on out-of-date software with unpatched security holes, which the thieves then exploited to bypass the log in screen and gain access to the file systems.", "While cyber attacks pose a big threat, organizations should also consider how they can protect against offline incidents. A break-in at the office can deal a devastating blow to an organization as the theft of confidential documents and data-rich computers can lead to the exposure of personal information, loss of equipment and destruction of locally-stored files.", "Security needs can differ for home offices and coworking spaces but the overall goal of restricting access is the same, and most measures can be altered to suit the specific environment. Although some environmental security measures will be required by insurance anyway, there are additional habits staff can practice to help keep the office secure. In addition to physical security, this section will also cover WiFi and visitor protocols."]
+              },
+              {
+                "isQuestion": true,
+                "id":"q36",
+                "q":"Does your organization have a 'clean desk' policy?",
+                "required":true,
+                "policyEntry":"",
+                "routineEntry":"",
+                "appendixEntry":"",
+                "answers":[
+                  {
+                    "type":"radio",
+                    "answerText":"Yes",
+                    "storeAs":"",
+                    "excludes":[],
+                    "policyEntry":"Our ‘clean desk’ policy requires staff to keep their workspaces clean and free of any sensitive documents and devices overnight or while not in use. By keeping such items tidied away, you are preventing visitors and other unauthorised persons from viewing confidential information.",
+                    "routineEntry":"Done for the day? Don’t forget to clear any devices or sensitive documents from your desk.",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "It can be hard to keep a clean desk during working hours, so encourage staff to have meetings in designated spots, rather than at their desks.",
+                        "linksList": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type":"radio",
+                    "answerText":"No",
+                    "storeAs":"",
+                    "excludes":[],
+                    "policyEntry":"",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  }
+                ],
+                "tips":[
+                  {"relevance":""},
+                  {"meaning":"Having sensitive information visible on unattended desks can result in staff or visitors having unauthorised access to it. Therefore, a ‘clean desk’ policy requires staff to keep only the essential items on their desk when they are away from it."},
+                  {"implementation":"When implementing a 'clean desk' policy, keep in mind the storage options that staff have available. For example, if their desks have a built-in drawer then consider whether it's spacious enough to hold a laptop or other devices."},
+                  {"more": ["clean desk policy"]}
+                ]
+              },
+              {
+                "isQuestion": true,
+                "id":"q37",
+                "q":"Are staff provided with lockable storage?",
+                "required":true,
+                "policyEntry":"You’ll be provided with a lockable [secure-storage-options] which should be used to store papers and valuable hardware, such as phones, memory sticks and sensitive documents.",
+                "routineEntry":"Before leaving the office, remember to check that your [secure-storage-options] is locked (and remove/scramble the key).",
+                "appendixEntry":"The locks that are built into standard office furniture can be quite easy to force, which may be an acceptable risk when a visual deterrent is all that’s required, but it is worth considering options that can have a padlock or other additional security measures added to them.",
+                "answers":[
+                  {
+                    "type":"checkbox",
+                    "answerText":"cabinet",
+                    "storeAs":"[secure-storage-options]",
+                    "excludes":[],
+                    "policyEntry":"",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type":"checkbox",
+                    "answerText":"drawer",
+                    "storeAs":"[secure-storage-options]",
+                    "excludes":[],
+                    "policyEntry":"",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type":"checkbox",
+                    "editable":true,
+                    "answerText":"another storage option",
+                    "storeAs":"[secure-storage-options]",
+                    "excludes":[],
+                    "policyEntry":"",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  }
+                ],
+                "tips":[
+                  {"relevance":"If staff have their own desk in the office, and especially if there is a “clean desk” policy in place."},
+                  {"meaning":"Physical storage can be used to store sensitive printed documents, in accordance with a “clean desk” policy. A lockable cupboard or drawer can hold organization-owned laptops, thumb drives, or other devices, helping to ensure that they aren’t easily accessed during a break in."},
+                  {"implementation":"Remind staff of the security risks of leaving the key in the lock overnight."},
+                  {"more": ["secure office storage"]}
+                ]
+              },
+              {
+                "isQuestion": true,
+                "id":"q38",
+                "q":"What are your visitor protocols?",
+                "required":true,
+                "policyEntry":"[organisation-name] staff are responsible for any visitors they bring into the office and are expected to be present for their guest’s arrival, or have prepared another person to receive them. No visitors should be given unsupervised access, and all staff should be vigilant against \"tail-gating\" or using another staff member's access code, card or key to gain entry to the office.",
+                "routineEntry":"",
+                "appendixEntry":"",
+                "answers":[
+                  {
+                    "type":"checkbox",
+                    "answerText":"pre-visit announcement",
+                    "storeAs":"",
+                    "excludes":[],
+                    "policyEntry":"Before your guest arrives, you should ensure that in-office staff are aware of their impending visit so they can prepare accordingly.",
+                    "routineEntry":"Let people know if you’re bringing a visitor to the office.",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type":"checkbox",
+                    "answerText":"sign-in book",
+                    "storeAs":"",
+                    "excludes":[],
+                    "policyEntry":"Visitors are expected to sign in when they enter the premises and sign out when they leave.",
+                    "routineEntry":"Has your guest signed in and out of the office?",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type":"checkbox",
+                    "answerText":"guest WiFi",
+                    "storeAs":"",
+                    "excludes":[],
+                    "policyEntry":"While on site, guests should use the visitor WiFi to access the internet. Credentials can be obtained from [security-contact-name]. When using the [organisation-name] wireless network, visitors are not to perform any illegal or malicious actions against any internal or external network.",
+                    "routineEntry":"Visitors must connect to the guest WiFi network; you can get the details of this from [security-contact-name]",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type":"checkbox",
+                    "editable":true,
+                    "answerText":"something else",
+                    "storeAs":"[alt-visitor-rule]",
+                    "excludes":[],
+                    "policyEntry":"Please also note the following rule: [alt-visitor-rule]",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  }
+                ],
+                "tips":[
+                  {"relevance":"If your office receives visitors, it is worth putting thought into how this impacts your organization’s security."},
+                  {"meaning":"Visitor protocols can include many things, depending on the frequency of visits and common purposes. For instance, if there are visitors regularly on site for meetings then a guest WiFi access point can make it easier to restrict their movement around the network. Making staff aware of visitors in advance can give them time to secure their workspace, and avoids any surprise at seeing an unfamiliar face in the office."},
+                  {"implementation":"When setting up a guest WiFi, remember to implement the same security standards as your company WiFi; for instance, by using complex passwords changed on a regular basis. Organizations that have visitors on an infrequent basis may find it more practical to actively notify their staff each time than those with more frequent visitors, for whom a shared calendar could be easier to manage."},
+                  {"more": ["visitor security policy", "office security tailgating"]}
+                ]
+              },
+              {
+                "isQuestion": true,
+                "id":"q39",
+                "q":"Who is responsible for securing the office premises?",
+                "required":true,
+                "policyEntry":"Any questions about [organisation-name] office security issues should be directed to [office-security-contact-name], [office-security-contact-role].",
+                "routineEntry":"[office-security-contact-name] ([office-security-contact-phone]/[office-security-contact-email]) is the person to go to with any issues related to office security.",
+                "appendixEntry":"",
+                "answers":[
+                  {
+                    "type":"text",
+                    "answerText":"Name",
+                    "placeholder": "e.g. Kendrick Floyd",
+                    "storeAs":"[office-security-contact-name]",
+                    "excludes":[],
+                    "policyEntry":"",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"Is [office-security-contact-name] still responsible for this policy?",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type":"text",
+                    "answerText":"Position",
+                    "placeholder": "e.g. Head of Office Security",
+                    "storeAs":"[office-security-contact-role]",
+                    "excludes":[],
+                    "policyEntry":"",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type":"text",
+                    "answerText":"Pronouns",
+                    "placeholder": "e.g. he/him",
+                    "storeAs":"[office-security-contact-pronouns]",
+                    "excludes":[],
+                    "policyEntry":"Their pronouns are [office-security-contact-pronouns].",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"Does [office-security-contact-name] still use [office-security-contact-pronouns] pronouns?",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type":"text",
+                    "answerText":"Email",
+                    "placeholder": ["e.g. example@organization.com"],
+                    "storeAs":"[office-security-contact-email]",
+                    "excludes":[],
+                    "policyEntry":"You can email [office-security-contact-name] at [office-security-contact-email].",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"Is [office-security-contact-email] the most-up-to-date email for [security-contact-name]?",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type":"text",
+                    "answerText":"Phone",
+                    "placeholder": "e.g. +1 (234) 567-890",
+                    "storeAs":"[office-security-contact-phone]",
+                    "excludes":[],
+                    "policyEntry":"Their phone number is [office-security-contact-phone].",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"Is [office-security-contact-phone] the most-up-to-date phone for [security-contact-name]?",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  }
+                ],
+                "tips":[
+                  {"relevance":""},
+                  {"meaning":"Whoever is responsible for office security should be present in the office on a regular basis. Depending on your context, they may need to liaise with the alarm system company, rotate office entry codes or manage the staff access fobs. If your office is in a shared or coworking space then the person responsible may be someone outside of your organization."},
+                  {"implementation":"For very small organizations it may make sense for this security officer to be the same responsible person named earlier in this process, while larger organizations may require a dedicated person or team. In either case it’s important that everybody knows who to contact if there is an emergency in-office."},
+                  {"more": ["responsible person office security", "security officer responsibilities"]}
+                ]
+              },
+              {
+                "isQuestion": true,
+                "id":"q40",
+                "q":"Which aspects of office security are staff responsible for?",
+                "required":true,
+                "policyEntry":"",
+                "routineEntry":"",
+                "appendixEntry":"Between reviews, keep a note of any security incidents related to the office environment as these experiences teach those involved, the organization as a whole and can be used to improve the security policy.",
+                "answers":[
+                  {
+                    "type":"checkbox",
+                    "answerText":"Disabling/enabling the alarm system",
+                    "storeAs":"",
+                    "excludes":[],
+                    "policyEntry":"You will receive training in how to enable and disable the security alarm system. This information, including any access codes, should not be shared with others unless authorised to do so by [office-security-contact-name]. If you are the last person to leave the office, it is your responsibility to enable the alarm system and lock up. Likewise, if you are the first to arrive at the office, then you should disable the alarm and report any problems immediately to [office-security-contact-name] on [office-security-contact-phone].",
+                    "routineEntry":"If you’re the last to leave the office: enable the alarm and lock up. If you’re the first to arrive: disable the alarm and report any issues immediately.",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"Have staff had any issues with enabling or disabling the alarm that can be resolved with a refresher training?",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type":"checkbox",
+                    "answerText":"Their own access token (e.g. key)",
+                    "storeAs":"",
+                    "excludes":[],
+                    "policyEntry":"An access token, such as a key, fob or code, will be provided to you so that you can enter the office during working hours. It is of the upmost importance that you guard this token like a password and avoid sharing it with any other person, whether intentionally or by accident, or leaving it unattended. If you lose the token, it is your responsibility to notify [office-security-contact-name] immediately so that the appropriate remedial actions can be taken.",
+                    "routineEntry":"It is very important that you protect your access token (e.g. key, fob, entry code). Do not share it or leave it unattended.",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "When staff leave the organization, be sure to obtain and deactivate their access token so you remain aware of who has access to the office at any given time.",
+                        "linksList": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type":"checkbox",
+                    "answerText":"Shutting down their computer before leaving",
+                    "storeAs":"",
+                    "excludes":[],
+                    "policyEntry":"Please turn off your computer when leaving the office to prevent intruders gaining easy access to its file system.",
+                    "routineEntry":"Turn your computer off at the end of your workday to enable disk encryption to take place and provide an extra obstacle to intruders.",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type":"checkbox",
+                    "editable":true,
+                    "answerText":"something else",
+                    "storeAs":"[alt-office-security]",
+                    "excludes":[],
+                    "policyEntry":"[alt-office-security]",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  }
+                ],
+                "tips":[
+                  {"relevance":""},
+                  {"meaning":"To enable work to continue outside of office working hours, it is useful for staff to be able to securely exit the office when they leave late and enter when they arrive early. Access tokens such as keys, fobs and codes could grant unauthorised entry if they were to be shared outside of the organization, for example through social engineering tactics such as ‘tailgating’. It’s important to know who has access to the office and have a process in place for changing codes, deactivating fobs, and similar tasks. Turning devices off at night ensures that an intruder would be forced to enter the correct password in order to decrypt (if disk encryption is enabled) and access the file system."},
+                  {"implementation":"Social engineering can be a threat both online and offline, and physical penetration testing are frequently employed to use such tactics to gain access to test the strength of the organization’s security plan and see how far a potential intruder could get into a building. The outcomes of these tests can be a valuable metric with which to raise awareness among staff of the importance of keeping the office secure."},
+                  {"more": ["social engineering tactics tailgating", "physical penetration testing", "office key security policy"]}
+                ]
+              },
+              {
+                "isQuestion": true,
+                "id":"q41",
+                "q":"How do you expect staff to secure their home office space?",
+                "required":true,
+                "policyEntry":"",
+                "routineEntry":"",
+                "appendixEntry":"Between reviews, keep a note of any security incidents related to working remotely as these experiences teach those involved, the organization as a whole and can be used to improve the security policy.",
+                "answers":[
+                  {
+                    "type":"checkbox",
+                    "answerText":"Prevent others using their devices",
+                    "storeAs":"",
+                    "excludes":[],
+                    "policyEntry":"The devices you use for work should not be shared with others outside of [organisation-name], as it can put the confidential information they hold at risk of deletion or damage.",
+                    "routineEntry":"Don’t allow others to use your work devices",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type":"checkbox",
+                    "answerText":"Switch off devices when not in use",
+                    "storeAs":"",
+                    "excludes":[],
+                    "policyEntry":"Please switch off devices when they are not in use, as this will make it harder for intruders to access the file system, especially if the device uses disk encryption and/or requires a password to log in.",
+                    "routineEntry":"Switch work devices off when not in use",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type":"checkbox",
+                    "answerText":"Lock up documents and devices at night",
+                    "storeAs":"",
+                    "excludes":[],
+                    "policyEntry":"When the work day is over, documents and devices should be locked away to deter thieves.",
+                    "routineEntry":"Lock away documents and devices at night",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type":"checkbox",
+                    "answerText":"Restrict workspace access",
+                    "storeAs":"",
+                    "excludes":[],
+                    "policyEntry":"Staff working remotely should know who is able to enter their office. Please avoid allowing access to strangers unless precautions are taken to lock confidential papers away and turn off computers before the visit.",
+                    "routineEntry":"Prevent others from accessing your workspace unsupervised.",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type":"checkbox",
+                    "editable":true,
+                    "answerText":"something else",
+                    "storeAs":"[alt-home-office-security]",
+                    "excludes":[],
+                    "policyEntry":"[organisation-name] staff are expected to secure their home office using the following method: [alt-home-office-security]",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  }
+                ],
+                "tips":[
+                  {"relevance":"If anyone in your organization works remotely, from home or anywhere outside of the organization’s office, then the security of their work in that environment should be examined."},
+                  {"meaning":"Members of staff may find themselves being asked by family or friends if their work device could be borrowed temporarily, for example to look something up. The rules about this can be restrictive or more flexible, depending on whether the devices have work profiles or are owned, and the importance of the data stored on it. Staff members should be aware of everyone who has access to their home office, but that’s not always possible. Measures such as locking the door, putting devices and documents away at night, or switching off devices when not in use, are all additional obstacles for an intruder."},
+                  {"implementation":"It may not be possible for some staff to work securely from home office, so consider how everyone can be supported, for example by offering paid membership to a local coworking space."},
+                  {"more": ["how to secure a home office", "security of coworking spaces", "risks of public wifi"]}
+                ]
+              },
+              {
+                "isQuestion": true,
+                "id":"q42",
+                "q":"What steps should staff members take if their work device has been lost or stolen?",
+                "required":false,
+                "policyEntry":".... a device you use for work is lost or stolen: as with most security incidents, it can be intimidating to report a device loss but the impact can be minimised the sooner it’s reported. Here are the steps you should take immediately upon discovering a work device is lost or stolen: [do-this-if-lost-stolen]",
+                "routineEntry":"",
+                "appendixEntry":"",
+                "answers":[
+                  {
+                    "type":"textarea",
+                    "answerText":"",
+                    "placeholder":"Here are a few examples: \n\n- report to their phone company, \n- reset account passwords \n- contact IT for a replacement device",
+                    "storeAs":"[do-this-if-lost-stolen]",
+                    "excludes":[],
+                    "policyEntry":"",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  }
+                ],
+                "tips":[
+                  {"relevance":""},
+                  {"meaning":"When a device that provides access to your organization’s data is lost or stolen, the owner needs to be able to quickly and confidently report the loss. By acting fast, account credentials can be changed and the device can be found or wiped sooner than a third party can gain access to the device’s contents."},
+                  {"implementation":"The potential impact of a device loss can make it an intimidating thing to report, so it’s important that staff know they’re supported."},
+                  {"more": ["lost stolen device security"]}
+                ]
+              }
+            ],
+            "section6": [
+              {
+                "isQuestion": false,
+                "id":"q43",
+                "title": "Scenario six",
+                "paragraph":["Your organization receives a stern letter from your internet service provider explaining that illegal downloading violates their terms of service and warning of consequences for continued violation. It soon emerges that the organization’s WiFi network is reachable in the cafe below the office, and an opponent to your work has been sitting in there using your network to torrent films.", "Intrusions involving the network can range in their spread and impact, and there are several ways you can limit both, whether at browser, device or network level. Browser-based intrusions can involve websites themselves, but they can also expose confidential browsing information to any attacker who gains control of the computer.", "This section will also cover preparedness for viruses, suspicious network activity, and other aspects of device and network level attacks."]
+              },
+              {
+                "isQuestion": true,
+                "id":"q44",
+                "q":"How often are the office WiFi passwords changed?",
+                "required":true,
+                "policyEntry":"To ensure that the WiFi access is restricted to authorised staff, [organisation-name] rotates the password [how-often-wifi-changed] and the new credentials will be made available to you by [security-contact-name].",
+                "routineEntry":"",
+                "appendixEntry":"",
+                "answers":[
+                  {
+                    "type":"radio",
+                    "answerText":"at every security review",
+                    "storeAs":"[how-often-wifi-changed]",
+                    "excludes":[],
+                    "policyEntry":"",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"It's time to change the office WiFi passwords!",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type":"radio",
+                    "answerText":"every 6 months",
+                    "storeAs":"[how-often-wifi-changed]",
+                    "excludes":[],
+                    "policyEntry":"",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type":"radio",
+                    "answerText":"every month",
+                    "storeAs":"[how-often-wifi-changed]",
+                    "excludes":[],
+                    "policyEntry":"",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type":"radio",
+                    "answerText":"each week",
+                    "storeAs":"[how-often-wifi-changed]",
+                    "excludes":[],
+                    "policyEntry":"",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  }
+                ],
+                "tips":[
+                  {"relevance":"If your organization uses a password-protected wireless internet connection."},
+                  {"meaning":"It’s important to keep in mind that WiFi extends beyond the physical walls of the office, and so an attacker can gain access even if they’re outside or next door. Strong passwords changed regularly are key to ensuring that, even if the password is compromised somehow, its ability to grant access is time-limited."},
+                  {"implementation":"Consider how you can share the latest password easily and securely, for instance through an encrypted email or secure file share."},
+                  {"more": [""]}
+                ]
+              },
+              {
+                "isQuestion": true,
+                "id":"q45",
+                "q":"What measures do you take to protect your office network?",
+                "required":true,
+                "policyEntry":"When using the internal network, you can expect to find the following security measures in place.",
+                "routineEntry":"",
+                "appendixEntry":"",
+                "answers":[
+                  {
+                    "type":"checkbox",
+                    "answerText":"Password protection",
+                    "storeAs":"",
+                    "excludes":[],
+                    "policyEntry":"You will need a password in order to gain access, which can be obtained from [security-contact-name].",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type":"checkbox",
+                    "answerText":"Firewall",
+                    "storeAs":"",
+                    "excludes":[],
+                    "policyEntry":"A firewall has been set up to prevent malicious connections. If you believe the firewall may be negatively impacting your internet activities, and therefore your work, please speak to [security-contact-name].",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type":"checkbox",
+                    "answerText":"Approved devices only",
+                    "storeAs":"",
+                    "excludes":[],
+                    "policyEntry":"Only approved devices are to be on the [organisation-name] internal network. If you need to use an unapproved device you should request permission to connect from [security-contact-name] so it can be added to the safe list.",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type":"checkbox",
+                    "answerText":"Wired connections available",
+                    "storeAs":"",
+                    "excludes":[],
+                    "policyEntry":"Wired connections are available and recommended. Let [security-contact-name] know if you need a cable for connecting your device.",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type":"checkbox",
+                    "answerText":"Traffic inspection",
+                    "storeAs":"",
+                    "excludes":[],
+                    "policyEntry":"It is important to understand that any and all traffic can be inspected while on the [organisation-name] internal network.",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type":"checkbox",
+                    "editable":true,
+                    "answerText":"something else",
+                    "storeAs":"[alt-network-security]",
+                    "excludes":[],
+                    "policyEntry":"Please also note the following rule: [alt-network-security]",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  }
+                ],
+                "tips":[
+                  {"relevance":"Your organization controls the security of the internet it uses, e.g. in an owned office, rather than a coworking space."},
+                  {"meaning":"There are several measures you can put in place to protect your office network from intruders and each one helps to build a trusted environment in which you are aware of who is on the network with you. A wired connection is recommended, and where a wireless network is in use it should be password-protected (secured with WPA2 or WPA3). A firewall guards your network by monitoring the traffic and allowing or denying connections based on your rules. Organizations may also ask staff to request permission before connecting their personal devices to the network as this can make it easier to spot suspicious activity when monitoring traffic."},
+                  {"implementation":""},
+                  {"more": ["how to configure a firewall", "security of wired vs wireless network", "difference between WPA2 and WPA3", "vulnerabilities in WPA2", "spotting suspicious network activity"]}
+                ]
+              },
+              {
+                "isQuestion": true,
+                "id":"q46",
+                "q":"How can staff protect themselves from browser-based intrusions?",
+                "required":true,
+                "policyEntry":"Your web browser can provide a window into your online activities, potentially exposing confidential data such as activist identities and [organisation-name] project details. To mitigate this, we recommend implementing the following security hygiene techniques in your browser:",
+                "routineEntry":"",
+                "appendixEntry":"",
+                "answers":[
+                  {
+                    "type":"checkbox",
+                    "answerText":"Clear cookies",
+                    "storeAs":"",
+                    "excludes":[],
+                    "policyEntry":"- clear cookies",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type":"checkbox",
+                    "answerText":"Clear history",
+                    "storeAs":"",
+                    "excludes":[],
+                    "policyEntry":"- delete browser history (this can be set up on an automatic schedule)",
+                    "routineEntry":"When did you last clear your browsing history?",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type":"checkbox",
+                    "answerText":"Enable \"Do Not Track\"",
+                    "storeAs":"",
+                    "excludes":[],
+                    "policyEntry":"- enable Do Not Track to hide from trackers",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type":"checkbox",
+                    "answerText":"JavaScript off",
+                    "storeAs":"",
+                    "excludes":[],
+                    "policyEntry":"- disable JavaScript",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type":"checkbox",
+                    "editable":true,
+                    "answerText":"something else",
+                    "storeAs":"[alt-browser-security]",
+                    "excludes":[],
+                    "policyEntry":"- also, [alt-browser-security]",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  }
+                ],
+                "tips":[
+                  {"relevance":""},
+                  {"meaning":"In the course of your employees’ work, their online searches, clicks and website visits can put together a picture of their activities that exposes sensitive or confidential information. Anyone accessing the computer can see the sites accessed and the logins used, so clearing browsing history regularly can reduce how much history is accessible. Cookies and scripting attacks have been used maliciously in the past as they are usually trusted elements of websites which are used to execute code or store data files on the client computer. Disabling cookies and JavaScript in the browser can affect the user’s ability to use websites which rely on JavaScript and cookies though, so the seriousness of the threat should be balanced against the inconvenience. Enabling Do Not Track in the browser helps to reduce the amount of information that advertisers and tracking companies can gather about your employees’ searches, but does rely on websites complying with the request."},
+                  {"implementation":"If your organization provides devices to staff, then these solutions can be implemented in the set up."},
+                  {"more": ["how to turn on Do Not Track", "risks of cookies and scripting attacks", "why how to clear browsing history", "why turn javascript off"]}
+                ]
+              },
+              {
+                "isQuestion": true,
+                "id":"q47",
+                "q":"How should devices be set up to protect against network-based attacks?",
+                "required":true,
+                "policyEntry":"",
+                "routineEntry":"",
+                "appendixEntry":"",
+                "answers":[
+                  {
+                    "type":"checkbox",
+                    "answerText":"Anti-virus",
+                    "storeAs":"",
+                    "excludes":[],
+                    "policyEntry":"Anti-virus software is required on your computer, in order to deal with any virus-related threats. However, this will not take care of all viruses, and so you should continue to be vigilant against suspicious downloads.",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type":"checkbox",
+                    "answerText":"Automatic updates",
+                    "storeAs":"",
+                    "excludes":[],
+                    "policyEntry":"Automatic updates simply ensures that your software is updated quietly in the background, so there is less chance of it being out-of-date and therefore vulnerable to exploits. On occasion, the latest software version may be unstable, in which case you will be informed to prevent the update.",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type":"checkbox",
+                    "answerText":"Firewall",
+                    "storeAs":"",
+                    "excludes":[],
+                    "policyEntry":"A firewall will be set up on your device to manage the incoming and outgoing connections and prevent malicious data from being transferred. If you find that this interferes with your ability to carry out work activities then you should inform [contactname].",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type":"checkbox",
+                    "editable":true,
+                    "answerText":"something else",
+                    "storeAs":"[alt-device-security]",
+                    "excludes":[],
+                    "policyEntry":"In addition, please note the following rule: [alt-device-security]",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  }
+                ],
+                "tips":[
+                  {"relevance":""},
+                  {"meaning":"There are many types of virus, many of which can be picked up by anti-virus software. Some viruses exploit out-of-date software with unpatched security holes, and so enabling automatic software updates can help to reduce these vulnerabilities. Using a firewall at the device level to manage incoming and outgoing connections can assist with flagging suspicious activity early."},
+                  {"implementation":"If your organization provides devices to staff, then these solutions can be implemented in the set up."},
+                  {"more": ["how to enable automatic updates", "how to configure firewall"]}
+                ]
+              },
+              {
+                "isQuestion": true,
+                "id":"q48",
+                "q":"What steps should staff members take if their device is taken over by ransomware?",
+                "required":false,
+                "policyEntry":"... you suspect your device is infected with ransomware: it’s important not to panic and pay the ransom as that gives no guarantee that your files will be released. Instead, you should follow these steps: [do-this-if-ransomware]",
+                "appendixEntry": "",
+                "routineEntry":"",
+                "answers":[
+                  {
+                    "type":"textarea",
+                    "answerText":"",
+                    "placeholder":"- note down the exact message displayed on your screen, \n- contact the security officer, \n- locate your backups to prepare for a system restore",
+                    "storeAs":"[do-this-if-ransomware]",
+                    "excludes":[],
+                    "policyEntry":"",
+                    "routineEntry":"",
+                    "appendixEntry":[
+                      {
+                        "reviewList":"",
+                        "tipList": "",
+                        "linksList": ""
+                      }
+                    ]
+                  }
+                ],
+                "tips":[
+                  {"relevance":""},
+                  {"meaning":"Ransom malware, or ransomware, infects computers and mobile devices through spam, phishing and malicious advertising. Its goal is to lock the user out of their device while demanding a ransom for the decryption and/or release of their files. It’s a popular type of malware attack that is increasingly used against companies and organizations, due to the higher value of the data being held ransom. The first rule of dealing with ransomware is to never pay the ransom: it encourages the attacker and there’s no guarantee your files will be released. There are decryptors available for some ransomware and remediation software for removing the threat, but a full system restore may be the only solution for some infections."},
+                  {"implementation":""},
+                  {"more": ["what to do when infected with ransomware"]}
+                ]
+              }
+            ],
+            "section7": [
+              {
+                "isQuestion": false,
+                "id": "q49",
+                "q": "Last question! Do you need specific policies for different teams within your organisation?",
+                "desc": ["Using the options below, create up to 10 team-specific policies with rules that are applicable to particular groups of people. This can be useful if your organisation has several departments for whom the full policy may not be applicable. For instance, your finance team might not require the travel security section, or your volunteers may only need to know about your organisation's account and device security rules.", "In the left column you can specify who these shorter policies should be for. Name and select a team to see the policy areas that will be included in their subpolicy - choose as many as are applicable. Incident response measures and contextual information are included in all team policies by default.", "You can see what's in each policy area by checking the preview. When you're done, just hit Next and your team policies will be available along with your full policy on the next page. If you don't need any team policies then leave everything unselected and you'll get just your full policy and appendix."],
+                "teams": [
+                  {
+                    "name": "Team 1"
+                  },
+                  {
+                    "name": "Team 2"
+                  }
+                ],
+                "contents": [
+                  {
+                    "name": "device security",
+                    "desc":"(inc. work profiles, touchID and backups)"
+                  },
+                  {
+                    "name": "communications security",
+                    "desc":"(inc. encrypting messages, safe browsing, preferred platforms)"
+                  },
+                  {
+                    "name": "accounts security",
+                    "desc":"(inc. password management and other authentication methods)"
+                  },
+                  {
+                    "name": "travel security",
+                    "desc":"(inc. preparing devices, VPNs, emergency contact)"
+                  },
+                  {
+                    "name": "environmental security",
+                    "desc":"(inc. locked storage, visitors, office security)"
+                  },
+                  {
+                    "name": "network security",
+                    "desc":"(inc. WiFi passwords, browser security, firewalls)"
+                  }
+                ]
+              }
+            ]
+    },
+    "ros":[
+      {
+        "head":"The free and simple tool that enables civil society organizations to build better security policies.",
+        "subhead":"To get started, enter your organization's name (or an alias):",
+        "what":[
+          {
+            "head":"What is SOAP?",
+            "subhead":"SOAP is a free, online security policy generator. It helps you to:",
+            "list": [
+              {
+                "type": "ul",
+                "content": ["Design customized security policies for your organization","Make informed decisions about your organization’s security plan","Successfully implement and maintain your organization’s security policy"]
+              }
+            ],
+            "more": ["The acronym stands for Securing Organizations with Automated Policymaking—reflecting the need to \"clean up\" standard organizational security policies, which all-too-often are unread, irrelevant, or ignored. Thanks to SOAP, organizations can now customize their own unique security policies. Say goodbye to the one-size-fits-all approaches of the past! And along the way, SOAP provides support and implementation tips to ensure the entire process is as easy as possible."],
+            "links":[]
+          }
+        ],
+        "who":[
+          {
+            "head":"Who should use SOAP?",
+            "subhead":"Almost any organization that needs or uses a security policy! In particular, SOAP is geared towards helping civil society organizations (“CSOs”) and other mission-driven groups increase their digital resilience by building an organizational security policy that works for their specific situation.",
+            "list":"",
+            "more":["Research indicates nearly half of all CSOs don’t have a security policy. These organizations instead rely on informal guidelines and “trust” to manage their security. In today’s world, that’s not enough. Although such flexibility allows organizations to adapt quickly to new threats, it makes it much harder to ensure workers are operating under the same security standard. And new members are often left unprepared for even the most basic security incidents. SOAP provides a set of security rules that everyone can work with—all totally customizable to your organization’s specific needs.","So whether your organization needs to update an existing policy, create an entirely new one, or is just preparing to work with a security consultant, SOAP can help!"],
+            "links":[]
+          }
+        ],
+        "how":[
+          {
+            "head":"How does SOAP work?",
+            "subhead":"",
+            "list":[
+              {
+                "type":"ol",
+                "content":["SOAP asks questions about your organizational security practices.","Your answers help SOAP to build a policy","Your policy is presented to you at the end of the process"]
+              }
+            ],
+            "more":["You can preview your policy at any point, and each question is accompanied by information to help you fully understand, research, and implement the associated practices. SOAP’s unique process focuses on key areas commonly included in policies, like devices or travel security.","Each section is preceded by a hypothetical—but common—security incident to help orient the questions within the context of a realistic threat."],
+            "links":[]
+          }
+        ],
+        "security":[
+          {
+            "head":"How secure and private is it?",
+            "subhead":"",
+            "list":[
+              {
+                "type":"ol",
+                "content":["Neither your answers nor any identifying data are stored or sent anywhere","SOAP relies on JavaScript to work, which may be relevant to your threat model","The code is open-source and available at <a href='https://github.com/gembarrett/soap' target='_blank' title='Go to the code repository on GitHub'>github.com/gembarrett/soap</a>"]
+              }
+            ],
+            "more":["SOAP is a web app that works solely in your browser: no cookies or server-side processing is involved in building your policy. No IP addresses, web logs, or any text entered into the answer boxes is stored or sent back to the SOAP servers. A <a href='assets/SOAP-alphaReport.pdf' target='_blank' title='Open PDF security report (SOAP alpha)'>report on SOAP's security</a> (alpha version - will be updated soon) was carried out by SubGraph as part of OTF's Red Team program, and verified that \"there are no meaningful attack vectors that could introduce substantial risk with the use of SOAP.\"","Like many websites, SOAP relies on JavaScript to achieve its functionality, so it must be enabled in your browser for SOAP to work (hint: if you’re reading this, it’s already enabled). If your threat model means you can’t turn on JavaScript, you can download the code (<a href='https://github.com/gembarrett/soap' target='_blank' title='Go to the code repository on GitHub'>github.com/gembarrett/soap</a>) to run the tool in your own secure environment. Questions? Concerns? Email <a href='mailto:feedback@usesoap.app?subject=Suggested%20change' title='Email your feedback on SOAP'>feedback@usesoap.app</a>"],
+            "links":[]
+          }
+        ],
+        "background":[
+          {
+            "head":"What's behind the SOAP project?",
+            "subhead":"SOAP was researched, designed, and built by Gem Barrett, with funding from the Open Technology Fund. In developing SOAP, research was conducted to understand the frustrations faced and obstacles encountered by organizations when creating, implementing, and maintaining security policies.",
+            "list":"",
+            "more":[
+                "The findings of this research and accompanying interviews are shared in the report \"Securing Civil Society\" (<a href='https://usesoap.app/assets/SecuringCivilSociety-report.pdf' target='_blank' title='Open \"Securing Civil Society\" PDF'>PDF currently available</a> in English, other versions coming soon). These findings, coupled with research into organizational security best practices, helped create the methodology that forms the basis of SOAP’s innovative process. For updates on SOAP's future development, follow <a href='https://twitter.com/@thatsoapapp' target='_blank' title='Get SOAP updates on Twitter'>@thatSOAPapp on Twitter</a>."
+            ],
+            "links":[
+              {
+                "name":"SAFETAG by Internews",
+                "url":"https://safetag.org"
+              },
+              {
+                "name": "Umbrella by Security First",
+                "url": "https://secfirst.org/umbrella"
+              },
+              {
+                "name": "LevelUp by Engine Room",
+                "url":"https://www.level-up.cc"
+              },
+              {
+                "name":"Security Planner by Consumer Reports",
+                "url":"https://securityplanner.org"
+              }
+            ]
+          }
+        ],
+        "support":[
+          {
+            "head":"Can I help support this project?",
+            "subhead":"Thanks for asking! It’s true: SOAP takes a lot of time (and coffee!) to maintain. So if you’re interested in giving back and supporting the project, here are a few options:",
+            "list":[
+              {
+                "type":"ul",
+                "content":["Donations to fund SOAP’s upkeep can be made at <a href='https://www.ko-fi.com/supportsoap' target='_blank' title='Donate via Ko-Fi.com'>ko-fi.com/supportsoap</a>","Fluent in a language other than English? Email <a href='mailto:feedback@usesoap.app?subject=Suggested%20change' title='Email your feedback'>feedback(at)usesoap.app</a> with the languages you can translate to and we'll let you know how you can help translate SOAP and make it more accessible to non-English speakers","SOAP is an open-source project. Contributions to the code (JavaScript, HTML or CSS) or documentation are always welcomed at <a href='https://github.com/gembarrett/soap' target='_blank' title='Go to the code repository at GitHub'>github.com/gembarrett/soap</a>"]
+              }
+            ],
+            "more":["Just want to say hi or ask a question? Have an idea for how SOAP could be improved? Email us at: <a href='mailto:feedback@usesoap.app?subject=Suggested%20change' title='Email your feedback about SOAP'>feedback(at)usesoap.app</a>."]
+          }
+        ],
+          "policyPage":{
+              "resourcesHeading": "Learn more",
+              "resourcesIntro": "For more information on organizational and personal security, and how you can get the most out of your new policy, check out these resources:",
+              "resourceBtnLabel": "Get more info about",
+              "textPolicyLabel": "Text",
+              "editPolicyLabel": "Download this policy text",
+              "editPolicyHeading":"Edit policy",
+              "editPolicyInstruction":"Edit your policy below for copying and pasting into your own file.",
+              "markdownPolicyLabel": "Markdown",
+              "htmlPolicyLabel":"HTML",
+              "policyHeading": "Get policy",
+              "policyPreFormat": "Download pre-formatted versions of your organizational security policy documents in plaintext, markdown and HTML.",
+              "feedbackHeading": "What did you think?",
+              "feedbackInstruction": "If you have a few minutes, it would be great to hear your thoughts on SOAP so it can be improved in the future. SOAP doesn't use analytics to follow you around the site, so this is the best way to share your opinion.",
+              "feedbackTitle": "Click to take a short survey about SOAP",
+              "feedbackBtnLabel": "Sure, I'll complete a quick survey!",
+              "resetHeading":"Start over",
+              "resetInstruction":"All done? You'll need to reload the page before building another policy.",
+              "resetBtnLabel":"Build another policy"
+          }
+      }
+    ]
+}

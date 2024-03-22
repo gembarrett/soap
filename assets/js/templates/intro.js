@@ -1,5 +1,5 @@
 templates.intro = function(data){
-  var text = ros[0];
+  var text = textStore.ros[0];
   var content = `
     <div id="intro" class="nav-start contain">
       <div id="logoContainer">
