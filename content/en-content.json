@@ -3195,6 +3195,7 @@
                   "buildLabel":"Build policy",
                   "editTitle": "Click or press E to edit your answers",
                   "editLabel": "EDIT",
+                  "doneLabel":"DONE",
                   "codeTitle": "View the open-source SOAP code at GitHub",
                   "codeLabel": "Code",
                   "researchTitle": "Open the PDF research report Securing Civil Society (in English)",
@@ -3221,9 +3222,18 @@
                   "spinnerAlt": "Spinning circle - the page is loading",
                   "spinnerLabel": "LOADING"
               },
+              "404": {
+                  "pageTitle": "Page not found - SOAP: Securing Organizations with Automated Policymaking",
+                  "pageHeading": "That page doesn't seem to exist",
+                  "policyPrompt":"Looking to build a security policy? <a href=\"/#build\" title=\"Build an organizational security policy\">Start here</a>",
+                  "homePrompt": "Want more information about SOAP? <a href=\"/\" title=\"Go to the home page\">Go to the home page</a>",
+                  "feedbackPrompt": "See a problem with this site? Raise an <a href=\"https://github.com/gembarrett/soap/issues\" title=\"Report a problem with SOAP on GitHub\">issue on GitHub here</a> or <a href=\"mailto:feedback@usesoap.app?subject=Suggested%20change\" title=\"Send an email to SOAP feedback\">send an email</a>."
+              }
           },          
         "head":"The free and simple tool that enables civil society organizations to build better security policies.",
         "subhead":"To get started, enter your organization's name (or an alias):",
+          "orgNamePlaceholder": "Great Organization Name",
+          "startLabel": "Let's go!",
         "what":[
           {
             "head":"What is SOAP?",
@@ -3326,6 +3336,7 @@
               "editPolicyInstruction":"Edit your policy below for copying and pasting into your own file.",
               "markdownPolicyLabel": "Markdown",
               "htmlPolicyLabel":"HTML",
+              "resetPolicy": "Reset changes",
               "policyHeading": "Get policy",
               "policyPreFormat": "Download pre-formatted versions of your organizational security policy documents in plaintext, markdown and HTML.",
               "feedbackHeading": "What did you think?",
@@ -3334,7 +3345,45 @@
               "feedbackBtnLabel": "Sure, I'll complete a quick survey!",
               "resetHeading":"Start over",
               "resetInstruction":"All done? You'll need to reload the page before building another policy.",
-              "resetBtnLabel":"Build another policy"
+              "resetBtnLabel":"Build another policy",
+              "docHeading": "Organizational Security Policy",
+              "docSubHead": "Created",
+              "docCategories": ["Device Security", "Communications Security", "Accounts Security", "Travel Security", "Environmental Security", "Network Security", "What to do if..."],
+              "appendixHeading": "Appendix",
+              "appendexCategories": ["General Advice", "Review Checklist", "Implementation Tips", "Useful Links", "Everyday practices"],
+              "disclaimer": "Please note: it is recommended that this policy undergoes a legal review prior to being implemented in your organization. \n\nBuilt with SOAP v.[[SOAP-version]]"
+          },
+          "questionsInterface": {
+              "alert": "Sorry, SOAP can't access your clipboard right now.",
+              "snapshotLabel": "Get Snapshot",
+              "snapshotButtonTooltip": "Click to get a snapshot link you can use to finish this process later. Using this link will pre-select your current answers. Note that no text answers are included in the snapshot",
+              "snapshotTooltip": "Click or press U to get a URL for returning to this process later",
+              "noSnapshot":"No snapshot available",
+              "copySnapshot": "Click to copy this snapshot link",
+              "snapshotDescr": "Need to pause this process? Use your snapshot link to pre-select your answers on your return. Note that no text entries are included in this snapshot, and this link is not stored.",
+              "skipLabel": "Skip",
+              "nextLabel": "Next",
+              "nextTooltip": "Click or press Enter to go to the next question",
+              "nextStart": "Got it!",
+              "insufficientAlert": "Oh no! It seems you haven't answered enough questions to build a policy. Start again?",
+              "addTeam":"add team (up to 10)",
+              "teamName": "New team",
+              "packageHeading":"Your policy package:",
+              "packagePolicy": "Organizational Security Policy (full version)",
+            "packagePolicySuffix": "policy (inc. ",
+              "packageAppendix": "Appendix (inc. tips, links and Everyday Practices document)",
+              "areaTitle": ["device", "communications", "accounts", "travel", "environmental", "network"],
+              "concatenateList": "and",
+              "endList": "security)",
+              "infoLabel": "More",
+              "infoTooltip": "Click or press Space (while focused) to view more information",
+              "infoLink": "Research [[suggested-search-term]] on DuckDuckGo",
+              "editableTooltip": "Click or press S to select this editable option",
+              "editableTooltipArrows":", or arrow keys to choose another",
+              "selectTooltip": "Click or press S to select this option",
+              "previewTitle": "Policy Preview",
+              "previewTooltip": "Click or press P to view your policy preview",
+              "previewLabel": "Preview"
           }
       }
     ]
