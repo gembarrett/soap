@@ -6,7 +6,7 @@ function copyUrl(){
       copyText.select();
       document.execCommand('copy');
     } else {
-      window.alert('Sorry, SOAP can\'t access your clipboard right now');
+      window.alert("Sorry, SOAP can\'t access your clipboard right now.");
     }
   } catch (error){
     console.log(error);
